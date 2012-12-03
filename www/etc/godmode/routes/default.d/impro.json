@@ -1,0 +1,29 @@
+{
+	"#":{
+		"template":["godmode/window"]
+	},
+
+	"events":{
+		"#":{
+			"title":"impro_events",
+			"modules":[
+				["godmode/impro/event/list"]
+			]
+		},
+
+		"create":{
+			"#":{
+				"title":"impro_event_create",
+				"modules":[
+					["godmode/impro/event/edit", {"new":true}]
+				]
+			}
+		},
+
+		"*":{"#":{
+				"title":"event_detail"
+			}
+
+		}
+	}
+}

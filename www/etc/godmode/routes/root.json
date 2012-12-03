@@ -1,0 +1,23 @@
+{
+	"#":{
+		"title":"God Mode",
+		"template":["godmode/base"],
+		"modules":[
+			["core/setup/index"]
+		]
+	},
+
+	"login":{"#":{
+		"template":["godmode/login"],
+		"modules":[
+			["godmode/login"]
+		]
+	}},
+
+	"logout":{"#":{
+		"template":["godmode/logout"],
+		"modules":[
+			["godmode/logout"]
+		]
+	}}
+}

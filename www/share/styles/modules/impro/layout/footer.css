@@ -1,0 +1,33 @@
+footer h3 {
+	margin:0 0 7px;
+	padding:0;
+}
+
+footer .dynamic {
+	color:#666;
+	margin-bottom:12px;
+}
+
+footer .contact {
+	color:#666;
+	width:300px;
+	float:left;
+}
+
+footer .contact address {
+	font-style:normal;
+	margin-bottom:5px;
+}
+
+footer .partners {
+	float:right;
+	width:700px;
+}
+
+footer .system {
+	border-top:1px solid #aaa;
+	clear:both;
+	padding:7px 0 10px;
+	color:#999;
+	font-size:13px;
+}

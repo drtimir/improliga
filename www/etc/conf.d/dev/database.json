@@ -1,0 +1,18 @@
+{
+	"connect":[
+		"pwf"
+	],
+	"default":"pwf",
+	"list":{
+		"pwf":{
+			"driver":"mysqli",
+			"database":"pwf_cms",
+			"host":"localhost",
+			"username":"root",
+			"password":"q23",
+			"lazy":"on",
+			"charset":"utf8",
+			"is_yawf_home":true
+		}
+	}
+}

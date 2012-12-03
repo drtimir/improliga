@@ -1,0 +1,49 @@
+@font-face {
+	font-family:"droid-sans-online";
+	src: local("Droid Sans");
+}
+
+body,html {
+	background:#ccc;
+	font-family:"droid-sans-online", "Droid Sans", Arial;
+	font-size:14px;
+	padding:0;
+	margin:0;
+}
+
+.container {
+	width:1000px;
+	margin:0 auto;
+}
+
+header {
+	background:#fff;
+	padding:15px 0;
+	border-bottom:1px solid #ccc;
+	box-shadow:0 0 25px rgba(0,0,0,0.15);
+	position:relative;
+	z-index:1
+}
+
+header .logo {
+	display:block;
+	width:95px;
+	height:100px;
+	background:url(/share/pixmaps/logo_improliga.png) left top no-repeat;
+}
+
+footer {
+}
+
+#content {
+	margin:0 0 20px;
+	padding:100px 0;
+	background:#eaeaea;
+	border-bottom:1px solid #aaa;
+	box-shadow:0 0 25px rgba(0,0,0,0.15);
+}
+
+.cleaner {
+	clear:both;
+	display:block;
+}

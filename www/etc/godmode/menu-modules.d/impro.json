@@ -1,0 +1,18 @@
+{
+	"events":{
+		"menu":[
+			["godmode_event_list", "./", "actions/list"],
+			["godmode_event_create", "./create/", "actions/create"]
+		],
+
+		"create":[],
+
+		"*":{
+			"menu":[
+				null,
+				["godmode_event_edit", "./edit/", "actions/edit"],
+				["godmode_event_delete", "./delete/", "actions/delete"]
+			]
+		}
+	}
+}

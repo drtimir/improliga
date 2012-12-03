@@ -1,0 +1,155 @@
+.yaform {
+	font-size:13px;
+}
+
+.yaform input {
+	font-size:11px;
+}
+
+.yaform .input-container {
+	display:inline-block;
+	vertical-align:top;
+}
+
+.yaform .label,
+.yaform .input,
+.yaform .errors
+{
+	line-height:14px;
+}
+
+.yaform .input {
+	padding:0 5px;
+}
+
+.yaform .input.button {
+	padding:0;
+}
+
+.yaform ul, ul.plain{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.yaform ul li ul{padding:5px 0 0}
+.yaform ul li{margin:5px 0}
+.yaform ul li ul li{margin-left:15px}
+.yaform ul li ul li label{width:300px;}
+.yaform ul li label.label-left{ margin-right:7px; }
+.yaform .input-checkbox, .yaform .input-radio{margin-right:7px}
+.yaform .input-text, .yaform .input-password, .input-number, .input-email, .input-url, .input-datetime-local{
+	width:250px;
+}
+.yaform .textarea .form-input {
+	vertical-align:bottom;
+	margin-left:7px;
+	width:500px;
+	display:inline-block;
+}
+.yaform .select-input {
+	vertical-align:bottom;
+	margin-left:0px;
+}
+.yaform label{cursor:pointer; width:125px; display:inline-block; vertical-align:top; }
+.yaform input.input-checkbox{ margin-left:135px; }
+.yaform ul li ul.choice-group li{display:inline-block;width:200px}
+.yaform ul li ul.choice-group li label{width:auto;}
+.yaform ul li legend, .yaform ul li label{font-weight:bold}
+.yaform ul li .input-group label{font-weight:normal; text-align:left}
+.yaform ul li .list{display:inline-block;border:1px solid #eaeaea}
+.yaform ul li .list a{display:block; padding:4px}
+.yaform ul li .list a:hover{ background:#f9f9f9 }
+.yaform .inputs{margin:0 0 10px}
+.yaform .buttons{margin:15px 0 0}
+.yaform button{border:1px solid #ccc; padding:2px 20px; margin:0 10px 0 0;}
+.yaform ul li.required input[type!='datetime-local']{ background:#fff url(../icons/16/status/warning.png) 99.8% center no-repeat;}
+.yaform ul li.required-satisfied input[type!='datetime-local']{ background-image:url(../icons/16/status/good.png);}
+
+.yaform .image-uploader,
+.yaform .image-uploader ul,
+.yaform .image-uploader li
+{ margin:0; padding:0; }
+
+.yaform .image-uploader .thumb,
+.yaform .image-uploader .controls { display:inline-block; vertical-align:top; margin-bottom:5px; }
+.yaform .image-uploader .thumb { border:1px solid #ccc; margin-right:10px }
+.yaform .image-uploader .controls label { margin-bottom:2px }
+
+.yaform .image-uploader .fup-cont, .yaform .input-list-container {
+	border:1px solid #e0e0e0;
+	padding-left:15px;
+	margin:0 0 0 4px;
+	padding:10px 15px;
+	display:inline-block;
+}
+.yaform .image-uploader .label-left { vertical-align:top }
+.yaform .image-uploader .fup-cont label { width:125px }
+
+.yaform .input-list-container {
+	display:inline-block;
+	vertical-align:top;
+	padding:5px 10px;
+	margin:0 0 2px 7px;
+}
+.yaform .input-list-container a.list-link-add { position:relative; left:-2px }
+.yaform li.input-list-editor {
+	width:0;
+	height:0;
+	overflow:visible;
+}
+.yaform .ilve { display:none; }
+.yaform .input-list-content { padding:0 }
+.yaform .input-list-content .key { font-weight:bold; }
+.yaform .hide-keys .input-list-content .key { display:none }
+.hide-keys .key { display:none }
+
+
+.yaform .form-tip{
+	display:inline-block;
+	margin:0 10px;
+}
+.yaform .form-subli label{ font-weight:normal }
+.yaform ul.form-group-switch>:first-child { display:none }
+.yaform .label-multi-checkbox{width:100%}
+.yaform .label-right{width:auto}
+
+.yaform .formel-text label{
+	cursor:auto;
+}
+.yaform .formel-text p{
+	display:inline-block;
+	margin:0 0 0 12px;
+	padding:5px 0;
+}
+
+.form-group{
+	border:1px solid #efefef;
+}
+.yaform .form-group label{
+	font-weight:normal;
+	width:112px;
+}
+
+
+.yaform .errors {
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+
+.yaform .errors li {
+	padding:0;
+	margin:0 10px;
+}
+
+.yaform .input-label-right {
+	font-weight:normal;
+}
+
+.yaform .input-left {
+	padding-left:138px;
+}
+
+.yaform .input-left .input-container {
+	width:auto;
+}

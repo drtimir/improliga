@@ -1,0 +1,43 @@
+{
+	"menu":[
+		["godmode_user_list", "./", "actions/list"],
+		["godmode_user_create", "./create/", "actions/add"]
+	],
+
+	"create":[],
+
+	"groups":{
+		"menu":[
+			"drop",
+			["godmode_user_group_list", "./", "actions/list"],
+			["godmode_user_group_create", "./create/", "actions/add"]
+		],
+
+		"create":[],
+		"*":{
+			"menu":[
+				null,
+				["godmode_user_group_edit", "./edit/", "actions/edit"],
+				["godmode_user_group_delete", "./delete/", "actions/delete"]
+			]
+		}
+	},
+
+
+	"perms":{
+		"menu":[
+			"drop",
+			["godmode_user_perms_list", "./", "actions/list"]
+		]
+	},
+
+	"*":{
+		"menu":[
+			null,
+			["godmode_detail", "./", "actions/detail"],
+			["godmode_user_edit", "./edit/", "actions/edit"],
+			["godmode_user_edit_contacts", "./edit-contacts/", "actions/contact"],
+			["godmode_delete", "./delete/", "actions/delete"]
+		]
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"memory":{
+		"enabled":false,
+		"driver":"runtime"
+	}
+}

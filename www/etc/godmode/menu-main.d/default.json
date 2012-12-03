@@ -1,0 +1,23 @@
+[
+	{
+		"name":"godmode_users",
+		"icon":"modules/users",
+		"items":[
+			{
+				"name":"godmode_user_list",
+				"icon":"modules/user",
+				"url":"/god/users/"
+			},
+			{
+				"name":"godmode_user_groups",
+				"icon":"modules/user-group",
+				"url":"/god/users/groups/"
+			},
+			{
+				"name":"godmode_user_perms",
+				"icon":"modules/user-perm",
+				"url":"/god/users/perms/"
+			}
+		]
+	}
+]

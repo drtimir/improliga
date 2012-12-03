@@ -1,0 +1,15 @@
+{
+	"protocol":"ftp",
+
+	"ftp_host":"",
+	"ftp_username":"",
+	"ftp_password":"",
+	"ftp_root":"",
+
+	"ssh_host":"",
+	"ssh_username":"",
+	"ssh_password":"",
+	"ssh_root":"",
+
+	"file_root":""
+}

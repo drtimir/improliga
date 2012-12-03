@@ -1,0 +1,2306 @@
+commit 2058632c494bcbd5038ee63cfc43f7f52a078ff9
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 08:18:29 2012 +0100
+
+    Script base
+
+commit 4c95896ba2b9e4e8fd5fb59cb202e8fc70e272a7
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:40:12 2012 +0100
+
+    Functions: soprintf
+    
+    * Fixed for new database model
+
+commit 4bfef2f4cc71779ec57af47fe2d1f0e13de193a5
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:31:45 2012 +0100
+
+    User model
+    
+    * Groups handling
+
+commit c8f5efbfe0dc19d33342b27c73aa6b414c880afc
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:28:18 2012 +0100
+
+    Database model
+    
+    * Fixed has_many relations
+
+commit 57c609c584792f66cd4939529d06ddfb6d382aec
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:06:29 2012 +0100
+
+    Database class
+    
+    * Added some exception tweaks
+
+commit 9ba4e4e83c8029ede1da8bd8b570b1b66de5bf5d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:06:09 2012 +0100
+
+    Database model
+    
+    * Replaced id_col getting to calling get_id_col()
+
+commit ac464ddaba36267b74e9575f74a9a0bc92dee0f2
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:05:20 2012 +0100
+
+    Image class
+    
+    * Fixed for 404 images
+
+commit 59456ba86fddb115f57c4b50924cd81d26c6cfb2
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Nov 26 00:04:41 2012 +0100
+
+    Default output settings
+    
+    * Changed default output to html
+
+commit 3934d865863073f0c107ac012846e52f984ec1c3
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:48:20 2012 +0100
+
+    [fix] Database model
+
+commit fce8f60fbce9ac5633193111f455bc412e148f1d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:47:27 2012 +0100
+
+    [Fix] Database model
+
+commit b4c364f2a5a986f79b5524c97dd59827cc07dd39
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:46:44 2012 +0100
+
+    [Fix] Database model
+
+commit f3d3cc60c3c8ccb8c9c7c0979f37efe7d7bcf95e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:45:44 2012 +0100
+
+    [fix] Database model
+
+commit 3738b4573726cfa91894b421eb939c4c478e8942
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:44:35 2012 +0100
+
+    [fix] Database model
+
+commit 200b6fbd3d05af5895e2778a342e4b2f5adbc908
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:43:34 2012 +0100
+
+    [fix] Model ID handling
+
+commit f7fea5fcc58747af2221131f1b4bad8c48e40c34
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:35:47 2012 +0100
+
+    Form class
+    
+    * Fixed path getting
+
+commit 6c19942163e9a9e4af04e10d408989398b1b9171
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 23:42:10 2012 +0100
+
+    Database model
+    
+    * Added ID handling code
+
+commit a883b9ffda9d1e9bd842ed3a92bbf48f399e39d8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 21:45:58 2012 +0100
+
+    Compile script
+    
+    * Fixed paths
+
+commit ff061cc7203f7c228039e705661a45c262230c47
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 21:40:12 2012 +0100
+
+    Form classes
+    
+    * Fixed attrs
+
+commit 0d689d8df9413fe3ec260809e92e89e8c67ea22a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:59:47 2012 +0100
+
+    Output class
+    
+    * Fixed template exception
+
+commit 142171f6f4c23aa41132619a984651761423cde6
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:58:50 2012 +0100
+
+    Cache class
+    
+    * Fixed return values if not enabled
+
+commit db0845493db2b04c81410c9d18fb618cb139fb31
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:58:31 2012 +0100
+
+    User model
+    
+    * Fixed perm getting
+
+commit ef7e91f4400008946d0718ec24576f331501cd52
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:44:08 2012 +0100
+
+    Database class
+    
+    * Duplicate key exception
+
+commit 4e64adf15e7922bfbbdc0aa357da0244fc9f5aec
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:35:15 2012 +0100
+
+    [fix] Models
+    
+    * Fixed old class names
+
+commit e172e5a4c01a99dc1bd1ea82728003096453b509
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:34:34 2012 +0100
+
+    Initial data
+    
+    * Fixed initial data to new schema
+
+commit 856a2e5944fe17e6221add0a081e30aef84fcd82
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:33:17 2012 +0100
+
+    Database sync
+    
+    * Added autosync to database script
+
+commit a6995954360b2980ca8d0c2175e4b9a08dde522a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 20:12:10 2012 +0100
+
+    Dropped initial migrations
+
+commit a889e01e851cd9fdae69870b08870b17f23d1360
+Merge: 7b0620e d81c69e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 25 15:19:01 2012 +0100
+
+    Merge branch 'autodb' of ssh://github.com/just-paja/pwf into autodb
+
+commit 7b0620e6d34f4c4b493c1815df48c6cadd83018d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:57:59 2012 +0100
+
+    Gitignore
+    
+    * Added low level devel file
+
+commit f102d751f0ba2fe1727385e43160577dc8e194fd
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:57:02 2012 +0100
+
+    Database sync
+    
+    * Added support for bilinear relation syncing
+
+commit 9a42fc970745ffea17e95024d3472f618b7f7631
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:56:38 2012 +0100
+
+    User model
+    
+    * Set groups relation to master
+
+commit e4e9a0880db956b5f522141e4dfe289b701d8d45
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:56:13 2012 +0100
+
+    Database model
+    
+    * Get relations definition
+
+commit fda5cf65f248175e5abcf7f881f81d5e58036271
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:55:50 2012 +0100
+
+    Attr model
+    
+    * Added commentary
+
+commit 4aef6f177012faec08b0dad71ae8b57200479e5e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 12:54:53 2012 +0100
+
+    Fix model relations
+    
+    * Fixed old model relations
+
+commit e29eeea4bbcbd0feb8039d380e33954404be957f
+Merge: 1c3e366 201ca4c
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 24 10:04:01 2012 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf into autodb
+    
+    Conflicts:
+    	www/bin/db
+    	www/lib/class/database/mysqli/column.php
+    	www/lib/class/database/mysqli/table.php
+    	www/lib/class/database/structure.php
+    	www/lib/class/system/model/attr.php
+    	www/lib/class/system/model/database.php
+    	www/lib/class/system/user.php
+    	www/lib/class/system/user/contact.php
+    	www/lib/class/system/user/group.php
+    	www/lib/class/system/user/info.php
+
+commit d81c69e790f96036024089a1f7caaaca794c8b77
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 17:28:38 2012 +0100
+
+    Relation sync preparation
+
+commit 201ca4cabd20a01cf137514415254aabb76839e1
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 17:12:04 2012 +0100
+
+    User classes
+    
+    * Fixed column names
+
+commit 9ed76a39fc7802074e8047a85e57a09d3476af79
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 17:06:54 2012 +0100
+
+    Model format
+    
+    * Converted model definitions to new format
+
+commit 720e348343a12cb269ba4d12c73bf8240ae1ff77
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 16:55:52 2012 +0100
+
+    Database model
+    
+    * Fixed table generation
+
+commit 766a2b402b9da9d7f24ea4dbfcf0c1ab68b6d76c
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 16:44:19 2012 +0100
+
+    User class
+    
+    * Default value
+
+commit 785afc9610aebb52213d88862e29b47dc4dff156
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 16:43:57 2012 +0100
+
+    Database schema class
+    
+    * Added support for default values
+
+commit e9569d9d5d17d33ba6cc064792d3f5274d881c50
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 16:24:56 2012 +0100
+
+    Database schema class
+    
+    * Primary key support
+
+commit 4db86dd9f3ddebb107cbe3fed515a7b53aed2b53
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 15:21:11 2012 +0100
+
+    Database sync
+    
+    * Added database schema synchronization
+
+commit 61e36c9c0f8b1181bbf4362827df40ffd0153f09
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 13:20:18 2012 +0100
+
+    [fix] Database model
+    
+    * Fixed cache method
+
+commit b855254f805ac78102014786555d196a48d669fa
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 23 13:15:36 2012 +0100
+
+    DBSync preparation
+    
+    * Prepared scripts and classes for db migration
+
+commit 825936e8843269792c8f2b35e87c4c392632266b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:41:12 2012 +0100
+
+    Database model
+    
+    * Renamed basic model to database model
+    * Migrated to new attribute definition
+
+commit a9e00a9eb3b0bdb8883f29cb71ee624efddc65ba
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 17:57:21 2012 +0100
+
+    Database sync
+    
+    * Added basic functionality for automatic database sync (mysql only)
+
+commit ef1fadcff2fb1b8f5fd7f2e738d632b6958bbcf3
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 23 13:15:36 2012 +0100
+
+    DBSync preparation
+    
+    * Prepared scripts and classes for db migration
+
+commit 7b0dbe756bcc28b480ef8aebe02583e7ada1a52d
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 23 09:09:25 2012 +0100
+
+    Class loader
+    
+    * Load only once
+
+commit 1fc3b914af920fbda7faea849a9b6e7b93f3b31a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:42:31 2012 +0100
+
+    User class
+    
+    * Migrated to database model
+
+commit 37a9fad48cfc772619f3342847398acb7266152d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:42:09 2012 +0100
+
+    Nested model
+    
+    * Commented out
+
+commit 2afd34700032d00d8fab3e5187b4b696f341741f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:41:12 2012 +0100
+
+    Database model
+    
+    * Renamed basic model to database model
+    * Migrated to new attribute definition
+
+commit 38fdefe8293025448ec771f01688a6fa5a6fde86
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:38:41 2012 +0100
+
+    [fix] Locales class
+    
+    * Fixed loading old names
+
+commit a909dc0b6753ae4aa567a1f39391dcf00f824010
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:35:51 2012 +0100
+
+    Database model
+    
+    * Renamed Basic model to Database model
+
+commit e77fe9b8ebdf5f6e2e844b2371d2762cd38d473d
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:06:00 2012 +0100
+
+    Update basic models
+    
+    * Dropped table name and ID column name from model class
+
+commit 4ab2afec544c1efb7c33c8f282ce162dbe988937
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:02:20 2012 +0100
+
+    Directory class
+    
+    * Can now search subdirectories for filename patterns
+
+commit aad81040c11b88227a4c1e6acdbac10ca4025c1c
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:00:58 2012 +0100
+
+    Database class
+    
+    * Added existentional question
+
+commit be3b52d4f3890e58d3f2b48c6612d3f660700d23
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 17:58:45 2012 +0100
+
+    Class loader
+    
+    * Loader can load all classes now
+
+commit b671038addeb1ca1f95a56a8eb75947a24db6386
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 17:57:21 2012 +0100
+
+    Database sync
+    
+    * Added basic functionality for automatic database sync (mysql only)
+
+commit 1c3e366c914014cfc92dc82f63ea04ff628ac372
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 23 13:15:36 2012 +0100
+
+    DBSync preparation
+    
+    * Prepared scripts and classes for db migration
+
+commit 9af273b4b6b09ba9f3436e1cff4e114e6133c71d
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 13:01:30 2012 +0100
+
+    [fix] Default cache config
+    
+    * Fixed default cache config to current standarts
+
+commit 7e17433ea71c2edd930eff0eecac44736a8a15e7
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 12:01:11 2012 +0100
+
+    PHP APC cache
+    
+    * Added support for PHP APC
+
+commit b3c57e7962881c136c90c67383f535da8a858a69
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 11:51:41 2012 +0100
+
+    Runtime cache class
+    
+    * Reworked
+
+commit 8b03ba7720712086afb27e495420bef135250b40
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Nov 23 11:29:02 2012 +0100
+
+    APC: Basis
+
+commit 153ceaf8a3209504737e8101b8ce16d9029e3df4
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:01:35 2012 +0100
+
+    Init
+    
+    * Added space for low level debugging
+
+commit f9d46622f4429643458a60ba485252e7cbf611f7
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 23 09:09:25 2012 +0100
+
+    Class loader
+    
+    * Load only once
+
+commit 033882b46ec6a2508f6af5b9d59bf9a6951e5607
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Nov 21 13:21:59 2012 +0100
+
+    Page class
+    
+    * Fixed path returned by get_path
+
+commit 416afd0f40df5758096a3e1b75db75aa09de4841
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Nov 21 12:12:22 2012 +0100
+
+    Form
+    
+    * Added checking inputs
+
+commit 329b80c81c1a6868d26b72010ce52e900713ac3e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:42:31 2012 +0100
+
+    User class
+    
+    * Migrated to database model
+
+commit bc8d86fb66c1d0ad7b1a476986dda9e9ce49f5e1
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:42:09 2012 +0100
+
+    Nested model
+    
+    * Commented out
+
+commit c32d282fadd0f91637ce3084f8067afb34783072
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:41:12 2012 +0100
+
+    Database model
+    
+    * Renamed basic model to database model
+    * Migrated to new attribute definition
+
+commit d14dd55ef0a6700da9e9e54be3a24fd0241e7053
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:38:41 2012 +0100
+
+    [fix] Locales class
+    
+    * Fixed loading old names
+
+commit f88109cff8c22fe040ca20680b7529b599305b6c
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Nov 18 15:35:51 2012 +0100
+
+    Database model
+    
+    * Renamed Basic model to Database model
+
+commit 07c5f0353443ef2c8ebaac560376ae2bb7a6163a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:06:00 2012 +0100
+
+    Update basic models
+    
+    * Dropped table name and ID column name from model class
+
+commit e441ef3f02ddfcd8bb4166bc7bc95ab1e873cefc
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:02:20 2012 +0100
+
+    Directory class
+    
+    * Can now search subdirectories for filename patterns
+
+commit 23e1fdb9f02df1d773f13227f70c0b1b1e7c515f
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:01:35 2012 +0100
+
+    Init
+    
+    * Added space for low level debugging
+
+commit 9abd51fa32cd060ea787df4706adde3848c77947
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 18:00:58 2012 +0100
+
+    Database class
+    
+    * Added existentional question
+
+commit b77d78f497ba512491e4666f031d37c145a4a564
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 17:58:45 2012 +0100
+
+    Class loader
+    
+    * Loader can load all classes now
+
+commit 0f3744877102d29fe821a7c2225c44bc0b758159
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 16 17:57:21 2012 +0100
+
+    Database sync
+    
+    * Added basic functionality for automatic database sync (mysql only)
+
+commit 1ff26b81dc3bcb3694aa31e85ea1d2b9be9a61ea
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Nov 3 13:59:28 2012 +0100
+
+    [fix] Page class
+    
+    * Returns page path with ending slash
+
+commit 35b29070cf376d39452669fb65495cbea47528bf
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 16:43:08 2012 +0200
+
+    [fix] Setup class
+
+commit 629a1514ab79fbd8d51a9ae1f56e7f34191a6608
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 16:30:12 2012 +0200
+
+    Santa package class
+    
+    * Moved pwf to public repository
+
+commit 649607d03aad5a1502632e3cca7f3d61efb318ed
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 16:18:18 2012 +0200
+
+    Santa package class
+    
+    * Fixed data guessing
+
+commit b9a4097b6ff6b2e6b971e5f15603fcd719e89cf3
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 16:00:49 2012 +0200
+
+    Santa package class
+    
+    * Fixed is_installed()
+
+commit e4cbb3bc0503bd79f8c8311055ac66d34c493ac4
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 15:43:25 2012 +0200
+
+    Cli class
+    
+    * Added try method for cli - whenever the command is not truly required
+
+commit 965dad61b471f007dcc2503370aa83d8721e9ab8
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 15:30:05 2012 +0200
+
+    Santa package class
+    
+    * Added is_installed method
+
+commit 678b14caff915fd78ff21ab92fa43a31ddf870aa
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 26 15:29:22 2012 +0200
+
+    Deploy script
+    
+    * Fixed deploy script
+
+commit 255f533bdaa5436519899f4e57d538578bcbc7b6
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Oct 24 17:53:14 2012 +0200
+
+    Santa - package manager
+    
+    * Fixed package installation
+
+commit 2011e9fc63e36d3f05eb2fb037bbe6fb7585611d
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 23 15:22:50 2012 +0200
+
+    Santa package manager
+    
+    * Moved santa classes away from system
+    * Added support for new repo
+
+commit 0c69fe2ccdbf2c90d9072f5c567247e2f64d5375
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 23 15:21:30 2012 +0200
+
+    Build script
+    
+    * Added additional metadata to user ready package
+    * Fixed path
+
+commit 62cbdfb7669bb8ab411ab672d0e5d2bc3d71d2e4
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 23 15:19:32 2012 +0200
+
+    Database class
+    
+    * fixed count query results
+
+commit 0f34c2e5a4ac19622e186e495b5a30d88a08d703
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 15:57:57 2012 +0200
+
+    Database class
+    
+    * Added count function
+
+commit da30f89e1010f5e49eb3472dccf64630775c9eac
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 15:47:23 2012 +0200
+
+    Query class
+    
+    * Added static first_val to Query class
+
+commit 823f108050ac4219f7ab6e6f9b708e353239a14b
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 15:47:11 2012 +0200
+
+    [fix] Package info
+
+commit c1b8ae4795df9a0fa028b998cba262b4ed2146d3
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 14:32:53 2012 +0200
+
+    [fix] Default settings, locales
+    
+    * Added timezone to default locales settings
+    * Removed useless setting langs, containing available lang list
+
+commit 12dfc101186b1a5ad0404975c5abadbecab90f19
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 14:29:35 2012 +0200
+
+    [fix] Default settings
+    
+      * Fixed default locales settings
+
+commit 3f00eb1eaea9621afd02d742010adbe07a9a3191
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 14:27:12 2012 +0200
+
+    Output class
+    
+     * Removed lang settings from output
+
+commit 677c06af579ff46762c13981ae930c60291af70b
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 14:22:06 2012 +0200
+
+    Output class comments
+
+commit 1f9d58f7d64c8da905f8d04205c859fc4aff1f48
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Oct 22 13:41:14 2012 +0200
+
+    Versioning
+    
+     * Version number is taken from changelog by default
+
+commit 9ae77de9db052278e43ca1e97860ae192f367a9b
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 19 14:34:40 2012 +0200
+
+    Versioning
+
+commit 8609c7322f871d1afc253eca5b49f264ada1e4bb
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 22:58:54 2012 +0200
+
+    [fix] Compiler
+    
+     * Fixed passing path to git
+
+commit 86799f6a5c4f0fa2f2aa85c13db62138be65a6b6
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 22:37:39 2012 +0200
+
+    [fix] Rename
+    
+     * Moved some options
+
+commit a6e7046e8a7ae9f8b021f51faaa3e51063506ea7
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 22:32:29 2012 +0200
+
+    Locales, settings
+    
+     * Removed unused settings
+
+commit e48ce9dbc3451b1af55c9d79095bc1ce2a56640a
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 22:26:12 2012 +0200
+
+    Locales class
+    
+     * Moved locales to more suitable directories
+     * Fixed using setlocale
+
+commit b83ea98d5d9955eafd1da0ab8b20bce3d1407255
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 19:25:54 2012 +0200
+
+    PWF Status page
+
+commit a69a347dfcd9850f46f576ce900d695102197f3c
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 19:25:10 2012 +0200
+
+    Init class
+    
+     * Added input class to full init
+
+commit 389495d7207ba197f63620295d5a81a6bc4c3a52
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Oct 16 19:24:15 2012 +0200
+
+    Router class
+    
+     * Moved .htaccess handling to router class
+
+commit a8c8b4049a0aa4dd5715ddd157eb3994b663056d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 17:13:19 2012 +0200
+
+    Compiler: Branch
+    
+     * Added support for automatic branch determination
+
+commit 664df127ef622cda22bede3a45b9bad7b24e2141
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 17:10:16 2012 +0200
+
+    [fix] Console width
+    
+     * Fixed console width grabbing
+
+commit fc1495d86871dbb9c7eb791db9e6a59b90aa481e
+Merge: e9102b6 a565c6f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 11:31:41 2012 +0200
+
+    Merge branch 'dev'
+
+commit a565c6f592335eda8724b147b88cf7fa1acdc42d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 11:26:39 2012 +0200
+
+    Cli class
+    
+     * Get virtual console size
+     * Integrated into compiler
+
+commit e9102b6bcc203953ed16cd85b16c0f72cee5f123
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 11:15:24 2012 +0200
+
+    jQuery update
+    
+     * Dropped version 1.7.1
+     * Added version 1.8.2
+
+commit 81ee58319a674f86166da8c0d03da81d1c1faad7
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 01:29:15 2012 +0200
+
+    Github readme
+
+commit c518f147a121a41bbb58a731165407b3ac5e96d4
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 01:13:04 2012 +0200
+
+    [fix] Setup class
+    
+     * Fixed ident handling
+
+commit 29db9f65bf88d35efbf83ce8a164dca8cd4d323a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 01:12:42 2012 +0200
+
+    Settings class
+    
+     * Added cache purging after each save
+
+commit ffebe874a91b820a5adad7eb264829dd6a4faad1
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 01:11:40 2012 +0200
+
+    [fix] MySQLi driver
+    
+     * Fixed exception text
+
+commit 6ab68bff3098eff0a06803855a3ffb28fe34a24e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:51:36 2012 +0200
+
+    Setup class
+    
+     * Added connection checking
+
+commit 02ec79f11963b0231501cadb4ddfab5a7ba83e2b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:50:33 2012 +0200
+
+    Database class, Database driver
+    
+     * Added some friendly status checking functions
+     * Added is_connected()
+     * Added is_ready()
+
+commit a12970d463d3d791313e8b2d61a85f9a122b7754
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:20:31 2012 +0200
+
+    Github readme
+
+commit a639b460d236ee8647fdabe5e1c73c8d7e95093d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:17:25 2012 +0200
+
+    Github readme
+
+commit a7164ab063f57832a800d09f5364980b4ee01bbf
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:04:02 2012 +0200
+
+    Github readme
+
+commit 09ecf6141c5bf516057000e70219010f6dacb2ba
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Oct 13 00:01:47 2012 +0200
+
+    Github readme
+
+commit 516fa2460c4dc1ee4cdd833f47d8889c91e0c6aa
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 23:53:32 2012 +0200
+
+    Compiler
+
+commit 7d63b611bada2380aa78887a9f68719021654a1b
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:45:49 2012 +0200
+
+    Settings class
+    
+     * Not caching settings if there is empty page tree
+
+commit 7e00de94b2dfbc25885f766b2d48db0a6a6e10b8
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:42:33 2012 +0200
+
+    Form container
+    
+     * Add class by type
+
+commit 9b7c59443b82b3fb41f9c2d34e55f54265c357a8
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:42:15 2012 +0200
+
+    Form class
+    
+     * Checkbox handling
+
+commit d765fc54a2896552753eb8ca8c543326900b0993
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:41:49 2012 +0200
+
+    Setup class
+    
+     * Save persistent field
+
+commit 6e923939afc34deee8dbb699a6c6c8379bfca0af
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:41:18 2012 +0200
+
+    Default config
+    
+     * Set development mode to false by default
+
+commit 2d91d20d574f164378321f95a94ecf686f1c1a07
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:30:01 2012 +0200
+
+    Directory class
+    
+     * Set the same mode to all directories while creating recursive parents
+
+commit 6faf38b3212ba0e590f5953db9f6ee4e23dc6e0b
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:27:45 2012 +0200
+
+    Setup styles
+    
+     * Added some colors to setup
+
+commit d0c70be3bdad3724dcb968514737ab140266fd88
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:27:15 2012 +0200
+
+    Error template
+    
+     * Dropped unused code
+
+commit 8be3b37546946cc6aa59dab011cce4dd24be18a3
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:26:29 2012 +0200
+
+    Setup class
+    
+     * Added friendlier reporting for empty tree
+
+commit 7cf6d1020aa354776d963849110cadecef855af2
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:25:37 2012 +0200
+
+    Tag class
+    
+     * Added label "for" attribute
+
+commit 4ead338162a106acb769983fa2596456ba89144a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:24:59 2012 +0200
+
+    Settings class
+    
+     * added is page tree ready query function
+     * fixed save settings function
+
+commit 0f21d13e5e74558841c02f00707e4285b1569e9d
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:23:52 2012 +0200
+
+    Query class
+    
+     * Removed exception duplicity
+
+commit ec8b5e6a83d67fc09fef1407c4116c6fff944c8d
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:23:10 2012 +0200
+
+    [fix] Output class
+    
+     * Fixed default values
+
+commit 2ae971062a283fb5e9a1fd53ca445fb91b69fb19
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:22:33 2012 +0200
+
+    File class
+    
+     * save_content now returns bool determining operation result
+
+commit 02fa87038bc2ef72e41921bfb7f753a5f2f256f9
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:21:54 2012 +0200
+
+    Database MySQLi driver
+    
+     * Added database create function
+
+commit fa178a71fd5f48c01d968eed6f2dce3e18f01192
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:21:07 2012 +0200
+
+    Database class
+    
+     * Catching some exceptions. Useful in setup
+
+commit 75774ab278dd0bec8489f7747f1344c2ec04ae40
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:20:03 2012 +0200
+
+    Page init
+    
+     * Added friendlier error to report empty page tree
+
+commit 0ea52df10576fa9523258a1acdbc0251ac84d8df
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 20:18:28 2012 +0200
+
+    Default settings: remove schemas
+    
+     * Removed settings schemas from config files
+     * Will be moved soon into separate interface
+
+commit 148232239cce443081cda999eb795b7aa13cc79a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 13:49:17 2012 +0200
+
+    [fix] Setup: create htaccess
+
+commit b4148ba9697fbc8ac289a1ba6f7eabb79e08c6dc
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 13:48:16 2012 +0200
+
+    Bug page: catch additional errors
+
+commit 6935953be965c91a718f278743e3c108a2477d43
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 13:47:44 2012 +0200
+
+    [fix] Permissions
+
+commit 153b4e0d292333ebdac85e350992e24ea0ad9f29
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:59:23 2012 +0200
+
+    File: fix, save_content
+    
+     * recoded to standards
+     * added static method save_content
+
+commit e06d175aa52ba29254dea06675d61a438c473501
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:59:03 2012 +0200
+
+    Settings: default version file
+
+commit ed0ccc7731ad8dd1bc292129aeea741d99b5159a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:57:55 2012 +0200
+
+    Status: reporting, date
+    
+     * reports whole exception message
+     * does not cry timezone warnings
+
+commit 87fc966972d5375ac10e2d669f0736bc12a091b5
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:57:19 2012 +0200
+
+    Setup: attempt to create htaccess
+
+commit 5ac6180086d92db2c58884bd9c5543f591e034b4
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:56:20 2012 +0200
+
+    [fix] Default config: database
+
+commit a1e9709d9b6178fc0f544c9e27c5fb7fb0478a7a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Oct 12 09:55:22 2012 +0200
+
+    System script: only basic init
+    
+     * No need for db
+
+commit e74a31e07c5be160a88542db92638797ec07cc53
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Oct 11 20:44:30 2012 +0200
+
+    Directory handling
+    
+     * Added directory class that throws friendlier exceptions
+
+commit bd1ab601bbc5e5221b120b48edea770e31a61a73
+Merge: bb3c25f 8dc52ac
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 18:54:07 2012 +0200
+
+    Merge branch 'dev'
+
+commit 8dc52ac41fb6f29a66769af41c3e857459a2d528
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 18:53:00 2012 +0200
+
+    [fix] System: exception recursion
+
+commit 29f80e074f6c46dc13d3ccc3466ac040ee4a96bf
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 18:52:27 2012 +0200
+
+    Make: build user ready package
+
+commit bb3c25fece49fbb15c35d20dd78263fd269e4a4f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 17:39:59 2012 +0200
+
+    Form: set submited to false by default
+
+commit f5a8277d7ff6dd19fdc513f4e9a92c842ec400bf
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:56:34 2012 +0200
+
+    Form input: prefix input ids with "field_"
+
+commit 1cbe35ba3152657ae6fa03bd82782ead3378317d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:53:06 2012 +0200
+
+    [fix] Form: input type
+
+commit 3c1c6dbc6e245873654ecda7f24bb6db854d9984
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:38:15 2012 +0200
+
+    Fix namespaces
+
+commit c5e84348d88710722d2a7f516e4836252836aa6a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:19:04 2012 +0200
+
+    Form input: info
+
+commit 8c8b80d96b26317e7ca03655625b74a7d068141c
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:18:40 2012 +0200
+
+    Form: input alias
+
+commit d850fcca6fda4a8d1f9698235a4af551223a4a3a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:03:42 2012 +0200
+
+    Form input: password
+
+commit fa184e4d7093fd336fe6c7cbdf575ca064f25904
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 14:04:17 2012 +0200
+
+    WTFException
+
+commit cde1f843f2b3f947ba5c9aeb1a5081371e437d2d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 13:44:22 2012 +0200
+
+    [fix] Database: seed
+
+commit b757717582c5a091841ca5c3ce90e20ed37f07e1
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 13:39:28 2012 +0200
+
+    Utils: use core init
+
+commit 02217ac3e806c37e068bb0618e0107cde45c41dd
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 13:37:27 2012 +0200
+
+    Core init: avoiding "@"
+
+commit 2a16a43cfc3eb6c9eec19b997ec2c8417653d80b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 13:30:28 2012 +0200
+
+    Module: public rights
+
+commit 5378b0a70cb408a9bcf4cb95a7938e9f1af4211a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 13:24:00 2012 +0200
+
+    AttrModel: public constructor
+
+commit 5c9bba3180c44f30aca694c8a80826f525a2fe5e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 11:24:38 2012 +0200
+
+    Module: coding std
+
+commit 0e7f933344ec1066b1974a21e21426445d04a986
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 11:24:02 2012 +0200
+
+    Offcom/mail: public constructor
+
+commit 556eb90f6aa8e9cf4ae7e8f8bae87586c8d32b0f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 11:23:26 2012 +0200
+
+    Flow: don't reset queue
+
+commit 9a100f77c538c40bab10d303fb0fea6aa6556139
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 09:37:45 2012 +0200
+
+    Flow: queue dumping
+
+commit a7c24dc8ad505d6f0257bb4f77ca3798cec1b282
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 09:05:51 2012 +0200
+
+    [fix]: Mail: inheritance
+
+commit ed7c687fcd37977b5eba89cfa430ddec9e4e3eb9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 29 09:01:38 2012 +0200
+
+    [fix] Mail inheritance
+
+commit bf5552d8db14e0616b817ed3618a46c4e7a8937a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Sep 28 17:33:26 2012 +0200
+
+    [fix] Deploy: init
+
+commit 3b41ada2f3ad2081283f0d6c2d3c156325fd6b92
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Sep 28 17:32:23 2012 +0200
+
+    [fix] Santa: init
+
+commit 079e6bc19b10bd4f924a3c99c579b8d74d589b99
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Sep 28 17:31:51 2012 +0200
+
+    [fix] Request: throwing exceptions
+
+commit eb97c0ffbf5e44a3ef047c0f0ea9ae9af78b3ae2
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:09:47 2012 +0200
+
+    Setup: aliases
+
+commit 9e4d723739bd9a6c9f0ca592b380b1deca7e2ec1
+Merge: 1230116 9f24668
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:08:19 2012 +0200
+
+    Merge branch 'installer'
+    
+    Conflicts:
+    	www/lib/class/system/setup.php
+
+commit 123011658d0565577bf97dc6002c70641b1135e3
+Merge: 0219a6c 96b5e94
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:07:02 2012 +0200
+
+    Merge branch 'multidb'
+
+commit 0219a6c45b5b0aa2fdc46739b9c5bbb329a5e90b
+Merge: 3e85e06 53c0230
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:06:58 2012 +0200
+
+    Merge branch 'dev'
+
+commit 53c0230b1b6ee71214397475eed8dfad85333836
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:06:19 2012 +0200
+
+    System helper: init
+    
+     * fixed system helper binary for static init
+
+commit 96b5e94ba2a1cdfbcd2689878df245d152395a6d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 20:05:48 2012 +0200
+
+    Database helper: multidb
+    
+     * Fixed restore option
+
+commit 44ba1b2ab2bbe1afd5c72cc08dfd1a4e401ede49
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 18:37:01 2012 +0200
+
+    Input: emulate _GET and _POST on CLI
+
+commit 5f2619b7f92bcd5c81968a0d0d6921e892afe997
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 18:36:35 2012 +0200
+
+    Setup: multidb, home
+
+commit a4e83b6379fb45300e9dd346afd0f0c9cd928c1d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 24 18:33:57 2012 +0200
+
+    DB Helper: multidb
+    
+     * Added multidb support to database helper
+
+commit 9f246680cbcbff2e31b44d022caca6937766860e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 16:21:03 2012 +0200
+
+    Installer: setup site name
+
+commit 3e85e063e6d7a7ab8f351799896b3741c6bf041a
+Merge: a6f632d c6763af
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 16:14:42 2012 +0200
+
+    Merge branch 'installer'
+
+commit c6763af8ab92ec5989a9cee6ecbfec16c85635f3
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 15:49:56 2012 +0200
+
+    Installer: Form2 styles
+
+commit a6f632d325680f39b74139b327b6473de778f051
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 15:49:41 2012 +0200
+
+    Forms2: checkboxes
+
+commit e6a6a64da8c62c430fc5e091904ca37af20c91de
+Merge: 426fb9a 53fdc82
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 14:37:41 2012 +0200
+
+    Merge branch 'installer'
+
+commit 53fdc8235ac4e2603fbd2ca3c3493fe31095db48
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 14:37:18 2012 +0200
+
+    Setup: fix for multidb
+
+commit 426fb9a9b8b807fb9b8efd7a9b20e3168e522a0e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 14:36:43 2012 +0200
+
+    Database: multidb connect
+    
+     * Extended System\Database to support multiple database instances
+
+commit 55f19ee12d5ee203b725457e495b0068372f532b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:45:43 2012 +0200
+
+    Setup: Multi database
+
+commit dee9b879113a9329b4b390638ce039ceeecf59dc
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:14:03 2012 +0200
+
+    Setup: finish
+    
+     * Added finish page to setup
+     * Added binary path constant to System\Package
+
+commit b904d4f37dbbe2c2019411a39598c6f18fbbba03
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:12:29 2012 +0200
+
+    GitIgnore: Installer lock
+
+commit 703ebd1ab898a83b37dc20c58fd07f9dc0878f90
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 11:22:52 2012 +0200
+
+    Setup: Form2 integration
+    
+     * Fixed errors
+
+commit bb273caccdcc72a5d54628c7902f06cb0e20a0ea
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 10:12:04 2012 +0200
+
+    Setup: Forms2
+
+commit 5cd96c2321c5b297e01966eca33c58623f924495
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:47:55 2012 +0200
+
+    Devel: Dumping functions
+    
+     * Added function v() to dump variables nicely
+     * Fixed dump() logic
+
+commit f6a8f13f2945202180d3097065edc2b15948e5b3
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:47:16 2012 +0200
+
+    Settings: alert on empty config
+    
+     * Settings will now throw exception if config path is not defined
+
+commit 39c9d4a5b844ace37c671e0ba588503751e451a7
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 12:15:02 2012 +0200
+
+    Settings: Catch permission errors
+
+commit 4cb99129f8bc86eefb3f7b9cc0775a8e3bf3cb0d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 11:23:41 2012 +0200
+
+    Forms: Userspace error reporting
+
+commit 3ba8fc39a30b11b5a1dfcd59d5070c04ba1735c9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 10:11:26 2012 +0200
+
+    Form2: styles
+
+commit 22462303b8262164009851332b5725921b9cc769
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 10:10:14 2012 +0200
+
+    AttrModel - Secondary constructor
+
+commit fec5012dbbf1c41f5174d7b7c96170ef7c45dc01
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 10:05:08 2012 +0200
+
+    Forms2
+    
+     * Remake of forms, developer readable
+
+commit a482dd34663d2dfd30f1a159a2c527ad71a4dcce
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Sep 22 10:04:13 2012 +0200
+
+    Rendering tags
+
+commit 7a05cec8c36c839d1ea076ed1677a17a79692075
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Sep 11 20:56:08 2012 +0200
+
+    Setup: first step
+
+commit b47284eb641a74f6821604eccd223621c77de9ea
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Sep 11 20:55:43 2012 +0200
+
+    Database: is_connected
+
+commit 594df969c0826d921d45ece0500cf401922242ac
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:49:48 2012 +0200
+
+    Installer: some styles for form
+
+commit ce47cc6edcb23db5445f5d211d025aeaae82fd76
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:18:02 2012 +0200
+
+    [fix] Installer template
+
+commit 8f376147e1e3ee8b799e504fe86d4bf6a32d1354
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:05:51 2012 +0200
+
+    Installer: styles
+
+commit ac50774ef8e17491277c4e895edc6044c20d2535
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:05:50 2012 +0200
+
+    Installer: init output
+
+commit f8898a301881734815aff631add16ffcd3cce4c8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:01:44 2012 +0200
+
+    Setup: input form
+
+commit e3bc13464823efa844f835631c54190e44d8ebcc
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:24:11 2012 +0200
+
+    [fix] Setup template
+
+commit 153de058b29e7bf03728973546dcb36586d49bd0
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:23:52 2012 +0200
+
+    Init: allow printing errors
+
+commit 5217a80ec15f52355ade17e2900954efd4777e82
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 20:57:18 2012 +0200
+
+    Installer: changes to init
+
+commit b98ac346b50a1e55da7601de816649adf1275744
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 20:46:37 2012 +0200
+
+    Setup template
+
+commit bc8357199ac3012fd2bd95b801232876b253dcef
+Merge: 5524116 5943651
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:50:54 2012 +0200
+
+    Merge branch 'tags'
+
+commit 594365116ce0ba049d94c030280f9fe9cd0deb5b
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:50:40 2012 +0200
+
+    Form: input info
+
+commit 907494428217b7bce7fef5eb29c26143d90185bf
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Sep 10 00:50:18 2012 +0200
+
+    Tags: content as arrays
+
+commit 5524116d1dcb92c003b572ae7e3de7a814f0e7fa
+Merge: 4149fbc a45191f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:58:06 2012 +0200
+
+    Merge branch 'tags'
+
+commit a45191f1ee123c5e61a4a2015addd29f3641217f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:57:43 2012 +0200
+
+    Form styles
+
+commit dc4e1f4636e86665e5742de5c7407bc29e1692ed
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:54:57 2012 +0200
+
+    Form: use tags
+
+commit 4149fbce9c8fdbaff96c41737bbfc95282276db9
+Merge: 1b32531 adeaf5b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:06:48 2012 +0200
+
+    Merge branch 'tags'
+
+commit adeaf5b8d44a1088b6e66f9d1a1b7bd7a6759898
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 23:06:32 2012 +0200
+
+    Tags: switch output behaviour
+
+commit 1b32531caf7c9768d45158eb1b8e1414c598385c
+Merge: f6484ea c31852b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:59:03 2012 +0200
+
+    Merge branch 'tags'
+
+commit c31852bb01cced9d496c2b8bdf875c5ade5fe7c9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:58:44 2012 +0200
+
+    Tags: switch output behaviour
+
+commit b1fa9cc74b12001584049d29cd464e9b54de3d91
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:55:25 2012 +0200
+
+    Tags: noclose & alias html_attrs
+
+commit f6484eae98eaffa3b9ed3c390f3ceace18ad9f5d
+Merge: a8562c0 bb8b315
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:14:37 2012 +0200
+
+    Merge branch 'tags'
+
+commit bb8b315664c20a5b95d232c8bfa26adeebf46802
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:14:17 2012 +0200
+
+    Form: use tags
+
+commit a0f01070aa283e716f309ac623e3ddb5cd77366c
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 22:02:40 2012 +0200
+
+    Move form to default format
+
+commit a8562c009987b1fc5ccfaa9384117e41270a2287
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:45:37 2012 +0200
+
+    [fix] Resource scripts
+
+commit a5a7bf54cfc32af3aa183786c1628e14f3215044
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:44:56 2012 +0200
+
+    [fix] System script init
+
+commit 58f4185ddef35cdcd357228df65fd83606ad8d58
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:43:46 2012 +0200
+
+    [fix] Tags: tag attributes
+
+commit 19737dcb4c673d4ca636df76d83cbe4691cc2a02
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:25:18 2012 +0200
+
+    Tags: doctype, comments
+
+commit 8ce58a3215d8e0a2d4dfbcbb06f39b66659b9bf2
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 21:24:46 2012 +0200
+
+    [fix] Template
+    
+     * System\Template was converted to new tag class
+
+commit 2d36a980269439bb173234aaa121dc993d6f7263
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 20:51:27 2012 +0200
+
+    Alias tag class
+
+commit 11f6b6906f15f12709413cfb03d1456f9d95e6fd
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 20:35:43 2012 +0200
+
+    Tag class
+    
+     * Added tag class for templates
+
+commit 0c4de7610adf4c8e3847777b167f82e663b01ff8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 20:08:51 2012 +0200
+
+    Installer: Prepare page init
+
+commit 50b5a6d487fe4efff171994bc9bd64f2b04645ac
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Sep 9 19:50:37 2012 +0200
+
+    Close init
+
+commit 2e67712845158d0583dccd8a1821f1bbfecc2333
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Sep 5 20:39:43 2012 +0200
+
+    Migration of initial data
+    
+     * Moved initial data to dist dir
+
+commit bdcfe1b5fde36a1ba4739ad208fca82e4d42d5ed
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Aug 26 21:20:24 2012 +0200
+
+    [fix] Settings: Throwing exceptions
+
+commit 1b865426c977abb13b69a6204dbd1c6333bf24a6
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Aug 17 12:47:59 2012 +0200
+
+    PHP compatibility
+    
+     * Tried with PHP 5.4 today and fixed some bugs
+
+commit 731a27f3cdbe9356ad1417960a300c50d3a6713d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jul 21 00:10:50 2012 +0200
+
+    Settings: version
+    
+     * Version file is read directly from package repository
+
+commit 8813f4d4f3e52b36b7bd35ed370b9a41039c74e1
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Jul 20 22:45:34 2012 +0200
+
+    Resources interface
+    
+     * Removed base64 from URL (bad idea)
+     * Separator set to ":"
+
+commit 39f4b3a0626e8f06f550662b7cb55e8bc253c192
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Jul 20 22:41:58 2012 +0200
+
+    Resources interface
+    
+     * Created interface to get resources
+     * /share/styles/[module;module]
+     * /share/scripts/[module;module]
+
+commit 52dd41cac8ada36c95d6a7c5e088cfb6a377cb9a
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Jul 20 21:35:53 2012 +0200
+
+    Functions: read_dir_contents
+    
+     * Argument 3 was made optional
+
+commit f12a2b46f1dc7a112e6fb5be407f05a1e6f52916
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Jul 20 19:55:23 2012 +0200
+
+    Scripts and tools
+    
+     * Added js object to handle scripts effectively
+
+commit dba9f10414d9aec0741caaa37f52d4e61ea8c108
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 19:23:15 2012 +0200
+
+    [fix] Santa: browse
+    
+     * Fixed browse output
+
+commit 9cb7bad191ec3a4a6d3ac8d83fec3c68d4bcb864
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 19:10:14 2012 +0200
+
+    Santas' little helper
+    
+     * Moved santas' lil helper out. Keeping some specific scripts
+
+commit a47b8a59c60f6d7f596612d7d49d4722e8c0af20
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 04:58:16 2012 +0200
+
+    Form: Template
+    
+     * Integrated basic form template into YaWF
+
+commit f33cc540076ba6dc34305c1f82eec4d611466b7e
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 04:15:00 2012 +0200
+
+    Database: simple update
+
+commit 83f31cc8950d50dc5beb6500edc8a4bfc4a5cc93
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 04:13:36 2012 +0200
+
+    [fix] User: namespaces
+
+commit 27460196ab406a2c499f7b81b09fdc236e3da2b3
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 03:45:11 2012 +0200
+
+    [fix] Form: default path
+
+commit 9d9305ee00679f336b4558962be07df82ad85af7
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 03:45:00 2012 +0200
+
+    [fix] Query: assoc
+
+commit 695b8cf45612448bb9785c208146b0f820991957
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 03:20:47 2012 +0200
+
+    [fix] Form: namespaces
+
+commit 22b3506a3768ee428b626ca68aa3bf50b05f46f0
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 03:06:54 2012 +0200
+
+    [fix] User: rights
+    
+     * User rights has been fixed
+
+commit 97d89130097885e67061f8116269937606801032
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 03:06:30 2012 +0200
+
+    Database: fetch assoc
+    
+     * Result can now fetch data structures
+
+commit 9df679aba0b34a0ed0cf14e774bfbc7890edbf21
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 02:24:31 2012 +0200
+
+    [fix] Icons: namespaces
+    
+     * Fixed namespaces in icon handling
+
+commit 90e31f1b108763d315339d2559dce26ee3856689
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 02:09:17 2012 +0200
+
+    Remove utils
+    
+     * Removed some old references to class utils
+
+commit 38f17b50a55b8226c3aff02eec290374d9ddf03d
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 01:53:36 2012 +0200
+
+    JSON: rename dist method
+
+commit 1c8cb34b8eb14a87d3b5b736c49db5a2721cf416
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 01:30:50 2012 +0200
+
+    Input: path
+
+commit 9838ca4ea31e4c1b0a9694fb1b070564f04f8fac
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 01:10:44 2012 +0200
+
+    Santa: callback for htaccess
+    
+     * Santa calls htaccess rebuild after package install
+
+commit 42edc1e3b4b483270af4f3da2ef639014c2ca6a8
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 01:05:38 2012 +0200
+
+    .htaccess generator
+    
+     * System scripts now generate .htaccess
+
+commit 624001e6fa0d579eecffd2c9b5ef3efe4bea845c
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 00:42:56 2012 +0200
+
+    System status: page path
+    
+     * Added page path to system status template
+
+commit 2e38f34f06ccd8cc9993c0661cddc649c42cc7fd
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jul 17 00:42:14 2012 +0200
+
+    [fix] Error pages
+    
+     * Fixed namespaces
+
+commit ee66af47483e5d8a719482f1b1a292b7c7eb1a19
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Jul 16 23:41:58 2012 +0200
+
+    System status
+    
+     * Added partial with system status
+
+commit afa71a8c63e8298b6e24e2c9714c85cc9c8df717
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Jul 16 23:28:40 2012 +0200
+
+    Removed old constants
+
+commit 495844bf21149d98fd689be7291bb12293a253dd
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Jul 16 23:25:30 2012 +0200
+
+    User contact, user info, unsigned
+    
+     * Added user contact class
+     * Added user info class
+     * All MySQL IDs are now unsigned
+
+commit d626db44b9e6bbedeec7e99f9710a7c26acb25b7
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 15:39:21 2012 +0200
+
+    Index - reduction
+    
+     * Reduced index.php to minimum
+
+commit 03fc76a36a95324e05510f5194c2753b4700c5cb
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 15:39:06 2012 +0200
+
+    Santa: minor fixes
+    
+     * added newline
+
+commit 284d7673f8843126b1c85c52af6d79eea0b08135
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 15:09:32 2012 +0200
+
+    Init: Pre-cli
+    
+     * Added init script before CLI
+
+commit 63eff533ae45dd3c083ce2799f8b04544b6314a6
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 15:02:26 2012 +0200
+
+    [fix] Scripts: class duplicity
+
+commit 94e786eac04381ac1b0549b97be6be139c9493a7
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:53:10 2012 +0200
+
+    [fix] CLI: class duplicity
+
+commit 4bc3db6b6c928b03d24c1f2cb3a1027842e09d7c
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:52:29 2012 +0200
+
+    Revert "[fix] Cli"
+    
+    This reverts commit 95b1f71c47bb41d4710b5de3c9cfe94c737c3684.
+
+commit 65d723fac6640c227ea6a4cfcff83d157c9aa06b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:48:26 2012 +0200
+
+    [fix] Santas' Lil' Helper: Class order
+    
+     * Fixed generated package class order
+
+commit 95b1f71c47bb41d4710b5de3c9cfe94c737c3684
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:47:46 2012 +0200
+
+    [fix] Cli
+    
+     * fixed name of CLI control class
+
+commit 88e66f555c9405240f7ed1fa461e7a43325b83df
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:28:19 2012 +0200
+
+    [fix] Santa: output
+
+commit 3b594ec733c2cdf8dac33383f794eb3176e9fca2
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:26:56 2012 +0200
+
+    [fix] Functions: read_dir_contents
+
+commit 0e281dbd803fe56036c68edac08ec458cdd74114
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:24:17 2012 +0200
+
+    [fix] Santas' Lil' Helper
+    
+     * fixed model handling
+
+commit 7fcd86fa8884a14b2316a2335a937108c1f264f6
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:14:02 2012 +0200
+
+    [fix] Santas' Lil' Helper
+    
+     * Fixed namespace handling
+
+commit e2b26bb880ec4bc4f2c9796c2b59c5100640b2f6
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:13:09 2012 +0200
+
+    [fix] Namespaces
+    
+     * Fixed namespaces and united ns coding style
+
+commit 995b745d0e0c0db2a8532b3d5a3570ccd724b8fd
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 14:05:09 2012 +0200
+
+    [del] Useless class
+
+commit 645ff82c72744b7d623ffa2acd44fdaa35158406
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:54:10 2012 +0200
+
+    [fix] Santas' Lil' Helper
+    
+     * Added error protection
+
+commit c902a494361a03c220310d567284c37d8c5ea8d2
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:53:37 2012 +0200
+
+    [fix] Functions: read_dir_contents
+
+commit 8c78b31c454ecda7831b58c82bdb3ce35dd5fe30
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:50:51 2012 +0200
+
+    YaWF: Santa
+    
+     * Clear workspace when finished
+
+commit 8cb975542d93d4e862faa1738a9f7281a93bdfe3
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:49:51 2012 +0200
+
+    Archive: handling bz2
+    
+      * Archive throws exception if it finds bz2 archive corrupted
+
+commit 8b72780cdd149971a52eb3a27d3a7411ec145b53
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:49:19 2012 +0200
+
+    Package: internal
+    
+     * Added internal method to get tmp file path
+
+commit 1860e1a086264dd96c8fe3665dc52e8b715b6d9f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:48:33 2012 +0200
+
+    [fix] Offcom
+    
+     * Fixed handling reponse headers and content
+
+commit ff4052b340fe02fbbe7542c9aa5e49532ee69c77
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:20:23 2012 +0200
+
+    [fix] Santa: packages
+    
+     * Fixed reloading tree
+
+commit 14e5bd071a0088717d3bc6900c43425e566084e5
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:17:15 2012 +0200
+
+    YaWF: Santas' Lil' helper
+    
+     * fixed paths
+
+commit f6d8ea93103cf579e809b942f2af72d92eb33878
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:15:42 2012 +0200
+
+    YaWF: Santa
+    
+     * Prepared to drop update class
+
+commit 77cbaa98597eacb76881751e04c3405071b0272a
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:15:20 2012 +0200
+
+    Bug template
+    
+     * Added newline
+
+commit b7cd9a6c9e82b5807786a979893872009a29e8c9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:09:57 2012 +0200
+
+    Make: paths
+    
+     * fixed make path
+
+commit c6e820112d9188376bf7a9b8b4702aaa4ec5a954
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:09:07 2012 +0200
+
+    YaFW: Santa
+    
+     * Updating packages
+
+commit ced8191c0fb8211807b0dc3c2dd640c86628a8fb
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 13:08:29 2012 +0200
+
+    Offcom: Request/Response
+    
+     * Separated response from request
+     * Moved System\Request into System\Offcom\Request
+
+commit d7613e866b9da755bf2dcae27b8086ef26165328
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:47:52 2012 +0200
+
+    Init: compressed code
+    
+     * Including compressed core
+
+commit 56cd6409b3279267290a07eb2f08661b6f398039
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:46:48 2012 +0200
+
+    Request handling
+    
+     * Added some text 40x error messages
+
+commit 43f931fe94f19eab367392bdca4ec2d88b88f4ac
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:46:27 2012 +0200
+
+    Locales
+    
+     * Removed old locales
+
+commit 8ecbfb2f820d73a6196a1c96940c4a09115791d8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:28:15 2012 +0200
+
+    Minor fixes
+
+commit 8e04257d043c6f398e9cae8fe76ad8b23fcd79d4
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:27:36 2012 +0200
+
+    Init: compressed code
+    
+     * Prepared init to accept compressed code
+
+commit 6a6a3fe26c69be97f41250716e03605a23d66d26
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:26:54 2012 +0200
+
+    Rewrite rules
+    
+     * Removed YaCMS from .htaccess
+
+commit 72e01a8812ad523add6e592d75a037172bc30ce3
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 11:25:43 2012 +0200
+
+    YaWF: Santas' lil' helper - code compression
+    
+     * Increased PHP code compression performance
+     * Added empty essential dirs to package
+
+commit b3e1f3ec589e2e3ad616802e2e9202cd606fcb62
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 02:19:56 2012 +0200
+
+    YaWF: Santa - installing packages
+    
+     * Santa can now install packages
+     * Prepared to drop update class
+
+commit e3c6d95eac3470053b980b4c4bb2fa22f01fb527
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 01:39:01 2012 +0200
+
+    Scripts: make package
+    
+     * Make script rewritten to PHP
+
+commit d277e9120d361d0ca673d84a1c1c3df943599576
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jul 8 00:43:33 2012 +0200
+
+    [fix] Text
+    
+     * Fixed parenting
+
+commit 2e06a2b1d543c5edcb265b3dbd23080d3a2da922
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jul 7 22:27:29 2012 +0200
+
+    YaWF: Santa - downloading packages
+    
+     * Santa can now download packages but cannot install
+
+commit 41506c75180a99ed0e9ffac40aa72f4d15664e89
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jul 7 20:41:33 2012 +0200
+
+    YaWF: Santa
+    
+     * Simple package manager
+
+commit e3f3245228f019ed90c9ae91951781b32835b4c1
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jul 7 12:01:10 2012 +0200
+
+    Scripts: gitignore
+    
+     * system scripts can generate git manifest with prefix
+
+commit 4516f7fdbb0235144c8dea23cb0cdfd24d300837
+Merge: 7d287c4 3da6995
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jun 17 22:41:25 2012 +0200
+
+    Merge branch 'master' of ssh://github.com/just-paja/yawf
+
+commit 7d287c425d47c3900c8c132e32b930c43ff8470e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jun 17 22:37:25 2012 +0200
+
+    Drop dibi
+
+commit 1936abef6bd65e909fe3a3eb67c8246ec7b06f9d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jun 17 22:32:23 2012 +0200
+
+    Database interface
+
+commit a46ea85dee4ece3270e4631d7ce5b5c190d76775
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jun 17 22:31:10 2012 +0200
+
+    Scripts from yacms
+
+commit 7c6a5d248e1d59e68b9b4f60ef547caa36eaf7d8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jun 17 00:35:16 2012 +0200
+
+    Gitignore
+
+commit a5b7a64eb871f372f99c7aac294121b9f16aa466
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jun 16 23:47:02 2012 +0200
+
+    Initial commit
+
+commit 3da6995ac8e55db52d1ce663bafa9b07e24c5387
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jun 16 14:29:07 2012 -0700
+
+    Initial commit

@@ -1,0 +1,47 @@
+{
+	"godmode_login_name":"Přihlašovací jméno",
+	"godmode_password":"Heslo",
+	"godmode_browser_supported":"Podporovaný prohlížeč",
+	"godmode_browser_not_supported":"Prohlížeč není podporován",
+
+	"godmode_menu":"Hlavní menu",
+	"godmode_window_refresh":"Aktualizovat",
+	"godmode_logout":"Odhlásit",
+	"godmode_homepage":"Domovská stránka",
+
+	"godmode_edit":"Upravit",
+	"godmode_delete":"Smazat",
+	"godmode_create":"Vytvořit",
+	"godmode_save":"Uložit",
+	"godmode_detail":"Detail",
+	"godmode_whole_public":"Veřejnost",
+
+	"godmode_name":"Název",
+	"godmode_created_at":"Vytvořeno",
+	"godmode_updated_at":"Aktualizováno",
+	"godmode_nick":"Přezdívka",
+	"godmode_email":"E-mail",
+
+	"godmode_users":"Uživatelé",
+	"godmode_user_count":"Počet uživatelů",
+	"godmode_user_list":"Seznam uživatelů",
+	"godmode_user_create":"Vytvořit uživatele",
+	"godmode_user_edit":"Upravit uživatele",
+	"godmode_user_edit_contacts":"Upravit kontakty",
+	"godmode_user_perms":"Oprávnění",
+	"godmode_user_groups":"Uživatelské skupiny",
+	"godmode_user_login":"Přihlašovací jméno",
+	"godmode_user_name":"Jméno",
+	"godmode_user_first_name":"Křestní jméno",
+	"godmode_user_last_name":"Příjmení",
+	"godmode_last_login":"Poslední přihlášení",
+
+	"godmode_user_group_list":"Seznam uživatelských skupin",
+	"godmode_user_group_create":"Vytvořit skupinu",
+	"godmode_user_group_edit":"Upravit skupinu",
+	"godmode_user_group_delete":"Smazat skupinu",
+
+	"godmode_user_perms_list":"Seznam modulů",
+	"godmode_user_perms_for_module":"Seznam oprávnění pro modul",
+	"end":""
+}

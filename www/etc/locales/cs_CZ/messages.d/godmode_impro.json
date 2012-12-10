@@ -7,5 +7,18 @@
 
 	"godmode_event_name":"Název události",
 
+	"godmode_impro_team_create":"Vytvořit tým",
+	"godmode_impro_team_edit":"Upravit tým",
+
+	"impro_teams":"Týmy",
+	"impro_team_list":"Seznam týmů",
+	"impro_team_name":"Zkratka",
+	"impro_team_name_full":"Název týmu",
+	"impro_team_about":"Krátké info o týmu",
+	"impro_team_site":"Webové stránky",
+	"impro_team_player_count":"Počet hráčů",
+	"impro_team_matches_played_count":"Počet odehraných zápasů",
+
+
 	"end":""
 }

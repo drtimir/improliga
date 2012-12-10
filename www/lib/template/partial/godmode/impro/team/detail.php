@@ -16,7 +16,7 @@ $props = Tag::div(array(
 						Tag::span(array(
 							"output"  => false,
 							"class"   => 'l',
-							"content" => l('impro_team_matches_played').':',
+							"content" => l('impro_team_matches_played_count').':',
 						)),
 						Tag::span(array(
 							"output"  => false,
@@ -47,7 +47,7 @@ $props = Tag::div(array(
 						Tag::span(array(
 							"output"  => false,
 							"class"   => 'l',
-							"content" => l('godmode_visibility').':',
+							"content" => l('godmode_visible').':',
 						)),
 						Tag::span(array(
 							"output"  => false,

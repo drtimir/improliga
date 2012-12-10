@@ -14,7 +14,7 @@ $this->template('godmode/item-list', array(
 	"cols" => array(
 		array('name',          l('impro_team_name'), 'link', $link_cont),
 		array('name_full',     l('impro_team_name_full')),
-		array('count_players', l('impro_team_players'), 'function'),
+		array('count_players', l('impro_team_player_count'), 'function'),
 		array('visible',       l('godmode_visible'), 'bool'),
 		array('created_at', l('godmode_created_at'), 'date'),
 		array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete')),

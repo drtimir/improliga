@@ -3,10 +3,10 @@
 def($new, false);
 def($id);
 def($redirect, '/god/impro/event/{id_impro_event}/edit/');
-def($heading, $new ? l('godmode_event_create'):l('godmode_event_delete'));
+def($heading, $new ? l('godmode_match_create'):l('godmode_match_delete'));
 
 
-if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", $id))) {
+if (($new && $item = new Impro\Match()) || ($id && $item = find("\Impro\Match", $id))) {
 
 	$f = new System\Form(array("default" => $item->get_data(), "heading" => $heading));
 	$f->input_text("name", l('godmode_event_name'), true);

@@ -1,7 +1,7 @@
 {
 	"menu":[
 		["godmode_user_list", "./", "actions/list"],
-		["godmode_user_create", "./create/", "actions/add"]
+		["godmode_user_create", "./create/", "actions/create"]
 	],
 
 	"create":[],
@@ -10,7 +10,7 @@
 		"menu":[
 			"drop",
 			["godmode_user_group_list", "./", "actions/list"],
-			["godmode_user_group_create", "./create/", "actions/add"]
+			["godmode_user_group_create", "./create/", "actions/create"]
 		],
 
 		"create":[],
@@ -36,7 +36,8 @@
 			null,
 			["godmode_detail", "./", "actions/detail"],
 			["godmode_user_edit", "./edit/", "actions/edit"],
-			["godmode_user_edit_contacts", "./edit-contacts/", "actions/contact"],
+			["godmode_user_edit_groups_assignment", "./edit_groups/", "modules/user_group"],
+			["godmode_user_edit_contacts", "./edit-contacts/", "modules/contacts"],
 			["godmode_delete", "./delete/", "actions/delete"]
 		]
 	}

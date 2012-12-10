@@ -28,14 +28,14 @@ $(function(){
 						"title_base_stays":true,
 						"position":{"x":20, "y":20},
 						"position_restore":{"x":20, "y":20},
-						"size":{"x":640, "y":480},
+						"size":{"x":720, "y":520},
 						"size_restore":{"x":640, "y":480},
 						"drag":false,
 						"maximized":false,
 						"minimized":false,
 						"rolled_up":false,
 						"url":'',
-						"resize_to_fit":true,
+						"resize_to_fit":false,
 					},
 					els = {
 						"border":null,
@@ -78,6 +78,7 @@ $(function(){
 					var size = this.attr('size');
 
 					this.title(this.attr('title'));
+					this.focus();
 					this.resize(size.x, size.y);
 					this.update_size();
 					this.reset_events();
@@ -121,16 +122,16 @@ $(function(){
 
 				var create_buttons = function(ref)
 				{
-					els.button_close = $('<li class="button"><a href="" title="'+pwf.godmode.trans('godmode_close')+'"><span></span></a></li>');
+					els.button_close = $('<li class="button close"><a href="" title="'+pwf.godmode.trans('godmode_close')+'"><span></span></a></li>');
 					els.button_close.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.close();  });
 
-					els.button_maximize = $('<li class="button"><a href="" title="'+pwf.godmode.trans('godmode_maximize')+'"><span></span></a></li>');
+					els.button_maximize = $('<li class="button maximize"><a href="" title="'+pwf.godmode.trans('godmode_maximize')+'"><span></span></a></li>');
 					els.button_maximize.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.switch_maximization();  });
 
-					els.button_minimize = $('<li class="button"><a href="" title="'+pwf.godmode.trans('godmode_minimize')+'"><span></span></a></li>');
+					els.button_minimize = $('<li class="button minimize"><a href="" title="'+pwf.godmode.trans('godmode_minimize')+'"><span></span></a></li>');
 					els.button_minimize.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.minimize();  });
 
-					els.button_roll = $('<li class="button"><a href="" title="'+pwf.godmode.trans('godmode_roll')+'"><span></span></a></li>');
+					els.button_roll = $('<li class="button roll"><a href="" title="'+pwf.godmode.trans('godmode_roll')+'"><span></span></a></li>');
 					els.button_roll.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.roll(); });
 
 					els.buttons.append(els.button_close);
@@ -599,10 +600,6 @@ $(function(){
 			var win = new class_window(data);
 			windows.push(win)
 			win.create().show();
-
-			if (window_active === null) {
-				win.focus();
-			}
 
 			return win;
 		};

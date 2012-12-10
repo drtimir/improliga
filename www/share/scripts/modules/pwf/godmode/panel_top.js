@@ -41,11 +41,13 @@ $(function(){
 			}
 
 			if (el_logout === null) {
-				el_right.append(el_logout = $('<a href="/god/logout" class="logout"><span>'+pwf.godmode.trans('godmode_logout')+'</span></a>'));
+				var icon = pwf.godmode.components.icon.html('godmode/actions/logout', 16);
+				el_right.append(el_logout = $('<a href="/god/logout" class="logout" title="'+pwf.godmode.trans('godmode_logout')+'">'+icon+'</a>'));
 			}
 
 			if (el_homepage === null) {
-				el_right.append(el_homepage = $('<a href="/" class="homepage"><span>'+pwf.godmode.trans('godmode_homepage')+'</span></a>'));
+				var icon = pwf.godmode.components.icon.html('godmode/locations/home', 16);
+				el_right.append(el_homepage = $('<a href="/" class="homepage" title="'+pwf.godmode.trans('godmode_homepage')+'">'+icon+'</a>'));
 			}
 
 			if (el_user === null) {

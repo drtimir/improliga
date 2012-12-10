@@ -11,7 +11,7 @@ $(function() {
 			menu = [
 				{
 					"label":"godmode_menu",
-					"icon":"/share/icons/32x32/menu.png",
+					"icon":["godmode/actions/fire", 32],
 					"callback": function(e) {
 						e.preventDefault();
 						return pwf.godmode.when_components_are_ready(['main_menu'], function(e) {
@@ -108,7 +108,8 @@ $(function() {
 
 				for (var i = 0; i < menu.length; i++) {
 					var opt  = $('<li class="menu_'+i+'"></li>');
-					var link = $('<a href="#" title="'+pwf.godmode.trans(menu[i].label)+'"><span class="inner">'+pwf.godmode.trans(menu[i].label)+'</span></a>');
+					var icon = pwf.godmode.components.icon.html(menu[i].icon[0], menu[i].icon[1]);
+					var link = $('<a href="#" title="'+pwf.godmode.trans(menu[i].label)+'">'+icon+'<span class="inner">'+pwf.godmode.trans(menu[i].label)+'</span></a>');
 
 					link.bind('click', menu[i].callback);
 

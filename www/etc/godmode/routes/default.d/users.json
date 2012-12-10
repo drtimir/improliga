@@ -88,6 +88,13 @@
 			]
 		}},
 
+		"edit_groups":{"#":{
+			"title":"godmode_user_edit_groups_assignment",
+			"modules":[
+				["godmode/user/edit_groups", {"id":"#{0}"}]
+			]
+		}},
+
 		"edit-contacts":{"#":{
 			"title":"godmode_user_edit_contacts",
 			"modules":[
@@ -98,14 +105,7 @@
 		"delete":{"#":{
 			"title":"godmode_delete",
 			"modules":[
-				["godmode/user/edit_contacts", {"id":"#{0}"}]
-			]
-		}},
-
-		"assign":{"#":{
-			"title":"godmode_assign_groups",
-			"modules":[
-				["core/user/assign-groups", { "id":"#{0}" }]
+				["godmode/user/delete", {"id":"#{0}"}]
 			]
 		}}
 	}

@@ -14,9 +14,13 @@
 	"godmode_create":"Vytvořit",
 	"godmode_save":"Uložit",
 	"godmode_detail":"Detail",
+	"godmode_visible":"Viditelnost",
 	"godmode_whole_public":"Veřejnost",
 
+	"godmode_save_success":"Úspěšně uloženo",
+
 	"godmode_name":"Název",
+	"godmode_text":"Text",
 	"godmode_created_at":"Vytvořeno",
 	"godmode_updated_at":"Aktualizováno",
 	"godmode_nick":"Přezdívka",
@@ -43,5 +47,11 @@
 
 	"godmode_user_perms_list":"Seznam modulů",
 	"godmode_user_perms_for_module":"Seznam oprávnění pro modul",
+
+	"godmode_static_texts":"Statické texty",
+	"godmode_static_text_list":"Seznam statických textů",
+	"godmode_static_text_create":"Vytvořit statický text",
+	"godmode_static_text_edit":"Upravit statický text",
+	"godmode_static_text_delete":"Smazat statický text",
 	"end":""
 }

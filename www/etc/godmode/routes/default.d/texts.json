@@ -1,0 +1,38 @@
+{
+	"#":{
+		"title":"godmode_static_texts",
+		"template":["godmode/window"],
+		"modules":[
+			["godmode/text/list"]
+		]
+	},
+
+	"create":{"#":{
+		"title":"godmode_static_text_create",
+		"modules":[
+			["godmode/text/edit", {"new":true}]
+		]
+	}},
+
+	"*":{"#":{
+			"title":"godmode_static_text",
+			"modules":[
+				["godmode/text/detail", {"id":"#{0}"}]
+			]
+		},
+
+		"edit":{"#":{
+			"title":"godmode_static_text_edit",
+			"modules":[
+				["godmode/text/edit", {"id":"#{0}"}]
+			]
+		}},
+
+		"delete":{"#":{
+			"title":"godmode_static_text_delete",
+			"modules":[
+				["godmode/text/delete", {"id":"#{0}"}]
+			]
+		}}
+	}
+}

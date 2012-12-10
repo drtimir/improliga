@@ -19,5 +19,10 @@
 				"url":"/god/users/perms/"
 			}
 		]
+	},
+	{
+		"name":"godmode_static_texts",
+		"icon":"modules/text",
+		"url":"/god/texts/"
 	}
 ]

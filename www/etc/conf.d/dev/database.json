@@ -6,7 +6,7 @@
 	"list":{
 		"pwf":{
 			"driver":"mysqli",
-			"database":"pwf_cms",
+			"database":"pwf_improliga",
 			"host":"localhost",
 			"username":"root",
 			"password":"q23",

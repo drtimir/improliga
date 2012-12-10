@@ -65,11 +65,16 @@
 	display:block;
 	width:16px;
 	height:16px;
-	background:#fff;
 }
 
+.window-buttons .close a { background:url(/share/icons/16/godmode/window/close); }
+.window-buttons .maximize a { background:url(/share/icons/16/godmode/window/maximize); }
+.window-buttons .minimize a { background:url(/share/icons/16/godmode/window/minimize); }
+.window-buttons .roll a { background:url(/share/icons/16/godmode/window/roll); }
+
+
 .window-buttons .button a:hover {
-	background:#f90;
+	background-color:rgba(255,140,0,0.5);
 }
 
 .window-content {
@@ -132,3 +137,16 @@
 }
 
 #window_form_container { display:none }
+
+.window-content .menu-panel li {
+	margin-right:10px;
+}
+
+.window-content .menu-panel li .icon {
+	margin-right:0;
+}
+
+.window-content .menu-panel li .lt {
+	display:none;
+}
+

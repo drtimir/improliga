@@ -1,7 +1,12 @@
 [
 	{
 		"name":"impro_events",
-		"icon":"modules/events",
+		"icon":"impro/team",
 		"url":"/god/impro/events/"
+	},
+	{
+		"name":"impro_teams",
+		"icon":"impro/team",
+		"url":"/god/impro/teams/"
 	}
 ]

@@ -1,6 +1,6 @@
 <?
 
-def($link_cont, '/god/users/{id_system_user}/edit/');
+def($link_cont, '/god/users/{id_system_user}/');
 def($conds, array());
 def($opts, array());
 def($per_page, 20);

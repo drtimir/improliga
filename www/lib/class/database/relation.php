@@ -5,11 +5,12 @@ namespace Database
 	class Relation extends \System\Model\Attr
 	{
 		protected static $attrs = array(
-			"name"      => array('varchar'),
-			"type"      => array('varchar'),
-			"model"     => array('varchar'),
-			"parent"    => array('varchar'),
-			"is_master" => array('bool'),
+			"name"        => array('varchar'),
+			"type"        => array('varchar'),
+			"model"       => array('varchar'),
+			"parent"      => array('varchar'),
+			"is_master"   => array('bool'),
+			"is_bilinear" => array('bool'),
 		);
 
 
@@ -48,6 +49,16 @@ namespace Database
 
 		public function is_bilinear()
 		{
+			if ($this->is_bilinear) {
+				$this->get_bilinear_rel();
+			}
+
+			return $this->is_bilinear;
+		}
+
+
+		public function get_bilinear_rel()
+		{
 			$relations = self::get_from_model($this->model);
 			foreach ($relations as $rel) {
 				if ($this->is_bilinear_with($rel)) {
@@ -56,12 +67,10 @@ namespace Database
 					if (!$this->bilinear_rel->is_master) {
 						$this->is_master = true;
 					}
-
-					return true;
 				}
 			}
 
-			return false;
+			return $this->bilinear_rel;
 		}
 
 
@@ -75,7 +84,7 @@ namespace Database
 		{
 			$name = array();
 
-			if ($this->is_master && !$this->bilinear_rel->is_master) {
+			if ($this->is_master) {
 				$name['master'] = \System\Model\Database::get_table($this->parent);
 				$name['slave']  = \System\Model\Database::get_table($this->model);
 			} else {

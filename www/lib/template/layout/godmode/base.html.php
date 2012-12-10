@@ -17,6 +17,7 @@
 		content_for("scripts", "pwf/storage");
 		content_for("scripts", "pwf/godmode");
 		content_for("scripts", "pwf/godmode/session");
+		content_for("scripts", "pwf/godmode/icon");
 		content_for("scripts", "pwf/godmode/window");
 		content_for("scripts", "pwf/godmode/window/form");
 		content_for("scripts", "pwf/godmode/viewport");

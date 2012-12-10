@@ -25,5 +25,68 @@
 			}
 
 		}
+	},
+
+	"teams":{
+		"#":{
+			"title":"impro_teams",
+			"modules":[
+				["godmode/impro/team/list"]
+			]
+		},
+
+		"create":{
+			"#":{
+				"title":"impro_team_create",
+				"modules":[
+					["godmode/impro/team/edit", {"new":true}]
+				]
+			}
+		},
+
+		"*":{"#":{
+				"title":"impro_team_detail",
+				"modules":[
+					["godmode/impro/team/detail", {"id":"#{0}"}]
+				]
+			},
+
+			"players":{
+				"#":{
+					"title":"impro_team_player_list",
+					"modules":[
+						["godmode/impro/team/player/list", {"team_id":"#{0}"}]
+					]
+				},
+
+				"add":{"#":{
+					"title":"impro_team_player_add",
+					"modules":[
+						["godmode/impro/team/player/add", {"team_id":"#{0}"}]
+					]
+				}},
+
+				"*":{
+					"#":{
+					},
+
+					"delete":{"#":{
+						"title":"impro_team_player_delete",
+						"modules":[
+							["godmode/impro/team/player/delete", {"team_id":"#{0}", "id":"#{1}"}]
+						]
+					}}
+				}
+			},
+
+			"edit":{
+				"#":{
+					"title":"impro_team_edit",
+					"modules":[
+						["godmode/impro/team/edit", {"id":"#{0}"}]
+					]
+				}
+			}
+		}
 	}
 }

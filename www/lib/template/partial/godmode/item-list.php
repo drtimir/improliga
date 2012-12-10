@@ -19,7 +19,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 
 			$str = '';
 			foreach ($col[3] as $label=>$action) {
-				$str .= icon_for('actions/'.($action ? $action:'detail'), 16, stprintf($static['link_cont'], $item->get_data()).'/'.$action, $label);
+				$str .= icon_for('godmode/actions/'.($action ? $action:'detail'), 16, stprintf($static['link_cont'], $item->get_data()).$action, $label);
 			}
 
 			return $str;
@@ -53,7 +53,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 			} else {
 
 				return is_bool($item->$col[0]) ?
-					($item->$col[0] ? _('Ano'):_('Ne')):
+					($item->$col[0] ? l('yes'):l('no')):
 					($col[4] ? sprintf($col[4], $item->$col[0]):$item->$col[0]);
 			}
 
@@ -62,6 +62,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 
 	function admin_list_draw_table($locals) {
 
+		$i=0;
 		foreach ($locals as $key=>$val) {
 			$$key = $val;
 		}

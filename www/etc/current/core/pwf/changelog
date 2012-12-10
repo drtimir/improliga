@@ -1,3 +1,188 @@
+commit a20e0ca5b73432d82ff1294b170ebecbb81abcdb
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 02:19:19 2012 +0100
+
+    Scripts
+    
+    * Fixed handler object
+
+commit ca49bba23b5bc3e187182f4eb3947d939ae634a9
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 02:16:19 2012 +0100
+
+    Mod rewrite
+    
+    * fixed icon resource path
+
+commit be1d941c8b95a2fb41e45b016bd18827e29ec14d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 02:14:39 2012 +0100
+
+    Database model
+    
+    * Added support for saving has_many relations
+
+commit 958d26acb0ce97eb1094c212101bfd85fd7a3434
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 02:12:13 2012 +0100
+
+    Database structure class
+    
+    * Added primary key to bilinear relation tables
+
+commit e303d46c221567e54419e24589d136b749141597
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 02:11:32 2012 +0100
+
+    Query class
+    
+    * Fixed data deletion
+    * Added where_in method
+
+commit 60ede2334d2267cffe3a1ef9d50e096620a6aea3
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 01:17:45 2012 +0100
+
+    Form helper
+    
+    * Added support for passing set of objects as input options
+
+commit 8a0d0fcbe672aa2f663e2ad933e43f476336102d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 10 01:14:36 2012 +0100
+
+    Form helper
+    
+    * Added support for radio buttons
+    * Added support for multi checkboxes
+
+commit a0798eb6d0e61e2a00d35f1117d6385e90b9f0d0
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 9 22:45:56 2012 +0100
+
+    Styles
+    
+    * Added icons
+
+commit 0cc46bd86c8ef144024052443534e2f3923bc7c9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 9 22:08:41 2012 +0100
+
+    Texts
+    
+    * Reduced necessary attributes
+
+commit 3dbd4e9f486fafd3f96c7b65a5822b44fd2fb39b
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 9 14:24:10 2012 +0100
+
+    Icon handling
+    
+    * Fixed icon handling
+
+commit 6196dea67ad3e331698d48d3f581832779dd7c2d
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 17:33:15 2012 +0100
+
+    Database structure relation
+    
+    * Fixed relations without secondary bilinear mate
+
+commit d44fe528f99a7633acf93fd5d632495920d2d714
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 17:31:00 2012 +0100
+
+    Database structure
+    
+    * Check if is bilinear by attributes
+
+commit b4889a9e14b205678f647649e1b8d8380dbaf0d8
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 15:15:20 2012 +0100
+
+    Database model
+    
+    * Fix rejson
+
+commit df46ba1c75ddf1e94458c0e900a57c58bf457806
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 13:12:15 2012 +0100
+
+    [fix] Module class
+
+commit 2be4aefbb87e9f3a7eaa69e00bf72cf55523505f
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 13:05:57 2012 +0100
+
+    Module class
+    
+    * Recreated get_all function for modules
+
+commit 1f950eb9ec9768f533f774d1c918f910413f9615
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 12:56:59 2012 +0100
+
+    Directory class
+    
+    * Fixed regexp search
+
+commit 3e7a70af9a7295b9cd5ece2ad741b5a5a648e7d1
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 12:33:17 2012 +0100
+
+    Form class
+    
+    * Added missing ID attr
+
+commit 65023ee49dba83a5e94fd3b46a3d06a0290639f2
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 12:12:00 2012 +0100
+
+    Query class
+    
+    * Added method simple_delete with params ($table, $conds)
+    * Fixed query delete  method
+
+commit 5f0bb700b3e801157b4f856de38b55a85634927e
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Nov 30 11:29:38 2012 +0100
+
+    Form class
+    
+    * Added text method
+
+commit 81b21f5b041e74395b2a6592f9e109d1f17c008f
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Nov 29 17:08:23 2012 +0100
+
+    User Group model
+    
+    * Added user count helper
+
+commit 7afa28db4892aaa723ac42ba69b81a4cdc08ceef
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Nov 28 23:17:49 2012 +0100
+
+    Forms
+    
+    * Data can be passed to constructor
+
+commit c4ba7231f88f88b5aaf455629c42079a245e1ead
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Nov 28 15:42:22 2012 +0100
+
+    Locales class
+    
+    * Changed getting messages to lang based
+
+commit 26167f09cd06918f419ad005f4cbf1edc7f0ad58
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Nov 28 15:39:58 2012 +0100
+
+    Locales class
+    
+    * Added function that gets all messages
+
 commit 2058632c494bcbd5038ee63cfc43f7f52a078ff9
 Author: just-paja <just.paja@gmail.com>
 Date:   Mon Nov 26 08:18:29 2012 +0100

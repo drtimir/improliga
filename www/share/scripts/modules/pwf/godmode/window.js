@@ -23,6 +23,7 @@ $(function(){
 				var
 					attrs = {
 						"id":0,
+						"icon":0,
 						"title":"Undefined",
 						"title_base":'',
 						"title_base_stays":true,
@@ -41,6 +42,7 @@ $(function(){
 						"border":null,
 						"container":null,
 						"title_container":null,
+						"icon":null,
 						"title":null,
 						"menu":null,
 						"buttons":null,
@@ -71,6 +73,18 @@ $(function(){
 				} else throw "You must input window data when creating new window.";
 
 
+				this.attr = function(attr, value)
+				{
+					if (typeof attrs[attr] != 'undefined') {
+						if (typeof value != 'undefined') {
+							attrs[attr] = value;
+						}
+
+						return attrs[attr];
+					} else throw "Attribute "+attr+" does not exist for window instance";
+				};
+
+
 				this.create = function()
 				{
 					create_base(this);
@@ -98,6 +112,7 @@ $(function(){
 					els.border = $('<div class="window"></div>');
 					els.container = $('<div class="window-inner"></div>');
 					els.title_container = $('<div class="window-title-container"></div>');
+					els.icon = $('<span class="window-icon">' + pwf.godmode.components.icon.html(ref.attr('icon'), 16) + '</span>');
 					els.title = $('<span class="window-title"></span>');
 					els.menu = $('<menu class="window-menu"></menu>');
 					els.buttons = $('<ul class="window-buttons"></ul>');
@@ -105,6 +120,7 @@ $(function(){
 					els.content = $('<div class="window-content"></div>');
 					els.preloader = $('<div class="window-preloader"><span>'+pwf.godmode.trans('godmode_please_wait')+'</span></div>');
 
+					els.title_container.append(els.icon);
 					els.title_container.append(els.title);
 					els.title_container.append(els.menu);
 					els.title_container.append(els.buttons);
@@ -214,18 +230,6 @@ $(function(){
 				};
 
 
-				this.attr = function(attr, value)
-				{
-					if (typeof attrs[attr] != 'undefined') {
-						if (typeof value != 'undefined') {
-							attrs[attr] = value;
-						}
-
-						return attrs[attr];
-					} else throw "Attribute "+attr+" does not exist for window instance";
-				};
-
-
 				this.find = function(selector)
 				{
 					return this.get_el('content').find(selector);
@@ -255,6 +259,11 @@ $(function(){
 					pwf.godmode.components.window.set_active(this);
 					els.border.addClass('active').css({"z-index":100});
 					pwf.godmode.components.window.set_active(this);
+
+					if (typeof pwf.godmode.components.app_drawer === 'object') {
+						pwf.godmode.components.app_drawer.update_windows();
+					}
+
 					return this;
 				};
 
@@ -452,6 +461,7 @@ $(function(){
 
 							this.attr('url', url);
 							this.set_content(html);
+							pwf.search_tool.init();
 						},
 
 					});

@@ -16,6 +16,7 @@
 		content_for("head", '<script type="text/javascript">'.implode('', $script).'</script>');
 		content_for("scripts", "pwf/storage");
 		content_for("scripts", "pwf/godmode");
+		content_for("scripts", "pwf/form/search_tool");
 		content_for("scripts", "pwf/godmode/session");
 		content_for("scripts", "pwf/godmode/icon");
 		content_for("scripts", "pwf/godmode/window");

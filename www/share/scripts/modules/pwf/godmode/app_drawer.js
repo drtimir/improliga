@@ -33,8 +33,18 @@ $(function() {
 				this.create = function()
 				{
 					els.container = $('<li class="button"></li>');
-					els.button    = $('<a href="#"><span></span></a>');
-					els.button.bind('click', {"win":win}, function(e) { e.preventDefault(); e.data.win.switch_minimalization(); });
+					els.button    = $('<a href="#"></a>');
+					els.icon      = $(pwf.godmode.components.icon.html(win.attr('icon'), 32));
+
+					els.button.append(els.icon);
+					els.button.bind('click', {"win":win}, function(e) {
+						e.preventDefault();
+						if (e.data.win.is_active()) {
+							e.data.win.switch_minimalization();
+						} else {
+							e.data.win.focus();
+						}
+					});
 
 					els.container.append(els.button);
 					el_windows.append(els.container);
@@ -46,6 +56,7 @@ $(function() {
 				{
 					checkout_class("drag", win.attr('drag'));
 					checkout_class("minimized", win.attr('minimized'));
+					checkout_class("active", win.is_active());
 				};
 
 
@@ -60,6 +71,11 @@ $(function() {
 					els.container.remove();
 				};
 
+
+				this.get_win = function()
+				{
+					return win;
+				};
 			};
 
 		this.init = function()
@@ -136,6 +152,7 @@ $(function() {
 			if (typeof windows[win.attr('id')-1] !== 'object') {
 				var r = create_window_representation(win);
 				r.create();
+				r.update();
 				windows[win.attr('id')-1] = r;
 			}
 		};
@@ -152,6 +169,16 @@ $(function() {
 			var wr = this.get_win(id);
 			if (wr !== null) {
 				wr.update();
+			}
+		};
+
+
+		this.update_windows = function()
+		{
+			for (var i = 0; i<windows.length; i++) {
+				if (windows[i] !== null) {
+					windows[i].update();
+				}
 			}
 		};
 

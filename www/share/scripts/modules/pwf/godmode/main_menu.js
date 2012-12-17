@@ -80,7 +80,7 @@ $(function() {
 			for (var i = 0; i<data.length; i++) {
 				var category = $('<li></li>');
 				var name  = $('<a class="name" href=""></a>');
-				var icon  = $('<span class="icon"></span>');
+				var icon  = $(pwf.godmode.components.icon.html('godmode/'+data[i].icon, 16));
 				var label = $('<span class="label">'+data[i].name+'</span>');
 				name.append(icon);
 				name.append(label);
@@ -88,14 +88,15 @@ $(function() {
 
 				if (typeof data[i].url != 'undefined') {
 					name.attr('href', data[i].url);
-					name.bind('click', {"title":data[i].name, "url":data[i].url}, function(e) {
+					name.bind('click', {"title":data[i].name, "url":data[i].url, "icon":data[i].icon}, function(e) {
 						e.preventDefault();
 						e.stopPropagation();
 
 						pwf.godmode.components.main_menu.close();
 						pwf.godmode.components.window.create({
 							"title":e.data.title,
-							"url":e.data.url
+							"url":e.data.url,
+							"icon":"godmode/" + e.data.icon,
 						});
 					});
 				}

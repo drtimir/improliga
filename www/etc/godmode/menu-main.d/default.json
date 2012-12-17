@@ -1,28 +1,28 @@
 [
 	{
 		"name":"godmode_users",
-		"icon":"modules/users",
+		"icon":"modules/user_group",
 		"items":[
 			{
 				"name":"godmode_user_list",
-				"icon":"modules/user",
+				"icon":"items/user",
 				"url":"/god/users/"
 			},
 			{
 				"name":"godmode_user_groups",
-				"icon":"modules/user-group",
+				"icon":"modules/user_group",
 				"url":"/god/users/groups/"
 			},
 			{
 				"name":"godmode_user_perms",
-				"icon":"modules/user-perm",
+				"icon":"items/user_perm",
 				"url":"/god/users/perms/"
 			}
 		]
 	},
 	{
 		"name":"godmode_static_texts",
-		"icon":"modules/text",
+		"icon":"items/text",
 		"url":"/god/texts/"
 	}
 ]

@@ -1,3 +1,57 @@
+commit fc52f82ceb19ae56f6f4f42b85948fc1f4c57199
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 22:15:52 2012 +0100
+
+    Rewrite
+    
+    * Fixed icon resource paths
+
+commit d8f44a249f9896d7c2ab1219a1b72c835ccddfcd
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 22:15:01 2012 +0100
+
+    Database sync
+    
+    * Added auto sync for belongs_to relations
+
+commit bc32fb22a5164a94f6fd2fd8d7b04db728028a45
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 22:13:56 2012 +0100
+
+    Form search tool
+    
+    * Added update functions to search tools
+
+commit 963fb02993912759d870d26bfb8603d0f55ddb28
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 13:38:10 2012 +0100
+
+    Form class
+    
+    * Added search tool input
+
+commit 366c3b7955307f15496d98c25cbc082590becb30
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 13:35:40 2012 +0100
+
+    Database model, Query class
+    
+    * Models can be filtered by has_many relations
+
+commit 58314e3861a57b5336bc8c9f17c9c8f0dd633c74
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 13:35:03 2012 +0100
+
+    JS: Tooltip fix
+
+commit 4d3041bb61840238dbf072ad4ebea8b8d1cdc7e5
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 16 13:34:30 2012 +0100
+
+    JS: Functions
+    
+    * Renamed clog() to v()
+
 commit a20e0ca5b73432d82ff1294b170ebecbb81abcdb
 Author: just-paja <just.paja@gmail.com>
 Date:   Mon Dec 10 02:19:19 2012 +0100

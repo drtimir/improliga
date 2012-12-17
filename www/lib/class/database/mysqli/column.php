@@ -7,6 +7,7 @@ namespace Database\Mysqli
 		private static $complex_types = array(
 			"image"    => array("type" => 'text'),
 			"json"     => array("type" => 'text'),
+			"int_set"  => array("type" => 'text'),
 			"password" => array("type" => 'varchar'),
 			"bool"     => array("type" => 'tinyint', "length" => 1),
 		);
@@ -18,12 +19,12 @@ namespace Database\Mysqli
 		private $attr_names = array(
 			'type',
 			'length',
+			'is_index',
 			'is_null',
 			'is_unique',
 			'is_primary',
 			'is_unsigned',
 			'is_autoincrement',
-			'key',
 			'default',
 			'extra',
 			'comment',
@@ -59,7 +60,7 @@ namespace Database\Mysqli
 				);
 				$this->attrs['is_primary']  = strpos($cfg['Key'], 'PRI') !== false;
 				$this->attrs['is_null']     = strtolower($cfg['Null']) === 'Yes';
-				$this->attrs['key']         = $cfg['Key'];
+				$this->attrs['is_index']    = $cfg['Key'];
 				$this->attrs['default']     = $cfg['Default'];
 				$this->attrs['is_autoincrement'] = strpos($cfg['Extra'], "auto_increment") !== false;
 				$this->attrs['extra']       = $cfg['Extra'];

@@ -1,0 +1,32 @@
+<?
+
+def($id);
+def($redirect, '/god/users/{id_system_user}/');
+
+if ($id && $user = find("\System\User", $id)) {
+
+	$heading = l('godmode_user_edit_passwd');
+	$f = new System\Form(array("id" => 'edit_user_groups', "heading" => $heading));
+
+	$f->input_password('password', l('godmode_user_password'), true);
+	$f->input_password('password_check', l('godmode_user_password_check'), true);
+	$f->submit(l('godmode_save'));
+
+	if ($f->passed()) {
+
+		$p = $f->get_data();
+		if ($p['passwd'] === $p['passwd_check']) {
+			$user->update_attrs($p)->save();
+
+			if (!$user->errors()) {
+				message('success', $heading, l('godmode_save_success'), true);
+				redirect(soprintf($redirect, $user));
+			}
+		} else {
+			$f->out($this);
+		}
+	} else {
+		$f->out($this);
+	}
+
+} else $this->error('params');

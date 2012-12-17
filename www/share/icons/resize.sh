@@ -2,22 +2,28 @@
 
 root="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 themes="${root}/*"
+size_source="32"
+sizes="32 24 16"
 
 for theme in $themes; do
 	if [ -d "${theme}" ]; then
-		files=`find "${theme}/32" -type f -name "*.png"`
-		mkdir "${theme}/24" 2> /dev/null
-		mkdir "${theme}/16" 2> /dev/null
+		files=`find "${theme}/${size_source}" -type f -name "*.png"`
 
-		for file in $files; do
-			bname=`basename ${file}`
-			dirname=`basename \`dirname ${file}\``
+		for size in $sizes; do
+			mkdir "${theme}/${size}" 2> /dev/null
 
-			mkdir "${theme}/24/${dirname}" 2> /dev/null
-			mkdir "${theme}/16/${dirname}" 2> /dev/null
+			for file in $files; do
+				bname=`basename ${file}`
+				dirname=`basename \`dirname ${file}\``
 
-			convert "${file}" -resize 24x24 "${theme}/24/${dirname}/${bname}"
-			convert "${file}" -resize 16x16 "${theme}/16/${dirname}/${bname}"
+				if [[ "${dirname}" == "${size_source}" ]]; then
+					dirname=""
+				else
+					mkdir "${theme}/${size}/${dirname}" 2> /dev/null
+				fi
+
+				convert "${file}" -resize "${size}x${size}" "${theme}/${size}/${dirname}/${bname}"
+			done
 		done
 	fi
 done

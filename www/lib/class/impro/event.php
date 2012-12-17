@@ -4,20 +4,8 @@ namespace Impro
 {
 	class Event extends \System\Model\Database
 	{
-		const ID_TYPE_EVENT = 1;
-		const ID_TYPE_MATCH = 2;
-		const ID_TYPE_SHOW  = 3;
-
-
-		static private $types_available = array(
-			'event_type_event' => self::ID_TYPE_EVENT,
-			'event_type_match' => self::ID_TYPE_MATCH,
-			'event_type_show'  => self::ID_TYPE_SHOW,
-		);
-
-
 		protected static $attrs = array(
-			"id_event_type" => array("int", "is_unsigned" => true, "default" => self::ID_TYPE_EVENT),
+			"id_impro_event_type" => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
 			"title"         => array('varchar'),
 			"image"         => array('image'),
 			"desc_short"    => array('text'),
@@ -26,11 +14,20 @@ namespace Impro
 			"start"         => array('datetime'),
 			"duration"      => array("int", "is_unsigned" => true, "default" => 0),
 			"published"     => array('bool'),
-			"publish_at"    => array('datetime'),
+			"publish_at"    => array('datetime', "is_null" => true),
 		);
 
+
 		protected static $has_many = array(
-			"participants" => array("model" => '\Impro\Event\Participant')
+			"participants" => array("model" => '\Impro\Event\Participant'),
+			"teams"        => array("model" => '\Impro\Team', "is_bilinear" => true),
+		);
+
+
+		protected static $belongs_to = array(
+			"author"    => array("model" => "\System\User"),
+			"team_home" => array("model" => '\Impro\Team', "is_null" => true),
+			"team_away" => array("model" => '\Impro\Team', "is_null" => true),
 		);
 
 

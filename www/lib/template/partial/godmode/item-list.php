@@ -38,6 +38,21 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		} elseif (strpos($col[2], "number")) {
 			$val = $col[3] ? eval("return ".$item->$col[0].$col[3].";"):$col[0];
 			return $col[4] ? sprintf($col[4], $val):$val;
+		} elseif (strpos($col[2], 'list') !== false) {
+			if (isset($col[3])) {
+				$val = array();
+
+				if (is_array($col[3])) {
+					foreach ($item->$col[0] as $v) {
+						if (isset($col[3][$v])) {
+							$helper[] = $col[3][$v];
+						}
+					}
+				} else $val = $item->$col[0];
+				$val = $helper;
+			}
+
+			return implode(',', $val);
 		} else {
 
 			if ($item->$col[0] instanceof Core\System\BasicModel) {

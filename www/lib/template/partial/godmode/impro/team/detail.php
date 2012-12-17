@@ -67,7 +67,6 @@ $about = Tag::div(array(
 	"content" => $team->about
 ));
 
-
 Tag::div(array(
 	"class"   => "detail-team",
 	"content" => array(

@@ -29,15 +29,17 @@
 		"*":{
 			"menu":[
 				null,
-				["impro_team_player_list", "./players/", "modules/group"],
+				["impro_team_detail", "./", "actions/detail"],
+				["impro_team_member_add", "./add_member/", "actions/add_player"],
 				["impro_team_edit",    "./edit/", "actions/edit"],
 				["impro_team_delete",  "./delete/", "actions/delete"]
 			],
 
-			"players":{
+			"*":{
 				"menu":[
 					null,
-					["impro_team_player_add", "./add/", "actions/user_add"]
+				["impro_team_member_edit",   "./edit/", "actions/edit"],
+				["impro_team_member_delete", "./delete/", "actions/delete"]
 				]
 			}
 		}

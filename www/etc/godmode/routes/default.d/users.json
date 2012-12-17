@@ -95,6 +95,13 @@
 			]
 		}},
 
+		"edit_passwd":{"#":{
+			"title":"godmode_user_edit_passwd",
+			"modules":[
+				["godmode/user/edit_passwd", {"id":"#{0}"}]
+			]
+		}},
+
 		"edit-contacts":{"#":{
 			"title":"godmode_user_edit_contacts",
 			"modules":[

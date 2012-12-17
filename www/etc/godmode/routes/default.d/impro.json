@@ -51,29 +51,36 @@
 				]
 			},
 
-			"players":{
+			"add_member":{"#":{
+				"title":"impro_team_member_add",
+				"modules":[
+					["godmode/impro/team/member/add", {"team_id":"#{0}"}]
+				]
+			}},
+
+			"members":{
 				"#":{
-					"title":"impro_team_player_list",
+					"title":"impro_team_members_list",
 					"modules":[
-						["godmode/impro/team/player/list", {"team_id":"#{0}"}]
+						["godmode/impro/team/member/list", {"team_id":"#{0}"}]
 					]
 				},
-
-				"add":{"#":{
-					"title":"impro_team_player_add",
-					"modules":[
-						["godmode/impro/team/player/add", {"team_id":"#{0}"}]
-					]
-				}},
 
 				"*":{
 					"#":{
 					},
 
-					"delete":{"#":{
-						"title":"impro_team_player_delete",
+					"edit":{"#":{
+						"title":"impro_team_member_edit",
 						"modules":[
-							["godmode/impro/team/player/delete", {"team_id":"#{0}", "id":"#{1}"}]
+							["godmode/impro/team/member/edit", {"team_id":"#{0}", "id":"#{1}"}]
+						]
+					}},
+
+					"delete":{"#":{
+						"title":"impro_team_member_delete",
+						"modules":[
+							["godmode/impro/team/member/delete", {"team_id":"#{0}", "id":"#{1}"}]
 						]
 					}}
 				}

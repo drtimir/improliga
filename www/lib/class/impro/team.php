@@ -13,19 +13,18 @@ namespace Impro
 			"visible"    => array("bool"),
 		);
 
-
-		protected static $has_one = array(
-			"master" => array("model" => "\System\User"),
+		protected static $belongs_to = array(
+			"author" => array("model" => "\System\User"),
 		);
 
 		protected static $has_many = array(
-			"players" => array("model" => "\System\User", "is_bilinear" => true, "is_master" => true),
+			"members" => array("model" => "\Impro\Team\Member"),
 		);
 
 
-		public function count_players()
+		public function count_members()
 		{
-			return $this->players->count();
+			return $this->members->count();
 		}
 
 

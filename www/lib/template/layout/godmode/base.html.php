@@ -17,6 +17,7 @@
 		content_for("head", '<script type="text/javascript">'.implode('', $script).'</script>');
 		content_for("scripts", "pwf/storage");
 		content_for("scripts", "pwf/preloader");
+		content_for("scripts", "pwf/form/search_tool");
 		content_for("scripts", "pwf/godmode");
 		content_for("scripts", "pwf/godmode/preloader");
 		content_for("scripts", "pwf/godmode/session");
@@ -30,6 +31,7 @@
 		content_for("scripts", "pwf/godmode/desktop");
 		content_for("scripts", "pwf/godmode/shortcuts");
 
+		content_for("styles", "form/search_tool");
 		content_for("styles", "god/base");
 		content_for("styles", "god/preloader");
 		content_for("styles", "god/forms");

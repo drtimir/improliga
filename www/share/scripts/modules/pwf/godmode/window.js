@@ -480,6 +480,7 @@ $(function(){
 						this.set_callbacks();
 						this.update_menu();
 						pwf.godmode.components.window_form.bind(this);
+						pwf.search_tool.init(this.get_el('content'));
 
 
 						if (this.attr('resize_to_fit')) {

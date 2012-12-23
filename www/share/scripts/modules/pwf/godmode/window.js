@@ -461,7 +461,6 @@ $(function(){
 
 							this.attr('url', url);
 							this.set_content(html);
-							pwf.search_tool.init();
 						},
 
 					});
@@ -479,6 +478,7 @@ $(function(){
 						h && this.title(h.html());
 
 						this.set_callbacks();
+						this.update_menu();
 						pwf.godmode.components.window_form.bind(this);
 
 
@@ -498,6 +498,19 @@ $(function(){
 				{
 					this.get_el('content').html('');
 					return this;
+				};
+
+
+				this.update_menu = function()
+				{
+					var items = this.get_el('content').find('.window-content-menu a');
+
+					for (var i = 0; i<items.length; i++) {
+						var el = $(items[i]);
+
+						el.attr('href') == this.attr('url') ?
+							el.parent().addClass('active'):el.parent().removeClass('active');
+					}
 				};
 
 

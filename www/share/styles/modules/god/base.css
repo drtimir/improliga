@@ -20,7 +20,6 @@ body #yacms-logo {
 	position:absolute;
 	right:0;
 	bottom:27px;
-	background:url(/share/pixmaps/yacms-logo.png) left top no-repeat;
 	z-index:-1 !important;
 }
 
@@ -166,28 +165,6 @@ padding:25px 0 10px;
 	left:0;
 	display:none;
 }
-
-#loading{margin:0 auto;text-align:center;padding-top:40%}
-#loading .mid{display:block;width:100%;background:url(/share/pixmaps/default/trans-back.png);border:1px solid #000;padding:20px 0 10px}
-#loading .mid span{display:block;padding-top:20px;background:url(/share/animations/loading.gif) center top no-repeat;font-size:12px;color:#fff}
-#ajax-back{background:url(/share/pixmaps/default/trans-back.png);width:100%;height:100%}
-.ajax-dialog-shadow{ margin:10% auto 0;width:640px;padding:15px;background:url(/share/pixmaps/default/shadow.png);}
-.ajax-dialog{
-	background:#fff;
-	height:480px;
-	border:1px #111 solid;
-	overflow:auto;
-	font-size:13px;
-}
-.ajax-plain{padding:15px;}
-
-.ajax-plain .key-list{border-top:1px solid #ccc;margin-top:10px; padding-top:5px;}
-.key-list li .b{ margin:0 10px 0 0; display:inline-block; width:150px;}
-.key-list li .v{ margin:0 10px 0 0; display:inline-block; width:370px;}
-.key-list li .c{ margin:0 10px 0 0; display:inline-block; width:50px;}
-.key-list li{margin:4px 0;}
-
-.list li:hover{background:#f0f9ff;}
 
 
 .updates-list ul li{

@@ -1,0 +1,49 @@
+.godmode_preloader {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position:fixed;
+	background:#000;
+	z-index:10000;
+	color:#fff;
+}
+
+.godmode_preloader .inner {
+	position:absolute;
+	top:40%;
+	right:25%;
+	height:100px;
+	left:25%;
+	background:rgba(100,100,100,0.4);
+	padding:20px 35px;
+	box-shadow:0 0 50px #4C0057;
+	border:2px solid #633B00;
+	border-radius:100px;
+}
+
+.godmode_preloader .label {
+	position:absolute;
+	top:20%;
+	left:100px;
+	right:100px;
+	font-size:180%;
+}
+
+.godmode_preloader .progress_outer {
+	border:1px solid #666;
+	background:#333;
+	height:12px;
+	position:absolute;
+	bottom:25%;
+	left:100px;
+	right:100px;
+	border-radius:15px;
+}
+
+.godmode_preloader .progress {
+	height:12px;
+	background:#fff;
+	border-radius:15px;
+	box-shadow:0 0 15px #fff;
+}

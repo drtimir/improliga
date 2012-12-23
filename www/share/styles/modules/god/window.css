@@ -97,9 +97,9 @@
 .window-preloader {
 	position:absolute;
 	left:0;
-	top:0;
-	width:100%;
-	height:100%;
+	top:25px;
+	bottom:0;
+	right:0;
 	background:rgba(0,0,0,0.5);
 	display:none;
 }
@@ -122,7 +122,8 @@
 	background:#ddd;
 	overflow:hidden;
 	font-size:12px;
-	padding:5px 10px;
+	height:35px;
+	padding:0 5px;
 }
 
 .window-content .menu-panel,
@@ -134,13 +135,19 @@
 	display:inline-block;
 }
 
+.window-content .menu-panel li {
+	padding:4px 6px;
+}
+
+.window-content .menu-panel li.active { background:rgba(0,0,0,0.5); }
+.window-content .menu-panel li:hover { background:rgba(255,255,255,0.5); }
+
 .window-content .menu-panel .separator
 {
 	border-left:1px solid #ccc;
 	width:1px;
-	height:14px;
-	margin-left:3px;
-	margin-right:10px;
+	height:42px;
+	margin-left:5px;
 	vertical-align:middle;
 }
 
@@ -150,9 +157,6 @@
 
 #window_form_container { display:none }
 
-.window-content .menu-panel li {
-	margin-right:10px;
-}
 
 .window-content .menu-panel li .icon {
 	margin-right:0;

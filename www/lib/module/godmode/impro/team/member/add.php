@@ -20,6 +20,7 @@ if ($team_id && $team = find("\Impro\Team", $team_id)) {
 		"info"     => l('search_user_by_name'),
 		"has"      => array('groups' => array($group_id)),
 		"filter"   => array('login', 'nick', 'first_name', 'last_name'),
+		"placeholder" => 'Jméno nebo login',
 	));
 
 	$f->input(array(

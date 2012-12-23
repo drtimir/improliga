@@ -35,12 +35,19 @@
 				["impro_team_delete",  "./delete/", "actions/delete"]
 			],
 
-			"*":{
-				"menu":[
-					null,
-				["impro_team_member_edit",   "./edit/", "actions/edit"],
-				["impro_team_member_delete", "./delete/", "actions/delete"]
-				]
+			"add_member":{},
+			"edit":{},
+			"delete":{},
+
+			"members":{
+				"*":{
+					"menu":[
+						null,
+					["impro_team_member_detail", "./", "actions/detail"],
+					["impro_team_member_edit",   "./edit/", "actions/edit"],
+					["impro_team_member_delete", "./delete/", "actions/delete"]
+					]
+				}
 			}
 		}
 	}

@@ -87,7 +87,7 @@ namespace Godmode
 			if (preg_match("/^\.\//", $item[1]) && $item[1] != './') {
 				$item[1] = $prefix.substr($item[1], 2);
 			} elseif($item[1] == './') {
-				$item[1] = $prefix.$item[1];
+				$item[1] = $prefix;
 			}
 		}
 

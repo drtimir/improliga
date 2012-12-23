@@ -8,7 +8,7 @@ if ($id && ($team = find('\Impro\Team', $id))) {
 	$this->template('godmode/impro/team/detail', array("team" => $team,));
 	$this->template('godmode/item-list', array(
 		"cols" => array(
-			array('get_name', l('godmode_user_name'), 'link-function', '/'),
+			array('get_name', l('godmode_user_name'), 'link-function', $link_cont),
 			array('roles', l('impro_team_member_roles'), 'list', Impro\Team\Member\Role::get_all()),
 			array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete')),
 		),

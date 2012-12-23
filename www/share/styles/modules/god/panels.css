@@ -58,7 +58,8 @@
 #panel_top a.homepage { right:30px; }
 
 #panel_top span.time,
-#panel_top span.user
+#panel_top span.user,
+#panel_top span.shortcuts
 {
 	left:0;
 	font-weight:normal;
@@ -67,7 +68,10 @@
 	padding-left:20px;
 	display:inline-block;
 	position:relative;
+	cursor:default;
 }
+
+#panel_top span.shortcuts.active { color:#0f0; }
 
 
 

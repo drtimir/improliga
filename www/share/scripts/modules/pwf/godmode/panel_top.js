@@ -3,6 +3,7 @@ $(function(){
 	{
 		var
 			self = this,
+			ready = false,
 			el_left = null,
 			el_right = null,
 			el_logout = null,
@@ -11,6 +12,7 @@ $(function(){
 			el_locale = null,
 			el_time_timer = null,
 			el_user = null,
+			el_shortcuts = null,
 			element = null;
 
 		this.init = function()
@@ -19,8 +21,14 @@ $(function(){
 
 				init_elements();
 
-				return true;
-			} else return false;
+				return ready = true;
+			} else return ready = false;
+		};
+
+
+		this.is_ready = function()
+		{
+			return ready;
 		};
 
 
@@ -61,6 +69,12 @@ $(function(){
 			if (el_locale === null) {
 				el_left.append(el_user = $('<span class="block user">'+pwf_locale+'</span>'));
 			}
+
+			if (el_shortcuts === null) {
+				el_left.append(el_shortcuts = $('<span class="block shortcuts"></span>'));
+				el_shortcuts.bind('click', {"obj":self}, function(e) { e.preventDefault(); pwf.godmode.components.shortcuts.switch_mode(); });
+				self.update_shortcuts();
+			}
 		};
 
 
@@ -84,6 +98,16 @@ $(function(){
 		this.get_el = function()
 		{
 			return element;
+		};
+
+
+		this.update_shortcuts = function()
+		{
+			pwf.godmode.when_components_are_ready(['shortcuts'], function() {
+				var on = pwf.godmode.components.shortcuts.are_on();
+				el_shortcuts.html(pwf.godmode.trans(on ? 'godmode_shortcuts_on':'godmode_shortcuts_off'));
+				on ? el_shortcuts.addClass('active'):el_shortcuts.removeClass('active');
+			});
 		};
 	});
 });

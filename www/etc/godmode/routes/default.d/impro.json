@@ -68,6 +68,10 @@
 
 				"*":{
 					"#":{
+						"title":"impro_team_member_detal",
+						"modules":[
+							["godmode/impro/team/member/detail", {"team_id":"#{0}", "id":"#{1}"}]
+						]
 					},
 
 					"edit":{"#":{

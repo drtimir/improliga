@@ -1,11 +1,3 @@
-var v = function(msg)
-{
-	if (typeof console != 'undefined') {
-		console.log(msg);
-	}
-}
-
-
 pwf.register('godmode', function() {
 
 	this.components = {};
@@ -44,7 +36,7 @@ pwf.register('godmode', function() {
 		if (this.components[name].init() === true) {
 			this.run_component_callbacks();
 		} else {
-			v("Component "+name+" failed to init!");
+			v("Godmode component "+name+" failed to init!");
 		}
 	};
 

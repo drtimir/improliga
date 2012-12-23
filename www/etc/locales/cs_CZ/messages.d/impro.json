@@ -1,0 +1,28 @@
+{
+	"impro_match":"Zápas",
+	"impro_show":"Improshow",
+	"impro_long_form":"Longformy",
+	"impro_music_form":"Hudební improvizace",
+
+	"impro_teams":"Týmy",
+	"impro_team_list":"Seznam týmů",
+	"impro_team_name":"Zkratka",
+	"impro_team_name_full":"Název týmu",
+	"impro_team_about":"Krátké info o týmu",
+	"impro_team_site":"Webové stránky",
+	"impro_team_player_count":"Počet hráčů",
+	"impro_team_matches_played_count":"Počet odehraných zápasů",
+
+	"impro_event_create":"Vytvoření události",
+	"impro_event_edit":"Úprava události",
+	"impro_event_delete":"Smazání události",
+	"impro_event_type":"Typ události",
+	"impro_event_start":"Začátek",
+	"impro_event_image":"Obrázek",
+	"impro_event_desc_short":"Krátký popis",
+	"impro_event_desc_full":"Informace",
+
+
+
+	"end":""
+}

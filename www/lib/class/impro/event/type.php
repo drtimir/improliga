@@ -10,10 +10,22 @@ namespace Impro\Event
 		const ID_MUSIC_FORM = 4;
 
 		static private $types_available = array(
-			'event_type'            => self::ID_MATCH,
-			'event_type_show'       => self::ID_SHOW,
-			'event_type_long_form'  => self::ID_LONG_FORM,
-			'event_type_music_form' => self::ID_MUSIC_FORM,
+			'impro_match'      => self::ID_MATCH,
+			'impro_show'       => self::ID_SHOW,
+			'impro_long_form'  => self::ID_LONG_FORM,
+			'impro_music_form' => self::ID_MUSIC_FORM,
 		);
+
+
+		public static function get_all()
+		{
+			$types = array();
+
+			foreach (self::$types_available as $label=>$id) {
+				$types[l($label)] = $id;
+			}
+
+			return $types;
+		}
 	}
 }

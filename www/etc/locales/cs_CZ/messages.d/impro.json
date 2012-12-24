@@ -18,9 +18,12 @@
 	"impro_event_delete":"Smazání události",
 	"impro_event_type":"Typ události",
 	"impro_event_start":"Začátek",
+	"impro_event_duration":"Doba trvání",
 	"impro_event_image":"Obrázek",
 	"impro_event_desc_short":"Krátký popis",
 	"impro_event_desc_full":"Informace",
+	"impro_event_publish_at":"Zveřejnit",
+	"impro_event_publish_at_desc":"Událost bude zveřejněna po tomto termínu.",
 
 
 

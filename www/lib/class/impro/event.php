@@ -13,6 +13,7 @@ namespace Impro
 			"visible"       => array('bool'),
 			"start"         => array('datetime'),
 			"duration"      => array("int", "is_unsigned" => true, "default" => 0),
+			"all_day"       => array("bool", "default" => false),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
 		);

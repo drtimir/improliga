@@ -1,0 +1,131 @@
+.calendar-month-grid {
+}
+
+.calendar-month-grid-inner {
+}
+
+.calendar-month-grid .calendar-head{
+	text-align:center;
+	border-bottom:1px solid #999;
+	margin-bottom:10px;
+	padding-bottom:4px;
+}
+.calendar-month-grid .calendar-head .day{
+	border:none;
+	font-weight:bold;
+	font-size:12px;
+	background:none;
+}
+
+.calendar-month-grid .week {
+	margin:0 0 10px;
+	width:100%;
+	text-align:center;
+}
+.calendar-month-grid .day {
+	display:inline-block;
+	width:13%;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	border:1px solid #ccc;
+	text-align:left;
+}
+
+.calendar-month-grid .day:hover{
+	background:rgba(0,0,0,0.05)
+}
+
+.calendar .day-head{
+	background:#8CB2F8;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.calendar .day-inactive{
+	background:rgba(0,0,0,0.05)
+}
+.calendar .day-inactive .day-head{
+	background:#ddd;
+}
+
+.calendar .day-head span{
+	padding-left:10px;
+	display:inline-block;
+}
+
+.calendar-head, .calendar-head li, .calendar .days-events, .calendar .days-events li, .calendar .day .event-info li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.calendar .day .event-info {
+	display:none;
+	position:absolute;
+	padding:10px;
+	margin:-55px 0 0 30px;
+	background:rgba(0,0,0,0.6);
+	border-radius:5px;
+	border:1px solid #333;
+	color:#fff;
+	width:130px;
+	font-size:11px;
+}
+
+.calendar .day .event-info a {
+	color:#fff;
+	line-height:150%;
+}
+
+.calendar .days-events .event {
+	position:relative;
+	padding:3px 5px 4px;
+	border-left:3px solid rgba(0,0,0,0);
+	margin:2px 4px;
+	border-radius:5px;
+}
+
+.calendar .event.book-active {
+	border-left-color:#f90;
+	background:#92FF8B;
+}
+
+.calendar .event:hover{
+	border-left-color:#f00;
+	background:#FFFFFF !important;
+}
+.calendar .event:hover .event-info {
+	display:block;
+}
+
+.calendar .days-events {
+	min-height:60px;
+	font-size:11px;
+	padding:2px 0 0;
+}
+
+.calendar-controls {
+	height:24px;
+}
+
+.calendar-controls .l {
+	float:left;
+}
+
+.calendar-controls .r {
+	float:right;
+}
+
+.calendar-controls .mid {
+	margin:0 auto;
+}
+
+.calendar-controls form label {
+	display:none;
+}
+
+.calendar-controls .inputs li {
+	display:inline-block;
+	padding:0 5px;
+}

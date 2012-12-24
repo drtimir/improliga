@@ -6,9 +6,19 @@
 	"events":{
 		"#":{
 			"title":"impro_events",
-			"modules":[
-				["godmode/impro/event/list"]
-			]
+			"modules":{
+				"controls":["impro/event/calendar_controls"],
+				"calendar":["impro/event/calendar", {}, ["controls"]]
+			}
+		},
+
+		"list":{
+			"#":{
+				"title":"impro_event_list",
+				"modules":[
+					["godmode/impro/event/list"]
+				]
+			}
 		},
 
 		"create":{

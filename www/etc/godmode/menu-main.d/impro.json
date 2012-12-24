@@ -1,7 +1,7 @@
 [
 	{
 		"name":"impro_events",
-		"icon":"items/event",
+		"icon":"modules/calendar",
 		"url":"/god/impro/events/"
 	},
 	{

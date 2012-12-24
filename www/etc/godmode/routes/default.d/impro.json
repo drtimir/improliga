@@ -31,9 +31,18 @@
 		},
 
 		"*":{"#":{
-				"title":"event_detail"
-			}
+				"title":"impro_event_detail",
+				"modules":[
+					["impro/event/detail", {"id":"#{0}"}]
+				]
+			},
 
+			"edit":{"#":{
+				"title":"impro_event_edit",
+				"modules":[
+					["godmode/impro/event/edit", {"id":"#{0}"}]
+				]
+			}}
 		}
 	},
 

@@ -9,7 +9,7 @@ def($heading, $new ? l('impro_event_create'):l('impro_event_delete'));
 if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", $id))) {
 
 	$f = new System\Form(array("default" => $item->get_data(), "heading" => $heading));
-	$f->input_text("name", l('godmode_event_name'), true);
+	$f->input_text("title", l('godmode_event_name'), true);
 	$f->input(array(
 		"type"    => 'select',
 		"name"    => 'id_impro_event_type',

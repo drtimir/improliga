@@ -27,7 +27,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		"min"      => 0,
 	));
 
-	$f->input_file('image', l('impro_event_image'), false);
+	$f->input_image('image', l('impro_event_image'), false);
 
 	$f->input(array(
 		"type"  => 'textarea',

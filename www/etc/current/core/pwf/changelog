@@ -1,3 +1,309 @@
+commit f5adabb179c9950a89c909773626a4553a41ae92
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Dec 26 23:23:41 2012 +0100
+
+    Forms
+    
+    * Added image input locales
+    * Dropped unused option IMAGE_DROP from image input
+
+commit cc12b772a637dbb15097d0057cb2eb4580fff35c
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Dec 26 23:07:22 2012 +0100
+
+    Forms
+    
+    * Enhanced image input styles
+
+commit 4163647cd68cfe3e8a53e66b36922dad76e8128f
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Dec 26 23:03:57 2012 +0100
+
+    Image class
+    
+    * Added caching function to images
+
+commit 1efd49bf27e2792fe36cfc3788c732bb563abb81
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Dec 26 22:50:59 2012 +0100
+
+    Forms
+    
+    * Styled form image input
+
+commit 660d1722fc0e3ff2c1e00c5aa92040e9ae7c1ec6
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:08:30 2012 +0100
+
+    Forms
+    
+    * Added image input
+
+commit 1b7666f8c809fca558481fa54b26117b82fee5b9
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:08:04 2012 +0100
+
+    Response class
+    
+    * Migrated response class to new attr model
+
+commit 48a8ded33f2de66f9af0873153e5977863215bff
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:07:36 2012 +0100
+
+    Request class
+
+commit e5ffe6bcff608374085e285a9ff4a675f368efae
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:06:33 2012 +0100
+
+    Image class
+    
+    * Migrated image class to new attr model
+    * Added recursion prevention to image class
+
+commit 335865097b7e60d9271ac492f986604052af17bf
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:06:06 2012 +0100
+
+    File class
+    
+    * Migrated to new attr model
+
+commit f9107969c912b6f40ab9f204452c963792de9936
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:05:33 2012 +0100
+
+    Attr model
+    
+    * Added blob type to attr model
+
+commit 04c199851b95560985429dce977680c4a945c3bc
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Dec 25 17:05:03 2012 +0100
+
+    Image class
+    
+    * Added default thumb
+
+commit 51e073848b70fa4f8404f44b5f202a9c2e09be0a
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 16:20:15 2012 +0100
+
+    Image class
+    
+    * Added is_image check function
+
+commit bb4be018c75a643de3cfbe348bb71ef213507f7a
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 16:15:56 2012 +0100
+
+    Image class
+    
+    * Migrated to new attr model
+
+commit 9debcb3f970020b951556b0820814d15d6a01fe8
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 15:28:29 2012 +0100
+
+    Forms
+    
+    * Added image input
+
+commit 2f81b9be080cb2ab7bec5c2d9be5e5c2fc6addc6
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 14:24:45 2012 +0100
+
+    Forms
+    
+    * Added min, max and step to inputs
+
+commit 0159b1831ca17ba88e4f7ffa715f86adfd26319a
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 14:17:19 2012 +0100
+
+    Form class
+    
+    * Coding style edit
+
+commit 9844f8ea6a2ede51b0a0581c1683144a5f93d5b7
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 14:14:26 2012 +0100
+
+    Form class
+    
+    * Added DateTime support
+
+commit ea20305d8f5d830ddd28dedd402cadcc1aef912e
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 24 12:32:45 2012 +0100
+
+    [fix] Input class
+    
+    * Separated query string from path
+
+commit 7ad50e8d9ae035fcb45f90ab37d941489269bf03
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 23:33:27 2012 +0100
+
+    Search tool
+    
+    * Added jQuery object passing to search tool init
+
+commit d1c918542a997f79027d058f197878392232f973
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 22:30:20 2012 +0100
+
+    Resource preloader
+    
+    * Added JS tool for resource preloading
+
+commit d0c49af8cceea3d8bb417e30ee5e1732cd9607cb
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 16:24:53 2012 +0100
+
+    Form search tool
+    
+    * Added placeholder to search tool
+
+commit 536a551d879a4932df55bdc6037809fd211fec7d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 16:18:30 2012 +0100
+
+    Form inputs
+    
+    * Added autocomplete and placeholder options
+
+commit fb2247d65446d092b2e8cb731c1809e5b372c0e9
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 16:18:07 2012 +0100
+
+    Tag
+    
+    * Added autocomplete attribute to input tags
+
+commit 82850e8d7fb26ebefda0bdda458f0b70eef5b0f0
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 14:02:25 2012 +0100
+
+    [fix] Belongs to relation name
+    
+    * Fixed adding static attrs for belongs_to relation
+
+commit b77e025127cf0324f7e6fdd3b25850ca074a687f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 01:24:38 2012 +0100
+
+    [fix] Form helper
+
+commit 9f4744c154ab4fa6080b3cc5931766984647b4c2
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 23 01:21:11 2012 +0100
+
+    [fix] Form helper
+    
+    * Fixed called method name
+
+commit 9454554187528cbccb73d6fc54b52b5846efe191
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 02:44:14 2012 +0100
+
+    [fix] Attr int_set
+    
+    * Fixed int_set fetching
+
+commit 0bb4ba4bb72b1cdf83543e1c95d62e65a3714ce4
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 02:23:54 2012 +0100
+
+    Fixing relations
+
+commit 1c8c184075d41b4ffe9ad4519f087ef3816eff82
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 02:19:48 2012 +0100
+
+    Fixing relations
+
+commit a146920981ee3c547da88ec1ac25edc535df7264
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 02:13:51 2012 +0100
+
+    Fixing relations
+
+commit d7ca85f281119107bd65bc0954f1bc15b9b50bbb
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 02:09:02 2012 +0100
+
+    Fixing relations
+    
+    * Added belongs_to attribute fetching
+
+commit 1432a3182b33d05ae931a27420f8d058937f7d81
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 01:50:53 2012 +0100
+
+    Fixing relations
+    
+    * Fixed belongs to queries
+
+commit f252cd7d952d21558e0cfb7d07ea42b545bcf21b
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 01:43:29 2012 +0100
+
+    Fixing relations
+    
+    * Added ommiting fake columns to database model
+    * Added int_set to allowed column types
+    * Added natural foreign key for belongs_to
+
+commit 8fa9361d8def15e4c5b9d442b8451dc15dfdba3d
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 01:16:51 2012 +0100
+
+    Database sync
+    
+    * Added index syncing
+
+commit 69c9a2cbe1ae05f9da16958818c3a60ea333bd44
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 00:46:19 2012 +0100
+
+    Database model
+    
+    * Added int_set attr type
+
+commit 55cbbce8aca6a1695212b07e47e192762c2c2fbb
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 00:39:19 2012 +0100
+
+    Database model
+    
+    * Fixed fetching has_many relations
+
+commit a0c9e83e643ad39e3fa804fe85f3c32bc169afae
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 00:31:06 2012 +0100
+
+    Database model
+    
+    * Added natural belongs_to foreign keys
+
+commit 36bc5b80a7e37cbce59d3a0890dff47ee5c47129
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 00:20:21 2012 +0100
+
+    Database model
+    
+    * Dropped unused preload function
+
+commit 353b454d098f2682ee79c97de2fc51141eb04238
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 17 00:16:21 2012 +0100
+
+    Database model
+    
+    * Added auto adding belongs_to foreign keys
+
 commit fc52f82ceb19ae56f6f4f42b85948fc1f4c57199
 Author: just-paja <just.paja@gmail.com>
 Date:   Sun Dec 16 22:15:52 2012 +0100

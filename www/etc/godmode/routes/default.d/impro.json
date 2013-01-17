@@ -3,6 +3,7 @@
 		"template":["godmode/window"]
 	},
 
+
 	"events":{
 		"#":{
 			"title":"impro_events",
@@ -45,6 +46,7 @@
 			}}
 		}
 	},
+
 
 	"teams":{
 		"#":{
@@ -114,6 +116,50 @@
 					"title":"impro_team_edit",
 					"modules":[
 						["godmode/impro/team/edit", {"id":"#{0}"}]
+					]
+				}
+			}
+		}
+	},
+
+
+	"news":{
+		"#":{
+			"title":"impro_news_list",
+			"modules":[
+				["godmode/impro/news/list"]
+			]
+		},
+
+		"create":{
+			"#":{
+				"title":"impro_news_create",
+				"modules":[
+					["godmode/impro/news/edit", {"new":true}]
+				]
+			}
+		},
+
+		"*":{
+			"#":{
+				"title":"impro_news_detail",
+				"modules":[
+					["godmode/impro/news/detail", {"id":"#{0}"}]
+				]
+			},
+			"edit":{
+				"#":{
+					"title":"impro_news_edit",
+					"modules":[
+						["godmode/impro/news/edit", {"id":"#{0}"}]
+					]
+				}
+			},
+			"delete":{
+				"#":{
+					"title":"impro_news_delete",
+					"modules":[
+						["godmode/impro/news/delete", {"id":"#{0}"}]
 					]
 				}
 			}

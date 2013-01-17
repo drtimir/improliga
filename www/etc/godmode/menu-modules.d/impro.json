@@ -50,5 +50,23 @@
 				}
 			}
 		}
+	},
+
+	"news":{
+		"menu":[
+			["impro_news_list", "./", "actions/list"],
+			["impro_news_create", "./create/", "actions/create"]
+		],
+
+		"create":[],
+
+		"*":{
+			"menu":[
+				null,
+				["impro_news_detail", "./", "actions/detail"],
+				["impro_news_edit", "./edit/", "actions/edit"],
+				["impro_news_delete", "./delete/", "actions/delete"]
+			]
+		}
 	}
 }

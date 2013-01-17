@@ -25,7 +25,14 @@
 	"impro_event_publish_at":"Zveřejnit",
 	"impro_event_publish_at_desc":"Událost bude zveřejněna po tomto termínu.",
 
-
+	"impro_news":"Novinky",
+	"impro_news_title":"Text",
+	"impro_news_text":"Text",
+	"impro_news_list":"Seznam novinek",
+	"impro_news_create":"Vytvoření novinky",
+	"impro_news_edit":"Úprava novinky",
+	"impro_news_delete":"Smazání novinky",
+	"impro_news_detail":"Detail novinky",
 
 	"end":""
 }

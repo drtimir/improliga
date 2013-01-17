@@ -5,6 +5,11 @@
 		"url":"/god/impro/events/"
 	},
 	{
+		"name":"impro_news",
+		"icon":"items/news",
+		"url":"/god/impro/news/"
+	},
+	{
 		"name":"impro_teams",
 		"icon":"items/team",
 		"url":"/god/impro/teams/"

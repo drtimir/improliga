@@ -1,0 +1,24 @@
+<?
+
+def($link_cont, '/god/impro/news/{id_impro_news}/');
+def($conds, array());
+def($opts, array());
+def($per_page, 20);
+def($page, 0);
+def($show_heading, true);
+def($heading, l('impro_news_list'));
+
+$users = get_all("\Impro\News", $conds, $opts)->paginate($per_page, $page)->fetch();
+$count = count_all("\Impro\News", $conds, $opts);
+
+$this->template('godmode/item-list', array(
+	"cols" => array(
+		array('title', l('godmode_title'), 'link', $link_cont),
+		array('updated_at', l('godmode_updated_at'), 'date'),
+		array('created_at', l('godmode_created_at'), 'date'),
+		array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete')),
+	),
+	"items"     => $users,
+	"link_cont" => $link_cont,
+	"heading"   => $show_heading ? $heading:null,
+));

@@ -1,4 +1,32 @@
 {
 	"#":{
+	},
+
+	"intra":{
+		"#":{
+			"template":["intra/layout", "intra/dual"],
+			"modules":[
+			]
+		},
+
+		"login":{"#":{
+			"template":["godmode/login"],
+			"modules":[["intra/user/login"]]
+		}},
+
+		"logout":{"#":{
+			"modules":[
+				["intra/user/logout", {"redirect":"/"}]
+			]
+		}},
+
+		"settings":{
+			"#":{
+				"template":["intra/layout", "intra/single"],
+				"modules":[
+					["intra/user/settings"]
+				]
+			}
+		}
 	}
 }

@@ -1,14 +1,15 @@
 <?
 
-namespace Impro
+namespace Impro\Gallery
 {
 	class Video extends \System\Model\Database
 	{
 		protected static $attrs = array(
 			"snapshot" => array('image'),
-			"file"     => array('image'),
+			"src"      => array('varchar'),
 			"desc"     => array('text'),
 			"order"    => array('int', "default" => 0),
+			"youtube"  => array('bool', "default" => false),
 		);
 
 		protected static $belongs_to = array(

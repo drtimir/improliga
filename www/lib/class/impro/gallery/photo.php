@@ -1,6 +1,6 @@
 <?
 
-namespace Impro
+namespace Impro\Gallery
 {
 	class Photo extends \System\Model\Database
 	{

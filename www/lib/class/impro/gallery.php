@@ -7,6 +7,8 @@ namespace Impro
 		protected static $attrs = array(
 			"name" => array('varchar'),
 			"desc" => array('text'),
+			"visible" => array('bool'),
+			"public"  => array('bool'),
 		);
 
 		protected static $has_many = array(

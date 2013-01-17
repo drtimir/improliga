@@ -8,7 +8,7 @@ def($cont_link, '/god/impro/events/{id_impro_event}/');
 def($template, '/impro/event/calendar');
 def($book_link, '/');
 def($conds, array("visible" => true));
-def($heading, l('impro_calendar'));
+def($heading, l('impro_event_calendar'));
 def($day, intval(date("d")));
 
 $day = $mode == 'month-grid' ? 1:$day;

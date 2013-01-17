@@ -2,7 +2,19 @@
 	{
 		"name":"impro_events",
 		"icon":"modules/calendar",
-		"url":"/god/impro/events/"
+		"url":"/god/impro/events/",
+		"items":[
+			{
+				"name":"impro_event_calendar",
+				"icon":"modules/calendar",
+				"url":"/god/impro/events/"
+			},
+			{
+				"name":"impro_event_list",
+				"icon":"actions/list",
+				"url":"/god/impro/events/list"
+			}
+		]
 	},
 	{
 		"name":"impro_news",

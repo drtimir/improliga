@@ -29,7 +29,11 @@ if (($new && $user = new System\User()) || ($id && $user = find("\System\User", 
 	if ($f->passed()) {
 
 		$p = $f->get_data();
-		def($p['password'], System\User::gen_passwd());
+		if ($new) {
+			def($p['password'], System\User::gen_passwd());
+			$p['password'] = hash_passwd($p['password']);
+		}
+
 		def($p['nick'], $p['login']);
 
 		$match = count_all("\System\User", array("login" => $p['login']));
@@ -43,11 +47,12 @@ if (($new && $user = new System\User()) || ($id && $user = find("\System\User", 
 			$user->update_attrs($p)->save();
 
 			if (!$user->errors()) {
-				message('success', $heading, _('Uživatel byl úspěšně uložen'), true);
+				message('success', $heading, l('godmode_save_success'), true);
 				redirect(soprintf($redirect, $user));
 			}
 		} else {
-			$this->error('login-exists');
+			$f->report_error('login', l('godmode_user_login_already_exists'));
+			$f->out($this);
 		}
 	}
 

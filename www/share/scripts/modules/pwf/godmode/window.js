@@ -481,6 +481,7 @@ $(function(){
 						this.update_menu();
 						pwf.godmode.components.window_form.bind(this);
 						pwf.search_tool.init(this.get_el('content'));
+						pwf.datetime_picker.scan(this.get_el('content'));
 
 
 						if (this.attr('resize_to_fit')) {

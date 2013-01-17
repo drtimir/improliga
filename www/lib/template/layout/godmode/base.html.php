@@ -18,6 +18,7 @@
 		content_for("scripts", "pwf/storage");
 		content_for("scripts", "pwf/preloader");
 		content_for("scripts", "pwf/form/search_tool");
+		content_for("scripts", "pwf/form/datetime_picker");
 		content_for("scripts", "pwf/godmode");
 		content_for("scripts", "pwf/godmode/preloader");
 		content_for("scripts", "pwf/godmode/session");

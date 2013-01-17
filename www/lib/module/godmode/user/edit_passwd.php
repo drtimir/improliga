@@ -15,7 +15,8 @@ if ($id && $user = find("\System\User", $id)) {
 	if ($f->passed()) {
 
 		$p = $f->get_data();
-		if ($p['passwd'] === $p['passwd_check']) {
+		if ($p['password'] === $p['password_check']) {
+			$p['password'] = hash_passwd($p['password']);
 			$user->update_attrs($p)->save();
 
 			if (!$user->errors()) {

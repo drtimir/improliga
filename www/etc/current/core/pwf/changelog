@@ -1,3 +1,58 @@
+commit 7a76b88fe65566a7b552477d807322a19c6c949d
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jan 12 19:44:30 2013 +0100
+
+    Forms
+    
+    * Fixed input-label binding
+
+commit 0f0f70868f65a507a0b7c5126316183d4b8550fe
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Jan 12 19:41:48 2013 +0100
+
+    Forms
+    
+    * Fixed checkbox checking
+
+commit 906f9474a0d5ed0306fd1821a08d7dc4b501f218
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Jan 6 19:08:48 2013 +0100
+
+    Forms
+    
+    * Datetime inputs return datetime object
+
+commit deef5c3d86f8d03b1112388db7302046bae8325a
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jan 1 23:22:11 2013 +0100
+
+    Database script
+    
+    * Added progressbar to initial data injection
+
+commit e7b7ad47c489e300a7fdd4c82202fbb3b77cbb32
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 31 12:48:20 2012 +0100
+
+    Forms datetime picker
+    
+    * Fixed post value
+
+commit 9649af2f1018798305e951861b28e0d7c12b7076
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Dec 31 01:08:35 2012 +0100
+
+    Forms date picker
+    
+    * Added date picker
+    * Tweaked date picker functions
+
+commit f5147a1f8c05d937da20cdb5b7deb66a40e1d136
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Dec 30 22:08:38 2012 +0100
+
+    Datetime picker
+
 commit f5adabb179c9950a89c909773626a4553a41ae92
 Author: just-paja <just.paja@gmail.com>
 Date:   Wed Dec 26 23:23:41 2012 +0100

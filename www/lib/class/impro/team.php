@@ -7,7 +7,9 @@ namespace Impro
 		protected static $attrs = array(
 			"name"       => array("varchar"),
 			"name_full"  => array("varchar"),
+			"city"       => array("varchar"),
 			"about"      => array("text"),
+			"logo"       => array('image'),
 			"site"       => array("varchar"),
 			"played"     => array("int", "is_unsigned" => true),
 			"visible"    => array("bool"),

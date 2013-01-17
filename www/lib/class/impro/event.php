@@ -32,9 +32,9 @@ namespace Impro
 		);
 
 
-		public static function get_available_types()
+		public function get_type_name()
 		{
-			return self::$types_available;
+			return \Impro\Event\Type::get_by_id($this->id_impro_event_type);
 		}
 	}
 }

@@ -8,6 +8,13 @@ def($heading, $new ? l('impro_event_create'):l('impro_event_delete'));
 
 if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", $id))) {
 
+	$teams = get_all('\Impro\Team')->where(array("visible" => true))->fetch();
+	$teams_opts = array();
+
+	foreach ($teams as $team) {
+		$teams_opts[$team->name] = $team->id;
+	}
+
 	$f = new System\Form(array("default" => $item->get_data(), "heading" => $heading));
 	$f->input_text("title", l('godmode_event_name'), true);
 	$f->input(array(
@@ -17,24 +24,28 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		"label"   => l('impro_event_type')
 	));
 
+	$f->input(array(
+		"type"    => 'select',
+		"name"    => 'id_team_home',
+		"options" => $teams_opts,
+		"label"   => l('impro_event_team_home'),
+	));
+
+	$f->input(array(
+		"type"    => 'select',
+		"name"    => 'id_team_away',
+		"options" => $teams_opts,
+		"label"   => l('impro_event_team_away'),
+	));
+
 	$f->input_datetime("start", l('impro_event_start'), true);
 	$f->input_datetime("end", l('impro_event_end'), true);
 
 	$f->input_image('image', l('impro_event_image'), false);
 
-	$f->input(array(
-		"type"  => 'textarea',
-		"name"  => 'desc_short',
-		"label" => l('impro_event_desc_short'),
-		"required" => false,
-	));
+	$f->input_textarea('desc_short', l('impro_event_desc_short'), false);
+	$f->input_textarea('desc_full', l('impro_event_desc_full'), false);
 
-	$f->input(array(
-		"type" => 'textarea',
-		"name" => 'desc_full',
-		"label" => l('impro_event_desc_full'),
-		"required" => false,
-	));
 
 	$f->input(array(
 		"type"  => 'datetime',

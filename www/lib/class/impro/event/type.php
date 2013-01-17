@@ -27,5 +27,17 @@ namespace Impro\Event
 
 			return $types;
 		}
+
+
+		public static function get_by_id($tid)
+		{
+			foreach (self::$types_available as $label=>$id) {
+				if ($id === $tid) {
+					return l($label);
+				}
+			}
+
+			return null;
+		}
 	}
 }

@@ -34,7 +34,7 @@
 		"*":{"#":{
 				"title":"impro_event_detail",
 				"modules":[
-					["impro/event/detail", {"id":"#{0}"}]
+					["godmode/impro/event/detail", {"id":"#{0}"}]
 				]
 			},
 

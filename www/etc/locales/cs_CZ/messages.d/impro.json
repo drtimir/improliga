@@ -30,6 +30,8 @@
 	"impro_event_desc_full":"Informace",
 	"impro_event_publish_at":"Zveřejnit",
 	"impro_event_publish_at_desc":"Událost bude zveřejněna po tomto termínu.",
+	"impro_event_team_home":"Domácí tým",
+	"impro_event_team_away":"Tým hostů",
 
 	"impro_news":"Novinky",
 	"impro_news_title":"Nadpis",

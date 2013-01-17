@@ -12,8 +12,9 @@
 		"*":{
 			"menu":[
 				null,
-				["godmode_event_edit", "./edit/", "actions/edit"],
-				["godmode_event_delete", "./delete/", "actions/delete"]
+				["godmode_event_detail",    "./", "actions/detail"],
+				["godmode_event_edit",      "./edit/", "actions/edit"],
+				["godmode_event_delete",    "./delete/", "actions/delete"]
 			]
 		}
 	},
@@ -43,9 +44,9 @@
 				"*":{
 					"menu":[
 						null,
-					["impro_team_member_detail", "./", "actions/detail"],
-					["impro_team_member_edit",   "./edit/", "actions/edit"],
-					["impro_team_member_delete", "./delete/", "actions/delete"]
+						["impro_team_member_detail", "./", "actions/detail"],
+						["impro_team_member_edit",   "./edit/", "actions/edit"],
+						["impro_team_member_delete", "./delete/", "actions/delete"]
 					]
 				}
 			}

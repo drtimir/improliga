@@ -1,0 +1,58 @@
+body, html
+{
+	font-family:"Droid Sans", "Arial";
+	font-size:14px;
+	background:#fff;
+	color:#333;
+	padding:0;
+	margin:0;
+}
+
+header {
+	background:#ccc;
+	display:block;
+	height:50px;
+	position:relative;
+}
+
+header .page-block {
+	position:relative;
+	height:30px;
+}
+
+.page-block {
+	width:1000px;
+	padding:10px 25px;
+	margin:0 auto;
+}
+
+menu.plain,
+menu.plain li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+menu.plain li {
+	display:inline-block;
+	padding:2px 5px;
+}
+
+menu.main {
+	position:absolute;
+	left:150px;
+	bottom:5px;
+}
+
+menu.user {
+	position:absolute;
+	right:25px;
+	bottom:5px;
+}
+
+menu.user li {
+	padding:0;
+}
+
+

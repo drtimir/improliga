@@ -18,7 +18,8 @@ namespace Impro
 		);
 
 		protected static $has_many = array(
-			"members" => array("model" => "\Impro\Team\Member"),
+			"members"   => array("model" => "\Impro\Team\Member"),
+			"galleries" => array("model" => '\Impro\Gallery', "is_bilinear" => true),
 		);
 
 

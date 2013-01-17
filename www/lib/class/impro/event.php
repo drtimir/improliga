@@ -24,11 +24,11 @@ namespace Impro
 			"teams"        => array("model" => '\Impro\Team', "is_bilinear" => true),
 		);
 
-
 		protected static $belongs_to = array(
 			"author"    => array("model" => "\System\User"),
 			"team_home" => array("model" => '\Impro\Team', "is_null" => true),
 			"team_away" => array("model" => '\Impro\Team', "is_null" => true),
+			"gallery"   => array('model' => '\Impro\Gallery'),
 		);
 
 

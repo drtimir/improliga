@@ -14,7 +14,9 @@ $this->template('godmode/item-list', array(
 	"cols" => array(
 		array('title',      l('impro_event_name'), 'link', $link_cont),
 		array('start',      l('impro_event_start'), 'date'),
-		array('created_at', l('godmode_created_at'), 'date'),
+		array('visible',    l('godmode_visible'), 'bool'),
+		array('published',  l('godmode_published'), 'bool'),
+		array('updated_at', l('godmode_updated_at'), 'date'),
 		array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete')),
 	),
 	"items"     => $items,

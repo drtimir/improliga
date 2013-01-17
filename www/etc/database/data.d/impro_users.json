@@ -1,0 +1,86 @@
+{
+	"system_user":[
+		{
+			"id_system_user":4,
+			"login":"just-paja",
+			"password":"",
+			"nick":"just-paja",
+			"first_name":"Pája",
+			"last_name":"Žák"
+		},
+		{
+			"id_system_user":10,
+			"login":"lada.karda",
+			"password":"",
+			"nick":"Láďa",
+			"first_name":"Láďa",
+			"last_name":"Karda"
+		},
+		{
+			"id_system_user":11,
+			"login":"ivo.klvan",
+			"password":"",
+			"nick":"Ivo",
+			"first_name":"Ivo",
+			"last_name":"Klvaň"
+		},
+		{
+			"id_system_user":12,
+			"login":"andrea.molicova",
+			"password":"",
+			"nick":"Andrea",
+			"first_name":"Andrea",
+			"last_name":"Moličová"
+		},
+		{
+			"id_system_user":13,
+			"login":"vanda.gabrielova",
+			"password":"",
+			"nick":"Vanda",
+			"first_name":"Vanda",
+			"last_name":"Gabrielová"
+		},
+		{
+			"id_system_user":14,
+			"login":"jana.machalikova",
+			"password":"",
+			"nick":"Jana",
+			"first_name":"Jana",
+			"last_name":"Machalíková"
+		},
+		{
+			"id_system_user":15,
+			"login":"jakub.trojak",
+			"password":"",
+			"nick":"Kuba",
+			"first_name":"Jakub",
+			"last_name":"Troják"
+		},
+		{
+			"id_system_user":16,
+			"login":"martin.tresnak",
+			"password":"",
+			"nick":"Martin",
+			"first_name":"Martin",
+			"last_name":"Třešňák"
+		}
+	],
+	"system_user_has_system_user_group":[
+		{ "id_system_user":10, "id_system_user_group":3 },
+		{ "id_system_user":10, "id_system_user_group":4 },
+		{ "id_system_user":11, "id_system_user_group":3 },
+		{ "id_system_user":11, "id_system_user_group":4 },
+		{ "id_system_user":12, "id_system_user_group":3 },
+		{ "id_system_user":12, "id_system_user_group":4 },
+		{ "id_system_user":13, "id_system_user_group":3 },
+		{ "id_system_user":13, "id_system_user_group":4 },
+		{ "id_system_user":14, "id_system_user_group":1 },
+		{ "id_system_user":14, "id_system_user_group":2 },
+		{ "id_system_user":14, "id_system_user_group":3 },
+		{ "id_system_user":14, "id_system_user_group":4 },
+		{ "id_system_user":15, "id_system_user_group":3 },
+		{ "id_system_user":15, "id_system_user_group":4 },
+		{ "id_system_user":16, "id_system_user_group":3 },
+		{ "id_system_user":16, "id_system_user_group":4 }
+	]
+}

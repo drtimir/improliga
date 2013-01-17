@@ -1,0 +1,141 @@
+{
+	"impro_team":
+	[
+		{
+			"id_impro_team":1,
+			"name":"V.I.P.",
+			"name_full":"Válčíme, Improvizujeme, Pleníme",
+			"city":"Praha",
+			"about":"",
+			"logo":"",
+			"site":"http://vip.scourge.cz/",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":2,
+			"name":"KL.I.KA.",
+			"name_full":"KLamovští Improvizační KAskadéři",
+			"city":"Praha",
+			"about":"Jeden z prvních středoškolských týmů, kterým prošlo mnoho zkušených improvizátorů pod vedením Hanky Patrasové, Hanky Malaníkové, a nyní Ládi Kardy. Protože se v týmu už nachází pokročilí improvizátoři, stalo se z tréninků místo pro experiment - zkoušíme kloubit improvizaci s různými divadelními žánry a styly (site-specific, kjogen, fyzické básnictví, práce s loutkou apod.).",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":3,
+			"name":"BAFNI",
+			"name_full":"BAFNI",
+			"city":"Brno",
+			"about":"Brněnský divadelní improvizační tým pod vedením Ivo Klvaně. Bafni vznikli v roce 2009, a obnovili tak tradici brněnské improligy. V současné době mají Bafni 12 členů. Bafni se účastní příprav celostátního setkání týmů Improligy zvaného Improtřesk. V souvislosti s tím se týmu podařilo obohatit českou improvizační scénu o nový směr - impropunk.",
+			"logo":"",
+			"site":"http://www.bafni.cz/",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":4,
+			"name":"B.I.Z.O.N.I.",
+			"name_full":"Bydžovští Improvizátoři Z Opatovic Nadržení na Improvizaci",
+			"city":"Opatovice",
+			"about":"B. I. Z. O. N. I. aneb Bydžovští Improvizátoři Z Opatovic Nadržení na Improvizaci, jak vypovídá název, je skupina mladých lidí ve věku od 17 do 25 let, kteří mají společnou vášeň pro improvizaci. A proč právě „Bydžovští improvizátoři z Opatovic“? Vysvětlení je jednoduché. Téměř polovina našich členů pochází z Nového Bydžova, nicméně trénujeme v Opatovicích n/L v místním Společenském domě. Většina z nás studuje vysokou nebo střední školu, ale trénují s námi i lidé zaměstnáním povolaní. Počátky improvizační skupiny BIZONI se datují k dubnu roku 2010, kdy jsme k původnímu dramatickému kroužku přibrali nové členy z Nového Bydžova a začali směřovat naše pravidelné tréninky k improvizačnímu divadlu, konkrétně k Improlize.",
+			"logo":"",
+			"site":"http://improbizoni.webnode.cz/",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":5,
+			"name":"K.I.Š.",
+			"name_full":"Kouzelná Improvizační Školka",
+			"city":"Praha",
+			"about":"Náš tým už po té spoustě tréninků a workshopů není tak úplně školkou, spíše vyšší dívčí, jen tou kouzelnou zůstává. Na začátku se rozpadl jeden velký bývalý nejlepší improvizační tým O.M.I.L. a v hlavách čtyř individuí se začalo rodit něco nového. Od tréninků spíše zaměřených na dovednosti a schopnosti improvizovat i v našem každodenním životě, jsme přešli na tvrdý trénink disciplín, a pak se pustili do experimentů. Každý Kišák si hledá svou vlastní cestu, ale zároveň táhneme tak nějak dohromady. Naše hesla: „Když nevíš co s tím, tak to uvař.“ a „Máme rádi trestné body!“.",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":6,
+			"name":"OTISK",
+			"name_full":"Otevřená improvizační skupina",
+			"city":"Praha",
+			"about":"OTISK byl založen (asi:)) v roce 2004 Hankou, Janou a Martinem, třemi improvizátory z týmu Pra.L.I.Ny. Vznikl původně proto, aby k Pra.L.I.Nám přibyla další skupina a mohly probíhat skutečné zápasy. Otevřenost OTISKu se projevuje především tím, že se v něm vystřídalo již mnoho improvizátorů a jeho složení se stále mění. Je otevřen improvizátorům, kteří na sobě chtějí dlouhodobě pracovat. Význam tréninků a práce na sobě jsou pro tým důležitější než zápasy samotné. OTISK není příliš ambiciózní a nehraje pravidelné zápasy. V týmu se vystřídalo více trenérů. V současné době jej trénují Jana Machalíková (která vydržela a udržela OTISK v chodu od jeho založení) a Jakub Troják",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id_impro_team":7,
+			"name":"Stře.L.I.",
+			"name_full":"Středoškolská liga improvizace",
+			"city":"Praha",
+			"about":"Tento středoškolský tým vznikl v roce 2002 z původně divadelního souboru. Za tu dobu jím prošlo mnoho hráčů a vyzrálo pár skvělých trenérů. Současné STŘE.L.I. tvoří asi pátou vlnu. Trenéři si kladou za cíl udržet funkční tým, složený převážně středoškoláků ve věku od 15 do 19 let. V tomto věku hrají tréninky důležitou roli při jejich osobnostě-sociálním rozvoji a dalším směřování. V dresu Střel si zahrála řada osobností, např: Lucie Kosová, Jan Urban, Vanda Kašová, Marie Doležalová, Jan Cína, Alžběta Šerclová, Kateřina Bílková, Barbora Šupová, Martin Třešňák a další. Z prvních Střel vznikl tým Extáze a postupně i sdružení Improvariace. Tým trénuje pod patronátem Jany Machalíkové. V současné době je trenérem Martin Třešňák.",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		}
+	],
+
+
+	"impro_team_member":
+	[
+		{
+			"id_impro_team":1,
+			"id_system_user":4,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":2,
+			"id_system_user":10,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":3,
+			"id_system_user":11,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":4,
+			"id_system_user":12,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":5,
+			"id_system_user":13,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":6,
+			"id_system_user":14,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":6,
+			"id_system_user":15,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":7,
+			"id_system_user":14,
+			"active":true,
+			"roles":"2,3,4"
+		},
+		{
+			"id_impro_team":7,
+			"id_system_user":16,
+			"active":true,
+			"roles":"2,3,4"
+		}
+	]
+}

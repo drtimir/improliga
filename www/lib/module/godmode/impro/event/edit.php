@@ -18,14 +18,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	));
 
 	$f->input_datetime("start", l('impro_event_start'), true);
-	$f->input(array(
-		"type"     => 'number',
-		"name"     => "duration",
-		"label"    => l('impro_event_duration'),
-		"required" => true,
-		"step"     => 1,
-		"min"      => 0,
-	));
+	$f->input_datetime("end", l('impro_event_end'), true);
 
 	$f->input_image('image', l('impro_event_image'), false);
 
@@ -33,14 +26,14 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		"type"  => 'textarea',
 		"name"  => 'desc_short',
 		"label" => l('impro_event_desc_short'),
-		"required" => true,
+		"required" => false,
 	));
 
 	$f->input(array(
 		"type" => 'textarea',
 		"name" => 'desc_full',
 		"label" => l('impro_event_desc_full'),
-		"required" => true,
+		"required" => false,
 	));
 
 	$f->input(array(
@@ -60,7 +53,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		$p = $f->get_data();
 
 		$item->update_attrs($p)->save();
-		redirect(soprintf($redirect, $item));
+		//~ redirect(soprintf($redirect, $item));
 
 	} else {
 		$f->out($this);

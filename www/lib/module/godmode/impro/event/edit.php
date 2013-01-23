@@ -2,7 +2,7 @@
 
 def($new, false);
 def($id);
-def($redirect, '/god/impro/event/{id_impro_event}/');
+def($redirect, '/god/impro/events/{id_impro_event}/');
 def($heading, $new ? l('impro_event_create'):l('impro_event_delete'));
 
 
@@ -46,7 +46,6 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	$f->input_textarea('desc_short', l('impro_event_desc_short'), false);
 	$f->input_textarea('desc_full', l('impro_event_desc_full'), false);
 
-
 	$f->input(array(
 		"type"  => 'datetime',
 		"name"  => "publish_at",
@@ -64,7 +63,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		$p = $f->get_data();
 
 		$item->update_attrs($p)->save();
-		//~ redirect(soprintf($redirect, $item));
+		redirect(soprintf($redirect, $item));
 
 	} else {
 		$f->out($this);

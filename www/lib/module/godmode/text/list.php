@@ -3,8 +3,6 @@
 def($link_cont, '/god/texts/{id_system_text}/');
 def($conds, array());
 def($opts, array());
-def($per_page, 20);
-def($page, 0);
 def($heading, l('godmode_static_text_list'));
 
 $texts = get_all("\System\Text", $conds, $opts)->paginate($per_page, $page)->fetch();
@@ -21,4 +19,5 @@ $this->template('godmode/item-list', array(
 	"items"     => $texts,
 	"link_cont" => $link_cont,
 	"heading"   => def($show_heading, true) ? $heading:null,
+	"count"     => $count,
 ));

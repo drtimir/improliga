@@ -3,8 +3,6 @@
 def($link_cont, '/god/impro/teams/{id_impro_team}/');
 def($conds, array());
 def($opts, array());
-def($per_page, 20);
-def($page, 0);
 def($heading, l('impro_team_list'));
 
 $users = get_all("\Impro\Team", $conds, $opts)->paginate($per_page, $page)->fetch();
@@ -20,6 +18,7 @@ $this->template('godmode/item-list', array(
 		array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete')),
 	),
 	"items"     => $users,
+	"count"     => $count,
 	"link_cont" => $link_cont,
 	"heading"   => def($show_heading, true) ? $heading:null,
 ));

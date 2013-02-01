@@ -3,8 +3,6 @@
 def($link_cont, '/god/users/{id_system_user}/');
 def($conds, array());
 def($opts, array());
-def($per_page, 20);
-def($page, 0);
 
 $users = get_all("\System\User", $conds, $opts)->paginate($per_page, $page)->fetch();
 $count = count_all("\System\User", $conds, $opts);
@@ -20,4 +18,5 @@ $this->template('godmode/item-list', array(
 	"items"     => $users,
 	"link_cont" => $link_cont,
 	"heading"   => def($show_heading, true) ? def($heading, l('User list')):null,
+	"count"     => $count,
 ));

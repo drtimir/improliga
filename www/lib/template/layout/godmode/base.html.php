@@ -41,6 +41,7 @@
 		content_for("styles", "god/window");
 		content_for("styles", "god/main_menu");
 		content_for("styles", "god/common");
+		content_for("styles", "god/paginator");
 
 		cfg("dev", "debug") && content_for("styles", "status-dump");
 		$menu_icon_size = 24;

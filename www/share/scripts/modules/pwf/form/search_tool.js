@@ -15,9 +15,13 @@ pwf.register('search_tool', function()
 			{
 				if (typeof els.input === 'undefined') {
 					container.find('span.data').remove();
-					this.el('input',  $('<input type="text" placeholder="'+attrs.placeholder+'" name="search_tool_input" autocomplete="off">'));
+					this.el('input',  $('<input type="text" name="search_tool_input" autocomplete="off">'));
 					this.el('result', $('<ul class="search_tool_result"></ul>'));
 					this.bind();
+
+					if (this.attr('placeholder') !== null) {
+						this.el('input').attr('placeholder', this.attr('placeholder'));
+					}
 
 					container.append([
 						this.el('input'),
@@ -132,8 +136,16 @@ pwf.register('search_tool', function()
 					display = this.attr('display'),
 					result = [];
 
-				for (var i = 0; i < display.length; i++) {
-					result.push(item[display[i]]);
+				if (display === null) {
+					for (var i in item) {
+						if (item[i] !== null) {
+							result.push(item[i]);
+						}
+					}
+				} else {
+					for (var i = 0; i < display.length; i++) {
+						result.push(item[display[i]]);
+					}
 				}
 
 				return result.join(' ');

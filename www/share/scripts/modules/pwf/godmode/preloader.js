@@ -65,17 +65,17 @@ pwf.godmode.register('preloader', function()
 		if (self.el('inner') === null) {
 			self.el('inner', $('<div class="inner"></div>'));
 			self.el('label', $('<div class="label"></div>'));
-			self.el('label_text', $('<span class="text">Loading godmode .. </span>'));
+			self.el('label_text', $('<span class="text">Loading godmode</span>'));
 			self.el('label_progress', $('<span class="progress_text"></span>'));
 			self.el('progress_outer', $('<div class="progress_outer"></div>'));
 			self.el('progress', $('<div class="progress"></div>'));
 
 			element.append(self.el('inner'));
+			element.append(self.el('label_progress'));
 			self.el('inner').append(self.el('label'));
 			self.el('inner').append(self.el('progress_outer'));
 
 			self.el('label').append(self.el('label_text'));
-			self.el('label').append(self.el('label_progress'));
 			self.el('progress_outer').append(self.el('progress'));
 		}
 	};

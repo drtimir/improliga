@@ -9,8 +9,8 @@ def($locals['name_format'], '{login}');
 if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 	define("H_TEMPLATE_UNIVERSAL_ADMIN_LIST", true);
 
-	function admin_list_format_value(array $col, $item, array $static) {
-
+	function admin_list_format_value(array $col, $item, array $static)
+	{
 		def($col[2], '');
 		def($col[3], '');
 		def($col[4], '');
@@ -75,8 +75,9 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		}
 	}
 
-	function admin_list_draw_table($locals) {
 
+	function admin_list_draw_table($locals)
+	{
 		$i=0;
 		foreach ($locals as $key=>$val) {
 			$$key = $val;
@@ -157,19 +158,72 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 			</table><?
 		}
 	}
+
+
+	function admin_list_draw_pagination($cur_page, $count, $per_page, array $class = array())
+	{
+		$out = array();
+		$p = System\Input::get('path');
+
+		if ($cur_page > 0) {
+			$out[] = Tag::li(array("output" => false, "content" => Tag::a(array(
+				"output"  => false,
+				"href"    => $p.'?page='.($cur_page-1),
+				"content" => '&laquo;',
+				"title"   => l('godode_prev_page'),
+			))));
+		}
+
+		for ($page = 1; $count > ($page - 1) * $per_page; $page++) {
+			$fn = ($cur_page === $page - 1) ? 'span':'a';
+
+			$out[] = Tag::li(array(
+				"output"  => false,
+				"class"   => array($cur_page === $page - 1 ? 'active':'inactive'),
+				"content" => Tag::$fn(array(
+					"output"  => false,
+					"content" => $page,
+					"href"    => $p.'?page='.($page - 1),
+					"title"   => l('godmode_page', $page),
+				))
+			));
+		}
+
+		if ($cur_page + 1 < floor($count/$per_page)) {
+			$out[] = Tag::li(array("output" => false, "content" => Tag::a(array(
+				"output" => false,
+				"href" => $p.'?page='.($cur_page+1),
+				"content" => '&raquo;',
+				"title"   => l('godode_next_page'),
+			))));
+		}
+
+		Tag::ul(array(
+			"content" => $out,
+			"class"   => array_merge($class, array('paginator')),
+		));
+	}
 }
 
 ?>
 <div class="admin-list">
-	<?=section_heading($heading)?>
+	<?
 
-	<? if ($desc) { ?>
-		<p><?=$desc?></p>
-	<? }
-		admin_list_draw_table($locals);
+	echo section_heading($heading);
+	$desc && Tag::p(array("content" => $desc));
 
-		if (empty($items)) {
-			t_message("info", $heading, l('Tento seznam neobsahuje žádné položky'));
-		}
+	if (isset($count) && isset($per_page) && $count > $per_page) {
+		admin_list_draw_pagination($page, $count, $per_page, array('top'));
+	}
+
+	admin_list_draw_table($locals);
+
+	if (empty($items)) {
+		t_message("info", $heading, l('godmode_no_items'));
+	}
+
+	if (isset($count) && isset($per_page) && $count > $per_page) {
+		admin_list_draw_pagination($page, $count, $per_page, array('bottom'));
+	}
 	?>
 </div>

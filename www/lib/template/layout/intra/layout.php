@@ -14,7 +14,7 @@ Tag::html();
 			Tag::div(array("class" => 'page-block'));
 				Tag::div(array(
 					"class" => 'logo',
-					"content" => link_for(Tag::span(array("output" => false, "content" => 'Intranet Improligy')), '/'),
+					"content" => link_for(Tag::span(array("output" => false, "class" => 'hidden', "content" => 'Intranet Improligy')), '/'),
 				));
 
 				Tag::menu(array("class" => 'plain user'));

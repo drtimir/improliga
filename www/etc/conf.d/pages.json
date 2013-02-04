@@ -5,10 +5,13 @@
 	"intra":{
 		"#":{
 			"template":["intra/layout", "intra/dual"],
-			"modules":[
-				["impro/news/list", {"slot":"left"}],
-				["impro/event/calendar", {"slot":"right"}]
-			]
+			"modules":{
+				"news":["impro/news/list", {"slot":"left"}],
+				"cl":["impro/event/calendar", {"slot":"right"}, ["cc"]],
+				"cc":["impro/event/calendar_controls", {"slot":"right"}]
+
+
+			}
 		},
 
 		"login":{"#":{

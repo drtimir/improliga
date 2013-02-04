@@ -22,7 +22,6 @@ $f = new System\Form(array(
 	"method"  => 'get',
 	"default" => $def,
 	"class"   => def($form_class),
-	"heading" => def($heading)
 ));
 
 $f->input(array(
@@ -76,6 +75,7 @@ $junk = '&amp;'.$pref.'hidden_data={&quot;submited&quot;:1}&amp;'.$pref.'submite
 $this->template('impro/event/calendar_controls', array(
 	"f" => &$f,
 	"icon_size" => $icon_size,
+	"heading"   => $heading,
 	"link_prev_month"  => $url.'?'.$pref.'month='.intval($pm->format('m')).'&amp;'.$pref.'year='.$pm->format('Y').$junk,
 	"link_prev_year"   => $url.'?'.$pref.'month='.intval($py->format('m')).'&amp;'.$pref.'year='.$py->format('Y').$junk,
 	"link_next_month"  => $url.'?'.$pref.'month='.intval($nm->format('m')).'&amp;'.$pref.'year='.$nm->format('Y').$junk,

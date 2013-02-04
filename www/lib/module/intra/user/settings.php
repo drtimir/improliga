@@ -21,7 +21,8 @@ $f = new System\Form(array(
 	$f->submit(l('save'));
 
 	if ($f->passed()) {
-		$user->update_attrs($f->get_data())->save();
+		$p = $f->get_data();
+		$user->update_attrs($p)->save();
 		redirect($redirect);
 	}
 

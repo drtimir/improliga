@@ -41,6 +41,13 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	$f->input_datetime("start", l('impro_event_start'), true);
 	$f->input_datetime("end", l('impro_event_end'), true);
 
+	$f->input(array(
+		"name"  => 'id_location',
+		"type"  => 'location',
+		"label" => l('impro_event_location'),
+		"required" => true,
+	));
+
 	$f->input_image('image', l('impro_event_image'), false);
 
 	$f->input_textarea('desc_short', l('impro_event_desc_short'), false);

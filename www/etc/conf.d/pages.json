@@ -40,6 +40,7 @@
 			"#":{},
 			"*":{
 				"#":{
+					"title":"Můj tým",
 					"template":["intra/layout", "intra/dual2"],
 					"modules":[
 						["impro/team/member_list", {"id_team":"#{0}", "slot":"right"}]
@@ -47,6 +48,14 @@
 				}
 			}
 		},
+
+
+		"discussion":{
+			"#":{
+				"title":"Diskuze"
+			}
+		},
+
 
 		"settings":{
 			"#":{

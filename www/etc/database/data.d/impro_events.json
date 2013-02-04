@@ -864,6 +864,22 @@
 			"id_author":1,
 			"id_team_home":0,
 			"id_team_away":0
+		},
+		{
+			"id_impro_event":"273",
+			"id_impro_event_type":5,
+			"title":"Víkendový workshop s JUST! Impro",
+			"image":"",
+			"desc_short":"",
+			"desc_full":"",
+			"visible":true,
+			"start":"2013-02-08 18:00:00",
+			"duration":0,
+			"published":true,
+			"publish_at":"2013-01-01 00:00:00",
+			"id_author":1,
+			"id_team_home":0,
+			"id_team_away":0
 		}
 	]
 }

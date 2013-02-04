@@ -78,18 +78,19 @@ menu.main {
 	display:block;
 	border-top:1px solid #efefef;
 	padding-top:10px;
+	margin-bottom:10px;
 }
 
 menu.main li {
 	display:block;
 	line-height:16px;
 	padding:0;
-	margin-bottom:2px;
+	margin-bottom:1px;
 }
 
 menu.main li a {
 	display:block;
-	padding:3px 5px;
+	padding:4px 5px;
 	text-decoration:none;
 }
 
@@ -171,4 +172,18 @@ menu.user li {
 
 .menu_profile .edit a {
 	font-size:12px;
+}
+
+footer {
+	padding-top:10px;
+}
+
+footer .page-block {
+	padding-top:5px;
+	border-top:1px solid #eaeaea;
+}
+
+footer .system {
+	display:block;
+	float:right;
 }

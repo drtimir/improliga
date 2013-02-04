@@ -8,12 +8,14 @@ namespace Impro\Event
 		const ID_MATCH      = 2;
 		const ID_LONG_FORM  = 3;
 		const ID_MUSIC_FORM = 4;
+		const ID_WORKSHOP   = 5;
 
 		static private $types_available = array(
 			'impro_match'      => self::ID_MATCH,
 			'impro_show'       => self::ID_SHOW,
 			'impro_long_form'  => self::ID_LONG_FORM,
 			'impro_music_form' => self::ID_MUSIC_FORM,
+			'impro_workshop'   => self::ID_WORKSHOP,
 		);
 
 

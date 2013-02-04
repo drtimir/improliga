@@ -14,7 +14,10 @@ Tag::div(array("class" => 'menu_left'));
 
 	Tag::menu(array("class" => array('plain', 'main')));
 		Tag::li(array("content" => label_for('godmode/items/home', 16, l('intra_wall'), '/')));
+		Tag::li(array("content" => label_for('godmode/items/discussion', 16, l('intra_discussion'), '/discussion')));
+	Tag::close('menu');
 
+	Tag::menu(array("class" => array('plain', 'main')));
 		foreach (user()->teams as $team) {
 			Tag::li(array("content" => label_for('godmode/items/team', 16, $team->name, '/team/'.$team->id.'/')));
 		}

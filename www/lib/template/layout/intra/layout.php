@@ -34,7 +34,7 @@ Tag::html();
 			Tag::div(array("class" => 'page-block'));
 				Tag::span(array(
 					"class"   => 'system',
-					"content" => System\Output::introduce(),
+					"content" => link_for(System\Output::introduce(), 'http://pwf.scourge.cz/'),
 				));
 			Tag::close('div');
 		Tag::close('footer');

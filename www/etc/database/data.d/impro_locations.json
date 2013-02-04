@@ -1,0 +1,67 @@
+{
+	"system_location":[
+		{
+			"id_system_location":1,
+			"id_user":1,
+			"name":"Klub Klamovka",
+			"addr":"Praha, Smíchov, Podbělohorská 154/3",
+			"gps":"POINT(50.071407 14.379434)",
+			"desc":"Klub Klamovka",
+			"site":"http://www.klubklamovka.cz"
+		},
+		{
+			"id_system_location":2,
+			"id_user":1,
+			"name":"Divadlo 29",
+			"addr":"Pardubice, Svaté Anežky České 29",
+			"gps":"POINT(50.040029 15.779871)",
+			"desc":"Divadlo 29",
+			"site":"http://www.divadlo29.cz"
+		},
+		{
+			"id_system_location":3,
+			"id_user":1,
+			"name":"Divadlo 29",
+			"addr":"Pardubice, Svaté Anežky České 29",
+			"gps":"POINT(50.040029 15.779871)",
+			"desc":"Divadlo 29",
+			"site":"http://www.divadlo29.cz"
+		},
+		{
+			"id_system_location":4,
+			"id_user":1,
+			"name":"SVČ Lužánky, sál Ornis",
+			"addr":"Brno, Lidická 50, sál Ornis",
+			"gps":"POINT(49.206171 16.606569)",
+			"desc":"SVČ Lužánky, sál Ornis",
+			"site":"http://www.luzanky.cz"
+		},
+		{
+			"id_system_location":5,
+			"id_user":1,
+			"name":"Klub Osma",
+			"addr":"Praha, Kobylisy, Přemyšlenská 1102",
+			"gps":"POINT(50.126559 14.449059)",
+			"desc":"DDM Klub Osma",
+			"site":"http://www.ddmpraha8.cz/index.php?page=kluby&part=klub-osma"
+		},
+		{
+			"id_system_location":6,
+			"id_user":1,
+			"name":"Klub K4",
+			"addr":"Praha, Nové město, Celetná 20",
+			"gps":"POINT(50.087121 14.424214)",
+			"desc":"Klub K4",
+			"site":"http://suuk.cz/k4"
+		},
+		{
+			"id_system_location":7,
+			"id_user":1,
+			"name":"Divadlo Kampa",
+			"addr":"Praha, Kampa, Nosticova 2a",
+			"gps":"POINT(50.084338 14.4069)",
+			"desc":"Divadlo Kampa",
+			"site":"http://www.divadlokampa.cz"
+		}
+	]
+}

@@ -28,7 +28,8 @@ namespace Impro
 			"author"    => array("model" => "\System\User"),
 			"team_home" => array("model" => '\Impro\Team', "is_null" => true),
 			"team_away" => array("model" => '\Impro\Team', "is_null" => true),
-			"gallery"   => array('model' => '\Impro\Gallery'),
+			"gallery"   => array("model" => '\Impro\Gallery'),
+			"location"  => array("model" => '\System\Location'),
 		);
 
 

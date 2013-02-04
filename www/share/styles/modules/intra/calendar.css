@@ -1,9 +1,29 @@
+.calendar-month-grid {
+	width:388px;
+}
+
+.calendar .calendar-head {
+	border-bottom:1px solid #efefef;
+	padding-bottom:0;
+	margin-bottom:7px;
+}
+
+.calendar .calendar-head .day {
+	font-size:12px;
+	font-weight:normal;
+	text-transform:capitalize;
+}
+
 .calendar .day {
 	border-radius:3px;
 	border:none;
-	margin:2px;
+	margin:0 2px;
+	width:52px;
 	text-align:center;
 }
+
+.calendar .day:last-child { margin-right:0; }
+.calendar .day:first-child { margin-left:0; }
 
 .calendar .days-events {
 	display:none;
@@ -17,19 +37,24 @@
 	height:52px;
 	line-height:52px;
 	font-size:20px;
+	border-radius:5px;
+	background:#FAEA96;
+	color:#555;
 }
 
-.calendar .day-inactive {
-
-}
 .calendar .day-inactive .day-head {
 	background:#efefef;
 	color:#ccc;
+}
+
+.calendar .day-events .day-head {
+	background:#B82429;
+	color:#fff;
 }
 
 .calendar .active .day-head:hover {
 
 }
 .calendar .week {
-	margin-bottom:1px;
+	margin-bottom:3px;
 }

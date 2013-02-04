@@ -10,5 +10,10 @@ namespace Impro
 			"visible"   => array("bool"),
 			"published" => array("bool"),
 		);
+
+
+		protected static $belongs_to = array(
+			"author" => array("model" => 'System\User')
+		);
 	}
 }

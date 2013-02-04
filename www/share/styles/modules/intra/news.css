@@ -1,0 +1,53 @@
+.news .items {
+	margin:0;
+}
+
+.news .items li {
+	margin-bottom:20px;
+}
+
+.news .items h2 {
+	margin-top:0;
+	margin-bottom:7px;
+	font-weight:normal;
+	font-size:20px;
+}
+
+.detail-news h1 a,
+.news .items h2 a
+{
+	color:#333;
+	text-decoration:none;
+}
+
+.news .items .text {
+	margin-bottom:5px;
+}
+
+.news .items li:hover h2 a,
+.news .items li:hover .text,
+{
+	color:#000;
+}
+
+.news .items .footer datetime,
+.news .items .footer .author,
+.detail-news .footer datetime,
+.detail-news .footer .author
+{
+	color:#999;
+	font-size:12px;
+}
+
+.detail-news .footer datetime,
+.news .items .footer datetime
+{
+	margin-right:5px;
+}
+
+.detail-news h1 {
+}
+
+.detail-news .text {
+	margin-bottom:10px;
+}

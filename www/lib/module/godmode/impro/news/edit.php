@@ -22,7 +22,10 @@ if (($new && $item = new Impro\News()) || ($id && $item = find("\Impro\News", $i
 	if ($f->passed()) {
 		$p = $f->get_data();
 
-		$item->update_attrs($p);
+		if (!$item->id_author) {
+			$item->id_author = user()->id;
+		}
+
 		$item->update_attrs($p)->save();
 
 		if (!$item->errors()) {

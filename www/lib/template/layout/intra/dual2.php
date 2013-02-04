@@ -4,11 +4,11 @@ Tag::div(array("class" => 'page-block'));
 
 	require ROOT.'/lib/template/layout/intra/menu.php';
 
-	Tag::div(array("class" => array('block', 'left')));
+	Tag::div(array("class" => array('block', 'left_big')));
 		slot('left');
 	Tag::close('div');
 
-	Tag::div(array("class" => array('block', 'right')));
+	Tag::div(array("class" => array('block', 'right_small')));
 		slot('right');
 	Tag::close('div');
 

@@ -1,4 +1,6 @@
-.calendar-month-grid {
+.calendar-controls,
+.calendar-month-grid
+{
 	width:388px;
 }
 
@@ -40,6 +42,11 @@
 	border-radius:5px;
 	background:#FAEA96;
 	color:#555;
+	cursor:default;
+}
+
+.calendar .today .day-head {
+	background:#E6CD4C
 }
 
 .calendar .day-inactive .day-head {
@@ -50,6 +57,7 @@
 .calendar .day-events .day-head {
 	background:#B82429;
 	color:#fff;
+	cursor:pointer;
 }
 
 .calendar .active .day-head:hover {
@@ -57,4 +65,24 @@
 }
 .calendar .week {
 	margin-bottom:3px;
+}
+
+.calendar-controls {
+	margin-bottom:10px;
+	height:auto;
+}
+
+.calendar-controls form {
+	width:260px;
+	margin:0 auto;
+	display:block;
+}
+
+.calendar-controls .inputs li {
+	margin:0;
+}
+
+.calendar-controls button {
+	width:30px;
+	border-radius:5px;
 }

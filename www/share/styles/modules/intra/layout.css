@@ -8,10 +8,26 @@ body, html
 	margin:0;
 }
 
+a {
+	text-decoration:none;
+	color:#b82429
+}
+
+h1 {
+	font-size:30px;
+	font-weight:bold;
+}
+
+fieldset {
+	border:none;
+	margin:0;
+	padding:0;
+}
+
 header {
 	background:#ccc;
 	display:block;
-	height:50px;
+	height:30px;
 	position:relative;
 }
 
@@ -22,7 +38,7 @@ header .page-block {
 
 .page-block {
 	width:1000px;
-	padding:10px 25px;
+	padding:0;
 	margin:0 auto;
 }
 
@@ -39,21 +55,61 @@ menu.plain li {
 	padding:2px 5px;
 }
 
-menu.main {
+.menu_left {
 	position:relative;
 	width:180px;
-	margin-right:10px;
+	margin-right:15px;
 	float:left;
+	border-right:1px solid #efefef;
+}
+
+menu.main {
+	position:relative;
+	display:block;
+	border-top:1px solid #efefef;
+	padding-top:10px;
+}
+
+menu.main li {
+	display:block;
+	line-height:16px;
+	padding:0;
+	margin-bottom:2px;
+}
+
+menu.main li a {
+	display:block;
+	padding:3px 5px;
+	text-decoration:none;
+}
+
+menu.main li a:hover {
+	background:rgba(0,0,0,0.1)
+}
+
+menu.main li .icon {
+	margin-right:5px;
+	vertical-align:middle;
 }
 
 menu.user {
 	position:absolute;
 	right:25px;
-	bottom:5px;
+	top:3px;
 }
 
 menu.user li {
 	padding:0;
+}
+
+.logo a {
+	width:180px;
+	height:30px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:#666;
+	border-right:1px solid #616161;
 }
 
 
@@ -67,7 +123,42 @@ menu.user li {
 	width:400px;
 }
 
+.block.content {
+	padding-top:10px;
+}
+
 .cleaner {
 	display:block;
 	clear:both;
+}
+
+
+.menu_profile {
+	margin-bottom:10px;
+	padding:15px 0 0;
+}
+
+.menu_profile .avatar{
+	float:left;
+	display:block;
+	width:40px;
+	height:40px;
+	margin-right:10px;
+}
+
+.menu_profile .name,
+.menu_profile .edit
+{
+	float:left;
+	display:block;
+	width:120px;
+}
+
+.menu_profile .name a {
+	font-weight:bold;
+	font-size:12px;
+}
+
+.menu_profile .edit a {
+	font-size:12px;
 }

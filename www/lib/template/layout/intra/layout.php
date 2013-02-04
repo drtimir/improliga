@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<?
+	<head><?
 			content_for('styles', 'intra/layout');
 			content_for('styles', 'intra/calendar');
-		?>
-		<?= content_from('head');?>
-	</head>
-
+			content_for('styles', 'intra/news');
+			echo content_from('head');
+	?></head>
 	<body>
 		<header>
 			<div class="page-block">
@@ -19,9 +17,12 @@
 				</menu>
 			</div>
 		</header>
-		<div id="container">
-			<? yield(); ?>
-			<span class="cleaner"></span>
+		<div id="container"><?
+
+			yield();
+			Tag::span(array("class" => 'cleaner', "close" => true));
+
+		?>
 		</div>
 		<footer>
 			<div class="page-block">

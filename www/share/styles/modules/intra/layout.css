@@ -6,6 +6,7 @@ body, html
 	color:#333;
 	padding:0;
 	margin:0;
+	display:block;
 }
 
 a {
@@ -37,9 +38,17 @@ header .page-block {
 }
 
 .page-block {
-	width:1000px;
+	min-width:620px;
+	max-width:1020px;
 	padding:0;
 	margin:0 auto;
+}
+
+html,
+body,
+#container,
+#container .page-block {
+	min-height:100%;
 }
 
 menu.plain,
@@ -58,9 +67,10 @@ menu.plain li {
 .menu_left {
 	position:relative;
 	width:180px;
-	margin-right:15px;
+	margin-right:20px;
 	float:left;
 	border-right:1px solid #efefef;
+	min-height:100%;
 }
 
 menu.main {
@@ -113,14 +123,14 @@ menu.user li {
 }
 
 
-.block.left {
+.block.left,
+.block.right {
 	float:left;
 	width:400px;
 }
 
-.block.right {
-	float:right;
-	width:400px;
+.block.left {
+	margin-right:15px;
 }
 
 .block.content {

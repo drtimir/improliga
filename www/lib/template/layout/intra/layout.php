@@ -1,34 +1,42 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head><?
-			content_for('styles', 'intra/layout');
-			content_for('styles', 'intra/calendar');
-			content_for('styles', 'intra/news');
-			echo content_from('head');
-	?></head>
-	<body>
-		<header>
-			<div class="page-block">
-				<div class="logo"><a href="/"><span class="hidden">Intranet Improligy</span></a></div>
-				<menu class="plain user">
-					<li><?=icon_for('impro/objects/profile',  24, '/profile/', l('intra_user_profile'))?></li>
-					<li><?=icon_for('impro/objects/settings', 24, '/settings/', l('intra_user_settings'))?></li>
-					<li><?=icon_for('godmode/actions/logout', 24, '/logout/', l('godmode_user_logout'))?></li>
-				</menu>
-			</div>
-		</header>
-		<div id="container"><?
+<?
 
+Tag::doctype();
+Tag::html();
+	Tag::head();
+		content_for('styles', 'intra/layout');
+		content_for('styles', 'intra/calendar');
+		content_for('styles', 'intra/news');
+		echo content_from('head');
+	Tag::close('head');
+
+	Tag::body();
+		Tag::header();
+			Tag::div(array("class" => 'page-block'));
+				Tag::div(array(
+					"class" => 'logo',
+					"content" => link_for(Tag::span(array("output" => false, "content" => 'Intranet Improligy')), '/'),
+				));
+
+				Tag::menu(array("class" => 'plain user'));
+					Tag::li(array("content" => icon_for('impro/objects/profile',  24, '/profile/', l('intra_user_profile'))));
+					Tag::li(array("content" => icon_for('impro/objects/settings', 24, '/settings/', l('intra_user_settings'))));
+					Tag::li(array("content" => icon_for('godmode/actions/logout', 24, '/logout/', l('godmode_user_logout'))));
+				Tag::close('menu');
+			Tag::close('div');
+		Tag::close('header');
+
+		Tag::div(array("id" => 'container'));
 			yield();
 			Tag::span(array("class" => 'cleaner', "close" => true));
+		Tag::close('div');
 
-		?>
-		</div>
-		<footer>
-			<div class="page-block">
-				<?=System\Output::introduce()?>
-			</div>
-		</footer>
-	</body>
-</html>
-<?
+		Tag::footer();
+			Tag::div(array("class" => 'page-block'));
+				Tag::span(array(
+					"class"   => 'system',
+					"content" => System\Output::introduce(),
+				));
+			Tag::close('div');
+		Tag::close('footer');
+	Tag::close('body');
+Tag::close('html');

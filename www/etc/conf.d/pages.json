@@ -6,6 +6,8 @@
 		"#":{
 			"template":["intra/layout", "intra/dual"],
 			"modules":[
+				["impro/news/list", {"slot":"left"}],
+				["impro/event/calendar", {"slot":"right"}]
 			]
 		},
 

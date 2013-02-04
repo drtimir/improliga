@@ -3,7 +3,7 @@
 content_for("styles", 'calendar');
 
 Tag::div(array("class" => 'calendar'));
-	if ($heading) echo section_heading($heading);
+	if ($heading) echo section_heading($heading, 1);
 
 	Tag::div(array("class" => 'calendar-'.$mode));
 		Tag::div(array("class" => 'calendar-'.$mode.'-inner'));

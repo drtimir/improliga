@@ -1,3 +1,6 @@
 <div class="page-block">
-	<? slot(); ?>
+	<?
+	require ROOT.'/lib/template/layout/intra/menu.php';
+	slot();
+	?>
 </div>

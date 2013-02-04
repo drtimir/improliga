@@ -1,0 +1,35 @@
+.calendar .day {
+	border-radius:3px;
+	border:none;
+	margin:2px;
+	text-align:center;
+}
+
+.calendar .days-events {
+	display:none;
+}
+
+.calendar .day-head .date-info {
+	padding:0;
+}
+
+.calendar .day-head {
+	height:52px;
+	line-height:52px;
+	font-size:20px;
+}
+
+.calendar .day-inactive {
+
+}
+.calendar .day-inactive .day-head {
+	background:#efefef;
+	color:#ccc;
+}
+
+.calendar .active .day-head:hover {
+
+}
+.calendar .week {
+	margin-bottom:1px;
+}

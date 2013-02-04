@@ -3,6 +3,7 @@
 	<head>
 		<?
 			content_for('styles', 'intra/layout');
+			content_for('styles', 'intra/calendar');
 		?>
 		<?= content_from('head');?>
 	</head>
@@ -11,19 +12,6 @@
 		<header>
 			<div class="page-block">
 				<div class="logo"><a href="/"><span class="hidden">Intranet Improligy</span></a></div>
-				<menu class="plain main">
-					<li><a href="/">Zeď</a></li>
-
-					<?
-
-					foreach (user()->teams as $team) {
-						?>
-						<li><a href="/team/<?=$team->id?>/"><?=$team->name?></a></li>
-						<?
-					}
-
-					?>
-				</menu>
 				<menu class="plain user">
 					<li><?=icon_for('impro/objects/profile',  24, '/profile/', l('intra_user_profile'))?></li>
 					<li><?=icon_for('impro/objects/settings', 24, '/settings/', l('intra_user_settings'))?></li>
@@ -33,6 +21,7 @@
 		</header>
 		<div id="container">
 			<? yield(); ?>
+			<span class="cleaner"></span>
 		</div>
 		<footer>
 			<div class="page-block">

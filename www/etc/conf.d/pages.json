@@ -5,12 +5,11 @@
 	"intra":{
 		"#":{
 			"template":["intra/layout", "intra/dual"],
+			"title":"Intranet Improligy",
 			"modules":{
 				"news":["impro/news/list", {"slot":"left"}],
-				"cl":["impro/event/calendar", {"slot":"right"}, ["cc"]],
-				"cc":["impro/event/calendar_controls", {"slot":"right"}]
-
-
+				"cc":["impro/event/calendar_controls", {"slot":"right", "heading":"Kalendář"}],
+				"cl":["impro/event/calendar", {"slot":"right", "heading":""}, ["cc"]]
 			}
 		},
 
@@ -24,6 +23,30 @@
 				["intra/user/logout", {"redirect":"/"}]
 			]
 		}},
+
+		"news":{
+			"#":{},
+			"*":{
+				"#":{
+					"modules":[
+						["impro/news/list", {"slot":"right"}],
+						["godmode/impro/news/detail", {"id":"#{0}", "slot":"left"}]
+					]
+				}
+			}
+		},
+
+		"team":{
+			"#":{},
+			"*":{
+				"#":{
+					"template":["intra/layout", "intra/dual2"],
+					"modules":[
+						["impro/team/member_list", {"id_team":"#{0}", "slot":"right"}]
+					]
+				}
+			}
+		},
 
 		"settings":{
 			"#":{

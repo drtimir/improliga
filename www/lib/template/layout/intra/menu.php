@@ -13,8 +13,8 @@ Tag::div(array("class" => 'menu_left'));
 	Tag::close('div');
 
 	Tag::menu(array("class" => array('plain', 'main')));
-		Tag::li(array("content" => label_for('godmode/items/home', 16, l('intra_wall'), '/')));
-		Tag::li(array("content" => label_for('godmode/items/discussion', 16, l('intra_discussion'), '/discussion')));
+		Tag::li(array("content" => label_for('godmode/locations/home', 16, l('intra_wall'), '/')));
+		Tag::li(array("content" => label_for('impro/objects/discussion', 16, l('intra_discussion'), '/discussion')));
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));

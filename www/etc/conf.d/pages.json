@@ -50,9 +50,50 @@
 		},
 
 
-		"discussion":{
-			"#":{
-				"title":"Diskuze"
+		"discussion":{"#":{
+			"title":"Diskuze",
+			"modules":[
+				["impro/discussion/board_list", {"conds":{"public":true}, "slot":"left"}]
+			]},
+
+			"create_board":{"#":{
+				"title":"Vytvořit nový obor témat",
+				"modules":[
+					["impro/discussion/board_edit", {"new":true, "slot":"left"}]
+				]
+			}},
+
+			"*":{"#":{
+				"title":"Seznam témat",
+				"modules":[
+					["impro/discussion/topic_list", {"id_board":"#{0}", "slot":"left"}]
+				]},
+
+				"edit":{"#":{
+
+				}},
+				"delete":{"#":{
+
+				}},
+				"create_topic":{"#":{
+					"title":"Vytvoření tématu",
+					"modules":[
+						["impro/discussion/topic_edit", {"id_board":"#{0}", "new":true, "slot":"left"}]
+					]
+				}},
+
+				"*":{"#":{
+					"modules":[
+						["impro/discussion/post_list", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
+					]},
+
+					"edit":{"#":{
+						"title":"Upravit téma",
+						"modules":[
+							["impro/discussion/topic_edit", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
+						]
+					}}
+				}
 			}
 		},
 

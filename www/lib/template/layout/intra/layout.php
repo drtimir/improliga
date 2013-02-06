@@ -6,6 +6,7 @@ Tag::html();
 		content_for('styles', 'intra/layout');
 		content_for('styles', 'intra/calendar');
 		content_for('styles', 'intra/news');
+		content_for('styles', 'intra/discussions');
 		echo content_from('head');
 	Tag::close('head');
 
@@ -36,6 +37,8 @@ Tag::html();
 					"class"   => 'system',
 					"content" => link_for(System\Output::introduce(), 'http://pwf.scourge.cz/'),
 				));
+
+				Tag::span(array("class" => 'cleaner', "close" => true));
 			Tag::close('div');
 		Tag::close('footer');
 	Tag::close('body');

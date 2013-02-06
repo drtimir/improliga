@@ -4,7 +4,7 @@ Tag::div(array("class" => 'discussion'));
 
 	echo section_heading(link_for($board->name, soprintf($link_board, $board)));
 	echo heading($heading);
-	echo link_for(l('impro_discussion_create_topic'), soprintf($link_topic_create, $board));
+	echo link_for(l('impro_discussion_topic_create'), soprintf($link_topic_create, $board));
 
 	Tag::div(array("class" => 'topics'));
 		if (any($topics)) {

@@ -17,8 +17,8 @@ if (($id_board && ($board = find('\Impro\Discussion\Board', $id_board)) && (($id
 		"action"  => intra_path(),
 	));
 
-	$f->input_text('name', l('impro_discussion_board_name'), true);
-	$f->input_textarea('desc', l('impro_discussion_board_name'), true);
+	$f->input_text('name', l('impro_discussion_topic_name'), true);
+	$f->input_textarea('desc', l('impro_discussion_topic_desc'), true);
 	$f->input_checkbox('visible', l('godmode_visible'), false, l('impro_discussion_visible_hint'));
 	$f->input_checkbox('locked', l('impro_discussion_locked'), false, l('impro_discussion_locked_hint'));
 	$f->submit($heading);

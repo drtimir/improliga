@@ -8,6 +8,11 @@ def($redirect, '/discussion/{id_impro_discussion_board}');
 
 if (($id && $item = find('\Impro\Discussion\Board', $id)) || ($new && $item = new Impro\Discussion\Board())) {
 
+	if ($new) {
+		$item->visible = true;
+		$item->public = true;
+	}
+
 	$f = new System\Form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,
@@ -15,7 +20,7 @@ if (($id && $item = find('\Impro\Discussion\Board', $id)) || ($new && $item = ne
 	));
 
 	$f->input_text('name', l('impro_discussion_board_name'), true);
-	$f->input_textarea('desc', l('impro_discussion_board_name'), true);
+	$f->input_textarea('desc', l('impro_discussion_board_desc'), true);
 	$f->input_checkbox('visible', l('godmode_visible'), false, l('impro_discussion_visible_hint'));
 	$f->input_checkbox('public', l('impro_discussion_public'), false, l('impro_discussion_public_hint'));
 	$f->input_checkbox('locked', l('impro_discussion_locked'), false, l('impro_discussion_locked_hint'));

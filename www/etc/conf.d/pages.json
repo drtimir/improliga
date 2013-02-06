@@ -52,6 +52,7 @@
 
 		"discussion":{"#":{
 			"title":"Diskuze",
+			"template":["intra/layout", "intra/dual2"],
 			"modules":[
 				["impro/discussion/board_list", {"conds":{"public":true}, "slot":"left"}]
 			]},
@@ -70,7 +71,10 @@
 				]},
 
 				"edit":{"#":{
-
+					"title":"Upravit obor",
+					"modules":[
+						["impro/discussion/board_edit", {"id":"#{0}", "slot":"left"}]
+					]
 				}},
 
 				"delete":{"#":{
@@ -86,6 +90,7 @@
 
 				"*":{"#":{
 					"modules":[
+						["impro/discussion/post_add",  {"id_board":"#{0}", "id_topic":"#{1}", "slot":"discussion_post_form"}],
 						["impro/discussion/post_list", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
 					]},
 

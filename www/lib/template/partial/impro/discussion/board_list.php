@@ -3,22 +3,33 @@
 Tag::div(array("class" => 'discussion'));
 
 echo section_heading($heading);
-echo link_for(l('impro_discussion_create_board'), '/discussion/create_board/');
+
+Tag::ul(array("class" => 'actions plain'));
+	Tag::li(array("content" => icon_for('godmode/actions/create', 16, '/discussion/create_board/', l('impro_discussion_board_create'))));
+Tag::close('ul');
+
 
 Tag::ul(array("class" => array('boards', 'plain')));
 
 	foreach ($boards as $board) {
-		Tag::li();
-			echo heading(link_for($board->name, soprintf($link_board, $board)));
+		Tag::li(array("class" => 'board'));
+			echo section_heading(link_for($board->name, soprintf($link_board, $board)), 2);
 			Tag::div(array("class" => 'topics'));
 				$latest = $board->latest();
+
+				Tag::ul(array("class" => 'actions plain'));
+					if (!$board->locked) {
+						Tag::li(array("content" => icon_for('godmode/actions/create', 16, soprintf($link_topic_create, $board), l('impro_discussion_topic_create'))));
+					}
+				Tag::close('ul');
+
 				if (any($latest)) {
 					Tag::table(array("class" => 'topic_table'));
 					Tag::thead();
 						Tag::tr();
-							Tag::th(array("content" => l('impro_discussion_topic')));
-							Tag::th(array("content" => l('impro_discussion_last_author')));
-							Tag::th(array("content" => l('impro_discussion_updated_at')));
+							Tag::th(array("class" => 'topic', "content" => l('impro_discussion_topic')));
+							Tag::th(array("class" => 'last',  "content" => l('impro_discussion_last_author')));
+							Tag::th(array("class" => 'date',  "content" => l('impro_discussion_updated_at')));
 						Tag::close('tr');
 					Tag::close('thead');
 

@@ -125,9 +125,20 @@ menu.user li {
 
 
 .block.left,
-.block.right {
+.block.right,
+.block.left_big,
+.block.right_small
+{
 	float:left;
 	width:400px;
+}
+
+.block.left_big {
+	width:640px;
+}
+
+.block.right_small {
+	width:160px;
 }
 
 .block.left {
@@ -175,7 +186,7 @@ menu.user li {
 }
 
 footer {
-	padding-top:20px;
+	padding:20px 0 10px;
 }
 
 footer .page-block {

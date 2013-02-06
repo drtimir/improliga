@@ -1,0 +1,81 @@
+.discussion {
+	position:relative;
+}
+
+.discussion .boards .board {
+	border-top:1px solid #efefef;
+	padding:10px 0;
+	margin-bottom:10px;
+	position:relative;
+}
+
+.discussion .boards li h2 {
+	margin:0 0 10px;
+}
+
+.discussion table {
+	width:100%;
+}
+
+.discussion table th {
+	text-align:left;
+}
+
+.discussion th.last { width:200px }
+.discussion th.date { width:150px }
+
+.discussion .actions {
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+.discussion .actions li {
+
+}
+
+.post_form {
+	margin-bottom:15px;
+}
+
+.post_list form label {
+	display:none;
+}
+.post_list form .inputs li,
+.post_list form .inputs .input-container,
+.post_list form textarea
+{
+	display:block;
+	max-width:100%;
+	width:100%;
+}
+
+.post_list form textarea {
+	height:64px;
+}
+
+.post {
+	margin:0 0 15px;
+}
+
+
+.post .avatar,
+.post .author,
+.post .text
+{
+	float:left
+}
+
+.post .avatar { margin-right:15px; }
+.post .author { margin-bottom:3px }
+.post .text {
+	width:585px;
+	margin-bottom:3px;
+}
+
+.post .footer {
+	clear:both;
+	margin-left:55px;
+	font-size:11px;
+	color:#999;
+}

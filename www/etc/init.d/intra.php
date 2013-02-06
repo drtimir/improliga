@@ -23,6 +23,14 @@ if (!$page->is_readable()) {
 	System\Status::recoverable_error(403);
 }
 
+
+function intra_path()
+{
+	$p = explode('/', \System\Input::get('path'));
+	unset($p[1]);
+	return implode('/', $p);
+}
+
 user()->members = get_all('\Impro\Team\Member')->where(array("id_system_user" => user()->id))->fetch();
 $teams = array();
 

@@ -1,3 +1,202 @@
+commit 8b538c06c35aa8840092ca0afba808cd416c160d
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 18:27:36 2013 +0100
+
+    Attr model - coding style
+
+commit 0fd0d30a20c566180ed65c58e910160a02577aaf
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 18:22:17 2013 +0100
+
+    GPS
+    
+    * Fixed data handling for GPS
+
+commit e27abd1a1ef8815dbc15f276925b1bf9381a21e1
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 18:16:09 2013 +0100
+
+    Attr model gps
+    
+    * Fixed gps data handling
+
+commit 61de6515bf474baaa5f4be08c82bae3f616aa3a5
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 18:11:22 2013 +0100
+
+    Database, gps classes
+    
+    * Added num2db method to Database
+    * Added locales aware floatval to GPS
+
+commit 4d0db7148d482633412517f85f74c542ae491236
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 18:06:42 2013 +0100
+
+    Database script
+    
+    * DB script now respects point column values
+
+commit d0bdc605ccbf5fb597d725962f8f8048a5c34f17
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 17:56:48 2013 +0100
+
+    Google maps integration
+    
+    * Added google maps into GPS input
+
+commit 23a497042af4183c3070e1955711acfe2af60451
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 17:36:59 2013 +0100
+
+    Geospatial points
+    
+    * Added support for GPS to attr model
+    * Added support for GPS to database model
+    * Added GPS input to forms
+
+commit 7e21760d7cb358c0879fd25e8b701857f2502a2a
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 4 11:23:23 2013 +0100
+
+    Aliases
+    
+    * Added label_for. Creates text label with icon
+
+commit a902f65b7f4fec9c95676250a9c509105ce0bee0
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Feb 1 18:37:10 2013 +0100
+
+    Module locals fix
+
+commit 392b94a87bc80b05346056b2407a0f300c8e9816
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Feb 1 18:35:19 2013 +0100
+
+    Module locals
+    
+    * Added default locals to module
+    * Modules are now provided by default per_page and page attrs
+
+commit 00fb53c800445307940323a41afb4c024b9e10ab
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Feb 1 18:17:14 2013 +0100
+
+    Query class
+    
+    * Fixed pagination
+
+commit 0d665ca743b39e64265d203a50284df2b5ca40f4
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Feb 1 17:54:16 2013 +0100
+
+    Fix dir into repository
+
+commit 0f3be059270c05fb101ce99ababf038cd0f1596e
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:13:21 2013 +0100
+
+    Forms: Location picker
+    
+    * Added location picker BASE
+
+commit 49196d0feda4f204e78d6fbccaaee013ae295713
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:10:05 2013 +0100
+
+    Forms: Location input
+    
+    * Added location input type
+
+commit bf16554acb6d1b95d820cda7a6af9be274c57ba5
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:09:19 2013 +0100
+
+    Database structure
+    
+    * Added email and url attr types
+
+commit 7db662c335ea94c81bf93b7bfd477805bd942db7
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:08:48 2013 +0100
+
+    Location class
+    
+    * Added location class that represents location on world
+
+commit d0a09ee8e2e95270d9599aefb8bbaa83d5ef9e44
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:01:03 2013 +0100
+
+    System bug display
+    
+    * Bug report falls back to HTML format if current is not available
+
+commit c09dd1408a33d87ecdcfeb2db9311b3410e23711
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 01:00:26 2013 +0100
+
+    Query class
+    
+    * Fixed bug where query accepts empty conditions
+
+commit 4da24e4e0c2100a930b72006d491c81e453c6ccb
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 00:59:42 2013 +0100
+
+    Forms: Search tool
+    
+    * Fixed search tool empty attributes
+    * Search tool displays all available attributes if display attr is empty
+
+commit 9217dc12acc9a17ef8bbbc5adcc0438bbc6e6569
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Jan 30 00:58:08 2013 +0100
+
+    Forms: datetime picker
+    
+    * Datetime picker scan is not limited by body as container
+
+commit 6eaeb0efb0f677ec22581931fb2e965b614f07e6
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jan 29 23:30:39 2013 +0100
+
+    Script fetching
+    
+    * Fixed log function name
+
+commit 089d8ff261c82896292185534452a268554c1252
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jan 29 23:30:06 2013 +0100
+
+    Forms: search tool
+    
+    * Omit adding placeholder to search tool if attr is null
+
+commit 254c0936522ea1b0cbe1cfb5bc237f92a89545bb
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Jan 22 23:01:58 2013 +0100
+
+    Image class
+    
+    * Fixed update_attrs method
+
+commit f863f3f73949cf543c679e9b4389c2bb1dec1da5
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Jan 17 21:28:20 2013 +0100
+
+    Forms
+    
+    * Added empty option to selects if not required
+
+commit 822daacba05e87d1c2ecf4c121487b01e5307974
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Jan 17 15:30:41 2013 +0100
+
+    Forms
+    
+    * Fixed checking checkboxes from default data
+
 commit 7a76b88fe65566a7b552477d807322a19c6c949d
 Author: just-paja <just.paja@gmail.com>
 Date:   Sat Jan 12 19:44:30 2013 +0100

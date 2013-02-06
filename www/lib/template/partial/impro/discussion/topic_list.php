@@ -2,19 +2,35 @@
 
 Tag::div(array("class" => 'discussion'));
 
-echo section_heading($board->name);
-echo heading($heading);
-echo link_for(l('impro_discussion_create_topic'), soprintf($link_topic_create, $board));
+	echo section_heading(link_for($board->name, soprintf($link_board, $board)));
+	echo heading($heading);
+	echo link_for(l('impro_discussion_create_topic'), soprintf($link_topic_create, $board));
 
-Tag::ul(array("class" => 'topics'));
+	Tag::div(array("class" => 'topics'));
+		if (any($topics)) {
+			Tag::table(array("class" => 'topic_table'));
+			Tag::thead();
+				Tag::tr();
+					Tag::th(array("content" => l('impro_discussion_topic')));
+					Tag::th(array("content" => l('impro_discussion_last_author')));
+					Tag::th(array("content" => l('impro_discussion_updated_at')));
+				Tag::close('tr');
+			Tag::close('thead');
 
-	foreach ($topics as $topic) {
-		Tag::li(array("class" => 'plain'));
+			Tag::tbody();
 
-		echo link_for($topic->name, soprintf($link_topic, $topic));
+				foreach ($topics as $topic) {
+					Tag::tr();
+						Tag::td(array("content" => link_for($topic->name, soprintf($link_topic, $topic))));
+						Tag::td(array("content" => $topic->last_post_author ? $topic->last_post_author->get_name():'-'));
+						Tag::td(array("content" => $topic->updated_at));
 
-		Tag::close('li');
-	}
+					Tag::close('tr');
+				}
 
-Tag::close('ul');
+			Tag::close('tbody');
+			Tag::close('table');
+		} else Tag::p(array("content" => l('impro_discussion_no_topics')));
+
+	Tag::close('div');
 Tag::close('div');

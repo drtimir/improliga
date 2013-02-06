@@ -72,9 +72,11 @@
 				"edit":{"#":{
 
 				}},
+
 				"delete":{"#":{
 
 				}},
+
 				"create_topic":{"#":{
 					"title":"Vytvoření tématu",
 					"modules":[
@@ -91,6 +93,13 @@
 						"title":"Upravit téma",
 						"modules":[
 							["impro/discussion/topic_edit", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
+						]
+					}},
+
+					"create_post":{"#":{
+						"title":"Vytvoření příspěvku",
+						"modules":[
+							["impro/discussion/post_edit", {"new":true, "id_board":"#{0}", "id_topic":"#{1}", "slot":"left"}]
 						]
 					}}
 				}

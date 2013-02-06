@@ -9,9 +9,11 @@ def($link_topic, '/discussion/{id_board}/{id_impro_discussion_topic}/');
 def($link_topic_create, '/discussion/{id_impro_discussion_board}/create_topic/');
 
 if ($board = find('\Impro\Discussion\Board', $id_board)) {
+
+	System\Output::set_title($board->name);
 	$topic_sql = $board->topics->where($conds);
 	$count  = $topic_sql->count();
-	$topics = $topic_sql->paginate($per_page, 0)->fetch();
+	$topics = $topic_sql->sort_by('created_at DESC')->paginate($per_page, 0)->fetch();
 
 	$this->template($template, array(
 		"count"   => $count,

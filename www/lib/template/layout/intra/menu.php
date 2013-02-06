@@ -15,6 +15,7 @@ Tag::div(array("class" => 'menu_left'));
 	Tag::menu(array("class" => array('plain', 'main')));
 		Tag::li(array("content" => label_for('godmode/locations/home', 16, l('intra_wall'), '/')));
 		Tag::li(array("content" => label_for('impro/objects/discussion', 16, l('intra_discussion'), '/discussion')));
+		Tag::li(array("content" => label_for('impro/actions/download', 16, l('intra_file_share'), '/files')));
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));

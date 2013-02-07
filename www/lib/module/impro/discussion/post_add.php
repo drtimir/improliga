@@ -2,7 +2,7 @@
 
 def($id_topic);
 def($id_board);
-def($heading, l('impro_discussion_topic_create'));
+def($heading, l('impro_discussion_post_create'));
 def($redirect, '/discussion/{id_board}/{id_topic}/');
 
 def($board);
@@ -19,7 +19,6 @@ if ($item = new Impro\Discussion\Post()) {
 
 	$f = new System\Form(array(
 		"default" => $item->get_data(),
-		"heading" => $heading,
 		"action"  => intra_path(),
 	));
 

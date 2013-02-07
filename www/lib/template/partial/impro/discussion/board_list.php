@@ -5,7 +5,7 @@ Tag::div(array("class" => 'discussion'));
 echo section_heading($heading);
 
 Tag::ul(array("class" => 'actions plain'));
-	Tag::li(array("content" => icon_for('godmode/actions/create', 16, '/discussion/create_board/', l('impro_discussion_board_create'))));
+	Tag::li(array("content" => icon_for('godmode/actions/create', 16, $link_board_create, l('impro_discussion_board_create'))));
 Tag::close('ul');
 
 
@@ -38,7 +38,7 @@ Tag::ul(array("class" => array('boards', 'plain')));
 						foreach ($latest as $topic) {
 							Tag::tr();
 								Tag::td(array("content" => link_for($topic->name, soprintf($link_topic, $topic))));
-								Tag::td(array("content" => $topic->last_post_author ? $topic->last_post_author->get_name():'-'));
+								Tag::td(array("content" => $topic->last_post_author ? Impro\User::link($topic->last_post_author):'-'));
 								Tag::td(array("content" => $topic->updated_at));
 
 							Tag::close('tr');
@@ -46,7 +46,7 @@ Tag::ul(array("class" => array('boards', 'plain')));
 
 					Tag::close('tbody');
 					Tag::close('table');
-				} else Tag::p(array("content" => l('impro_discussion_no_topics')));
+				} else Tag::p(array("class" => 'info', "content" => l('impro_discussion_no_topics')));
 
 			Tag::close('div');
 		Tag::close('li');

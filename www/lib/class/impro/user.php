@@ -28,7 +28,7 @@ namespace Impro
 
 		public static function link(\System\User $user)
 		{
-			return link_for($user->get_name(), '/profile/'.$user->id);
+			return link_for($user->get_name(), '/profile/'.$user->id.'/');
 		}
 	}
 }

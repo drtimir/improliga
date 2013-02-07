@@ -49,6 +49,21 @@
 			}
 		},
 
+		"profile":{
+			"#":{
+				"title":"Můj profil",
+				"modules":[
+					["impro/user/profile", {"self":true, "slot":"left"}]
+				]
+			},
+			"*":{
+				"#":{
+					"modules":[
+						["impro/user/profile", {"id":"#{0}", "slot":"left"}]
+					]
+				}
+			}
+		},
 
 		"discussion":{"#":{
 			"title":"Diskuze",

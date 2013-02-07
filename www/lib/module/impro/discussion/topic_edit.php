@@ -11,6 +11,10 @@ if (($id_board && ($board = find('\Impro\Discussion\Board', $id_board)) && (($id
 
 	$item->id_board = $id_board;
 
+	if ($new) {
+		$item->visible = true;
+	}
+
 	$f = new System\Form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,

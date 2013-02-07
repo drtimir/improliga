@@ -30,28 +30,87 @@
 	top:10px;
 }
 
+.discussion .info {
+	margin-bottom:0;
+}
+
 .discussion .actions li {
 
 }
 
+.topic_list h1,
+.post_list h1
+{
+	margin-bottom:0;
+}
+
+.topic_list h2,
+.post_list h2
+{
+	margin:0 0 10px;
+	font-size:14px;
+}
+
+.post_form .inputs li.form-textarea {
+	padding:5px;
+	margin:0;
+	background:#fff;
+}
+
 .post_form {
+	background:#efefef;
 	margin-bottom:15px;
+	border:1px solid #ccc;
+}
+
+.post_form form,
+.post_form fieldset,
+.post_form ul.inputs
+{
+	padding:0;
+	margin:0;
+}
+
+.topic_list .desc,
+.post_list .desc
+{
+	margin:10px 0 15px;
+	line-height:18px;
+}
+
+.topic_list .desc {
+	padding-bottom:10px;
+	border-bottom:1px solid #efefef;
 }
 
 .post_list form label {
 	display:none;
 }
-.post_list form .inputs li,
-.post_list form .inputs .input-container,
-.post_list form textarea
+
+.post_list form .inputs .input-container
 {
-	display:block;
-	max-width:100%;
 	width:100%;
 }
 
+.post_list .form_button,
+.post_list .input-container
+{
+	display:block;
+	text-align:right;
+}
+
+.post_list .form-button button {
+	display:inline-block;
+	margin-right:5px;
+}
+
 .post_list form textarea {
+	max-width:100%;
+	width:100%;
+	display:block;
 	height:64px;
+	border:none;
+	padding:0;
 }
 
 .post {
@@ -68,6 +127,7 @@
 
 .post .avatar { margin-right:15px; }
 .post .author { margin-bottom:3px }
+.post .author a { font-weight:bold }
 .post .text {
 	width:585px;
 	margin-bottom:3px;
@@ -78,4 +138,12 @@
 	margin-left:55px;
 	font-size:11px;
 	color:#999;
+}
+
+.post .footer a {
+	color:#999;
+}
+
+.post .footer a:hover {
+	text-decoration:underline;
 }

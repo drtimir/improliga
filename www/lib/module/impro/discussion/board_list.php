@@ -4,6 +4,7 @@ def($conds, array());
 def($template, 'impro/discussion/board_list');
 def($heading, l('impro_discussion_board_list'));
 def($link_board, '/discussion/{id_impro_discussion_board}/');
+def($link_board_create, '/discussion/create_board/');
 def($link_topic, '/discussion/{id_board}/{id_impro_discussion_topic}/');
 def($link_topic_create, '/discussion/{id_impro_discussion_board}/create_topic/');
 
@@ -18,5 +19,6 @@ $this->template($template, array(
 
 	"link_board" => $link_board,
 	"link_topic" => $link_topic,
+	"link_board_create" => $link_board_create,
 	"link_topic_create" => $link_topic_create,
 ));

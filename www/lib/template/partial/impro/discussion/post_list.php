@@ -5,6 +5,11 @@ Tag::div(array("class" => 'discussion post_list'));
 echo section_heading(link_for($topic->name, soprintf($link_topic, $topic)));
 echo heading(link_for($board->name, soprintf($link_board, $topic)));
 
+Tag::div(array(
+	"class" => 'desc',
+	"content" => $topic->desc,
+));
+
 Tag::div(array("class" => 'post_form'));
 	slot('discussion_post_form');
 Tag::close('div');

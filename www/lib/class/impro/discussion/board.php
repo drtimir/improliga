@@ -6,7 +6,7 @@ namespace Impro\Discussion
 	{
 		protected static $attrs = array(
 			"name"    => array('varchar'),
-			"desc"    => array('varchar'),
+			"desc"    => array('text'),
 			"locked"  => array('bool'),
 			"visible" => array('bool'),
 			"public"  => array('bool'),

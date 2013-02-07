@@ -51,23 +51,35 @@
 	"impro_discussion_board_list":"Seznam oborů diskuze",
 	"impro_discussion_board_name":"Název oboru",
 	"impro_discussion_board_desc":"Krátký popis",
-	"impro_discussion_board_create":"Vytvořit nový obor",
+	"impro_discussion_board_create":"Vytvořit obor",
 	"impro_discussion_board_edit":"Upravit obor",
 
 	"impro_discussion_topic_list":"Seznam témat v oboru",
 	"impro_discussion_topic_name":"Téma",
 	"impro_discussion_topic_desc":"Krátký popis tématu",
-	"impro_discussion_topic_create":"Vytvořit nové téma",
+	"impro_discussion_topic_create":"Vytvořit téma",
 	"impro_discussion_topic_edit":"Upravit téma",
 
 	"impro_discussion_topic":"Téma",
 	"impro_discussion_last_author":"Poslední pisálek",
 	"impro_discussion_updated_at":"Poslední příspěvek",
 
-	"impro_discussion_post_create":"Vložit nový příspěvek",
+	"impro_discussion_post_create":"Vložit příspěvek",
 	"impro_discussion_post_text":"Text příspěvku",
 
 	"impro_discussion_no_topics":"V tomto oboru zatím nejsou žádná témata",
+
+	"impro_team_member":"Člen",
+	"impro_team_member_manager":"Organizátor",
+	"impro_team_member_trainer":"Trenér",
+	"impro_team_member_player":"Hráč",
+	"impro_team_member_fan":"Fanoušek",
+
+	"impro_user_settings":"Nastavení profilu",
+	"impro_user_avatar":"Avatar",
+	"impro_user_teams":"Týmy",
+	"impro_user_has_no_teams":"Uživatel není v žádném týmu",
+
 
 	"end":""
 }

@@ -4,7 +4,7 @@ def($redirect, '/settings/');
 $user = user();
 
 $f = new System\Form(array(
-	"heading" => l('user_settings'),
+	"heading" => l('impro_user_settings'),
 	"default" => $user->get_data(),
 	"action"  => $redirect,
 ));
@@ -15,7 +15,7 @@ $f = new System\Form(array(
 	$f->input(array(
 		"type"  => 'image',
 		"name"  => 'avatar',
-		"label" => l('user_avatar'),
+		"label" => l('impro_user_avatar'),
 	));
 
 	$f->submit(l('save'));

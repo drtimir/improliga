@@ -1,4 +1,4 @@
-ccbccf798c929f660ace22b1f66c5b88  lib/include/system.php
+75c8194b1c5c0c456fe28c1d9e4da21b  lib/include/system.php
 d6b6b3abeb24690d3b79e7e3cac8a59a  bin/db
 87cd8e75ed77d785e92b9b8fde202b6f  bin/deploy
 7d8402f2b49eb750295690eeaded9b96  bin/santa
@@ -74,8 +74,9 @@ a231fc66f5a42c1d493d25823225a669  share/pixmaps/pwf/bad_thumb.jpg
 2d0977ad886d4453c4c86874ff8ffe04  share/scripts/essential/01-functions.js
 cfa9051cc0b05eb519f1e16b2a6645d7  share/scripts/essential/02-jquery-1.8.2.js
 eafe93e9f168f8f793b8f017925d334a  share/scripts/essential/20-pwf.js
+62f37112f7281bf401e22527772fb2db  share/scripts/modules/libs/jquery/gmap.js
 ae95e1ad2aa4ceac68f71e23e3fe3cfc  share/scripts/modules/pwf/form/datetime_picker.js
-cd12b988a9264fe0fe4e4a3f5895547d  share/scripts/modules/pwf/form/gps.js
+47968871ea6342eb573a3b5c103e9d6c  share/scripts/modules/pwf/form/gps.js
 f408e72d65e12368ab892853a3935104  share/scripts/modules/pwf/form/jquery.gmap.js
 33a7edf8c29c95c677d2a9295aef9a32  share/scripts/modules/pwf/form/location_picker.js
 a79f17f4cec5ab07acc3810247f50c8d  share/scripts/modules/pwf/form/search_tool.js

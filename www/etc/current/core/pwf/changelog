@@ -1,3 +1,21 @@
+commit 8d7c393d624fd1ae7a29d9293f961a723ed6674a
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:24:19 2013 +0100
+
+    Forms
+    
+    * Fixed location GPS value
+
+commit 5b0ca704ca30e21c105750fef25e7c61ea5ac0da
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:12:52 2013 +0100
+
+    Forms, gps
+    
+    * Integrated GPS input into Location inputs
+    * Gmaps update according to inputs
+    * Inputs update according to google map
+
 commit 8b538c06c35aa8840092ca0afba808cd416c160d
 Author: just-paja <pavel@proboston.net>
 Date:   Mon Feb 4 18:27:36 2013 +0100

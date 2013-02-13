@@ -10,14 +10,25 @@
 
 	"form_location_input_action":"Operace s místem",
 	"form_location_input_none":"Žádné místo",
-	"form_location_input_keep":"Ponechat stávající",
+	"form_location_input_edit":"Upravit stávající",
 	"form_location_input_new":"Zadat nové",
 	"form_location_input_existing":"Použít existující",
 	"form_location_input_name":"Název",
 	"form_location_input_addr":"Adresa",
 	"form_location_input_site":"Web",
-	"form_location_input_lon":"Zeměpisná délka",
-	"form_location_input_lat":"Zeměpisná šířka",
+	"form_gps_input_lon":"Zeměpisná délka",
+	"form_gps_input_lat":"Zeměpisná šířka",
+	"form_location_input_gps":"Poloha",
+
+	"core_page_not_found":"Stránka nenalezena",
+	"core_page_not_found_text":"Omlouváme se, ale požadovaná stránka na tomto serveru nebyla nalezena. Pravděpodobně byla zrušena nebo jste špatně zadali její adresu.",
+	"core_access_denied":"Přístup zamítnut",
+	"core_access_denied_text":"Na tuto stránku nemáte oprávnění přistupovat. Zkontrolujte prosím, že vaše IP adresa není blokována například tím, že navštívíte homepage",
+
+	"core_bug_report_heading":"Vyskytla se chyba během zpracování vašeho požadavku",
+	"core_bug_report_sorry":"Děláme všechno pro její odstranění.",
+	"core_bug_report_trace":"Traceback",
+	"core_bug_report_reason":"Odůvodnění",
 
 	"end":""
 }

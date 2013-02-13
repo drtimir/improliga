@@ -1,21 +1,20 @@
 {
 	"#":{
 		"title":"God Mode",
-		"template":["godmode/base"],
+		"template":["pwf/godmode/base"],
 		"modules":[
-			["core/setup/index"]
 		]
 	},
 
 	"login":{"#":{
-		"template":["godmode/login"],
+		"template":["pwf/godmode/login"],
 		"modules":[
 			["godmode/login"]
 		]
 	}},
 
 	"logout":{"#":{
-		"template":["godmode/logout"],
+		"template":["pwf/godmode/logout"],
 		"modules":[
 			["godmode/logout"]
 		]

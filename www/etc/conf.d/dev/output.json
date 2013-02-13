@@ -7,5 +7,6 @@
 		"txt":"text/plain"
 	},
 	"format_default":"html",
-	"meta_tags":["description", "keywords", "author", "copyright", "robots"]
+	"meta_tags":["description", "keywords", "author", "copyright", "robots"],
+	"errors":{}
 }

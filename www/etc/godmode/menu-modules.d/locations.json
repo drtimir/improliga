@@ -1,0 +1,17 @@
+{
+	"menu":[
+		["godmode_location_list", "./", "actions/list"],
+		["godmode_location_create", "./create/", "actions/create"]
+	],
+
+	"create":[],
+
+	"*":{
+		"menu":[
+			null,
+			["godmode_detail", "./", "actions/detail"],
+			["godmode_location_edit", "./edit/", "actions/edit"],
+			["godmode_delete", "./delete/", "actions/delete"]
+		]
+	}
+}

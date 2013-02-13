@@ -21,10 +21,14 @@
 
 	"godmode_name":"Název",
 	"godmode_text":"Text",
+	"godmode_address":"Adresa",
+	"godmode_site":"URL",
 	"godmode_created_at":"Vytvořeno",
 	"godmode_updated_at":"Aktualizováno",
 	"godmode_nick":"Přezdívka",
 	"godmode_email":"E-mail",
+	"godmode_shortcuts_on":"On",
+	"godmode_shortcuts_off":"Off",
 
 	"godmode_users":"Uživatelé",
 	"godmode_user_count":"Počet uživatelů",
@@ -47,11 +51,18 @@
 
 	"godmode_user_perms_list":"Seznam modulů",
 	"godmode_user_perms_for_module":"Seznam oprávnění pro modul",
+	"godmode_simple_objects":"Různé",
 
 	"godmode_static_texts":"Statické texty",
 	"godmode_static_text_list":"Seznam statických textů",
 	"godmode_static_text_create":"Vytvořit statický text",
 	"godmode_static_text_edit":"Upravit statický text",
 	"godmode_static_text_delete":"Smazat statický text",
+
+	"godmode_locations":"Umístění",
+	"godmode_location_create":"Vytvořit umístění",
+	"godmode_location_edit":"Upravit umístění",
+	"godmode_location_delete":"Smazat umístění",
+	"godmode_location_gps":"Umístění",
 	"end":""
 }

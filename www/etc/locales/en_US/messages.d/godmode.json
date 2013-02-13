@@ -1,0 +1,59 @@
+{
+	"godmode_login_name":"Login name",
+	"godmode_password":"Password",
+	"godmode_browser_supported":"Supported browser",
+	"godmode_browser_not_supported":"Browser is not supported",
+
+	"godmode_menu":"Main menu",
+	"godmode_window_refresh":"Refresh",
+	"godmode_logout":"Log out",
+	"godmode_homepage":"Homepage",
+
+	"godmode_edit":"Edit",
+	"godmode_delete":"Delete",
+	"godmode_create":"Create",
+	"godmode_save":"Save",
+	"godmode_detail":"Detail",
+	"godmode_visible":"Visible",
+	"godmode_whole_public":"Public",
+
+	"godmode_save_success":"Saved successfuly",
+
+	"godmode_name":"Name",
+	"godmode_text":"Text",
+	"godmode_created_at":"Created at",
+	"godmode_updated_at":"Updated at",
+	"godmode_nick":"Nick",
+	"godmode_email":"E-mail",
+	"godmode_shortcuts_on":"On",
+	"godmode_shortcuts_off":"Off",
+
+	"godmode_users":"Users",
+	"godmode_user_count":"User count",
+	"godmode_user_list":"User list",
+	"godmode_user_create":"Create user",
+	"godmode_user_edit":"Edit user",
+	"godmode_user_edit_contacts":"Edit contacts",
+	"godmode_user_perms":"Permissions",
+	"godmode_user_groups":"User groups",
+	"godmode_user_login":"Login name",
+	"godmode_user_name":Name",
+	"godmode_user_first_name":"First name",
+	"godmode_user_last_name":"Last name",
+	"godmode_last_login":"Last login",
+
+	"godmode_user_group_list":"User group list",
+	"godmode_user_group_create":"Create group",
+	"godmode_user_group_edit":"Edit group",
+	"godmode_user_group_delete":"Delete group",
+
+	"godmode_user_perms_list":"Module list",
+	"godmode_user_perms_for_module":"Permissions for module",
+
+	"godmode_static_texts":"Static texts",
+	"godmode_static_text_list":"Static text list",
+	"godmode_static_text_create":"Create static text",
+	"godmode_static_text_edit":"Edit static text",
+	"godmode_static_text_delete":"Delete static text",
+	"end":""
+}

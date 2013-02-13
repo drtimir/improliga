@@ -32,7 +32,7 @@ namespace Santa
 			$this->extracted = is_dir($dir_tmp) && file_exists($dir_tmp.'/meta/checksum');
 
 			if ($this->installed = $this->is_installed()) {
-				$cfg = explode("\n", file_get_contents($this->get_meta_dir().'/version', true));
+				$cfg = explode("\n", \System\File::read($this->get_meta_dir().'/version'));
 
 				$this->update_attrs(array(
 					'version' => $cfg[2],
@@ -57,7 +57,7 @@ namespace Santa
 			if (is_dir($path) && file_exists($path.'/version')) {
 				$category_tmp = explode('/', $path);
 				array_pop($category_tmp);
-				$cfg = explode("\n", file_get_contents($path.'/version', true));
+				$cfg = explode("\n", \System\File::read($path.'/version'));
 				$pkg = new self(array(
 					'category'   => array_pop($category_tmp),
 					'name_short' => $cfg[0],
@@ -68,7 +68,7 @@ namespace Santa
 				));
 
 				return $pkg;
-			} else throw new \MissingFileException(sprintf(l('Cannot load package metadata from directory "%s"'), $path));
+			} else throw new \System\Error\File(sprintf(l('Cannot load package metadata from directory "%s"'), $path));
 		}
 
 
@@ -151,7 +151,7 @@ namespace Santa
 		{
 			if (empty(self::$tree) || $force) {
 				if (!$force && file_exists($tp = ROOT.'/'.self::DIR_TMP_TREE.'/tree.json') && filectime($tp) > self::CACHE_MAX) {
-					self::$tree = json_decode(file_get_contents($tp), true);
+					self::$tree = \System\Json::read($tp);
 					if (empty(self::$tree)) {
 						unlink($tp);
 						self::load_tree();
@@ -162,8 +162,8 @@ namespace Santa
 						$tmp = json_decode($data->content, true);
 						self::$tree = $tmp['tree'];
 						self::check_tree_dir();
-						file_put_contents(ROOT.self::DIR_TMP_TREE.'/tree.json', json_encode(self::$tree));
-					} else throw new \InternalException(l('Fetching recent tree data failed'), sprintf(l('HTTP error %s '), $data->status));
+						\System\File::put(ROOT.self::DIR_TMP_TREE.'/tree.json', json_encode(self::$tree));
+					} else throw new \System\Error\Connection(l('Fetching recent tree data failed'), sprintf(l('HTTP error %s '), $data->status));
 				}
 			}
 		}
@@ -307,7 +307,7 @@ namespace Santa
 					$temp = array_filter(explode('  ', str_replace("\n", null, trim($row))));
 					list($sum, $file) = $temp;
 					$file = str_replace('./', null, $file);
-					if ($file != 'changelog' && $sum != md5(file_get_contents($dir.'/'.$file))) {
+					if ($file != 'changelog' && $sum != md5(\System\File::read($dir.'/'.$file))) {
 						$bad[] = $file;
 					}
 				}
@@ -326,8 +326,8 @@ namespace Santa
 				$data = \System\Offcom\Request::get($url);
 
 				if ($data->ok()) {
-					$this->downloaded = \System\File::save_content($this->get_file_path(), $data->content);
-				} else throw new \InternalException(l('Fetching package'), sprintf(l('HTTP error %s '), $data->status));
+					$this->downloaded = \System\File::put($this->get_file_path(), $data->content);
+				} else throw new \System\Error\Connection(l('Fetching package'), sprintf(l('HTTP error %s '), $data->status));
 			}
 
 			return $this->downloaded;

@@ -72,7 +72,11 @@
 }
 
 #panel_top span.shortcuts.active { color:#0f0; }
-
+#panel_top span.shortcuts {
+	background:url(/share/icons/16/godmode/items/kbd) 16px center no-repeat;
+	padding-left:36px;
+	cursor:pointer;
+}
 
 
 .panel.app-drawer{

@@ -18,20 +18,11 @@ if (!($page instanceof System\Page)) {
 }
 
 foreach ($page->template as $t) {
-	if ($t == 'godmode/window') {
+	if ($t == 'pwf/godmode/window') {
 		System\Flow::add('godmode/window/menu', array("slot" => 'menu'));
+		break;
 	}
 }
-
-
-System\Flow::add('core/menu/show', array(
-	"menu-path"  => str_replace('god/', NULL, \System\Input::get('path')),
-	"related"    => true,
-	"class"      => 'admin-left-menu',
-	"icon_size"  => 24,
-	"type"       => 'admin-menu',
-	"slot"       => 'left',
-));
 
 
 System\Output::set_title(System\Output::introduce(), l('GodMode'));

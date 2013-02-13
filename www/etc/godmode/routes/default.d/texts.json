@@ -1,7 +1,7 @@
 {
 	"#":{
 		"title":"godmode_static_texts",
-		"template":["godmode/window"],
+		"template":["pwf/godmode/window"],
 		"modules":[
 			["godmode/text/list"]
 		]

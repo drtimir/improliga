@@ -10,10 +10,13 @@ if (System\User::logged_in()) {
 
 } else {
 
+	content_for('styles', 'pwf/base');
+
 	$f = new System\Form(array(
 		"heading" => $heading,
 		"action"  => '/login/',
 	));
+
 	$f->input_text('login', l("godmode_login_name"), true);
 	$f->input_password('password', l("godmode_password"), true);
 	$f->submit(l('login'));

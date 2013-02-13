@@ -21,8 +21,19 @@
 		]
 	},
 	{
-		"name":"godmode_static_texts",
-		"icon":"items/text",
-		"url":"/god/texts/"
+		"name":"godmode_simple_objects",
+		"icon":"items/other",
+		"items":[
+			{
+				"name":"godmode_static_texts",
+				"icon":"items/text",
+				"url":"/god/texts/"
+			},
+			{
+				"name":"godmode_locations",
+				"icon":"items/location",
+				"url":"/god/locations/"
+			}
+		]
 	}
 ]

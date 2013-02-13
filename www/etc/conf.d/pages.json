@@ -14,6 +14,7 @@
 		},
 
 		"login":{"#":{
+			"title":"Přihlášení",
 			"template":["godmode/login"],
 			"modules":[["intra/user/login"]]
 		}},

@@ -1,3 +1,385 @@
+commit 93e44cd432abd7858a6c8825e72cf6f2da3360db
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 13 14:05:59 2013 +0100
+
+    Gps, Location
+    
+    * Added Google map functions for objects
+
+commit 450ee68774b8bdcbabf4a6da3d74df565705c97e
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 13 13:04:16 2013 +0100
+
+    Forms
+    
+    * Fixed form HTML class handling
+
+commit b31cd57e5bdabe32b2a6427303bbb44959027398
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 13 12:45:01 2013 +0100
+
+    Messages fix
+    
+    * Fixed message partial name
+
+commit f01c563d954db3dde1e7f73273a8eec2f4da2554
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 13 12:41:45 2013 +0100
+
+    Error reporting
+    
+    * Fixed template partial error
+
+commit 71e9e0f9c7051ce29260230a909180c9d4f34085
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 13 11:26:17 2013 +0100
+
+    Error reporting mark 2
+    
+    * Recreated error backtrace
+    * Added error reporting as partial
+
+commit 1da82c1f8f04cc31d7d7d327c66fee804fe79bd3
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Feb 12 21:40:35 2013 +0100
+
+    Code cleanup
+
+commit c4f3e9e1098d909d6ae58ce0141f52d095c43c82
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 18:16:36 2013 +0100
+
+    Error reporting mark II
+
+commit bf781f16f7a235cf3426dd096fe28badfe6342a4
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 17:22:41 2013 +0100
+
+    Error reporting
+    
+    * Added custom error handling by name
+    * Merged styles for installer and error pages
+
+commit 07b524e1c6420221ed588f306345cbd8bbcc0b72
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 16:39:57 2013 +0100
+
+    Autoloader
+    
+    * Eyecandied to autoloader
+
+commit 0de375ff4e438d964221546c1342702951380ba9
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 15:54:04 2013 +0100
+
+    File writing
+    
+    * Fixed exceptions
+
+commit 572279be6770e4cfc7ff1ac9e6234ee8358c638a
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 15:43:24 2013 +0100
+
+    Styles minifier
+    
+    * Fixed selector spacing
+
+commit 0b1acfe099e31705cfabf55dd4609ef1284d5ff8
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 11:27:28 2013 +0100
+
+    Styles minifier
+    
+    * Removed whitespace and comments in regexps
+
+commit 570d5f3748cb068694019a535e84d4ebce71a317
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 11:11:05 2013 +0100
+
+    File class
+    
+    * Added unnecessary error prevention
+    * Chmod proceeds only if file is new or requested on file write
+
+commit 348da996715594b26dfcf5bfe32f4ae89499e451
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 11:08:16 2013 +0100
+
+    System router,setup classes
+    
+    * Setup does not execute shell to update rewrite
+    * Mod rewrite code moved to router class
+
+commit 63b534bd1bd0fd5bf400be1c8804a3ef4afcd548
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 11:03:49 2013 +0100
+
+    Settings class
+    
+    * Reading pages file made silent
+
+commit b045e0ee1e4cab8e4c2191125586aff721988bdb
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 11:00:19 2013 +0100
+
+    Working directories
+    
+    * Added working directories
+
+commit 70c940e34ccaad5411e34d3df1a35737fb9b5b2e
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 10:56:50 2013 +0100
+
+    Error handling
+    
+    * Catch log write errors and don't report them back
+    * Send 500 HTTP status
+
+commit 4ec424c9073a9a5b3ab4e8e01e67487ceed56fe6
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 10:52:01 2013 +0100
+
+    Status reporting
+    
+    * Removed unsused log functions
+    * Settings class now logs reloading and saving config
+
+commit 71ce98a434429d17fc5b60376a4fcecf0f815d62
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 10:35:47 2013 +0100
+
+    File reading
+    
+    * Migrated all file read inputs to internal errors
+    * Added caching ability to resource class
+
+commit 11a578fb0ca96a8c19016e57c89ff4546af470de
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 09:32:38 2013 +0100
+
+    Output class
+    
+    * Title skips empty parts
+
+commit 480e361bdef9c51cfc1c8dcba1eb14c975bb68f8
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 09:32:28 2013 +0100
+
+    Deploy
+    
+    * Added comments
+
+commit 09507f0ce7b400656d89f7e1a4c16b5ff07cb05a
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 12 09:20:42 2013 +0100
+
+    Tag class
+    
+    * Moved tag class under system template
+
+commit 4d799baaca9835e378d1af80ad61d124fe48a926
+Merge: 5d78bbc 2c8f67d
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Feb 12 00:34:33 2013 +0100
+
+    Merge branch 'dev'
+
+commit 2c8f67d9f62e9ebad62822190e180ff48aa6c0e6
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Feb 12 00:29:41 2013 +0100
+
+    Location input
+    
+    * Fixed GPS float val inputs, respecting locales
+    * Replaced option 'keep' by 'edit'
+
+commit 10bdb72503a5ca4075210a258d08e9f0a7c0d05c
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Feb 12 00:00:09 2013 +0100
+
+    Forms, gps input
+    
+    * Switched position of url and position
+
+commit 5d78bbc3d046156258c051390bce702af3c00683
+Merge: 10a2310 f8cd16b
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 23:35:03 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
+
+commit 10a2310ec98353639ecc4df96e94db7eaa9efda5
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 23:34:23 2013 +0100
+
+    Messages
+    
+    * Fixed module for messages
+
+commit f8cd16bd95c1baa7c2ab38779b1f9207ec47a7a1
+Merge: da0b5e6 2795060
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 23:20:44 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
+
+commit da0b5e668611269cada47bf0fc7ddc67acca102e
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 23:19:41 2013 +0100
+
+    Config cleanup
+    
+    * Fixed default config for deploy
+
+commit 39a77adf2698ee5cc593eabc203a8a7e62939a42
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 23:04:37 2013 +0100
+
+    Code fixes
+
+commit d34e002b239814f0e7da2c160492022392c1a4ee
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 22:59:10 2013 +0100
+
+    Compiler
+    
+    * Compiler respects current git branch
+
+commit 7988e40af4323a445edda858254fe03b0f679fcf
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 22:43:28 2013 +0100
+
+    Compile
+    
+    * Added constants to the system
+
+commit 697e661f0275fc6c9b584569e37a1dd5990629c9
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 22:40:48 2013 +0100
+
+    Error reporting
+    
+    * Prepared for better error reporting
+
+commit 333bd3e5fe92289f9502cf7dcccb30699e5b20e3
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 22:40:11 2013 +0100
+
+    Constants
+    
+    * Separated constants into own file
+
+commit ff1ef18bd9ccd9617963ce52d5b9aed047215f21
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 21:33:05 2013 +0100
+
+    Forms, gps input
+    
+    * Hidden lat,lng fields
+
+commit 546ec9da239f406b90d53b94f0f39d1e1d4c3c5a
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 20:55:26 2013 +0100
+
+    Page class
+    
+    * Removed not functioning format code
+
+commit 37a8a394310cac1893be3a5706674684ae36801c
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 20:55:13 2013 +0100
+
+    Code cleanup
+
+commit 732d0b091c4cffd3fc1e49f8e56edeaa580d1aeb
+Merge: eabfd5c 77031c6
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 11 17:58:02 2013 +0100
+
+    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+
+commit eabfd5cbafdc9ccac4b2373e5caa70ba2e3e907d
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 11 17:54:55 2013 +0100
+
+    Resources
+    
+    * Merged resource fetching
+    * Prepared for serial number
+    * Added js and css minifier
+    * JS Coding style
+
+commit 2795060b9d406f6c528bc2c4c72adcf2b3f51015
+Merge: 32c93dc cb8bd7e
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 00:40:10 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
+
+commit 32c93dc9e305cb46a16d763217eeb6fa81b7e63a
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:35:23 2013 +0100
+
+    Forms, gps
+    
+    * Fixed GPS bugs
+    * Hidden street view controls
+
+commit cb8bd7e2f20cfa1576537e86fc20130ef53457be
+Merge: c70ab06 50384e4
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 00:39:34 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
+
+commit c70ab06d9c22d9a741627b9eb14792732481273b
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:35:23 2013 +0100
+
+    Forms, gps
+    
+    * Fixed GPS bugs
+    * Hidden street view controls
+
+commit 77031c68382e163c4ec8a50d0f360c59f4e24b14
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 00:38:45 2013 +0100
+
+    [fix] PHP 5.3 compatibility
+    
+    * Fixed gps syntax for php 5.3
+
+commit 0b55acd58f5baebb64e0f516b6c7aac0ef9fe4ab
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 11 00:03:06 2013 +0100
+
+    [fix] Database models
+    
+    * Fixed old deprecated method names
+
+commit 849f16d0c672e0ab8f7946e3363247c7b3b82d0b
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:58:46 2013 +0100
+
+    JS functions: is_attached
+
+commit 50384e4ca258ee617afff9beeb9c3ecf926e4eb1
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:35:23 2013 +0100
+
+    Forms, gps
+    
+    * Fixed GPS bugs
+    * Hidden street view controls
+
+commit 14c25b09f9b149326df54c45fb7f71a1abacf8ab
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Feb 8 17:51:52 2013 +0100
+
+    Forms, datetime
+    
+    * Fixed datetime picker rebinding
+
 commit 8d7c393d624fd1ae7a29d9293f961a723ed6674a
 Author: just-paja <pavel@proboston.net>
 Date:   Fri Feb 8 17:24:19 2013 +0100

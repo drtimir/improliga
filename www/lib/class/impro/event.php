@@ -12,8 +12,9 @@ namespace Impro
 			"desc_full"     => array('text'),
 			"visible"       => array('bool'),
 			"start"         => array('datetime'),
-			"duration"      => array("int", "is_unsigned" => true, "default" => 0),
-			"all_day"       => array("bool", "default" => false),
+			"duration"      => array('int', "is_unsigned" => true, "default" => 0),
+			"capacity"      => array('int', "default" => 0),
+			"all_day"       => array('bool', "default" => false),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
 		);
@@ -21,7 +22,7 @@ namespace Impro
 
 		protected static $has_many = array(
 			"participants" => array("model" => '\Impro\Event\Participant'),
-			"teams"        => array("model" => '\Impro\Team', "is_bilinear" => true),
+			"reservations" => array("model" => '\Impro\Event\Booking')
 		);
 
 		protected static $belongs_to = array(

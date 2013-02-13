@@ -3,6 +3,7 @@
 	"impro_show":"Improshow",
 	"impro_long_form":"Longformy",
 	"impro_music_form":"Hudební improvizace",
+	"impro_workshop":"Workshop",
 
 	"impro_teams":"Týmy",
 	"impro_team_list":"Seznam týmů",
@@ -84,5 +85,6 @@
 	"impro_user_has_no_teams":"Uživatel není v žádném týmu",
 
 
+	"today":"Dnes",
 	"end":""
 }

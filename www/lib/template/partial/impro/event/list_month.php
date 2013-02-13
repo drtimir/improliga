@@ -6,6 +6,7 @@ Tag::div(array("class" => 'events'));
 	echo section_heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
 
 	$content = array();
+	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
 	foreach ($events as $day=>$list) {
 		if (any($list)) {
@@ -14,7 +15,6 @@ Tag::div(array("class" => 'events'));
 
 			foreach ($list as $event) {
 				$html_event = array();
-
 
 				$html_event[] = Tag::a(array(
 					"class"   => 'image',
@@ -31,9 +31,10 @@ Tag::div(array("class" => 'events'));
 					"class" => 'ts_location',
 					"output"  => false,
 					"content" => array(
+					Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
+						'<br>',
+						$event->get_type_name(),', ',
 						Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name)),
-						',',
-						Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human-time'))),
 					)
 				));
 
@@ -79,14 +80,24 @@ Tag::div(array("class" => 'events'));
 					)
 				));
 
+				$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));
+
 				$html_events[] = Tag::li(array("class" => 'event', "content" => implode('', $html_event), "output" => false));
+			}
+
+			$dutime = mktime(0,0,0, $month, $day, $year);
+
+			if ($today == $dutime) {
+				$day_heading = l('today');
+			} else {
+				$day_heading = format_date(mktime(0,0,0, $month, $day, $year), 'l j. F');
 			}
 
 			$html[] = Tag::a(array(
 				"href"    => '#day_'.$day,
 				"id"      => 'day_'.$day,
 				"class"   => 'day-head',
-				"content" => $day,
+				"content" => $day_heading,
 				"output"  => false,
 			));
 

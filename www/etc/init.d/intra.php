@@ -16,11 +16,11 @@ if (!System\User::logged_in()) {
 
 
 if (!(($page = System\Page::get_current()) instanceof System\Page)) {
-	System\Status::recoverable_error(404);
+	throw new \System\Error\NotFound();
 }
 
 if (!$page->is_readable()) {
-	System\Status::recoverable_error(403);
+	throw new \System\Error\AccessDenied();
 }
 
 

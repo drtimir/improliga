@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'page-block'));
 
-	require ROOT.'/lib/template/layout/intra/menu.php';
+	require ROOT.'/lib/template/intra/menu.php';
 
 	Tag::div(array("class" => array('block', 'left')));
 		slot('left');

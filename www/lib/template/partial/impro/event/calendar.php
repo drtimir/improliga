@@ -64,24 +64,35 @@ Tag::div(array("class" => 'calendar'));
 						}
 
 						Tag::div(array("class" => $dayclass));
-							Tag::div(array("class" => 'day-head', "title" => format_date($date, 'human-full-date')));
-								Tag::span(array("class" => 'date-info', "content" => $dn));
-							Tag::close('div');
+							$tag = $day_link_integrate && any($elist) ? 'a':'div';
 
-							Tag::ul(array("class" => 'days-events'));
-								foreach ($elist as $event) {
-									$eb = false;
+							Tag::$tag(array(
+								"href"  => stprintf($day_link, array("year" => $date->format('Y'), 'month' => $date->format('m'))),
+								"class" => 'day-head',
+								"title" => format_date($date, 'human-full-date'),
+								"content" => Tag::span(array(
+									"class" => 'date-info',
+									"content" => $dn,
+									"output"  => false,
+								))
+							));
 
-									Tag::li(array("class" => 'event'.($eb ? ' book-active':'')));
-										echo $l = link_for($event->title, soprintf($cont_link, $event));
+							if (!$day_link_integrate) {
+								Tag::ul(array("class" => 'days-events'));
+									foreach ($elist as $event) {
+										$eb = false;
 
-										Tag::ul(array("class" => 'event-info'));
-											Tag::li(array("content" => $l));
-											Tag::li(array("content" => l('impro_event_start').': '.format_date($event->start, 'human')));
-										Tag::close('ul');
-									Tag::close('li');
-								}
-							Tag::close('ul');
+										Tag::li(array("class" => 'event'.($eb ? ' book-active':'')));
+											echo $l = link_for($event->title, soprintf($cont_link, $event));
+
+											Tag::ul(array("class" => 'event-info'));
+												Tag::li(array("content" => $l));
+												Tag::li(array("content" => l('impro_event_start').': '.format_date($event->start, 'human')));
+											Tag::close('ul');
+										Tag::close('li');
+									}
+								Tag::close('ul');
+							}
 						Tag::close('div');
 
 						$date->modify("+1 day");

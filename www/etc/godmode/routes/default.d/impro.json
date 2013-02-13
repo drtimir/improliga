@@ -8,8 +8,8 @@
 		"#":{
 			"title":"impro_events",
 			"modules":{
-				"controls":["impro/event/calendar_controls"],
-				"calendar":["impro/event/calendar", {}, ["controls"]]
+				"controls":["impro/event/calendar_controls", {"heading":"Kalendář"}],
+				"calendar":["impro/event/calendar", {"heading":""}, ["controls"]]
 			}
 		},
 

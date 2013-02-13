@@ -8,8 +8,7 @@
 			"title":"Intranet Improligy",
 			"modules":{
 				"news":["impro/news/list", {"slot":"left"}],
-				"cc":["impro/event/calendar_controls", {"slot":"right", "heading":"Kalendář"}],
-				"cl":["impro/event/calendar", {"slot":"right", "heading":""}, ["cc"]]
+				"cl":["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "heading":"Kalendář"}, ["cc"]]
 			}
 		},
 
@@ -124,6 +123,37 @@
 						]
 					}}
 				}
+			}
+		},
+
+
+		"events":{
+			"#":{
+				"title":"intra_events",
+				"template":["intra/layout", "intra/dual_34_14"],
+				"modules":[
+					["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/"}],
+					["impro/event/calendar", {"slot":"right", "day_link_integrate":true}]
+				]
+			},
+
+			"*":{"#":{
+				"title":"intra_event",
+				"template":["intra/layout", "intra/single"],
+				"modules":[
+					["impro/event/detail", {"id":"#{0}"}]
+				]
+			}},
+
+			"list":{"#":{},
+
+				"*":{"#":{
+					"title":"intra_events",
+					"modules":{
+						"cc":["impro/event/calendar_controls", {"slot":"right", "month_input":"#{0}", "heading":"Kalendář"}],
+						"cd":["impro/event/calendar", {"slot":"right", "heading":"", "day_link_integrate":true}, ["cc"]]
+					}
+				}}
 			}
 		},
 

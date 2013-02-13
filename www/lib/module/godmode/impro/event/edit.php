@@ -15,7 +15,14 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		$teams_opts[$team->name] = $team->id;
 	}
 
-	$f = new System\Form(array("default" => $item->get_data(), "heading" => $heading));
+	$data = $item->get_data();
+	$data['location'] = $item->location;
+
+	$f = new System\Form(array(
+		"default" => $data,
+		"heading" => $heading
+	));
+
 	$f->input_text("title", l('godmode_event_name'), true);
 	$f->input(array(
 		"type"    => 'select',
@@ -42,7 +49,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	$f->input_datetime("end", l('impro_event_end'), true);
 
 	$f->input(array(
-		"name"  => 'id_location',
+		"name"  => 'location',
 		"type"  => 'location',
 		"label" => l('impro_event_location'),
 		"required" => true,
@@ -69,6 +76,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	if ($f->passed()) {
 		$p = $f->get_data();
 
+		$item->id_location = $p['location']->save()->id;
 		$item->update_attrs($p)->save();
 		redirect(soprintf($redirect, $item));
 

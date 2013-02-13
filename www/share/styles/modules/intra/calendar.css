@@ -43,6 +43,7 @@
 	background:#FAEA96;
 	color:#555;
 	cursor:default;
+	display:block;
 }
 
 .calendar .today .day-head {

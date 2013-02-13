@@ -6,7 +6,9 @@ Tag::html();
 		content_for('styles', 'intra/layout');
 		content_for('styles', 'intra/calendar');
 		content_for('styles', 'intra/news');
+		content_for('styles', 'intra/events');
 		content_for('styles', 'intra/discussions');
+
 		echo content_from('head');
 	Tag::close('head');
 

@@ -1,9 +1,19 @@
 <?
 
+def($heading);
+def($month_input);
 def($year_start, intval(date("Y"))-2);
 def($year_end,   intval(date("Y"))+1);
 def($icon_size, 24);
 def($url, System\Input::get('path'));
+
+if ($month_input) {
+	list($def_year, $def_month) = array_map('intval', explode('-', $month_input));
+}
+
+def($def_year, intval(date("Y")));
+def($def_month, intval(date("m")));
+def($def_day, intval(date("d")));
 $years = array();
 
 for ($i = $year_start; $i <= $year_end; $i++) {
@@ -11,9 +21,9 @@ for ($i = $year_start; $i <= $year_end; $i++) {
 }
 
 $def = array(
-	"year"  => def($def_year,  intval(date("Y"))),
-	"month" => def($def_month, intval(date("m"))),
-	"day"   => def($def_day,   intval(date("d"))),
+	"year"  => $def_year,
+	"month" => $def_month,
+	"day"   => $def_day,
 );
 
 $months = System\Locales::get('date:months');
@@ -44,11 +54,10 @@ $f->input(array(
 $f->submit(l('show'));
 
 $date = new DateTime();
-if ($f->passed()) {
+if ($f->passed() || $month_input) {
 
 	$p = $f->get_data();
 
-	$propagate['day'] = def($p['day']);
 	$propagate['month'] = def($p['month']);
 	$propagate['year'] = def($p['year']);
 

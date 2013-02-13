@@ -1,0 +1,73 @@
+.event_list .day {
+	border-top:1px solid #ccc;
+}
+
+.event_list .day-head {
+	padding:5px 10px;
+	background:#efefef;
+	display:block;
+	margin-bottom:10px;
+}
+
+.event_list .event .image {
+	display:block;
+	width:100px;
+	float:left;
+	opacity:.75;
+}
+
+.event_list .event .image:hover {
+	opacity:1;
+}
+
+.event_list .desc {
+	float:left;
+	width:420px;
+	padding:0 10px 0 20px;
+}
+
+.event_list .desc .ts_location {
+	margin:0 0 5px;
+}
+
+.event_list .desc .name {
+	display:block;
+	font-weight:bold;
+	font-size:16px;
+	margin:0 0 5px;
+}
+
+.event_detail .text {
+	margin:10px 0;
+	line-height:18px;
+}
+
+.event_detail .text.short {
+	padding:15px;
+	background:#efefef;
+	margin-bottom:15px;
+	color:#000;
+}
+
+.event_detail {
+	padding-left:5px;
+}
+
+.event_detail .left {
+	width:500px;
+	float:left;
+}
+
+.event_detail .right {
+	width:270px;
+	float:right;
+	border-left:1px solid #efefef;
+	top:-10px;
+	position:relative;
+	padding:10px 0;
+}
+
+.event_detail .right .image {
+	display:block;
+	margin-bottom:15px;
+}

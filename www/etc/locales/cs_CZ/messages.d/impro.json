@@ -17,7 +17,9 @@
 	"impro_event_name":"Název události",
 	"impro_event_calendar":"Kalendář",
 	"impro_event_list":"Seznam událostí",
+	"impro_event_list_for_month":"Události, %s",
 	"impro_event_create":"Vytvoření události",
+	"impro_event_create_new":"Vytvořit událost",
 	"impro_event_edit":"Úprava události",
 	"impro_event_delete":"Smazání události",
 	"impro_event_type":"Typ události",
@@ -32,6 +34,7 @@
 	"impro_event_publish_at_desc":"Událost bude zveřejněna po tomto termínu.",
 	"impro_event_team_home":"Domácí tým",
 	"impro_event_team_away":"Tým hostů",
+	"impro_event_location":"Umístění",
 
 	"impro_news":"Novinky",
 	"impro_news_title":"Nadpis",

@@ -40,7 +40,7 @@ Tag::div(array("class" => 'events'));
 
 				$match = '';
 
-				if ($event->id_impro_event_type === \Impro\Event\Type::ID_MATCH) {
+				if ($event->id_impro_event_type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 					$match = Tag::div(array(
 						"class"   => 'match_participants',
 						"output"  => false,

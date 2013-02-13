@@ -62,6 +62,42 @@
 			"gps":"POINT(50.084338 14.4069)",
 			"desc":"Divadlo Kampa",
 			"site":"http://www.divadlokampa.cz"
+		},
+		{
+			"id_system_location":8,
+			"id_user":1,
+			"name":"Klub Slávie",
+			"addr":"České Budějovice, Jirsíkova 2",
+			"gps":"POINT(48.972104 14.475964)",
+			"desc":"Klub Slávie",
+			"site":"http://www.klubslavie.cz/"
+		},
+		{
+			"id_system_location":9,
+			"id_user":1,
+			"name":"Paleta Oucmanice",
+			"addr":"Oucmanice",
+			"gps":"POINT(48.972104 14.475964)",
+			"desc":"",
+			"site":""
+		},
+		{
+			"id_system_location":10,
+			"id_user":1,
+			"name":"Salmovský palác",
+			"addr":"Praha, Hradčany, Hradčanské náměstí 185/2",
+			"gps":"POINT(48.972104 14.475964)",
+			"desc":"",
+			"site":""
+		},
+		{
+			"id_system_location":11,
+			"id_user":1,
+			"name":"Malostranská beseda",
+			"addr":"Praha, Malá strana, Malostranské náměstí 35/21",
+			"gps":"POINT(50.088304 14.404701)",
+			"desc":"",
+			"site":""
 		}
 	]
 }

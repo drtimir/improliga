@@ -77,6 +77,17 @@
 			"site":"",
 			"played":1,
 			"visible":true
+		},
+		{
+			"id_impro_team":8,
+			"name":"N.I.C.",
+			"name_full":"Nadšený improvizační celek",
+			"city":"Praha",
+			"about":"",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
 		}
 	],
 

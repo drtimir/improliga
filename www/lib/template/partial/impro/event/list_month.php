@@ -50,7 +50,7 @@ Tag::div(array("class" => 'events'));
 								"content" => $event->team_home->name,
 								"output"  => false,
 							)),
-							Tag::span(array("output" => false, "content" => 'vs', 'class' => 'versus')),
+							Tag::span(array("output" => false, "content" => ' vs ', 'class' => 'versus')),
 							Tag::a(array(
 								"href"    => soprintf($link_team, $event->team_away),
 								"content" => $event->team_away->name,

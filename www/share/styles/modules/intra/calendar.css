@@ -87,3 +87,20 @@
 	width:30px;
 	border-radius:5px;
 }
+
+
+.layout_14 .calendar-controls,
+.layout_14 .calendar-month-grid
+{
+	width:196px;
+}
+
+.layout_14 .day {
+	width:26px;
+	margin:0 1px 0;
+}
+.layout_14 .day-head {
+	height:26px;
+	line-height:26px;
+	font-size:15px;
+}

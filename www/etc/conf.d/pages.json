@@ -41,7 +41,7 @@
 			"*":{
 				"#":{
 					"title":"Můj tým",
-					"template":["intra/layout", "intra/dual2"],
+					"template":["intra/layout", "intra/dual_34_14"],
 					"modules":[
 						["impro/team/member_list", {"id_team":"#{0}", "slot":"right"}]
 					]
@@ -67,7 +67,7 @@
 
 		"discussion":{"#":{
 			"title":"Diskuze",
-			"template":["intra/layout", "intra/dual2"],
+			"template":["intra/layout", "intra/dual_34_14"],
 			"modules":[
 				["impro/discussion/board_list", {"conds":{"public":true}, "slot":"left"}]
 			]},
@@ -151,7 +151,8 @@
 					"title":"intra_events",
 					"modules":{
 						"cc":["impro/event/calendar_controls", {"slot":"right", "month_input":"#{0}", "heading":"Kalendář"}],
-						"cd":["impro/event/calendar", {"slot":"right", "heading":"", "day_link_integrate":true}, ["cc"]]
+						"cd":["impro/event/calendar", {"slot":"right", "heading":"", "day_link_integrate":true}, ["cc"]],
+						"cl":["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/"}, ["cc"]]
 					}
 				}}
 			}

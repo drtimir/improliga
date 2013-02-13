@@ -5,13 +5,14 @@ def($year, date("Y"));
 def($month, intval(date("m")));
 def($shift, '');
 def($cont_link, '/god/impro/events/{id_impro_event}/');
-def($day_link, '/events/list/{year}-{month}/');
+def($day_link, '/events/list/{year}-{month}/#day_{day}');
 def($day_link_integrate, false);
 def($template, '/impro/event/calendar');
 def($book_link, '/');
 def($conds, array("visible" => true));
 def($heading, l('impro_event_calendar'));
 def($day, intval(date("d")));
+def($link_team, '/team/{id_impro_team}/');
 
 $day = $mode == 'month-grid' ? 1:$day;
 
@@ -68,6 +69,7 @@ $this->template($template, array(
 	"book_link" => $book_link,
 	"cont_link" => $cont_link,
 	"day_link_integrate" => $day_link_integrate,
+	"link_team" => $link_team,
 ));
 
 $propagate['cal-events'] = &$events;

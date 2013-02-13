@@ -67,7 +67,7 @@ Tag::div(array("class" => 'calendar'));
 							$tag = $day_link_integrate && any($elist) ? 'a':'div';
 
 							Tag::$tag(array(
-								"href"  => stprintf($day_link, array("year" => $date->format('Y'), 'month' => $date->format('m'))),
+								"href"  => stprintf($day_link, array("year" => $date->format('Y'), 'month' => $date->format('m'), "day" => intval($date->format('d')))),
 								"class" => 'day-head',
 								"title" => format_date($date, 'human-full-date'),
 								"content" => Tag::span(array(

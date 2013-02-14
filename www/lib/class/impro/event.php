@@ -4,6 +4,8 @@ namespace Impro
 {
 	class Event extends \System\Model\Database
 	{
+		const DURATION_DEFAULT = 86399;
+
 		protected static $attrs = array(
 			"id_impro_event_type" => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
 			"title"         => array('varchar'),
@@ -14,7 +16,6 @@ namespace Impro
 			"start"         => array('datetime'),
 			"end"           => array('datetime', "is_null" => true),
 			"capacity"      => array('int', "default" => 0),
-			"all_day"       => array('bool', "default" => false),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
 		);
@@ -37,6 +38,15 @@ namespace Impro
 		public function get_type_name()
 		{
 			return \Impro\Event\Type::get_by_id($this->id_impro_event_type);
+		}
+
+
+		public function duration()
+		{
+			if ($this->end instanceof \DateTime) {
+				$dur = $this->end->getTimestamp() - $this->start->getTimestamp();
+				return $dur > 0 ? $dur:self::DURATION_DEFAULT;
+			} else return self::DURATION_DEFAULT;
 		}
 	}
 }

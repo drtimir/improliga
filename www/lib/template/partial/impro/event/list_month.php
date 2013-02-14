@@ -8,6 +8,12 @@ Tag::div(array("class" => 'events'));
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
+	Tag::div(array("class" => 'controls'));
+		echo label_for('godmode/navi/prev', 16, l('impro_prev_month'), stprintf($link_month, array("year" => $prev->format('Y'), "month" => $prev->format('m'))));
+		echo label_for('godmode/navi/next', 16, l('impro_next_month'), stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))));
+	Tag::close('div');
+
+
 	foreach ($events as $d=>$list) {
 		if (any($list)) {
 			$html = array();
@@ -27,15 +33,21 @@ Tag::div(array("class" => 'events'));
 					)),
 				));
 
+				$ts = array(
+					Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
+					'<br>',
+					$event->get_type_name(),
+				);
+
+				if ($event->location) {
+					$ts[] = ', ';
+					$ts[] = Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name));
+				}
+
 				$location = Tag::div(array(
 					"class" => 'ts_location',
 					"output"  => false,
-					"content" => array(
-					Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
-						'<br>',
-						$event->get_type_name(),', ',
-						Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name)),
-					)
+					"content" => $ts,
 				));
 
 				$match = '';

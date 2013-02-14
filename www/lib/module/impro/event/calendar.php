@@ -1,11 +1,14 @@
 <?
 
+if (def($month_input)) {
+	list($year, $month) = array_map('intval', explode('-', $month_input));
+}
+
 def($mode, 'month-grid');
 def($year, date("Y"));
 def($month, intval(date("m")));
 def($shift, '');
 def($cont_link, '/god/impro/events/{id_impro_event}/');
-def($day_link, '/events/list/{year}-{month}/#day_{day}');
 def($day_link_integrate, false);
 def($day_names_short, false);
 def($template, '/impro/event/calendar');
@@ -13,7 +16,9 @@ def($book_link, '/');
 def($conds, array("visible" => true));
 def($heading, l('impro_event_calendar'));
 def($day, intval(date("d")));
+def($day_link, '/events/list/{year}-{month}/#day_{day}');
 def($link_team, '/team/{id_impro_team}/');
+def($link_month, '/events/list/{year}-{month}/');
 
 $day = $mode == 'month-grid' ? 1:$day;
 
@@ -42,18 +47,26 @@ $events = array_fill(1, 31, array());
 
 foreach ($items as &$item) {
 	$estart = clone $item->start;
-	$dur = $item->all_day ? 86399:$item->duration;
+	$dur = $item->duration();
 
 	if ($item->duration) {
 		while ($dur > 0) {
 			$events[intval($estart->format('d'))][] = &$item;
 			$estart->modify("+ 1 day");
-			$dur -= 86400;
 		}
 	} else {
 		$events[intval($estart->format('d'))][] = &$item;
 	}
 }
+
+$nm = clone $start;
+$nm->modify("+1 month");
+
+$pm = clone $start;
+$pm->modify("-1 month");
+
+$months = System\Locales::get('date:months');
+title(t('impro_event_list_for_month', $months[$month]));
 
 $this->template($template, array(
 	"events"    => $events,
@@ -69,9 +82,12 @@ $this->template($template, array(
 	"day_link"  => $day_link,
 	"book_link" => $book_link,
 	"cont_link" => $cont_link,
+	"prev"      => $pm,
+	"next"      => $nm,
 	"day_link_integrate" => $day_link_integrate,
 	"day_names_short" => $day_names_short,
 	"link_team" => $link_team,
+	"link_month" => $link_month,
 ));
 
 $propagate['cal-events'] = &$events;

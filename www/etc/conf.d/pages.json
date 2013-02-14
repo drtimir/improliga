@@ -126,7 +126,6 @@
 			}
 		},
 
-
 		"events":{
 			"#":{
 				"title":"intra_events",
@@ -146,14 +145,12 @@
 			}},
 
 			"list":{"#":{},
-
 				"*":{"#":{
 					"title":"intra_events",
-					"modules":{
-						"cc":["impro/event/calendar_controls", {"slot":"right", "month_input":"#{0}", "heading":"Kalendář"}],
-						"cd":["impro/event/calendar", {"slot":"right", "heading":"", "day_link_integrate":true, "day_names_short":true}, ["cc"]],
-						"cl":["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/"}, ["cc"]]
-					}
+					"modules":[
+						["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true, "month_input":"#{0}"}],
+						["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/", "month_input":"#{0}"}]
+					]
 				}}
 			}
 		},

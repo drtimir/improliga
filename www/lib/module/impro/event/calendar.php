@@ -7,6 +7,7 @@ def($shift, '');
 def($cont_link, '/god/impro/events/{id_impro_event}/');
 def($day_link, '/events/list/{year}-{month}/#day_{day}');
 def($day_link_integrate, false);
+def($day_names_short, false);
 def($template, '/impro/event/calendar');
 def($book_link, '/');
 def($conds, array("visible" => true));
@@ -69,6 +70,7 @@ $this->template($template, array(
 	"book_link" => $book_link,
 	"cont_link" => $cont_link,
 	"day_link_integrate" => $day_link_integrate,
+	"day_names_short" => $day_names_short,
 	"link_team" => $link_team,
 ));
 

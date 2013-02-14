@@ -8,7 +8,7 @@ Tag::div(array("class" => 'events'));
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
-	foreach ($events as $day=>$list) {
+	foreach ($events as $d=>$list) {
 		if (any($list)) {
 			$html = array();
 			$html_events = array();
@@ -81,21 +81,20 @@ Tag::div(array("class" => 'events'));
 				));
 
 				$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));
-
 				$html_events[] = Tag::li(array("class" => 'event', "content" => implode('', $html_event), "output" => false));
 			}
 
-			$dutime = mktime(0,0,0, $month, $day, $year);
+			$dutime = mktime(0,0,0, $month, $d, $year);
 
 			if ($today == $dutime) {
 				$day_heading = l('today');
 			} else {
-				$day_heading = format_date(mktime(0,0,0, $month, $day, $year), 'l j. F');
+				$day_heading = format_date(mktime(0,0,0, $month, $d, $year), 'l j. F');
 			}
 
 			$html[] = Tag::a(array(
-				"href"    => '#day_'.$day,
-				"id"      => 'day_'.$day,
+				"href"    => stprintf($day_link, array("year" => $year, "month" => str_pad($month, 2, '0', STR_PAD_LEFT), "day" => $d)),
+				"id"      => 'day_'.$d,
 				"class"   => 'day-head',
 				"content" => $day_heading,
 				"output"  => false,

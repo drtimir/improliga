@@ -13,7 +13,7 @@ Tag::div(array("class" => 'calendar'));
 					def($dn, 0);
 
 					Tag::ul(array("class" => 'calendar-head'));
-						foreach (System\Locales::get('date:days') as $d) {
+						foreach (System\Locales::get($day_names_short ? 'date:days-short':'date:days') as $d) {
 							Tag::li(array("class" => 'day', "content" => '<span>'.$d.'</span>'));
 						}
 					Tag::close('ul');

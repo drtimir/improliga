@@ -1,3 +1,13 @@
+commit 1edd63b74365261bed620c166fa42270c7847aa8
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Feb 14 10:24:13 2013 +0100
+
+    Json, Locales class
+    
+    * Added comments to Locales
+    * Added loaded filelist to Locales
+    * Json::read_dist is now passing loaded files into array in fourth param
+
 commit 93e44cd432abd7858a6c8825e72cf6f2da3360db
 Author: just-paja <pavel@proboston.net>
 Date:   Wed Feb 13 14:05:59 2013 +0100

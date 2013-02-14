@@ -12,7 +12,7 @@ namespace Impro
 			"desc_full"     => array('text'),
 			"visible"       => array('bool'),
 			"start"         => array('datetime'),
-			"duration"      => array('int', "is_unsigned" => true, "default" => 0),
+			"end"           => array('datetime', "is_null" => true),
 			"capacity"      => array('int', "default" => 0),
 			"all_day"       => array('bool', "default" => false),
 			"published"     => array('bool'),

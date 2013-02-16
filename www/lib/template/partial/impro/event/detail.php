@@ -22,7 +22,9 @@ Tag::div(array("class" => 'event_detail'));
 
 		Tag::close('div');
 
-		Tag::div(array("class" => 'text short', "content" => $event->desc_short));
+		if ($event->desc_short) {
+			Tag::div(array("class" => 'text short', "content" => $event->desc_short));
+		}
 
 
 		$date = '';

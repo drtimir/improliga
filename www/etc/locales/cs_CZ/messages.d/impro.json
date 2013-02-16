@@ -18,6 +18,7 @@
 	"impro_event_name":"Název události",
 	"impro_event_calendar":"Kalendář",
 	"impro_event_list":"Seznam událostí",
+	"impro_event_list_empty":"Nenalezeny žádné události pro vybrané období.",
 	"impro_event_list_for_month":"Události, %s",
 	"impro_event_create":"Vytvoření události",
 	"impro_event_create_new":"Vytvořit událost",

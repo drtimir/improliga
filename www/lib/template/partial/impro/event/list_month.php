@@ -10,7 +10,7 @@ Tag::div(array("class" => 'events'));
 
 	Tag::div(array("class" => 'controls'));
 		echo label_for('godmode/navi/prev', 16, l('impro_prev_month'), stprintf($link_month, array("year" => $prev->format('Y'), "month" => $prev->format('m'))));
-		echo label_for('godmode/navi/next', 16, l('impro_next_month'), stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))));
+		echo label_right_for('godmode/navi/next', 16, l('impro_next_month'), stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))));
 	Tag::close('div');
 
 

@@ -1,4 +1,28 @@
-commit 1edd63b74365261bed620c166fa42270c7847aa8
+commit 842aa64609b870a75ab49285aa713137308a8c5e
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Feb 16 11:48:03 2013 +0100
+
+    Labels
+    
+    * Fixed label argument passing
+
+commit 1498208869818c757556f9c196cdcaf56d58b1f1
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Feb 14 11:55:30 2013 +0100
+
+    Template class
+    
+    * Added label_for with label on left
+
+commit c428b7c41d30bf1594dd917474178e1f36adb745
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Feb 14 10:33:59 2013 +0100
+
+    Locales class
+    
+    * Fixed bug where messages were not loaded when modules were loaded first
+
+commit 4ba8b647c022bb0d2437093c91766d0290182cfa
 Author: just-paja <pavel@proboston.net>
 Date:   Thu Feb 14 10:24:13 2013 +0100
 
@@ -6,6 +30,7 @@ Date:   Thu Feb 14 10:24:13 2013 +0100
     
     * Added comments to Locales
     * Added loaded filelist to Locales
+    * Locales now skip loading modules second time
     * Json::read_dist is now passing loaded files into array in fourth param
 
 commit 93e44cd432abd7858a6c8825e72cf6f2da3360db

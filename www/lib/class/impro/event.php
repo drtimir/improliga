@@ -16,6 +16,7 @@ namespace Impro
 			"start"         => array('datetime'),
 			"end"           => array('datetime', "is_null" => true),
 			"capacity"      => array('int', "default" => 0),
+			"has_booking"   => array('bool'),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
 		);

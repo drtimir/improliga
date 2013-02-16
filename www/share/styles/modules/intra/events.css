@@ -87,3 +87,62 @@
 	display:block;
 	margin-bottom:15px;
 }
+
+.events .controls {
+	height:19px;
+	line-height:19px;
+	vertical-align:middle;
+	margin:0 0 10px;
+}
+
+.events .controls a:first-child {
+	float:left;
+}
+.events .controls a:last-child {
+	float:right;
+}
+
+.events .controls a:first-child .lt ,
+.events .controls a:last-child .icon
+{
+	margin-left:5px;
+}
+
+.events .controls a span {
+	vertical-align:middle;
+}
+
+
+.event_detail .participants {
+	font-size:28px;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.event_detail .participants .vs,
+.event_detail .participants .part
+{
+	display:inline-block;
+}
+
+.event_detail .participants .vs {
+	margin:0 10px;
+	font-size:22px;
+}
+
+.event_detail .info {
+	margin:15px 0;
+}
+
+.event_detail .info .date { background-image:url(/share/icons/impro/16/objects/datetime.png); }
+.event_detail .info .time { background-image:url(/share/icons/impro/16/objects/time.png); }
+.event_detail .info .location { background-image:url(/share/icons/godmode/16/items/location.png); }
+.event_detail .info .location .addr { font-size:12px; display:block; }
+
+.event_detail .info li {
+	background-position:left 1px;
+	padding-left:21px;
+	display:block;
+	color:#888;
+	margin:5px 0;
+}

@@ -26,6 +26,7 @@
 	"impro_event_delete":"Smazání události",
 	"impro_event_type":"Typ události",
 	"impro_event_start":"Začátek",
+	"impro_event_start_at":"Začátek v %s",
 	"impro_event_end":"Konec",
 	"impro_event_duration":"Doba trvání",
 	"impro_event_all_day":"Celodenní událost",

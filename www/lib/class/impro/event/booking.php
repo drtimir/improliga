@@ -1,6 +1,6 @@
 <?
 
-namespace Event\Impro
+namespace Impro\Event
 {
 	class Booking extends \System\Model\Database
 	{

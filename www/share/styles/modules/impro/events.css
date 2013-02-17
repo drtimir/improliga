@@ -1,0 +1,148 @@
+.event_list .day {
+	border-top:1px solid #ccc;
+}
+
+.event_list .day-head {
+	padding:4px 15px;
+	background:#efefef;
+	display:block;
+	margin-bottom:10px;
+	font-weight:bold;
+	color:#444;
+	font-size:13px;
+}
+
+
+.event_list .event {
+	border-bottom:1px solid #efefef;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+
+.event_list .event:last-child {
+	border-bottom:none;
+	padding-bottom:0;
+}
+
+.event_list .event .image {
+	display:block;
+	width:100px;
+	float:left;
+	opacity:.75;
+}
+
+.event_list .event .image:hover {
+	opacity:1;
+}
+
+.event_list .desc {
+	float:left;
+	width:420px;
+	padding:0 10px 0 20px;
+	color:#111
+}
+
+.event_list .desc .ts_location {
+	margin:0 0 5px;
+	line-height:17px;
+	font-size:12px;
+	color:#666;
+}
+
+.event_list .desc .name {
+	display:block;
+	font-weight:bold;
+	font-size:16px;
+	margin:0 0 5px;
+}
+
+.event_detail .text {
+	margin:10px 0;
+	line-height:18px;
+}
+
+.event_detail .text.short {
+	padding:15px;
+	background:#efefef;
+	margin-bottom:20px;
+	color:#000;
+}
+
+.event_detail {
+	padding-left:5px;
+}
+
+.event_detail .left {
+	width:500px;
+	float:left;
+}
+
+.event_detail .right {
+	width:270px;
+	float:right;
+	border-left:1px solid #efefef;
+}
+
+.event_detail .right .image {
+	display:block;
+	margin-bottom:15px;
+}
+
+.events .controls {
+	height:19px;
+	line-height:19px;
+	vertical-align:middle;
+	margin:0 0 10px;
+}
+
+.events .controls a:first-child {
+	float:left;
+}
+.events .controls a:last-child {
+	float:right;
+}
+
+.events .controls a:first-child .lt ,
+.events .controls a:last-child .icon
+{
+	margin-left:5px;
+}
+
+.events .controls a span {
+	vertical-align:middle;
+}
+
+
+.event_detail .participants {
+	font-size:28px;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.event_detail .participants .vs,
+.event_detail .participants .part
+{
+	display:inline-block;
+}
+
+.event_detail .participants .vs {
+	margin:0 10px;
+	font-size:22px;
+}
+
+.event_detail .info {
+	margin:15px 0;
+}
+
+.event_detail .info .date { background-image:url(/share/icons/impro/16/objects/datetime.png); }
+.event_detail .info .time { background-image:url(/share/icons/impro/16/objects/time.png); }
+.event_detail .info .location { background-image:url(/share/icons/godmode/16/items/location.png); }
+.event_detail .info .location .addr { font-size:12px; display:block; }
+
+.event_detail .info li {
+	background-position:left 1px;
+	padding-left:21px;
+	display:block;
+	color:#888;
+	margin:5px 0;
+}

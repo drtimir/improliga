@@ -1,5 +1,13 @@
 {
 	"#":{
+		"title":"Improliga",
+		"template":["impro/layout", "impro/dual"],
+		"modules":[
+			["system/text/detail", {"slot":"left", "id":1}],
+			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/", "conds":{"published":true}}],
+			["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "heading":"Kalendář", "conds":{"published":true}}],
+			["impro/news/list", {"slot":"right", "conds":{"published":true}}]
+		]
 	},
 
 	"intra":{
@@ -43,7 +51,7 @@
 					"title":"Můj tým",
 					"template":["intra/layout", "intra/dual_34_14"],
 					"modules":[
-						["impro/team/member_list", {"id_team":"#{0}", "slot":"right"}]
+
 					]
 				}
 			}

@@ -29,15 +29,19 @@ header .logo {
 	display:block;
 	width:95px;
 	height:100px;
-	background:url(/share/pixmaps/logo_improliga.png) left top no-repeat;
+	background:url(/share/pixmaps/logo.png) left top no-repeat;
 }
 
 footer {
 }
 
+h1,h2,h3,h4 {
+	margin-top:0;
+}
+
 #content {
 	margin:0 0 20px;
-	padding:100px 0;
+	padding:0;
 	background:#eaeaea;
 	border-bottom:1px solid #aaa;
 	box-shadow:0 0 25px rgba(0,0,0,0.15);
@@ -47,3 +51,41 @@ footer {
 	clear:both;
 	display:block;
 }
+
+.block {
+	padding:20px 0;
+}
+
+.block.left,
+.block.right,
+.block.left_big,
+.block.right_small
+{
+	float:left;
+	width:470px;
+}
+
+.block.left_big {
+	width:640px;
+}
+
+.block.right_small {
+	width:160px;
+}
+
+.block.left {
+	margin-right:15px;
+}
+
+.cleaner {
+	display:block;
+	clear:both;
+}
+
+.block.layout_11 { width:800px; }
+.block.layout_78 { width:700px; }
+.block.layout_34 { width:600px; }
+.block.layout_14 { width:200px; }
+.block.layout_18 { width:100px; }
+
+

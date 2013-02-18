@@ -98,6 +98,15 @@
 			"gps":"POINT(50.088304 14.404701)",
 			"desc":"",
 			"site":""
+		},
+		{
+			"id_system_location":12,
+			"id_user":1,
+			"name":"Karlínské spektrum",
+			"addr":"Praha, Karlín, Karlínské náměstí 316/7",
+			"gps":"POINT(50.091085 14.44867)",
+			"desc":"",
+			"site":""
 		}
 	]
 }

@@ -10,7 +10,7 @@ $count = count_all("\Impro\Event", $conds, $opts);
 
 $this->template('godmode/item-list', array(
 	"cols" => array(
-		array('title',      l('impro_event_name'), 'link', $link_cont),
+		array('name',       l('impro_event_name'), 'link', $link_cont),
 		array('start',      l('impro_event_start'), 'date'),
 		array('visible',    l('godmode_visible'), 'bool'),
 		array('published',  l('godmode_published'), 'bool'),

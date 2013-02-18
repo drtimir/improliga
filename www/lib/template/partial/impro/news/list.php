@@ -8,7 +8,7 @@ Tag::div(array("class" => 'news'));
 
 		foreach ($news as $item) {
 			$content = array();
-			$content[] = section_heading(link_for($item->title, soprintf($link_cont, $item)));
+			$content[] = section_heading(link_for($item->name, soprintf($link_cont, $item)));
 			$content[] = Tag::div(array(
 				"class"   => 'text',
 				"content" => $item->text,

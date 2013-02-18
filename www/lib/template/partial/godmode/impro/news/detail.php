@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => array("detail", "detail-news")));
 
-echo section_heading(link_for($item->title, soprintf($link_cont, $item)));
+echo section_heading(link_for($item->name, soprintf($link_cont, $item)));
 
 Tag::div(array(
 	"class"   => 'text',

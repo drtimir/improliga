@@ -12,7 +12,7 @@ if (($new && $item = new Impro\News()) || ($id && $item = find("\Impro\News", $i
 		"heading" => $heading,
 	));
 
-	$f->input_text('title', l('impro_news_title'), true);
+	$f->input_text('name', l('impro_news_title'), true);
 	$f->input_textarea('text', l('impro_news_text'), true);
 	$f->input_checkbox('visible', l('godmode_visible'));
 	$f->input_checkbox('published', l('godmode_published'));

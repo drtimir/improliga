@@ -4,6 +4,7 @@
 	"impro_menu_teams":"Týmy",
 	"impro_menu_events":"Události",
 	"impro_menu_media":"Média o nás",
+	"impro_menu_news":"Novinky",
 
 	"impro_match":"Zápas",
 	"impro_show":"Improshow",
@@ -54,6 +55,7 @@
 	"impro_news_edit":"Úprava novinky",
 	"impro_news_delete":"Smazání novinky",
 	"impro_news_detail":"Detail novinky",
+	"impro_no_news":"Žádné novinky",
 
 	"impro_discussion_visible_hint":"Diskuze bude viditelná",
 	"impro_discussion_public":"Veřejná diskuze",

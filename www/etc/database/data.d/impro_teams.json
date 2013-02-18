@@ -110,6 +110,17 @@
 			"site":"",
 			"played":1,
 			"visible":true
+		},
+		{
+			"id":11,
+			"name":"Cokoliv",
+			"name_full":"Cokoliv",
+			"city":"Praha",
+			"about":"",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
 		}
 	],
 

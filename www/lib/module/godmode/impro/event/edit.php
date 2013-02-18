@@ -23,7 +23,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 		"heading" => $heading
 	));
 
-	$f->input_text("title", l('godmode_event_name'), true);
+	$f->input_text("name", l('godmode_event_name'), true);
 	$f->input(array(
 		"type"    => 'select',
 		"name"    => 'id_impro_event_type',

@@ -83,7 +83,7 @@ Tag::div(array("class" => 'calendar'));
 										$eb = false;
 
 										Tag::li(array("class" => 'event'.($eb ? ' book-active':'')));
-											echo $l = link_for($event->title, soprintf($link_cont, $event));
+											echo $l = link_for($event->name, soprintf($link_cont, $event));
 
 											Tag::ul(array("class" => 'event-info'));
 												Tag::li(array("content" => $l));

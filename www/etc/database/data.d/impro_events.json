@@ -1034,7 +1034,23 @@
 			"id_author":1,
 			"id_team_home":2,
 			"id_team_away":10,
-			"id_location":1
+			"id_location":11
+		},
+		{
+			"id_impro_event":"287",
+			"id_impro_event_type":2,
+			"name":"Předjarní klání",
+			"image":"/share/pixmaps/initial/events/2013-03-15_vip_vs_cokoliv.jpg",
+			"desc_short":"",
+			"desc_full":"",
+			"visible":true,
+			"start":"2013-03-15 20:00:00",
+			"published":true,
+			"publish_at":"2013-01-01 00:00:00",
+			"id_author":1,
+			"id_team_home":1,
+			"id_team_away":11,
+			"id_location":12
 		}
 	]
 }

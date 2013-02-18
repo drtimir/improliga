@@ -60,12 +60,12 @@ Tag::div(array("class" => 'event_detail'));
 			"href"    => $event->image->get_path(),
 			"content" => Tag::img(array(
 				"output" => false,
-				"src"    => $event->image->thumb(270),
+				"src"    => $event->image->thumb($col_width),
 				"alt"    => $event->name,
 			)),
 		));
 
-		echo $event->location->map_html(270, 270);
+		echo $event->location->map_html($col_width, $col_width);
 
 	Tag::close('div');
 

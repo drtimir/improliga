@@ -1,3 +1,60 @@
+commit 7ab86275986431782bacb678c35aa6441676617f
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 10:16:00 2013 +0100
+
+    Data seeds
+    
+    * Migrated seeds to use model name instead of table name
+    * Added support for seeding bilinear relations
+
+commit 0f63fa5011b00155de885ca11be715b1958c6072
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 18 01:06:57 2013 +0100
+
+    Error reporting
+    
+    * Tuned up error reporting on CLI
+
+commit 2c934c0aaf18c35245197e9fd261344b2d73b3dc
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 18 00:49:25 2013 +0100
+
+    Youtube videos
+    
+    * Added support for youtube videos
+
+commit 8c93379067ef08947a748ff89fc46d6bef20e7fc
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 18 00:40:53 2013 +0100
+
+    Tag class
+    
+    * Added support for some iframe attrs
+
+commit 40e4244ca1a65726f8f665f99ac9a6c01b084ec8
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Feb 16 12:25:56 2013 +0100
+
+    Attr model
+    
+    * Fixed null columns
+
+commit 3bdcead5e0da899a2394c0a720fb147b52b929e2
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Feb 16 12:19:04 2013 +0100
+
+    User model
+    
+    * Avatar is never null
+
+commit 48fd43e0efbb98bfd41882f4dfc68705f9866cc5
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Feb 16 12:17:34 2013 +0100
+
+    Attr model
+    
+    * Fixed is_null columns when null
+
 commit 842aa64609b870a75ab49285aa713137308a8c5e
 Author: just-paja <just.paja@gmail.com>
 Date:   Sat Feb 16 11:48:03 2013 +0100

@@ -6,6 +6,19 @@ namespace Impro
 	{
 		const DURATION_DEFAULT = 86399;
 
+		const ID_WIZZARD_STEP_NAME         = 'name';
+		const ID_WIZZARD_STEP_TIMESPACE    = 'timespace';
+		const ID_WIZZARD_STEP_TEAMS        = 'teams';
+		const ID_WIZZARD_STEP_PARTICIPANTS = 'participants';
+		const ID_WIZZARD_STEP_TOOLS        = 'tools';
+		const ID_WIZZARD_STEP_POSTER       = 'poster';
+		const ID_WIZZARD_STEP_PUBLISH      = 'publish';
+		const ID_WIZZARD_STEP_CANCEL       = 'cancel';
+
+		const ID_SETUP_STATUS_NO = 0;
+		const ID_SETUP_STATUS_OK = 1;
+		const ID_SETUP_STATUS_NOT_NEEDED = 2;
+
 		protected static $attrs = array(
 			"id_impro_event_type" => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
 			"name"          => array('varchar'),
@@ -19,7 +32,23 @@ namespace Impro
 			"has_booking"   => array('bool'),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
+
+			"has_whistle"   => array('int', "default" => 0),
+			"has_kazoo"     => array('int', "default" => 0),
+			"has_mic"       => array('int', "default" => 0),
+			"has_dress_ref" => array('int', "default" => 0),
+			"has_dress_oth" => array('int', "default" => 0),
+			"has_cards"     => array('int', "default" => 0),
+			"has_basket"    => array('int', "default" => 0),
+			"has_papers"    => array('int', "default" => 0),
+			"has_pencils"   => array('int', "default" => 0),
+			"gen_poster"    => array('bool'),
+			"gen_tickets"   => array('bool'),
+
+			"skip_participants" => array('bool'),
+			"skip_tools"        => array('bool'),
 		);
+//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
 
 
 		protected static $has_many = array(
@@ -36,6 +65,60 @@ namespace Impro
 		);
 
 
+		private static $wizzard_steps = array(
+			self::ID_WIZZARD_STEP_NAME         => 'impro_event_wizzard_step_name',
+			self::ID_WIZZARD_STEP_TIMESPACE    => 'impro_event_wizzard_step_timespace',
+			self::ID_WIZZARD_STEP_TEAMS        => 'impro_event_wizzard_step_teams',
+			self::ID_WIZZARD_STEP_PARTICIPANTS => 'impro_event_wizzard_step_participants',
+			self::ID_WIZZARD_STEP_TOOLS        => 'impro_event_wizzard_step_tools',
+			self::ID_WIZZARD_STEP_POSTER       => 'impro_event_wizzard_step_poster',
+			self::ID_WIZZARD_STEP_PUBLISH      => 'impro_event_wizzard_step_publish',
+		);
+
+
+		public static function wizzard_for($id = 0, $new = false)
+		{
+			if (!$id) {
+				if (any($_SESSION['impro_event_wizzard_id'])) {
+					$id = $_SESSION['impro_event_wizzard_id'];
+				}
+			}
+
+			$event = find('\Impro\Event', $id);
+
+			if ($new && !$event) {
+				$event = new self(array(
+					"published" => false,
+					"visible"   => false,
+					"id_impro_event_type" => \Impro\Event\Type::ID_MATCH,
+					"id_author" => user()->id,
+				));
+			}
+
+			if ($event) {
+				if (!$event->id) {
+					$event->save();
+				}
+
+				$_SESSION['impro_event_wizzard_id'] = $event->id;
+			}
+
+			return $event;
+		}
+
+
+		public static function get_wizzard_steps()
+		{
+			$steps = array();
+
+			foreach (self::$wizzard_steps as $step=>$trans) {
+				$steps[$step] = l($trans);
+			}
+
+			return $steps;
+		}
+
+
 		public function get_type_name()
 		{
 			return \Impro\Event\Type::get_by_id($this->id_impro_event_type);
@@ -48,6 +131,35 @@ namespace Impro
 				$dur = $this->end->getTimestamp() - $this->start->getTimestamp();
 				return $dur > 0 ? $dur:self::DURATION_DEFAULT;
 			} else return self::DURATION_DEFAULT;
+		}
+
+
+		public function has($what)
+		{
+			$var = 'has_'.$what;
+			return in_array($this->$var, array(self::ID_SETUP_STATUS_OK, self::ID_SETUP_STATUS_NOT_NEEDED));
+		}
+
+
+		public function has_all_tools()
+		{
+			$ok = true;
+
+			foreach (self::get_tools() as $item) {
+				if ($ok) {
+					$ok = $this->has($item);
+				} else {
+					break;
+				}
+			}
+
+			return $ok;
+		}
+
+
+		public static function get_tools()
+		{
+			return array("whistle", "kazoo", "mic", "dress_ref", "dress_oth", "cards", "basket", "papers", "pencils");
 		}
 	}
 }

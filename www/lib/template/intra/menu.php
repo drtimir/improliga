@@ -20,8 +20,8 @@ Tag::div(array("class" => 'menu_left'));
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));
+		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, l('impro_event_list_my'), '/profile/events/')));
 		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, l('impro_event_create_new'), '/events/create/')));
-
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));

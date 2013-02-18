@@ -187,6 +187,14 @@
 					["impro/user/profile", {"self":true, "slot":"left"}]
 				]
 			},
+
+			"events":{"#":{
+				"title":"intra_profile_my_events",
+				"modules":[
+					["impro/event/my", {"slot":"left", "month_input":"#{0}"}]
+				]
+			}},
+
 			"*":{
 				"#":{
 					"modules":[
@@ -282,6 +290,58 @@
 						["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true, "month_input":"#{0}"}],
 						["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "link_cont":"/events/{id_impro_event}/", "month_input":"#{0}"}]
 					]
+				}}
+			},
+
+			"create":{
+				"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/name", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				},
+				"timespace":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/timespace", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
+				"teams":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/teams", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
+				"participants":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/participants", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
+				"tools":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/tools", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
+				"poster":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/poster", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
+				"cancel":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/cancel", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
 				}}
 			}
 		},

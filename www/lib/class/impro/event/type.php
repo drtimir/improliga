@@ -9,6 +9,7 @@ namespace Impro\Event
 		const ID_LONG_FORM  = 3;
 		const ID_MUSIC_FORM = 4;
 		const ID_WORKSHOP   = 5;
+		const ID_OTHER      = 6;
 
 		static private $types_available = array(
 			'impro_match'      => self::ID_MATCH,
@@ -16,6 +17,7 @@ namespace Impro\Event
 			'impro_long_form'  => self::ID_LONG_FORM,
 			'impro_music_form' => self::ID_MUSIC_FORM,
 			'impro_workshop'   => self::ID_WORKSHOP,
+			'impro_other'      => self::ID_OTHER,
 		);
 
 
@@ -40,6 +42,15 @@ namespace Impro\Event
 			}
 
 			return null;
+		}
+
+
+		public static function get_types_with_end()
+		{
+			return array(
+				self::ID_WORKSHOP,
+				self::ID_OTHER
+			);
 		}
 	}
 }

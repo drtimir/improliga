@@ -146,3 +146,37 @@
 	color:#888;
 	margin:5px 0;
 }
+
+.wizzard {
+
+}
+.wizzard li {
+	display:block;
+	margin:5px 0;
+	padding-left:21px;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+.wizzard .passed { background-image:url(/share/icons/16/impro/status/ok) }
+.wizzard .failed { background-image:url(/share/icons/16/impro/status/failed) }
+.wizzard .incomplete { background-image:url(/share/icons/16/impro/status/incomplete) }
+
+
+.event_tools .options {
+	margin:0;
+	padding:0;
+}
+
+.event_tools .options, .event_tools .options li {
+	display:inline-block;
+}
+
+.event_tools .options li {
+	margin:0 15px 0 0;
+}
+
+.event_tools .options li label {
+	width:auto;
+	font-weight:normal;
+}

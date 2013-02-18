@@ -8,6 +8,7 @@ Tag::html();
 		content_for('styles', 'intra/news');
 		content_for('styles', 'intra/events');
 		content_for('styles', 'intra/discussions');
+		content_for("styles", "form/search_tool");
 
 		echo content_from('head');
 	Tag::close('head');

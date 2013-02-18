@@ -1,5 +1,5 @@
 {
-	"system_user_group":[
+	"System\\User\\Group":[
 		{ "id_system_user_group":4, "name":"Trenéři" }
 	]
 }

@@ -1,7 +1,7 @@
 {
-	"system_text":[
+	"System\\Text":[
 		{
-			"id_system_text":1,
+			"id":1,
 			"name":"Úvod",
 			"text":"<p>Improliga je občanské združení zastřešující týmy z celé České republiky, které se věnují zápasům v improvizaci. Zápasy v improvizaci patří do rodiny tzv. &quot;divadelních sportů&quot;, je to jednoduše řečeno divadlo inspirované hokejovými pravidly.</p><p> Improligové týmy se vyzývají ke vzájemným zápasům, společně trénují, pořádají workshopy. Mezi největší akce patří každoroční setkání improvizátorů z celé republiky zvané Improstřesk a obdobná akce pro středoškolské týmy nazvaná Improslet.</p><p>Přečtěte si o improvizačních zápasech a podívejte se na pár videí. Anebo se rovnou přijďte podívat na zápas pořádaný ve vašem okolí.</p>",
 			"visible":true
@@ -9,9 +9,9 @@
 	],
 
 
-	"impro_article":[
+	"Impro\\Article":[
 		{
-			"id_impro_article":1,
+			"id":1,
 			"name":"O zápase",
 			"published":true,
 			"visible":true
@@ -19,9 +19,9 @@
 	],
 
 
-	"impro_article_chapter":[
+	"Impro\\Article\\Chapter":[
 		{
-			"id_impro_article_chapter":1,
+			"id":1,
 			"id_article":1,
 			"weight":1,
 			"name":"Co je to improvizační zápas?",
@@ -29,7 +29,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_article_chapter":2,
+			"id":2,
 			"id_article":1,
 			"weight":2,
 			"name":"Jak zápas probíhá?",
@@ -37,7 +37,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_article_chapter":3,
+			"id":3,
 			"id_article":1,
 			"weight":3,
 			"name":"Které kategorie můžete vidět na zápase?",
@@ -45,7 +45,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_article_chapter":4,
+			"id":4,
 			"id_article":1,
 			"weight":4,
 			"name":"Proč a co rozhodčí píská?",
@@ -53,7 +53,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_article_chapter":5,
+			"id":5,
 			"id_article":1,
 			"weight":5,
 			"name":"Jak vznikly zápasy v improvizaci?",

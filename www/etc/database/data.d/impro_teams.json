@@ -1,5 +1,5 @@
 {
-	"impro_team":
+	"Impro\\Team":
 	[
 		{
 			"id_impro_team":1,
@@ -13,7 +13,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":2,
+			"id":2,
 			"name":"KL.I.KA.",
 			"name_full":"KLamovští Improvizační KAskadéři",
 			"city":"Praha",
@@ -24,7 +24,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":3,
+			"id":3,
 			"name":"BAFNI",
 			"name_full":"BAFNI",
 			"city":"Brno",
@@ -35,7 +35,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":4,
+			"id":4,
 			"name":"B.I.Z.O.N.I.",
 			"name_full":"Bydžovští Improvizátoři Z Opatovic Nadržení na Improvizaci",
 			"city":"Opatovice",
@@ -46,7 +46,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":5,
+			"id":5,
 			"name":"K.I.Š.",
 			"name_full":"Kouzelná Improvizační Školka",
 			"city":"Praha",
@@ -57,7 +57,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":6,
+			"id":6,
 			"name":"OTISK",
 			"name_full":"Otevřená improvizační skupina",
 			"city":"Praha",
@@ -68,7 +68,7 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":7,
+			"id":7,
 			"name":"Stře.L.I.",
 			"name_full":"Středoškolská liga improvizace",
 			"city":"Praha",
@@ -79,10 +79,32 @@
 			"visible":true
 		},
 		{
-			"id_impro_team":8,
+			"id":8,
 			"name":"N.I.C.",
 			"name_full":"Nadšený improvizační celek",
 			"city":"Praha",
+			"about":"",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id":9,
+			"name":"JUST! Impro",
+			"name_full":"JUST! Impro",
+			"city":"Praha",
+			"about":"",
+			"logo":"",
+			"site":"",
+			"played":1,
+			"visible":true
+		},
+		{
+			"id":10,
+			"name":"Pa.Le.Ťác.I",
+			"name_full":"Pardubáci Lehce Ťápající Improvizací",
+			"city":"Pardubice",
 			"about":"",
 			"logo":"",
 			"site":"",
@@ -92,57 +114,66 @@
 	],
 
 
-	"impro_team_member":
+	"Impro\\Team\\Member":
 	[
 		{
+			"id":1,
 			"id_impro_team":1,
 			"id_system_user":4,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":2,
 			"id_impro_team":2,
 			"id_system_user":10,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":3,
 			"id_impro_team":3,
 			"id_system_user":11,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":4,
 			"id_impro_team":4,
 			"id_system_user":12,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":5,
 			"id_impro_team":5,
 			"id_system_user":13,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":6,
 			"id_impro_team":6,
 			"id_system_user":14,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":7,
 			"id_impro_team":6,
 			"id_system_user":15,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":8,
 			"id_impro_team":7,
 			"id_system_user":14,
 			"active":true,
 			"roles":"2,3,4"
 		},
 		{
+			"id":9,
 			"id_impro_team":7,
 			"id_system_user":16,
 			"active":true,

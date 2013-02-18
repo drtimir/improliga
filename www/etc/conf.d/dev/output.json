@@ -8,5 +8,11 @@
 	},
 	"format_default":"html",
 	"meta_tags":["description", "keywords", "author", "copyright", "robots"],
-	"errors":{}
+	"errors":{
+		"not_found":{
+			"title":"Stránka nenalezena",
+			"template":["impro/layout"],
+			"partial":"system/error/bug"
+		}
+	}
 }

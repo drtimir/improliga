@@ -25,11 +25,11 @@ Tag::div(array("class" => 'events'));
 				$html_event[] = Tag::a(array(
 					"class"   => 'image',
 					"output"  => false,
-					"href"    => soprintf($cont_link, $event),
+					"href"    => soprintf($link_cont, $event),
 					"content" => Tag::img(array(
 						"output" => false,
 						"src"    => $event->image->thumb(100, 100),
-						"alt"    => $event->title,
+						"alt"    => $event->name,
 					)),
 				));
 
@@ -78,8 +78,8 @@ Tag::div(array("class" => 'events'));
 					"content" => array(
 						Tag::a(array(
 							"class"   => 'name',
-							"content" => $event->title,
-							"href"    => soprintf($cont_link, $event),
+							"content" => $event->name,
+							"href"    => soprintf($link_cont, $event),
 							"output"  => false,
 						)),
 						$match,
@@ -105,7 +105,7 @@ Tag::div(array("class" => 'events'));
 			}
 
 			$html[] = Tag::a(array(
-				"href"    => stprintf($day_link, array("year" => $year, "month" => str_pad($month, 2, '0', STR_PAD_LEFT), "day" => $d)),
+				"href"    => stprintf($link_day, array("year" => $year, "month" => str_pad($month, 2, '0', STR_PAD_LEFT), "day" => $d)),
 				"id"      => 'day_'.$d,
 				"class"   => 'day-head',
 				"content" => $day_heading,

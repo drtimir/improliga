@@ -8,7 +8,7 @@ namespace Impro
 
 		protected static $attrs = array(
 			"id_impro_event_type" => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
-			"title"         => array('varchar'),
+			"name"          => array('varchar'),
 			"image"         => array('image'),
 			"desc_short"    => array('text'),
 			"desc_full"     => array('text'),

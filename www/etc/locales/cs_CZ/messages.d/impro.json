@@ -38,6 +38,7 @@
 	"impro_event_team_home":"Domácí tým",
 	"impro_event_team_away":"Tým hostů",
 	"impro_event_location":"Umístění",
+	"impro_events_latest":"Nejbližší události",
 
 	"impro_news":"Novinky",
 	"impro_news_title":"Nadpis",
@@ -92,6 +93,8 @@
 	"impro_credits":"Created by just-paja, %s",
 	"impro_address":"Improliga<br>Česká improvizační liga, o.s.<br>Přemyšlenská 1102<br>182 00 Praha 8",
 	"impro_more_contacts":"Další kontakty",
+	"impro_contact":"Kontakty",
+	"impro_partners":"Partneři",
 
 	"today":"Dnes",
 	"end":""

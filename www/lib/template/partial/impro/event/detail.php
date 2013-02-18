@@ -4,7 +4,7 @@ Tag::div(array("class" => 'event_detail'));
 
 	Tag::div(array("class" => 'left'));
 
-		echo section_heading($event->title);
+		echo section_heading($event->name);
 
 		Tag::div(array("class" => 'desc'));
 
@@ -60,8 +60,8 @@ Tag::div(array("class" => 'event_detail'));
 			"href"    => $event->image->get_path(),
 			"content" => Tag::img(array(
 				"output" => false,
-				"src"    => $event->image->thumb(270, 270),
-				"alt"    => $event->title,
+				"src"    => $event->image->thumb(270),
+				"alt"    => $event->name,
 			)),
 		));
 

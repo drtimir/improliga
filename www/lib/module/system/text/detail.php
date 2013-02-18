@@ -9,4 +9,4 @@ if ($id && $item = find('\System\Text', $id)) {
 		"text" => $item,
 		"show_heading" => true,
 	));
-} else throw new \System\NotFound(t('system_text_not_found', $id));
+} else throw new \System\Error\NotFound(t('system_text_not_found', $id));

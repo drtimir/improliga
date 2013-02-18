@@ -8,15 +8,15 @@ def($mode, 'month-grid');
 def($year, date("Y"));
 def($month, intval(date("m")));
 def($shift, '');
-def($cont_link, '/god/impro/events/{id_impro_event}/');
 def($day_link_integrate, false);
 def($day_names_short, false);
 def($template, '/impro/event/calendar');
-def($book_link, '/');
 def($conds, array("visible" => true));
 def($heading, l('impro_event_calendar'));
 def($day, intval(date("d")));
-def($day_link, '/events/list/{year}-{month}/#day_{day}');
+def($link_book, '/');
+def($link_cont, '/god/impro/events/{id_impro_event}/');
+def($link_day, '/events/list/{year}-{month}/#day_{day}');
 def($link_team, '/team/{id_impro_team}/');
 def($link_month, '/events/list/{year}-{month}/');
 
@@ -79,13 +79,13 @@ $this->template($template, array(
 	"mode"      => $mode,
 	"heading"   => $heading,
 	"booking"   => true,
-	"day_link"  => $day_link,
-	"book_link" => $book_link,
-	"cont_link" => $cont_link,
 	"prev"      => $pm,
 	"next"      => $nm,
 	"day_link_integrate" => $day_link_integrate,
 	"day_names_short" => $day_names_short,
+	"link_day"  => $link_day,
+	"link_book" => $link_book,
+	"link_cont" => $link_cont,
 	"link_team" => $link_team,
 	"link_month" => $link_month,
 ));

@@ -1,12 +1,24 @@
 {
 	"#":{
 		"title":"Improliga",
-		"template":["impro/layout", "impro/dual"],
+		"template":["impro/layout", "impro/homepage"],
 		"modules":[
 			["system/text/detail", {"slot":"left", "id":1}],
-			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/", "conds":{"published":true}}],
-			["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "heading":"Kalendář", "conds":{"published":true}}],
-			["impro/news/list", {"slot":"right", "conds":{"published":true}}]
+			["impro/event/latest", {
+				"slot":"events_left",
+				"link_cont":"/udalosti/{seoname}/",
+				"link_team":"/tym/{seoname}/",
+				"conds":{"published":true}
+			}],
+			["impro/event/calendar", {
+				"slot":"events_right",
+				"day_link_integrate":true,
+				"link_month":"/udalosti/seznam/{year}-{month}/",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+				"heading":"Kalendář",
+				"conds":{"published":true}
+			}],
+			["impro/news/list", {"slot":"events_right", "conds":{"published":true}}]
 		]
 	},
 
@@ -139,7 +151,7 @@
 				"title":"intra_events",
 				"template":["intra/layout", "intra/dual_34_14"],
 				"modules":[
-					["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/"}],
+					["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "link_cont":"/events/{id_impro_event}/"}],
 					["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true}]
 				]
 			},
@@ -157,7 +169,7 @@
 					"title":"intra_events",
 					"modules":[
 						["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true, "month_input":"#{0}"}],
-						["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "cont_link":"/events/{id_impro_event}/", "month_input":"#{0}"}]
+						["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "link_cont":"/events/{id_impro_event}/", "month_input":"#{0}"}]
 					]
 				}}
 			}

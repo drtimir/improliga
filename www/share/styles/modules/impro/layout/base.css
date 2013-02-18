@@ -14,22 +14,53 @@ body,html {
 .container {
 	width:1000px;
 	margin:0 auto;
+	position:relative;
 }
 
 header {
 	background:#fff;
-	padding:15px 0;
 	border-bottom:1px solid #ccc;
 	box-shadow:0 0 25px rgba(0,0,0,0.15);
 	position:relative;
 	z-index:1
 }
 
+header .container {
+	padding:10px 0;
+}
+
+
 header .logo {
 	display:block;
 	width:95px;
 	height:100px;
 	background:url(/share/pixmaps/logo.png) left top no-repeat;
+}
+
+header .main, header .main li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+header .main {
+	position:absolute;
+	bottom:5px;
+	left:110px;
+}
+
+header .main li {
+	display:inline-block;
+	margin:0 5px;
+}
+
+header .main li a {
+	display:block;
+	padding:5px 10px;
+	font-size:18px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#B82429
 }
 
 footer {

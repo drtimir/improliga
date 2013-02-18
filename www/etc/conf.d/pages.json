@@ -7,7 +7,7 @@
 			["impro/event/latest", {
 				"slot":"events_left",
 				"link_cont":"/udalosti/{seoname}/",
-				"link_team":"/tym/{seoname}/",
+				"link_team":"/tymy/{seoname}/",
 				"conds":{"published":true}
 			}],
 			["impro/event/calendar", {
@@ -20,6 +20,102 @@
 			}],
 			["impro/news/list", {"slot":"events_right", "conds":{"published":true}}]
 		]
+	},
+
+
+	"o-improlize":{"#":{
+		"title":"impro_menu_about"
+	}},
+
+
+	"media-o-nas":{"#":{
+		"title":"impro_menu_media"
+	}},
+
+
+	"tymy":{"#":{
+		"title":"impro_menu_teams",
+
+		"*":{
+			"#":{
+				"title":"impro_team"
+			}
+		}
+	}},
+
+
+	"udalosti":{
+		"#":{
+			"title":"impro_events",
+			"modules":[
+				["impro/event/latest", {
+					"slot":"events_left",
+					"link_cont":"/udalosti/{seoname}/",
+					"link_team":"/tymy/{seoname}/",
+					"conds":{"published":true}
+				}],
+				["impro/event/calendar", {
+					"slot":"events_right",
+					"day_link_integrate":true,
+					"link_month":"/udalosti/seznam/{year}-{month}/",
+					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+					"heading":"Kalendář",
+					"conds":{"published":true}
+				}]
+			]
+		},
+
+		"*":{"#":{
+			"title":"impro_event",
+			"modules":[
+				["impro/event/detail", {"id":"#{0}"}]
+			]
+		}},
+
+		"seznam":{
+			"#":{
+				"title":"impro_events",
+				"modules":[
+					["impro/event/latest", {
+						"slot":"events_left",
+						"link_cont":"/udalosti/{seoname}/",
+						"link_team":"/tymy/{seoname}/",
+						"conds":{"published":true}
+					}],
+					["impro/event/calendar", {
+						"slot":"events_right",
+						"day_link_integrate":true,
+						"link_month":"/udalosti/seznam/{year}-{month}/",
+						"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+						"heading":"Kalendář",
+						"conds":{"published":true}
+					}]
+				]
+			},
+
+			"*":{
+				"#":{
+					"modules":[
+						["impro/event/calendar", {
+							"slot":"right",
+							"day_link_integrate":true,
+							"day_names_short":true,
+							"link_month":"/udalosti/seznam/{year}-{month}/",
+							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+							"month_input":"#{0}"
+						}],
+						["impro/event/calendar", {
+							"slot":"left",
+							"template":"impro/event/list_month",
+							"link_cont":"/udalosti/{seoname}/",
+							"link_month":"/udalosti/seznam/{year}-{month}/",
+							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+							"month_input":"#{0}"
+						}]
+					]
+				}
+			}
+		}
 	},
 
 	"intra":{

@@ -1,3 +1,86 @@
+commit 4e40d31ffee4c04dd4de44e0988ffc590846ae68
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 11:45:56 2013 +0100
+
+    Forms, datetime
+    
+    * Added datetime picker cleaner if not required
+    * Added support for null values to datetime picker
+    * Added clear icon
+
+commit 652ce5425ccaa2d166280531b1bfeeff7dd557f7
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 11:11:41 2013 +0100
+
+    Default config
+    
+    * Fixed default settings
+
+commit 9aa170510d27ff0d742c28c8dddb52ffda8ca099
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 11:09:39 2013 +0100
+
+    Messages
+    
+    * Fixed input_gps_lng message
+
+commit ff8c2faad59bf0fbb0011caa65d8f5b4a2522d75
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 11:09:12 2013 +0100
+
+    Forms
+    
+    * Inputs render their tools according to the standard
+
+commit 7f4fb534dcc3710f8bfbc22833527603a262a4f1
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 10:34:23 2013 +0100
+
+    Forms
+    
+    * Added forms classes to the container
+    * Minimized forms js code
+
+commit 8e0561f7cef7c3080a85b58ac679db1cb9b5b2cf
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 17:42:17 2013 +0100
+
+    Database model
+    
+    * Fixed default value handling
+
+commit 9b7cfb492733d2130ac96c5bc07d68e264d02992
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 17:26:49 2013 +0100
+
+    Forms
+    
+    * Fixed image drop on no change action
+
+commit e2193111580048f7cba1b83f3f7c39b38f8d1fa4
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 16:33:43 2013 +0100
+
+    Image class
+    
+    * Fixed path handling
+
+commit c2993e854c556b331d523d99f7937246496d1e38
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 10:31:09 2013 +0100
+
+    Image class
+    
+    * Added root handling to from_path
+
+commit 6f7d356aa37b7a2cddcc286588224beaf54c6e7f
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 18 10:22:55 2013 +0100
+
+    Database model
+    
+    * Handle null images
+
 commit 7ab86275986431782bacb678c35aa6441676617f
 Author: just-paja <pavel@proboston.net>
 Date:   Mon Feb 18 10:16:00 2013 +0100

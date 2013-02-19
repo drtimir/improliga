@@ -34,12 +34,18 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	}
 
 	$f->text('hint1', l('impro_event_wizzard_tools_hint_lower'));
-
 	$f->submit(l('impro_event_wizzard_next'));
+	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
-		$event->update_attrs($f->get_data())->save();
-		redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_POSTER)));
+		$p = $f->get_data();
+
+		if (isset($p['cancel'])) {
+			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+		} else {
+			$event->update_attrs($p)->save();
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_POSTER)));
+		}
 	} else {
 		$f->out($this);
 	}

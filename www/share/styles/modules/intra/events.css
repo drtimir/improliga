@@ -303,3 +303,22 @@
 	vertical-align:middle;
 	font-weight:normal;
 }
+
+.pwform .event_wizzard_cancel .form-text label {
+	display:inline-block;
+}
+
+.pwform .event_wizzard_cancel .form-text .input-container {
+	display:inline-block;
+	padding:0;
+}
+
+
+.event_wizzard .buttons .input-field_cancel button {
+	background:#999;
+	border-color:#999;
+}
+
+.event_wizzard .buttons .input-field_cancel button:hover {
+	border:1px solid #666;
+}

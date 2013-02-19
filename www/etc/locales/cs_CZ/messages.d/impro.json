@@ -55,6 +55,7 @@
 	"impro_event_publish_queue":"Zařadit do fronty na publikování",
 	"impro_event_use_booking":"Použít improligové rezervace",
 	"impro_events_latest":"Nejbližší události",
+	"impro_event_unfinished":"Nová událost",
 
 	"impro_event_players_home_owner":"Hráči",
 	"impro_event_players_home":"Domácí",
@@ -88,6 +89,7 @@
 	"impro_event_wizzard_step_tools":"Pomůcky",
 	"impro_event_wizzard_step_poster":"Plakát a vstup",
 	"impro_event_wizzard_step_publish":"Zveřejnění",
+	"impro_event_wizzard_step_cancel":"Smazání události",
 
 	"impro_event_wizzard_name_hint":"Použijte jméno, které nejvíce vystihuje vaši událost. Pokud nemáte téma, postačí třeba &quot;Kopr vs Otisk&quot;",
 	"impro_event_wizzard_type_hint":"Vyberte odpovídající typ události. Ostatní kroky podle toho budou uzpůsobeny.",

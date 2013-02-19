@@ -25,4 +25,5 @@ $this->template($template, array(
 	"link_day"   => $link_day,
 	"link_team"  => $link_team,
 	"link_month" => $link_month,
+	"controls"   => false,
 ));

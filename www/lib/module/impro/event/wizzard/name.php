@@ -28,18 +28,25 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$f->text('hint2', l('impro_event_wizzard_type_hint'));
 
 	$f->submit(l('impro_event_wizzard_next'));
+	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
-		$event->update_attrs($f->get_data());
+		$p = $f->get_data();
 
-		if ($event->id_impro_event_type !== Impro\Event\Type::ID_MATCH) {
-			$event->has_kazoo = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
-			$event->has_dress_ref = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
-			$event->has_dress_oth = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
+		if (isset($p['cancel'])) {
+			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+		} else {
+			$event->update_attrs($p);
+
+			if ($event->id_impro_event_type !== Impro\Event\Type::ID_MATCH) {
+				$event->has_kazoo = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
+				$event->has_dress_ref = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
+				$event->has_dress_oth = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
+			}
+
+			$event->save();
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
 		}
-
-		$event->save();
-		redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
 	} else {
 		$f->out($this);
 	}

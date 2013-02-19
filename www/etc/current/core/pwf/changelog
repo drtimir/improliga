@@ -1,3 +1,21 @@
+commit 75558999b31a92f25b4af0e431077774075c535e
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 15:41:48 2013 +0100
+
+    Flow class, Forms
+    
+    * Fixed redirect_now to accept only url
+    * Forms count inputs correctly now
+
+commit 2b4f5797d2710b638c10c2fcfb73710a1a4e3750
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 15:16:14 2013 +0100
+
+    Forms
+    
+    * Separated buttons from inputs
+    * Separated form send indication from buttons
+
 commit 4e40d31ffee4c04dd4de44e0988ffc590846ae68
 Author: just-paja <pavel@proboston.net>
 Date:   Tue Feb 19 11:45:56 2013 +0100

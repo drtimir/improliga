@@ -46,7 +46,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	));
 
 	$f->input_datetime("start", l('impro_event_start'), true);
-	$f->input_datetime("end", l('impro_event_end'), true);
+	$f->input_datetime("end", l('impro_event_end'));
 
 	$f->input(array(
 		"name"  => 'location',

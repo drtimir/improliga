@@ -90,11 +90,12 @@ namespace Impro
 			if ($new && !$event) {
 				$event = new self(array(
 					"id_impro_event_type" => \Impro\Event\Type::ID_MATCH,
+					"name"        => l('impro_event_unfinished'),
 					"published"   => false,
 					"visible"     => false,
 					"id_author"   => user()->id,
 					"start"       => new \DateTime(),
-					"use_booking" => true
+					"use_booking" => true,
 				));
 			}
 
@@ -113,6 +114,20 @@ namespace Impro
 		public static function free_wizzard()
 		{
 			unset($_SESSION['impro_event_wizzard_id']);
+		}
+
+
+		public static function cancel_wizzard()
+		{
+			if (any($_SESSION['impro_event_wizzard_id'])) {
+				$id = $_SESSION['impro_event_wizzard_id'];
+			}
+
+			$event = find('\Impro\Event', $id);
+
+			if ($event) {
+				$event->drop();
+			}
 		}
 
 

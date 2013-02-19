@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'events'));
 
-	echo section_heading(l('impro_events_latest'));
+	echo section_heading($heading);
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));

@@ -41,7 +41,9 @@ Tag::div(array("class" => 'event_detail'));
 				Tag::li(array("class" => 'icon time', "content" => t('impro_event_start_at', format_date($event->start, 'human-time'))));
 			}
 
-			Tag::li(array("class" => 'icon location', "content" => $event->location->name.Tag::span(array("output" => false, "class" => 'addr', "content" => $event->location->addr))));
+			if ($event->location) {
+				Tag::li(array("class" => 'icon location', "content" => $event->location->name.Tag::span(array("output" => false, "class" => 'addr', "content" => $event->location->addr))));
+			}
 
 			if ($event->has_booking) {
 				$total = $event->reservations->count();
@@ -65,7 +67,9 @@ Tag::div(array("class" => 'event_detail'));
 			)),
 		));
 
-		echo $event->location->map_html($col_width, $col_width);
+		if ($event->location) {
+			echo $event->location->map_html($col_width, $col_width);
+		}
 
 	Tag::close('div');
 

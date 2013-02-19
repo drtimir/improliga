@@ -40,13 +40,20 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	}
 
 	$f->submit(l('impro_event_wizzard_finish'));
+	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
-		$event->update_attrs($f->get_data());
-		$event->save();
+		$p = $f->get_data();
 
-		Impro\Event::free_wizzard();
-		redirect_now(soprintf($link_event, $event));
+		if (isset($p['cancel'])) {
+			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+		} else {
+			$event->update_attrs($p);
+			$event->save();
+
+			Impro\Event::free_wizzard();
+			redirect_now(soprintf($link_event, $event));
+		}
 	} else {
 		$f->out($this);
 	}

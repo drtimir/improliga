@@ -60,21 +60,25 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	}
 
 	$f->text('hint0', l('impro_event_wizzard_participants_players_hint'));
-
 	$f->submit(l('impro_event_wizzard_next'));
+	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();
 
-		$part = array();
-		if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
-			$part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
-			$part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
-		}
+		if (isset($p['cancel'])) {
+			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+		} else {
+			$part = array();
+			if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
+				$part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
+				$part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
+			}
 
-		$event->assign($part);
-		$event->update_attrs($p)->save();
-		redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
+			$event->assign($part);
+			$event->update_attrs($p)->save();
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
+		}
 	} else {
 		$f->out($this);
 	}

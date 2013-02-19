@@ -1,0 +1,6 @@
+{
+	"System\\User\\Perm":[
+		{ "id":2, "type":"action", "trigger":"publish_event", "id_system_user_group":2, "id_author":1 },
+		{ "id":3, "type":"action", "trigger":"publish_event", "id_system_user_group":3, "id_author":1 }
+	]
+}

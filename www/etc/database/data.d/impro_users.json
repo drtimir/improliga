@@ -1,7 +1,7 @@
 {
 	"System\\User":[
 		{
-			"id_system_user":4,
+			"id":4,
 			"login":"just-paja",
 			"password":"",
 			"nick":"just-paja",
@@ -9,7 +9,7 @@
 			"last_name":"Žák"
 		},
 		{
-			"id_system_user":10,
+			"id":10,
 			"login":"lada.karda",
 			"password":"",
 			"nick":"Láďa",
@@ -18,7 +18,7 @@
 			"groups":[3,4]
 		},
 		{
-			"id_system_user":11,
+			"id":11,
 			"login":"ivo.klvan",
 			"password":"",
 			"nick":"Ivo",
@@ -27,7 +27,7 @@
 			"groups":[3,4]
 		},
 		{
-			"id_system_user":12,
+			"id":12,
 			"login":"andrea.molicova",
 			"password":"",
 			"nick":"Andrea",
@@ -36,7 +36,7 @@
 			"groups":[3,4]
 		},
 		{
-			"id_system_user":13,
+			"id":13,
 			"login":"vanda.gabrielova",
 			"password":"",
 			"nick":"Vanda",
@@ -45,7 +45,7 @@
 			"groups":[3,4]
 		},
 		{
-			"id_system_user":14,
+			"id":14,
 			"login":"jana.machalikova",
 			"password":"",
 			"nick":"Jana",
@@ -54,7 +54,7 @@
 			"groups":[1,2,3,4]
 		},
 		{
-			"id_system_user":15,
+			"id":15,
 			"login":"jakub.trojak",
 			"password":"",
 			"nick":"Kuba",
@@ -63,12 +63,20 @@
 			"groups":[3,4]
 		},
 		{
-			"id_system_user":16,
+			"id":16,
 			"login":"martin.tresnak",
 			"password":"",
 			"nick":"Martin",
 			"first_name":"Martin",
 			"last_name":"Třešňák",
+			"groups":[3,4]
+		},
+		{
+			"id":17,
+			"login":"martin.podloucky",
+			"password":"",
+			"first_name":"Martin",
+			"last_name":"Podloucký",
 			"groups":[3,4]
 		}
 	]

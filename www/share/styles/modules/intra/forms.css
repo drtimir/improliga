@@ -1,0 +1,55 @@
+.form-input input,
+.pwform .datetime_picker .container_time,
+.pwform .datetime_picker .container_date
+{
+	border-radius:4px;
+	padding:5px 8px;
+	border:1px solid #666;
+	background:#fefefe;
+}
+
+.form-input input,
+.pwform .datetime_picker input.time,
+.pwform .datetime_picker input.date,
+.pwform .datetime_picker .sep
+{
+	font-size:16px;
+}
+
+.pwform .datetime_picker input.time,
+.pwform .datetime_picker input.date
+{
+	padding:0;
+}
+
+.form-input input:active,
+.form-input input:focus,
+.pwform .datetime_picker .container_time:active,
+.pwform .datetime_picker .container_time:focus,
+.pwform .datetime_picker .container_date:active,
+.pwform .datetime_picker .container_date:focus
+{
+	border-color:#b82429;
+}
+
+
+.pwform .input-label-left {
+	font-size:15px;
+	line-height:31px;
+	vertical-align:middle;
+	width:150px;
+}
+
+.pwform .form-select .input-label-left {
+	line-height:22px;
+}
+
+.pwform .form-text {
+	margin-bottom:10px;
+}
+.pwform .form-text label { display:none }
+.pwform .form-text .input-container {
+	padding-left:150px;
+	display:block;
+	line-height:17px;
+}

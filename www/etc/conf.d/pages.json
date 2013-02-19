@@ -336,6 +336,13 @@
 						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
 					}
 				}},
+				"publish":{"#":{
+					"title":"intra_create_event",
+					"modules":{
+						"step":["impro/event/wizzard/publish", {"slot":"left", "new":true}],
+						"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+					}
+				}},
 				"cancel":{"#":{
 					"title":"intra_create_event",
 					"modules":{

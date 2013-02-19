@@ -3,12 +3,14 @@
 Tag::doctype();
 Tag::html();
 	Tag::head();
+		content_for("styles", "form/search_tool");
+
 		content_for('styles', 'intra/layout');
 		content_for('styles', 'intra/calendar');
 		content_for('styles', 'intra/news');
 		content_for('styles', 'intra/events');
 		content_for('styles', 'intra/discussions');
-		content_for("styles", "form/search_tool");
+		content_for('styles', 'intra/forms');
 
 		echo content_from('head');
 	Tag::close('head');

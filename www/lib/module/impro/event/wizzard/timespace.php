@@ -10,10 +10,20 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$data['location'] = $event->location;
 
 	$f = new System\Form(array(
+		"class"   => 'event_wizzard event_timespace',
 		"action"  => intra_path(),
-		"heading" => t("impro_event_wizzard", l('impro_event_wizzard_step_timespace')),
+		"heading" => t("impro_event_wizzard"),
+		"desc"    => t('impro_event_wizzard_step_timespace'),
 		"default" => $data
 	));
+
+	$f->input_datetime("start", l('impro_event_start'), true);
+	$f->text('hint0', l('impro_event_wizzard_start_hint'));
+
+	if (in_array($event->id_impro_event_type, Impro\Event\Type::get_types_with_end())) {
+		$f->input_datetime("end", l('impro_event_end'), true);
+		$f->text('hint1', l('impro_event_wizzard_end_hint'));
+	}
 
 	$f->input(array(
 		"name"  => 'location',
@@ -22,12 +32,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		"required" => true,
 	));
 
-	$f->input_datetime("start", l('impro_event_start'), true);
-
-	if (in_array($event->id_impro_event_type, Impro\Event\Type::get_types_with_end())) {
-		$f->input_datetime("end", l('impro_event_end'), true);
-	}
-
+	$f->text('hint2', l('impro_event_wizzard_location_hint'));
 	$f->submit(l('impro_event_wizzard_next'));
 
 	if ($f->passed()) {

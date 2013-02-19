@@ -9,16 +9,18 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$data = $event->get_data();
 	$f = new System\Form(array(
 		"action"  => intra_path(),
-		"heading" => t("impro_event_wizzard", l('impro_event_wizzard_step_tools')),
+		"heading" => t("impro_event_wizzard"),
+		"desc"    => t('impro_event_wizzard_step_tools'),
 		"default" => $data,
-		"class"   => 'event_tools'
+		"class"   => array('event_wizzard', 'event_tools'),
 	));
+
+	$f->text('hint0', l('impro_event_wizzard_tools_hint'));
 
 	$opts = array(
 		Impro\Event::ID_SETUP_STATUS_NO => l('impro_setup_status_no'),
 		Impro\Event::ID_SETUP_STATUS_OK => l('impro_setup_status_ok'),
 		Impro\Event::ID_SETUP_STATUS_NOT_NEEDED => l('impro_setup_status_not_needed'),
-
 	);
 
 	foreach (Impro\Event::get_tools() as $tool) {
@@ -30,6 +32,8 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			"multiple" => true,
 		));
 	}
+
+	$f->text('hint1', l('impro_event_wizzard_tools_hint_lower'));
 
 	$f->submit(l('impro_event_wizzard_next'));
 

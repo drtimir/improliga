@@ -148,19 +148,24 @@
 }
 
 .wizzard {
-
+	padding:5px 0 100px 20px;
+	border-left:1px solid #efefef
 }
+
 .wizzard li {
 	display:block;
-	margin:5px 0;
-	padding-left:21px;
-	background-position:left center;
+	margin:0 0 5px;
+	padding-left:30px;
+	background-position:left 0;
+	min-height:24px;
 	background-repeat:no-repeat;
+	font-size:16px;
+	line-height:24px;
 }
 
-.wizzard .passed { background-image:url(/share/icons/16/impro/status/ok) }
-.wizzard .failed { background-image:url(/share/icons/16/impro/status/failed) }
-.wizzard .incomplete { background-image:url(/share/icons/16/impro/status/incomplete) }
+.wizzard .passed { background-image:url(/share/icons/24/impro/status/ok) }
+.wizzard .failed { background-image:url(/share/icons/24/impro/status/failed) }
+.wizzard .incomplete { background-image:url(/share/icons/24/impro/status/incomplete) }
 
 
 .event_tools .options {
@@ -176,7 +181,125 @@
 	margin:0 15px 0 0;
 }
 
+.event_tools .inputs .form-input {
+	padding:1px 12px;
+	border-radius:5px;
+}
+
+.event_tools .inputs label {
+	width:175px;
+}
+
 .event_tools .options li label {
 	width:auto;
+	font-weight:normal;
+	margin-right:15px;
+}
+
+.event_tools .form-text div.input-container {
+	padding:5px 12px;
+}
+
+.event_timespace .form-text div.input-container {
+	padding:0;
+}
+
+.event_publish .form-text,
+.event_poster .form-text
+{
+	margin:0;
+}
+
+.event_publish .form-text div.input-container {
+	padding:0 0 0 7px;
+}
+
+.event_poster .form-text div.input-container {
+	padding:0;
+}
+
+.event_poster .input-field_generic_tickets,
+.event_poster .input-field_generic_poster,
+.event_poster .input-field_use_booking,
+.event_publish .input-field_visible,
+.event_publish .input-field_published,
+.event_publish .input-field_publish_wait
+{
+	padding:5px;
+	border-radius:5px;
+	margin:10px 0 0;
+	width:300px;
+}
+
+.event_poster .input-field_generic_tickets:hover,
+.event_poster .input-field_generic_poster:hover,
+.event_poster .input-field_use_booking:hover,
+.event_tools .inputs .form-input:hover,
+.event_publish .input-field_visible:hover,
+.event_publish .input-field_published:hover,
+.event_publish .input-field_publish_wait:hover
+{
+	background:#efefef;
+}
+
+
+.event_poster .input-field_generic_tickets label,
+.event_poster .input-field_generic_poster label,
+.event_poster .input-field_use_booking label,
+.event_publish .input-field_visible label,
+.event_publish .input-field_published label,
+.event_publish .input-field_publish_wait label
+{
+	font-size:15px;
+	font-weight:bold;
+	width:auto;
+	vertical-align:top;
+}
+
+.event_poster .input-field_generic_tickets .input-container,
+.event_poster .input-field_generic_poster .input-container,
+.event_poster .input-field_use_booking .input-container,
+.event_publish .input-field_visible .input-container,
+.event_publish .input-field_published .input-container,
+.event_publish .input-field_publish_wait .input-container
+{
+	vertical-align:middle;
+	margin-right:5px;
+}
+
+.event_wizzard_outer {
+	margin-right:15px;
+}
+
+.event_wizzard_outer h1 {
+	margin-bottom:10px;
+}
+
+.event_wizzard_outer .desc {
+	font-size:24px;
+	margin-top:0;
+}
+
+.event_wizzard .input-location {
+	display:block
+}
+.event_wizzard .input-field_location label { display:none }
+.event_wizzard .input-field_location .input-container label { display:inline-block }
+
+.event_wizzard .loc-options .input {
+	margin-left:0;
+	margin-right:0;
+	padding:0;
+}
+
+.event_wizzard ul.options {
+	display:inline-block;
+	padding:0;
+}
+
+.event_wizzard ul.options li { margin:0 }
+.event_wizzard ul.options li input { vertical-align:top; }
+.event_wizzard ul.options li label {
+	vertical-align:middle;
 	font-weight:normal;
 }

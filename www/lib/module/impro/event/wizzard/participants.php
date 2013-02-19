@@ -6,14 +6,28 @@ def($link_wizzard, '/events/create/{step}/');
 
 if ($event = Impro\Event::wizzard_for($id, $new)) {
 
+	$event_participants = $event->participants->fetch();
 	$part = array();
 
-	foreach ($event->participants as $part) {
+	$roles = array(
+		Impro\Event\Participant\Type::ID_PLAYER => 'players_home',
+		Impro\Event\Participant\Type::ID_PLAYER_HOME => 'players_home',
+		Impro\Event\Participant\Type::ID_PLAYER_AWAY => 'players_away',
+	);
+
+	foreach ($event_participants as $participant) {
+		if (!isset($part[$participant->type])) {
+			$part[$roles[$participant->type]] = array();
+		}
+
+		$part[$roles[$participant->type]][] = $participant->id_impro_team_member;
 	}
 
 	$f = new System\Form(array(
+		"class"   => 'event_wizzard',
 		"action"  => intra_path(),
-		"heading" => t("impro_event_wizzard", l('impro_event_wizzard_step_participants')),
+		"heading" => t("impro_event_wizzard"),
+		"desc"    => t('impro_event_wizzard_step_participants'),
 		"default" => $part,
 	));
 
@@ -34,19 +48,31 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			$players[$side][$p->id] = $p->user->get_name();
 		}
 
-		$f->input(array(
-			"type"     => 'checkbox',
-			"name"     => 'players_'.$side,
-			"label"    => l('impro_event_players_'.$side),
-			"options"  => $players[$side],
-			"multiple" => true,
-		));
+		if (any($players[$side])) {
+			$f->input(array(
+				"type"     => 'checkbox',
+				"name"     => 'players_'.$side,
+				"label"    => l('impro_event_players_'.$side.($event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? '':'_owner')),
+				"options"  => $players[$side],
+				"multiple" => true,
+			));
+		}
 	}
+
+	$f->text('hint0', l('impro_event_wizzard_participants_players_hint'));
 
 	$f->submit(l('impro_event_wizzard_next'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();
+
+		$part = array();
+		if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
+			$part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
+			$part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
+		}
+
+		$event->assign($part);
 		$event->update_attrs($p)->save();
 		redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
 	} else {

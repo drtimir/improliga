@@ -29,9 +29,9 @@ namespace Impro
 			"start"         => array('datetime'),
 			"end"           => array('datetime', "is_null" => true),
 			"capacity"      => array('int', "default" => 0),
-			"has_booking"   => array('bool'),
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
+			"publish_wait"  => array('bool'),
 
 			"has_whistle"   => array('int', "default" => 0),
 			"has_kazoo"     => array('int', "default" => 0),
@@ -42,11 +42,12 @@ namespace Impro
 			"has_basket"    => array('int', "default" => 0),
 			"has_papers"    => array('int', "default" => 0),
 			"has_pencils"   => array('int', "default" => 0),
+			"has_camera"    => array('int', "default" => 0),
+			"has_photo"     => array('int', "default" => 0),
+
 			"gen_poster"    => array('bool'),
 			"gen_tickets"   => array('bool'),
-
-			"skip_participants" => array('bool'),
-			"skip_tools"        => array('bool'),
+			"use_booking"   => array('bool'),
 		);
 //~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
 
@@ -88,10 +89,12 @@ namespace Impro
 
 			if ($new && !$event) {
 				$event = new self(array(
-					"published" => false,
-					"visible"   => false,
 					"id_impro_event_type" => \Impro\Event\Type::ID_MATCH,
-					"id_author" => user()->id,
+					"published"   => false,
+					"visible"     => false,
+					"id_author"   => user()->id,
+					"start"       => new \DateTime(),
+					"use_booking" => true
 				));
 			}
 
@@ -104,6 +107,12 @@ namespace Impro
 			}
 
 			return $event;
+		}
+
+
+		public static function free_wizzard()
+		{
+			unset($_SESSION['impro_event_wizzard_id']);
 		}
 
 
@@ -159,7 +168,45 @@ namespace Impro
 
 		public static function get_tools()
 		{
-			return array("whistle", "kazoo", "mic", "dress_ref", "dress_oth", "cards", "basket", "papers", "pencils");
+			return array("whistle", "kazoo", "mic", "dress_ref", "dress_oth", "cards", "basket", "papers", "pencils", "camera", "photo");
 		}
+
+
+		public function assign(array $roles)
+		{
+			$event_participants = $this->participants->fetch();
+			$participants = array();
+			$delete = array();
+
+			foreach ($roles as $role => $ids) {
+				foreach ($event_participants as $participant) {
+					if (in_array($participant->id_player, $ids)) {
+						$participant->type = $role;
+						$participants[$participant->id_impro_team_member] = $participant;
+					}
+				}
+
+				foreach ($ids as $id) {
+					if (!isset($participants[$id])) {
+						$participants[$id] = new \Impro\Event\Participant(array(
+							"id_impro_event" => $this->id,
+							"id_impro_team_member" => $id,
+							"type" => $role,
+						));
+					}
+				}
+			}
+
+			foreach ($event_participants as $part) {
+				//~ if (!isset($participants[$part->id_impro_team_member])) {
+					$part->drop();
+				//~ }
+			}
+
+			foreach ($participants as $part) {
+				$part->save();
+			}
+		}
+
 	}
 }

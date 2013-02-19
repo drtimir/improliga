@@ -7,8 +7,10 @@ def($link_wizzard, '/events/create/{step}/');
 if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 	$f = new System\Form(array(
+		"class"   => 'event_wizzard',
 		"action"  => intra_path(),
-		"heading" => t("impro_event_wizzard", l('impro_event_wizzard_step_teams')),
+		"heading" => t("impro_event_wizzard"),
+		"desc"    => t('impro_event_wizzard_step_teams'),
 		"default" => $event->get_data()
 	));
 
@@ -21,20 +23,41 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		}
 
 		$f->input(array(
-			"type"    => 'select',
-			"name"    => 'id_team_home',
-			"options" => $teams_opts,
-			"label"   => l('impro_event_team_home'),
+			"type"     => 'select',
+			"name"     => 'id_team_home',
+			"options"  => $teams_opts,
+			"label"    => l('impro_event_team_home'),
+			"required" => true,
 		));
 
 		$f->input(array(
-			"type"    => 'select',
-			"name"    => 'id_team_away',
-			"options" => $teams_opts,
-			"label"   => l('impro_event_team_away'),
+			"type"     => 'select',
+			"name"     => 'id_team_away',
+			"options"  => $teams_opts,
+			"label"    => l('impro_event_team_away'),
+			"required" => true,
 		));
+
+		$f->text('hint0', l('impro_event_wizzard_teams_hint'));
+
 	} else {
 
+		$teams = user()->teams;
+		$teams_opts = array();
+
+		foreach ($teams as $team) {
+			$teams_opts[$team->name] = $team->id;
+		}
+
+		$f->input(array(
+			"type"     => 'select',
+			"name"     => 'id_team_home',
+			"options"  => $teams_opts,
+			"label"    => l('impro_event_team_owner'),
+			"required" => true,
+		));
+
+		$f->text('hint0', l('impro_event_wizzard_team_owner_hint'));
 	}
 
 	$f->submit(l('impro_event_wizzard_next'));

@@ -7,17 +7,22 @@ Tag::div(array("class" => 'wizzard'));
 	Tag::ul(array("class" => 'plain'));
 		$passed = true;
 		$complete = true;
+		$prev = false;
 
 		foreach ($steps as $step=>$label) {
 			$class = array();
 			$complete = true;
+
+			if ($step === Impro\Event::ID_WIZZARD_STEP_NAME) {
+				$passed = $event->id_impro_event_type && $event->name;
+			}
 
 			if ($step !== Impro\Event::ID_WIZZARD_STEP_NAME && (!$event->id_impro_event_type || !$event->name)) {
 				$passed = false;
 			}
 
 			if ($step === Impro\Event::ID_WIZZARD_STEP_TEAMS) {
-				$complete = $event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? ($event->id_team_home && $event->id_team_away):($event->id_team_home);
+				$passed = $event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? ($event->id_team_home && $event->id_team_away):($event->id_team_home);
 			}
 
 			if ($step === Impro\Event::ID_WIZZARD_STEP_TOOLS) {
@@ -29,10 +34,13 @@ Tag::div(array("class" => 'wizzard'));
 			}
 
 			if ($step === Impro\Event::ID_WIZZARD_STEP_PUBLISH) {
-				$passed = false;
+				$complete = $event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? ($event->id_team_home && $event->id_team_away):($event->id_team_home);
+				$complete = $complete && $event->has_all_tools();
+				$complete = $complete && $event->image && $event->image->file_name;
+				//~ $passed = false;
 			}
 
-			if ($passed && $current !== $step) {
+			if (($current !== $step && ($passed || $prev)) || $step == Impro\Event::ID_WIZZARD_STEP_NAME) {
 				$content = link_for($label, stprintf($link_wizzard, array("step" => $step)));
 			} else {
 				$content = $label;
@@ -44,6 +52,8 @@ Tag::div(array("class" => 'wizzard'));
 			if ($current === $step) {
 				$class[] = 'current';
 			}
+
+			$prev = $passed;
 
 			Tag::li(array(
 				"class"   => $class,

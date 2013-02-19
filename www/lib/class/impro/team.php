@@ -10,6 +10,7 @@ namespace Impro
 			"city"       => array("varchar"),
 			"about"      => array("text"),
 			"logo"       => array('image'),
+			"photo"      => array('image'),
 			"site"       => array("varchar"),
 			"played"     => array("int", "is_unsigned" => true),
 			"visible"    => array("bool"),
@@ -17,6 +18,7 @@ namespace Impro
 
 		protected static $belongs_to = array(
 			"author" => array("model" => "\System\User"),
+			"hq"     => array("model" => "\System\Location"),
 		);
 
 		protected static $has_many = array(

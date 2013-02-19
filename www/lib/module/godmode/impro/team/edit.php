@@ -11,6 +11,8 @@ if (($new && $item = new Impro\Team()) || ($id && $item = find("\Impro\Team", $i
 	$f = new System\Form(array("default" => $item->get_data(), "heading" => $heading));
 	$f->input_text("name", l('impro_team_name'), true);
 	$f->input_text("name_full", l('impro_team_name_full'), true);
+	$f->input_image('logo', l('impro_team_logo'));
+	$f->input_image('photo', l('impro_team_photo'));
 
 	$f->input(array(
 		"type"  => 'textarea',

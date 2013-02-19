@@ -104,7 +104,9 @@ namespace Impro
 					$event->save();
 				}
 
-				$_SESSION['impro_event_wizzard_id'] = $event->id;
+				if ($new) {
+					$_SESSION['impro_event_wizzard_id'] = $event->id;
+				}
 			}
 
 			return $event;

@@ -67,6 +67,10 @@ Tag::div(array("class" => 'event_detail'));
 			)),
 		));
 
+		if ($controls) {
+			v('sdaf');
+		}
+
 		if ($event->location) {
 			echo $event->location->map_html($col_width, $col_width);
 		}

@@ -11,12 +11,14 @@ def($col_width, 270);
 if ($id && $item = find('\Impro\Event', $id)) {
 
 	title($item->title);
+	$controls = user()->id == $item->id_author || user()->has_right('edit_events');
 
 	$this->template($template, array(
 		"event" => $item,
 		"link_cont" => $link_cont,
 		"link_team" => $link_team,
 		"col_width" => $col_width,
+		"controls"  => $controls,
 	));
 
 } else throw new System\Error\NotFound();

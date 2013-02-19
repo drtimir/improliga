@@ -32,6 +32,8 @@ namespace Impro
 			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
 			"publish_wait"  => array('bool'),
+			"price"         => array('int'),
+			"price_student" => array('int'),
 
 			"has_whistle"   => array('int', "default" => 0),
 			"has_kazoo"     => array('int', "default" => 0),
@@ -68,8 +70,8 @@ namespace Impro
 
 		private static $wizzard_steps = array(
 			self::ID_WIZZARD_STEP_NAME         => 'impro_event_wizzard_step_name',
-			self::ID_WIZZARD_STEP_TIMESPACE    => 'impro_event_wizzard_step_timespace',
 			self::ID_WIZZARD_STEP_TEAMS        => 'impro_event_wizzard_step_teams',
+			self::ID_WIZZARD_STEP_TIMESPACE    => 'impro_event_wizzard_step_timespace',
 			self::ID_WIZZARD_STEP_PARTICIPANTS => 'impro_event_wizzard_step_participants',
 			self::ID_WIZZARD_STEP_TOOLS        => 'impro_event_wizzard_step_tools',
 			self::ID_WIZZARD_STEP_POSTER       => 'impro_event_wizzard_step_poster',

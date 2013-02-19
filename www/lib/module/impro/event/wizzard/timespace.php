@@ -44,7 +44,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		} else {
 			$event->id_location = $p['location']->save()->id;
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS)));
 		}
 	} else {
 		$f->out($this);

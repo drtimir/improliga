@@ -107,6 +107,16 @@
 			"gps":"POINT(50.091085 14.44867)",
 			"desc":"",
 			"site":""
+		},
+		{
+			"id_system_location":13,
+			"id_user":1,
+			"name":"SVČ Lužánky",
+			"addr":"Brno, Lidická 50",
+			"gps":"POINT(49.206171 16.606569)",
+			"desc":"SVČ Lužánky",
+			"site":"http://www.luzanky.cz/"
 		}
+
 	]
 }

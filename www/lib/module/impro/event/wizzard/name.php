@@ -45,7 +45,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			}
 
 			$event->save();
-			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
 		}
 	} else {
 		$f->out($this);

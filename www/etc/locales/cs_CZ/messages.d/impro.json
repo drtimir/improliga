@@ -56,6 +56,8 @@
 	"impro_event_use_booking":"Použít improligové rezervace",
 	"impro_events_latest":"Nejbližší události",
 	"impro_event_unfinished":"Nová událost",
+	"impro_event_price":"Vstupné",
+	"impro_event_price_student":"Studentské vstupné",
 
 	"impro_event_players_home_owner":"Hráči",
 	"impro_event_players_home":"Domácí",

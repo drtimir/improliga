@@ -16,14 +16,13 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		"default" => $data
 	));
 
-	$f->text('hint0', l('impro_event_wizzard_poster_hint'));
+	$f->input_number('price', l('impro_event_price'));
+	$f->input_number('price_student', l('impro_event_price_student'));
 
 	$f->input_checkbox('use_booking', l('impro_event_use_booking'));
 	$f->text('hint1', l('impro_event_wizzard_use_booking_hint'));
-	$f->input_checkbox('generic_poster', l('impro_event_generic_poster'));
-	$f->text('hint2', l('impro_event_wizzard_generic_poster_hint'));
-	$f->input_checkbox('generic_tickets', l('impro_event_generic_tickets'));
-	$f->text('hint3', l('impro_event_wizzard_generic_tickets_hint'));
+
+	$f->text('hint0', l('impro_event_wizzard_poster_hint'));
 
 	$f->input(array(
 		"type"  => 'image',
@@ -32,6 +31,11 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		"hint"  => l('impro_event_image_hint'),
 		"required" => true,
 	));
+
+	$f->input_checkbox('generic_poster', l('impro_event_generic_poster'));
+	$f->text('hint2', l('impro_event_wizzard_generic_poster_hint'));
+	$f->input_checkbox('generic_tickets', l('impro_event_generic_tickets'));
+	$f->text('hint3', l('impro_event_wizzard_generic_tickets_hint'));
 
 
 	$f->submit(l('impro_event_wizzard_next'));

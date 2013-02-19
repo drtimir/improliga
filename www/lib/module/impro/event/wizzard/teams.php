@@ -68,8 +68,14 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
 		} else {
 			$p = $f->get_data();
-			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS)));
+			$event->update_attrs($p);
+
+			if (!$event->id_location && $event->team_home->hq) {
+				$event->id_location = $event->team_home->id_hq;
+			}
+
+			$event->save();
+			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
 		}
 	} else {
 		$f->out($this);

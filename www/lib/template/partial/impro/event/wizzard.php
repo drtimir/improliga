@@ -33,6 +33,10 @@ Tag::div(array("class" => 'wizzard'));
 				$complete = $event->image && $event->image->file_name;
 			}
 
+			if ($step === Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS) {
+				$complete = $event->participants->count() > 0;
+			}
+
 			if ($step === Impro\Event::ID_WIZZARD_STEP_PUBLISH) {
 				$complete = $event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? ($event->id_team_home && $event->id_team_away):($event->id_team_home);
 				$complete = $complete && $event->has_all_tools();

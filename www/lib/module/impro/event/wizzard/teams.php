@@ -15,7 +15,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	));
 
 	if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
-		$teams = get_all('\Impro\Team')->where(array("visible" => true))->fetch();
+		$teams = get_all('\Impro\Team')->where(array("visible" => true))->sort_by('name')->fetch();
 		$teams_opts = array();
 
 		foreach ($teams as $team) {

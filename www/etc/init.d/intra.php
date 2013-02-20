@@ -53,9 +53,5 @@ System\Output::set_opts(array(
 System\Flow::run();
 System\Flow::run_messages();
 
-if (strpos($page->get_path(), "/cron") === 0) {
-	System\Status::report("cron", "Requested cron page ".$page->get_path());
-}
-
 System\Output::out();
 System\Message::dequeue_all();

@@ -109,7 +109,7 @@
 	"impro_event_wizzard_visible_hint":"Událost bude viditelná na intranetu pro celou Improligu.",
 	"impro_event_wizzard_published_hint":"Událost bude zveřejněna.",
 	"impro_event_wizzard_published_rights_hint":"Na zveřejnění události nemáte oprávnění. Můžete pouze zařadit do fronty na publikování, kde jí schválí jeden z adminů. Po schválení vám bude posláno potvrzení emailem.",
-	"impro_event_wizzard_use_booking":"Použít interní systém improligy na rezervace",
+	"impro_event_wizzard_use_booking_hint":"Použít interní systém Improligy na rezervace",
 
 	"impro_news":"Novinky",
 	"impro_news_title":"Nadpis",

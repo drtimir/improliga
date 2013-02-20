@@ -19,15 +19,6 @@
 			"site":"http://www.divadlo29.cz"
 		},
 		{
-			"id_system_location":3,
-			"id_user":1,
-			"name":"Divadlo 29",
-			"addr":"Pardubice, Svaté Anežky České 29",
-			"gps":"POINT(50.040029 15.779871)",
-			"desc":"Divadlo 29",
-			"site":"http://www.divadlo29.cz"
-		},
-		{
 			"id_system_location":4,
 			"id_user":1,
 			"name":"SVČ Lužánky, sál Ornis",

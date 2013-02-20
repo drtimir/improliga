@@ -1,3 +1,63 @@
+commit 62fcbec84d622243270a64afb1aa9d352c48de2e
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 14:37:56 2013 +0100
+
+    Forms, locations, passwords
+    
+    * Forms now seek locations by name, editing is not allowed
+    * Password input does not pass value
+
+commit 04e009195ba7229ab1102e018c14c4927240b83e
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 14:06:18 2013 +0100
+
+    Autocompleter
+    
+    * Fixed autocompleter z-index
+
+commit 5c51c41b4a4afc707742aed6a409fa1118c0cfa0
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 14:05:29 2013 +0100
+
+    Database model
+    
+    * Strictly added ID column into attributes
+
+commit 6bf97c2347c8e9ae06a50d974d7cc6daf2e04d13
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 14:00:56 2013 +0100
+
+    Models
+    
+    * Changed callback model to be more static
+    * Added option that indicates if model data has changed to attr model
+    * Implemented new parents into database model
+
+commit 325d12cedbdcff8f9bb76f47d81ae25b69fe67ce
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 13:34:47 2013 +0100
+
+    Forms, gps
+    
+    * Added autocompleter
+    * Added location input autocompleter
+
+commit bc6eedde15f47e1d1c58fe8282f94b78f3f9ab2e
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 10:33:55 2013 +0100
+
+    Forms, gps
+    
+    * Fixed GPS input values
+
+commit cd64b0ddb46eef73017606eea20df50ee52f6826
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 19 16:09:30 2013 +0100
+
+    Image class
+    
+    * Fixed parameters for thumb()
+
 commit 75558999b31a92f25b4af0e431077774075c535e
 Author: just-paja <pavel@proboston.net>
 Date:   Tue Feb 19 15:41:48 2013 +0100

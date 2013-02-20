@@ -31,11 +31,21 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		"default" => $part,
 	));
 
+
 	if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
 		$sides = array('home', 'away');
+
+		if (!$event->id_team_home || !$event->id_team_away) {
+			redirect_now(stprintf($link_wizzard, array('step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+		}
 	} else {
 		$sides = array('home');
+
+		if (!$event->id_team_home) {
+			redirect_now(stprintf($link_wizzard, array('step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+		}
 	}
+
 
 	$players = array();
 

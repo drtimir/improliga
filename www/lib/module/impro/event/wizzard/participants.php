@@ -36,13 +36,13 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$sides = array('home', 'away');
 
 		if (!$event->id_team_home || !$event->id_team_away) {
-			redirect_now(stprintf($link_wizzard, array('step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, 'step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
 		}
 	} else {
 		$sides = array('home');
 
 		if (!$event->id_team_home) {
-			redirect_now(stprintf($link_wizzard, array('step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, 'step' => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
 		}
 	}
 
@@ -77,7 +77,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$p = $f->get_data();
 
 		if (isset($p['cancel'])) {
-			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$part = array();
 			if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
@@ -87,7 +87,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 			$event->assign($part);
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
+			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
 		}
 	} else {
 		$f->out($this);

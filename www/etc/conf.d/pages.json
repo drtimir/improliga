@@ -288,21 +288,23 @@
 						"template":["intra/layout", "intra/dual_34_14"],
 						"title":"intra_create_event",
 						"modules":{
-							"step":["impro/event/wizzard/name", {"slot":"left", "id":"#{0}"}],
-							"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+							"step":["impro/event/wizzard/name", {"slot":"left", "id":"#{0}", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}],
+							"status":["impro/event/wizzard/status", {"slot":"right", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}, ["step"]]
 						}
 					},
+
 					"cancel":{"#":{
 						"title":"intra_create_event",
 						"modules":[
-							["impro/event/wizzard/cancel", {"slot":"left", "id":"#{0}"}]
+							["impro/event/wizzard/cancel", {"slot":"left", "id":"#{0}", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}]
 						]
 					}},
+
 					"*":{"#":{
 						"title":"intra_create_event",
 						"modules":{
-							"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}"}],
-							"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+							"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}],
+							"status":["impro/event/wizzard/status", {"slot":"right", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}, ["step"]]
 						}
 					}}
 				}

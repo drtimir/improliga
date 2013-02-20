@@ -2,6 +2,7 @@
 
 def($id);
 def($link_cont, '/events/{id_impro_event}/');
+def($link_action, '/events/{id_impro_event}/{action}');
 def($link_team, '/teams/{id_impro_team}/');
 def($conds, array());
 def($opts, array());
@@ -14,11 +15,12 @@ if ($id && $item = find('\Impro\Event', $id)) {
 	$controls = user()->id == $item->id_author || user()->has_right('edit_events');
 
 	$this->template($template, array(
-		"event" => $item,
-		"link_cont" => $link_cont,
-		"link_team" => $link_team,
-		"col_width" => $col_width,
-		"controls"  => $controls,
+		"event"       => $item,
+		"link_cont"   => $link_cont,
+		"link_team"   => $link_team,
+		"link_action" => $link_action,
+		"col_width"   => $col_width,
+		"controls"    => $controls,
 	));
 
 } else throw new System\Error\NotFound();

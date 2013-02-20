@@ -41,10 +41,10 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$p = $f->get_data();
 
 		if (isset($p['cancel'])) {
-			redirect_now(stprintf($link_wizzard, array("step" => 'cancel')));
+			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("step" => Impro\Event::ID_WIZZARD_STEP_POSTER)));
+			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_POSTER)));
 		}
 	} else {
 		$f->out($this);

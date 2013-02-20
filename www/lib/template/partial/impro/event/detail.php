@@ -68,7 +68,11 @@ Tag::div(array("class" => 'event_detail'));
 		));
 
 		if ($controls) {
-			v('sdaf');
+			Tag::ul(array("class" => 'controls'));
+				Tag::li(array("content" => label_for('godmode/actions/edit', 16, l('impro_event_edit'), stprintf(soprintf($link_action, $event), array("action" => 'edit')))));
+				Tag::li(array("content" => label_for('godmode/actions/delete', 16, l('impro_event_delete'), stprintf(soprintf($link_action, $event), array("action" => 'delete')))));
+
+			Tag::close('ul');
 		}
 
 		if ($event->location) {

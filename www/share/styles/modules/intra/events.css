@@ -81,11 +81,41 @@
 	width:270px;
 	float:right;
 	border-left:1px solid #efefef;
+	padding-bottom:50px;
 }
 
-.event_detail .right .image {
+.event_detail .right .image,
+.event_detail .right .image img
+{
 	display:block;
-	margin-bottom:15px;
+}
+
+.event_detail .controls {
+	margin:15px 0;
+	padding:0;
+	border-right:1px solid #efefef;
+}
+
+.event_detail .controls li {
+	margin:0;
+	list-style:none;
+}
+
+.event_detail .controls a {
+	padding:5px 15px;
+	line-height:16px;
+	display:block;
+}
+
+.event_detail .controls a:hover {
+	background:#efefef;
+}
+
+.event_detail .controls .lt {
+	vertical-align:top;
+}
+.event_detail .controls .icon {
+	margin-right:10px;
 }
 
 .events .controls {

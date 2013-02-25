@@ -11,7 +11,7 @@
 				"conds":{"published":true}
 			}],
 			["impro/event/calendar", {
-				"slot":"events_right",
+				"slot":"right",
 				"day_link_integrate":true,
 				"link_month":"/udalosti/seznam/{year}-{month}/",
 				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",

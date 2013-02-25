@@ -44,7 +44,7 @@
 
 
 .latest .desc {
-	width:320px;
+	width:280px;
 }
 
 .event_list .desc .ts_location {
@@ -156,7 +156,9 @@
 
 
 .block .calendar-head {
-	border-bottom:1px solid #ccc;
+	border-bottom:none;
+	padding-bottom:0;
+	margin-bottom:0;
 }
 
 
@@ -174,7 +176,7 @@
 	border-radius:3px;
 	border:none;
 	margin:0 2px;
-	width:63px;
+	width:54px;
 	text-align:center;
 }
 
@@ -186,27 +188,36 @@
 }
 
 .calendar .day-head {
-	height:63px;
-	line-height:63px;
+	height:54px;
+	line-height:54px;
 	font-size:24px;
 	border-radius:5px;
 	background:#FAEA96;
-	color:#555;
+	color:rgba(255,255,255,.8);
 	cursor:default;
 	display:block;
+	background:rgba(230,205,70, 0.6);
+}
+
+.calendar .day-head:hover {
+	background:rgba(230,205,70, 0.75);
 }
 
 .calendar .today .day-head {
-	background:#E6CD4C
+	background:#E6CD4C;
 }
 
 .calendar .day-inactive .day-head {
-	background:#efefef;
-	color:#ccc;
+	background:rgba(100,100,100,0.5);
+	color:#666;
 }
 
 .calendar .day-events .day-head {
-	background:#B82429;
+	background:rgba(184,36,41,0.8);
 	color:#fff;
 	cursor:pointer;
+}
+
+.calendar .day-events .day-head:hover {
+	background:#B82429;
 }

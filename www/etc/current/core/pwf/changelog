@@ -1,4 +1,110 @@
-commit c1e4a3a14ed95d8029916841767d22b35a756896
+commit 9fe2964a48099226aebb0d1c39069c2138f5a4a5
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:59:55 2013 +0100
+
+    Make script
+    
+    * Dropped cli constants
+
+commit 92ed17b02585c0a6a3a4397b741ac41a202345fd
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:56:50 2013 +0100
+
+    Drop unused constants
+    
+    * Dropped unused CLI constants
+
+commit 6ded8307dbe878f082ec1e0f6818873a521d1977
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 15:19:04 2013 +0100
+
+    GPS picker
+    
+    * Dropped debug messages
+
+commit eef258d50265016cc529200210ac4be28b1e2493
+Merge: 97d7f97 059a57f
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:50:58 2013 +0100
+
+    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+
+commit 97d7f975abca7a4c9b6da4cf335443df6fa725e7
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:49:34 2013 +0100
+
+    Resource class
+    
+    * Resource class now sends pragma headers
+
+commit 0f6bdea080c6ac4c1cdd128fd1d8100eb7803536
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:41:54 2013 +0100
+
+    Archive class
+    
+    * Dropped deprecated messages
+
+commit 3e1f52aa917a16a4e875beaeb58bd12dea82f2f5
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 17:35:55 2013 +0100
+
+    Offcom email class
+    
+    * Rewritten e-mail class
+    * Dropped old e-mailer model class
+
+commit 65905842d9582ad7432638e454e16e6131d94a8f
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:58:33 2013 +0100
+
+    Drop messages
+    
+    * Removed some old message() uses
+
+commit ee14e754214d95d24a340867c749a50470629e8a
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:52:43 2013 +0100
+
+    Code cleaning
+    
+    * Dropped more unused functions and aliases
+
+commit 2320c1556782678159cdcf4bbe0131b5667cca3d
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:43:46 2013 +0100
+
+    Partial module
+    
+    * Added module that just includes partial template
+
+commit 76ead8a4489a3abfd913212c25c89172f3496004
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:43:11 2013 +0100
+
+    Message module
+    
+    * Added option to override template
+
+commit 5dcfb5372810ba3999e4b798fb8711443f6d43a1
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:42:26 2013 +0100
+
+    Module class
+    
+    * Commented functions in module class
+    * Added locals require function to modules
+
+commit ff6d655aab8e4d6f985c205230dc670debb494f8
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Feb 25 16:41:45 2013 +0100
+
+    Functions
+    
+    * Fixed dump function v() when not dumping inside class
+    * Dropped some old unused functions
+
+commit 059a57fdaac9867e3c3a4ad58f5b34c4123b4a20
 Author: just-paja <just.paja@gmail.com>
 Date:   Sun Feb 24 15:50:16 2013 +0100
 

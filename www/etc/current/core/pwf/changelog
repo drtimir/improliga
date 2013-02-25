@@ -1,3 +1,27 @@
+commit c1e4a3a14ed95d8029916841767d22b35a756896
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Feb 24 15:50:16 2013 +0100
+
+    Error reporting
+    
+    * System is now catching all errors
+
+commit 068475de0c01bf7435311a12cbd91d8666a8f766
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Feb 24 15:20:35 2013 +0100
+
+    Database script
+    
+    * Fixed notices
+
+commit f91541183d4888586cb13b3b4346717eb8476dad
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Feb 24 15:15:40 2013 +0100
+
+    Status page
+    
+    * Fixed templates
+
 commit 62fcbec84d622243270a64afb1aa9d352c48de2e
 Author: just-paja <pavel@proboston.net>
 Date:   Wed Feb 20 14:37:56 2013 +0100

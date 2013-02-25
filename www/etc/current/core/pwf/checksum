@@ -1,5 +1,5 @@
-78e87372a458af8065683a547ffd6667  lib/include/system.php
-1bbb0488c4a3ce0f5fb3c0845cefda59  bin/db
+99fd789b671b0972ae67dd8732af3304  lib/include/system.php
+fdb814475737279c7aeb93883eff68b6  bin/db
 e67126c95c9ef83b9d79ad5dd0bfadcf  bin/deploy
 7d8402f2b49eb750295690eeaded9b96  bin/santa
 ed603228ec49885d48ce48894fa25bae  bin/system
@@ -50,7 +50,7 @@ c5beb74466e93d1fd622067d719dfc68  lib/class/santa/cli.php
 0986f6a022318e5da31280a2e84d3c45  lib/class/santa/package.php
 ee6b2a429f3dd6ee158c7dbac6cdd007  lib/common/icon.php
 45ccf8805cc0563295703cdd81d83721  lib/common/resource.php
-3fa85ded9a24682be2b59f8c1d9581c0  lib/common/status.php
+4f5265ccbc8ed87cfdb2d26223873ad0  lib/common/status.php
 68912e95cd487c420c43d1d58ce3caf9  lib/include/constants.cli.php
 ac3fca9d0d7864469a3307b5093a7fb3  lib/include/core.cli.php
 e89ff2fad9b7bf2860523dfb9a1e9ab9  lib/include/functions.cli.php
@@ -59,7 +59,7 @@ e89ff2fad9b7bf2860523dfb9a1e9ab9  lib/include/functions.cli.php
 d7e1bd911b0988c806e3c32d71028f6c  lib/template/partial/system/common.json.php
 a23f14061b1f703ad6087b02cf07ec0e  lib/template/partial/system/error/403.php
 dbdd6bb316b1d958649b0b613e537c69  lib/template/partial/system/error/404.php
-09d08613d35170dbfd2a76e5aa769095  lib/template/partial/system/error/bug.php
+3f889567ed9ab7d048e14aa60f6d361f  lib/template/partial/system/error/bug.php
 63a90adc62e39c1e6047452466082abf  lib/template/partial/system/error/bug.txt.php
 7ffd4145b0b80d7c4f188a746afaa360  lib/template/partial/system/form.php
 439ec95a557bf60f7d8cd55b682385e9  lib/template/partial/system/message.php

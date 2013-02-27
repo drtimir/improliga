@@ -5,12 +5,13 @@ $(function(){
 			self = this,
 			sess_windows = [],
 			sess_key_windows = 'pwf_godmode_session_windows';
-			win_interval = null;
+			win_interval = null,
+			glow = true;
 
 
 		this.init = function()
 		{
-			pwf.godmode.when_components_are_ready(['window'], function(sess_obj) {
+			pwf.godmode.when_components_are_ready(['window', 'app_drawer'], function(sess_obj) {
 				sess_obj.init_stored_windows();
 				sess_obj.init_window_refresh();
 			}, this);
@@ -23,15 +24,47 @@ $(function(){
 		{
 			var wins = JSON.parse(pwf.storage.get(sess_key_windows));
 
-			if (typeof wins == 'object' && wins !== null) {
-				for (var i in wins) {
+			if (typeof wins == 'object' && wins !== null && wins.length > 0) {
+				for (var i = 0; i < wins.length; i ++) {
 					if (wins[i] !== null) {
 						pwf.godmode.components.window.create(wins[i]);
 					}
 				}
+
+				glow = false;
+			} else {
+				this.start_home_glow();
 			}
 
 			return this;
+		};
+
+
+		this.start_home_glow = function()
+		{
+			glow = true;
+			var but = pwf.godmode.components.app_drawer.get_el().find('.menu_0 a');
+			home_glow(but);
+			but.bind('click.sess', {'obj':this, 'b':but}, function(e) {
+				glow = false;
+				e.data.b.unbind('click.sess');
+			});
+		};
+
+
+		var home_glow = function(but)
+		{
+			but.animate({"opacity":.25}, 500, function(but) {
+				return function() {
+					but.animate({"opacity":1}, 500, function(but) {
+						return function() {
+							if (glow) {
+								home_glow(but);
+							}
+						};
+					}(but));
+				};
+			}(but));
 		};
 
 

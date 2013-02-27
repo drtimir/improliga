@@ -35,7 +35,7 @@ $(function() {
 		{
 			$(global_selector).bind('keyup', {"keyobj":self}, function(e) { e.data.keyobj.fire(e); });
 			$(global_selector).bind('keydown', {"keyobj":self}, function(e) {
-				if (e.which === 192 || e.which === 59) {
+				if (e.ctrlKey && (e.which === 60 || e.which === 220)) {
 					e.preventDefault();
 					e.stopPropagation();
 					e.data.keyobj.switch_mode();

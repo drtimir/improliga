@@ -4,17 +4,12 @@ require_once ROOT.'/etc/init.d/session.php';
 
 System\Init::full();
 
-if (!System\User::logged_in()) {
-	if (System\Input::get('path') != '/god/login/') {
-		System\Flow::redirect_now(array("url" => '/god/login', "code" => 302));
-	}
-}
+Godmode\Router::init();
 
 
-Godmode\Page::init();
-$page = Godmode\Page::fetch();
+$page = Godmode\Router::page();
 if (!($page instanceof System\Page)) {
-	System\Status::recoverable_error(404);
+	throw new System\Error\NotFound();
 }
 
 foreach ($page->template as $t) {
@@ -37,4 +32,5 @@ System\Flow::run();
 System\Flow::run_messages();
 
 System\Output::out();
+exit;
 System\Message::dequeue_all();

@@ -1,3 +1,151 @@
+commit 1774942aea92d8421f488a66fbe9fe370dc31ad6
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 11:23:47 2013 +0100
+
+    Page, current
+    
+    * Page allow current page setting
+
+commit 6cfc79c80ba1c77550dc3de32352c306482d28fd
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 11:20:59 2013 +0100
+
+    Page, Module class
+    
+    * Fixed passing variables
+
+commit ea4a112356ed929e5ebec92c9ef2207e2a9da307
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 10:59:30 2013 +0100
+
+    Attr model, null, Database model
+    
+    * Added null value handling when getting attribute to attr model
+    * Fixed database model missing variable
+
+commit 10a62b1c1af23e4878fda3a692f93544f4b8087f
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 10:35:52 2013 +0100
+
+    Page, Output class
+    
+    * Dropped old code (use_ajax, module templates)
+
+commit 948b44a6952abc3a177088386e6f069511c55336
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 10:11:04 2013 +0100
+
+    Page class
+    
+    * Browse tree now returns false on bad path
+
+commit 7c0056c638769c2b7525fc941a016280ea446b35
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 17:59:40 2013 +0100
+
+    Database model
+    
+    * Added unified name getter to database model
+
+commit c76a3b0ca3c4d98f72f32d79d6a66387140ebb45
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 17:56:49 2013 +0100
+
+    Forms, input length
+    
+    * Fixed form input max length for textarea
+
+commit 59dc7d1ad9916e2d3310cbfd4d3660aec5f6ab03
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 17:45:04 2013 +0100
+
+    Forms
+    
+    * Fixed textarea, dropped value attr before rendering
+
+commit df67f641d3d89653d0aaa70f2562aac9fb899f6a
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 17:39:55 2013 +0100
+
+    Flow class
+    
+    * Fixed redirect_now missing attrs in Flow class
+
+commit 8bbed85b8d0c8d0638dde8c3a8d2d76cf359c0b1
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 17:28:54 2013 +0100
+
+    Model names
+    
+    * Added get_model_name to attr model
+
+commit 869bb8bb27a1e29a33e7e486383ff2fbe32896bc
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 16:27:42 2013 +0100
+
+    Locales
+
+commit fb2e24b9c2dc89e8fec72dc255be527dd6ad5e21
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 16:19:10 2013 +0100
+
+    Attr names
+    
+    * Added attr name convention
+    * Added attr names for basic models
+
+commit bdf690aeb97daa922eaacced64452df82548d944
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 14:26:40 2013 +0100
+
+    Template class
+    
+    * Fixed aliases
+
+commit cb0d0ef51b53872272c789f66e28389f474b6a36
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 14:04:55 2013 +0100
+
+    Page
+    
+    * Extended browse_tree to return whole subtree
+
+commit a7fe55ae2ad91e3bbf995bbf8ecdf42c476f0ea8
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 12:49:28 2013 +0100
+
+    Attr model
+    
+    * Make public get_attr function for attr model
+    * Database get_attr respects id policy
+    * Added to_html function to Template class
+    * Added silent tag alias
+
+commit df271fd8625947674830b4859366668d7689eeed
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 10:48:41 2013 +0100
+
+    Class name conversions
+    
+    * Added class name conversion from model format
+
+commit 7d5ec37bf1efe46737208dfb54613645bbdd1fe0
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 10:09:07 2013 +0100
+
+    Directory class
+    
+    * Added more user friendly find function
+
+commit 22d0e215ce298fb91ab857dbddd19222beabf3a4
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Feb 26 09:40:57 2013 +0100
+
+    Code cleanup
+    
+    * Dropped unused and deprecated models
+    * Added comments to aliases
+
 commit 9fe2964a48099226aebb0d1c39069c2138f5a4a5
 Author: just-paja <pavel@proboston.net>
 Date:   Mon Feb 25 17:59:55 2013 +0100

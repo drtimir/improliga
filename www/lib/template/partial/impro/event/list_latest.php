@@ -96,3 +96,4 @@ Tag::div(array("class" => 'events'));
 	}
 
 Tag::close('div');
+

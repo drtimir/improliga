@@ -42,7 +42,7 @@ $(function(){
 					return function() {
 						sess_obj.update_windows();
 					};
-				}(self), 1000);
+				}(self), 500);
 			}
 
 			return this;
@@ -52,10 +52,9 @@ $(function(){
 		this.update_windows = function()
 		{
 			var wins = pwf.godmode.components.window.get_all_windows();
-			//~ v(wins);
 
 			for (var i = 0; i < wins.length; i++) {
-				if (wins[i] !== null) {
+				if (typeof wins[i] != 'undefined' && wins[i] !== null) {
 					this.update_window(wins[i]);
 				} else {
 					this.drop_window(i+1);
@@ -68,7 +67,19 @@ $(function(){
 
 		this.update_window = function(win)
 		{
-			sess_windows[win.attr('id')-1] = win.get_attrs();
+			success = false;
+
+			for (var i = 0; i < sess_windows.length; i++) {
+				if (typeof sess_windows[i] === 'object' && sess_windows[i] !== null && sess_windows[i]['id'] == win.attr('id')) {
+					sess_windows[i] = win.get_attrs();
+					success = true;
+				}
+			}
+
+			if (success === false) {
+				sess_windows.push(win.get_attrs());
+			}
+
 			this.save();
 			return this;
 		};
@@ -76,7 +87,12 @@ $(function(){
 
 		this.drop_window = function(id)
 		{
-			delete sess_windows[id];
+			for (var i = 0; i < sess_windows.length; i++) {
+				if (typeof sess_windows[i] === 'object' && sess_windows[i] !== null && sess_windows[i]['id'] == id) {
+					sess_windows[i] = null;
+				}
+			}
+
 			this.save();
 			return this;
 		};
@@ -93,8 +109,6 @@ $(function(){
 		this.save = function()
 		{
 			sess_windows = filter_windows(sess_windows);
-			//~ v(windows.length);
-
 			sess_windows.length === 0 ?
 				this.clear():pwf.storage.store(sess_key_windows, JSON.stringify(sess_windows));
 

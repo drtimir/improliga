@@ -1,11 +1,22 @@
 .window {
 	margin:0;
-	padding:1px;
+	padding:0;
 	position:absolute;
 	left:0;
 	top:0;
 	box-shadow:0 0 25px rgba(0,0,0,0.25);
 	border-radius:3px;
+	padding:25px 0 0;
+	background:rgba(0,0,0,0.5);
+	border:1px solid rgba(0,0,0,0);
+}
+
+.window.active {
+	background:rgba(92,6,113,0.8);
+}
+
+.window:hover {
+	border:1px solid rgba(255,255,255,.25);
 }
 
 .window-inner {
@@ -15,6 +26,10 @@
 
 .window-title-container {
 	height:25px;
+	position:absolute;
+	top:0;
+	left:0;
+	color:#bbb;
 }
 
 .window-icon {
@@ -33,16 +48,6 @@
 .window-buttons {
 	margin:0;
 	padding:0;
-}
-
-.window,
-.window-title-container {
-	background:#999;
-}
-
-.window.active,
-.window.active .window-title-container {
-	background:#5C0671;
 }
 
 .window .window-title {
@@ -141,7 +146,7 @@
 	padding:4px 6px;
 }
 
-.window-content .menu-panel li.active { background:rgba(0,0,0,0.5); }
+.window-content .menu-panel li.active { background:#696969; }
 .window-content .menu-panel li:hover { background:rgba(255,255,255,0.5); }
 
 .window-content .menu-panel .separator

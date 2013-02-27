@@ -1,7 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<?
+<?
+
+Tag::doctype();
+Tag::html();
+	Tag::head();
+
 		$script = array();
 		$script[] = 'var pwf_user = '.json_encode(array(
 			"id" => user()->id,
@@ -10,7 +12,7 @@
 		)).';';
 
 		$script[] = 'var pwf_locale = '.json_encode(System\Locales::get_lang()).';';
-		$script[] = 'var pwf_main_menu = '.json_encode(Godmode\Page::get_menu_data()).';';
+		$script[] = 'var pwf_main_menu = '.json_encode(Godmode\Router::get_menu()).';';
 		$script[] = 'var pwf_icons = '.json_encode(Godmode\Icon::get_list()).';';
 		$script[] = 'var pwf_trans = '.json_encode(System\Locales::get_all_messages()).';';
 
@@ -46,17 +48,22 @@
 
 		cfg("dev", "debug") && content_for("styles", "status-dump");
 		$menu_icon_size = 24;
-		?>
 
-		<?=content_from("head");?>
-	</head>
+		echo content_from("head");
 
-	<body class="setup">
-		<? if (logged_in()) { ?>
-			<div id="app_drawer" class="panel app-drawer"></div>
-			<div id="panel_top" class="panel main"></div>
-		<? } ?>
+	Tag::close('head');
 
-		<div class="viewport_container"><div id="viewport"></div></div>
-	</body>
-</html>
+	Tag::body(array("class" => 'setup'));
+
+		if (logged_in()) {
+			Tag::div(array("id" => 'app_drawer', "class" => 'panel app-drawer', "close" => true));
+			Tag::div(array("id" => 'panel_top', "class" => 'panel main', "close" => true));
+		}
+
+		Tag::div(array(
+			"class" => 'viewport_container',
+			"content" => Tag::div(array('id' => 'viewport', "output" => false))
+		));
+
+	Tag::close('body');
+Tag::close('html');

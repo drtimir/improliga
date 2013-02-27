@@ -3,23 +3,27 @@ pwf.register('godmode', function() {
 	this.components = {};
 	var
 		ready = false,
-		trans = null,
+		messages = null,
 		component_callbacks = [];
 
 
 	this.init = function init()
 	{
 		init_trans();
-		return ready = true;
+		return ready;
 	};
 
 
 	var init_trans = function()
 	{
 		if (typeof pwf_trans === 'undefined') {
-			trans = {};
+			messages = {};
 			v("Failed to load pwf translations");
-		} else trans = pwf_trans;
+			ready = false;
+		} else {
+			messages = pwf_trans['messages'];
+			ready = true;
+		}
 	};
 
 
@@ -43,7 +47,7 @@ pwf.register('godmode', function() {
 
 	this.trans = function(key)
 	{
-		return typeof trans[key] === 'undefined' ? key:trans[key];
+		return typeof messages[key] === 'undefined' ? key:messages[key];
 	};
 
 

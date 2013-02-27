@@ -1,0 +1,53 @@
+[
+	{
+		"name":"godmode_users",
+		"icon":"modules/user_group",
+		"items":[
+			{
+				"name":"godmode_user_list",
+				"icon":"items/user",
+				"model":"System::User",
+				"attrs_list":["login", "get_name", "last_login", "created_at"],
+				"attrs_edit_exclude":["last_login"],
+				"inline":["groups", "contacts"],
+				"window_root":true,
+				"object_menu":[
+					{
+						"name":"edit_passwd",
+						"icon":"modules/password",
+						"modules":[
+							["godmode/user/edit_passwd", {"id":"#{0}"}]
+						]
+					}
+				]
+			},
+			{
+				"name":"godmode_user_groups",
+				"icon":"modules/user_group",
+				"model":"System::User::Group",
+				"window_root":true,
+				"attrs_list":["name", "count_users", "updated_at", "created_at"]
+			}
+		]
+	},
+	{
+		"name":"godmode_simple_objects",
+		"icon":"items/other",
+		"items":[
+			{
+				"name":"godmode_static_texts",
+				"icon":"items/text",
+				"model":"System::Text",
+				"window_root":true,
+				"attrs_list":["name", "visible", "updated_at"]
+			},
+			{
+				"name":"godmode_locations",
+				"icon":"items/location",
+				"model":"System::Location",
+				"window_root":true,
+				"attrs_list":["name", "addr", "updated_at"]
+			}
+		]
+	}
+]

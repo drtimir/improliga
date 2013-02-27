@@ -76,6 +76,12 @@ $(function() {
 				{
 					return win;
 				};
+
+
+				this.w = function()
+				{
+					return win;
+				};
 			};
 
 		this.init = function()
@@ -149,12 +155,10 @@ $(function() {
 
 		this.add_window = function(win)
 		{
-			if (typeof windows[win.attr('id')-1] !== 'object') {
-				var r = create_window_representation(win);
-				r.create();
-				r.update();
-				windows[win.attr('id')-1] = r;
-			}
+			var r = create_window_representation(win);
+			r.create();
+			r.update();
+			windows.push(r);
 		};
 
 
@@ -185,15 +189,24 @@ $(function() {
 
 		this.get_win = function(id)
 		{
-			return typeof windows[id-1] == 'object' ? windows[id-1]:null;
+			for (var i = 0; i < windows.length; i++) {
+				if (typeof windows[i] == 'object' && windows[i] !== null && windows[i].w().attr('id') == id) {
+					return windows[i];
+				}
+			}
+
+			return null;
 		};
 
 
 		this.destroy_window = function(id)
 		{
-			var win = windows[id-1];
-			win.remove();
-			windows[id-1] = null;
+			for (var i = 0; i < windows.length; i++) {
+				if (typeof windows[i] === 'object' && windows[i] !== null && windows[i].w().attr('id') == id) {
+					windows[i].remove();
+					windows[i] = null;
+				}
+			}
 		};
 	});
 });

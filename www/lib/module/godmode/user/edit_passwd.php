@@ -1,7 +1,7 @@
 <?
 
-def($id);
-def($redirect, '/god/users/{id_system_user}/');
+$this->req('id');
+$this->req('link_cont');
 
 if ($id && $user = find("\System\User", $id)) {
 
@@ -18,11 +18,7 @@ if ($id && $user = find("\System\User", $id)) {
 		if ($p['password'] === $p['password_check']) {
 			$p['password'] = hash_passwd($p['password']);
 			$user->update_attrs($p)->save();
-
-			if (!$user->errors()) {
-				message('success', $heading, l('godmode_save_success'), true);
-				redirect(soprintf($redirect, $user));
-			}
+			redirect(soprintf($link_cont, $user));
 		} else {
 			$f->out($this);
 		}
@@ -30,4 +26,7 @@ if ($id && $user = find("\System\User", $id)) {
 		$f->out($this);
 	}
 
-} else $this->error('params');
+} else {
+v($id);
+	//~ throw new System\Error\NotFound();
+}

@@ -8,6 +8,7 @@ $(function(){
 			ready = false,
 			window_active = null,
 			window_drag = null,
+			auto_increment = 0;
 			windows = [],
 			window_ctrls = [
 				{
@@ -22,6 +23,7 @@ $(function(){
 			{
 				var
 					attrs = {
+						"active":false,
 						"id":0,
 						"icon":0,
 						"title":"Undefined",
@@ -87,12 +89,16 @@ $(function(){
 
 				this.create = function()
 				{
+					auto_increment++;
 					create_base(this);
 					create_buttons(this);
 					var size = this.attr('size');
 
+					if (this.attr('active') || window_active === null) {
+						this.focus();
+					}
+
 					this.title(this.attr('title'));
-					this.focus();
 					this.resize(size.x, size.y);
 					this.update_size();
 					this.reset_events();
@@ -130,7 +136,9 @@ $(function(){
 					els.container.append(els.content_container);
 					els.container.append(els.preloader);
 
-					els.border.bind('click', {"win":ref}, function(e) { e.data.win.focus(); });
+					var winref = {"win":ref}
+					els.border.bind('click', winref, function(e) { e.data.win.focus(); });
+					els.border.bind('dblclick', winref, function(e) { e.data.win.focus(); });
 
 					els.border.append(els.container);
 				};
@@ -138,17 +146,18 @@ $(function(){
 
 				var create_buttons = function(ref)
 				{
+					var winref = {"win":ref}
 					els.button_close = $('<li class="button close"><a href="" title="'+pwf.godmode.trans('godmode_close')+'"><span></span></a></li>');
-					els.button_close.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.close();  });
+					els.button_close.bind('click', winref, function(e) { e.preventDefault(); e.data.win.close();  });
 
 					els.button_maximize = $('<li class="button maximize"><a href="" title="'+pwf.godmode.trans('godmode_maximize')+'"><span></span></a></li>');
-					els.button_maximize.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.switch_maximization();  });
+					els.button_maximize.bind('click', winref, function(e) { e.preventDefault(); e.data.win.switch_maximization();  });
 
 					els.button_minimize = $('<li class="button minimize"><a href="" title="'+pwf.godmode.trans('godmode_minimize')+'"><span></span></a></li>');
-					els.button_minimize.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.minimize();  });
+					els.button_minimize.bind('click', winref, function(e) { e.preventDefault(); e.data.win.minimize();  });
 
 					els.button_roll = $('<li class="button roll"><a href="" title="'+pwf.godmode.trans('godmode_roll')+'"><span></span></a></li>');
-					els.button_roll.bind('click', {"win":ref}, function(e) { e.preventDefault(); e.data.win.roll(); });
+					els.button_roll.bind('click', winref, function(e) { e.preventDefault(); e.data.win.roll(); });
 
 					els.buttons.append(els.button_close);
 					els.buttons.append(els.button_maximize);
@@ -259,6 +268,7 @@ $(function(){
 					pwf.godmode.components.window.set_active(this);
 					els.border.addClass('active').css({"z-index":100});
 					pwf.godmode.components.window.set_active(this);
+					this.attr('active', true);
 
 					if (typeof pwf.godmode.components.app_drawer === 'object') {
 						pwf.godmode.components.app_drawer.update_windows();
@@ -271,6 +281,7 @@ $(function(){
 				this.unfocus = function()
 				{
 					this.get_el('border').removeClass('active').css({"z-index":50});
+					this.attr('active', false);
 					return this;
 				};
 
@@ -614,9 +625,15 @@ $(function(){
 		};
 
 
-		this.create = function(data)
+		this.create = function(data, save)
 		{
-			data.id = windows.length + 1;
+			var save = typeof save === 'undefined' ? true:!!save;
+
+			if (typeof data.id === 'undefined') {
+				data.id = this.get_new_id();
+			} else if (this.exists(data.id)) {
+				return this.get_win(data.id);
+			}
 
 			if (typeof data.position == 'undefined') {
 				data.position = {"x":63, "y":41};
@@ -625,6 +642,10 @@ $(function(){
 			var win = new class_window(data);
 			windows.push(win)
 			win.create().show();
+
+			if (save) {
+				pwf.godmode.components.session.update_window(win);
+			}
 
 			return win;
 		};
@@ -654,20 +675,20 @@ $(function(){
 
 		this.destroy = function(id)
 		{
-			var win = this.get_win(id-1);
+			for (var i = 0; i < windows.length; i++) {
+				if (typeof windows[i] === 'object' && windows[i] !== null && windows[i].attr('id') == id) {
+					if (windows[i].is_active()) {
+						window_active = null;
+					}
 
-			if (win !== null) {
-				if (win.is_active()) {
-					window_active = null;
+					windows[i] = null;
+					break;
 				}
-
-				delete win;
-				windows[id-1] = null;
 			}
 
 			filter_windows(windows);
 			if (typeof pwf.godmode.components.session != 'undefined') {
-				pwf.godmode.components.session.drop_window(id-1);
+				pwf.godmode.components.session.drop_window(id);
 			}
 		};
 
@@ -691,7 +712,25 @@ $(function(){
 
 		this.get_win = function(id)
 		{
-			return typeof windows[id] == 'object' ? windows[id]:null;
+			for (var i = 0; i < windows.length; i++) {
+				if (typeof windows[i] === 'object' && windows[i].attr('id') == id) {
+					return window[i];
+				}
+			}
+
+			return null;
+		};
+
+
+		this.exists = function(id)
+		{
+			for (var i = 0; i < windows.length; i++) {
+				if (typeof windows[i] === 'object' && windows[i].attr('id') == id) {
+					return true;
+				}
+			}
+
+			return false;
 		};
 
 
@@ -704,6 +743,12 @@ $(function(){
 		this.is_ready = function()
 		{
 			return ready;
+		};
+
+
+		this.get_new_id = function()
+		{
+			return ++auto_increment;
 		};
 	});
 });

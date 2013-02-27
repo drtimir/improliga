@@ -1,4 +1,11 @@
 {
+	"godmode_item_list":"Seznam položek",
+	"godmode_item_list_model":"%s, seznam položek",
+	"godmode_create_object":"Nový objekt %s",
+	"godmode_edit_object":"Úprava objektu %s",
+	"godmode_delete_object":"Smazání objektu %s",
+	"godmode_object_name":"%s %s",
+
 	"godmode_login_name":"Přihlašovací jméno",
 	"godmode_password":"Heslo",
 	"godmode_browser_supported":"Podporovaný prohlížeč",
@@ -31,6 +38,10 @@
 	"godmode_shortcuts_off":"Off",
 
 	"godmode_users":"Uživatelé",
+	"godmode_user_edit_passwd":"Úprava hesla",
+	"godmode_user_password":"Heslo",
+	"godmode_user_password_check":"Potvrzení hesla",
+
 	"godmode_user_count":"Počet uživatelů",
 	"godmode_user_list":"Seznam uživatelů",
 	"godmode_user_create":"Vytvořit uživatele",
@@ -54,15 +65,12 @@
 	"godmode_simple_objects":"Různé",
 
 	"godmode_static_texts":"Statické texty",
-	"godmode_static_text_list":"Seznam statických textů",
-	"godmode_static_text_create":"Vytvořit statický text",
-	"godmode_static_text_edit":"Upravit statický text",
-	"godmode_static_text_delete":"Smazat statický text",
 
 	"godmode_locations":"Umístění",
 	"godmode_location_create":"Vytvořit umístění",
 	"godmode_location_edit":"Upravit umístění",
 	"godmode_location_delete":"Smazat umístění",
 	"godmode_location_gps":"Umístění",
+
 	"end":""
 }

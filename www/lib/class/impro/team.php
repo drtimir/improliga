@@ -33,7 +33,7 @@ namespace Impro
 		}
 
 
-		public function get_name()
+		public function get_name($pattern = null)
 		{
 			return $this->name.' - '.$this->name_full;
 		}

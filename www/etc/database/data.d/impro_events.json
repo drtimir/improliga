@@ -3,7 +3,7 @@
 	[
 		{
 			"id_impro_event":"219",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"KL\u00c1\u0160TERFEST IMPROSHOW!",
 			"image":"",
 			"desc_short":"",
@@ -18,7 +18,7 @@
 		},
 		{
 			"id_impro_event":"220",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: RO\u017dNI vs. O.LI.V.Y.",
 			"image":"",
 			"desc_short":"",
@@ -33,7 +33,7 @@
 		},
 		{
 			"id_impro_event":"221",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"OSTRAVA: IMPROSHOW V KLUBU PARN\u00cdK",
 			"image":"",
 			"desc_short":"Vystoup\u00ed\r\n\r\n\u010dlenov\u00e9 improviza\u010dn\u00ed skupiny OSTRU\u017dINY a PRALINY\r\n\r\nZahrani\u010dn\u00ed host\u00e9 ze:\r\n\r\n   Slovenska, Litvy, Francie, Belgie a Polska\r\n\r\nhudebn\u00ed doprovod:\r\n\r\nV\u00e1clav Kram\u00e1\u0159  - klav\u00edr\r\n\r\nMichal \u017d\u00e1\u010dek  - saxofon\r\n\r\n Rezervace v  klubu Atlantik,   http:\/\/www.klubatlantik.cz\/\r\n\r\nnebo  Vladislav Kos: kos.ok@centrum.cz   \r\n Dotazy na tel. 736 484 636\r\n\r\nL\u00edstky budou prod\u00e1v\u00e1ny p\u0159ed p\u0159edstaven\u00edm.\r\n\r\nP\u0159ednostn\u00ed prodej rezervovan\u00fdch l\u00edstk\u016f od 18:15 \u2013 18:45\r\n",
@@ -48,7 +48,7 @@
 		},
 		{
 			"id_impro_event":"222",
-			"id_impro_event_type":3,
+			"type":3,
 			"name":"IMPRO LONGFORMY",
 			"image":"",
 			"desc_short":"\r\n\r\nREZERVACE: rezervace@divadlokampa.cz \r\n",
@@ -63,7 +63,7 @@
 		},
 		{
 			"id_impro_event":"223",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: O.LI.V.Y. vs. KL.I.KA",
 			"image":"",
 			"desc_short":"\r\n",
@@ -78,7 +78,7 @@
 		},
 		{
 			"id_impro_event":"224",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"AUSTRIA IMPROSHOW!",
 			"image":"",
 			"desc_short":"Klub AUSTRIA\r\n\u0160tef\u00e1nikova 18\/25, Praha 5\r\n\r\nREZERVACE: rezervace.kukulich.cz \r\n",
@@ -93,7 +93,7 @@
 		},
 		{
 			"id_impro_event":"225",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: O.LI.V.Y. vs. PRA.L.I.NY",
 			"image":"",
 			"desc_short":"",
@@ -108,7 +108,7 @@
 		},
 		{
 			"id_impro_event":"226",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: KLIKA junio\u0159i vs. KLIKA pard\u00e1lov\u00e9",
 			"image":"",
 			"desc_short":"",
@@ -123,7 +123,7 @@
 		},
 		{
 			"id_impro_event":"227",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: St\u0159e.L.I. vs. OTISK",
 			"image":"",
 			"desc_short":"",
@@ -138,7 +138,7 @@
 		},
 		{
 			"id_impro_event":"228",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"EXT.A.SE. vs. P.I.V.O.",
 			"image":"",
 			"desc_short":"\r\nOkuste PIV.EX. - nejlep\u0161\u00ed improviza\u010dn\u00ed drogu!\r\nZ\u00e1pas v divadeln\u00ed improvizaci.\r\n21. dubna 2006 od 19:30 v plze\u0148sk\u00e9m divadle Pluto.\r\nRezervace vstupenek:  605 299 850  nebo 777 609 275\r\n",
@@ -153,7 +153,7 @@
 		},
 		{
 			"id_impro_event":"229",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"PRA.L.I.NY: Improshow !Nosticovo divadlo",
 			"image":"",
 			"desc_short":"PRA.L.I.NY se po fantastick\u00e9m \u00fasp\u011bchu v han\u00e1ck\u00e9 metropoli vracej\u00ed zp\u011bt do Nosticova divadla. S nov\u00fdmi form\u00e1ty a obrovsk\u00fdm rancem srandy. P\u0159ij\u010fte si je vyzkou\u0161et !!! Maj\u00ed na to? M\u00e1te na to vy? ",
@@ -168,7 +168,7 @@
 		},
 		{
 			"id_impro_event":"230",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: O.LI.V.Y. vs. OSTR.U\u017d.I.NY tradi\u010dn\u00ed bitva na moravsk\u00e9m poli",
 			"image":"",
 			"desc_short":"",
@@ -183,7 +183,7 @@
 		},
 		{
 			"id_impro_event":"231",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OSTR.U\u017d.I.NY. Ostrava vs. O.LI.V.Y. Olomouc",
 			"image":"",
 			"desc_short":"\r\nKulturn\u00ed centrum Poruba. na ul. Opavsk\u00e1 1118 \r\n\r\nPosledn\u00ed z\u00e1pas t\u00e9to sezony na \u00fazem\u00ed OSTRAVY! \r\n\r\nRezervace a prodej na: sekretariat@kcporuba.cz \r\n\r\nwww.kcporuba.cz \r\nwww.ostruziny.eu",
@@ -198,7 +198,7 @@
 		},
 		{
 			"id_impro_event":"232",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"PRA.L.I.NY na V\u00e1clav\u00e1ku - je\u0161t\u011b jednou, v klubu &quot;Charlieho p\u00e1r\u00e1tka&quot;, V\u00e1clavsk\u00e9 n\u00e1m. 43, PRAHA 1 - Pas\u00e1\u017e Jalta",
 			"image":"",
 			"desc_short":"",
@@ -213,7 +213,7 @@
 		},
 		{
 			"id_impro_event":"233",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"AUSTRIA: KV\u011aTNOV\u00dd IMPROZ\u00c1PAS",
 			"image":"",
 			"desc_short":"",
@@ -228,7 +228,7 @@
 		},
 		{
 			"id_impro_event":"234",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: PR\u00c1.VO vs. KL\u00cd.NY",
 			"image":"",
 			"desc_short":"",
@@ -243,7 +243,7 @@
 		},
 		{
 			"id_impro_event":"235",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"KLAMOVKA IMPROSHOW!",
 			"image":"",
 			"desc_short":"",
@@ -258,7 +258,7 @@
 		},
 		{
 			"id_impro_event":"236",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: RO\u017dNI vs. OSTR.U\u017d.I.NY",
 			"image":"",
 			"desc_short":"",
@@ -273,7 +273,7 @@
 		},
 		{
 			"id_impro_event":"237",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS V OSM\u011a",
 			"image":"",
 			"desc_short":"",
@@ -288,7 +288,7 @@
 		},
 		{
 			"id_impro_event":"238",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OTISK vs. KLIKA",
 			"image":"",
 			"desc_short":"",
@@ -303,7 +303,7 @@
 		},
 		{
 			"id_impro_event":"239",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS Bafni vs. Ro\u017eni",
 			"image":"",
 			"desc_short":"",
@@ -318,7 +318,7 @@
 		},
 		{
 			"id_impro_event":"240",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OTISK vs. V\u00ddST\u0158EL",
 			"image":"",
 			"desc_short":"",
@@ -333,7 +333,7 @@
 		},
 		{
 			"id_impro_event":"241",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"AUSTRIA IMPROSHOW!",
 			"image":"",
 			"desc_short":"",
@@ -348,7 +348,7 @@
 		},
 		{
 			"id_impro_event":"242",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OSTR.U\u017d.I.NY. Ostrava vs. O.LI.V.Y. Olomouc",
 			"image":"",
 			"desc_short":"Ka\u017edoro\u010dn\u00ed setk\u00e1n\u00ed na z\u00e1mku v Tr\u0161ic\u00edch - chmelov\u00e9m r\u00e1ji 12 km z\u00e1padn\u011b od Olomouce\r\n",
@@ -363,7 +363,7 @@
 		},
 		{
 			"id_impro_event":"243",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: Pa.Le.\u0164\u00e1c.I vs. host\u00e9 z v\u00fdchodu",
 			"image":"",
 			"desc_short":"",
@@ -378,7 +378,7 @@
 		},
 		{
 			"id_impro_event":"244",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: KI\u0160 vs. KI\u0160",
 			"image":"",
 			"desc_short":"",
@@ -393,7 +393,7 @@
 		},
 		{
 			"id_impro_event":"245",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"SILVESTROVSK\u00c1 IMPROSHOW! + KONCERT",
 			"image":"",
 			"desc_short":"",
@@ -408,7 +408,7 @@
 		},
 		{
 			"id_impro_event":"246",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OSTRU\u017dINY vs. OLIVY",
 			"image":"",
 			"desc_short":"",
@@ -423,7 +423,7 @@
 		},
 		{
 			"id_impro_event":"247",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OTISK vs. HOST\u00c9",
 			"image":"",
 			"desc_short":"",
@@ -438,7 +438,7 @@
 		},
 		{
 			"id_impro_event":"248",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OSTR.U\u017d.I.NY. Ostrava",
 			"image":"",
 			"desc_short":"",
@@ -453,7 +453,7 @@
 		},
 		{
 			"id_impro_event":"249",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROVIZA\u010cN\u00cd KL\u00c1N\u00cd",
 			"image":"",
 			"desc_short":"",
@@ -468,7 +468,7 @@
 		},
 		{
 			"id_impro_event":"250",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: L\u00cd.S vs. K.I(Y)",
 			"image":"",
 			"desc_short":"",
@@ -483,7 +483,7 @@
 		},
 		{
 			"id_impro_event":"251",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"JUST! IMPRO MATCH",
 			"image":"",
 			"desc_short":"",
@@ -498,7 +498,7 @@
 		},
 		{
 			"id_impro_event":"252",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: St\u0159e.L.I. vs. T.I.CHo",
 			"image":"",
 			"desc_short":"",
@@ -513,7 +513,7 @@
 		},
 		{
 			"id_impro_event":"253",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"P\u016eLNO\u010cN\u00cd  IMPROSHOW !",
 			"image":"",
 			"desc_short":"Zveme na ojedin\u011blou P\u016flno\u010dn\u00ed Improshow. Komu se nechce do kostela, m\u016f\u017ee na \u0160t\u011bdr\u00fd ve\u010der na improvizovanou P\u016flno\u010dn\u00ed . Start ve 23.50Vstupn\u00e9 dobrovoln\u00e9REZERVACE: lada.klamovka@atlas.cz ",
@@ -528,7 +528,7 @@
 		},
 		{
 			"id_impro_event":"254",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: K.OP.R vs. KL.I.KA",
 			"image":"",
 			"desc_short":"",
@@ -543,7 +543,7 @@
 		},
 		{
 			"id_impro_event":"255",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"V\u00c1NO\u010cN\u00cd IMPROSHOW",
 			"image":"",
 			"desc_short":"",
@@ -558,7 +558,7 @@
 		},
 		{
 			"id_impro_event":"256",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"FEMME FATALE IMPROSHOW!",
 			"image":"",
 			"desc_short":"",
@@ -573,7 +573,7 @@
 		},
 		{
 			"id_impro_event":"257",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: KI\u0160 vs. NIC",
 			"image":"",
 			"desc_short":"",
@@ -588,7 +588,7 @@
 		},
 		{
 			"id_impro_event":"258",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"Z\u00c1PAS DELEG\u00c1T\u016e",
 			"image":"",
 			"desc_short":"",
@@ -603,7 +603,7 @@
 		},
 		{
 			"id_impro_event":"259",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OLIVY vs. OSTRU\u017dINY",
 			"image":"",
 			"desc_short":"",
@@ -618,7 +618,7 @@
 		},
 		{
 			"id_impro_event":"260",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS Bafni vs. Brigada",
 			"image":"",
 			"desc_short":"",
@@ -633,7 +633,7 @@
 		},
 		{
 			"id_impro_event":"261",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: OTISK vs. KLIKA",
 			"image":"",
 			"desc_short":"",
@@ -648,7 +648,7 @@
 		},
 		{
 			"id_impro_event":"262",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: V\u00ddST\u0158EL vs. OTISK",
 			"image":"",
 			"desc_short":"",
@@ -663,7 +663,7 @@
 		},
 		{
 			"id_impro_event":"263",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: PALE\u0164\u00c1CI vs. Host\u00e9",
 			"image":"",
 			"desc_short":"",
@@ -678,7 +678,7 @@
 		},
 		{
 			"id_impro_event":"264",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROMATCH na kost - p\u00edsk\u00e1 Li\u0161\u00e1k",
 			"image":"",
 			"desc_short":"",
@@ -693,7 +693,7 @@
 		},
 		{
 			"id_impro_event":"265",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: L\u00cd.SK.Y vs. L\u00cd.SK.I",
 			"image":"",
 			"desc_short":"",
@@ -708,7 +708,7 @@
 		},
 		{
 			"id_impro_event":"266",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"OSTRU\u017dINOV\u00dd IMPROZ\u00c1PAS",
 			"image":"",
 			"desc_short":"",
@@ -723,7 +723,7 @@
 		},
 		{
 			"id_impro_event":"267",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: KOPR vs. NIC",
 			"image":"",
 			"desc_short":"",
@@ -738,7 +738,7 @@
 		},
 		{
 			"id_impro_event":"268",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"V\u00fdst\u0159el vs. KLIKA",
 			"image":"",
 			"desc_short":"",
@@ -753,7 +753,7 @@
 		},
 		{
 			"id_impro_event":"269",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"JUST! IMPRO SHOW VE \u0160VANDOV\u011a DIVADLE",
 			"image":"",
 			"desc_short":"",
@@ -768,7 +768,7 @@
 		},
 		{
 			"id_impro_event":"270",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"IMPROVIZE",
 			"image":"",
 			"desc_short":"",
@@ -783,7 +783,7 @@
 		},
 		{
 			"id_impro_event":"271",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"IMPROZ\u00c1PAS: PALE\u0164\u00c1CI vs. PALE\u0164\u00c1CI",
 			"image":"",
 			"desc_short":"",
@@ -798,7 +798,7 @@
 		},
 		{
 			"id_impro_event":"272",
-			"id_impro_event_type":3,
+			"type":3,
 			"name":"LONGFORMY XIII: Kr\u00e1sa a \u0161p\u00edna star\u00e9ho Lond\u00fdna",
 			"image":"",
 			"desc_short":"\r\nZku\u0161en\u00ed hr\u00e1\u010di improligy vystoup\u00ed v divadle Kampa ji\u017e pot\u0159in\u00e1ct\u00e9 se sv\u00fdm projektem Longforem - del\u0161\u00edch improvizovan\u00fdch p\u0159\u00edb\u011bh\u016f na va\u0161e p\u0159\u00e1n\u00ed. Tentokr\u00e1t se s nimi pod\u00edvate do Lond\u00fdna 19.stolet\u00ed aneb Jak se \u017eilo za kr\u00e1lovny Viktorie.",
@@ -813,7 +813,7 @@
 		},
 		{
 			"id_impro_event":"273",
-			"id_impro_event_type":5,
+			"type":5,
 			"name":"Víkendový workshop s JUST! Impro",
 			"image":"/share/pixmaps/initial/events/2013-02-08_vikend.jpg",
 			"desc_short":"",
@@ -829,7 +829,7 @@
 		},
 		{
 			"id_impro_event":"274",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Impromatch klub Klamovka",
 			"image":"/share/pixmaps/initial/events/2013-03-01_nic_klika.jpg",
 			"desc_short":"",
@@ -845,7 +845,7 @@
 		},
 		{
 			"id_impro_event":"275",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Improzápas",
 			"image":"/share/pixmaps/initial/events/2013-01-11_bafni_klika.png",
 			"desc_short":"",
@@ -861,7 +861,7 @@
 		},
 		{
 			"id_impro_event":"276",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"Show improvizační divadelní skupiny BAFNI",
 			"image":"/share/pixmaps/initial/events/2013-01-23_bafni_budejovice.jpg",
 			"desc_short":"",
@@ -877,7 +877,7 @@
 		},
 		{
 			"id_impro_event":"277",
-			"id_impro_event_type":3,
+			"type":3,
 			"name":"Longformy XIV aneb Doktorské zrcátko",
 			"image":"/share/pixmaps/initial/events/2013-01-29_longformy.jpg",
 			"desc_short":"",
@@ -893,7 +893,7 @@
 		},
 		{
 			"id_impro_event":"278",
-			"id_impro_event_type":5,
+			"type":5,
 			"name":"Impro Inspire Camp III",
 			"image":"/share/pixmaps/initial/events/2013-01-31_improkemp.jpg",
 			"desc_short":"",
@@ -910,7 +910,7 @@
 		},
 		{
 			"id_impro_event":"279",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Leváci vs. Praváci",
 			"image":"/share/pixmaps/initial/events/2013-02-01_levacixpravaci.jpg",
 			"desc_short":"",
@@ -926,7 +926,7 @@
 		},
 		{
 			"id_impro_event":"280",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Paleťáci vs Valouny",
 			"image":"/share/pixmaps/initial/events/2013-02-02_paletaci_vs_valouny.jpg",
 			"desc_short":"",
@@ -942,7 +942,7 @@
 		},
 		{
 			"id_impro_event":"281",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"Improvize: Bien, Františku!",
 			"image":"/share/pixmaps/initial/events/2013-02-03_improvize.jpg",
 			"desc_short":"",
@@ -958,7 +958,7 @@
 		},
 		{
 			"id_impro_event":"282",
-			"id_impro_event_type":1,
+			"type":1,
 			"name":"Improvize",
 			"image":"/share/pixmaps/initial/events/2013-02-06_improvize.jpg",
 			"desc_short":"",
@@ -974,7 +974,7 @@
 		},
 		{
 			"id_impro_event":"283",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Dotiky vs Dotiky",
 			"image":"/share/pixmaps/initial/events/2013-02-08_dotiky_vs_dotiky.jpg",
 			"desc_short":"",
@@ -990,7 +990,7 @@
 		},
 		{
 			"id_impro_event":"284",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"KIŠ vs StřeLi",
 			"image":"/share/pixmaps/initial/events/2013-02-12_kis_vs_streli.jpg",
 			"desc_short":"",
@@ -1006,7 +1006,7 @@
 		},
 		{
 			"id_impro_event":"285",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"JUST! Impro vs Paleťáci",
 			"image":"",
 			"desc_short":"",
@@ -1022,7 +1022,7 @@
 		},
 		{
 			"id_impro_event":"286",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Klika vs Paleťáci",
 			"image":"/share/pixmaps/initial/events/2013-02-22_paletaci_vs_klika.jpg",
 			"desc_short":"",
@@ -1038,7 +1038,7 @@
 		},
 		{
 			"id_impro_event":"287",
-			"id_impro_event_type":2,
+			"type":2,
 			"name":"Předjarní klání",
 			"image":"/share/pixmaps/initial/events/2013-03-15_vip_vs_cokoliv.jpg",
 			"desc_short":"",

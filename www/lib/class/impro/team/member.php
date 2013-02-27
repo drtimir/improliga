@@ -16,9 +16,9 @@ namespace Impro\Team
 		);
 
 
-		public function get_name()
+		public function get_name($pattern = null)
 		{
-			return $this->user->get_name();
+			return $this->user->get_name($pattern);
 		}
 	}
 }

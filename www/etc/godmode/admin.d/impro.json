@@ -1,0 +1,64 @@
+[
+	{
+		"name":"impro_menu_events",
+		"icon":"modules/calendar",
+		"attrs_list":["name", "start", "visible", "public", "created_at"],
+		"attrs_edit_exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
+			"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster"],
+		"inline":["groups", "contacts"],
+		"window_root":true,
+		"model":"Impro::Event"
+	},
+	{
+		"name":"impro_news",
+		"icon":"items/news",
+		"attrs_list":["name", "visible", "public", "created_at"],
+		"window_root":true,
+		"model":"Impro::News"
+	},
+	{
+		"name":"impro_teams",
+		"icon":"items/team",
+		"attrs_list":["name", "visible", "created_at"],
+		"window_root":true,
+		"model":"Impro::Team"
+	},
+	{
+		"name":"impro_articles",
+		"icon":"items/text",
+		"attrs_list":["name", "visible", "created_at"],
+		"window_root":true,
+		"model":"Impro::Article"
+	},
+	{
+		"name":"impro_discussions",
+		"icon":"objects/discussion",
+		"items":[
+			{
+				"name":"impro_discussion_boards",
+				"attrs_list":["name", "visible", "created_at"],
+				"window_root":true,
+				"model":"Impro::Discussion::Board"
+			},
+			{
+				"name":"impro_discussion_topics",
+				"attrs_list":["name", "visible", "created_at"],
+				"window_root":true,
+				"model":"Impro::Discussion::Topic"
+			},
+			{
+				"name":"impro_discussion_posts",
+				"attrs_list":["name", "visible", "created_at"],
+				"window_root":true,
+				"model":"Impro::Discussion::Post"
+			}
+		]
+	},
+	{
+		"name":"impro_galleries",
+		"icon":"items/gallery",
+		"attrs_list":["name", "visible", "created_at"],
+		"window_root":true,
+		"model":"Impro::Gallery"
+	}
+]

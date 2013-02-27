@@ -9,8 +9,8 @@ Tag::div(array("class" => 'events'));
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
 	Tag::div(array("class" => 'controls'));
-		echo label_for('godmode/navi/prev', 16, l('impro_prev_month'), stprintf($link_month, array("year" => $prev->format('Y'), "month" => $prev->format('m'))));
-		echo label_right_for('godmode/navi/next', 16, l('impro_next_month'), stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))));
+		echo label_for('godmode/navi/prev', 16, stprintf($link_month, array("year" => $prev->format('Y'), "month" => $prev->format('m'))), l('impro_prev_month'));
+		echo label_right_for('godmode/navi/next', 16, stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))), l('impro_next_month'));
 	Tag::close('div');
 
 

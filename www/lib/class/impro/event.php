@@ -20,20 +20,17 @@ namespace Impro
 		const ID_SETUP_STATUS_NOT_NEEDED = 2;
 
 		protected static $attrs = array(
-			"id_impro_event_type" => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
+			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
 			"name"          => array('varchar'),
 			"image"         => array('image'),
-			"desc_short"    => array('text'),
-			"desc_full"     => array('text'),
-			"visible"       => array('bool'),
+			"desc_short"    => array('text', "default" => ''),
+			"desc_full"     => array('text', "default" => ''),
 			"start"         => array('datetime'),
 			"end"           => array('datetime', "is_null" => true),
-			"capacity"      => array('int', "default" => 0),
-			"published"     => array('bool'),
 			"publish_at"    => array('datetime', "is_null" => true),
-			"publish_wait"  => array('bool'),
-			"price"         => array('int'),
-			"price_student" => array('int'),
+			"capacity"      => array('int', "default" => 0),
+			"price"         => array('int', "is_null" => true),
+			"price_student" => array('int', "is_null" => true),
 
 			"has_whistle"   => array('int', "default" => 0),
 			"has_kazoo"     => array('int', "default" => 0),
@@ -47,6 +44,9 @@ namespace Impro
 			"has_camera"    => array('int', "default" => 0),
 			"has_photo"     => array('int', "default" => 0),
 
+			"visible"       => array('bool'),
+			"published"     => array('bool'),
+			"publish_wait"  => array('bool'),
 			"gen_poster"    => array('bool'),
 			"gen_tickets"   => array('bool'),
 			"use_booking"   => array('bool'),

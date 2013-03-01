@@ -56,8 +56,9 @@ Tag::div(array("class" => 'calendar'));
 							$elist = array();
 						}
 
+						$helper = new DateTime();
 						$d1 = new DateTime($date->format('Y-m-d'));
-						$d2 = new DateTime((new DateTime())->format('Y-m-d'));
+						$d2 = $helper->format('Y-m-d');
 
 						if ($d1->getTimestamp() === $d2->getTimestamp()) {
 							$dayclass[] = 'today';

@@ -6,6 +6,7 @@ $this->req('link_redir');
 $model = System\Loader::get_class_from_model($model);
 
 def($id);
+def($inline, array());
 def($new, false);
 def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower(System\Model\Attr::get_model_model_name($model))));
 def($attrs_edit, array());
@@ -20,6 +21,7 @@ if (empty($attrs_edit)) {
 }
 
 $banned_attrs = array(System\Model\Database::get_id_col($model), 'created_at', 'updated_at');
+$inline_has_many = array();
 
 foreach ($attrs_edit as $alias=>$attr) {
 	if (!is_numeric($alias)) {
@@ -35,10 +37,23 @@ foreach ($attrs_edit as $alias=>$attr) {
 	}
 }
 
+if (any($inline)) {
+	foreach ($inline as $rel) {
+		if (System\Model\Database::get_rel_type($model, $rel) === 'has-many') {
+			$inline_has_many[] = $rel;
+		}
+	}
+}
+
+
 $f = new System\Form(array(
 	"default" => $item->get_data(),
 	"heading" => $heading,
 ));
+
+if (any($inline_has_many)) {
+	$f->tab();
+}
 
 foreach ($attrs as $attr) {
 	$def = System\Model\Database::get_attr($model, $attr);
@@ -70,6 +85,11 @@ foreach ($attrs as $attr) {
 		"required" => $required,
 	));
 }
+
+foreach ($inline_has_many as $rel) {
+	$f->tab();
+}
+
 
 $f->submit(l('godmode_save'));
 

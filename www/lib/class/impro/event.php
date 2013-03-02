@@ -91,7 +91,7 @@ namespace Impro
 
 			if ($new && !$event) {
 				$event = new self(array(
-					"id_impro_event_type" => \Impro\Event\Type::ID_MATCH,
+					"type"        => \Impro\Event\Type::ID_MATCH,
 					"name"        => l('impro_event_unfinished'),
 					"published"   => false,
 					"visible"     => false,
@@ -149,7 +149,7 @@ namespace Impro
 
 		public function get_type_name()
 		{
-			return \Impro\Event\Type::get_by_id($this->id_impro_event_type);
+			return \Impro\Event\Type::get_by_id($this->type);
 		}
 
 

@@ -3,7 +3,29 @@
 		{
 			"id":1,
 			"name":"Úvod",
+			"text":"<p> Improliga je malinko o sportu, ale především o divadle. Dva týmy se navzájem utkávají v improvizacích na divácká témata. Cílem NENÍ navzájem se vyřadit, ale SPOLEČNĚ vytvářet kvalitní improvizaci, mít radost ze hry, moci si kdykoliv zahrát/zaimprovizovat s různými týmy z různých měst.</p>",
+			"visible":true
+		},
+		{
+			"id":2,
+			"name":"O Improlize",
 			"text":"<p>Improliga je občanské združení zastřešující týmy z celé České republiky, které se věnují zápasům v improvizaci. Zápasy v improvizaci patří do rodiny tzv. &quot;divadelních sportů&quot;, je to jednoduše řečeno divadlo inspirované hokejovými pravidly.</p><p> Improligové týmy se vyzývají ke vzájemným zápasům, společně trénují, pořádají workshopy. Mezi největší akce patří každoroční setkání improvizátorů z celé republiky zvané Improstřesk a obdobná akce pro středoškolské týmy nazvaná Improslet.</p><p>Přečtěte si o improvizačních zápasech a podívejte se na pár videí. Anebo se rovnou přijďte podívat na zápas pořádaný ve vašem okolí.</p>",
+			"visible":true
+		}
+	],
+
+
+	"Impro\\Article\\Category":[
+		{
+			"id":1,
+			"name":"Improvizační představení",
+			"weight":1,
+			"visible":true
+		},
+		{
+			"id":2,
+			"name":"Historie improvizace",
+			"weight":2,
 			"visible":true
 		}
 	],
@@ -12,7 +34,29 @@
 	"Impro\\Article":[
 		{
 			"id":1,
-			"name":"O zápase",
+			"id_category":1,
+			"name":"Zápas",
+			"published":true,
+			"visible":true
+		},
+		{
+			"id":2,
+			"id_category":1,
+			"name":"Improshow",
+			"published":true,
+			"visible":true
+		},
+		{
+			"id":3,
+			"id_category":1,
+			"name":"Longforma",
+			"published":true,
+			"visible":true
+		},
+		{
+			"id":4,
+			"id_category":2,
+			"name":"Jak vznikly zápasy",
 			"published":true,
 			"visible":true
 		}
@@ -58,6 +102,14 @@
 			"weight":5,
 			"name":"Jak vznikly zápasy v improvizaci?",
 			"text":"<p>Historie divadelních sportů spadá do sedmdesátých let 20. století. Ve Velké Británii  působila v těchto letech divadelní skupina Keith Johnstona The Theatre Machine. Vznikla v Londýně a své umění prezentovala při kočování celou Evropou. Právě tento zdroj je důležitý pro vznik divadelních sportů. Ty byly provozovány bez účasti diváků v rámci Johnstonova workshopu, později byly  představeny divákům v kanadském Torontu a dalších městech. V roce 1984 založil Dick Chudnow ComedySportz v Milwaukee, kde se také uskutečnilo v roce 1988 první mistrovství v improvizační komedii. Zůčastnilo se ho tehdy deset týmů.</p><p>Počátky zápasů v improvizaci  u nás sahají do roku 1999, kdy byl založen první český improvizační tým PRA.L.I.NY. (PRAžská Liga v Improvizaci NYní). Michaela Puchalková přivezla tento druh improvizovaného divadla z Francie, kde trénovala s marseillským týmem.. V našich podmínkách získaly zápasy v improvizaci  více divadelní a méně sportovní ráz,  například jsme upustili od  ligového vyřazovacího systému. </p>",
+			"visible":true
+		},
+		{
+			"id":6,
+			"id_article":4,
+			"weight":1,
+			"name":"",
+			"text":"<p>Historie divadelních sportů spadá do sedmdesátých let 20. století. Ve Velké Británii působila v těchto letech divadelní skupina Keith Johnstona The Theatre Machine. Vznikla v Londýně a své umění prezentovala při kočování celou Evropou. Právě tento zdroj je důležitý pro vznik divadelních sportů. Ty byly provozovány bez účasti diváků v rámci Johnstonova workshopu, později byly představeny divákům v kanadském Torontu a dalších městech. V roce 1984 založil Dick Chudnow ComedySportz v Milwaukee, kde se také uskutečnilo v roce 1988 první mistrovství v improvizační komedii. Zůčastnilo se ho tehdy deset týmů.</p><p>Počátky zápasů v improvizaci u nás sahají do roku 1999, kdy byl založen první český improvizační tým PRA.L.I.NY. (PRAžská Liga v Improvizaci NYní). Michaela Puchalková přivezla tento druh improvizovaného divadla z Francie, kde trénovala s marseillským týmem.. V našich podmínkách získaly zápasy v improvizaci více divadelní a méně sportovní ráz, například jsme upustili od ligového vyřazovacího systému.</p>",
 			"visible":true
 		}
 	]

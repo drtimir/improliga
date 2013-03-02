@@ -12,7 +12,11 @@ namespace Impro
 		);
 
 		protected static $has_many = array(
-			"chapters" => array("model" => '\Impro\Article\Chapter'),
+			"chapters" => array("model" => '\Impro\Article\Chapter', "foreign_name" => 'id_article'),
+		);
+
+		protected static $belongs_to = array(
+			"category" => array("model" => '\Impro\Article\Category'),
 		);
 	}
 }

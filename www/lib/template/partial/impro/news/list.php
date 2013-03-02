@@ -15,17 +15,20 @@ Tag::div(array("class" => 'news'));
 				"output"  => false,
 			));
 
+			if ($display_author) {
+				$author = Stag::a(array(
+					"class"   => 'author',
+					"href"    => soprintf($link_author, $item),
+					"content" => $item->author->get_name()
+				));
+			} else $author = '';
+
 			$content[] = Tag::div(array(
 				"class"   => 'footer',
 				"output"  => false,
 				"content" => array(
-					Tag::datetime(array("output" => false, "content" => format_date($item->created_at, 'human'))),
-					Tag::a(array(
-						"output"  => false,
-						"class"   => 'author',
-						"href"    => soprintf($link_author, $item),
-						"content" => $item->author->get_name()
-					)),
+					Tag::datetime(array("output" => false, "content" => format_date($item->created_at, 'human-full-date'))),
+					$author,
 				)
 			));
 

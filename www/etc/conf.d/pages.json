@@ -18,15 +18,31 @@
 				"heading":"Kalendář",
 				"conds":{"published":true}
 			}],
-			["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}", "conds":{"published":true}}]
+			["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}]
 		]
 	},
 
 
-	"o-improlize":{"#":{
-		"title":"impro_menu_about",
-		"template":["impro/layout", "impro/dual"]
-	}},
+	"o-improlize":{
+		"#":{
+			"title":"impro_menu_about",
+			"template":["impro/layout", "impro/dual_34_14"],
+			"modules":[
+				["system/text/detail", {"id":2, "slot":"left"}],
+				["impro/article/category/list", {"slot":"right"}]
+			]
+		},
+
+		"*":{
+			"#":{
+				"title":"impro_article",
+				"modules":[
+					["impro/article/detail", {"id":"#{0}", "slot":"left"}],
+					["impro/article/category/list", {"slot":"right"}]
+				]
+			}
+		}
+	},
 
 
 	"media-o-nas":{"#":{
@@ -35,15 +51,24 @@
 	}},
 
 
-	"tymy":{"#":{
-		"title":"impro_menu_teams",
-		"template":["impro/layout", "impro/dual"],
+	"tymy":{"#":
+		{
+			"title":"impro_menu_teams",
+			"template":["impro/layout", "impro/single"],
+			"modules":[
+				["impro/team/list"]
+			]
+		},
+
 		"*":{
 			"#":{
-				"title":"impro_team"
+				"title":"impro_team",
+				"modules":[
+					["impro/team/detail", {"id":"#{0}"}]
+				]
 			}
 		}
-	}},
+	},
 
 	"novinky":{
 		"#":{

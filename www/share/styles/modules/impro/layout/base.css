@@ -11,7 +11,12 @@ body,html {
 }
 
 a, a.visited {
-	color:#ccc
+	color:#EFC800;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
 }
 
 body {
@@ -20,6 +25,17 @@ body {
 
 h1,h2,h3,h4 {
 	margin-top:0;
+}
+
+a img {
+	border:2px solid rgba(184,36,21,0.2);
+	opacity:.8;
+	display:block;
+}
+
+a:hover img {
+	border-color:rgba(184,36,21,0.75);
+	opacity:1;
 }
 
 .container {
@@ -173,3 +189,36 @@ h1,h2,h3,h4 {
 .block.layout_18 { width:100px; }
 
 
+.carticle_list .category {
+	margin-bottom:15px;
+}
+
+.carticle_list h3 {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+.article_list,
+.article_list ul,
+.article_list li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.article_list li {
+	margin:3px 0 0;
+}
+
+.chapter_list {
+	margin:0 0 10px;
+	padding:0 0 0 5px;
+}
+
+.chapter_list li {
+	list-style:decimal inside;
+	margin:2px 0;
+	font-size:12px;
+}

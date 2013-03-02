@@ -1,3 +1,47 @@
+commit 9b8302220c2dc11eb41382ce1955405821ff7027
+Author: just-paja <just.paja@gmail.com>
+Date:   Sat Mar 2 00:10:09 2013 +0100
+
+    Seoname generator
+    
+    * Strip dots
+
+commit 600c3d6bb83264317b3845bc7911b9d04c974d0c
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Mar 1 23:38:25 2013 +0100
+
+    Default values
+    
+    * Fixed default values for blob/text columns
+
+commit 002ec1c96db14a3d6af4086c0aee4710b758475c
+Author: just-paja <just.paja@gmail.com>
+Date:   Fri Mar 1 23:26:42 2013 +0100
+
+    Output class, Cli
+    
+    * Ouput does not send headers when on cli
+    * Status class DRY
+
+commit 3ad1dff8940b87ffd9f2162158795a2448c4c1e4
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 17:56:18 2013 +0100
+
+    Forms tabs
+
+commit 9caf41e87fccf37282750286eb0a6285e4f7cf09
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 15:21:46 2013 +0100
+
+    Namespace protection
+
+commit 6e5a0f166b231af34c0a963ca108b008ed315fc0
+Merge: 1774942 7cc1060
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 27 11:25:46 2013 +0100
+
+    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+
 commit 1774942aea92d8421f488a66fbe9fe370dc31ad6
 Author: just-paja <pavel@proboston.net>
 Date:   Wed Feb 27 11:23:47 2013 +0100
@@ -38,6 +82,13 @@ Date:   Wed Feb 27 10:11:04 2013 +0100
     Page class
     
     * Browse tree now returns false on bad path
+
+commit 7cc1060a52d037fd6af5da8a23562922ada4fdc8
+Merge: bb63a9c 7c0056c
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Feb 26 23:37:10 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
 
 commit 7c0056c638769c2b7525fc941a016280ea446b35
 Author: just-paja <pavel@proboston.net>
@@ -145,6 +196,13 @@ Date:   Tue Feb 26 09:40:57 2013 +0100
     
     * Dropped unused and deprecated models
     * Added comments to aliases
+
+commit bb63a9c4be308f78f2fe904d4741f96211eea5f4
+Merge: 667262e 6ded830
+Author: just-paja <just.paja@gmail.com>
+Date:   Mon Feb 25 18:54:15 2013 +0100
+
+    Merge branch 'master' of ssh://github.com/just-paja/pwf
 
 commit 9fe2964a48099226aebb0d1c39069c2138f5a4a5
 Author: just-paja <pavel@proboston.net>
@@ -275,6 +333,14 @@ Date:   Sun Feb 24 15:15:40 2013 +0100
     Status page
     
     * Fixed templates
+
+commit 667262eb99679d1871446a184b0c53618b5119e3
+Author: just-paja <pavel@proboston.net>
+Date:   Wed Feb 20 15:19:04 2013 +0100
+
+    GPS picker
+    
+    * Dropped debug messages
 
 commit 62fcbec84d622243270a64afb1aa9d352c48de2e
 Author: just-paja <pavel@proboston.net>

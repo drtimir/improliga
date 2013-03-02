@@ -1,4 +1,4 @@
-b2ef4889f745f15638841f848b99c72a  lib/include/system.php
+41012d336df826a026ddb80db590f970  lib/include/system.php
 41aeca628f18138905c18be9da0347e7  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 e6e8ba8602df477f3ee298225db021af  bin/santa
@@ -23,7 +23,7 @@ cba0dfb00390c62f2df9eb9afdf455e7  etc/default/conf.d/output.json
 1ba7aeb8a29036f9b6dca5a927e7402e  etc/default/routes.d/cron.json
 afc9a3e449e20a697b74890c3d851df6  etc/init.d/cli.php
 8b09857602d65588d1e57f489345a663  etc/init.d/core.php
-4c17d1bcce27db9a8f94f90a6473f5cd  etc/init.d/page.php
+2e745af12a0fb05ab46b15a2d14af72d  etc/init.d/page.php
 1f98e913449d9b08bcbf877eb0298e48  etc/init.d/pre-cli.php
 8c9678d308572412ff46b927a200cc10  etc/init.d/session.php
 4c0cbf7c0a524743efd05106bc888623  etc/locales/cs_CZ/messages.d/core.json
@@ -41,7 +41,7 @@ cd3080dc84bff793c79a82a205e6e678  etc/rewrite.d/010-init
 d271908728164867d07bcae9f4252907  etc/rewrite.d/090-pass
 403b21b0e0207aa9e24497783deecb4c  index.php
 2d55fea31ba1977364e856a06a732773  lib/class/database/attr.php
-66e0c8b40dccd311968a9e05bda3277f  lib/class/database/mysqli/column.php
+87de11eb20f6445655d5e30befb8b6c6  lib/class/database/mysqli/column.php
 ee242a50691529c8174fd0633be29097  lib/class/database/mysqli/database.php
 e237b7a98ec7afb2d42a86c56ff7f8cd  lib/class/database/mysqli/table.php
 512f30c0d6816f65f4b3eacd647b6016  lib/class/database/relation.php

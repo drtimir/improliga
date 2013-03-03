@@ -45,7 +45,7 @@ Tag::div(array("class" => 'wizzard'));
 			}
 
 			if (($current !== $step && ($passed || $prev)) || $step == Impro\Event::ID_WIZZARD_STEP_NAME) {
-				$content = link_for($label, stprintf($link_wizzard, array("step" => $step)));
+				$content = link_for($label, stprintf(soprintf($link_wizzard, $event), array("step" => $step)));
 			} else {
 				$content = $label;
 			}

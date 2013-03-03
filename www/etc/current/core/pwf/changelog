@@ -1,3 +1,11 @@
+commit 2a527dcd63c885af090d44285bc6861db4cf7fba
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Mar 3 22:53:59 2013 +0100
+
+    Soprintf
+    
+    * Added safety for soprintf that ensures id_col replacement
+
 commit 9b8302220c2dc11eb41382ce1955405821ff7027
 Author: just-paja <just.paja@gmail.com>
 Date:   Sat Mar 2 00:10:09 2013 +0100

@@ -69,8 +69,8 @@ Tag::div(array("class" => 'event_detail'));
 
 		if ($controls) {
 			Tag::ul(array("class" => 'controls'));
-				Tag::li(array("content" => label_for('godmode/actions/edit', 16, l('impro_event_edit'), stprintf(soprintf($link_action, $event), array("action" => 'edit')))));
-				Tag::li(array("content" => label_for('godmode/actions/delete', 16, l('impro_event_delete'), stprintf(soprintf($link_action, $event), array("action" => 'delete')))));
+				Tag::li(array("content" => label_for('godmode/actions/edit', 16, stprintf(soprintf($link_action, $event), array("action" => 'edit')), l('impro_event_edit'))));
+				Tag::li(array("content" => label_for('godmode/actions/delete', 16, stprintf(soprintf($link_action, $event), array("action" => 'delete')), l('impro_event_delete'))));
 
 			Tag::close('ul');
 		}

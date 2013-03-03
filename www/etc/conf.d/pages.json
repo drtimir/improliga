@@ -113,7 +113,13 @@
 			"template":["impro/layout", "impro/single"],
 			"title":"impro_event",
 			"modules":[
-				["impro/event/detail", {"id":"#{0}", "col_width":465, "template":"impro/event/detail_short"}]
+				["impro/event/detail", {
+					"id":"#{0}",
+					"col_width":465,
+					"template":"impro/event/detail_short",
+					"link_team":"/tymy/{seoname}/",
+					"link_event":"/udalosti/{seoname}/"
+				}]
 			]
 		}},
 

@@ -13,15 +13,15 @@ Tag::div(array("class" => 'menu_left'));
 	Tag::close('div');
 
 	Tag::menu(array("class" => array('plain', 'main')));
-		Tag::li(array("content" => label_for('godmode/locations/home', 16, l('intra_wall'), '/')));
-		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, l('impro_events'), '/events/')));
-		Tag::li(array("content" => label_for('impro/objects/discussion', 16, l('intra_discussion'), '/discussion/')));
-		Tag::li(array("content" => label_for('impro/actions/download', 16, l('intra_file_share'), '/files/')));
+		Tag::li(array("content" => label_for('godmode/locations/home', 16, '/', l('intra_wall'))));
+		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/events/', l('impro_events'))));
+		Tag::li(array("content" => label_for('impro/objects/discussion', 16, '/discussion/', l('intra_discussion'))));
+		Tag::li(array("content" => label_for('impro/actions/download', 16, '/files/', l('intra_file_share'))));
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));
-		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, l('impro_event_list_my'), '/profile/events/')));
-		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, l('impro_event_create_new'), '/events/create/')));
+		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/profile/events/', l('impro_event_list_my'))));
+		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/events/create/', l('impro_event_create_new'))));
 	Tag::close('menu');
 
 	Tag::menu(array("class" => array('plain', 'main')));

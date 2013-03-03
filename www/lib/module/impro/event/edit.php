@@ -26,7 +26,7 @@ if (($new && $item = new Impro\Event()) || ($id && $item = find("\Impro\Event", 
 	$f->input_text("name", l('godmode_event_name'), true);
 	$f->input(array(
 		"type"    => 'select',
-		"name"    => 'id_impro_event_type',
+		"name"    => 'type',
 		"options" => Impro\Event\Type::get_all(),
 		"label"   => l('impro_event_type')
 	));

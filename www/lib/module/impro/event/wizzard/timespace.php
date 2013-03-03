@@ -20,7 +20,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$f->input_datetime("start", l('impro_event_start'), true);
 	$f->text('hint0', l('impro_event_wizzard_start_hint'));
 
-	if (in_array($event->id_impro_event_type, Impro\Event\Type::get_types_with_end())) {
+	if (in_array($event->type, Impro\Event\Type::get_types_with_end())) {
 		$f->input_datetime("end", l('impro_event_end'), true);
 		$f->text('hint1', l('impro_event_wizzard_end_hint'));
 	}

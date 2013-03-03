@@ -32,7 +32,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	));
 
 
-	if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
+	if ($event->type === Impro\Event\Type::ID_MATCH) {
 		$sides = array('home', 'away');
 
 		if (!$event->id_team_home || !$event->id_team_away) {

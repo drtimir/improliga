@@ -20,7 +20,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 	$f->input(array(
 		"type"    => 'select',
-		"name"    => 'id_impro_event_type',
+		"name"    => 'type',
 		"options" => Impro\Event\Type::get_all(),
 		"label"   => l('impro_event_type'),
 		"required" => true,
@@ -38,7 +38,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		} else {
 			$event->update_attrs($p);
 
-			if ($event->id_impro_event_type !== Impro\Event\Type::ID_MATCH) {
+			if ($event->type !== Impro\Event\Type::ID_MATCH) {
 				$event->has_kazoo = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
 				$event->has_dress_ref = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;
 				$event->has_dress_oth = Impro\Event::ID_SETUP_STATUS_NOT_NEEDED;

@@ -8,7 +8,7 @@ Tag::div(array("class" => 'event_detail'));
 
 		Tag::div(array("class" => 'desc'));
 
-			if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
+			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 				Tag::div(array("class" => 'participants'));
 					Tag::div(array("class" => 'part home', "content" => array(
 						link_for($event->team_home->name, soprintf($link_team, $event->team_home)),

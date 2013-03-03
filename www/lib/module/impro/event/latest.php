@@ -13,7 +13,7 @@ def($per_page, 5);
 
 $start = new DateTime();
 $conds[] = "t0.start >= '".format_date($start, 'sql')."'";
-$items = get_all("\Impro\Event")->where($conds)->sort_by('start DESC')->paginate($per_page, $page)->fetch();
+$items = get_all("\Impro\Event")->where($conds)->sort_by('start')->paginate($per_page, $page)->fetch();
 
 $this->template($template, array(
 	"events"     => $items,

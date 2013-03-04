@@ -15,10 +15,9 @@ Tag::div(array("class" => 'team_list'));
 					))
 				)));
 
-
-
 			Tag::close('li');
 		}
 
 	Tag::close('ul');
+	Tag::div(array("class" => 'cleaner', "close" => true));
 Tag::close('div');

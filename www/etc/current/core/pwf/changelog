@@ -1,3 +1,19 @@
+commit 0f6bb9f4de3ac8bfa85ffff5874fe4f6899c70b3
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Mar 6 00:20:27 2013 +0100
+
+    Output, Page classes
+    
+    * Output now handles title translating
+
+commit 7cb92be6d6c8e9c49200feb09e1e5251da9fa089
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Mar 6 00:19:12 2013 +0100
+
+    Page class
+    
+    * Translate titles from page tree
+
 commit a0b7c429f0bec98127f6a2664b875c9453bce019
 Author: just-paja <just.paja@gmail.com>
 Date:   Wed Mar 6 00:09:11 2013 +0100

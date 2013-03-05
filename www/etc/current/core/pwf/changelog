@@ -1,3 +1,27 @@
+commit a0b7c429f0bec98127f6a2664b875c9453bce019
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Mar 6 00:09:11 2013 +0100
+
+    Database model, datetimes
+    
+    * Null datetimes are handled correctly
+
+commit 88c9ff230ed4c2c8d56fc6a4fe64a91ec7eb9e7c
+Author: just-paja <just.paja@gmail.com>
+Date:   Wed Mar 6 00:05:47 2013 +0100
+
+    Forms, null value
+    
+    * Form strictly resets images to null value
+
+commit c5df46f5589e96ef4b5f5fa5d306b33b22e7102b
+Author: just-paja <just.paja@gmail.com>
+Date:   Tue Mar 5 23:44:10 2013 +0100
+
+    Forms, null image
+    
+    * Form supports null value for image
+
 commit 2a527dcd63c885af090d44285bc6861db4cf7fba
 Author: just-paja <just.paja@gmail.com>
 Date:   Sun Mar 3 22:53:59 2013 +0100

@@ -7,12 +7,12 @@ namespace Impro
 		protected static $attrs = array(
 			"name"       => array("varchar"),
 			"name_full"  => array("varchar"),
-			"city"       => array("varchar"),
-			"about"      => array("text"),
+			"city"       => array("varchar", "default" => ''),
+			"about"      => array("text", "default" => ''),
 			"logo"       => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"      => array('image', "default" => "/share/pixmaps/impro/team.png"),
-			"site"       => array("varchar"),
-			"played"     => array("int", "is_unsigned" => true),
+			"site"       => array("varchar", "default" => ''),
+			"played"     => array("int", "is_unsigned" => true, "default" => 0),
 			"visible"    => array("bool"),
 		);
 

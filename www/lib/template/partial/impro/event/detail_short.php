@@ -49,6 +49,17 @@ Tag::div(array("class" => 'event_detail'));
 				$total = $event->reservations->count();
 				Tag::li(array("class" => 'icon booking', "content" => $event->capacity.'/'.$total));
 			}
+
+			if ($event->price) {
+
+				if ($event->price_student) {
+					$content = t('impro_event_price_value_both', $event->price, $event->price_student);
+				} else {
+					$content = t('impro_event_price_value', $event->price);
+				}
+
+				Tag::li(array("class" => 'icon price', "content" => $content));
+			}
 		Tag::close('ul');
 
 

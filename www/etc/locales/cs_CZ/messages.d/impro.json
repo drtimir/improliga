@@ -73,6 +73,8 @@
 	"attr_impro_event_price":"Vstupné",
 	"impro_event_price_student":"Studentské vstupné",
 	"attr_impro_event_price_student":"Studentské vstupné",
+	"impro_event_price_value":"Vstupné: %s Kč",
+	"impro_event_price_value_both":"Vstupné: %s Kč, Studenti: %s Kč",
 
 	"impro_event_players_home_owner":"Hráči",
 	"impro_event_players_home":"Domácí",

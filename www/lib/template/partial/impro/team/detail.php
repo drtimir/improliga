@@ -31,7 +31,17 @@ Tag::div(array("class" => 'team_detail'));
 			Stag::div(array("class" => 'cleaner', 'close' => true)),
 	)));
 
+	$info = array();
 
+	if ($team->city) {
+		$info[] = Stag::li(array("class" => 'icon city', "content" => $team->city));
+	}
+
+	if ($team->site) {
+		$info[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
+	}
+
+	Tag::ul(array("content" => $info, "class" => 'info plain team_info'));
 	Tag::div(array("class" => 'team_desc desc', "content" => $team->about));
 
 Tag::close('div');

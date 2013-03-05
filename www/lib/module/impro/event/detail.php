@@ -13,6 +13,7 @@ if ($id && $item = find('\Impro\Event', $id)) {
 
 	title($item->title);
 	$controls = user()->id == $item->id_author || user()->has_right('edit_events');
+	System\Output::set_title($item->name);
 
 	$this->template($template, array(
 		"event"       => $item,

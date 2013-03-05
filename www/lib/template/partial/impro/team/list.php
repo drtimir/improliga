@@ -10,9 +10,8 @@ Tag::div(array("class" => 'team_list'));
 
 				Tag::div(array("class" => "desc", "content" => array(
 					Stag::strong(array("content" => link_for($team->name, soprintf($link_team, $team)))),
-					Stag::div(array(
-						"content" => $team->name_full,
-					))
+					Stag::div(array("class" => 'name_full', "content" => $team->name_full)),
+					Stag::div(array("class" => 'city', "content" => $team->city)),
 				)));
 
 			Tag::close('li');

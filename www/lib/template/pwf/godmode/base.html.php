@@ -22,6 +22,7 @@ Tag::html();
 		content_for("scripts", "pwf/form/search_tool");
 		content_for("scripts", "pwf/form/datetime_picker");
 		content_for("scripts", "pwf/form/gps");
+		content_for("scripts", "pwf/form/tab_manager");
 		content_for("scripts", "pwf/godmode");
 		content_for("scripts", "pwf/godmode/preloader");
 		content_for("scripts", "pwf/godmode/session");
@@ -35,7 +36,8 @@ Tag::html();
 		content_for("scripts", "pwf/godmode/desktop");
 		content_for("scripts", "pwf/godmode/shortcuts");
 
-		content_for("styles", "form/search_tool");
+		content_for("styles", "pwf/form/search_tool");
+		content_for("styles", "pwf/form/tabs");
 		content_for("styles", "god/base");
 		content_for("styles", "god/preloader");
 		content_for("styles", "god/forms");

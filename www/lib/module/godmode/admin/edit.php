@@ -6,8 +6,10 @@ $this->req('link_redir');
 $model = System\Loader::get_class_from_model($model);
 
 def($id);
-def($inline, array());
+def($rel_inline, array());
+def($rel_pick, array());
 def($new, false);
+def($desc, '');
 def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower(System\Model\Attr::get_model_model_name($model))));
 def($attrs_edit, array());
 def($attrs_edit_exclude, array());
@@ -37,22 +39,20 @@ foreach ($attrs_edit as $alias=>$attr) {
 	}
 }
 
-if (any($inline)) {
-	foreach ($inline as $rel) {
-		if (System\Model\Database::get_rel_type($model, $rel) === 'has-many') {
-			$inline_has_many[] = $rel;
-		}
-	}
+$default = $item->get_data();
+
+foreach ($rel_pick as $key=>$rel) {
+	if (System\Model\Database::attr_is_rel($model, $rel)) {
+		$default[$rel] = collect_ids($item->$rel->fetch());
+	} else throw new System\Error\Format(sprintf('Cannot use picker for "%s". It is not an attribute', $rel));
 }
 
 
-$f = new System\Form(array(
-	"default" => $item->get_data(),
-	"heading" => $heading,
-));
 
-if (any($inline_has_many)) {
-	$f->tab();
+$f = new System\Form(array("default" => $default, "heading" => $heading, "desc" => $desc));
+
+if (any($rel_inline) || any($rel_pick)) {
+	$f->tab(l('godmode_model_basic_attrs'));
 }
 
 foreach ($attrs as $attr) {
@@ -86,17 +86,47 @@ foreach ($attrs as $attr) {
 	));
 }
 
-foreach ($inline_has_many as $rel) {
-	$f->tab();
+foreach ($rel_pick as $rel) {
+	$f->tab(System\Model\Attr::get_model_attr_name($model, $rel));
+
+	$type = \System\Model\Database::get_rel_type($model, $rel);
+	$def  = \System\Model\Database::get_rel_def($model, $rel);
+
+	$models = get_all($def['model'])->fetch();
+
+	if ($type == 'has-many') {
+		$in = $f->input(array(
+			"type"     => 'checkbox',
+			"options"  => $models,
+			"name"     => $rel,
+			"multiple" => true,
+			"label"    => System\Model\Attr::get_model_attr_name($model, $rel),
+		));
+	}
 }
 
-
+$f->tab_group_end();
 $f->submit(l('godmode_save'));
 
 if ($f->passed()) {
 	$p = $f->get_data();
+
+	$rel_data = array();
 	$item->update_attrs($p);
 	$item->save();
+
+	foreach ($rel_pick as $rel) {
+
+		$type = \System\Model\Database::get_rel_type($model, $rel);
+		if ($type == 'has-many') {
+			if (is_array($p[$rel])) {
+				$item->assign_rel($rel, $p[$rel]);
+			} else {
+				$item->assign_rel($rel, array());
+			}
+		}
+	}
+
 	redirect(soprintf($link_redir, $item));
 
 } else {

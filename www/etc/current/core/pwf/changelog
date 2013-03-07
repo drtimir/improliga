@@ -1,3 +1,72 @@
+commit 3d57f8b3529093b4232592d89b1ed3f8d1cd6971
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 01:58:43 2013 +0100
+
+    Locales
+
+commit 3effc05a55a9fc76ddee13b60fc12c148a8c75f5
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 01:58:01 2013 +0100
+
+    Database model
+    
+    * Drop unused code
+
+commit e45117e642b130d738a4a19878b378e8939474da
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 01:57:46 2013 +0100
+
+    Attr model
+    
+    * Drop unused code
+
+commit 66d6b3e2e9a2a8bc30110f77c72e67737704b24b
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 01:07:22 2013 +0100
+
+    Forms, tabs
+    
+    * Added styles for form tabs
+
+commit 8ddcf22393148dcfd8c5b38d66e518f1976b690c
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 00:51:47 2013 +0100
+
+    Forms, tabs
+    
+    * Added tab manager to forms
+
+commit af745ea01e7ca307c28d0dabf8bd6823a14c0229
+Merge: e9e4144 fc22b7e
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 00:15:40 2013 +0100
+
+    Merge branch 'master' into dev
+
+commit e9e4144df07dba43e9b9a71805a04016c496732e
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 00:15:27 2013 +0100
+
+    Forms, tabs
+    
+    * Added tab support for forms
+
+commit ac69733879373fe99b6fbaa8f232993189cc1814
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 00:14:57 2013 +0100
+
+    Var dumps
+    
+    * Migrated from var_export to var_dump because of circular references
+
+commit fc22b7e7f051926e9330b8a7ed26ecac1a3b65b4
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 00:12:45 2013 +0100
+
+    Output content filter
+    
+    * Output filters contents of scripts and styles to be unique
+
 commit 0f6bb9f4de3ac8bfa85ffff5874fe4f6899c70b3
 Author: just-paja <just.paja@gmail.com>
 Date:   Wed Mar 6 00:20:27 2013 +0100

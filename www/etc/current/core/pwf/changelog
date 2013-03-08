@@ -1,3 +1,151 @@
+commit f53d41fe34547e914921e5f2ffa5c055eaecb943
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 16:27:55 2013 +0100
+
+    Forms, commited data
+    
+    * Commited data now overwrite hidden data
+
+commit f0f453fe882af5685e64ab7d58356a1f5448c74b
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 15:58:20 2013 +0100
+
+    Forms, checkboxes
+    
+    * Checkboxes are now given default value true on render
+
+commit edefa65b987d249ca9a6b619255b1b1f1599da33
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 15:54:40 2013 +0100
+
+    Tag, value attr
+    
+    * Value attr is printed even if empty
+
+commit 0ee10862d76f8abbd7a48c213a937807dc8d334e
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 15:07:58 2013 +0100
+
+    Simplified error reporting
+    
+    * Error page does not show objects, arguments are hidden
+
+commit a0fa2625fdeae11d85d1074a94ecc68126a87fbc
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 14:55:22 2013 +0100
+
+    Errors
+    
+    * Error from exception now returns correct backtrace
+
+commit a62542ec02372e08cb40ad6f13f0c736bb1b57b1
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 14:54:58 2013 +0100
+
+    [fix] Database, belongs_to id
+    
+    * Fixed function getting foreign_key name
+
+commit 76c5dfc90701f2e9ad12f5f94681a6f2a3e709f1
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 14:31:45 2013 +0100
+
+    Database model
+    
+    * Added relation binding search
+
+commit 5e9f8a4105f662a4294f89c5d5cffcfcaa2eb47c
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 13:06:29 2013 +0100
+
+    [fix] Aliases, create
+    
+    * Create now returns created object
+
+commit c396f01e7116af4975c1ed7b0c43191df9d8e1d5
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 11:47:28 2013 +0100
+
+    Forms, styles
+    
+    * Minified image input controls
+
+commit 79724dbf24d124956102951011d63a640347536e
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 11:33:54 2013 +0100
+
+    Trans update
+
+commit 5a98f4d453b124f8c0568e20212002687b79f6c8
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 11:24:54 2013 +0100
+
+    Loader, Locales
+    
+    * Added system model translation
+
+commit ed1ff0d2613147b8e20995aec0c411246f782078
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 8 11:05:52 2013 +0100
+
+    Forms, input groups
+    
+    * Added label rendering to input groups
+
+commit aa6d2fabf1f36e2b2f62e476feada53f676ddbf3
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 17:37:53 2013 +0100
+
+    User contact
+    
+    * Added some social media to user contact
+
+commit bbf50f8afc66881d03bb122790f6daab856a178b
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 16:26:56 2013 +0100
+
+    Forms, types
+    
+    * Added function that recognizes field type by attr type
+
+commit ef2c581d2e34d4239b44f604f7078ca1c5c16c73
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 16:00:52 2013 +0100
+
+    User contacts
+    
+    * Refit for public needs
+
+commit 71ffe61f3000feb72311836f9cd6411d62bed33b
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 16:00:25 2013 +0100
+
+    Database model, options
+    
+    * DB model can now simply get list of options for attr
+
+commit 7a12de1502ee5366711cbc0a379c27621710eb92
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 16:00:01 2013 +0100
+
+    Erros, model
+    
+    * Added model type error
+
+commit c6bedb65274be1b24b54e1733f0fdd6b482ec5db
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 15:45:11 2013 +0100
+
+    Database model inline docs
+
+commit fb786ed96ce73aab64467e851a4178de9febd85e
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 7 15:39:24 2013 +0100
+
+    Database model
+    
+    * Get location attributes
+
 commit 3d57f8b3529093b4232592d89b1ed3f8d1cd6971
 Author: just-paja <just.paja@gmail.com>
 Date:   Thu Mar 7 01:58:43 2013 +0100

@@ -9,7 +9,8 @@
 				"model":"System::User",
 				"attrs_list":["login", "get_name", "last_login", "created_at"],
 				"attrs_edit_exclude":["last_login"],
-				"inline":["groups", "contacts"],
+				"rel_pick":["groups"],
+				"rel_tab":["contacts"],
 				"window_root":true,
 				"object_menu":[
 					{

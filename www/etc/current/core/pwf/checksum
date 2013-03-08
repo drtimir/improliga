@@ -1,4 +1,4 @@
-af2fa9d4e619d88c471655a0859942ea  lib/include/system.php
+6742d0386bf1b902f61ed980e11c9017  lib/include/system.php
 41aeca628f18138905c18be9da0347e7  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 e6e8ba8602df477f3ee298225db021af  bin/santa
@@ -26,7 +26,7 @@ afc9a3e449e20a697b74890c3d851df6  etc/init.d/cli.php
 2e745af12a0fb05ab46b15a2d14af72d  etc/init.d/page.php
 1f98e913449d9b08bcbf877eb0298e48  etc/init.d/pre-cli.php
 8c9678d308572412ff46b927a200cc10  etc/init.d/session.php
-ec5ca607d4acefbdde6bbd2e0c4da50c  etc/locales/cs_CZ/messages.d/core.json
+1d440196679564836d775d2237a2dfaa  etc/locales/cs_CZ/messages.d/core.json
 6cd0dace23b8c4cfd253fed812a2a473  etc/locales/cs_CZ/modules.d/date.core.json
 7ac95ee75dec0d50fb230e4a39391cb5  etc/locales/cs_CZ/modules.d/system.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -59,7 +59,7 @@ ee6b2a429f3dd6ee158c7dbac6cdd007  lib/common/icon.php
 d7e1bd911b0988c806e3c32d71028f6c  lib/template/partial/system/common.json.php
 a23f14061b1f703ad6087b02cf07ec0e  lib/template/partial/system/error/403.php
 dbdd6bb316b1d958649b0b613e537c69  lib/template/partial/system/error/404.php
-6f877455465db8c6f3153522632d43a9  lib/template/partial/system/error/bug.php
+bff4ee01c31e3897577acdfe92680bf2  lib/template/partial/system/error/bug.php
 63a90adc62e39c1e6047452466082abf  lib/template/partial/system/error/bug.txt.php
 7ffd4145b0b80d7c4f188a746afaa360  lib/template/partial/system/form.php
 439ec95a557bf60f7d8cd55b682385e9  lib/template/partial/system/message.php
@@ -89,9 +89,9 @@ e1a2b0e7fd28bd5ea84b97082cdb07c1  share/scripts/modules/pwf/form/search_tool.js
 f0eff940abb1dea4148adc60e8e0a912  share/scripts/modules/pwf/storage.js
 1e73a0ed60611ff263a00430fa7d2aeb  share/scripts/modules/pwf/tooltip.js
 cae42f1a2d9f30b0567955a8f5051b78  share/styles/essential/basic.css
-96bab3e1a314d4359545cdf678908d06  share/styles/essential/form.css
+66415791c70cb248f9a42454d848d376  share/styles/essential/form.css
 693d62c433af8385b07947feefa77fa4  share/styles/modules/pwf/base.css
-25df65c4381e7489808dfdc782b22bce  share/styles/modules/pwf/errors.css
+ad37b78a0be00ad8f5524e79e5094b39  share/styles/modules/pwf/errors.css
 24ef31d6f0a5f0b40ba1aa7ef78053d2  share/styles/modules/pwf/form/autocompleter.css
 d41d8cd98f00b204e9800998ecf8427e  share/styles/modules/pwf/form/search_tool.css
 e6b3a405c0f75cfd8af708aadbb6dd8c  share/styles/modules/pwf/form/tabs.css

@@ -8,9 +8,10 @@ $model = System\Loader::get_class_from_model($model);
 def($id);
 def($rel_inline, array());
 def($rel_pick, array());
+def($rel_tab, array());
 def($new, false);
 def($desc, '');
-def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower(System\Model\Attr::get_model_model_name($model))));
+def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower(System\Loader::get_class_trans($model))));
 def($attrs_edit, array());
 def($attrs_edit_exclude, array());
 
@@ -20,10 +21,13 @@ $x = 0;
 
 if (empty($attrs_edit)) {
 	$attrs_edit = System\Model\Database::get_model_attr_list($model);
+	$attrs_edit = array_merge($attrs_edit, System\Model\Database::get_location_attrs($model));
 }
 
 $banned_attrs = array(System\Model\Database::get_id_col($model), 'created_at', 'updated_at');
 $inline_has_many = array();
+$rel_data = array();
+$rels = array();
 
 foreach ($attrs_edit as $alias=>$attr) {
 	if (!is_numeric($alias)) {
@@ -41,12 +45,19 @@ foreach ($attrs_edit as $alias=>$attr) {
 
 $default = $item->get_data();
 
-foreach ($rel_pick as $key=>$rel) {
+foreach ($rel_pick as $rel) {
 	if (System\Model\Database::attr_is_rel($model, $rel)) {
 		$default[$rel] = collect_ids($item->$rel->fetch());
-	} else throw new System\Error\Format(sprintf('Cannot use picker for "%s". It is not an attribute', $rel));
+		$rels[$rel] = 'pick';
+	} else throw new System\Error\Format(sprintf('Cannot use picker for "%s". It is not model relation of any kind.', $rel));
 }
 
+foreach ($rel_tab as $rel) {
+	if (System\Model\Database::attr_is_rel($model, $rel)) {
+		$rel_data[$rel] = $item->$rel->fetch();
+		$rels[$rel] = 'manage';
+	} else throw new System\Error\Format(sprintf('Cannot manage "%s" in tabs. It is not model relation of any kind.', $rel));
+}
 
 
 $f = new System\Form(array("default" => $default, "heading" => $heading, "desc" => $desc));
@@ -59,17 +70,10 @@ foreach ($attrs as $attr) {
 	$def = System\Model\Database::get_attr($model, $attr);
 	$required = !(isset($def['is_null']) || isset($def['default']));
 
-	if (in_array($def[0], array('date', 'datetime', 'time', 'image', 'location'))) {
-		$type = $def[0];
-	} elseif ($def[0] === 'point') {
-		$type = 'gps';
-	} elseif ($def[0] === 'bool') {
-		$type = 'checkbox';
+	$type = \System\Form::get_field_type($def[0]);
+
+	if ($def[0] === 'bool') {
 		$required = false;
-	} elseif ($def[0] === 'text') {
-		$type = 'textarea';
-	} else {
-		$type = 'text';
 	}
 
 	if (in_array($attr, array('created_at', 'updated_at'))) {
@@ -84,6 +88,11 @@ foreach ($attrs as $attr) {
 		"label" => $name,
 		"required" => $required,
 	));
+}
+
+foreach ($rel_tab as $rel) {
+	$f->tab(System\Model\Attr::get_model_attr_name($model, $rel));
+	Godmode\Form::add_rel_edit($f, $model, $rel, $rel_data[$rel]);
 }
 
 foreach ($rel_pick as $rel) {
@@ -115,19 +124,70 @@ if ($f->passed()) {
 	$item->update_attrs($p);
 	$item->save();
 
-	foreach ($rel_pick as $rel) {
-
+	/* Relation name => Relation edit method */
+	foreach ($rels as $rel=>$expect) {
 		$type = \System\Model\Database::get_rel_type($model, $rel);
-		if ($type == 'has-many') {
-			if (is_array($p[$rel])) {
-				$item->assign_rel($rel, $p[$rel]);
-			} else {
-				$item->assign_rel($rel, array());
+		$def  = \System\Model\Database::get_rel_def($model, $rel);
+
+		if ($expect === 'pick') {
+			if ($type == 'has-many') {
+				if (is_array($p[$rel])) {
+					$ids = $p[$rel];
+				} else $ids = array();
 			}
+		} elseif ($expect === 'manage') {
+			if ($type == 'has-many') {
+				$ids = array();
+
+				if (is_array($p[$rel])) {
+					$rel_target_def = \System\Model\Database::get_rel_bound_to_def($model, $rel);
+					$attr_target = \System\Model\Database::get_attr_name_from_belongs_to_rel($rel_target_def['name'], $rel_target_def);
+
+					if (isset($p[$rel]['add'])) {
+						foreach ($p[$rel]['add'] as $data) {
+							$empty = true;
+
+							foreach ($data as $at=>$data_attr) {
+								if (any($data_attr)) {
+									$empty = false;
+									break;
+								}
+							}
+
+							if (!$empty) {
+								$data[$attr_target] = $item->id;
+								$obj = create($def['model'], $data);
+								$ids[] = $obj->id;
+							}
+						}
+					}
+
+					unset($p[$rel]['add']);
+				}
+
+				foreach ($p[$rel] as $id=>$data) {
+					$obj = find($def['model'], $id);
+					$obj->update_attrs($data);
+
+					if ($obj->delete) {
+						$obj->drop();
+					} else {
+						$obj->$attr_target = $item->id;
+						$obj->save();
+						$ids[] = $obj->id;
+					}
+				}
+
+				$ids = array_filter($ids);
+			}
+		}
+
+		if (any($def['is_bilinear'])) {
+			$item->assign_rel($rel, $ids);
 		}
 	}
 
-	redirect(soprintf($link_redir, $item));
+	redirect(stprintf($link_redir, $item->get_data()));
 
 } else {
 	$f->out($this);

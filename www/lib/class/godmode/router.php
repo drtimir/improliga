@@ -132,6 +132,10 @@ namespace Godmode
 			$link_cont  = '/'.$url_base.'/{'.\System\Model\Database::get_id_col(\System\Loader::get_class_from_model($item['model'])).'}/';
 			$link_redir = '/'.$url_base.'/';
 
+			if (strpos($item['model'], '\\') !== 0) {
+				$item['model'] = '\\'.$item['model'];
+			}
+
 			$fragment = array(
 				"#" => array(
 					"icon"     => 'actions/list',
@@ -157,6 +161,7 @@ namespace Godmode
 								"attrs_edit_exclude" => any($item['attrs_edit_exclude']) ? $item['attrs_edit_exclude']:array(),
 								"rel_inline" => any($item['rel_inline']) ? $item['rel_inline']:array(),
 								"rel_pick"   => any($item['rel_inline']) ? $item['rel_inline']:array(),
+								"rel_tab"    => any($item['rel_tab']) ? $item['rel_tab']:array(),
 								"link_redir" => $link_cont,
 							)),
 						),
@@ -188,6 +193,7 @@ namespace Godmode
 									"attrs_edit_exclude" => any($item['attrs_edit_exclude']) ? $item['attrs_edit_exclude']:array(),
 									"rel_inline" => any($item['rel_inline']) ? $item['rel_inline']:array(),
 									"rel_pick"   => any($item['rel_pick']) ? $item['rel_pick']:array(),
+									"rel_tab"    => any($item['rel_tab']) ? $item['rel_tab']:array(),
 									"link_redir" => $link_cont,
 								)),
 							),

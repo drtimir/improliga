@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'admin_detail'));
 
-	echo section_heading(t('godmode_object_name', System\Model\Attr::get_model_model_name($model), $item->get_name()));
+	echo section_heading(t('godmode_object_name', System\Loader::get_class_trans($model), $item->get_name()));
 
 	Tag::ul(array("class" => 'attrs'));
 

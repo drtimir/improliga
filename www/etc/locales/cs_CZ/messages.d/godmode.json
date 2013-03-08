@@ -15,6 +15,7 @@
 	"godmode_window_refresh":"Aktualizovat",
 	"godmode_logout":"Odhlásit",
 	"godmode_homepage":"Domovská stránka",
+	"godmode_model_basic_attrs":"Základní atributy",
 
 	"godmode_edit":"Upravit",
 	"godmode_delete":"Smazat",
@@ -71,6 +72,9 @@
 	"godmode_location_edit":"Upravit umístění",
 	"godmode_location_delete":"Smazat umístění",
 	"godmode_location_gps":"Umístění",
+
+	"godmode_model_object":"%s #%s",
+	"godmode_model_object_new":"Nový %s",
 
 	"end":""
 }

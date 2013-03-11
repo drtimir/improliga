@@ -8,7 +8,8 @@
 				"slot":"events_left",
 				"link_cont":"/udalosti/{seoname}/",
 				"link_team":"/tymy/{seoname}/",
-				"conds":{"published":true}
+				"conds":{"published":true},
+				"per_page":5
 			}],
 			["impro/event/calendar", {
 				"slot":"right",

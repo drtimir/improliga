@@ -36,6 +36,8 @@ Tag::html();
 		content_for("scripts", "pwf/godmode/desktop");
 		content_for("scripts", "pwf/godmode/shortcuts");
 
+		content_for('styles', 'pwf/elementary');
+		content_for('styles', 'pwf/form');
 		content_for("styles", "pwf/form/search_tool");
 		content_for("styles", "pwf/form/tabs");
 		content_for("styles", "pwf/god/base");

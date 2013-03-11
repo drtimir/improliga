@@ -1,3 +1,31 @@
+commit fc6768699de31dc85f254151757b161ce8f9ef88
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 18:33:18 2013 +0100
+
+    Various fixes
+    
+    * Redirect method moved to Http class
+    * Recource class thro System\Error\NotFound when empty match
+    * Changed alias redirect_now implementation
+    * Changed alias redirect implementation
+    * Redirect can now be called after module, ater all modules or immediately
+
+commit 92b3b79f4760a0d8cd9e6d14c23aa74822ab84fc
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 17:59:33 2013 +0100
+
+    Resource class
+    
+    * Resources can be pulled also by name
+
+commit ba9aec72d70b7b9b04d3dcbf1a5889954c7f2789
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 16:53:31 2013 +0100
+
+    Forms, styles
+    
+    * Added styles for form into post-constructor
+
 commit 99cde7351d5f0706ab98b958cdf29c2f6f0bb46b
 Author: just-paja <pavel@proboston.net>
 Date:   Mon Mar 11 16:23:55 2013 +0100

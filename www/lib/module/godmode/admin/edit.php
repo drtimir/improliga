@@ -38,7 +38,14 @@ foreach ($attrs_edit as $alias=>$attr) {
 		$def = System\Model\Database::get_attr($model, $attr);
 
 		if ($def[0] != 'password' && !in_array($attr, $banned_attrs) && !in_array($attr, $attrs_edit_exclude) && !\System\Model\Database::is_model_belongs_to_id($model, $attr)) {
-			$attrs[] = $attr;
+			$attrs[$attr] = $def;
+			$attrs[$attr]['type'] = 'attr';
+		}
+	} elseif (\System\Model\Database::get_rel_type($model, $attr) === 'belongs-to') {
+		$def = \System\Model\Database::get_rel_def($model, $attr);
+		if (\System\Loader::get_link_from_class($def['model']) === 'system_location') {
+			$attrs[$attr] = $def;
+			$attrs[$attr]['type'] = 'belongs-to';
 		}
 	}
 }
@@ -66,28 +73,46 @@ if (any($rel_inline) || any($rel_pick)) {
 	$f->tab(l('godmode_model_basic_attrs'));
 }
 
-foreach ($attrs as $attr) {
-	$def = System\Model\Database::get_attr($model, $attr);
+foreach ($attrs as $attr=>$def) {
 	$required = !(isset($def['is_null']) || isset($def['default']));
 
-	$type = \System\Form::get_field_type($def[0]);
+	if ($def['type'] === 'attr') {
+		$type = \System\Form::get_field_type($def[0]);
 
-	if ($def[0] === 'bool') {
-		$required = false;
-	}
+		if ($def[0] === 'bool') {
+			$required = false;
+		}
 
-	if (in_array($attr, array('created_at', 'updated_at'))) {
-		$name = l($attr);
+		if (in_array($attr, array('created_at', 'updated_at'))) {
+			$name = l($attr);
+		} else {
+			$name = System\Model\Attr::get_model_attr_name($model, $attr);
+		}
+
+		$f->input(array(
+			"type"  => $type,
+			"name"  => $attr,
+			"label" => $name,
+			"required" => $required,
+		));
 	} else {
-		$name = System\Model\Attr::get_model_attr_name($model, $attr);
-	}
+		$link = \System\Loader::get_link_from_class($def['model']);
 
-	$f->input(array(
-		"type"  => $type,
-		"name"  => $attr,
-		"label" => $name,
-		"required" => $required,
-	));
+		if ($link === 'system_location') {
+			$f->input_location($attr, System\Model\Attr::get_model_attr_name($model, $attr));
+		} else {
+			if (empty($all[$link])) {
+				$all[$link] = get_all($def['model'])->fetch();
+			}
+
+			$f->input(array(
+				"type" => 'select',
+				"name" => \System\Model\Database::get_attr_name_from_belongs_to_rel($attr, $def),
+				"options" => $all[$link],
+				"label"   => System\Model\Attr::get_model_attr_name($model, $attr),
+			));
+		}
+	}
 }
 
 foreach ($rel_tab as $rel) {

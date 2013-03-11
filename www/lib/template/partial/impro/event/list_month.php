@@ -106,7 +106,7 @@ Tag::div(array("class" => 'events'));
 
 			$html[] = Tag::a(array(
 				"href"    => stprintf($link_day, array("year" => $year, "month" => str_pad($month, 2, '0', STR_PAD_LEFT), "day" => $d)),
-				"id"      => 'day_'.$d,
+				"id"      => stprintf($link_day_piece, array("day" => $d)),
 				"class"   => 'day-head',
 				"content" => $day_heading,
 				"output"  => false,

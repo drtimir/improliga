@@ -17,6 +17,7 @@ def($day, intval(date("d")));
 def($link_book, '/');
 def($link_cont, '/god/impro/events/{id_impro_event}/');
 def($link_day, '/events/list/{year}-{month}/#day_{day}');
+def($link_day_piece, 'day_{day}');
 def($link_team, '/team/{id_impro_team}/');
 def($link_month, '/events/list/{year}-{month}/');
 
@@ -84,6 +85,7 @@ $this->template($template, array(
 	"day_link_integrate" => $day_link_integrate,
 	"day_names_short" => $day_names_short,
 	"link_day"   => $link_day,
+	"link_day_piece"   => $link_day_piece,
 	"link_book"  => $link_book,
 	"link_cont"  => $link_cont,
 	"link_team"  => $link_team,

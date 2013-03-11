@@ -97,13 +97,15 @@
 					"template":"impro/event/list_month",
 					"link_cont":"/udalosti/{seoname}/",
 					"link_month":"/udalosti/seznam/{year}-{month}/",
-					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+					"link_day_piece":"den_{day}"
 				}],
 				["impro/event/calendar", {
 					"slot":"right",
 					"day_link_integrate":true,
 					"link_month":"/udalosti/seznam/{year}-{month}/",
 					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+					"link_day_piece":"den_{day}",
 					"heading":"Kalendář",
 					"conds":{"published":true}
 				}]
@@ -131,6 +133,7 @@
 						"slot":"events_left",
 						"link_cont":"/udalosti/{seoname}/",
 						"link_team":"/tymy/{seoname}/",
+						"link_day_piece":"den_{day}",
 						"conds":{"published":true}
 					}],
 					["impro/event/calendar", {
@@ -138,6 +141,7 @@
 						"day_link_integrate":true,
 						"link_month":"/udalosti/seznam/{year}-{month}/",
 						"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+						"link_day_piece":"den_{day}",
 						"heading":"Kalendář",
 						"conds":{"published":true}
 					}]
@@ -152,6 +156,7 @@
 							"day_link_integrate":true,
 							"link_month":"/udalosti/seznam/{year}-{month}/",
 							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+							"link_day_piece":"den_{day}",
 							"month_input":"#{0}"
 						}],
 						["impro/event/calendar", {
@@ -160,6 +165,7 @@
 							"link_cont":"/udalosti/{seoname}/",
 							"link_month":"/udalosti/seznam/{year}-{month}/",
 							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+							"link_day_piece":"den_{day}",
 							"month_input":"#{0}"
 						}]
 					]

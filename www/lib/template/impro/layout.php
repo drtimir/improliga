@@ -12,27 +12,28 @@ Tag::html();
 	Tag::close('head');
 
 	Tag::body();
+
+		Tag::header();
+			Tag::div(array("class" => 'container'));
+				Tag::div(array("class" => 'logo', "content" =>
+					link_for(Tag::strong(array("class" => 'hidden text', "output" => false, "content" => 'Improliga')), '/')
+				));
+
+				Tag::menu(array("class" => 'plain main'));
+					Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
+					Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
+					Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
+					Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
+				Tag::close('menu');
+			Tag::close('div');
+		Tag::close('header');
+
 		Tag::div(array("class" => 'top'));
 			Tag::div(array("class" => 'bg', "content" => Tag::img(array(
 				"src" => '/share/pixmaps/impro/bg.jpg',
 				"alt" => 'background',
 				"output" => false,
 			))));
-
-			Tag::header();
-				Tag::div(array("class" => 'container'));
-					Tag::div(array("class" => 'logo', "content" =>
-						link_for(Tag::strong(array("class" => 'hidden', "output" => false, "content" => 'Improliga')), '/')
-					));
-
-					Tag::menu(array("class" => 'plain main'));
-						Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
-						Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
-						Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
-						Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
-					Tag::close('menu');
-				Tag::close('div');
-			Tag::close('header');
 
 			Tag::div(array("id" => 'content'));
 				Tag::div(array("class" => 'container'));

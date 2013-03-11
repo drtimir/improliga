@@ -1,10 +1,44 @@
 @font-face {
-	font-family:"droid-sans-online";
-	src: local("Droid Sans");
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzBa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hha1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/l1cOQ90roY9yC7voEhngDD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/dI-qzxlKVQA6TUC5RKSb3z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 
+
+
 body,html {
-	font-family:"droid-sans-online", "Droid Sans", Arial;
+	font-family:'Open Sans', Arial;
 	font-size:14px;
 	padding:0;
 	margin:0;
@@ -25,6 +59,7 @@ body {
 
 h1,h2,h3,h4 {
 	margin-top:0;
+	font-family:'Oswald', 'Arial', _sans;
 }
 
 a img {
@@ -66,23 +101,32 @@ a:hover img {
 }
 
 header {
-	border-bottom:1px solid #333;
 	box-shadow:0 0 25px rgba(0,0,0,0.15);
+	background:#333;
+	border-bottom:1px solid #111;
 	position:relative;
 	z-index:2;
 	margin-bottom:15px;
 }
 
 header .container {
-	padding:10px 0;
+	padding:5px 0;
 }
 
 
 header .logo {
 	display:block;
-	width:95px;
+	width:100px;
 	height:100px;
 	background:url(/share/pixmaps/logo.png) left top no-repeat;
+}
+
+header .logo .text {
+	display:block;
+	position:absolute;
+	left:120px;
+	top:20px;
+	font-size:35px;
 }
 
 header .main, header .main li {
@@ -108,7 +152,11 @@ header .main li a {
 	font-size:18px;
 	text-decoration:none;
 	font-weight:bold;
-	color:#B82429
+	color:#fff;
+}
+
+header .main li .link-selected {
+	color:#B82429;
 }
 
 footer {
@@ -130,7 +178,7 @@ h1,h2,h3,h4 {
 }
 
 #content .container {
-	min-height:780px;
+	min-height:700px;
 }
 
 .cleaner {
@@ -140,7 +188,7 @@ h1,h2,h3,h4 {
 
 .block {
 	padding:20px;
-	background:rgba(0,0,0,0.75);
+	background:rgba(0,0,0,0.85);
 	border:1px solid rgba(255,255,255,0.2);
 	border-radius:15px;
 	margin:0 0 15px;

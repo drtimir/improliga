@@ -92,11 +92,12 @@
 			"title":"impro_events",
 			"template":["impro/layout", "impro/dual"],
 			"modules":[
-				["impro/event/latest", {
+				["impro/event/calendar", {
 					"slot":"left",
+					"template":"impro/event/list_month",
 					"link_cont":"/udalosti/{seoname}/",
-					"link_team":"/tymy/{seoname}/",
-					"conds":{"published":true}
+					"link_month":"/udalosti/seznam/{year}-{month}/",
+					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
 				}],
 				["impro/event/calendar", {
 					"slot":"right",

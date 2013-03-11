@@ -1,4 +1,5 @@
 {
 	"debug":true,
-	"disable-offcom":true
+	"disable-offcom":true,
+	"disable-serial":true
 }

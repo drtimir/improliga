@@ -38,15 +38,15 @@ Tag::html();
 
 		content_for("styles", "pwf/form/search_tool");
 		content_for("styles", "pwf/form/tabs");
-		content_for("styles", "god/base");
-		content_for("styles", "god/preloader");
-		content_for("styles", "god/forms");
-		content_for("styles", "god/layout");
-		content_for("styles", "god/panels");
-		content_for("styles", "god/window");
-		content_for("styles", "god/main_menu");
-		content_for("styles", "god/common");
-		content_for("styles", "god/paginator");
+		content_for("styles", "pwf/god/base");
+		content_for("styles", "pwf/god/preloader");
+		content_for("styles", "pwf/god/forms");
+		content_for("styles", "pwf/god/layout");
+		content_for("styles", "pwf/god/panels");
+		content_for("styles", "pwf/god/window");
+		content_for("styles", "pwf/god/main_menu");
+		content_for("styles", "pwf/god/common");
+		content_for("styles", "pwf/god/paginator");
 
 		cfg("dev", "debug") && content_for("styles", "status-dump");
 		$menu_icon_size = 24;

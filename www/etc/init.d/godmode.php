@@ -3,9 +3,12 @@
 require_once ROOT.'/etc/init.d/session.php';
 
 System\Init::full();
-
 Godmode\Router::init();
 
+content_for('scripts', 'lib/functions');
+content_for('scripts', 'lib/jquery');
+content_for('scripts', 'pwf');
+content_for('styles', 'pwf/elementary');
 
 $page = Godmode\Router::page();
 if (!($page instanceof System\Page)) {

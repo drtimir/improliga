@@ -3,6 +3,13 @@
 Tag::doctype();
 Tag::html();
 	Tag::head();
+		content_for('scripts', 'lib/functions');
+		content_for('scripts', 'lib/jquery');
+		content_for('scripts', 'pwf');
+
+		content_for('styles', 'pwf/elementary');
+		content_for('styles', 'pwf/calendar');
+
 		content_for("styles", "form/search_tool");
 
 		content_for('styles', 'intra/layout');

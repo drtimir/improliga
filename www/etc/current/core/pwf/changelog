@@ -1,3 +1,101 @@
+commit 99cde7351d5f0706ab98b958cdf29c2f6f0bb46b
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 16:23:55 2013 +0100
+
+    Archive class
+    
+    * Fixed archive reading
+
+commit b90bd72b3c627bd9d221bf2dcf7ecf4b2a938ff8
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:54:21 2013 +0100
+
+    Error reporting
+    
+    * Compact transcription of php error
+
+commit 05bda1453cd78d7a19ee7c369d0e5f086d590d89
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:51:53 2013 +0100
+
+    Console error reporting
+    
+    * Tuned up console error reporting
+
+commit 66329c148fa4fa2f2e7466f301b9230827b291db
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:50:30 2013 +0100
+
+    Resources, null content
+    
+    * Resources are not passed if null
+
+commit 48afb160d7f2c9be5344c9abe281c2179a59b85b
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:49:39 2013 +0100
+
+    System status partial
+    
+    * Added output format to system status partial
+    * Added txt format of system status partial
+
+commit a475ae7ec44fbb9526705ff361169ee5b5b9c8c8
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:36:22 2013 +0100
+
+    System status, cli
+    
+    * Added template for system status, txt
+
+commit 22220a3329b0ebe9ab302380d3049bf1b00c9a95
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:18:47 2013 +0100
+
+    Resources, serial number
+    
+    * Added support for serial numbers to Resources
+    * Update your configuration!
+
+commit 4bb8035d311a1aa1c692be48d73e9c9fe1a6da65
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 15:04:41 2013 +0100
+
+    Resource modules
+    
+    * Dropped usage of essential/module methods for styles and scripts
+    * Added essential resources into page init
+
+commit efc52cd22a0adfd7337d431b741926e3dde58601
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 14:56:54 2013 +0100
+
+    Resources, minify transport
+    
+    * Resources are now fetched trough lists
+
+commit 334c0fc82bdc064c0e2af68f35641e689c3aad6d
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 14:40:08 2013 +0100
+
+    Resources, cache
+    
+    * Resources are now cached in separate directories by type
+
+commit c398bd134e0810e8eb7f77b9ab60e533f5e571ef
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 14:20:55 2013 +0100
+
+    DB script
+    
+    * Fixed inits for db script
+
+commit 10b93b0f5934015cd689f25594cba90d14735c65
+Merge: 1ae9de0 f53d41f
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Mar 10 12:29:25 2013 +0100
+
+    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+
 commit f53d41fe34547e914921e5f2ffa5c055eaecb943
 Author: just-paja <pavel@proboston.net>
 Date:   Fri Mar 8 16:27:55 2013 +0100
@@ -145,6 +243,14 @@ Date:   Thu Mar 7 15:39:24 2013 +0100
     Database model
     
     * Get location attributes
+
+commit 1ae9de090ad4dbeffe17fa9bef8e11a73dfe1cc9
+Author: just-paja <just.paja@gmail.com>
+Date:   Thu Mar 7 02:07:44 2013 +0100
+
+    Database model
+    
+    * Partial revert of previous code dropping
 
 commit 3d57f8b3529093b4232592d89b1ed3f8d1cd6971
 Author: just-paja <just.paja@gmail.com>

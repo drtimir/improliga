@@ -178,7 +178,7 @@
 
 		"login":{"#":{
 			"title":"Přihlášení",
-			"template":["godmode/login"],
+			"template":["intra/login"],
 			"modules":[["intra/user/login"]]
 		}},
 

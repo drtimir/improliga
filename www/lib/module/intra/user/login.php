@@ -2,15 +2,13 @@
 
 System\Status::$save_referer = false;
 def($redirect_to, '/');
-def($heading, l('user_login'));
+def($heading, l('intra_user_login'));
 
 if (System\User::logged_in()) {
 
 	System\Flow::redirect($redirect_to);
 
 } else {
-
-	content_for('styles', 'pwf/base');
 
 	$f = new System\Form(array(
 		"heading" => $heading,
@@ -19,7 +17,7 @@ if (System\User::logged_in()) {
 
 	$f->input_text('login', l("godmode_login_name"), true);
 	$f->input_password('password', l("godmode_password"), true);
-	$f->submit(l('login'));
+	$f->submit(l('intra_user_do_login'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

@@ -1,0 +1,21 @@
+.page_login {
+	padding-top:60px;
+}
+
+.page_login .block.left {
+	width:580px;
+	padding:40px 0 0;
+}
+
+.page_login .block.right {
+	background:#efefef;
+	border:1px solid #e0e0e0;
+	padding:20px 0 20px 20px;
+	border-radius:10px;
+}
+
+.page_login h1,
+.page_login h2
+{
+	margin-top:0;
+}

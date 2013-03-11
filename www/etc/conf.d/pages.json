@@ -1,6 +1,6 @@
 {
 	"#":{
-		"title":"Improliga",
+		"title":"impro_name",
 		"template":["impro/layout", "impro/homepage"],
 		"modules":[
 			["system/text/detail", {"slot":"left", "id":1}],

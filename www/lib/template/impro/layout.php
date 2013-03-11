@@ -16,7 +16,7 @@ Tag::html();
 		Tag::header();
 			Tag::div(array("class" => 'container'));
 				Tag::div(array("class" => 'logo', "content" =>
-					link_for(Tag::strong(array("class" => 'hidden text', "output" => false, "content" => 'Improliga')), '/')
+					link_for(Stag::strong(array("class" => 'hidden text', "content" => l('impro_name'))), '/')
 				));
 
 				Tag::menu(array("class" => 'plain main'));

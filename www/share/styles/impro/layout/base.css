@@ -125,8 +125,9 @@ header .logo .text {
 	display:block;
 	position:absolute;
 	left:120px;
-	top:20px;
+	top:28px;
 	font-size:35px;
+	font-family:Oswald, Arial, _sans;
 }
 
 header .main, header .main li {
@@ -137,7 +138,7 @@ header .main, header .main li {
 
 header .main {
 	position:absolute;
-	bottom:5px;
+	bottom:0px;
 	left:110px;
 }
 
@@ -153,6 +154,7 @@ header .main li a {
 	text-decoration:none;
 	font-weight:bold;
 	color:#fff;
+
 }
 
 header .main li .link-selected {

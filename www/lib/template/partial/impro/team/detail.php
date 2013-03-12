@@ -2,7 +2,20 @@
 
 Tag::div(array("class" => 'team_detail'));
 
-	$hq = $team->hq ? Stag::div(array("class" => 'map', "content" => $team->hq->map_html(330, 300))):'';
+	$hq = $team->hq ? Stag::div(array("class" => 'map', "content" => array(
+		$team->hq->map_html(330, 300),
+		Stag::div(array(
+			"class" => 'playground',
+			"content" => array(
+				heading('Domácí hřiště', false, 3),
+				Stag::div(array("class" => 'location', "content" => array(
+					Stag::strong(array("content" => $team->hq->name)),
+					Stag::br(),
+					Stag::span(array("class" => 'addr',"content" => $team->hq->addr)),
+				))),
+			)
+		)),
+	))):'';
 
 	Tag::div(array(
 		"class"   => 'header',

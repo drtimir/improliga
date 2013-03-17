@@ -1,3 +1,11 @@
+commit 10aed8905cf8a00bbdf0863105f8d46b147f4838
+Author: just-paja <just.paja@gmail.com>
+Date:   Sun Mar 17 17:25:58 2013 +0100
+
+    [fix] Attr model, datetime
+    
+    * Fixed datetime handling in attrmodel
+
 commit 5c173751fb3c658c644faf5d7fad3bc5a41abf9c
 Author: just-paja <pavel@proboston.net>
 Date:   Fri Mar 15 11:43:51 2013 +0100

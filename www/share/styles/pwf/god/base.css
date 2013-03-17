@@ -1,9 +1,28 @@
 @font-face {
-	font-family: 'Play';
-	src: url('/share/fonts/play.ttf') format('truetype');
-	font-weight: normal;
+	font-family: 'Open Sans';
 	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
 }
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzBa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hha1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+
 
 html{
 	margin:0;
@@ -26,7 +45,7 @@ body #yacms-logo {
 body {
 	background:#fff;
 	border:1px solid #999;
-	font-family:"Droid Sans", "Arial", _sans;
+	font-family:'Open Sans', 'Arial', _sans;
 	font-size:99%;
 	z-index:1;
 	padding:0;

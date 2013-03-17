@@ -144,6 +144,7 @@ namespace Godmode
 					"modules"  => array(
 						array("godmode/admin/list", array(
 							"model"      => $item['model'],
+							"sort"       => any($item['sort']) ? $item['sort']:null,
 							"attrs_list" => any($item['attrs_list']) ? $item['attrs_list']:array('id', 'get_name'),
 							"link_cont"  => $link_cont,
 						)),

@@ -4,11 +4,11 @@ Tag::div(array("class" => 'admin_detail'));
 
 	echo section_heading(t('godmode_object_name', System\Loader::get_class_trans($model), $item->get_name()));
 
-	Tag::ul(array("class" => 'attrs'));
+	Tag::ul(array("class" => 'attrs plain'));
+		$parity = 'odd';
 
 		foreach ($attrs as $attr) {
 			$value = System\Template::to_html($item->$attr);
-
 			if ($attr == System\Model\Database::get_id_col($model)) {
 				$name = l('Id');
 			} elseif (in_array($attr, array('created_at', 'updated_at'))) {
@@ -17,8 +17,10 @@ Tag::div(array("class" => 'admin_detail'));
 				$name = System\Model\Attr::get_model_attr_name($model, $attr);
 			}
 
+			$parity = $parity == 'even' ? 'odd':'even';
+
 			Tag::li(array(
-				"class"   => 'prop',
+				"class"   => array('prop', $parity),
 				"content" => array(
 					Tag::span(array(
 						"class"   => 'name',

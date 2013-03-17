@@ -184,7 +184,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 					"output"  => false,
 					"content" => $page,
 					"href"    => $p.'?page='.($page - 1),
-					"title"   => l('godmode_page', $page),
+					"title"   => t('godmode_page', $page),
 				))
 			));
 		}

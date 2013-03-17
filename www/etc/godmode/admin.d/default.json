@@ -7,6 +7,7 @@
 				"name":"godmode_user_list",
 				"icon":"items/user",
 				"model":"System::User",
+				"sort":["id desc"],
 				"attrs_list":["login", "get_name", "last_login", "created_at"],
 				"attrs_edit_exclude":["last_login"],
 				"rel_pick":["groups"],
@@ -52,3 +53,4 @@
 		]
 	}
 ]
+

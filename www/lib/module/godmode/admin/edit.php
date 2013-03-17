@@ -69,7 +69,7 @@ foreach ($rel_tab as $rel) {
 
 $f = new System\Form(array("default" => $default, "heading" => $heading, "desc" => $desc));
 
-if (any($rel_inline) || any($rel_pick)) {
+if (any($rel_inline) || any($rel_pick) || any($rel_tab)) {
 	$f->tab(l('godmode_model_basic_attrs'));
 }
 

@@ -1,0 +1,23 @@
+.admin_detail {
+	font-size:13px;
+}
+
+.admin_detail .attrs {
+	border:1px solid #E5E5E5;
+}
+
+.admin_detail .attrs .even { background:#f6f6f6 }
+.admin_detail .attrs .odd { background:#e6e6e6 }
+
+.admin_detail .attrs li .name,
+.admin_detail .attrs li .value
+{
+	padding:4px 10px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.admin_detail .attrs li .name {
+	width:180px;
+	font-weight:bold;
+}

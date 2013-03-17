@@ -5,7 +5,7 @@ def($heading, l('User login'));
 
 if (System\User::logged_in()) {
 
-	System\Flow::redirect($redirect_to);
+	redirect($redirect_to);
 
 } else {
 
@@ -24,7 +24,7 @@ if (System\User::logged_in()) {
 		if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
 			if (System\User::login($user, $p['password'])) {
 				message('success', l('godmode_login_was_successful'), NULL, true);
-				System\Flow::redirect($redirect_to);
+				redirect($redirect_to);
 			} else message('error', l('godmode_login'), l('godmode_bad_password'));
 		} else message('error', l('godmode_login'), l('godmode_bad_login'), true);
 	}

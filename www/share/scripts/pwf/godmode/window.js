@@ -494,6 +494,7 @@ $(function(){
 						pwf.search_tool.init(this.get_el('content'));
 						pwf.datetime_picker.scan(this.get_el('content'));
 						pwf.gps.scan(this.get_el('content'));
+						pwf.location_picker.scan(this.get_el('content'));
 						pwf.tab_manager.scan(this.get_el('content'));
 
 						if (this.attr('resize_to_fit')) {

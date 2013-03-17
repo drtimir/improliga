@@ -2,9 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<?
-		content_for("styles", "god/base");
-		content_for("styles", "god/login");
-		cfg("dev", "debug") && content_for("styles", "status-dump");
+		content_for('styles', 'pwf/elementary');
+		content_for('styles', 'pwf/form');
+		content_for("styles", "pwf/god/base");
+		content_for("styles", "pwf/god/login");
+
+		cfg("dev", "debug") && content_for("styles", "devbar");
 		content_from("head");
 		?>
 	</head>

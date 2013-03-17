@@ -15,7 +15,7 @@ $item  = find($model, $id);
 $attrs = array();
 
 if (empty($attrs_detail)) {
-	$attrs_detail = System\Model\Database::get_model_attr_list($model);
+	$attrs_detail = System\Model\Database::get_model_attr_list($model, false);
 }
 
 foreach ($attrs_detail as $attr) {

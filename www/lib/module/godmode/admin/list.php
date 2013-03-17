@@ -11,10 +11,16 @@ def($desc, '');
 def($conds, array());
 def($opts, array());
 def($template, 'godmode/item-list');
+def($sort, array('created_at desc'));
+
+
+foreach ($sort as &$sort_item) {
+	$sort_item = str_replace('id', \System\Model\Database::get_id_col($model), $sort_item);
+}
 
 
 $query = get_all($model, $conds, $opts);
-$items = $query->paginate($per_page, $page)->fetch();
+$items = $query->paginate($per_page, $page)->sort_by(implode(', ', $sort))->fetch();
 $count = $query->count();
 
 $cols = array();

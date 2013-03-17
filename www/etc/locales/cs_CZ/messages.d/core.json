@@ -1,4 +1,7 @@
 {
+	"yes":"ano",
+	"no":"ne",
+
 	"form_image_input_action":"Operace s obrázkem",
 	"form_image_input_none":"Žádný obrázek",
 	"form_image_input_keep":"Ponechat stávající",
@@ -48,6 +51,12 @@
 	"attr_system_user_groups":"Uživatelské skupiny",
 	"attr_system_user_contacts":"Kontakty",
 
+	"model_system_user_group":"Uživatelská skupina",
+	"model_system_user_group_plural":"Uživatelské skupiny",
+	"attr_system_user_group_name":"Název skupiny",
+	"attr_system_user_group_count_users":"Počet uživatelů",
+
+
 	"model_system_text":"Statický text",
 	"model_system_text_plural":"Statické texty",
 	"attr_system_text_name":"Titulek textu",
@@ -82,9 +91,11 @@
 	"attr_system_location_addr":"Adresa",
 	"attr_system_location_gps":"GPS lokace",
 	"attr_system_location_desc":"Popis",
-	"attr_system_location_url":"Adresa webu",
+	"attr_system_location_site":"Adresa webu",
 
 
 	"page_not_found":"Stránka nenalezena",
+	"not_implemented":"Neimplementováno",
+
 	"end":""
 }

@@ -1,3 +1,239 @@
+commit 5c173751fb3c658c644faf5d7fad3bc5a41abf9c
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 11:43:51 2013 +0100
+
+    Forms, datepicker
+    
+    * Date picker is empty when given invalid value
+
+commit 4c2fefba439d78fd644777a786471eebf80c8712
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 11:21:14 2013 +0100
+
+    Locales, yes/no
+    
+    * Added yes/no to cz locales
+
+commit fca8110f5dee37939c04da76da1fb05d4cd5a182
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 11:05:42 2013 +0100
+
+    JSON exceptions
+    
+    * Added option 'silent' to JSON parse method
+
+commit 5d20c8b641069bf16fb275293e330ec18de53274
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 10:57:16 2013 +0100
+
+    JSON decode
+    
+    * Added json decode with error reporting
+
+commit 5e942c3a3ab9742d7359320e4ec8b5373bcb9239
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 10:27:21 2013 +0100
+
+    Devbar, pwhtml
+    
+    * Prepared devbar for more instances
+
+commit 8af29d2bef6f313787534096a4f5b74b7038656a
+Author: just-paja <pavel@proboston.net>
+Date:   Fri Mar 15 10:27:03 2013 +0100
+
+    Tag aliases
+    
+    * Added most common tag aliases as functions
+
+commit cfc71dbfb83431d39f767829b58ca0dad2b0561b
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 18:05:36 2013 +0100
+
+    Devbar, null values
+    
+    * Devbar now outputs NULL values as string 'NULL'
+
+commit 6bbebcd4787bb70fc69fbecb8cba7e79f0eab97b
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 18:02:21 2013 +0100
+
+    Devbar, style, sql
+    
+    * Added SQL query logging to database class
+    * Added SQL query list to devbar
+
+commit 8d0402ac1ade6c59458aef4a0041e7554e9589e1
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 17:38:34 2013 +0100
+
+    Debug bar enhancement
+    
+    * Added not implemented panels to debug toolbar
+
+commit afc9705fc97d1096a02cd7d2281081cb96439c36
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 17:35:19 2013 +0100
+
+    [fix] Locales
+    
+    * Fixed locales language pick
+
+commit cce3a95ed2ea6de9cb0ceff81459e867b0c5dde3
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 17:29:31 2013 +0100
+
+    Devbar, style tweaks
+    
+    * Added devbar inclusion on debug cfg
+    * Tweaked devbar styles, not to be so general
+
+commit 40927557fad4adf14c0338f251df8437fe0f5e91
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 13:47:33 2013 +0100
+
+    [fix] Exceptions, Locales, Settings
+    
+    * Added catching exception on error reporting
+    * Locales, fixed load_messages - loading correct lang
+    * Resource url ommits init exceptions
+
+commit 0de23c6cb31a7aa6e05d9812fad60162efa08f4b
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 13:21:16 2013 +0100
+
+    Offcom exceptions
+    
+    * Added exception in case that server was not found
+
+commit adf69969049fee091d837b21fad73bddeecfff45
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 13:14:17 2013 +0100
+
+    Santa script fix
+    
+    * Fixed init for files action in santa
+
+commit 8d7244f572e358e2b6fb7cc7497acec37e3bb756
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 13:10:40 2013 +0100
+
+    Offcom request exceptions
+    
+    * Request throws exceptions on common errors
+    * Fixed request response without content
+
+commit 2f6a265ffe94b107e8d8a265801d3c79f6dcc470
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 12:14:01 2013 +0100
+
+    Locales, common
+
+commit fc1bc29aaf37a6c337ed5e468f09e9c7235a3598
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 12:05:42 2013 +0100
+
+    Location, to_html
+    
+    * Added to_html function to Location class
+    * Added to_html function to GPS class
+
+commit 9581d39bc7d91bd0f7e8469d6da444bad5c241a5
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 12:01:25 2013 +0100
+
+    Database model
+    
+    * Database models get_attr_list can return attrs without gps formatting
+
+commit 392b292bad84d860f39c848e1fdf392fd16fc3ed
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 12:01:00 2013 +0100
+
+    System Location class
+    
+    * Some location attrs were made optional
+
+commit 2c172ee8719afd7ecfab21921da6045b4dfc38d8
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 11:53:49 2013 +0100
+
+    Devbar
+    
+    * Added support for objects and arrays
+
+commit 07fabe008e8ad4d3f057394dc2a1919dbd04075e
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 11:51:19 2013 +0100
+
+    Error reporting
+    
+    * Minified array dumps
+
+commit 99c95b19e9a5cd285a4ffa9d71ad81194637c9ec
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 11:38:35 2013 +0100
+
+    Elementary styles
+    
+    * Added devbar into elementary styles
+
+commit 41f37d122a02ff29b338990233232ae8712c4c84
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 11:30:19 2013 +0100
+
+    Devbar
+    
+    * Converted html status dump into development bar
+
+commit cc4a024cd38ae8133a2c61a889da0561c214c6ac
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 11:29:40 2013 +0100
+
+    Icons
+    
+    * Added debug, turn-off icons
+
+commit 6ea7adf5ed5f74de5a38e231185a14733386c954
+Author: just-paja <pavel@proboston.net>
+Date:   Thu Mar 14 09:59:46 2013 +0100
+
+    Redirect fix
+    
+    * Fixed redirects
+
+commit aa6f78146bbd8bc4dce5dd1526c20b7adcbd3205
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Mar 12 16:39:34 2013 +0100
+
+    Documentation
+    
+    * Generated PHPDoc documentation
+
+commit 662593514acbd09be2713afdf88907d8b939dc73
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Mar 12 16:38:26 2013 +0100
+
+    Docs
+    
+    * Added tiny portion of documentation
+
+commit f031aa55c864342626dbe7d560517e36c36c1588
+Author: just-paja <pavel@proboston.net>
+Date:   Tue Mar 12 16:38:15 2013 +0100
+
+    Drop unused class
+    
+    * Dropped unused update class
+
+commit 2060d163d85c796fe9169c1c89ac124783e986e6
+Author: just-paja <pavel@proboston.net>
+Date:   Mon Mar 11 19:05:44 2013 +0100
+
+    Forms, selects
+    
+    * Select input now accepts list of attr models
+
 commit fc6768699de31dc85f254151757b161ce8f9ef88
 Author: just-paja <pavel@proboston.net>
 Date:   Mon Mar 11 18:33:18 2013 +0100

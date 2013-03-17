@@ -1,6 +1,5 @@
 <?
 
-System\Status::$save_referer = false;
 def($redirect_to, '/');
 def($heading, l('intra_user_login'));
 

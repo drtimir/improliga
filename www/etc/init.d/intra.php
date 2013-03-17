@@ -10,7 +10,7 @@ System\Page::init();
 
 if (!System\User::logged_in()) {
 	if (System\Input::get('path') != '/intra/login/') {
-		System\Flow::redirect_now(array("url" => '/login/', "code" => 302));
+		redirect_now('/login/');
 	}
 }
 

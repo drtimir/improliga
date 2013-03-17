@@ -1,6 +1,5 @@
 <?
 
-System\Status::$save_referer = false;
 def($redirect_to, def($_SESSION['yacms-referer'], '/god/'));
 def($heading, l('User login'));
 

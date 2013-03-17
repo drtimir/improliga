@@ -1,4 +1,6 @@
-.hidden {
+.hidden,
+#devbar
+{
 	display:none;
 }
 
@@ -6,4 +8,10 @@
 	display:inline-block;
 	background-repeat:no-repeat;
 	background-position:center center;
+}
+
+.plain, .plain li {
+	margin:0;
+	padding:0;
+	list-style:none;
 }

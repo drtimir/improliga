@@ -1,5 +1,10 @@
 <?
 
+/** This page is displayed on error
+ * @format any
+ * @package errors
+ */
+
 try {
 	$generator = System\Output::introduce();
 } catch(Exception $e) { $generator = 'pwf-unknown'; }
@@ -68,11 +73,13 @@ Tag::ul();
 				$str_desc[] = $b['function'].'()';
 
 
-				if (isset($b['args']) && any($b['args'])) {
+				if (false && isset($b['args']) && any($b['args'])) {
 					$args = array();
 
 					foreach ($b['args'] as $arg) {
 						$arg_content = is_object($arg) ? 'Instance of '.get_class($arg):var_export($arg, true);
+						$arg_content = is_array($arg) ? 'Array':var_export($arg, true);
+
 						$args[] = Stag::li(array("content" => $arg_content));
 					}
 

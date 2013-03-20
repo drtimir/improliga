@@ -1,5 +1,5 @@
 {
-	"impro_name":"Česká Improliga",
+	"impro_name":"Česká Improliga - divadlo jako hokejový zápas",
 	"impro_menu_home":"Úvod",
 	"impro_menu_about":"O Improlize",
 	"impro_menu_teams":"Týmy",
@@ -199,6 +199,22 @@
 	"impro_partners":"Partneři",
 
 	"impro_article_list":"Články",
+	"model_impro_article_chapter":"Kapitola",
+	"attr_impro_article_name":"Název článku",
+	"attr_impro_article_desc":"Souhrn článku",
+	"attr_impro_article_chapters":"Kapitoly",
+	"attr_impro_article_chapter_name":"Název kapitoly",
+	"attr_impro_article_chapter_text":"Text",
+	"attr_impro_article_chapter_video":"Video kapitoly",
+	"attr_impro_article_chapter_image":"Obrázek kapitoly",
+	"attr_impro_article_chapter_weight":"Váha kapitoly",
+	"attr_impro_article_chapter_published":"Publikováno",
+	"attr_impro_article_chapter_visible":"Viditelné",
+	"attr_impro_article_published":"Publikováno",
+	"attr_impro_article_visible":"Viditelné",
+
+
+
 
 	"today":"Dnes",
 	"end":""

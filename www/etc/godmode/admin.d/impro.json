@@ -27,6 +27,7 @@
 		"name":"impro_articles",
 		"icon":"items/text",
 		"attrs_list":["name", "visible", "created_at"],
+		"rel_tab":["chapters"],
 		"window_root":true,
 		"model":"Impro::Article"
 	},

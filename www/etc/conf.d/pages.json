@@ -48,7 +48,10 @@
 
 	"media-o-nas":{"#":{
 		"title":"impro_menu_media",
-		"template":["impro/layout", "impro/dual"]
+		"template":["impro/layout", "impro/single"],
+		"modules":[
+			["system/partial", {"template":"impro/static/media"}]
+		]
 	}},
 
 
@@ -70,19 +73,21 @@
 		}
 	},
 
+
 	"novinky":{
 		"#":{
 			"title":"impro_menu_news",
 			"template":["impro/layout", "impro/dual"],
 			"modules":[
-				["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}", "conds":{"published":true}}]
+				["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}]
 			]
 		},
 
 		"*":{"#":{
-			"modules":[
-				["impro/news/detail", {"slot":"events_right", "link_cont":"/novinky/{seoname}", "conds":{"published":true}, "id":"#{0}"}]
-			]
+			"modules":{
+				"detail":["impro/news/detail", {"id":"#{0}", "slot":"left", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}],
+				"list":["impro/news/list", {"slot":"right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}, ["detail"]]
+			}
 		}}
 	},
 

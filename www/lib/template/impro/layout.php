@@ -24,6 +24,7 @@ Tag::html();
 					Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
 					Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
 					Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
+					Tag::li(array("content" => link_for(l('impro_menu_media'), '/media-o-nas/')));
 				Tag::close('menu');
 			Tag::close('div');
 		Tag::close('header');

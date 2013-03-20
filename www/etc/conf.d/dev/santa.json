@@ -1,0 +1,6 @@
+{
+	"repositories":{
+		"local":"http://purple_repo/sync/",
+		"kundolap":"http://purple_repo/sync/"
+	}
+}

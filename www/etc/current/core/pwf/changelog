@@ -1,4745 +1,661 @@
-commit 10aed8905cf8a00bbdf0863105f8d46b147f4838
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Mar 17 17:25:58 2013 +0100
-
-    [fix] Attr model, datetime
-    
-    * Fixed datetime handling in attrmodel
-
-commit 5c173751fb3c658c644faf5d7fad3bc5a41abf9c
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 11:43:51 2013 +0100
-
-    Forms, datepicker
-    
-    * Date picker is empty when given invalid value
-
-commit 4c2fefba439d78fd644777a786471eebf80c8712
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 11:21:14 2013 +0100
-
-    Locales, yes/no
-    
-    * Added yes/no to cz locales
-
-commit fca8110f5dee37939c04da76da1fb05d4cd5a182
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 11:05:42 2013 +0100
-
-    JSON exceptions
-    
-    * Added option 'silent' to JSON parse method
-
-commit 5d20c8b641069bf16fb275293e330ec18de53274
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 10:57:16 2013 +0100
-
-    JSON decode
-    
-    * Added json decode with error reporting
-
-commit 5e942c3a3ab9742d7359320e4ec8b5373bcb9239
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 10:27:21 2013 +0100
-
-    Devbar, pwhtml
-    
-    * Prepared devbar for more instances
-
-commit 8af29d2bef6f313787534096a4f5b74b7038656a
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 15 10:27:03 2013 +0100
-
-    Tag aliases
-    
-    * Added most common tag aliases as functions
-
-commit cfc71dbfb83431d39f767829b58ca0dad2b0561b
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 18:05:36 2013 +0100
-
-    Devbar, null values
-    
-    * Devbar now outputs NULL values as string 'NULL'
-
-commit 6bbebcd4787bb70fc69fbecb8cba7e79f0eab97b
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 18:02:21 2013 +0100
-
-    Devbar, style, sql
-    
-    * Added SQL query logging to database class
-    * Added SQL query list to devbar
-
-commit 8d0402ac1ade6c59458aef4a0041e7554e9589e1
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 17:38:34 2013 +0100
-
-    Debug bar enhancement
-    
-    * Added not implemented panels to debug toolbar
-
-commit afc9705fc97d1096a02cd7d2281081cb96439c36
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 17:35:19 2013 +0100
-
-    [fix] Locales
-    
-    * Fixed locales language pick
-
-commit cce3a95ed2ea6de9cb0ceff81459e867b0c5dde3
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 17:29:31 2013 +0100
-
-    Devbar, style tweaks
-    
-    * Added devbar inclusion on debug cfg
-    * Tweaked devbar styles, not to be so general
-
-commit 40927557fad4adf14c0338f251df8437fe0f5e91
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 13:47:33 2013 +0100
-
-    [fix] Exceptions, Locales, Settings
-    
-    * Added catching exception on error reporting
-    * Locales, fixed load_messages - loading correct lang
-    * Resource url ommits init exceptions
-
-commit 0de23c6cb31a7aa6e05d9812fad60162efa08f4b
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 13:21:16 2013 +0100
-
-    Offcom exceptions
-    
-    * Added exception in case that server was not found
-
-commit adf69969049fee091d837b21fad73bddeecfff45
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 13:14:17 2013 +0100
-
-    Santa script fix
-    
-    * Fixed init for files action in santa
-
-commit 8d7244f572e358e2b6fb7cc7497acec37e3bb756
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 13:10:40 2013 +0100
-
-    Offcom request exceptions
-    
-    * Request throws exceptions on common errors
-    * Fixed request response without content
-
-commit 2f6a265ffe94b107e8d8a265801d3c79f6dcc470
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 12:14:01 2013 +0100
-
-    Locales, common
-
-commit fc1bc29aaf37a6c337ed5e468f09e9c7235a3598
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 12:05:42 2013 +0100
-
-    Location, to_html
-    
-    * Added to_html function to Location class
-    * Added to_html function to GPS class
-
-commit 9581d39bc7d91bd0f7e8469d6da444bad5c241a5
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 12:01:25 2013 +0100
-
-    Database model
-    
-    * Database models get_attr_list can return attrs without gps formatting
-
-commit 392b292bad84d860f39c848e1fdf392fd16fc3ed
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 12:01:00 2013 +0100
-
-    System Location class
-    
-    * Some location attrs were made optional
-
-commit 2c172ee8719afd7ecfab21921da6045b4dfc38d8
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 11:53:49 2013 +0100
-
-    Devbar
-    
-    * Added support for objects and arrays
-
-commit 07fabe008e8ad4d3f057394dc2a1919dbd04075e
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 11:51:19 2013 +0100
-
-    Error reporting
-    
-    * Minified array dumps
-
-commit 99c95b19e9a5cd285a4ffa9d71ad81194637c9ec
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 11:38:35 2013 +0100
-
-    Elementary styles
-    
-    * Added devbar into elementary styles
-
-commit 41f37d122a02ff29b338990233232ae8712c4c84
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 11:30:19 2013 +0100
-
-    Devbar
-    
-    * Converted html status dump into development bar
-
-commit cc4a024cd38ae8133a2c61a889da0561c214c6ac
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 11:29:40 2013 +0100
-
-    Icons
-    
-    * Added debug, turn-off icons
-
-commit 6ea7adf5ed5f74de5a38e231185a14733386c954
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 14 09:59:46 2013 +0100
-
-    Redirect fix
-    
-    * Fixed redirects
-
-commit aa6f78146bbd8bc4dce5dd1526c20b7adcbd3205
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Mar 12 16:39:34 2013 +0100
-
-    Documentation
-    
-    * Generated PHPDoc documentation
-
-commit 662593514acbd09be2713afdf88907d8b939dc73
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Mar 12 16:38:26 2013 +0100
-
-    Docs
-    
-    * Added tiny portion of documentation
-
-commit f031aa55c864342626dbe7d560517e36c36c1588
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Mar 12 16:38:15 2013 +0100
-
-    Drop unused class
-    
-    * Dropped unused update class
-
-commit 2060d163d85c796fe9169c1c89ac124783e986e6
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 19:05:44 2013 +0100
-
-    Forms, selects
-    
-    * Select input now accepts list of attr models
-
-commit fc6768699de31dc85f254151757b161ce8f9ef88
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 18:33:18 2013 +0100
-
-    Various fixes
-    
-    * Redirect method moved to Http class
-    * Recource class thro System\Error\NotFound when empty match
-    * Changed alias redirect_now implementation
-    * Changed alias redirect implementation
-    * Redirect can now be called after module, ater all modules or immediately
-
-commit 92b3b79f4760a0d8cd9e6d14c23aa74822ab84fc
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 17:59:33 2013 +0100
-
-    Resource class
-    
-    * Resources can be pulled also by name
-
-commit ba9aec72d70b7b9b04d3dcbf1a5889954c7f2789
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 16:53:31 2013 +0100
-
-    Forms, styles
-    
-    * Added styles for form into post-constructor
-
-commit 99cde7351d5f0706ab98b958cdf29c2f6f0bb46b
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 16:23:55 2013 +0100
-
-    Archive class
-    
-    * Fixed archive reading
-
-commit b90bd72b3c627bd9d221bf2dcf7ecf4b2a938ff8
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:54:21 2013 +0100
-
-    Error reporting
-    
-    * Compact transcription of php error
-
-commit 05bda1453cd78d7a19ee7c369d0e5f086d590d89
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:51:53 2013 +0100
-
-    Console error reporting
-    
-    * Tuned up console error reporting
-
-commit 66329c148fa4fa2f2e7466f301b9230827b291db
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:50:30 2013 +0100
-
-    Resources, null content
-    
-    * Resources are not passed if null
-
-commit 48afb160d7f2c9be5344c9abe281c2179a59b85b
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:49:39 2013 +0100
-
-    System status partial
-    
-    * Added output format to system status partial
-    * Added txt format of system status partial
-
-commit a475ae7ec44fbb9526705ff361169ee5b5b9c8c8
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:36:22 2013 +0100
-
-    System status, cli
-    
-    * Added template for system status, txt
-
-commit 22220a3329b0ebe9ab302380d3049bf1b00c9a95
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:18:47 2013 +0100
-
-    Resources, serial number
-    
-    * Added support for serial numbers to Resources
-    * Update your configuration!
-
-commit 4bb8035d311a1aa1c692be48d73e9c9fe1a6da65
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 15:04:41 2013 +0100
-
-    Resource modules
-    
-    * Dropped usage of essential/module methods for styles and scripts
-    * Added essential resources into page init
-
-commit efc52cd22a0adfd7337d431b741926e3dde58601
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 14:56:54 2013 +0100
-
-    Resources, minify transport
-    
-    * Resources are now fetched trough lists
-
-commit 334c0fc82bdc064c0e2af68f35641e689c3aad6d
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 14:40:08 2013 +0100
-
-    Resources, cache
-    
-    * Resources are now cached in separate directories by type
-
-commit c398bd134e0810e8eb7f77b9ab60e533f5e571ef
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Mar 11 14:20:55 2013 +0100
-
-    DB script
-    
-    * Fixed inits for db script
-
-commit 10b93b0f5934015cd689f25594cba90d14735c65
-Merge: 1ae9de0 f53d41f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Mar 10 12:29:25 2013 +0100
-
-    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
-
-commit f53d41fe34547e914921e5f2ffa5c055eaecb943
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 16:27:55 2013 +0100
-
-    Forms, commited data
-    
-    * Commited data now overwrite hidden data
-
-commit f0f453fe882af5685e64ab7d58356a1f5448c74b
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 15:58:20 2013 +0100
-
-    Forms, checkboxes
-    
-    * Checkboxes are now given default value true on render
-
-commit edefa65b987d249ca9a6b619255b1b1f1599da33
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 15:54:40 2013 +0100
-
-    Tag, value attr
-    
-    * Value attr is printed even if empty
-
-commit 0ee10862d76f8abbd7a48c213a937807dc8d334e
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 15:07:58 2013 +0100
-
-    Simplified error reporting
-    
-    * Error page does not show objects, arguments are hidden
-
-commit a0fa2625fdeae11d85d1074a94ecc68126a87fbc
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 14:55:22 2013 +0100
-
-    Errors
-    
-    * Error from exception now returns correct backtrace
-
-commit a62542ec02372e08cb40ad6f13f0c736bb1b57b1
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 14:54:58 2013 +0100
-
-    [fix] Database, belongs_to id
-    
-    * Fixed function getting foreign_key name
-
-commit 76c5dfc90701f2e9ad12f5f94681a6f2a3e709f1
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 14:31:45 2013 +0100
-
-    Database model
-    
-    * Added relation binding search
-
-commit 5e9f8a4105f662a4294f89c5d5cffcfcaa2eb47c
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 13:06:29 2013 +0100
-
-    [fix] Aliases, create
-    
-    * Create now returns created object
-
-commit c396f01e7116af4975c1ed7b0c43191df9d8e1d5
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 11:47:28 2013 +0100
-
-    Forms, styles
-    
-    * Minified image input controls
-
-commit 79724dbf24d124956102951011d63a640347536e
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 11:33:54 2013 +0100
-
-    Trans update
-
-commit 5a98f4d453b124f8c0568e20212002687b79f6c8
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 11:24:54 2013 +0100
-
-    Loader, Locales
-    
-    * Added system model translation
-
-commit ed1ff0d2613147b8e20995aec0c411246f782078
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Mar 8 11:05:52 2013 +0100
-
-    Forms, input groups
-    
-    * Added label rendering to input groups
-
-commit aa6d2fabf1f36e2b2f62e476feada53f676ddbf3
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 17:37:53 2013 +0100
-
-    User contact
-    
-    * Added some social media to user contact
-
-commit bbf50f8afc66881d03bb122790f6daab856a178b
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 16:26:56 2013 +0100
-
-    Forms, types
-    
-    * Added function that recognizes field type by attr type
-
-commit ef2c581d2e34d4239b44f604f7078ca1c5c16c73
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 16:00:52 2013 +0100
-
-    User contacts
-    
-    * Refit for public needs
-
-commit 71ffe61f3000feb72311836f9cd6411d62bed33b
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 16:00:25 2013 +0100
-
-    Database model, options
-    
-    * DB model can now simply get list of options for attr
-
-commit 7a12de1502ee5366711cbc0a379c27621710eb92
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 16:00:01 2013 +0100
-
-    Erros, model
-    
-    * Added model type error
-
-commit c6bedb65274be1b24b54e1733f0fdd6b482ec5db
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 15:45:11 2013 +0100
-
-    Database model inline docs
-
-commit fb786ed96ce73aab64467e851a4178de9febd85e
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Mar 7 15:39:24 2013 +0100
-
-    Database model
-    
-    * Get location attributes
-
-commit 1ae9de090ad4dbeffe17fa9bef8e11a73dfe1cc9
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 02:07:44 2013 +0100
-
-    Database model
-    
-    * Partial revert of previous code dropping
-
-commit 3d57f8b3529093b4232592d89b1ed3f8d1cd6971
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 01:58:43 2013 +0100
-
-    Locales
-
-commit 3effc05a55a9fc76ddee13b60fc12c148a8c75f5
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 01:58:01 2013 +0100
-
-    Database model
-    
-    * Drop unused code
-
-commit e45117e642b130d738a4a19878b378e8939474da
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 01:57:46 2013 +0100
-
-    Attr model
-    
-    * Drop unused code
-
-commit 66d6b3e2e9a2a8bc30110f77c72e67737704b24b
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 01:07:22 2013 +0100
-
-    Forms, tabs
-    
-    * Added styles for form tabs
-
-commit 8ddcf22393148dcfd8c5b38d66e518f1976b690c
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 00:51:47 2013 +0100
-
-    Forms, tabs
-    
-    * Added tab manager to forms
-
-commit af745ea01e7ca307c28d0dabf8bd6823a14c0229
-Merge: e9e4144 fc22b7e
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 00:15:40 2013 +0100
-
-    Merge branch 'master' into dev
-
-commit e9e4144df07dba43e9b9a71805a04016c496732e
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 00:15:27 2013 +0100
-
-    Forms, tabs
-    
-    * Added tab support for forms
-
-commit ac69733879373fe99b6fbaa8f232993189cc1814
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 00:14:57 2013 +0100
-
-    Var dumps
-    
-    * Migrated from var_export to var_dump because of circular references
-
-commit fc22b7e7f051926e9330b8a7ed26ecac1a3b65b4
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Mar 7 00:12:45 2013 +0100
-
-    Output content filter
-    
-    * Output filters contents of scripts and styles to be unique
-
-commit 0f6bb9f4de3ac8bfa85ffff5874fe4f6899c70b3
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Mar 6 00:20:27 2013 +0100
-
-    Output, Page classes
-    
-    * Output now handles title translating
-
-commit 7cb92be6d6c8e9c49200feb09e1e5251da9fa089
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Mar 6 00:19:12 2013 +0100
-
-    Page class
-    
-    * Translate titles from page tree
-
-commit a0b7c429f0bec98127f6a2664b875c9453bce019
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Mar 6 00:09:11 2013 +0100
-
-    Database model, datetimes
-    
-    * Null datetimes are handled correctly
-
-commit 88c9ff230ed4c2c8d56fc6a4fe64a91ec7eb9e7c
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Mar 6 00:05:47 2013 +0100
-
-    Forms, null value
-    
-    * Form strictly resets images to null value
-
-commit c5df46f5589e96ef4b5f5fa5d306b33b22e7102b
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Mar 5 23:44:10 2013 +0100
-
-    Forms, null image
-    
-    * Form supports null value for image
-
-commit 2a527dcd63c885af090d44285bc6861db4cf7fba
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Mar 3 22:53:59 2013 +0100
-
-    Soprintf
-    
-    * Added safety for soprintf that ensures id_col replacement
-
-commit 9b8302220c2dc11eb41382ce1955405821ff7027
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Mar 2 00:10:09 2013 +0100
-
-    Seoname generator
-    
-    * Strip dots
-
-commit 600c3d6bb83264317b3845bc7911b9d04c974d0c
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Mar 1 23:38:25 2013 +0100
-
-    Default values
-    
-    * Fixed default values for blob/text columns
-
-commit 002ec1c96db14a3d6af4086c0aee4710b758475c
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Mar 1 23:26:42 2013 +0100
-
-    Output class, Cli
-    
-    * Ouput does not send headers when on cli
-    * Status class DRY
-
-commit 3ad1dff8940b87ffd9f2162158795a2448c4c1e4
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 17:56:18 2013 +0100
-
-    Forms tabs
-
-commit 9caf41e87fccf37282750286eb0a6285e4f7cf09
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 15:21:46 2013 +0100
-
-    Namespace protection
-
-commit 6e5a0f166b231af34c0a963ca108b008ed315fc0
-Merge: 1774942 7cc1060
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 11:25:46 2013 +0100
-
-    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
-
-commit 1774942aea92d8421f488a66fbe9fe370dc31ad6
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 11:23:47 2013 +0100
-
-    Page, current
-    
-    * Page allow current page setting
-
-commit 6cfc79c80ba1c77550dc3de32352c306482d28fd
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 11:20:59 2013 +0100
-
-    Page, Module class
-    
-    * Fixed passing variables
-
-commit ea4a112356ed929e5ebec92c9ef2207e2a9da307
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 10:59:30 2013 +0100
-
-    Attr model, null, Database model
-    
-    * Added null value handling when getting attribute to attr model
-    * Fixed database model missing variable
-
-commit 10a62b1c1af23e4878fda3a692f93544f4b8087f
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 10:35:52 2013 +0100
-
-    Page, Output class
-    
-    * Dropped old code (use_ajax, module templates)
-
-commit 948b44a6952abc3a177088386e6f069511c55336
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 27 10:11:04 2013 +0100
-
-    Page class
-    
-    * Browse tree now returns false on bad path
-
-commit 7cc1060a52d037fd6af5da8a23562922ada4fdc8
-Merge: bb63a9c 7c0056c
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Feb 26 23:37:10 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit 7c0056c638769c2b7525fc941a016280ea446b35
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 17:59:40 2013 +0100
-
-    Database model
-    
-    * Added unified name getter to database model
-
-commit c76a3b0ca3c4d98f72f32d79d6a66387140ebb45
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 17:56:49 2013 +0100
-
-    Forms, input length
-    
-    * Fixed form input max length for textarea
-
-commit 59dc7d1ad9916e2d3310cbfd4d3660aec5f6ab03
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 17:45:04 2013 +0100
-
-    Forms
-    
-    * Fixed textarea, dropped value attr before rendering
-
-commit df67f641d3d89653d0aaa70f2562aac9fb899f6a
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 17:39:55 2013 +0100
-
-    Flow class
-    
-    * Fixed redirect_now missing attrs in Flow class
-
-commit 8bbed85b8d0c8d0638dde8c3a8d2d76cf359c0b1
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 17:28:54 2013 +0100
-
-    Model names
-    
-    * Added get_model_name to attr model
-
-commit 869bb8bb27a1e29a33e7e486383ff2fbe32896bc
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 16:27:42 2013 +0100
-
-    Locales
-
-commit fb2e24b9c2dc89e8fec72dc255be527dd6ad5e21
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 16:19:10 2013 +0100
-
-    Attr names
-    
-    * Added attr name convention
-    * Added attr names for basic models
-
-commit bdf690aeb97daa922eaacced64452df82548d944
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 14:26:40 2013 +0100
-
-    Template class
-    
-    * Fixed aliases
-
-commit cb0d0ef51b53872272c789f66e28389f474b6a36
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 14:04:55 2013 +0100
-
-    Page
-    
-    * Extended browse_tree to return whole subtree
-
-commit a7fe55ae2ad91e3bbf995bbf8ecdf42c476f0ea8
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 12:49:28 2013 +0100
-
-    Attr model
-    
-    * Make public get_attr function for attr model
-    * Database get_attr respects id policy
-    * Added to_html function to Template class
-    * Added silent tag alias
-
-commit df271fd8625947674830b4859366668d7689eeed
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 10:48:41 2013 +0100
-
-    Class name conversions
-    
-    * Added class name conversion from model format
-
-commit 7d5ec37bf1efe46737208dfb54613645bbdd1fe0
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 10:09:07 2013 +0100
-
-    Directory class
-    
-    * Added more user friendly find function
-
-commit 22d0e215ce298fb91ab857dbddd19222beabf3a4
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 26 09:40:57 2013 +0100
-
-    Code cleanup
-    
-    * Dropped unused and deprecated models
-    * Added comments to aliases
-
-commit bb63a9c4be308f78f2fe904d4741f96211eea5f4
-Merge: 667262e 6ded830
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 25 18:54:15 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit 9fe2964a48099226aebb0d1c39069c2138f5a4a5
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:59:55 2013 +0100
-
-    Make script
-    
-    * Dropped cli constants
-
-commit 92ed17b02585c0a6a3a4397b741ac41a202345fd
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:56:50 2013 +0100
-
-    Drop unused constants
-    
-    * Dropped unused CLI constants
-
-commit 6ded8307dbe878f082ec1e0f6818873a521d1977
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 15:19:04 2013 +0100
-
-    GPS picker
-    
-    * Dropped debug messages
-
-commit eef258d50265016cc529200210ac4be28b1e2493
-Merge: 97d7f97 059a57f
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:50:58 2013 +0100
-
-    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
-
-commit 97d7f975abca7a4c9b6da4cf335443df6fa725e7
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:49:34 2013 +0100
-
-    Resource class
-    
-    * Resource class now sends pragma headers
-
-commit 0f6bdea080c6ac4c1cdd128fd1d8100eb7803536
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:41:54 2013 +0100
-
-    Archive class
-    
-    * Dropped deprecated messages
-
-commit 3e1f52aa917a16a4e875beaeb58bd12dea82f2f5
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 17:35:55 2013 +0100
-
-    Offcom email class
-    
-    * Rewritten e-mail class
-    * Dropped old e-mailer model class
-
-commit 65905842d9582ad7432638e454e16e6131d94a8f
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:58:33 2013 +0100
-
-    Drop messages
-    
-    * Removed some old message() uses
-
-commit ee14e754214d95d24a340867c749a50470629e8a
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:52:43 2013 +0100
-
-    Code cleaning
-    
-    * Dropped more unused functions and aliases
-
-commit 2320c1556782678159cdcf4bbe0131b5667cca3d
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:43:46 2013 +0100
-
-    Partial module
-    
-    * Added module that just includes partial template
-
-commit 76ead8a4489a3abfd913212c25c89172f3496004
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:43:11 2013 +0100
-
-    Message module
-    
-    * Added option to override template
-
-commit 5dcfb5372810ba3999e4b798fb8711443f6d43a1
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:42:26 2013 +0100
-
-    Module class
-    
-    * Commented functions in module class
-    * Added locals require function to modules
-
-commit ff6d655aab8e4d6f985c205230dc670debb494f8
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 25 16:41:45 2013 +0100
-
-    Functions
-    
-    * Fixed dump function v() when not dumping inside class
-    * Dropped some old unused functions
-
-commit 059a57fdaac9867e3c3a4ad58f5b34c4123b4a20
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Feb 24 15:50:16 2013 +0100
-
-    Error reporting
-    
-    * System is now catching all errors
-
-commit 068475de0c01bf7435311a12cbd91d8666a8f766
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Feb 24 15:20:35 2013 +0100
-
-    Database script
-    
-    * Fixed notices
-
-commit f91541183d4888586cb13b3b4346717eb8476dad
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Feb 24 15:15:40 2013 +0100
-
-    Status page
-    
-    * Fixed templates
-
-commit 667262eb99679d1871446a184b0c53618b5119e3
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 15:19:04 2013 +0100
-
-    GPS picker
-    
-    * Dropped debug messages
-
-commit 62fcbec84d622243270a64afb1aa9d352c48de2e
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 14:37:56 2013 +0100
-
-    Forms, locations, passwords
-    
-    * Forms now seek locations by name, editing is not allowed
-    * Password input does not pass value
-
-commit 04e009195ba7229ab1102e018c14c4927240b83e
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 14:06:18 2013 +0100
-
-    Autocompleter
-    
-    * Fixed autocompleter z-index
-
-commit 5c51c41b4a4afc707742aed6a409fa1118c0cfa0
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 14:05:29 2013 +0100
-
-    Database model
-    
-    * Strictly added ID column into attributes
-
-commit 6bf97c2347c8e9ae06a50d974d7cc6daf2e04d13
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 14:00:56 2013 +0100
-
-    Models
-    
-    * Changed callback model to be more static
-    * Added option that indicates if model data has changed to attr model
-    * Implemented new parents into database model
-
-commit 325d12cedbdcff8f9bb76f47d81ae25b69fe67ce
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 13:34:47 2013 +0100
-
-    Forms, gps
-    
-    * Added autocompleter
-    * Added location input autocompleter
-
-commit bc6eedde15f47e1d1c58fe8282f94b78f3f9ab2e
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 20 10:33:55 2013 +0100
-
-    Forms, gps
-    
-    * Fixed GPS input values
-
-commit cd64b0ddb46eef73017606eea20df50ee52f6826
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 16:09:30 2013 +0100
-
-    Image class
-    
-    * Fixed parameters for thumb()
-
-commit 75558999b31a92f25b4af0e431077774075c535e
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 15:41:48 2013 +0100
-
-    Flow class, Forms
-    
-    * Fixed redirect_now to accept only url
-    * Forms count inputs correctly now
-
-commit 2b4f5797d2710b638c10c2fcfb73710a1a4e3750
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 15:16:14 2013 +0100
-
-    Forms
-    
-    * Separated buttons from inputs
-    * Separated form send indication from buttons
-
-commit 4e40d31ffee4c04dd4de44e0988ffc590846ae68
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 11:45:56 2013 +0100
-
-    Forms, datetime
-    
-    * Added datetime picker cleaner if not required
-    * Added support for null values to datetime picker
-    * Added clear icon
-
-commit 652ce5425ccaa2d166280531b1bfeeff7dd557f7
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 11:11:41 2013 +0100
-
-    Default config
-    
-    * Fixed default settings
-
-commit 9aa170510d27ff0d742c28c8dddb52ffda8ca099
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 11:09:39 2013 +0100
-
-    Messages
-    
-    * Fixed input_gps_lng message
-
-commit ff8c2faad59bf0fbb0011caa65d8f5b4a2522d75
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 11:09:12 2013 +0100
-
-    Forms
-    
-    * Inputs render their tools according to the standard
-
-commit 7f4fb534dcc3710f8bfbc22833527603a262a4f1
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 19 10:34:23 2013 +0100
-
-    Forms
-    
-    * Added forms classes to the container
-    * Minimized forms js code
-
-commit 8e0561f7cef7c3080a85b58ac679db1cb9b5b2cf
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 17:42:17 2013 +0100
-
-    Database model
-    
-    * Fixed default value handling
-
-commit 9b7cfb492733d2130ac96c5bc07d68e264d02992
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 17:26:49 2013 +0100
-
-    Forms
-    
-    * Fixed image drop on no change action
-
-commit e2193111580048f7cba1b83f3f7c39b38f8d1fa4
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 16:33:43 2013 +0100
-
-    Image class
-    
-    * Fixed path handling
-
-commit c2993e854c556b331d523d99f7937246496d1e38
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 10:31:09 2013 +0100
-
-    Image class
-    
-    * Added root handling to from_path
-
-commit 6f7d356aa37b7a2cddcc286588224beaf54c6e7f
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 10:22:55 2013 +0100
-
-    Database model
-    
-    * Handle null images
-
-commit 7ab86275986431782bacb678c35aa6441676617f
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 18 10:16:00 2013 +0100
-
-    Data seeds
-    
-    * Migrated seeds to use model name instead of table name
-    * Added support for seeding bilinear relations
-
-commit 0f63fa5011b00155de885ca11be715b1958c6072
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 18 01:06:57 2013 +0100
-
-    Error reporting
-    
-    * Tuned up error reporting on CLI
-
-commit 2c934c0aaf18c35245197e9fd261344b2d73b3dc
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 18 00:49:25 2013 +0100
-
-    Youtube videos
-    
-    * Added support for youtube videos
-
-commit 8c93379067ef08947a748ff89fc46d6bef20e7fc
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 18 00:40:53 2013 +0100
-
-    Tag class
-    
-    * Added support for some iframe attrs
-
-commit 40e4244ca1a65726f8f665f99ac9a6c01b084ec8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Feb 16 12:25:56 2013 +0100
-
-    Attr model
-    
-    * Fixed null columns
-
-commit 3bdcead5e0da899a2394c0a720fb147b52b929e2
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Feb 16 12:19:04 2013 +0100
-
-    User model
-    
-    * Avatar is never null
-
-commit 48fd43e0efbb98bfd41882f4dfc68705f9866cc5
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Feb 16 12:17:34 2013 +0100
-
-    Attr model
-    
-    * Fixed is_null columns when null
-
-commit 842aa64609b870a75ab49285aa713137308a8c5e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Feb 16 11:48:03 2013 +0100
-
-    Labels
-    
-    * Fixed label argument passing
-
-commit 1498208869818c757556f9c196cdcaf56d58b1f1
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Feb 14 11:55:30 2013 +0100
-
-    Template class
-    
-    * Added label_for with label on left
-
-commit c428b7c41d30bf1594dd917474178e1f36adb745
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Feb 14 10:33:59 2013 +0100
-
-    Locales class
-    
-    * Fixed bug where messages were not loaded when modules were loaded first
-
-commit 4ba8b647c022bb0d2437093c91766d0290182cfa
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Feb 14 10:24:13 2013 +0100
-
-    Json, Locales class
-    
-    * Added comments to Locales
-    * Added loaded filelist to Locales
-    * Locales now skip loading modules second time
-    * Json::read_dist is now passing loaded files into array in fourth param
-
-commit 93e44cd432abd7858a6c8825e72cf6f2da3360db
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 13 14:05:59 2013 +0100
-
-    Gps, Location
-    
-    * Added Google map functions for objects
-
-commit 450ee68774b8bdcbabf4a6da3d74df565705c97e
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 13 13:04:16 2013 +0100
-
-    Forms
-    
-    * Fixed form HTML class handling
-
-commit b31cd57e5bdabe32b2a6427303bbb44959027398
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 13 12:45:01 2013 +0100
-
-    Messages fix
-    
-    * Fixed message partial name
-
-commit f01c563d954db3dde1e7f73273a8eec2f4da2554
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 13 12:41:45 2013 +0100
-
-    Error reporting
-    
-    * Fixed template partial error
-
-commit 71e9e0f9c7051ce29260230a909180c9d4f34085
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Feb 13 11:26:17 2013 +0100
-
-    Error reporting mark 2
-    
-    * Recreated error backtrace
-    * Added error reporting as partial
-
-commit 1da82c1f8f04cc31d7d7d327c66fee804fe79bd3
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Feb 12 21:40:35 2013 +0100
-
-    Code cleanup
-
-commit c4f3e9e1098d909d6ae58ce0141f52d095c43c82
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 18:16:36 2013 +0100
-
-    Error reporting mark II
-
-commit bf781f16f7a235cf3426dd096fe28badfe6342a4
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 17:22:41 2013 +0100
-
-    Error reporting
-    
-    * Added custom error handling by name
-    * Merged styles for installer and error pages
-
-commit 07b524e1c6420221ed588f306345cbd8bbcc0b72
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 16:39:57 2013 +0100
-
-    Autoloader
-    
-    * Eyecandied to autoloader
-
-commit 0de375ff4e438d964221546c1342702951380ba9
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 15:54:04 2013 +0100
-
-    File writing
-    
-    * Fixed exceptions
-
-commit 572279be6770e4cfc7ff1ac9e6234ee8358c638a
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 15:43:24 2013 +0100
-
-    Styles minifier
-    
-    * Fixed selector spacing
-
-commit 0b1acfe099e31705cfabf55dd4609ef1284d5ff8
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 11:27:28 2013 +0100
-
-    Styles minifier
-    
-    * Removed whitespace and comments in regexps
-
-commit 570d5f3748cb068694019a535e84d4ebce71a317
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 11:11:05 2013 +0100
-
-    File class
-    
-    * Added unnecessary error prevention
-    * Chmod proceeds only if file is new or requested on file write
-
-commit 348da996715594b26dfcf5bfe32f4ae89499e451
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 11:08:16 2013 +0100
-
-    System router,setup classes
-    
-    * Setup does not execute shell to update rewrite
-    * Mod rewrite code moved to router class
-
-commit 63b534bd1bd0fd5bf400be1c8804a3ef4afcd548
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 11:03:49 2013 +0100
-
-    Settings class
-    
-    * Reading pages file made silent
-
-commit b045e0ee1e4cab8e4c2191125586aff721988bdb
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 11:00:19 2013 +0100
-
-    Working directories
-    
-    * Added working directories
-
-commit 70c940e34ccaad5411e34d3df1a35737fb9b5b2e
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 10:56:50 2013 +0100
-
-    Error handling
-    
-    * Catch log write errors and don't report them back
-    * Send 500 HTTP status
-
-commit 4ec424c9073a9a5b3ab4e8e01e67487ceed56fe6
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 10:52:01 2013 +0100
-
-    Status reporting
-    
-    * Removed unsused log functions
-    * Settings class now logs reloading and saving config
-
-commit 71ce98a434429d17fc5b60376a4fcecf0f815d62
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 10:35:47 2013 +0100
-
-    File reading
-    
-    * Migrated all file read inputs to internal errors
-    * Added caching ability to resource class
-
-commit 11a578fb0ca96a8c19016e57c89ff4546af470de
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 09:32:38 2013 +0100
-
-    Output class
-    
-    * Title skips empty parts
-
-commit 480e361bdef9c51cfc1c8dcba1eb14c975bb68f8
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 09:32:28 2013 +0100
-
-    Deploy
-    
-    * Added comments
-
-commit 09507f0ce7b400656d89f7e1a4c16b5ff07cb05a
-Author: just-paja <pavel@proboston.net>
-Date:   Tue Feb 12 09:20:42 2013 +0100
-
-    Tag class
-    
-    * Moved tag class under system template
-
-commit 4d799baaca9835e378d1af80ad61d124fe48a926
-Merge: 5d78bbc 2c8f67d
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Feb 12 00:34:33 2013 +0100
-
-    Merge branch 'dev'
-
-commit 2c8f67d9f62e9ebad62822190e180ff48aa6c0e6
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Feb 12 00:29:41 2013 +0100
-
-    Location input
-    
-    * Fixed GPS float val inputs, respecting locales
-    * Replaced option 'keep' by 'edit'
-
-commit 10bdb72503a5ca4075210a258d08e9f0a7c0d05c
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Feb 12 00:00:09 2013 +0100
-
-    Forms, gps input
-    
-    * Switched position of url and position
-
-commit 5d78bbc3d046156258c051390bce702af3c00683
-Merge: 10a2310 f8cd16b
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 23:35:03 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit 10a2310ec98353639ecc4df96e94db7eaa9efda5
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 23:34:23 2013 +0100
-
-    Messages
-    
-    * Fixed module for messages
-
-commit f8cd16bd95c1baa7c2ab38779b1f9207ec47a7a1
-Merge: da0b5e6 2795060
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 23:20:44 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit da0b5e668611269cada47bf0fc7ddc67acca102e
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 23:19:41 2013 +0100
-
-    Config cleanup
-    
-    * Fixed default config for deploy
-
-commit 39a77adf2698ee5cc593eabc203a8a7e62939a42
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 23:04:37 2013 +0100
-
-    Code fixes
-
-commit d34e002b239814f0e7da2c160492022392c1a4ee
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 22:59:10 2013 +0100
-
-    Compiler
-    
-    * Compiler respects current git branch
-
-commit 7988e40af4323a445edda858254fe03b0f679fcf
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 22:43:28 2013 +0100
-
-    Compile
-    
-    * Added constants to the system
-
-commit 697e661f0275fc6c9b584569e37a1dd5990629c9
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 22:40:48 2013 +0100
-
-    Error reporting
-    
-    * Prepared for better error reporting
-
-commit 333bd3e5fe92289f9502cf7dcccb30699e5b20e3
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 22:40:11 2013 +0100
-
-    Constants
-    
-    * Separated constants into own file
-
-commit ff1ef18bd9ccd9617963ce52d5b9aed047215f21
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 21:33:05 2013 +0100
-
-    Forms, gps input
-    
-    * Hidden lat,lng fields
-
-commit 546ec9da239f406b90d53b94f0f39d1e1d4c3c5a
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 20:55:26 2013 +0100
-
-    Page class
-    
-    * Removed not functioning format code
-
-commit 37a8a394310cac1893be3a5706674684ae36801c
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 20:55:13 2013 +0100
-
-    Code cleanup
-
-commit 732d0b091c4cffd3fc1e49f8e56edeaa580d1aeb
-Merge: eabfd5c 77031c6
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 11 17:58:02 2013 +0100
-
-    Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
-
-commit eabfd5cbafdc9ccac4b2373e5caa70ba2e3e907d
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 11 17:54:55 2013 +0100
-
-    Resources
-    
-    * Merged resource fetching
-    * Prepared for serial number
-    * Added js and css minifier
-    * JS Coding style
-
-commit 2795060b9d406f6c528bc2c4c72adcf2b3f51015
-Merge: 32c93dc cb8bd7e
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 00:40:10 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit 32c93dc9e305cb46a16d763217eeb6fa81b7e63a
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:35:23 2013 +0100
-
-    Forms, gps
-    
-    * Fixed GPS bugs
-    * Hidden street view controls
-
-commit cb8bd7e2f20cfa1576537e86fc20130ef53457be
-Merge: c70ab06 50384e4
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 00:39:34 2013 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf
-
-commit c70ab06d9c22d9a741627b9eb14792732481273b
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:35:23 2013 +0100
-
-    Forms, gps
-    
-    * Fixed GPS bugs
-    * Hidden street view controls
-
-commit 77031c68382e163c4ec8a50d0f360c59f4e24b14
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 00:38:45 2013 +0100
-
-    [fix] PHP 5.3 compatibility
-    
-    * Fixed gps syntax for php 5.3
-
-commit 0b55acd58f5baebb64e0f516b6c7aac0ef9fe4ab
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Feb 11 00:03:06 2013 +0100
-
-    [fix] Database models
-    
-    * Fixed old deprecated method names
-
-commit 849f16d0c672e0ab8f7946e3363247c7b3b82d0b
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:58:46 2013 +0100
-
-    JS functions: is_attached
-
-commit 50384e4ca258ee617afff9beeb9c3ecf926e4eb1
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:35:23 2013 +0100
-
-    Forms, gps
-    
-    * Fixed GPS bugs
-    * Hidden street view controls
-
-commit 14c25b09f9b149326df54c45fb7f71a1abacf8ab
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:51:52 2013 +0100
-
-    Forms, datetime
-    
-    * Fixed datetime picker rebinding
-
-commit 8d7c393d624fd1ae7a29d9293f961a723ed6674a
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:24:19 2013 +0100
-
-    Forms
-    
-    * Fixed location GPS value
-
-commit 5b0ca704ca30e21c105750fef25e7c61ea5ac0da
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Feb 8 17:12:52 2013 +0100
-
-    Forms, gps
-    
-    * Integrated GPS input into Location inputs
-    * Gmaps update according to inputs
-    * Inputs update according to google map
-
-commit 8b538c06c35aa8840092ca0afba808cd416c160d
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 18:27:36 2013 +0100
-
-    Attr model - coding style
-
-commit 0fd0d30a20c566180ed65c58e910160a02577aaf
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 18:22:17 2013 +0100
-
-    GPS
-    
-    * Fixed data handling for GPS
-
-commit e27abd1a1ef8815dbc15f276925b1bf9381a21e1
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 18:16:09 2013 +0100
-
-    Attr model gps
-    
-    * Fixed gps data handling
-
-commit 61de6515bf474baaa5f4be08c82bae3f616aa3a5
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 18:11:22 2013 +0100
-
-    Database, gps classes
-    
-    * Added num2db method to Database
-    * Added locales aware floatval to GPS
-
-commit 4d0db7148d482633412517f85f74c542ae491236
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 18:06:42 2013 +0100
-
-    Database script
-    
-    * DB script now respects point column values
-
-commit d0bdc605ccbf5fb597d725962f8f8048a5c34f17
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 17:56:48 2013 +0100
-
-    Google maps integration
-    
-    * Added google maps into GPS input
-
-commit 23a497042af4183c3070e1955711acfe2af60451
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 17:36:59 2013 +0100
-
-    Geospatial points
-    
-    * Added support for GPS to attr model
-    * Added support for GPS to database model
-    * Added GPS input to forms
-
-commit 7e21760d7cb358c0879fd25e8b701857f2502a2a
-Author: just-paja <pavel@proboston.net>
-Date:   Mon Feb 4 11:23:23 2013 +0100
-
-    Aliases
-    
-    * Added label_for. Creates text label with icon
-
-commit a902f65b7f4fec9c95676250a9c509105ce0bee0
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Feb 1 18:37:10 2013 +0100
-
-    Module locals fix
-
-commit 392b94a87bc80b05346056b2407a0f300c8e9816
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Feb 1 18:35:19 2013 +0100
-
-    Module locals
-    
-    * Added default locals to module
-    * Modules are now provided by default per_page and page attrs
-
-commit 00fb53c800445307940323a41afb4c024b9e10ab
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Feb 1 18:17:14 2013 +0100
-
-    Query class
-    
-    * Fixed pagination
-
-commit 0d665ca743b39e64265d203a50284df2b5ca40f4
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Feb 1 17:54:16 2013 +0100
-
-    Fix dir into repository
-
-commit 0f3be059270c05fb101ce99ababf038cd0f1596e
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:13:21 2013 +0100
-
-    Forms: Location picker
-    
-    * Added location picker BASE
-
-commit 49196d0feda4f204e78d6fbccaaee013ae295713
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:10:05 2013 +0100
-
-    Forms: Location input
-    
-    * Added location input type
-
-commit bf16554acb6d1b95d820cda7a6af9be274c57ba5
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:09:19 2013 +0100
-
-    Database structure
-    
-    * Added email and url attr types
-
-commit 7db662c335ea94c81bf93b7bfd477805bd942db7
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:08:48 2013 +0100
-
-    Location class
-    
-    * Added location class that represents location on world
-
-commit d0a09ee8e2e95270d9599aefb8bbaa83d5ef9e44
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:01:03 2013 +0100
-
-    System bug display
-    
-    * Bug report falls back to HTML format if current is not available
-
-commit c09dd1408a33d87ecdcfeb2db9311b3410e23711
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 01:00:26 2013 +0100
-
-    Query class
-    
-    * Fixed bug where query accepts empty conditions
-
-commit 4da24e4e0c2100a930b72006d491c81e453c6ccb
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 00:59:42 2013 +0100
-
-    Forms: Search tool
-    
-    * Fixed search tool empty attributes
-    * Search tool displays all available attributes if display attr is empty
-
-commit 9217dc12acc9a17ef8bbbc5adcc0438bbc6e6569
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Jan 30 00:58:08 2013 +0100
-
-    Forms: datetime picker
-    
-    * Datetime picker scan is not limited by body as container
-
-commit 6eaeb0efb0f677ec22581931fb2e965b614f07e6
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jan 29 23:30:39 2013 +0100
-
-    Script fetching
-    
-    * Fixed log function name
-
-commit 089d8ff261c82896292185534452a268554c1252
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jan 29 23:30:06 2013 +0100
-
-    Forms: search tool
-    
-    * Omit adding placeholder to search tool if attr is null
-
-commit 254c0936522ea1b0cbe1cfb5bc237f92a89545bb
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jan 22 23:01:58 2013 +0100
-
-    Image class
-    
-    * Fixed update_attrs method
-
-commit f863f3f73949cf543c679e9b4389c2bb1dec1da5
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Jan 17 21:28:20 2013 +0100
-
-    Forms
-    
-    * Added empty option to selects if not required
-
-commit 822daacba05e87d1c2ecf4c121487b01e5307974
-Author: just-paja <pavel@proboston.net>
-Date:   Thu Jan 17 15:30:41 2013 +0100
-
-    Forms
-    
-    * Fixed checking checkboxes from default data
-
-commit 7a76b88fe65566a7b552477d807322a19c6c949d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jan 12 19:44:30 2013 +0100
-
-    Forms
-    
-    * Fixed input-label binding
-
-commit 0f0f70868f65a507a0b7c5126316183d4b8550fe
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jan 12 19:41:48 2013 +0100
-
-    Forms
-    
-    * Fixed checkbox checking
-
-commit 906f9474a0d5ed0306fd1821a08d7dc4b501f218
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jan 6 19:08:48 2013 +0100
-
-    Forms
-    
-    * Datetime inputs return datetime object
-
-commit deef5c3d86f8d03b1112388db7302046bae8325a
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jan 1 23:22:11 2013 +0100
-
-    Database script
-    
-    * Added progressbar to initial data injection
-
-commit e7b7ad47c489e300a7fdd4c82202fbb3b77cbb32
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 31 12:48:20 2012 +0100
-
-    Forms datetime picker
-    
-    * Fixed post value
-
-commit 9649af2f1018798305e951861b28e0d7c12b7076
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 31 01:08:35 2012 +0100
-
-    Forms date picker
-    
-    * Added date picker
-    * Tweaked date picker functions
-
-commit f5147a1f8c05d937da20cdb5b7deb66a40e1d136
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 30 22:08:38 2012 +0100
-
-    Datetime picker
-
-commit f5adabb179c9950a89c909773626a4553a41ae92
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Dec 26 23:23:41 2012 +0100
-
-    Forms
-    
-    * Added image input locales
-    * Dropped unused option IMAGE_DROP from image input
-
-commit cc12b772a637dbb15097d0057cb2eb4580fff35c
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Dec 26 23:07:22 2012 +0100
-
-    Forms
-    
-    * Enhanced image input styles
-
-commit 4163647cd68cfe3e8a53e66b36922dad76e8128f
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Dec 26 23:03:57 2012 +0100
-
-    Image class
-    
-    * Added caching function to images
-
-commit 1efd49bf27e2792fe36cfc3788c732bb563abb81
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Dec 26 22:50:59 2012 +0100
-
-    Forms
-    
-    * Styled form image input
-
-commit 660d1722fc0e3ff2c1e00c5aa92040e9ae7c1ec6
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:08:30 2012 +0100
-
-    Forms
-    
-    * Added image input
-
-commit 1b7666f8c809fca558481fa54b26117b82fee5b9
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:08:04 2012 +0100
-
-    Response class
-    
-    * Migrated response class to new attr model
-
-commit 48a8ded33f2de66f9af0873153e5977863215bff
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:07:36 2012 +0100
-
-    Request class
-
-commit e5ffe6bcff608374085e285a9ff4a675f368efae
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:06:33 2012 +0100
-
-    Image class
-    
-    * Migrated image class to new attr model
-    * Added recursion prevention to image class
-
-commit 335865097b7e60d9271ac492f986604052af17bf
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:06:06 2012 +0100
-
-    File class
-    
-    * Migrated to new attr model
-
-commit f9107969c912b6f40ab9f204452c963792de9936
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:05:33 2012 +0100
-
-    Attr model
-    
-    * Added blob type to attr model
-
-commit 04c199851b95560985429dce977680c4a945c3bc
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Dec 25 17:05:03 2012 +0100
-
-    Image class
-    
-    * Added default thumb
-
-commit 51e073848b70fa4f8404f44b5f202a9c2e09be0a
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 16:20:15 2012 +0100
-
-    Image class
-    
-    * Added is_image check function
-
-commit bb4be018c75a643de3cfbe348bb71ef213507f7a
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 16:15:56 2012 +0100
-
-    Image class
-    
-    * Migrated to new attr model
-
-commit 9debcb3f970020b951556b0820814d15d6a01fe8
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 15:28:29 2012 +0100
-
-    Forms
-    
-    * Added image input
-
-commit 2f81b9be080cb2ab7bec5c2d9be5e5c2fc6addc6
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 14:24:45 2012 +0100
-
-    Forms
-    
-    * Added min, max and step to inputs
-
-commit 0159b1831ca17ba88e4f7ffa715f86adfd26319a
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 14:17:19 2012 +0100
-
-    Form class
-    
-    * Coding style edit
-
-commit 9844f8ea6a2ede51b0a0581c1683144a5f93d5b7
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 14:14:26 2012 +0100
-
-    Form class
-    
-    * Added DateTime support
-
-commit ea20305d8f5d830ddd28dedd402cadcc1aef912e
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 24 12:32:45 2012 +0100
-
-    [fix] Input class
-    
-    * Separated query string from path
-
-commit 7ad50e8d9ae035fcb45f90ab37d941489269bf03
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 23:33:27 2012 +0100
-
-    Search tool
-    
-    * Added jQuery object passing to search tool init
-
-commit d1c918542a997f79027d058f197878392232f973
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 22:30:20 2012 +0100
-
-    Resource preloader
-    
-    * Added JS tool for resource preloading
-
-commit d0c49af8cceea3d8bb417e30ee5e1732cd9607cb
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 16:24:53 2012 +0100
-
-    Form search tool
-    
-    * Added placeholder to search tool
-
-commit 536a551d879a4932df55bdc6037809fd211fec7d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 16:18:30 2012 +0100
-
-    Form inputs
-    
-    * Added autocomplete and placeholder options
-
-commit fb2247d65446d092b2e8cb731c1809e5b372c0e9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 16:18:07 2012 +0100
-
-    Tag
-    
-    * Added autocomplete attribute to input tags
-
-commit 82850e8d7fb26ebefda0bdda458f0b70eef5b0f0
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 14:02:25 2012 +0100
-
-    [fix] Belongs to relation name
-    
-    * Fixed adding static attrs for belongs_to relation
-
-commit b77e025127cf0324f7e6fdd3b25850ca074a687f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 01:24:38 2012 +0100
-
-    [fix] Form helper
-
-commit 9f4744c154ab4fa6080b3cc5931766984647b4c2
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 23 01:21:11 2012 +0100
-
-    [fix] Form helper
-    
-    * Fixed called method name
-
-commit 9454554187528cbccb73d6fc54b52b5846efe191
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 02:44:14 2012 +0100
-
-    [fix] Attr int_set
-    
-    * Fixed int_set fetching
-
-commit 0bb4ba4bb72b1cdf83543e1c95d62e65a3714ce4
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 02:23:54 2012 +0100
-
-    Fixing relations
-
-commit 1c8c184075d41b4ffe9ad4519f087ef3816eff82
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 02:19:48 2012 +0100
-
-    Fixing relations
-
-commit a146920981ee3c547da88ec1ac25edc535df7264
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 02:13:51 2012 +0100
-
-    Fixing relations
-
-commit d7ca85f281119107bd65bc0954f1bc15b9b50bbb
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 02:09:02 2012 +0100
-
-    Fixing relations
-    
-    * Added belongs_to attribute fetching
-
-commit 1432a3182b33d05ae931a27420f8d058937f7d81
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 01:50:53 2012 +0100
-
-    Fixing relations
-    
-    * Fixed belongs to queries
-
-commit f252cd7d952d21558e0cfb7d07ea42b545bcf21b
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 01:43:29 2012 +0100
-
-    Fixing relations
-    
-    * Added ommiting fake columns to database model
-    * Added int_set to allowed column types
-    * Added natural foreign key for belongs_to
-
-commit 8fa9361d8def15e4c5b9d442b8451dc15dfdba3d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 01:16:51 2012 +0100
-
-    Database sync
-    
-    * Added index syncing
-
-commit 69c9a2cbe1ae05f9da16958818c3a60ea333bd44
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 00:46:19 2012 +0100
-
-    Database model
-    
-    * Added int_set attr type
-
-commit 55cbbce8aca6a1695212b07e47e192762c2c2fbb
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 00:39:19 2012 +0100
-
-    Database model
-    
-    * Fixed fetching has_many relations
-
-commit a0c9e83e643ad39e3fa804fe85f3c32bc169afae
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 00:31:06 2012 +0100
-
-    Database model
-    
-    * Added natural belongs_to foreign keys
-
-commit 36bc5b80a7e37cbce59d3a0890dff47ee5c47129
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 00:20:21 2012 +0100
-
-    Database model
-    
-    * Dropped unused preload function
-
-commit 353b454d098f2682ee79c97de2fc51141eb04238
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 17 00:16:21 2012 +0100
-
-    Database model
-    
-    * Added auto adding belongs_to foreign keys
-
-commit fc52f82ceb19ae56f6f4f42b85948fc1f4c57199
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 22:15:52 2012 +0100
-
-    Rewrite
-    
-    * Fixed icon resource paths
-
-commit d8f44a249f9896d7c2ab1219a1b72c835ccddfcd
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 22:15:01 2012 +0100
-
-    Database sync
-    
-    * Added auto sync for belongs_to relations
-
-commit bc32fb22a5164a94f6fd2fd8d7b04db728028a45
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 22:13:56 2012 +0100
-
-    Form search tool
-    
-    * Added update functions to search tools
-
-commit 963fb02993912759d870d26bfb8603d0f55ddb28
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 13:38:10 2012 +0100
-
-    Form class
-    
-    * Added search tool input
-
-commit 366c3b7955307f15496d98c25cbc082590becb30
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 13:35:40 2012 +0100
-
-    Database model, Query class
-    
-    * Models can be filtered by has_many relations
-
-commit 58314e3861a57b5336bc8c9f17c9c8f0dd633c74
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 13:35:03 2012 +0100
-
-    JS: Tooltip fix
-
-commit 4d3041bb61840238dbf072ad4ebea8b8d1cdc7e5
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 16 13:34:30 2012 +0100
-
-    JS: Functions
-    
-    * Renamed clog() to v()
-
-commit a20e0ca5b73432d82ff1294b170ebecbb81abcdb
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 02:19:19 2012 +0100
-
-    Scripts
-    
-    * Fixed handler object
-
-commit ca49bba23b5bc3e187182f4eb3947d939ae634a9
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 02:16:19 2012 +0100
-
-    Mod rewrite
-    
-    * fixed icon resource path
-
-commit be1d941c8b95a2fb41e45b016bd18827e29ec14d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 02:14:39 2012 +0100
-
-    Database model
-    
-    * Added support for saving has_many relations
-
-commit 958d26acb0ce97eb1094c212101bfd85fd7a3434
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 02:12:13 2012 +0100
-
-    Database structure class
-    
-    * Added primary key to bilinear relation tables
-
-commit e303d46c221567e54419e24589d136b749141597
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 02:11:32 2012 +0100
-
-    Query class
-    
-    * Fixed data deletion
-    * Added where_in method
-
-commit 60ede2334d2267cffe3a1ef9d50e096620a6aea3
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 01:17:45 2012 +0100
-
-    Form helper
-    
-    * Added support for passing set of objects as input options
-
-commit 8a0d0fcbe672aa2f663e2ad933e43f476336102d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Dec 10 01:14:36 2012 +0100
-
-    Form helper
-    
-    * Added support for radio buttons
-    * Added support for multi checkboxes
-
-commit a0798eb6d0e61e2a00d35f1117d6385e90b9f0d0
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 9 22:45:56 2012 +0100
-
-    Styles
-    
-    * Added icons
-
-commit 0cc46bd86c8ef144024052443534e2f3923bc7c9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 9 22:08:41 2012 +0100
-
-    Texts
-    
-    * Reduced necessary attributes
-
-commit 3dbd4e9f486fafd3f96c7b65a5822b44fd2fb39b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Dec 9 14:24:10 2012 +0100
-
-    Icon handling
-    
-    * Fixed icon handling
-
-commit 6196dea67ad3e331698d48d3f581832779dd7c2d
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 17:33:15 2012 +0100
-
-    Database structure relation
-    
-    * Fixed relations without secondary bilinear mate
-
-commit d44fe528f99a7633acf93fd5d632495920d2d714
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 17:31:00 2012 +0100
-
-    Database structure
-    
-    * Check if is bilinear by attributes
-
-commit b4889a9e14b205678f647649e1b8d8380dbaf0d8
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 15:15:20 2012 +0100
-
-    Database model
-    
-    * Fix rejson
-
-commit df46ba1c75ddf1e94458c0e900a57c58bf457806
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 13:12:15 2012 +0100
-
-    [fix] Module class
-
-commit 2be4aefbb87e9f3a7eaa69e00bf72cf55523505f
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 13:05:57 2012 +0100
-
-    Module class
-    
-    * Recreated get_all function for modules
-
-commit 1f950eb9ec9768f533f774d1c918f910413f9615
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 12:56:59 2012 +0100
-
-    Directory class
-    
-    * Fixed regexp search
-
-commit 3e7a70af9a7295b9cd5ece2ad741b5a5a648e7d1
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 12:33:17 2012 +0100
-
-    Form class
-    
-    * Added missing ID attr
-
-commit 65023ee49dba83a5e94fd3b46a3d06a0290639f2
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 12:12:00 2012 +0100
-
-    Query class
-    
-    * Added method simple_delete with params ($table, $conds)
-    * Fixed query delete  method
-
-commit 5f0bb700b3e801157b4f856de38b55a85634927e
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 30 11:29:38 2012 +0100
-
-    Form class
-    
-    * Added text method
-
-commit 81b21f5b041e74395b2a6592f9e109d1f17c008f
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Nov 29 17:08:23 2012 +0100
-
-    User Group model
-    
-    * Added user count helper
-
-commit 7afa28db4892aaa723ac42ba69b81a4cdc08ceef
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Nov 28 23:17:49 2012 +0100
-
-    Forms
-    
-    * Data can be passed to constructor
-
-commit c4ba7231f88f88b5aaf455629c42079a245e1ead
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Nov 28 15:42:22 2012 +0100
-
-    Locales class
-    
-    * Changed getting messages to lang based
-
-commit 26167f09cd06918f419ad005f4cbf1edc7f0ad58
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Nov 28 15:39:58 2012 +0100
-
-    Locales class
-    
-    * Added function that gets all messages
-
-commit 2058632c494bcbd5038ee63cfc43f7f52a078ff9
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 08:18:29 2012 +0100
-
-    Script base
-
-commit 4c95896ba2b9e4e8fd5fb59cb202e8fc70e272a7
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:40:12 2012 +0100
-
-    Functions: soprintf
-    
-    * Fixed for new database model
-
-commit 4bfef2f4cc71779ec57af47fe2d1f0e13de193a5
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:31:45 2012 +0100
-
-    User model
-    
-    * Groups handling
-
-commit c8f5efbfe0dc19d33342b27c73aa6b414c880afc
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:28:18 2012 +0100
-
-    Database model
-    
-    * Fixed has_many relations
-
-commit 57c609c584792f66cd4939529d06ddfb6d382aec
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:06:29 2012 +0100
-
-    Database class
-    
-    * Added some exception tweaks
-
-commit 9ba4e4e83c8029ede1da8bd8b570b1b66de5bf5d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:06:09 2012 +0100
-
-    Database model
-    
-    * Replaced id_col getting to calling get_id_col()
-
-commit ac464ddaba36267b74e9575f74a9a0bc92dee0f2
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:05:20 2012 +0100
-
-    Image class
-    
-    * Fixed for 404 images
-
-commit 59456ba86fddb115f57c4b50924cd81d26c6cfb2
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Nov 26 00:04:41 2012 +0100
-
-    Default output settings
-    
-    * Changed default output to html
-
-commit 3934d865863073f0c107ac012846e52f984ec1c3
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:48:20 2012 +0100
-
-    [fix] Database model
-
-commit fce8f60fbce9ac5633193111f455bc412e148f1d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:47:27 2012 +0100
-
-    [Fix] Database model
-
-commit b4c364f2a5a986f79b5524c97dd59827cc07dd39
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:46:44 2012 +0100
-
-    [Fix] Database model
-
-commit f3d3cc60c3c8ccb8c9c7c0979f37efe7d7bcf95e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:45:44 2012 +0100
-
-    [fix] Database model
-
-commit 3738b4573726cfa91894b421eb939c4c478e8942
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:44:35 2012 +0100
-
-    [fix] Database model
-
-commit 200b6fbd3d05af5895e2778a342e4b2f5adbc908
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:43:34 2012 +0100
-
-    [fix] Model ID handling
-
-commit f7fea5fcc58747af2221131f1b4bad8c48e40c34
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:35:47 2012 +0100
-
-    Form class
-    
-    * Fixed path getting
-
-commit 6c19942163e9a9e4af04e10d408989398b1b9171
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 23:42:10 2012 +0100
-
-    Database model
-    
-    * Added ID handling code
-
-commit a883b9ffda9d1e9bd842ed3a92bbf48f399e39d8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 21:45:58 2012 +0100
-
-    Compile script
-    
-    * Fixed paths
-
-commit ff061cc7203f7c228039e705661a45c262230c47
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 21:40:12 2012 +0100
-
-    Form classes
-    
-    * Fixed attrs
-
-commit 0d689d8df9413fe3ec260809e92e89e8c67ea22a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:59:47 2012 +0100
-
-    Output class
-    
-    * Fixed template exception
-
-commit 142171f6f4c23aa41132619a984651761423cde6
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:58:50 2012 +0100
-
-    Cache class
-    
-    * Fixed return values if not enabled
-
-commit db0845493db2b04c81410c9d18fb618cb139fb31
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:58:31 2012 +0100
-
-    User model
-    
-    * Fixed perm getting
-
-commit ef7e91f4400008946d0718ec24576f331501cd52
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:44:08 2012 +0100
-
-    Database class
-    
-    * Duplicate key exception
-
-commit 4e64adf15e7922bfbbdc0aa357da0244fc9f5aec
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:35:15 2012 +0100
-
-    [fix] Models
-    
-    * Fixed old class names
-
-commit e172e5a4c01a99dc1bd1ea82728003096453b509
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:34:34 2012 +0100
-
-    Initial data
-    
-    * Fixed initial data to new schema
-
-commit 856a2e5944fe17e6221add0a081e30aef84fcd82
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:33:17 2012 +0100
-
-    Database sync
-    
-    * Added autosync to database script
-
-commit a6995954360b2980ca8d0c2175e4b9a08dde522a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 20:12:10 2012 +0100
-
-    Dropped initial migrations
-
-commit a889e01e851cd9fdae69870b08870b17f23d1360
-Merge: 7b0620e d81c69e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 25 15:19:01 2012 +0100
-
-    Merge branch 'autodb' of ssh://github.com/just-paja/pwf into autodb
-
-commit 7b0620e6d34f4c4b493c1815df48c6cadd83018d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:57:59 2012 +0100
-
-    Gitignore
-    
-    * Added low level devel file
-
-commit f102d751f0ba2fe1727385e43160577dc8e194fd
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:57:02 2012 +0100
-
-    Database sync
-    
-    * Added support for bilinear relation syncing
-
-commit 9a42fc970745ffea17e95024d3472f618b7f7631
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:56:38 2012 +0100
-
-    User model
-    
-    * Set groups relation to master
-
-commit e4e9a0880db956b5f522141e4dfe289b701d8d45
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:56:13 2012 +0100
-
-    Database model
-    
-    * Get relations definition
-
-commit fda5cf65f248175e5abcf7f881f81d5e58036271
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:55:50 2012 +0100
-
-    Attr model
-    
-    * Added commentary
-
-commit 4aef6f177012faec08b0dad71ae8b57200479e5e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 12:54:53 2012 +0100
-
-    Fix model relations
-    
-    * Fixed old model relations
-
-commit e29eeea4bbcbd0feb8039d380e33954404be957f
-Merge: 1c3e366 201ca4c
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 24 10:04:01 2012 +0100
-
-    Merge branch 'master' of ssh://github.com/just-paja/pwf into autodb
-    
-    Conflicts:
-    	www/bin/db
-    	www/lib/class/database/mysqli/column.php
-    	www/lib/class/database/mysqli/table.php
-    	www/lib/class/database/structure.php
-    	www/lib/class/system/model/attr.php
-    	www/lib/class/system/model/database.php
-    	www/lib/class/system/user.php
-    	www/lib/class/system/user/contact.php
-    	www/lib/class/system/user/group.php
-    	www/lib/class/system/user/info.php
-
-commit d81c69e790f96036024089a1f7caaaca794c8b77
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 17:28:38 2012 +0100
-
-    Relation sync preparation
-
-commit 201ca4cabd20a01cf137514415254aabb76839e1
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 17:12:04 2012 +0100
-
-    User classes
-    
-    * Fixed column names
-
-commit 9ed76a39fc7802074e8047a85e57a09d3476af79
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 17:06:54 2012 +0100
-
-    Model format
-    
-    * Converted model definitions to new format
-
-commit 720e348343a12cb269ba4d12c73bf8240ae1ff77
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 16:55:52 2012 +0100
-
-    Database model
-    
-    * Fixed table generation
-
-commit 766a2b402b9da9d7f24ea4dbfcf0c1ab68b6d76c
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 16:44:19 2012 +0100
-
-    User class
-    
-    * Default value
-
-commit 785afc9610aebb52213d88862e29b47dc4dff156
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 16:43:57 2012 +0100
-
-    Database schema class
-    
-    * Added support for default values
-
-commit e9569d9d5d17d33ba6cc064792d3f5274d881c50
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 16:24:56 2012 +0100
-
-    Database schema class
-    
-    * Primary key support
-
-commit 4db86dd9f3ddebb107cbe3fed515a7b53aed2b53
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 15:21:11 2012 +0100
-
-    Database sync
-    
-    * Added database schema synchronization
-
-commit 61e36c9c0f8b1181bbf4362827df40ffd0153f09
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 13:20:18 2012 +0100
-
-    [fix] Database model
-    
-    * Fixed cache method
-
-commit b855254f805ac78102014786555d196a48d669fa
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 23 13:15:36 2012 +0100
-
-    DBSync preparation
-    
-    * Prepared scripts and classes for db migration
-
-commit 825936e8843269792c8f2b35e87c4c392632266b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:41:12 2012 +0100
-
-    Database model
-    
-    * Renamed basic model to database model
-    * Migrated to new attribute definition
-
-commit a9e00a9eb3b0bdb8883f29cb71ee624efddc65ba
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 17:57:21 2012 +0100
-
-    Database sync
-    
-    * Added basic functionality for automatic database sync (mysql only)
-
-commit ef1fadcff2fb1b8f5fd7f2e738d632b6958bbcf3
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 23 13:15:36 2012 +0100
-
-    DBSync preparation
-    
-    * Prepared scripts and classes for db migration
-
-commit 7b0dbe756bcc28b480ef8aebe02583e7ada1a52d
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 23 09:09:25 2012 +0100
-
-    Class loader
-    
-    * Load only once
-
-commit 1fc3b914af920fbda7faea849a9b6e7b93f3b31a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:42:31 2012 +0100
-
-    User class
-    
-    * Migrated to database model
-
-commit 37a9fad48cfc772619f3342847398acb7266152d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:42:09 2012 +0100
-
-    Nested model
-    
-    * Commented out
-
-commit 2afd34700032d00d8fab3e5187b4b696f341741f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:41:12 2012 +0100
-
-    Database model
-    
-    * Renamed basic model to database model
-    * Migrated to new attribute definition
-
-commit 38fdefe8293025448ec771f01688a6fa5a6fde86
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:38:41 2012 +0100
-
-    [fix] Locales class
-    
-    * Fixed loading old names
-
-commit a909dc0b6753ae4aa567a1f39391dcf00f824010
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:35:51 2012 +0100
-
-    Database model
-    
-    * Renamed Basic model to Database model
-
-commit e77fe9b8ebdf5f6e2e844b2371d2762cd38d473d
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:06:00 2012 +0100
-
-    Update basic models
-    
-    * Dropped table name and ID column name from model class
-
-commit 4ab2afec544c1efb7c33c8f282ce162dbe988937
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:02:20 2012 +0100
-
-    Directory class
-    
-    * Can now search subdirectories for filename patterns
-
-commit aad81040c11b88227a4c1e6acdbac10ca4025c1c
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:00:58 2012 +0100
-
-    Database class
-    
-    * Added existentional question
-
-commit be3b52d4f3890e58d3f2b48c6612d3f660700d23
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 17:58:45 2012 +0100
-
-    Class loader
-    
-    * Loader can load all classes now
-
-commit b671038addeb1ca1f95a56a8eb75947a24db6386
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 17:57:21 2012 +0100
-
-    Database sync
-    
-    * Added basic functionality for automatic database sync (mysql only)
-
-commit 1c3e366c914014cfc92dc82f63ea04ff628ac372
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 23 13:15:36 2012 +0100
-
-    DBSync preparation
-    
-    * Prepared scripts and classes for db migration
-
-commit 9af273b4b6b09ba9f3436e1cff4e114e6133c71d
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 13:01:30 2012 +0100
-
-    [fix] Default cache config
-    
-    * Fixed default cache config to current standarts
-
-commit 7e17433ea71c2edd930eff0eecac44736a8a15e7
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 12:01:11 2012 +0100
-
-    PHP APC cache
-    
-    * Added support for PHP APC
-
-commit b3c57e7962881c136c90c67383f535da8a858a69
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 11:51:41 2012 +0100
-
-    Runtime cache class
-    
-    * Reworked
-
-commit 8b03ba7720712086afb27e495420bef135250b40
-Author: just-paja <pavel@proboston.net>
-Date:   Fri Nov 23 11:29:02 2012 +0100
-
-    APC: Basis
-
-commit 153ceaf8a3209504737e8101b8ce16d9029e3df4
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:01:35 2012 +0100
-
-    Init
-    
-    * Added space for low level debugging
-
-commit f9d46622f4429643458a60ba485252e7cbf611f7
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 23 09:09:25 2012 +0100
-
-    Class loader
-    
-    * Load only once
-
-commit 033882b46ec6a2508f6af5b9d59bf9a6951e5607
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Nov 21 13:21:59 2012 +0100
-
-    Page class
-    
-    * Fixed path returned by get_path
-
-commit 416afd0f40df5758096a3e1b75db75aa09de4841
-Author: just-paja <pavel@proboston.net>
-Date:   Wed Nov 21 12:12:22 2012 +0100
-
-    Form
-    
-    * Added checking inputs
-
-commit 329b80c81c1a6868d26b72010ce52e900713ac3e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:42:31 2012 +0100
-
-    User class
-    
-    * Migrated to database model
-
-commit bc8d86fb66c1d0ad7b1a476986dda9e9ce49f5e1
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:42:09 2012 +0100
-
-    Nested model
-    
-    * Commented out
-
-commit c32d282fadd0f91637ce3084f8067afb34783072
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:41:12 2012 +0100
-
-    Database model
-    
-    * Renamed basic model to database model
-    * Migrated to new attribute definition
-
-commit d14dd55ef0a6700da9e9e54be3a24fd0241e7053
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:38:41 2012 +0100
-
-    [fix] Locales class
-    
-    * Fixed loading old names
-
-commit f88109cff8c22fe040ca20680b7529b599305b6c
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Nov 18 15:35:51 2012 +0100
-
-    Database model
-    
-    * Renamed Basic model to Database model
-
-commit 07c5f0353443ef2c8ebaac560376ae2bb7a6163a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:06:00 2012 +0100
-
-    Update basic models
-    
-    * Dropped table name and ID column name from model class
-
-commit e441ef3f02ddfcd8bb4166bc7bc95ab1e873cefc
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:02:20 2012 +0100
-
-    Directory class
-    
-    * Can now search subdirectories for filename patterns
-
-commit 23e1fdb9f02df1d773f13227f70c0b1b1e7c515f
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:01:35 2012 +0100
-
-    Init
-    
-    * Added space for low level debugging
-
-commit 9abd51fa32cd060ea787df4706adde3848c77947
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 18:00:58 2012 +0100
-
-    Database class
-    
-    * Added existentional question
-
-commit b77d78f497ba512491e4666f031d37c145a4a564
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 17:58:45 2012 +0100
-
-    Class loader
-    
-    * Loader can load all classes now
-
-commit 0f3744877102d29fe821a7c2225c44bc0b758159
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Nov 16 17:57:21 2012 +0100
-
-    Database sync
-    
-    * Added basic functionality for automatic database sync (mysql only)
-
-commit 1ff26b81dc3bcb3694aa31e85ea1d2b9be9a61ea
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Nov 3 13:59:28 2012 +0100
-
-    [fix] Page class
-    
-    * Returns page path with ending slash
-
-commit 35b29070cf376d39452669fb65495cbea47528bf
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 16:43:08 2012 +0200
-
-    [fix] Setup class
-
-commit 629a1514ab79fbd8d51a9ae1f56e7f34191a6608
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 16:30:12 2012 +0200
-
-    Santa package class
-    
-    * Moved pwf to public repository
-
-commit 649607d03aad5a1502632e3cca7f3d61efb318ed
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 16:18:18 2012 +0200
-
-    Santa package class
-    
-    * Fixed data guessing
-
-commit b9a4097b6ff6b2e6b971e5f15603fcd719e89cf3
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 16:00:49 2012 +0200
-
-    Santa package class
-    
-    * Fixed is_installed()
-
-commit e4cbb3bc0503bd79f8c8311055ac66d34c493ac4
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 15:43:25 2012 +0200
-
-    Cli class
-    
-    * Added try method for cli - whenever the command is not truly required
-
-commit 965dad61b471f007dcc2503370aa83d8721e9ab8
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 15:30:05 2012 +0200
-
-    Santa package class
-    
-    * Added is_installed method
-
-commit 678b14caff915fd78ff21ab92fa43a31ddf870aa
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 26 15:29:22 2012 +0200
-
-    Deploy script
-    
-    * Fixed deploy script
-
-commit 255f533bdaa5436519899f4e57d538578bcbc7b6
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Oct 24 17:53:14 2012 +0200
-
-    Santa - package manager
-    
-    * Fixed package installation
-
-commit 2011e9fc63e36d3f05eb2fb037bbe6fb7585611d
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 23 15:22:50 2012 +0200
-
-    Santa package manager
-    
-    * Moved santa classes away from system
-    * Added support for new repo
-
-commit 0c69fe2ccdbf2c90d9072f5c567247e2f64d5375
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 23 15:21:30 2012 +0200
-
-    Build script
-    
-    * Added additional metadata to user ready package
-    * Fixed path
-
-commit 62cbdfb7669bb8ab411ab672d0e5d2bc3d71d2e4
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 23 15:19:32 2012 +0200
-
-    Database class
-    
-    * fixed count query results
-
-commit 0f34c2e5a4ac19622e186e495b5a30d88a08d703
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 15:57:57 2012 +0200
-
-    Database class
-    
-    * Added count function
-
-commit da30f89e1010f5e49eb3472dccf64630775c9eac
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 15:47:23 2012 +0200
-
-    Query class
-    
-    * Added static first_val to Query class
-
-commit 823f108050ac4219f7ab6e6f9b708e353239a14b
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 15:47:11 2012 +0200
-
-    [fix] Package info
-
-commit c1b8ae4795df9a0fa028b998cba262b4ed2146d3
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 14:32:53 2012 +0200
-
-    [fix] Default settings, locales
-    
-    * Added timezone to default locales settings
-    * Removed useless setting langs, containing available lang list
-
-commit 12dfc101186b1a5ad0404975c5abadbecab90f19
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 14:29:35 2012 +0200
-
-    [fix] Default settings
-    
-      * Fixed default locales settings
-
-commit 3f00eb1eaea9621afd02d742010adbe07a9a3191
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 14:27:12 2012 +0200
-
-    Output class
-    
-     * Removed lang settings from output
-
-commit 677c06af579ff46762c13981ae930c60291af70b
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 14:22:06 2012 +0200
-
-    Output class comments
-
-commit 1f9d58f7d64c8da905f8d04205c859fc4aff1f48
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Oct 22 13:41:14 2012 +0200
-
-    Versioning
-    
-     * Version number is taken from changelog by default
-
-commit 9ae77de9db052278e43ca1e97860ae192f367a9b
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 19 14:34:40 2012 +0200
-
-    Versioning
-
-commit 8609c7322f871d1afc253eca5b49f264ada1e4bb
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 22:58:54 2012 +0200
-
-    [fix] Compiler
-    
-     * Fixed passing path to git
-
-commit 86799f6a5c4f0fa2f2aa85c13db62138be65a6b6
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 22:37:39 2012 +0200
-
-    [fix] Rename
-    
-     * Moved some options
-
-commit a6e7046e8a7ae9f8b021f51faaa3e51063506ea7
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 22:32:29 2012 +0200
-
-    Locales, settings
-    
-     * Removed unused settings
-
-commit e48ce9dbc3451b1af55c9d79095bc1ce2a56640a
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 22:26:12 2012 +0200
-
-    Locales class
-    
-     * Moved locales to more suitable directories
-     * Fixed using setlocale
-
-commit b83ea98d5d9955eafd1da0ab8b20bce3d1407255
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 19:25:54 2012 +0200
-
-    PWF Status page
-
-commit a69a347dfcd9850f46f576ce900d695102197f3c
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 19:25:10 2012 +0200
-
-    Init class
-    
-     * Added input class to full init
-
-commit 389495d7207ba197f63620295d5a81a6bc4c3a52
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Oct 16 19:24:15 2012 +0200
-
-    Router class
-    
-     * Moved .htaccess handling to router class
-
-commit a8c8b4049a0aa4dd5715ddd157eb3994b663056d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 17:13:19 2012 +0200
-
-    Compiler: Branch
-    
-     * Added support for automatic branch determination
-
-commit 664df127ef622cda22bede3a45b9bad7b24e2141
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 17:10:16 2012 +0200
-
-    [fix] Console width
-    
-     * Fixed console width grabbing
-
-commit fc1495d86871dbb9c7eb791db9e6a59b90aa481e
-Merge: e9102b6 a565c6f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 11:31:41 2012 +0200
-
-    Merge branch 'dev'
-
-commit a565c6f592335eda8724b147b88cf7fa1acdc42d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 11:26:39 2012 +0200
-
-    Cli class
-    
-     * Get virtual console size
-     * Integrated into compiler
-
-commit e9102b6bcc203953ed16cd85b16c0f72cee5f123
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 11:15:24 2012 +0200
-
-    jQuery update
-    
-     * Dropped version 1.7.1
-     * Added version 1.8.2
-
-commit 81ee58319a674f86166da8c0d03da81d1c1faad7
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 01:29:15 2012 +0200
-
-    Github readme
-
-commit c518f147a121a41bbb58a731165407b3ac5e96d4
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 01:13:04 2012 +0200
-
-    [fix] Setup class
-    
-     * Fixed ident handling
-
-commit 29db9f65bf88d35efbf83ce8a164dca8cd4d323a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 01:12:42 2012 +0200
-
-    Settings class
-    
-     * Added cache purging after each save
-
-commit ffebe874a91b820a5adad7eb264829dd6a4faad1
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 01:11:40 2012 +0200
-
-    [fix] MySQLi driver
-    
-     * Fixed exception text
-
-commit 6ab68bff3098eff0a06803855a3ffb28fe34a24e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:51:36 2012 +0200
-
-    Setup class
-    
-     * Added connection checking
-
-commit 02ec79f11963b0231501cadb4ddfab5a7ba83e2b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:50:33 2012 +0200
-
-    Database class, Database driver
-    
-     * Added some friendly status checking functions
-     * Added is_connected()
-     * Added is_ready()
-
-commit a12970d463d3d791313e8b2d61a85f9a122b7754
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:20:31 2012 +0200
-
-    Github readme
-
-commit a639b460d236ee8647fdabe5e1c73c8d7e95093d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:17:25 2012 +0200
-
-    Github readme
-
-commit a7164ab063f57832a800d09f5364980b4ee01bbf
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:04:02 2012 +0200
-
-    Github readme
-
-commit 09ecf6141c5bf516057000e70219010f6dacb2ba
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Oct 13 00:01:47 2012 +0200
-
-    Github readme
-
-commit 516fa2460c4dc1ee4cdd833f47d8889c91e0c6aa
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 23:53:32 2012 +0200
-
-    Compiler
-
-commit 7d63b611bada2380aa78887a9f68719021654a1b
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:45:49 2012 +0200
-
-    Settings class
-    
-     * Not caching settings if there is empty page tree
-
-commit 7e00de94b2dfbc25885f766b2d48db0a6a6e10b8
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:42:33 2012 +0200
-
-    Form container
-    
-     * Add class by type
-
-commit 9b7c59443b82b3fb41f9c2d34e55f54265c357a8
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:42:15 2012 +0200
-
-    Form class
-    
-     * Checkbox handling
-
-commit d765fc54a2896552753eb8ca8c543326900b0993
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:41:49 2012 +0200
-
-    Setup class
-    
-     * Save persistent field
-
-commit 6e923939afc34deee8dbb699a6c6c8379bfca0af
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:41:18 2012 +0200
-
-    Default config
-    
-     * Set development mode to false by default
-
-commit 2d91d20d574f164378321f95a94ecf686f1c1a07
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:30:01 2012 +0200
-
-    Directory class
-    
-     * Set the same mode to all directories while creating recursive parents
-
-commit 6faf38b3212ba0e590f5953db9f6ee4e23dc6e0b
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:27:45 2012 +0200
-
-    Setup styles
-    
-     * Added some colors to setup
-
-commit d0c70be3bdad3724dcb968514737ab140266fd88
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:27:15 2012 +0200
-
-    Error template
-    
-     * Dropped unused code
-
-commit 8be3b37546946cc6aa59dab011cce4dd24be18a3
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:26:29 2012 +0200
-
-    Setup class
-    
-     * Added friendlier reporting for empty tree
-
-commit 7cf6d1020aa354776d963849110cadecef855af2
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:25:37 2012 +0200
-
-    Tag class
-    
-     * Added label "for" attribute
-
-commit 4ead338162a106acb769983fa2596456ba89144a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:24:59 2012 +0200
-
-    Settings class
-    
-     * added is page tree ready query function
-     * fixed save settings function
-
-commit 0f21d13e5e74558841c02f00707e4285b1569e9d
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:23:52 2012 +0200
-
-    Query class
-    
-     * Removed exception duplicity
-
-commit ec8b5e6a83d67fc09fef1407c4116c6fff944c8d
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:23:10 2012 +0200
-
-    [fix] Output class
-    
-     * Fixed default values
-
-commit 2ae971062a283fb5e9a1fd53ca445fb91b69fb19
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:22:33 2012 +0200
-
-    File class
-    
-     * save_content now returns bool determining operation result
-
-commit 02fa87038bc2ef72e41921bfb7f753a5f2f256f9
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:21:54 2012 +0200
-
-    Database MySQLi driver
-    
-     * Added database create function
-
-commit fa178a71fd5f48c01d968eed6f2dce3e18f01192
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:21:07 2012 +0200
-
-    Database class
-    
-     * Catching some exceptions. Useful in setup
-
-commit 75774ab278dd0bec8489f7747f1344c2ec04ae40
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:20:03 2012 +0200
-
-    Page init
-    
-     * Added friendlier error to report empty page tree
-
-commit 0ea52df10576fa9523258a1acdbc0251ac84d8df
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 20:18:28 2012 +0200
-
-    Default settings: remove schemas
-    
-     * Removed settings schemas from config files
-     * Will be moved soon into separate interface
-
-commit 148232239cce443081cda999eb795b7aa13cc79a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 13:49:17 2012 +0200
-
-    [fix] Setup: create htaccess
-
-commit b4148ba9697fbc8ac289a1ba6f7eabb79e08c6dc
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 13:48:16 2012 +0200
-
-    Bug page: catch additional errors
-
-commit 6935953be965c91a718f278743e3c108a2477d43
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 13:47:44 2012 +0200
-
-    [fix] Permissions
-
-commit 153b4e0d292333ebdac85e350992e24ea0ad9f29
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:59:23 2012 +0200
-
-    File: fix, save_content
-    
-     * recoded to standards
-     * added static method save_content
-
-commit e06d175aa52ba29254dea06675d61a438c473501
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:59:03 2012 +0200
-
-    Settings: default version file
-
-commit ed0ccc7731ad8dd1bc292129aeea741d99b5159a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:57:55 2012 +0200
-
-    Status: reporting, date
-    
-     * reports whole exception message
-     * does not cry timezone warnings
-
-commit 87fc966972d5375ac10e2d669f0736bc12a091b5
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:57:19 2012 +0200
-
-    Setup: attempt to create htaccess
-
-commit 5ac6180086d92db2c58884bd9c5543f591e034b4
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:56:20 2012 +0200
-
-    [fix] Default config: database
-
-commit a1e9709d9b6178fc0f544c9e27c5fb7fb0478a7a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Oct 12 09:55:22 2012 +0200
-
-    System script: only basic init
-    
-     * No need for db
-
-commit e74a31e07c5be160a88542db92638797ec07cc53
-Author: just-paja <just.paja@gmail.com>
-Date:   Thu Oct 11 20:44:30 2012 +0200
-
-    Directory handling
-    
-     * Added directory class that throws friendlier exceptions
-
-commit bd1ab601bbc5e5221b120b48edea770e31a61a73
-Merge: bb3c25f 8dc52ac
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 18:54:07 2012 +0200
-
-    Merge branch 'dev'
-
-commit 8dc52ac41fb6f29a66769af41c3e857459a2d528
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 18:53:00 2012 +0200
-
-    [fix] System: exception recursion
-
-commit 29f80e074f6c46dc13d3ccc3466ac040ee4a96bf
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 18:52:27 2012 +0200
-
-    Make: build user ready package
-
-commit bb3c25fece49fbb15c35d20dd78263fd269e4a4f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 17:39:59 2012 +0200
-
-    Form: set submited to false by default
-
-commit f5a8277d7ff6dd19fdc513f4e9a92c842ec400bf
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:56:34 2012 +0200
-
-    Form input: prefix input ids with "field_"
-
-commit 1cbe35ba3152657ae6fa03bd82782ead3378317d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:53:06 2012 +0200
-
-    [fix] Form: input type
-
-commit 3c1c6dbc6e245873654ecda7f24bb6db854d9984
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:38:15 2012 +0200
-
-    Fix namespaces
-
-commit c5e84348d88710722d2a7f516e4836252836aa6a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:19:04 2012 +0200
-
-    Form input: info
-
-commit 8c8b80d96b26317e7ca03655625b74a7d068141c
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:18:40 2012 +0200
-
-    Form: input alias
-
-commit d850fcca6fda4a8d1f9698235a4af551223a4a3a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:03:42 2012 +0200
-
-    Form input: password
-
-commit fa184e4d7093fd336fe6c7cbdf575ca064f25904
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 14:04:17 2012 +0200
-
-    WTFException
-
-commit cde1f843f2b3f947ba5c9aeb1a5081371e437d2d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 13:44:22 2012 +0200
-
-    [fix] Database: seed
-
-commit b757717582c5a091841ca5c3ce90e20ed37f07e1
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 13:39:28 2012 +0200
-
-    Utils: use core init
-
-commit 02217ac3e806c37e068bb0618e0107cde45c41dd
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 13:37:27 2012 +0200
-
-    Core init: avoiding "@"
-
-commit 2a16a43cfc3eb6c9eec19b997ec2c8417653d80b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 13:30:28 2012 +0200
-
-    Module: public rights
-
-commit 5378b0a70cb408a9bcf4cb95a7938e9f1af4211a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 13:24:00 2012 +0200
-
-    AttrModel: public constructor
-
-commit 5c9bba3180c44f30aca694c8a80826f525a2fe5e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 11:24:38 2012 +0200
-
-    Module: coding std
-
-commit 0e7f933344ec1066b1974a21e21426445d04a986
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 11:24:02 2012 +0200
-
-    Offcom/mail: public constructor
-
-commit 556eb90f6aa8e9cf4ae7e8f8bae87586c8d32b0f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 11:23:26 2012 +0200
-
-    Flow: don't reset queue
-
-commit 9a100f77c538c40bab10d303fb0fea6aa6556139
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 09:37:45 2012 +0200
-
-    Flow: queue dumping
-
-commit a7c24dc8ad505d6f0257bb4f77ca3798cec1b282
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 09:05:51 2012 +0200
-
-    [fix]: Mail: inheritance
-
-commit ed7c687fcd37977b5eba89cfa430ddec9e4e3eb9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 29 09:01:38 2012 +0200
-
-    [fix] Mail inheritance
-
-commit bf5552d8db14e0616b817ed3618a46c4e7a8937a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Sep 28 17:33:26 2012 +0200
-
-    [fix] Deploy: init
-
-commit 3b41ada2f3ad2081283f0d6c2d3c156325fd6b92
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Sep 28 17:32:23 2012 +0200
-
-    [fix] Santa: init
-
-commit 079e6bc19b10bd4f924a3c99c579b8d74d589b99
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Sep 28 17:31:51 2012 +0200
-
-    [fix] Request: throwing exceptions
-
-commit eb97c0ffbf5e44a3ef047c0f0ea9ae9af78b3ae2
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:09:47 2012 +0200
-
-    Setup: aliases
-
-commit 9e4d723739bd9a6c9f0ca592b380b1deca7e2ec1
-Merge: 1230116 9f24668
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:08:19 2012 +0200
-
-    Merge branch 'installer'
-    
-    Conflicts:
-    	www/lib/class/system/setup.php
-
-commit 123011658d0565577bf97dc6002c70641b1135e3
-Merge: 0219a6c 96b5e94
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:07:02 2012 +0200
-
-    Merge branch 'multidb'
-
-commit 0219a6c45b5b0aa2fdc46739b9c5bbb329a5e90b
-Merge: 3e85e06 53c0230
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:06:58 2012 +0200
-
-    Merge branch 'dev'
-
-commit 53c0230b1b6ee71214397475eed8dfad85333836
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:06:19 2012 +0200
-
-    System helper: init
-    
-     * fixed system helper binary for static init
-
-commit 96b5e94ba2a1cdfbcd2689878df245d152395a6d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 20:05:48 2012 +0200
-
-    Database helper: multidb
-    
-     * Fixed restore option
-
-commit 44ba1b2ab2bbe1afd5c72cc08dfd1a4e401ede49
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 18:37:01 2012 +0200
-
-    Input: emulate _GET and _POST on CLI
-
-commit 5f2619b7f92bcd5c81968a0d0d6921e892afe997
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 18:36:35 2012 +0200
-
-    Setup: multidb, home
-
-commit a4e83b6379fb45300e9dd346afd0f0c9cd928c1d
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 24 18:33:57 2012 +0200
-
-    DB Helper: multidb
-    
-     * Added multidb support to database helper
-
-commit 9f246680cbcbff2e31b44d022caca6937766860e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 16:21:03 2012 +0200
-
-    Installer: setup site name
-
-commit 3e85e063e6d7a7ab8f351799896b3741c6bf041a
-Merge: a6f632d c6763af
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 16:14:42 2012 +0200
-
-    Merge branch 'installer'
-
-commit c6763af8ab92ec5989a9cee6ecbfec16c85635f3
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 15:49:56 2012 +0200
-
-    Installer: Form2 styles
-
-commit a6f632d325680f39b74139b327b6473de778f051
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 15:49:41 2012 +0200
-
-    Forms2: checkboxes
-
-commit e6a6a64da8c62c430fc5e091904ca37af20c91de
-Merge: 426fb9a 53fdc82
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 14:37:41 2012 +0200
-
-    Merge branch 'installer'
-
-commit 53fdc8235ac4e2603fbd2ca3c3493fe31095db48
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 14:37:18 2012 +0200
-
-    Setup: fix for multidb
-
-commit 426fb9a9b8b807fb9b8efd7a9b20e3168e522a0e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 14:36:43 2012 +0200
-
-    Database: multidb connect
-    
-     * Extended System\Database to support multiple database instances
-
-commit 55f19ee12d5ee203b725457e495b0068372f532b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:45:43 2012 +0200
-
-    Setup: Multi database
-
-commit dee9b879113a9329b4b390638ce039ceeecf59dc
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:14:03 2012 +0200
-
-    Setup: finish
-    
-     * Added finish page to setup
-     * Added binary path constant to System\Package
-
-commit b904d4f37dbbe2c2019411a39598c6f18fbbba03
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:12:29 2012 +0200
-
-    GitIgnore: Installer lock
-
-commit 703ebd1ab898a83b37dc20c58fd07f9dc0878f90
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 11:22:52 2012 +0200
-
-    Setup: Form2 integration
-    
-     * Fixed errors
-
-commit bb273caccdcc72a5d54628c7902f06cb0e20a0ea
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 10:12:04 2012 +0200
-
-    Setup: Forms2
-
-commit 5cd96c2321c5b297e01966eca33c58623f924495
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:47:55 2012 +0200
-
-    Devel: Dumping functions
-    
-     * Added function v() to dump variables nicely
-     * Fixed dump() logic
-
-commit f6a8f13f2945202180d3097065edc2b15948e5b3
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:47:16 2012 +0200
-
-    Settings: alert on empty config
-    
-     * Settings will now throw exception if config path is not defined
-
-commit 39c9d4a5b844ace37c671e0ba588503751e451a7
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 12:15:02 2012 +0200
-
-    Settings: Catch permission errors
-
-commit 4cb99129f8bc86eefb3f7b9cc0775a8e3bf3cb0d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 11:23:41 2012 +0200
-
-    Forms: Userspace error reporting
-
-commit 3ba8fc39a30b11b5a1dfcd59d5070c04ba1735c9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 10:11:26 2012 +0200
-
-    Form2: styles
-
-commit 22462303b8262164009851332b5725921b9cc769
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 10:10:14 2012 +0200
-
-    AttrModel - Secondary constructor
-
-commit fec5012dbbf1c41f5174d7b7c96170ef7c45dc01
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 10:05:08 2012 +0200
-
-    Forms2
-    
-     * Remake of forms, developer readable
-
-commit a482dd34663d2dfd30f1a159a2c527ad71a4dcce
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Sep 22 10:04:13 2012 +0200
-
-    Rendering tags
-
-commit 7a05cec8c36c839d1ea076ed1677a17a79692075
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Sep 11 20:56:08 2012 +0200
-
-    Setup: first step
-
-commit b47284eb641a74f6821604eccd223621c77de9ea
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Sep 11 20:55:43 2012 +0200
-
-    Database: is_connected
-
-commit 594df969c0826d921d45ece0500cf401922242ac
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:49:48 2012 +0200
-
-    Installer: some styles for form
-
-commit ce47cc6edcb23db5445f5d211d025aeaae82fd76
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:18:02 2012 +0200
-
-    [fix] Installer template
-
-commit 8f376147e1e3ee8b799e504fe86d4bf6a32d1354
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:05:51 2012 +0200
-
-    Installer: styles
-
-commit ac50774ef8e17491277c4e895edc6044c20d2535
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:05:50 2012 +0200
-
-    Installer: init output
-
-commit f8898a301881734815aff631add16ffcd3cce4c8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:01:44 2012 +0200
-
-    Setup: input form
-
-commit e3bc13464823efa844f835631c54190e44d8ebcc
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:24:11 2012 +0200
-
-    [fix] Setup template
-
-commit 153de058b29e7bf03728973546dcb36586d49bd0
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:23:52 2012 +0200
-
-    Init: allow printing errors
-
-commit 5217a80ec15f52355ade17e2900954efd4777e82
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 20:57:18 2012 +0200
-
-    Installer: changes to init
-
-commit b98ac346b50a1e55da7601de816649adf1275744
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 20:46:37 2012 +0200
-
-    Setup template
-
-commit bc8357199ac3012fd2bd95b801232876b253dcef
-Merge: 5524116 5943651
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:50:54 2012 +0200
-
-    Merge branch 'tags'
-
-commit 594365116ce0ba049d94c030280f9fe9cd0deb5b
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:50:40 2012 +0200
-
-    Form: input info
-
-commit 907494428217b7bce7fef5eb29c26143d90185bf
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Sep 10 00:50:18 2012 +0200
-
-    Tags: content as arrays
-
-commit 5524116d1dcb92c003b572ae7e3de7a814f0e7fa
-Merge: 4149fbc a45191f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:58:06 2012 +0200
-
-    Merge branch 'tags'
-
-commit a45191f1ee123c5e61a4a2015addd29f3641217f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:57:43 2012 +0200
-
-    Form styles
-
-commit dc4e1f4636e86665e5742de5c7407bc29e1692ed
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:54:57 2012 +0200
-
-    Form: use tags
-
-commit 4149fbce9c8fdbaff96c41737bbfc95282276db9
-Merge: 1b32531 adeaf5b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:06:48 2012 +0200
-
-    Merge branch 'tags'
-
-commit adeaf5b8d44a1088b6e66f9d1a1b7bd7a6759898
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 23:06:32 2012 +0200
-
-    Tags: switch output behaviour
-
-commit 1b32531caf7c9768d45158eb1b8e1414c598385c
-Merge: f6484ea c31852b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:59:03 2012 +0200
-
-    Merge branch 'tags'
-
-commit c31852bb01cced9d496c2b8bdf875c5ade5fe7c9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:58:44 2012 +0200
-
-    Tags: switch output behaviour
-
-commit b1fa9cc74b12001584049d29cd464e9b54de3d91
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:55:25 2012 +0200
-
-    Tags: noclose & alias html_attrs
-
-commit f6484eae98eaffa3b9ed3c390f3ceace18ad9f5d
-Merge: a8562c0 bb8b315
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:14:37 2012 +0200
-
-    Merge branch 'tags'
-
-commit bb8b315664c20a5b95d232c8bfa26adeebf46802
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:14:17 2012 +0200
-
-    Form: use tags
-
-commit a0f01070aa283e716f309ac623e3ddb5cd77366c
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 22:02:40 2012 +0200
-
-    Move form to default format
-
-commit a8562c009987b1fc5ccfaa9384117e41270a2287
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:45:37 2012 +0200
-
-    [fix] Resource scripts
-
-commit a5a7bf54cfc32af3aa183786c1628e14f3215044
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:44:56 2012 +0200
-
-    [fix] System script init
-
-commit 58f4185ddef35cdcd357228df65fd83606ad8d58
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:43:46 2012 +0200
-
-    [fix] Tags: tag attributes
-
-commit 19737dcb4c673d4ca636df76d83cbe4691cc2a02
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:25:18 2012 +0200
-
-    Tags: doctype, comments
-
-commit 8ce58a3215d8e0a2d4dfbcbb06f39b66659b9bf2
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 21:24:46 2012 +0200
-
-    [fix] Template
-    
-     * System\Template was converted to new tag class
-
-commit 2d36a980269439bb173234aaa121dc993d6f7263
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 20:51:27 2012 +0200
-
-    Alias tag class
-
-commit 11f6b6906f15f12709413cfb03d1456f9d95e6fd
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 20:35:43 2012 +0200
-
-    Tag class
-    
-     * Added tag class for templates
-
-commit 0c4de7610adf4c8e3847777b167f82e663b01ff8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 20:08:51 2012 +0200
-
-    Installer: Prepare page init
-
-commit 50b5a6d487fe4efff171994bc9bd64f2b04645ac
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Sep 9 19:50:37 2012 +0200
-
-    Close init
-
-commit 2e67712845158d0583dccd8a1821f1bbfecc2333
-Author: just-paja <just.paja@gmail.com>
-Date:   Wed Sep 5 20:39:43 2012 +0200
-
-    Migration of initial data
-    
-     * Moved initial data to dist dir
-
-commit bdcfe1b5fde36a1ba4739ad208fca82e4d42d5ed
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Aug 26 21:20:24 2012 +0200
-
-    [fix] Settings: Throwing exceptions
-
-commit 1b865426c977abb13b69a6204dbd1c6333bf24a6
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Aug 17 12:47:59 2012 +0200
-
-    PHP compatibility
-    
-     * Tried with PHP 5.4 today and fixed some bugs
-
-commit 731a27f3cdbe9356ad1417960a300c50d3a6713d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jul 21 00:10:50 2012 +0200
-
-    Settings: version
-    
-     * Version file is read directly from package repository
-
-commit 8813f4d4f3e52b36b7bd35ed370b9a41039c74e1
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Jul 20 22:45:34 2012 +0200
-
-    Resources interface
-    
-     * Removed base64 from URL (bad idea)
-     * Separator set to ":"
-
-commit 39f4b3a0626e8f06f550662b7cb55e8bc253c192
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Jul 20 22:41:58 2012 +0200
-
-    Resources interface
-    
-     * Created interface to get resources
-     * /share/styles/[module;module]
-     * /share/scripts/[module;module]
-
-commit 52dd41cac8ada36c95d6a7c5e088cfb6a377cb9a
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Jul 20 21:35:53 2012 +0200
-
-    Functions: read_dir_contents
-    
-     * Argument 3 was made optional
-
-commit f12a2b46f1dc7a112e6fb5be407f05a1e6f52916
-Author: just-paja <just.paja@gmail.com>
-Date:   Fri Jul 20 19:55:23 2012 +0200
-
-    Scripts and tools
-    
-     * Added js object to handle scripts effectively
-
-commit dba9f10414d9aec0741caaa37f52d4e61ea8c108
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 19:23:15 2012 +0200
-
-    [fix] Santa: browse
-    
-     * Fixed browse output
-
-commit 9cb7bad191ec3a4a6d3ac8d83fec3c68d4bcb864
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 19:10:14 2012 +0200
-
-    Santas' little helper
-    
-     * Moved santas' lil helper out. Keeping some specific scripts
-
-commit a47b8a59c60f6d7f596612d7d49d4722e8c0af20
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 04:58:16 2012 +0200
-
-    Form: Template
-    
-     * Integrated basic form template into YaWF
-
-commit f33cc540076ba6dc34305c1f82eec4d611466b7e
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 04:15:00 2012 +0200
-
-    Database: simple update
-
-commit 83f31cc8950d50dc5beb6500edc8a4bfc4a5cc93
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 04:13:36 2012 +0200
-
-    [fix] User: namespaces
-
-commit 27460196ab406a2c499f7b81b09fdc236e3da2b3
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 03:45:11 2012 +0200
-
-    [fix] Form: default path
-
-commit 9d9305ee00679f336b4558962be07df82ad85af7
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 03:45:00 2012 +0200
-
-    [fix] Query: assoc
-
-commit 695b8cf45612448bb9785c208146b0f820991957
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 03:20:47 2012 +0200
-
-    [fix] Form: namespaces
-
-commit 22b3506a3768ee428b626ca68aa3bf50b05f46f0
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 03:06:54 2012 +0200
-
-    [fix] User: rights
-    
-     * User rights has been fixed
-
-commit 97d89130097885e67061f8116269937606801032
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 03:06:30 2012 +0200
-
-    Database: fetch assoc
-    
-     * Result can now fetch data structures
-
-commit 9df679aba0b34a0ed0cf14e774bfbc7890edbf21
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 02:24:31 2012 +0200
-
-    [fix] Icons: namespaces
-    
-     * Fixed namespaces in icon handling
-
-commit 90e31f1b108763d315339d2559dce26ee3856689
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 02:09:17 2012 +0200
-
-    Remove utils
-    
-     * Removed some old references to class utils
-
-commit 38f17b50a55b8226c3aff02eec290374d9ddf03d
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 01:53:36 2012 +0200
-
-    JSON: rename dist method
-
-commit 1c8cb34b8eb14a87d3b5b736c49db5a2721cf416
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 01:30:50 2012 +0200
-
-    Input: path
-
-commit 9838ca4ea31e4c1b0a9694fb1b070564f04f8fac
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 01:10:44 2012 +0200
-
-    Santa: callback for htaccess
-    
-     * Santa calls htaccess rebuild after package install
-
-commit 42edc1e3b4b483270af4f3da2ef639014c2ca6a8
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 01:05:38 2012 +0200
-
-    .htaccess generator
-    
-     * System scripts now generate .htaccess
-
-commit 624001e6fa0d579eecffd2c9b5ef3efe4bea845c
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 00:42:56 2012 +0200
-
-    System status: page path
-    
-     * Added page path to system status template
-
-commit 2e38f34f06ccd8cc9993c0661cddc649c42cc7fd
-Author: just-paja <just.paja@gmail.com>
-Date:   Tue Jul 17 00:42:14 2012 +0200
-
-    [fix] Error pages
-    
-     * Fixed namespaces
-
-commit ee66af47483e5d8a719482f1b1a292b7c7eb1a19
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Jul 16 23:41:58 2012 +0200
-
-    System status
-    
-     * Added partial with system status
-
-commit afa71a8c63e8298b6e24e2c9714c85cc9c8df717
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Jul 16 23:28:40 2012 +0200
-
-    Removed old constants
-
-commit 495844bf21149d98fd689be7291bb12293a253dd
-Author: just-paja <just.paja@gmail.com>
-Date:   Mon Jul 16 23:25:30 2012 +0200
-
-    User contact, user info, unsigned
-    
-     * Added user contact class
-     * Added user info class
-     * All MySQL IDs are now unsigned
-
-commit d626db44b9e6bbedeec7e99f9710a7c26acb25b7
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 15:39:21 2012 +0200
-
-    Index - reduction
-    
-     * Reduced index.php to minimum
-
-commit 03fc76a36a95324e05510f5194c2753b4700c5cb
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 15:39:06 2012 +0200
-
-    Santa: minor fixes
-    
-     * added newline
-
-commit 284d7673f8843126b1c85c52af6d79eea0b08135
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 15:09:32 2012 +0200
-
-    Init: Pre-cli
-    
-     * Added init script before CLI
-
-commit 63eff533ae45dd3c083ce2799f8b04544b6314a6
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 15:02:26 2012 +0200
-
-    [fix] Scripts: class duplicity
-
-commit 94e786eac04381ac1b0549b97be6be139c9493a7
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:53:10 2012 +0200
-
-    [fix] CLI: class duplicity
-
-commit 4bc3db6b6c928b03d24c1f2cb3a1027842e09d7c
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:52:29 2012 +0200
-
-    Revert "[fix] Cli"
-    
-    This reverts commit 95b1f71c47bb41d4710b5de3c9cfe94c737c3684.
-
-commit 65d723fac6640c227ea6a4cfcff83d157c9aa06b
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:48:26 2012 +0200
-
-    [fix] Santas' Lil' Helper: Class order
-    
-     * Fixed generated package class order
-
-commit 95b1f71c47bb41d4710b5de3c9cfe94c737c3684
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:47:46 2012 +0200
-
-    [fix] Cli
-    
-     * fixed name of CLI control class
-
-commit 88e66f555c9405240f7ed1fa461e7a43325b83df
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:28:19 2012 +0200
-
-    [fix] Santa: output
-
-commit 3b594ec733c2cdf8dac33383f794eb3176e9fca2
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:26:56 2012 +0200
-
-    [fix] Functions: read_dir_contents
-
-commit 0e281dbd803fe56036c68edac08ec458cdd74114
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:24:17 2012 +0200
-
-    [fix] Santas' Lil' Helper
-    
-     * fixed model handling
-
-commit 7fcd86fa8884a14b2316a2335a937108c1f264f6
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:14:02 2012 +0200
-
-    [fix] Santas' Lil' Helper
-    
-     * Fixed namespace handling
-
-commit e2b26bb880ec4bc4f2c9796c2b59c5100640b2f6
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:13:09 2012 +0200
-
-    [fix] Namespaces
-    
-     * Fixed namespaces and united ns coding style
-
-commit 995b745d0e0c0db2a8532b3d5a3570ccd724b8fd
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 14:05:09 2012 +0200
-
-    [del] Useless class
-
-commit 645ff82c72744b7d623ffa2acd44fdaa35158406
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:54:10 2012 +0200
-
-    [fix] Santas' Lil' Helper
-    
-     * Added error protection
-
-commit c902a494361a03c220310d567284c37d8c5ea8d2
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:53:37 2012 +0200
-
-    [fix] Functions: read_dir_contents
-
-commit 8c78b31c454ecda7831b58c82bdb3ce35dd5fe30
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:50:51 2012 +0200
-
-    YaWF: Santa
-    
-     * Clear workspace when finished
-
-commit 8cb975542d93d4e862faa1738a9f7281a93bdfe3
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:49:51 2012 +0200
-
-    Archive: handling bz2
-    
-      * Archive throws exception if it finds bz2 archive corrupted
-
-commit 8b72780cdd149971a52eb3a27d3a7411ec145b53
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:49:19 2012 +0200
-
-    Package: internal
-    
-     * Added internal method to get tmp file path
-
-commit 1860e1a086264dd96c8fe3665dc52e8b715b6d9f
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:48:33 2012 +0200
-
-    [fix] Offcom
-    
-     * Fixed handling reponse headers and content
-
-commit ff4052b340fe02fbbe7542c9aa5e49532ee69c77
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:20:23 2012 +0200
-
-    [fix] Santa: packages
-    
-     * Fixed reloading tree
-
-commit 14e5bd071a0088717d3bc6900c43425e566084e5
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:17:15 2012 +0200
-
-    YaWF: Santas' Lil' helper
-    
-     * fixed paths
-
-commit f6d8ea93103cf579e809b942f2af72d92eb33878
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:15:42 2012 +0200
-
-    YaWF: Santa
-    
-     * Prepared to drop update class
-
-commit 77cbaa98597eacb76881751e04c3405071b0272a
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:15:20 2012 +0200
-
-    Bug template
-    
-     * Added newline
-
-commit b7cd9a6c9e82b5807786a979893872009a29e8c9
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:09:57 2012 +0200
-
-    Make: paths
-    
-     * fixed make path
-
-commit c6e820112d9188376bf7a9b8b4702aaa4ec5a954
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:09:07 2012 +0200
-
-    YaFW: Santa
-    
-     * Updating packages
-
-commit ced8191c0fb8211807b0dc3c2dd640c86628a8fb
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 13:08:29 2012 +0200
-
-    Offcom: Request/Response
-    
-     * Separated response from request
-     * Moved System\Request into System\Offcom\Request
-
-commit d7613e866b9da755bf2dcae27b8086ef26165328
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:47:52 2012 +0200
-
-    Init: compressed code
-    
-     * Including compressed core
-
-commit 56cd6409b3279267290a07eb2f08661b6f398039
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:46:48 2012 +0200
-
-    Request handling
-    
-     * Added some text 40x error messages
-
-commit 43f931fe94f19eab367392bdca4ec2d88b88f4ac
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:46:27 2012 +0200
-
-    Locales
-    
-     * Removed old locales
-
-commit 8ecbfb2f820d73a6196a1c96940c4a09115791d8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:28:15 2012 +0200
-
-    Minor fixes
-
-commit 8e04257d043c6f398e9cae8fe76ad8b23fcd79d4
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:27:36 2012 +0200
-
-    Init: compressed code
-    
-     * Prepared init to accept compressed code
-
-commit 6a6a3fe26c69be97f41250716e03605a23d66d26
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:26:54 2012 +0200
-
-    Rewrite rules
-    
-     * Removed YaCMS from .htaccess
-
-commit 72e01a8812ad523add6e592d75a037172bc30ce3
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 11:25:43 2012 +0200
-
-    YaWF: Santas' lil' helper - code compression
-    
-     * Increased PHP code compression performance
-     * Added empty essential dirs to package
-
-commit b3e1f3ec589e2e3ad616802e2e9202cd606fcb62
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 02:19:56 2012 +0200
-
-    YaWF: Santa - installing packages
-    
-     * Santa can now install packages
-     * Prepared to drop update class
-
-commit e3c6d95eac3470053b980b4c4bb2fa22f01fb527
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 01:39:01 2012 +0200
-
-    Scripts: make package
-    
-     * Make script rewritten to PHP
-
-commit d277e9120d361d0ca673d84a1c1c3df943599576
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jul 8 00:43:33 2012 +0200
-
-    [fix] Text
-    
-     * Fixed parenting
-
-commit 2e06a2b1d543c5edcb265b3dbd23080d3a2da922
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jul 7 22:27:29 2012 +0200
-
-    YaWF: Santa - downloading packages
-    
-     * Santa can now download packages but cannot install
-
-commit 41506c75180a99ed0e9ffac40aa72f4d15664e89
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jul 7 20:41:33 2012 +0200
-
-    YaWF: Santa
-    
-     * Simple package manager
-
-commit e3f3245228f019ed90c9ae91951781b32835b4c1
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jul 7 12:01:10 2012 +0200
-
-    Scripts: gitignore
-    
-     * system scripts can generate git manifest with prefix
-
-commit 4516f7fdbb0235144c8dea23cb0cdfd24d300837
-Merge: 7d287c4 3da6995
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jun 17 22:41:25 2012 +0200
-
-    Merge branch 'master' of ssh://github.com/just-paja/yawf
-
-commit 7d287c425d47c3900c8c132e32b930c43ff8470e
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jun 17 22:37:25 2012 +0200
-
-    Drop dibi
-
-commit 1936abef6bd65e909fe3a3eb67c8246ec7b06f9d
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jun 17 22:32:23 2012 +0200
-
-    Database interface
-
-commit a46ea85dee4ece3270e4631d7ce5b5c190d76775
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jun 17 22:31:10 2012 +0200
-
-    Scripts from yacms
-
-commit 7c6a5d248e1d59e68b9b4f60ef547caa36eaf7d8
-Author: just-paja <just.paja@gmail.com>
-Date:   Sun Jun 17 00:35:16 2012 +0200
-
-    Gitignore
-
-commit a5b7a64eb871f372f99c7aac294121b9f16aa466
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jun 16 23:47:02 2012 +0200
-
-    Initial commit
-
-commit 3da6995ac8e55db52d1ce663bafa9b07e24c5387
-Author: just-paja <just.paja@gmail.com>
-Date:   Sat Jun 16 14:29:07 2012 -0700
-
-    Initial commit
+192c2762a9e57562c9edf9320d8297f96c323fcd [fix] Location, map_html
+db2c749d599fdfc7b65434afa56a91af73c486ae GPS, godmode
+36e103baadd46d8e557363be6cd916561f510da2 RTE, styles update
+401b8ad001615b9dfe7e8afb656e2368fd7e0616 Santa, output
+ffb1c1e10fd03ce8cd61c71335d7e99d9c960ac8 Package version
+4404a8916b63cec7bb663b30f8b65af2ec6300fd Remove old files before install
+08b93a85e09566839261e420ef36fe5b023a6ca7 Santa package latest version
+8ca6014d71af782f8f7541bb84a49daa7ca078ca Santa, upgrade, display
+bcd5d7fc3f8a4d5ddbc86ab51c1c334ef84648a4 Santa, install, remove
+7c9a9cf481df161a94f0524e3cd7362d705faeb1 Cli, progress
+3fe55f772e1ebe625a4d7a5c759df19c154566b6 Directory class, remove
+6162a2fccb0d90b4a67eb6a565058c01d25fcc4f Santa, versions
+53cc82350512ad49e387d016ee99e0f48738b586 Santa, meta output
+eea230e854c679ccc85ce8ba8ca76a6ddbf7279f Santa, meta
+952b1c26cef7311f8c48129c3cea9874534c3fc7 Santa package version
+cd85fd63d031a92c24cff475a5a4d00bcbcc8951 Santa, search
+e8f8ded4571e959f7dc68504cd5dbf6565bd1373 Settings, Output classes
+847d62a23561265c52f4e291761744067fbc5d53 JSON, put
+2264476588d4bfb094602ed26e878c336356be63 Santa, browse categories
+d82e9b198b37c5c75099418a1cbdcd9fd5609e8c Santa: Various fixes, rewrites
+9c141b3eab0274223f9491b0193907a8666274d0 Compiler
+5cf530cc9eb32b0b18366cb7d2bc6fbdad2d6d1d Make file
+f1f9e923355b80bad8556f5dc17f1c432c66cd43 Santa, find
+2716395e33d2cff38ea35164476d0b96a37d2fe5 Basic santa rewrite
+3af4df612c08e77386dc10421cc06486736e1c81 Default config
+32c88ed5aac4023beaba8bfcc45f55b75062aadb Cli, do_over
+8bc83de7cc2af137e4d0a3df7d2deb222a04f0c5 Output class
+895b5662c20cbca1e7146b152237b378be567b3b Output yield
+94c608c905720cef8d41223c40f911e5e943fec6 Database error description
+2249a58bdc053d6af20837fa6ea400a05be471e5 Fatal errors
+8482e8b1e0124c2eb31576bc835685cc7d42885d Output class, headers
+969281f3fbfacf5b4a05b2f636b44b82603b7b13 No pages error
+73dd9d6044e6e646b72e7f1d8124d3fb992adc43 Makefile, log
+9cf21f93e5509588b3cda6a6e63f0207ca582567 Input class
+692364f648e3bb607fb7651d94b82d4706b8f27a Template, to_html
+e5e0477eadb1fc1ec8b3c74cbff7e0fca13ec13f Forms, RTE
+0aa308a9dbd8e27c49c126341e5435c5f80d2708 Forms, RTE
+7a9f452d9c465d945839acc0223fa9a0e25d165a Forms, RTE
+891fccaa6237390cce8c691539a9ba6ab23dbd23 Forms, RTE
+06fbc784d0f86ba8c611cd18805f08ceb926c8c4 RTE, proper
+b091dd08566ba99aaf97c8724a004bbd3e447426 Elementary styles
+0c8501f6a8bca470a1118723bb90244398ae6dac Resource, lists
+ae8ac7b05ba01d21331c1cea09aa88f3b1621e5f Forms, images
+6be57f84c6c093d07116fab3819a205545e78d93 [fix] Attr model, datetime
+5c173751fb3c658c644faf5d7fad3bc5a41abf9c Forms, datepicker
+4c2fefba439d78fd644777a786471eebf80c8712 Locales, yes/no
+fca8110f5dee37939c04da76da1fb05d4cd5a182 JSON exceptions
+5d20c8b641069bf16fb275293e330ec18de53274 JSON decode
+5e942c3a3ab9742d7359320e4ec8b5373bcb9239 Devbar, pwhtml
+8af29d2bef6f313787534096a4f5b74b7038656a Tag aliases
+cfc71dbfb83431d39f767829b58ca0dad2b0561b Devbar, null values
+6bbebcd4787bb70fc69fbecb8cba7e79f0eab97b Devbar, style, sql
+8d0402ac1ade6c59458aef4a0041e7554e9589e1 Debug bar enhancement
+afc9705fc97d1096a02cd7d2281081cb96439c36 [fix] Locales
+cce3a95ed2ea6de9cb0ceff81459e867b0c5dde3 Devbar, style tweaks
+40927557fad4adf14c0338f251df8437fe0f5e91 [fix] Exceptions, Locales, Settings
+0de23c6cb31a7aa6e05d9812fad60162efa08f4b Offcom exceptions
+adf69969049fee091d837b21fad73bddeecfff45 Santa script fix
+8d7244f572e358e2b6fb7cc7497acec37e3bb756 Offcom request exceptions
+2f6a265ffe94b107e8d8a265801d3c79f6dcc470 Locales, common
+fc1bc29aaf37a6c337ed5e468f09e9c7235a3598 Location, to_html
+9581d39bc7d91bd0f7e8469d6da444bad5c241a5 Database model
+392b292bad84d860f39c848e1fdf392fd16fc3ed System Location class
+2c172ee8719afd7ecfab21921da6045b4dfc38d8 Devbar
+07fabe008e8ad4d3f057394dc2a1919dbd04075e Error reporting
+99c95b19e9a5cd285a4ffa9d71ad81194637c9ec Elementary styles
+41f37d122a02ff29b338990233232ae8712c4c84 Devbar
+cc4a024cd38ae8133a2c61a889da0561c214c6ac Icons
+6ea7adf5ed5f74de5a38e231185a14733386c954 Redirect fix
+aa6f78146bbd8bc4dce5dd1526c20b7adcbd3205 Documentation
+662593514acbd09be2713afdf88907d8b939dc73 Docs
+f031aa55c864342626dbe7d560517e36c36c1588 Drop unused class
+2060d163d85c796fe9169c1c89ac124783e986e6 Forms, selects
+fc6768699de31dc85f254151757b161ce8f9ef88 Various fixes
+92b3b79f4760a0d8cd9e6d14c23aa74822ab84fc Resource class
+ba9aec72d70b7b9b04d3dcbf1a5889954c7f2789 Forms, styles
+99cde7351d5f0706ab98b958cdf29c2f6f0bb46b Archive class
+b90bd72b3c627bd9d221bf2dcf7ecf4b2a938ff8 Error reporting
+05bda1453cd78d7a19ee7c369d0e5f086d590d89 Console error reporting
+66329c148fa4fa2f2e7466f301b9230827b291db Resources, null content
+48afb160d7f2c9be5344c9abe281c2179a59b85b System status partial
+a475ae7ec44fbb9526705ff361169ee5b5b9c8c8 System status, cli
+22220a3329b0ebe9ab302380d3049bf1b00c9a95 Resources, serial number
+4bb8035d311a1aa1c692be48d73e9c9fe1a6da65 Resource modules
+efc52cd22a0adfd7337d431b741926e3dde58601 Resources, minify transport
+334c0fc82bdc064c0e2af68f35641e689c3aad6d Resources, cache
+c398bd134e0810e8eb7f77b9ab60e533f5e571ef DB script
+10b93b0f5934015cd689f25594cba90d14735c65 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+f53d41fe34547e914921e5f2ffa5c055eaecb943 Forms, commited data
+f0f453fe882af5685e64ab7d58356a1f5448c74b Forms, checkboxes
+edefa65b987d249ca9a6b619255b1b1f1599da33 Tag, value attr
+0ee10862d76f8abbd7a48c213a937807dc8d334e Simplified error reporting
+a0fa2625fdeae11d85d1074a94ecc68126a87fbc Errors
+a62542ec02372e08cb40ad6f13f0c736bb1b57b1 [fix] Database, belongs_to id
+76c5dfc90701f2e9ad12f5f94681a6f2a3e709f1 Database model
+5e9f8a4105f662a4294f89c5d5cffcfcaa2eb47c [fix] Aliases, create
+c396f01e7116af4975c1ed7b0c43191df9d8e1d5 Forms, styles
+79724dbf24d124956102951011d63a640347536e Trans update
+5a98f4d453b124f8c0568e20212002687b79f6c8 Loader, Locales
+ed1ff0d2613147b8e20995aec0c411246f782078 Forms, input groups
+aa6d2fabf1f36e2b2f62e476feada53f676ddbf3 User contact
+bbf50f8afc66881d03bb122790f6daab856a178b Forms, types
+ef2c581d2e34d4239b44f604f7078ca1c5c16c73 User contacts
+71ffe61f3000feb72311836f9cd6411d62bed33b Database model, options
+7a12de1502ee5366711cbc0a379c27621710eb92 Erros, model
+c6bedb65274be1b24b54e1733f0fdd6b482ec5db Database model inline docs
+fb786ed96ce73aab64467e851a4178de9febd85e Database model
+1ae9de090ad4dbeffe17fa9bef8e11a73dfe1cc9 Database model
+3d57f8b3529093b4232592d89b1ed3f8d1cd6971 Locales
+3effc05a55a9fc76ddee13b60fc12c148a8c75f5 Database model
+e45117e642b130d738a4a19878b378e8939474da Attr model
+66d6b3e2e9a2a8bc30110f77c72e67737704b24b Forms, tabs
+8ddcf22393148dcfd8c5b38d66e518f1976b690c Forms, tabs
+af745ea01e7ca307c28d0dabf8bd6823a14c0229 Merge branch 'master' into dev
+e9e4144df07dba43e9b9a71805a04016c496732e Forms, tabs
+ac69733879373fe99b6fbaa8f232993189cc1814 Var dumps
+fc22b7e7f051926e9330b8a7ed26ecac1a3b65b4 Output content filter
+0f6bb9f4de3ac8bfa85ffff5874fe4f6899c70b3 Output, Page classes
+7cb92be6d6c8e9c49200feb09e1e5251da9fa089 Page class
+a0b7c429f0bec98127f6a2664b875c9453bce019 Database model, datetimes
+88c9ff230ed4c2c8d56fc6a4fe64a91ec7eb9e7c Forms, null value
+c5df46f5589e96ef4b5f5fa5d306b33b22e7102b Forms, null image
+2a527dcd63c885af090d44285bc6861db4cf7fba Soprintf
+9b8302220c2dc11eb41382ce1955405821ff7027 Seoname generator
+600c3d6bb83264317b3845bc7911b9d04c974d0c Default values
+002ec1c96db14a3d6af4086c0aee4710b758475c Output class, Cli
+3ad1dff8940b87ffd9f2162158795a2448c4c1e4 Forms tabs
+9caf41e87fccf37282750286eb0a6285e4f7cf09 Namespace protection
+6e5a0f166b231af34c0a963ca108b008ed315fc0 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+1774942aea92d8421f488a66fbe9fe370dc31ad6 Page, current
+6cfc79c80ba1c77550dc3de32352c306482d28fd Page, Module class
+ea4a112356ed929e5ebec92c9ef2207e2a9da307 Attr model, null, Database model
+10a62b1c1af23e4878fda3a692f93544f4b8087f Page, Output class
+948b44a6952abc3a177088386e6f069511c55336 Page class
+7cc1060a52d037fd6af5da8a23562922ada4fdc8 Merge branch 'master' of ssh://github.com/just-paja/pwf
+7c0056c638769c2b7525fc941a016280ea446b35 Database model
+c76a3b0ca3c4d98f72f32d79d6a66387140ebb45 Forms, input length
+59dc7d1ad9916e2d3310cbfd4d3660aec5f6ab03 Forms
+df67f641d3d89653d0aaa70f2562aac9fb899f6a Flow class
+8bbed85b8d0c8d0638dde8c3a8d2d76cf359c0b1 Model names
+869bb8bb27a1e29a33e7e486383ff2fbe32896bc Locales
+fb2e24b9c2dc89e8fec72dc255be527dd6ad5e21 Attr names
+bdf690aeb97daa922eaacced64452df82548d944 Template class
+cb0d0ef51b53872272c789f66e28389f474b6a36 Page
+a7fe55ae2ad91e3bbf995bbf8ecdf42c476f0ea8 Attr model
+df271fd8625947674830b4859366668d7689eeed Class name conversions
+7d5ec37bf1efe46737208dfb54613645bbdd1fe0 Directory class
+22d0e215ce298fb91ab857dbddd19222beabf3a4 Code cleanup
+bb63a9c4be308f78f2fe904d4741f96211eea5f4 Merge branch 'master' of ssh://github.com/just-paja/pwf
+9fe2964a48099226aebb0d1c39069c2138f5a4a5 Make script
+92ed17b02585c0a6a3a4397b741ac41a202345fd Drop unused constants
+6ded8307dbe878f082ec1e0f6818873a521d1977 GPS picker
+eef258d50265016cc529200210ac4be28b1e2493 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+97d7f975abca7a4c9b6da4cf335443df6fa725e7 Resource class
+0f6bdea080c6ac4c1cdd128fd1d8100eb7803536 Archive class
+3e1f52aa917a16a4e875beaeb58bd12dea82f2f5 Offcom email class
+65905842d9582ad7432638e454e16e6131d94a8f Drop messages
+ee14e754214d95d24a340867c749a50470629e8a Code cleaning
+2320c1556782678159cdcf4bbe0131b5667cca3d Partial module
+76ead8a4489a3abfd913212c25c89172f3496004 Message module
+5dcfb5372810ba3999e4b798fb8711443f6d43a1 Module class
+ff6d655aab8e4d6f985c205230dc670debb494f8 Functions
+059a57fdaac9867e3c3a4ad58f5b34c4123b4a20 Error reporting
+068475de0c01bf7435311a12cbd91d8666a8f766 Database script
+f91541183d4888586cb13b3b4346717eb8476dad Status page
+667262eb99679d1871446a184b0c53618b5119e3 GPS picker
+62fcbec84d622243270a64afb1aa9d352c48de2e Forms, locations, passwords
+04e009195ba7229ab1102e018c14c4927240b83e Autocompleter
+5c51c41b4a4afc707742aed6a409fa1118c0cfa0 Database model
+6bf97c2347c8e9ae06a50d974d7cc6daf2e04d13 Models
+325d12cedbdcff8f9bb76f47d81ae25b69fe67ce Forms, gps
+bc6eedde15f47e1d1c58fe8282f94b78f3f9ab2e Forms, gps
+cd64b0ddb46eef73017606eea20df50ee52f6826 Image class
+75558999b31a92f25b4af0e431077774075c535e Flow class, Forms
+2b4f5797d2710b638c10c2fcfb73710a1a4e3750 Forms
+4e40d31ffee4c04dd4de44e0988ffc590846ae68 Forms, datetime
+652ce5425ccaa2d166280531b1bfeeff7dd557f7 Default config
+9aa170510d27ff0d742c28c8dddb52ffda8ca099 Messages
+ff8c2faad59bf0fbb0011caa65d8f5b4a2522d75 Forms
+7f4fb534dcc3710f8bfbc22833527603a262a4f1 Forms
+8e0561f7cef7c3080a85b58ac679db1cb9b5b2cf Database model
+9b7cfb492733d2130ac96c5bc07d68e264d02992 Forms
+e2193111580048f7cba1b83f3f7c39b38f8d1fa4 Image class
+c2993e854c556b331d523d99f7937246496d1e38 Image class
+6f7d356aa37b7a2cddcc286588224beaf54c6e7f Database model
+7ab86275986431782bacb678c35aa6441676617f Data seeds
+0f63fa5011b00155de885ca11be715b1958c6072 Error reporting
+2c934c0aaf18c35245197e9fd261344b2d73b3dc Youtube videos
+8c93379067ef08947a748ff89fc46d6bef20e7fc Tag class
+40e4244ca1a65726f8f665f99ac9a6c01b084ec8 Attr model
+3bdcead5e0da899a2394c0a720fb147b52b929e2 User model
+48fd43e0efbb98bfd41882f4dfc68705f9866cc5 Attr model
+842aa64609b870a75ab49285aa713137308a8c5e Labels
+1498208869818c757556f9c196cdcaf56d58b1f1 Template class
+c428b7c41d30bf1594dd917474178e1f36adb745 Locales class
+4ba8b647c022bb0d2437093c91766d0290182cfa Json, Locales class
+93e44cd432abd7858a6c8825e72cf6f2da3360db Gps, Location
+450ee68774b8bdcbabf4a6da3d74df565705c97e Forms
+b31cd57e5bdabe32b2a6427303bbb44959027398 Messages fix
+f01c563d954db3dde1e7f73273a8eec2f4da2554 Error reporting
+71e9e0f9c7051ce29260230a909180c9d4f34085 Error reporting mark 2
+1da82c1f8f04cc31d7d7d327c66fee804fe79bd3 Code cleanup
+c4f3e9e1098d909d6ae58ce0141f52d095c43c82 Error reporting mark II
+bf781f16f7a235cf3426dd096fe28badfe6342a4 Error reporting
+07b524e1c6420221ed588f306345cbd8bbcc0b72 Autoloader
+0de375ff4e438d964221546c1342702951380ba9 File writing
+572279be6770e4cfc7ff1ac9e6234ee8358c638a Styles minifier
+0b1acfe099e31705cfabf55dd4609ef1284d5ff8 Styles minifier
+570d5f3748cb068694019a535e84d4ebce71a317 File class
+348da996715594b26dfcf5bfe32f4ae89499e451 System router,setup classes
+63b534bd1bd0fd5bf400be1c8804a3ef4afcd548 Settings class
+b045e0ee1e4cab8e4c2191125586aff721988bdb Working directories
+70c940e34ccaad5411e34d3df1a35737fb9b5b2e Error handling
+4ec424c9073a9a5b3ab4e8e01e67487ceed56fe6 Status reporting
+71ce98a434429d17fc5b60376a4fcecf0f815d62 File reading
+11a578fb0ca96a8c19016e57c89ff4546af470de Output class
+480e361bdef9c51cfc1c8dcba1eb14c975bb68f8 Deploy
+09507f0ce7b400656d89f7e1a4c16b5ff07cb05a Tag class
+4d799baaca9835e378d1af80ad61d124fe48a926 Merge branch 'dev'
+2c8f67d9f62e9ebad62822190e180ff48aa6c0e6 Location input
+10bdb72503a5ca4075210a258d08e9f0a7c0d05c Forms, gps input
+5d78bbc3d046156258c051390bce702af3c00683 Merge branch 'master' of ssh://github.com/just-paja/pwf
+10a2310ec98353639ecc4df96e94db7eaa9efda5 Messages
+f8cd16bd95c1baa7c2ab38779b1f9207ec47a7a1 Merge branch 'master' of ssh://github.com/just-paja/pwf
+da0b5e668611269cada47bf0fc7ddc67acca102e Config cleanup
+39a77adf2698ee5cc593eabc203a8a7e62939a42 Code fixes
+d34e002b239814f0e7da2c160492022392c1a4ee Compiler
+7988e40af4323a445edda858254fe03b0f679fcf Compile
+697e661f0275fc6c9b584569e37a1dd5990629c9 Error reporting
+333bd3e5fe92289f9502cf7dcccb30699e5b20e3 Constants
+ff1ef18bd9ccd9617963ce52d5b9aed047215f21 Forms, gps input
+546ec9da239f406b90d53b94f0f39d1e1d4c3c5a Page class
+37a8a394310cac1893be3a5706674684ae36801c Code cleanup
+732d0b091c4cffd3fc1e49f8e56edeaa580d1aeb Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+eabfd5cbafdc9ccac4b2373e5caa70ba2e3e907d Resources
+2795060b9d406f6c528bc2c4c72adcf2b3f51015 Merge branch 'master' of ssh://github.com/just-paja/pwf
+32c93dc9e305cb46a16d763217eeb6fa81b7e63a Forms, gps
+cb8bd7e2f20cfa1576537e86fc20130ef53457be Merge branch 'master' of ssh://github.com/just-paja/pwf
+c70ab06d9c22d9a741627b9eb14792732481273b Forms, gps
+77031c68382e163c4ec8a50d0f360c59f4e24b14 [fix] PHP 5.3 compatibility
+0b55acd58f5baebb64e0f516b6c7aac0ef9fe4ab [fix] Database models
+849f16d0c672e0ab8f7946e3363247c7b3b82d0b JS functions: is_attached
+50384e4ca258ee617afff9beeb9c3ecf926e4eb1 Forms, gps
+14c25b09f9b149326df54c45fb7f71a1abacf8ab Forms, datetime
+8d7c393d624fd1ae7a29d9293f961a723ed6674a Forms
+5b0ca704ca30e21c105750fef25e7c61ea5ac0da Forms, gps
+8b538c06c35aa8840092ca0afba808cd416c160d Attr model - coding style
+0fd0d30a20c566180ed65c58e910160a02577aaf GPS
+e27abd1a1ef8815dbc15f276925b1bf9381a21e1 Attr model gps
+61de6515bf474baaa5f4be08c82bae3f616aa3a5 Database, gps classes
+4d0db7148d482633412517f85f74c542ae491236 Database script
+d0bdc605ccbf5fb597d725962f8f8048a5c34f17 Google maps integration
+23a497042af4183c3070e1955711acfe2af60451 Geospatial points
+7e21760d7cb358c0879fd25e8b701857f2502a2a Aliases
+a902f65b7f4fec9c95676250a9c509105ce0bee0 Module locals fix
+392b94a87bc80b05346056b2407a0f300c8e9816 Module locals
+00fb53c800445307940323a41afb4c024b9e10ab Query class
+0d665ca743b39e64265d203a50284df2b5ca40f4 Fix dir into repository
+0f3be059270c05fb101ce99ababf038cd0f1596e Forms: Location picker
+49196d0feda4f204e78d6fbccaaee013ae295713 Forms: Location input
+bf16554acb6d1b95d820cda7a6af9be274c57ba5 Database structure
+7db662c335ea94c81bf93b7bfd477805bd942db7 Location class
+d0a09ee8e2e95270d9599aefb8bbaa83d5ef9e44 System bug display
+c09dd1408a33d87ecdcfeb2db9311b3410e23711 Query class
+4da24e4e0c2100a930b72006d491c81e453c6ccb Forms: Search tool
+9217dc12acc9a17ef8bbbc5adcc0438bbc6e6569 Forms: datetime picker
+6eaeb0efb0f677ec22581931fb2e965b614f07e6 Script fetching
+089d8ff261c82896292185534452a268554c1252 Forms: search tool
+254c0936522ea1b0cbe1cfb5bc237f92a89545bb Image class
+f863f3f73949cf543c679e9b4389c2bb1dec1da5 Forms
+822daacba05e87d1c2ecf4c121487b01e5307974 Forms
+7a76b88fe65566a7b552477d807322a19c6c949d Forms
+0f0f70868f65a507a0b7c5126316183d4b8550fe Forms
+906f9474a0d5ed0306fd1821a08d7dc4b501f218 Forms
+deef5c3d86f8d03b1112388db7302046bae8325a Database script
+e7b7ad47c489e300a7fdd4c82202fbb3b77cbb32 Forms datetime picker
+9649af2f1018798305e951861b28e0d7c12b7076 Forms date picker
+f5147a1f8c05d937da20cdb5b7deb66a40e1d136 Datetime picker
+f5adabb179c9950a89c909773626a4553a41ae92 Forms
+cc12b772a637dbb15097d0057cb2eb4580fff35c Forms
+4163647cd68cfe3e8a53e66b36922dad76e8128f Image class
+1efd49bf27e2792fe36cfc3788c732bb563abb81 Forms
+660d1722fc0e3ff2c1e00c5aa92040e9ae7c1ec6 Forms
+1b7666f8c809fca558481fa54b26117b82fee5b9 Response class
+48a8ded33f2de66f9af0873153e5977863215bff Request class
+e5ffe6bcff608374085e285a9ff4a675f368efae Image class
+335865097b7e60d9271ac492f986604052af17bf File class
+f9107969c912b6f40ab9f204452c963792de9936 Attr model
+04c199851b95560985429dce977680c4a945c3bc Image class
+51e073848b70fa4f8404f44b5f202a9c2e09be0a Image class
+bb4be018c75a643de3cfbe348bb71ef213507f7a Image class
+9debcb3f970020b951556b0820814d15d6a01fe8 Forms
+2f81b9be080cb2ab7bec5c2d9be5e5c2fc6addc6 Forms
+0159b1831ca17ba88e4f7ffa715f86adfd26319a Form class
+9844f8ea6a2ede51b0a0581c1683144a5f93d5b7 Form class
+ea20305d8f5d830ddd28dedd402cadcc1aef912e [fix] Input class
+7ad50e8d9ae035fcb45f90ab37d941489269bf03 Search tool
+d1c918542a997f79027d058f197878392232f973 Resource preloader
+d0c49af8cceea3d8bb417e30ee5e1732cd9607cb Form search tool
+536a551d879a4932df55bdc6037809fd211fec7d Form inputs
+fb2247d65446d092b2e8cb731c1809e5b372c0e9 Tag
+82850e8d7fb26ebefda0bdda458f0b70eef5b0f0 [fix] Belongs to relation name
+b77e025127cf0324f7e6fdd3b25850ca074a687f [fix] Form helper
+9f4744c154ab4fa6080b3cc5931766984647b4c2 [fix] Form helper
+9454554187528cbccb73d6fc54b52b5846efe191 [fix] Attr int_set
+0bb4ba4bb72b1cdf83543e1c95d62e65a3714ce4 Fixing relations
+1c8c184075d41b4ffe9ad4519f087ef3816eff82 Fixing relations
+a146920981ee3c547da88ec1ac25edc535df7264 Fixing relations
+d7ca85f281119107bd65bc0954f1bc15b9b50bbb Fixing relations
+1432a3182b33d05ae931a27420f8d058937f7d81 Fixing relations
+f252cd7d952d21558e0cfb7d07ea42b545bcf21b Fixing relations
+8fa9361d8def15e4c5b9d442b8451dc15dfdba3d Database sync
+69c9a2cbe1ae05f9da16958818c3a60ea333bd44 Database model
+55cbbce8aca6a1695212b07e47e192762c2c2fbb Database model
+a0c9e83e643ad39e3fa804fe85f3c32bc169afae Database model
+36bc5b80a7e37cbce59d3a0890dff47ee5c47129 Database model
+353b454d098f2682ee79c97de2fc51141eb04238 Database model
+fc52f82ceb19ae56f6f4f42b85948fc1f4c57199 Rewrite
+d8f44a249f9896d7c2ab1219a1b72c835ccddfcd Database sync
+bc32fb22a5164a94f6fd2fd8d7b04db728028a45 Form search tool
+963fb02993912759d870d26bfb8603d0f55ddb28 Form class
+366c3b7955307f15496d98c25cbc082590becb30 Database model, Query class
+58314e3861a57b5336bc8c9f17c9c8f0dd633c74 JS: Tooltip fix
+4d3041bb61840238dbf072ad4ebea8b8d1cdc7e5 JS: Functions
+a20e0ca5b73432d82ff1294b170ebecbb81abcdb Scripts
+ca49bba23b5bc3e187182f4eb3947d939ae634a9 Mod rewrite
+be1d941c8b95a2fb41e45b016bd18827e29ec14d Database model
+958d26acb0ce97eb1094c212101bfd85fd7a3434 Database structure class
+e303d46c221567e54419e24589d136b749141597 Query class
+60ede2334d2267cffe3a1ef9d50e096620a6aea3 Form helper
+8a0d0fcbe672aa2f663e2ad933e43f476336102d Form helper
+a0798eb6d0e61e2a00d35f1117d6385e90b9f0d0 Styles
+0cc46bd86c8ef144024052443534e2f3923bc7c9 Texts
+3dbd4e9f486fafd3f96c7b65a5822b44fd2fb39b Icon handling
+6196dea67ad3e331698d48d3f581832779dd7c2d Database structure relation
+d44fe528f99a7633acf93fd5d632495920d2d714 Database structure
+b4889a9e14b205678f647649e1b8d8380dbaf0d8 Database model
+df46ba1c75ddf1e94458c0e900a57c58bf457806 [fix] Module class
+2be4aefbb87e9f3a7eaa69e00bf72cf55523505f Module class
+1f950eb9ec9768f533f774d1c918f910413f9615 Directory class
+3e7a70af9a7295b9cd5ece2ad741b5a5a648e7d1 Form class
+65023ee49dba83a5e94fd3b46a3d06a0290639f2 Query class
+5f0bb700b3e801157b4f856de38b55a85634927e Form class
+81b21f5b041e74395b2a6592f9e109d1f17c008f User Group model
+7afa28db4892aaa723ac42ba69b81a4cdc08ceef Forms
+c4ba7231f88f88b5aaf455629c42079a245e1ead Locales class
+26167f09cd06918f419ad005f4cbf1edc7f0ad58 Locales class
+2058632c494bcbd5038ee63cfc43f7f52a078ff9 Script base
+4c95896ba2b9e4e8fd5fb59cb202e8fc70e272a7 Functions: soprintf
+4bfef2f4cc71779ec57af47fe2d1f0e13de193a5 User model
+c8f5efbfe0dc19d33342b27c73aa6b414c880afc Database model
+57c609c584792f66cd4939529d06ddfb6d382aec Database class
+9ba4e4e83c8029ede1da8bd8b570b1b66de5bf5d Database model
+ac464ddaba36267b74e9575f74a9a0bc92dee0f2 Image class
+59456ba86fddb115f57c4b50924cd81d26c6cfb2 Default output settings
+3934d865863073f0c107ac012846e52f984ec1c3 [fix] Database model
+fce8f60fbce9ac5633193111f455bc412e148f1d [Fix] Database model
+b4c364f2a5a986f79b5524c97dd59827cc07dd39 [Fix] Database model
+f3d3cc60c3c8ccb8c9c7c0979f37efe7d7bcf95e [fix] Database model
+3738b4573726cfa91894b421eb939c4c478e8942 [fix] Database model
+200b6fbd3d05af5895e2778a342e4b2f5adbc908 [fix] Model ID handling
+f7fea5fcc58747af2221131f1b4bad8c48e40c34 Form class
+6c19942163e9a9e4af04e10d408989398b1b9171 Database model
+a883b9ffda9d1e9bd842ed3a92bbf48f399e39d8 Compile script
+ff061cc7203f7c228039e705661a45c262230c47 Form classes
+0d689d8df9413fe3ec260809e92e89e8c67ea22a Output class
+142171f6f4c23aa41132619a984651761423cde6 Cache class
+db0845493db2b04c81410c9d18fb618cb139fb31 User model
+ef7e91f4400008946d0718ec24576f331501cd52 Database class
+4e64adf15e7922bfbbdc0aa357da0244fc9f5aec [fix] Models
+e172e5a4c01a99dc1bd1ea82728003096453b509 Initial data
+856a2e5944fe17e6221add0a081e30aef84fcd82 Database sync
+a6995954360b2980ca8d0c2175e4b9a08dde522a Dropped initial migrations
+a889e01e851cd9fdae69870b08870b17f23d1360 Merge branch 'autodb' of ssh://github.com/just-paja/pwf into autodb
+7b0620e6d34f4c4b493c1815df48c6cadd83018d Gitignore
+f102d751f0ba2fe1727385e43160577dc8e194fd Database sync
+9a42fc970745ffea17e95024d3472f618b7f7631 User model
+e4e9a0880db956b5f522141e4dfe289b701d8d45 Database model
+fda5cf65f248175e5abcf7f881f81d5e58036271 Attr model
+4aef6f177012faec08b0dad71ae8b57200479e5e Fix model relations
+e29eeea4bbcbd0feb8039d380e33954404be957f Merge branch 'master' of ssh://github.com/just-paja/pwf into autodb
+d81c69e790f96036024089a1f7caaaca794c8b77 Relation sync preparation
+201ca4cabd20a01cf137514415254aabb76839e1 User classes
+9ed76a39fc7802074e8047a85e57a09d3476af79 Model format
+720e348343a12cb269ba4d12c73bf8240ae1ff77 Database model
+766a2b402b9da9d7f24ea4dbfcf0c1ab68b6d76c User class
+785afc9610aebb52213d88862e29b47dc4dff156 Database schema class
+e9569d9d5d17d33ba6cc064792d3f5274d881c50 Database schema class
+4db86dd9f3ddebb107cbe3fed515a7b53aed2b53 Database sync
+61e36c9c0f8b1181bbf4362827df40ffd0153f09 [fix] Database model
+b855254f805ac78102014786555d196a48d669fa DBSync preparation
+825936e8843269792c8f2b35e87c4c392632266b Database model
+a9e00a9eb3b0bdb8883f29cb71ee624efddc65ba Database sync
+ef1fadcff2fb1b8f5fd7f2e738d632b6958bbcf3 DBSync preparation
+7b0dbe756bcc28b480ef8aebe02583e7ada1a52d Class loader
+1fc3b914af920fbda7faea849a9b6e7b93f3b31a User class
+37a9fad48cfc772619f3342847398acb7266152d Nested model
+2afd34700032d00d8fab3e5187b4b696f341741f Database model
+38fdefe8293025448ec771f01688a6fa5a6fde86 [fix] Locales class
+a909dc0b6753ae4aa567a1f39391dcf00f824010 Database model
+e77fe9b8ebdf5f6e2e844b2371d2762cd38d473d Update basic models
+4ab2afec544c1efb7c33c8f282ce162dbe988937 Directory class
+aad81040c11b88227a4c1e6acdbac10ca4025c1c Database class
+be3b52d4f3890e58d3f2b48c6612d3f660700d23 Class loader
+b671038addeb1ca1f95a56a8eb75947a24db6386 Database sync
+1c3e366c914014cfc92dc82f63ea04ff628ac372 DBSync preparation
+9af273b4b6b09ba9f3436e1cff4e114e6133c71d [fix] Default cache config
+7e17433ea71c2edd930eff0eecac44736a8a15e7 PHP APC cache
+b3c57e7962881c136c90c67383f535da8a858a69 Runtime cache class
+8b03ba7720712086afb27e495420bef135250b40 APC: Basis
+153ceaf8a3209504737e8101b8ce16d9029e3df4 Init
+f9d46622f4429643458a60ba485252e7cbf611f7 Class loader
+033882b46ec6a2508f6af5b9d59bf9a6951e5607 Page class
+416afd0f40df5758096a3e1b75db75aa09de4841 Form
+329b80c81c1a6868d26b72010ce52e900713ac3e User class
+bc8d86fb66c1d0ad7b1a476986dda9e9ce49f5e1 Nested model
+c32d282fadd0f91637ce3084f8067afb34783072 Database model
+d14dd55ef0a6700da9e9e54be3a24fd0241e7053 [fix] Locales class
+f88109cff8c22fe040ca20680b7529b599305b6c Database model
+07c5f0353443ef2c8ebaac560376ae2bb7a6163a Update basic models
+e441ef3f02ddfcd8bb4166bc7bc95ab1e873cefc Directory class
+23e1fdb9f02df1d773f13227f70c0b1b1e7c515f Init
+9abd51fa32cd060ea787df4706adde3848c77947 Database class
+b77d78f497ba512491e4666f031d37c145a4a564 Class loader
+0f3744877102d29fe821a7c2225c44bc0b758159 Database sync
+1ff26b81dc3bcb3694aa31e85ea1d2b9be9a61ea [fix] Page class
+35b29070cf376d39452669fb65495cbea47528bf [fix] Setup class
+629a1514ab79fbd8d51a9ae1f56e7f34191a6608 Santa package class
+649607d03aad5a1502632e3cca7f3d61efb318ed Santa package class
+b9a4097b6ff6b2e6b971e5f15603fcd719e89cf3 Santa package class
+e4cbb3bc0503bd79f8c8311055ac66d34c493ac4 Cli class
+965dad61b471f007dcc2503370aa83d8721e9ab8 Santa package class
+678b14caff915fd78ff21ab92fa43a31ddf870aa Deploy script
+255f533bdaa5436519899f4e57d538578bcbc7b6 Santa - package manager
+2011e9fc63e36d3f05eb2fb037bbe6fb7585611d Santa package manager
+0c69fe2ccdbf2c90d9072f5c567247e2f64d5375 Build script
+62cbdfb7669bb8ab411ab672d0e5d2bc3d71d2e4 Database class
+0f34c2e5a4ac19622e186e495b5a30d88a08d703 Database class
+da30f89e1010f5e49eb3472dccf64630775c9eac Query class
+823f108050ac4219f7ab6e6f9b708e353239a14b [fix] Package info
+c1b8ae4795df9a0fa028b998cba262b4ed2146d3 [fix] Default settings, locales
+12dfc101186b1a5ad0404975c5abadbecab90f19 [fix] Default settings
+3f00eb1eaea9621afd02d742010adbe07a9a3191 Output class
+677c06af579ff46762c13981ae930c60291af70b Output class comments
+1f9d58f7d64c8da905f8d04205c859fc4aff1f48 Versioning
+9ae77de9db052278e43ca1e97860ae192f367a9b Versioning
+8609c7322f871d1afc253eca5b49f264ada1e4bb [fix] Compiler
+86799f6a5c4f0fa2f2aa85c13db62138be65a6b6 [fix] Rename
+a6e7046e8a7ae9f8b021f51faaa3e51063506ea7 Locales, settings
+e48ce9dbc3451b1af55c9d79095bc1ce2a56640a Locales class
+b83ea98d5d9955eafd1da0ab8b20bce3d1407255 PWF Status page
+a69a347dfcd9850f46f576ce900d695102197f3c Init class
+389495d7207ba197f63620295d5a81a6bc4c3a52 Router class
+a8c8b4049a0aa4dd5715ddd157eb3994b663056d Compiler: Branch
+664df127ef622cda22bede3a45b9bad7b24e2141 [fix] Console width
+fc1495d86871dbb9c7eb791db9e6a59b90aa481e Merge branch 'dev'
+a565c6f592335eda8724b147b88cf7fa1acdc42d Cli class
+e9102b6bcc203953ed16cd85b16c0f72cee5f123 jQuery update
+81ee58319a674f86166da8c0d03da81d1c1faad7 Github readme
+c518f147a121a41bbb58a731165407b3ac5e96d4 [fix] Setup class
+29db9f65bf88d35efbf83ce8a164dca8cd4d323a Settings class
+ffebe874a91b820a5adad7eb264829dd6a4faad1 [fix] MySQLi driver
+6ab68bff3098eff0a06803855a3ffb28fe34a24e Setup class
+02ec79f11963b0231501cadb4ddfab5a7ba83e2b Database class, Database driver
+a12970d463d3d791313e8b2d61a85f9a122b7754 Github readme
+a639b460d236ee8647fdabe5e1c73c8d7e95093d Github readme
+a7164ab063f57832a800d09f5364980b4ee01bbf Github readme
+09ecf6141c5bf516057000e70219010f6dacb2ba Github readme
+516fa2460c4dc1ee4cdd833f47d8889c91e0c6aa Compiler
+7d63b611bada2380aa78887a9f68719021654a1b Settings class
+7e00de94b2dfbc25885f766b2d48db0a6a6e10b8 Form container
+9b7c59443b82b3fb41f9c2d34e55f54265c357a8 Form class
+d765fc54a2896552753eb8ca8c543326900b0993 Setup class
+6e923939afc34deee8dbb699a6c6c8379bfca0af Default config
+2d91d20d574f164378321f95a94ecf686f1c1a07 Directory class
+6faf38b3212ba0e590f5953db9f6ee4e23dc6e0b Setup styles
+d0c70be3bdad3724dcb968514737ab140266fd88 Error template
+8be3b37546946cc6aa59dab011cce4dd24be18a3 Setup class
+7cf6d1020aa354776d963849110cadecef855af2 Tag class
+4ead338162a106acb769983fa2596456ba89144a Settings class
+0f21d13e5e74558841c02f00707e4285b1569e9d Query class
+ec8b5e6a83d67fc09fef1407c4116c6fff944c8d [fix] Output class
+2ae971062a283fb5e9a1fd53ca445fb91b69fb19 File class
+02fa87038bc2ef72e41921bfb7f753a5f2f256f9 Database MySQLi driver
+fa178a71fd5f48c01d968eed6f2dce3e18f01192 Database class
+75774ab278dd0bec8489f7747f1344c2ec04ae40 Page init
+0ea52df10576fa9523258a1acdbc0251ac84d8df Default settings: remove schemas
+148232239cce443081cda999eb795b7aa13cc79a [fix] Setup: create htaccess
+b4148ba9697fbc8ac289a1ba6f7eabb79e08c6dc Bug page: catch additional errors
+6935953be965c91a718f278743e3c108a2477d43 [fix] Permissions
+153b4e0d292333ebdac85e350992e24ea0ad9f29 File: fix, save_content
+e06d175aa52ba29254dea06675d61a438c473501 Settings: default version file
+ed0ccc7731ad8dd1bc292129aeea741d99b5159a Status: reporting, date
+87fc966972d5375ac10e2d669f0736bc12a091b5 Setup: attempt to create htaccess
+5ac6180086d92db2c58884bd9c5543f591e034b4 [fix] Default config: database
+a1e9709d9b6178fc0f544c9e27c5fb7fb0478a7a System script: only basic init
+e74a31e07c5be160a88542db92638797ec07cc53 Directory handling
+bd1ab601bbc5e5221b120b48edea770e31a61a73 Merge branch 'dev'
+8dc52ac41fb6f29a66769af41c3e857459a2d528 [fix] System: exception recursion
+29f80e074f6c46dc13d3ccc3466ac040ee4a96bf Make: build user ready package
+bb3c25fece49fbb15c35d20dd78263fd269e4a4f Form: set submited to false by default
+f5a8277d7ff6dd19fdc513f4e9a92c842ec400bf Form input: prefix input ids with "field_"
+1cbe35ba3152657ae6fa03bd82782ead3378317d [fix] Form: input type
+3c1c6dbc6e245873654ecda7f24bb6db854d9984 Fix namespaces
+c5e84348d88710722d2a7f516e4836252836aa6a Form input: info
+8c8b80d96b26317e7ca03655625b74a7d068141c Form: input alias
+d850fcca6fda4a8d1f9698235a4af551223a4a3a Form input: password
+fa184e4d7093fd336fe6c7cbdf575ca064f25904 WTFException
+cde1f843f2b3f947ba5c9aeb1a5081371e437d2d [fix] Database: seed
+b757717582c5a091841ca5c3ce90e20ed37f07e1 Utils: use core init
+02217ac3e806c37e068bb0618e0107cde45c41dd Core init: avoiding "@"
+2a16a43cfc3eb6c9eec19b997ec2c8417653d80b Module: public rights
+5378b0a70cb408a9bcf4cb95a7938e9f1af4211a AttrModel: public constructor
+5c9bba3180c44f30aca694c8a80826f525a2fe5e Module: coding std
+0e7f933344ec1066b1974a21e21426445d04a986 Offcom/mail: public constructor
+556eb90f6aa8e9cf4ae7e8f8bae87586c8d32b0f Flow: don't reset queue
+9a100f77c538c40bab10d303fb0fea6aa6556139 Flow: queue dumping
+a7c24dc8ad505d6f0257bb4f77ca3798cec1b282 [fix]: Mail: inheritance
+ed7c687fcd37977b5eba89cfa430ddec9e4e3eb9 [fix] Mail inheritance
+bf5552d8db14e0616b817ed3618a46c4e7a8937a [fix] Deploy: init
+3b41ada2f3ad2081283f0d6c2d3c156325fd6b92 [fix] Santa: init
+079e6bc19b10bd4f924a3c99c579b8d74d589b99 [fix] Request: throwing exceptions
+eb97c0ffbf5e44a3ef047c0f0ea9ae9af78b3ae2 Setup: aliases
+9e4d723739bd9a6c9f0ca592b380b1deca7e2ec1 Merge branch 'installer'
+123011658d0565577bf97dc6002c70641b1135e3 Merge branch 'multidb'
+0219a6c45b5b0aa2fdc46739b9c5bbb329a5e90b Merge branch 'dev'
+53c0230b1b6ee71214397475eed8dfad85333836 System helper: init
+96b5e94ba2a1cdfbcd2689878df245d152395a6d Database helper: multidb
+44ba1b2ab2bbe1afd5c72cc08dfd1a4e401ede49 Input: emulate _GET and _POST on CLI
+5f2619b7f92bcd5c81968a0d0d6921e892afe997 Setup: multidb, home
+a4e83b6379fb45300e9dd346afd0f0c9cd928c1d DB Helper: multidb
+9f246680cbcbff2e31b44d022caca6937766860e Installer: setup site name
+3e85e063e6d7a7ab8f351799896b3741c6bf041a Merge branch 'installer'
+c6763af8ab92ec5989a9cee6ecbfec16c85635f3 Installer: Form2 styles
+a6f632d325680f39b74139b327b6473de778f051 Forms2: checkboxes
+e6a6a64da8c62c430fc5e091904ca37af20c91de Merge branch 'installer'
+53fdc8235ac4e2603fbd2ca3c3493fe31095db48 Setup: fix for multidb
+426fb9a9b8b807fb9b8efd7a9b20e3168e522a0e Database: multidb connect
+55f19ee12d5ee203b725457e495b0068372f532b Setup: Multi database
+dee9b879113a9329b4b390638ce039ceeecf59dc Setup: finish
+b904d4f37dbbe2c2019411a39598c6f18fbbba03 GitIgnore: Installer lock
+703ebd1ab898a83b37dc20c58fd07f9dc0878f90 Setup: Form2 integration
+bb273caccdcc72a5d54628c7902f06cb0e20a0ea Setup: Forms2
+5cd96c2321c5b297e01966eca33c58623f924495 Devel: Dumping functions
+f6a8f13f2945202180d3097065edc2b15948e5b3 Settings: alert on empty config
+39c9d4a5b844ace37c671e0ba588503751e451a7 Settings: Catch permission errors
+4cb99129f8bc86eefb3f7b9cc0775a8e3bf3cb0d Forms: Userspace error reporting
+3ba8fc39a30b11b5a1dfcd59d5070c04ba1735c9 Form2: styles
+22462303b8262164009851332b5725921b9cc769 AttrModel - Secondary constructor
+fec5012dbbf1c41f5174d7b7c96170ef7c45dc01 Forms2
+a482dd34663d2dfd30f1a159a2c527ad71a4dcce Rendering tags
+7a05cec8c36c839d1ea076ed1677a17a79692075 Setup: first step
+b47284eb641a74f6821604eccd223621c77de9ea Database: is_connected
+594df969c0826d921d45ece0500cf401922242ac Installer: some styles for form
+ce47cc6edcb23db5445f5d211d025aeaae82fd76 [fix] Installer template
+8f376147e1e3ee8b799e504fe86d4bf6a32d1354 Installer: styles
+ac50774ef8e17491277c4e895edc6044c20d2535 Installer: init output
+f8898a301881734815aff631add16ffcd3cce4c8 Setup: input form
+e3bc13464823efa844f835631c54190e44d8ebcc [fix] Setup template
+153de058b29e7bf03728973546dcb36586d49bd0 Init: allow printing errors
+5217a80ec15f52355ade17e2900954efd4777e82 Installer: changes to init
+b98ac346b50a1e55da7601de816649adf1275744 Setup template
+bc8357199ac3012fd2bd95b801232876b253dcef Merge branch 'tags'
+594365116ce0ba049d94c030280f9fe9cd0deb5b Form: input info
+907494428217b7bce7fef5eb29c26143d90185bf Tags: content as arrays
+5524116d1dcb92c003b572ae7e3de7a814f0e7fa Merge branch 'tags'
+a45191f1ee123c5e61a4a2015addd29f3641217f Form styles
+dc4e1f4636e86665e5742de5c7407bc29e1692ed Form: use tags
+4149fbce9c8fdbaff96c41737bbfc95282276db9 Merge branch 'tags'
+adeaf5b8d44a1088b6e66f9d1a1b7bd7a6759898 Tags: switch output behaviour
+1b32531caf7c9768d45158eb1b8e1414c598385c Merge branch 'tags'
+c31852bb01cced9d496c2b8bdf875c5ade5fe7c9 Tags: switch output behaviour
+b1fa9cc74b12001584049d29cd464e9b54de3d91 Tags: noclose & alias html_attrs
+f6484eae98eaffa3b9ed3c390f3ceace18ad9f5d Merge branch 'tags'
+bb8b315664c20a5b95d232c8bfa26adeebf46802 Form: use tags
+a0f01070aa283e716f309ac623e3ddb5cd77366c Move form to default format
+a8562c009987b1fc5ccfaa9384117e41270a2287 [fix] Resource scripts
+a5a7bf54cfc32af3aa183786c1628e14f3215044 [fix] System script init
+58f4185ddef35cdcd357228df65fd83606ad8d58 [fix] Tags: tag attributes
+19737dcb4c673d4ca636df76d83cbe4691cc2a02 Tags: doctype, comments
+8ce58a3215d8e0a2d4dfbcbb06f39b66659b9bf2 [fix] Template
+2d36a980269439bb173234aaa121dc993d6f7263 Alias tag class
+11f6b6906f15f12709413cfb03d1456f9d95e6fd Tag class
+0c4de7610adf4c8e3847777b167f82e663b01ff8 Installer: Prepare page init
+50b5a6d487fe4efff171994bc9bd64f2b04645ac Close init
+2e67712845158d0583dccd8a1821f1bbfecc2333 Migration of initial data
+bdcfe1b5fde36a1ba4739ad208fca82e4d42d5ed [fix] Settings: Throwing exceptions
+1b865426c977abb13b69a6204dbd1c6333bf24a6 PHP compatibility
+731a27f3cdbe9356ad1417960a300c50d3a6713d Settings: version
+8813f4d4f3e52b36b7bd35ed370b9a41039c74e1 Resources interface
+39f4b3a0626e8f06f550662b7cb55e8bc253c192 Resources interface
+52dd41cac8ada36c95d6a7c5e088cfb6a377cb9a Functions: read_dir_contents
+f12a2b46f1dc7a112e6fb5be407f05a1e6f52916 Scripts and tools
+dba9f10414d9aec0741caaa37f52d4e61ea8c108 [fix] Santa: browse
+9cb7bad191ec3a4a6d3ac8d83fec3c68d4bcb864 Santas' little helper
+a47b8a59c60f6d7f596612d7d49d4722e8c0af20 Form: Template
+f33cc540076ba6dc34305c1f82eec4d611466b7e Database: simple update
+83f31cc8950d50dc5beb6500edc8a4bfc4a5cc93 [fix] User: namespaces
+27460196ab406a2c499f7b81b09fdc236e3da2b3 [fix] Form: default path
+9d9305ee00679f336b4558962be07df82ad85af7 [fix] Query: assoc
+695b8cf45612448bb9785c208146b0f820991957 [fix] Form: namespaces
+22b3506a3768ee428b626ca68aa3bf50b05f46f0 [fix] User: rights
+97d89130097885e67061f8116269937606801032 Database: fetch assoc
+9df679aba0b34a0ed0cf14e774bfbc7890edbf21 [fix] Icons: namespaces
+90e31f1b108763d315339d2559dce26ee3856689 Remove utils
+38f17b50a55b8226c3aff02eec290374d9ddf03d JSON: rename dist method
+1c8cb34b8eb14a87d3b5b736c49db5a2721cf416 Input: path
+9838ca4ea31e4c1b0a9694fb1b070564f04f8fac Santa: callback for htaccess
+42edc1e3b4b483270af4f3da2ef639014c2ca6a8 .htaccess generator
+624001e6fa0d579eecffd2c9b5ef3efe4bea845c System status: page path
+2e38f34f06ccd8cc9993c0661cddc649c42cc7fd [fix] Error pages
+ee66af47483e5d8a719482f1b1a292b7c7eb1a19 System status
+afa71a8c63e8298b6e24e2c9714c85cc9c8df717 Removed old constants
+495844bf21149d98fd689be7291bb12293a253dd User contact, user info, unsigned
+d626db44b9e6bbedeec7e99f9710a7c26acb25b7 Index - reduction
+03fc76a36a95324e05510f5194c2753b4700c5cb Santa: minor fixes
+284d7673f8843126b1c85c52af6d79eea0b08135 Init: Pre-cli
+63eff533ae45dd3c083ce2799f8b04544b6314a6 [fix] Scripts: class duplicity
+94e786eac04381ac1b0549b97be6be139c9493a7 [fix] CLI: class duplicity
+4bc3db6b6c928b03d24c1f2cb3a1027842e09d7c Revert "[fix] Cli"
+65d723fac6640c227ea6a4cfcff83d157c9aa06b [fix] Santas' Lil' Helper: Class order
+95b1f71c47bb41d4710b5de3c9cfe94c737c3684 [fix] Cli
+88e66f555c9405240f7ed1fa461e7a43325b83df [fix] Santa: output
+3b594ec733c2cdf8dac33383f794eb3176e9fca2 [fix] Functions: read_dir_contents
+0e281dbd803fe56036c68edac08ec458cdd74114 [fix] Santas' Lil' Helper
+7fcd86fa8884a14b2316a2335a937108c1f264f6 [fix] Santas' Lil' Helper
+e2b26bb880ec4bc4f2c9796c2b59c5100640b2f6 [fix] Namespaces
+995b745d0e0c0db2a8532b3d5a3570ccd724b8fd [del] Useless class
+645ff82c72744b7d623ffa2acd44fdaa35158406 [fix] Santas' Lil' Helper
+c902a494361a03c220310d567284c37d8c5ea8d2 [fix] Functions: read_dir_contents
+8c78b31c454ecda7831b58c82bdb3ce35dd5fe30 YaWF: Santa
+8cb975542d93d4e862faa1738a9f7281a93bdfe3 Archive: handling bz2
+8b72780cdd149971a52eb3a27d3a7411ec145b53 Package: internal
+1860e1a086264dd96c8fe3665dc52e8b715b6d9f [fix] Offcom
+ff4052b340fe02fbbe7542c9aa5e49532ee69c77 [fix] Santa: packages
+14e5bd071a0088717d3bc6900c43425e566084e5 YaWF: Santas' Lil' helper
+f6d8ea93103cf579e809b942f2af72d92eb33878 YaWF: Santa
+77cbaa98597eacb76881751e04c3405071b0272a Bug template
+b7cd9a6c9e82b5807786a979893872009a29e8c9 Make: paths
+c6e820112d9188376bf7a9b8b4702aaa4ec5a954 YaFW: Santa
+ced8191c0fb8211807b0dc3c2dd640c86628a8fb Offcom: Request/Response
+d7613e866b9da755bf2dcae27b8086ef26165328 Init: compressed code
+56cd6409b3279267290a07eb2f08661b6f398039 Request handling
+43f931fe94f19eab367392bdca4ec2d88b88f4ac Locales
+8ecbfb2f820d73a6196a1c96940c4a09115791d8 Minor fixes
+8e04257d043c6f398e9cae8fe76ad8b23fcd79d4 Init: compressed code
+6a6a3fe26c69be97f41250716e03605a23d66d26 Rewrite rules
+72e01a8812ad523add6e592d75a037172bc30ce3 YaWF: Santas' lil' helper - code compression
+b3e1f3ec589e2e3ad616802e2e9202cd606fcb62 YaWF: Santa - installing packages
+e3c6d95eac3470053b980b4c4bb2fa22f01fb527 Scripts: make package
+d277e9120d361d0ca673d84a1c1c3df943599576 [fix] Text
+2e06a2b1d543c5edcb265b3dbd23080d3a2da922 YaWF: Santa - downloading packages
+41506c75180a99ed0e9ffac40aa72f4d15664e89 YaWF: Santa
+e3f3245228f019ed90c9ae91951781b32835b4c1 Scripts: gitignore
+4516f7fdbb0235144c8dea23cb0cdfd24d300837 Merge branch 'master' of ssh://github.com/just-paja/yawf
+7d287c425d47c3900c8c132e32b930c43ff8470e Drop dibi
+1936abef6bd65e909fe3a3eb67c8246ec7b06f9d Database interface
+a46ea85dee4ece3270e4631d7ce5b5c190d76775 Scripts from yacms
+7c6a5d248e1d59e68b9b4f60ef547caa36eaf7d8 Gitignore
+a5b7a64eb871f372f99c7aac294121b9f16aa466 Initial commit
+3da6995ac8e55db52d1ce663bafa9b07e24c5387 Initial commit

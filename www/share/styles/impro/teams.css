@@ -41,12 +41,21 @@
 	float:right;
 }
 
+.team_detail .map .playground {
+	width:300px;
+	padding:15px 0 0;
+}
+
+.team_detail .map .playground h3 {
+	margin-bottom:10px;
+}
+
 .team_heading {
 	position:absolute;
 	z-index:5;
 	left:30px;
 	top:240px;
-	width:600px;
+	width:169px;
 }
 
 .team_heading .team_logo {
@@ -55,7 +64,9 @@
 }
 
 .team_heading .name {
-	margin-top:75px;
+	position:absolute;
+	left:185px;
+	top:75px;
 }
 
 .team_heading h1 {

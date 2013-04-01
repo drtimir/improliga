@@ -38,7 +38,7 @@ namespace Godmode
 							$opts = array();
 
 							foreach ($options as $val=>$label) {
-								$opts[l($label)] = $val;
+								$opts[$val] = l($label);
 							}
 
 							$f->input(array(
@@ -65,6 +65,35 @@ namespace Godmode
 
 				$x++;
 			}
+		}
+
+
+		public static function get_attr_options($model, $attr, $def)
+		{
+			$options = array();
+
+			if (isset($def['options'][0]) && $def['options'][0] = 'callback') {
+				$callback = array();
+
+				foreach ($def['options'] as $key=>$callback_part) {
+					if ($key !== 0) {
+						$callback[] = $callback_part;
+					}
+				}
+
+				if (is_callable($callback)) {
+					$options = call_user_func($callback);
+
+				} else throw new \System\Error\Format(sprintf('Invalid callback for options of attribute %s of model %s', $attr, $model));
+
+
+			} else {
+				foreach ($def['options'] as $oid=>$olabel) {
+					$options[$oid] = l($olabel);
+				}
+			}
+
+			return $options;
 		}
 	}
 }

@@ -26,6 +26,7 @@
 
 	"impro_event_name":"Název události",
 	"attr_impro_event_name":"Název události",
+	"attr_impro_event_location":"Místo",
 	"attr_impro_event_capacity":"Divácká kapacita",
 	"attr_impro_event_type":"Typ události",
 	"impro_event_calendar":"Kalendář",

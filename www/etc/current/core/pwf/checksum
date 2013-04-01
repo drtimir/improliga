@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-837e1b52a93e053ad822485adb5c7cf7  lib/include/system.php
+f1041bf9466eaca5cc83f46d1c579839  lib/include/system.php
 0317dc6280735614707cdcb623481d3e  bin/db
-=======
-2a88e80b75bc420486e3e616c5faf3a1  lib/include/system.php
-f758f1bc6435c819be4618c5d4d4e5e4  bin/db
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 3cad760a1417709665962992613df30d  bin/deploy
 d600c65b5a66a29f33267c38443ac2f9  bin/santa
 56a26a702bc4cb609a67754b06a191fc  bin/system
@@ -21,11 +16,7 @@ fae625d624793c0c279898e3ef244a12  etc/default/conf.d/dev.json
 aeb5f773aa595c9addf662bd377c1949  etc/default/conf.d/icons.json
 e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 135a99486da37797b5c0e158c3c35ec8  etc/default/conf.d/offcom.json
-<<<<<<< HEAD
 ace7bfbb1a577c612e9e44b5eb2a957f  etc/default/conf.d/output.json
-=======
-cba0dfb00390c62f2df9eb9afdf455e7  etc/default/conf.d/output.json
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 1107cb35935925edcf1fd1ca88fa67a9  etc/default/conf.d/santa.json
 1574cde42a3af7f658d6d1f9611df539  etc/default/conf.d/security.json
 380fe527cbbaa44c0df7294a5db0f737  etc/default/routes.d/ajax-api.json
@@ -50,15 +41,6 @@ cd3080dc84bff793c79a82a205e6e678  etc/rewrite.d/010-init
 19dadc06da8b56fbd31dff6e7b56d3c8  etc/rewrite.d/060-security
 d271908728164867d07bcae9f4252907  etc/rewrite.d/090-pass
 5b92db83b23338dff7d4eedf6fb2b68a  index.php
-<<<<<<< HEAD
-=======
-2d55fea31ba1977364e856a06a732773  lib/class/database/attr.php
-87de11eb20f6445655d5e30befb8b6c6  lib/class/database/mysqli/column.php
-ee242a50691529c8174fd0633be29097  lib/class/database/mysqli/database.php
-e237b7a98ec7afb2d42a86c56ff7f8cd  lib/class/database/mysqli/table.php
-512f30c0d6816f65f4b3eacd647b6016  lib/class/database/relation.php
-2b3909e88532bebc0b39fb5dac3904a7  lib/class/database/structure.php
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 db97d111fb7e691a39b8a44030341792  lib/common/icon.php
 8b4dec4a995be52ded9da0684e99a2c2  lib/common/resource.php
 098e4f8d2665caa9c5190a2ead6557b5  lib/common/status.php

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+a18937bc59921f1502a4a516a606961db5c869bb Santa, malformed checksum protection
 429a65c29c9547ec752a194653d67bc715704d6f File class
 5361f5b91cb69b04e22f0c0fcf9a2e92510e8050 Directory class
 e3a664c58d3f58b38bf85f16f6ee0fb57dbc28fd Directory class, check
@@ -25,8 +25,6 @@ c83432649f0735b80e0c9d3297a371889e7a082d PDO Structure
 39258a35c7abc3c8f130f0edffed3bfa8dc3d811 PDO Result
 56197caaad78a7e0919336d4bb21ea2743809909 Helpers
 8738cdb1fd167f9c9491ac05e654da49278bdb92 Database, drivers
-=======
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 192c2762a9e57562c9edf9320d8297f96c323fcd [fix] Location, map_html
 db2c749d599fdfc7b65434afa56a91af73c486ae GPS, godmode
 36e103baadd46d8e557363be6cd916561f510da2 RTE, styles update

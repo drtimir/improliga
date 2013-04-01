@@ -21,3 +21,21 @@
 	width:180px;
 	font-weight:bold;
 }
+
+.value ul,
+.value ol {
+	margin:0 0 10px;
+	padding:0 0 0 15px;
+}
+
+.value ul li {
+	list-style:square;
+}
+
+.value p {
+	margin:10px 0;
+}
+
+.model_edit .rte_container {
+	z-index:10;
+}

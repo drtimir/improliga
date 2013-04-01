@@ -52,24 +52,19 @@ foreach ($attrs_list as $attr) {
 		$col = array($attr, System\Model\Attr::get_model_attr_name($model, $attr), 'function');
 	}
 
-	if ($x === 0) {
-		$col[2] = 'link-'.$col[2];
-		$col[3] = $link_cont;
-	}
+	if (isset($col)) {
+		if ($x === 0) {
+			$col[2] = 'link-'.$col[2];
+			$col[3] = $link_cont;
+		}
 
-	$cols[] = $col;
-	$x++;
+		$cols[] = $col;
+		$x++;
+	}
 }
 
 
 $cols[] = array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete'));
-
-
-		//~ array('login', l('godmode_user_login'), 'link', $link_cont),
-		//~ array('get_name', l('godmode_user_name'), 'link-function', $link_cont),
-		//~ array('updated_at', l('godmode_last_login'), 'date'),
-		//~ array('created_at', l('godmode_created_at'), 'date'),
-	//~ );
 
 $this->template($template, array(
 	"cols"      => $cols,

@@ -15,51 +15,34 @@ def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower
 def($attrs_edit, array());
 def($attrs_edit_exclude, array());
 
+
 if ($item = $new ? (new $model()):find($model, $id)) {
-	$attrs = array();
+
 	$x = 0;
-
-	if (empty($attrs_edit)) {
-		$attrs_edit = System\Model\Database::get_model_attr_list($model);
-		$attrs_edit = array_merge($attrs_edit, System\Model\Database::get_location_attrs($model));
-	}
-
-	$banned_attrs = array(System\Model\Database::get_id_col($model), 'created_at', 'updated_at');
 	$inline_has_many = array();
 	$rel_data = array();
 	$rels = array();
+	$attrs = \Godmode\Admin::get_attr_list($item, $attrs_edit, $attrs_edit_exclude);
+	$default = $item->get_data();
 
-	foreach ($attrs_edit as $alias=>$attr) {
-		if (!is_numeric($alias)) {
-			$attr = $alias;
-		}
+	$rel_attrs = \System\Model\Database::get_model_relations($model);
 
-		if ($item->has_attr($attr)) {
-			$def = System\Model\Database::get_attr($model, $attr);
-
-			if ($def[0] != 'password' && !in_array($attr, $banned_attrs) && !in_array($attr, $attrs_edit_exclude) && !\System\Model\Database::is_model_belongs_to_id($model, $attr)) {
-				$attrs[$attr] = $def;
-				$attrs[$attr]['type'] = 'attr';
-			}
-		} elseif (\System\Model\Database::get_rel_type($model, $attr) === 'belongs-to') {
-			$def = \System\Model\Database::get_rel_def($model, $attr);
-			if (\System\Loader::get_link_from_class($def['model']) === 'system_location') {
-				$attrs[$attr] = $def;
-				$attrs[$attr]['type'] = 'belongs-to';
-			}
+	// Add belongs-to data
+	foreach ($rel_attrs as $rel_name=>$rel_def) {
+		if ($rel_def['type'] == \System\Model\Database::REL_BELONGS_TO) {
+			$default[$rel_name] = $item->$rel_name;
 		}
 	}
 
-	$default = $item->get_data();
-
+	// Add relation pick data
 	foreach ($rel_pick as $rel) {
 		if (System\Model\Database::attr_is_rel($model, $rel)) {
 			$default[$rel] = collect_ids($item->$rel->fetch());
 			$rels[$rel] = 'pick';
 		} else throw new System\Error\Format(sprintf('Cannot use picker for "%s". It is not model relation of any kind.', $rel));
 	}
-<<<<<<< HEAD
 
+	// Add relation tab data
 	foreach ($rel_tab as $rel) {
 		if (System\Model\Database::attr_is_rel($model, $rel)) {
 			$rel_data[$rel] = $item->$rel->fetch();
@@ -71,7 +54,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 		"default" => $default,
 		"heading" => $heading,
 		"desc" => $desc,
-		"class" => 'model_edit_'.\System\Loader::get_link_from_class($model),
+		"class" => array('model_edit', 'model_edit_'.\System\Loader::get_link_from_class($model)),
 	));
 
 	if (any($rel_inline) || any($rel_pick) || any($rel_tab)) {
@@ -110,50 +93,6 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			}
 
 			$f->input($input_options);
-=======
-
-	foreach ($rel_tab as $rel) {
-		if (System\Model\Database::attr_is_rel($model, $rel)) {
-			$rel_data[$rel] = $item->$rel->fetch();
-			$rels[$rel] = 'manage';
-		} else throw new System\Error\Format(sprintf('Cannot manage "%s" in tabs. It is not model relation of any kind.', $rel));
-	}
-
-
-	$f = new System\Form(array(
-		"default" => $default,
-		"heading" => $heading,
-		"desc" => $desc,
-		"class" => 'model_edit_'.\System\Loader::get_link_from_class($model),
-	));
-
-	if (any($rel_inline) || any($rel_pick) || any($rel_tab)) {
-		$f->tab(l('godmode_model_basic_attrs'));
-	}
-
-	foreach ($attrs as $attr=>$def) {
-		$required = !(isset($def['is_null']) || isset($def['default']));
-
-		if ($def['type'] === 'attr') {
-			$type = \System\Form::get_field_type($def[0]);
-
-			if ($def[0] === 'bool') {
-				$required = false;
-			}
-
-			if (in_array($attr, array('created_at', 'updated_at'))) {
-				$name = l($attr);
-			} else {
-				$name = System\Model\Attr::get_model_attr_name($model, $attr);
-			}
-
-			$f->input(array(
-				"type"  => $type,
-				"name"  => $attr,
-				"label" => $name,
-				"required" => $required,
-			));
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 		} else {
 			$link = \System\Loader::get_link_from_class($def['model']);
 
@@ -204,8 +143,22 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 	if ($f->passed()) {
 		$p = $f->get_data();
 
+		foreach ($attrs as $attr_name=>$attr_def) {
+			if ($attr_def['type'] == 'belongs-to') {
+				$idc = \System\Model\Database::get_attr_name_from_belongs_to_rel($attr_name, \System\Model\Database::get_rel_def($model, $attr_name));
+
+				if (is_object($p[$attr_name])) {
+					$p[$attr_name]->save();
+					$item->$idc = $p[$attr_name]->id;
+				} else {
+					$item->$idc = null;
+				}
+			}
+		}
+
 		$rel_data = array();
 		$item->update_attrs($p);
+		$item->updated_at = new Datetime();
 		$item->save();
 
 		/* Relation name => Relation edit method */

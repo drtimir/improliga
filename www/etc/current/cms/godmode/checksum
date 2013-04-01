@@ -6,22 +6,15 @@ b460e3b367fb455a7043948678c2489f  etc/init.d/godmode.php
 39ab6e9d494772bb708d3de26fe63842  etc/locales/en_US/messages.d/godmode.json
 c2bad69604bc8c3e700c26e5c5e49cc3  etc/rewrite.d/055-godmode
 c907064e0efd7af30b79f0537996aae7  godmode.php
-<<<<<<< HEAD
+2ecf2faf14ba25530c3daa8a57434cb8  lib/class/godmode/admin.php
 54fae05282f21d8508ec356e24f65a2d  lib/class/godmode/form.php
-=======
-324f57d422e7b2e8e89d16ea38fa2b9e  lib/class/godmode/form.php
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 fbee99e0ab643343f9933095ddcecf33  lib/class/godmode/icon.php
 6b3ba9342877cd82caf3ddfca906a3c9  lib/class/godmode/menu.php
 f7f9fdddf2b81b7c267da880e66273c0  lib/class/godmode/router.php
 9f9a3631c2af3928a2940b546010c36e  lib/module/godmode/admin/delete.php
 a1b3fd373cdef89e36bc91235746f566  lib/module/godmode/admin/detail.php
-<<<<<<< HEAD
-fb582a8a55c9af1e5dc151090d1557b6  lib/module/godmode/admin/edit.php
-=======
-91e1c5fb2546a843dc958a9eff5d02a9  lib/module/godmode/admin/edit.php
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
-9d4f6552c6a406a23b69321f3672676b  lib/module/godmode/admin/list.php
+d03757392924c37862ddc82b1d13a22a  lib/module/godmode/admin/edit.php
+e20e2cc98475df4fa8e249dc1cc263e1  lib/module/godmode/admin/list.php
 f80d4bab5eaf2218832cfc8b1fa6e63e  lib/module/godmode/login.php
 1730fbefa89db82ad3fd624796e918b8  lib/module/godmode/logout.php
 0e0f978344bf05a240df349c9a845493  lib/module/godmode/user/edit_passwd.php
@@ -30,11 +23,7 @@ a9d3f16e19505a7a651fb980817b4436  lib/module/godmode/user/perm_list.php
 828f4efa1bf58cf556fb83a8a8898c57  lib/module/godmode/user/perm_module.php
 779cb25c7bc568dc4d21f94ea923a794  lib/module/godmode/window/menu.php
 7e327e5da15986cfd206ee7227e48c2c  lib/module/godmode/window/message_pack.php
-<<<<<<< HEAD
-7a2a8ff33d7073c0e04ccf2b847eec2f  lib/template/partial/godmode/admin/detail.php
-=======
-c343449871ebd884cc2da5b90f37b1ed  lib/template/partial/godmode/admin/detail.php
->>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
+621fbf23a78f66b057c35b994883e2d5  lib/template/partial/godmode/admin/detail.php
 d9131c1784063b15553338295c8f69d1  lib/template/partial/godmode/item-list.php
 94b5f0ab6edcd9860223e36abc275526  lib/template/partial/godmode/location/detail.php
 13d6f106bf00572960cdb976675de0e7  lib/template/partial/godmode/text/detail.php
@@ -160,7 +149,7 @@ e56f2fcb32bac374b4178afbbe849643  share/styles/pwf/god/forms.css
 d41d8cd98f00b204e9800998ecf8427e  share/styles/pwf/god/layout.css
 53b8bd467162fba49652783b7540d968  share/styles/pwf/god/login.css
 a0eb65bea3163d59095a23708acc4c21  share/styles/pwf/god/main_menu.css
-b80037e529b5c37b76ed392708afb395  share/styles/pwf/god/objects.css
+1db99fc8705e9e6935adbf1013e48cdb  share/styles/pwf/god/objects.css
 7eb532d449a1fece178ff858f4d67bee  share/styles/pwf/god/paginator.css
 8689c33ab1f7a9d2336d2cba7aab5232  share/styles/pwf/god/panels.css
 9dc448c0568e95535e43022529941f16  share/styles/pwf/god/preloader.css

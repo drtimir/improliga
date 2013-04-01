@@ -22,16 +22,8 @@ Tag::div(array("class" => 'admin_detail'));
 			Tag::li(array(
 				"class"   => array('prop', $parity),
 				"content" => array(
-					Tag::span(array(
-						"class"   => 'name',
-						"content" => $name.': ',
-						"output"  => false,
-					)),
-					Tag::span(array(
-						"class"   => 'value',
-						"content" => $value,
-						"output"  => false,
-					)),
+					div('name', $name.': '),
+					div('value', $value),
 				)
 			));
 		}

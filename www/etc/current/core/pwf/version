@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"name":"pwf","project":"Purple Web Framework","version":"0.6.8","branch":"stable","origin":"official"}
+=======
+{"name":"pwf","project":"Purple Web Framework","version":"0.5.81","branch":"dev","origin":"kundolap"}
+>>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1

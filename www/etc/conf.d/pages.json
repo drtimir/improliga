@@ -18,8 +18,7 @@
 				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"heading":"Kalendář",
 				"conds":{"published":true}
-			}],
-			["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}]
+			}]
 		]
 	},
 
@@ -90,6 +89,15 @@
 			}
 		}}
 	},
+
+
+	"kontakty":{"#":{
+		"title":"impro_contacts",
+		"template":["impro/layout", "impro/dual"],
+		"modules":[
+			["system/partial", {"template":"impro/static/contacts", "slot":"left"}]
+		]
+	}},
 
 
 	"udalosti":{

@@ -6,26 +6,6 @@ Tag::div(array("class" => 'event_detail'));
 
 		echo section_heading($event->name);
 
-		Tag::div(array("class" => 'desc'));
-
-			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
-				Tag::div(array("class" => 'participants'));
-					Tag::div(array("class" => 'part home', "content" => array(
-						link_for($event->team_home->name, soprintf($link_team, $event->team_home)),
-					)));
-					Tag::span(array("class" => 'vs', "content" => 'vs'));
-					Tag::div(array("class" => 'part away', "content" => array(
-						link_for($event->team_away->name, soprintf($link_team, $event->team_away)),
-					)));
-				Tag::close('div');
-			}
-
-		Tag::close('div');
-
-		if ($event->desc_short) {
-			Tag::div(array("class" => 'text short', "content" => $event->desc_short));
-		}
-
 
 		$date = '';
 		if (is_null($event->end)) {
@@ -61,6 +41,29 @@ Tag::div(array("class" => 'event_detail'));
 				Tag::li(array("class" => 'icon price', "content" => $content));
 			}
 		Tag::close('ul');
+
+
+
+		if ($event->desc_short) {
+			Tag::div(array("class" => 'text short', "content" => $event->desc_short));
+		}
+
+
+		Tag::div(array("class" => 'desc'));
+
+			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
+				Tag::div(array("class" => 'participants'));
+					Tag::div(array("class" => 'part home', "content" => array(
+						link_for($event->team_home->name, soprintf($link_team, $event->team_home)),
+					)));
+					Tag::span(array("class" => 'vs', "content" => 'vs'));
+					Tag::div(array("class" => 'part away', "content" => array(
+						link_for($event->team_away->name, soprintf($link_team, $event->team_away)),
+					)));
+				Tag::close('div');
+			}
+
+		Tag::close('div');
 
 
 		Tag::div(array("class" => 'text full', "content" => $event->desc_full));

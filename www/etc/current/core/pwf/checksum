@@ -1,4 +1,4 @@
-f1041bf9466eaca5cc83f46d1c579839  lib/include/system.php
+5bc417edbf6821af32e55ac67c30fdae  lib/include/system.php
 0317dc6280735614707cdcb623481d3e  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 d600c65b5a66a29f33267c38443ac2f9  bin/santa
@@ -27,7 +27,7 @@ bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
 3bbc41d66904b57cc5c0f5eacb478b70  etc/init.d/session.php
 7d9a8a1568c93679b6ba29bd3a3296e3  etc/locales/cs_CZ/messages.d/core.json
-acf51a42c2ef07c59487f0c686caf413  etc/locales/cs_CZ/messages.d/dump_bar.json
+096f0106fb680ec8b4270d19802ab1d9  etc/locales/cs_CZ/messages.d/dump_bar.json
 6cd0dace23b8c4cfd253fed812a2a473  etc/locales/cs_CZ/modules.d/date.core.json
 7ac95ee75dec0d50fb230e4a39391cb5  etc/locales/cs_CZ/modules.d/system.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -66,7 +66,7 @@ c44500f84faedd2bcf21a8687f5ccc09  lib/template/partial/system/error/bug.txt.php
 7ffd4145b0b80d7c4f188a746afaa360  lib/template/partial/system/form.php
 439ec95a557bf60f7d8cd55b682385e9  lib/template/partial/system/message.php
 b80a8f7b0f1ca2336e6a4eb9232b0163  lib/template/partial/system/status-full.php
-b347afb146d9fa7d4feb07dba3d26698  lib/template/partial/system/status.html.php
+09ed210b218e1d761211a40f7dd9e211  lib/template/partial/system/status.html.php
 3d6012ce6f207d66725e16d9a3659517  lib/template/partial/system/status.txt.php
 98961a527515e5890793eba9c9594f51  lib/template/pwf/default.html.php
 bbdd1456446d48d55003f87223dfcf1c  lib/template/pwf/errors/fatal.html.php

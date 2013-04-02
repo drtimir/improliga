@@ -34,52 +34,28 @@ Tag::div(array("class" => 'events'));
 				$ts[] = Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name));
 			}
 
-			$location = Tag::div(array(
-				"class" => 'ts_location',
-				"output"  => false,
-				"content" => $ts,
-			));
-
+			$location = div('ts_location', $ts);
 			$match = '';
 
 			if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
-				$match = Tag::div(array(
-					"class"   => 'match_participants',
-					"output"  => false,
-					"content" => array(
-						Tag::a(array(
-							"href"    => soprintf($link_team, $event->team_home),
-							"content" => $event->team_home->name,
-							"output"  => false,
-						)),
-						Tag::span(array("output" => false, "content" => ' vs ', 'class' => 'versus')),
-						Tag::a(array(
-							"href"    => soprintf($link_team, $event->team_away),
-							"content" => $event->team_away->name,
-							"output"  => false,
-						)),
-					),
+				$match = div('match_participants', array(
+					link_for($event->team_home->name, soprintf($link_team, $event->team_home)),
+					div('versus', ' vs '),
+					link_for($event->team_away->name, soprintf($link_team, $event->team_away)),
 				));
 			}
 
-			$html_event[] = Tag::div(array(
-				"class"   => 'desc',
-				"output"  => false,
-				"content" => array(
-					Tag::a(array(
-						"class"   => 'name',
-						"content" => $event->name,
-						"href"    => soprintf($link_cont, $event),
-						"output"  => false,
-					)),
-					$match,
-					$location,
-					Tag::div(array(
-						"class"   => 'text',
-						"content" => $event->desc_short,
-						"output"  => false,
-					)),
-				)
+
+			$html_event[] = div('desc', array(
+				Tag::a(array(
+					"class"   => 'name',
+					"output"  => false,
+					"content" => $event->name,
+					"href"    => soprintf($link_cont, $event),
+				)),
+				$match,
+				$location,
+				$show_desc ? div('text', $event->desc_short):'',
 			));
 
 			$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));
@@ -97,5 +73,5 @@ Tag::div(array("class" => 'events'));
 		Tag::p(array("class" => 'info', "content" => l('impro_event_lists_empty')));
 	}
 
-Tag::close('div');
+close('div');
 

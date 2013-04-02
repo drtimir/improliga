@@ -9,6 +9,7 @@ def($link_book, '/');
 def($link_month, '/events/list/{year}-{month}/');
 def($link_day, '/events/list/{year}-{month}/#day_{day}');
 def($link_team, '/team/{id_impro_team}/');
+def($show_desc, true);
 def($thumb_width, 100);
 def($thumb_height, 100);
 def($per_page, 5);
@@ -27,6 +28,7 @@ $this->template($template, array(
 	"link_day"     => $link_day,
 	"link_team"    => $link_team,
 	"link_month"   => $link_month,
+	"show_desc"    => $show_desc,
 	"thumb_width"  => $thumb_width,
 	"thumb_height" => $thumb_height,
 	"controls"     => false,

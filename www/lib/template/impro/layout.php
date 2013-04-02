@@ -9,6 +9,7 @@ Tag::html();
 		content_for('styles', 'impro/layout/homepage');
 		content_for('styles', 'impro/events');
 		content_for('styles', 'impro/teams');
+		content_for('styles', 'impro/about');
 		echo content_from('head');
 	Tag::close('head');
 

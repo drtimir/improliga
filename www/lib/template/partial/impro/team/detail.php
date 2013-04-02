@@ -3,7 +3,7 @@
 Tag::div(array("class" => 'team_detail'));
 
 	$hq = $team->hq ? Stag::div(array("class" => 'map', "content" => array(
-		$team->hq->map_html(330, 300),
+		$team->hq->map_html(300, 300),
 		Stag::div(array(
 			"class" => 'playground',
 			"content" => array(
@@ -17,32 +17,18 @@ Tag::div(array("class" => 'team_detail'));
 		)),
 	))):'';
 
-	Tag::div(array(
-		"class"   => 'header',
-		"content" => array(
-			Stag::div(array(
-				"class"   => 'team_heading',
-				"content" => array(
-					Stag::div(array(
-						"class" => 'team_logo',
-						"content" => link_for(Stag::img(array("src" => $team->logo->thumb(165, 140))), $team->logo->get_path()),
-					)),
-
-					Stag::div(array(
-						"class" => 'name',
-						"content" => array(
-							section_heading($team->name),
-							heading($team->name_full),
-						)
-					))
-				)
-			)),
-			Stag::div(array("class" => 'img', "content" =>
-				link_for(Stag::img(array("src" => $team->photo->thumb(600, 300), "alt" => $team->get_name())), $team->photo->get_path())
-			)),
-			$hq,
-			Stag::div(array("class" => 'cleaner', 'close' => true)),
-	)));
+	echo div('header', array(
+		div('team_heading', array(
+			div('team_logo', link_for(Stag::img(array("src" => $team->logo->thumb(188, 165))), $team->logo->get_path())),
+			div('name', array(
+				section_heading($team->name),
+				heading($team->name_full),
+			))
+		)),
+		div('img', link_for(Stag::img(array("src" => $team->photo->thumb(600, 300), "alt" => $team->get_name())), $team->photo->get_path())),
+		$hq,
+		Stag::div(array("class" => 'cleaner', 'close' => true)),
+	));
 
 	$info = array();
 
@@ -54,7 +40,19 @@ Tag::div(array("class" => 'team_detail'));
 		$info[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
 	}
 
-	Tag::ul(array("content" => $info, "class" => 'info plain team_info'));
-	Tag::div(array("class" => 'team_desc desc', "content" => $team->about));
+	echo div('left', array(
+		Stag::ul(array("content" => $info, "class" => 'info plain team_info')),
+		div('team_desc desc', $team->about),
+	));
 
-Tag::close('div');
+	echo div('right');
+		echo heading(l('impro_team_events'));
+
+		//~ if (any($events)) {
+			slot('events');
+		//~ }
+
+	close('div');
+
+	Tag::div(array("class" => 'cleaner', 'close' => true));
+close('div');

@@ -1,3 +1,10 @@
+7f30ce2b7172eadc50a89781567aca503af7c808 Merge branch 'master' of ssh://github.com/just-paja/pwf
+0435ae113e28d6991c176664ba9b08e9cb2cf627 Dump bar, templates
+626fed178014f1461ffc91a542be1566c537e330 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+f2bb87c8aa284be1507d261a03f09bf8cb30ffbc Merge branch 'master' of ssh://github.com/just-paja/pwf
+1c8d9f274131b00d25b0f32b57df14679a317a67 [fix] Module class, slots
+c94be3aa15b35abcffe72b53fbdb8680cd6a551a [fix] Santa, deprecated files
+1fd94337e789845df67139e44b6538e420f16d94 [fix] Santa
 a18937bc59921f1502a4a516a606961db5c869bb Santa, malformed checksum protection
 429a65c29c9547ec752a194653d67bc715704d6f File class
 5361f5b91cb69b04e22f0c0fcf9a2e92510e8050 Directory class

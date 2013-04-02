@@ -34,7 +34,7 @@
 
 
 .team_detail .header {
-	height:400px;
+	height:425px;
 	position:relative;
 }
 
@@ -70,7 +70,7 @@
 
 .team_heading .name {
 	position:absolute;
-	left:185px;
+	left:210px;
 	top:75px;
 }
 
@@ -83,8 +83,7 @@
 }
 
 .team_desc {
-	width:600px;
-	line-height:18px;
+	line-height:21px;
 }
 
 .team_info .city { background-image:url(/share/icons/impro/16/objects/city.png); }
@@ -101,4 +100,26 @@
 	display:block;
 	color:#888;
 	margin:5px 0;
+}
+
+.team_detail .left,
+.team_detail .right
+{
+	width:550px;
+	float:left;
+}
+
+.team_detail .right
+{
+	float:right;
+	width:300px;
+}
+
+.team_detail .right h3 {
+	margin-bottom:10px;
+}
+
+
+.team_detail .right .events .desc {
+	width:170px;
 }

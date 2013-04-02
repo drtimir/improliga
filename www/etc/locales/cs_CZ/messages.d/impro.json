@@ -78,6 +78,7 @@
 	"attr_impro_event_price_student":"Studentské vstupné",
 	"impro_event_price_value":"Vstupné: %s Kč",
 	"impro_event_price_value_both":"Vstupné: %s Kč, Studenti: %s Kč",
+	"impro_event_lists_empty":"Žádné události",
 
 	"impro_event_players_home_owner":"Hráči",
 	"impro_event_players_home":"Domácí",
@@ -185,6 +186,7 @@
 	"impro_team_member_trainer":"Trenér",
 	"impro_team_member_player":"Hráč",
 	"impro_team_member_fan":"Fanoušek",
+	"impro_team_events":"Události týmu",
 
 	"impro_user_settings":"Nastavení profilu",
 	"impro_user_avatar":"Avatar",

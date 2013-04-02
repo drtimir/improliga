@@ -228,3 +228,7 @@
 .calendar .day-events .day-head:hover {
 	background:#B82429;
 }
+
+.versus {
+	display:inline;
+}

@@ -105,14 +105,15 @@
 .team_detail .left,
 .team_detail .right
 {
-	width:550px;
+	width:490px;
 	float:left;
 }
 
 .team_detail .right
 {
 	float:right;
-	width:300px;
+	width:375px;
+	padding-top:25px;
 }
 
 .team_detail .right h3 {
@@ -121,5 +122,5 @@
 
 
 .team_detail .right .events .desc {
-	width:170px;
+	width:210px;
 }

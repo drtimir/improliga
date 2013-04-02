@@ -11,6 +11,11 @@ Tag::html();
 		content_for('styles', 'impro/teams');
 		content_for('styles', 'impro/about');
 		echo content_from('head');
+
+		?>
+		<link rel="icon" type="image/ico" href="/favicon.ico">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<?
 	Tag::close('head');
 
 	Tag::body();

@@ -1,23 +1,20 @@
 <?
 
-Tag::div(array("class" => 'page-block'));
+echo div(array('page-block', 'homepage'));
 
-	Tag::div(array("class" => array('block', 'left')));
+	echo div(array('block', 'left'));
 		slot('left');
-	Tag::close('div');
+	close('div');
 
-	Tag::div(array("class" => array('block', 'right')));
+	echo div(array('block', 'right'));
 		slot('right');
-	Tag::close('div');
+	close('div');
 
 	Tag::span(array("class" => 'cleaner', "close" => true));
-	Tag::div(array("class" => array('block', 'left')));
-		slot('events_left');
-	Tag::close('div');
+	echo div('block');
+		slot('events');
+	close('div');
 
-	Tag::div(array("class" => array('block', 'right')));
-		slot('events_right');
-	Tag::close('div');
 
 	Tag::span(array("class" => 'cleaner', "close" => true));
-Tag::close('div');
+close('div');

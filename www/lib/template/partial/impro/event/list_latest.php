@@ -18,7 +18,7 @@ Tag::div(array("class" => 'events'));
 				"href"    => soprintf($link_cont, $event),
 				"content" => Tag::img(array(
 					"output" => false,
-					"src"    => $event->image->thumb(100, 100),
+					"src"    => $event->image->thumb($thumb_width, $thumb_height),
 					"alt"    => $event->name,
 				)),
 			));
@@ -90,6 +90,8 @@ Tag::div(array("class" => 'events'));
 			"class"   => 'plain event_list latest',
 			"content" => $html_events,
 		));
+
+		Tag::span(array("class" => 'cleaner', "close" => true));
 
 	} else {
 		Tag::p(array("class" => 'info', "content" => l('impro_event_lists_empty')));

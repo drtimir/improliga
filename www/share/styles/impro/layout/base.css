@@ -5,41 +5,24 @@
 	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
 }
 @font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans';
+	font-family: 'Oswald';
 	font-style: normal;
 	font-weight: 700;
-	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzBa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+	src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/dI-qzxlKVQA6TUC5RKSb3z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
+
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'biolinum';
 	font-style: normal;
-	font-weight: 800;
-	src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hha1RVmPjeKy21_GQJaLlJI.woff) format('woff');
-}
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Oswald Light'), local('Oswald-Light'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/l1cOQ90roY9yC7voEhngDD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/dI-qzxlKVQA6TUC5RKSb3z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+	font-weight: 700;
+	src: local('Linux Biolinum'), local('Linux-Biolinum'), url(/share/fonts/biolinum/regular.woff) format('woff');
 }
 
 
 
 body,html {
-	font-family:'Open Sans', Arial;
-	font-size:14px;
+	font-family:'biolinum', Arial;
+	font-size:18px;
 	padding:0;
 	margin:0;
 }
@@ -60,6 +43,11 @@ body {
 h1,h2,h3,h4 {
 	margin-top:0;
 	font-family:'Oswald', 'Arial', _sans;
+	font-weight:bold;
+}
+
+h1 {
+	font-size:32px;
 }
 
 a img {
@@ -98,35 +86,64 @@ a:hover img {
 .top .bg img {
 	display:block;
 	width:100%;
+	max-width:1300px;
+	margin:0 auto;
 }
 
+
 header {
+	position:relative;
+	min-width:1000px;
+}
+
+header .inner {
 	box-shadow:0 0 25px rgba(0,0,0,0.15);
-	background:#333;
-	border-bottom:1px solid #111;
+	background:url(/share/pixmaps/layout/header-bg.png) left top repeat-x;
 	position:relative;
 	z-index:3;
+	height:150px;
 	margin-bottom:0;
-	border-bottom:1px solid #e6cd4c;
-	border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+
+header .header-bottom {
+	background:url(/share/pixmaps/layout/header-bottom.png) center top no-repeat;
+	height:70px;
+	width:100%;
+	margin:0;
+	position:absolute;
+	bottom:0px;
+	z-index:10;
 }
 
 header .container {
-	padding:10px 0 0;
-	height:56px;
+	padding:0;
+	height:90px;
+	position:relative;
+	z-index:11;
 }
 
 header .logo {
 	display:block;
-	width:338px;
-	height:100px;
-	background:url(/share/pixmaps/logo.png) left top no-repeat;
+	width:225px;
+	height:180px;
+	background:url(/share/pixmaps/layout/logo.png) left top no-repeat;
+	margin:0 auto;
 }
 
 header .logo a {
 	width:338px;
 	height:100px;
 	display:block;
+}
+
+header .logo-label {
+	position:absolute;
+	left:10px;
+	top:15px;
+	width:222px;
+	height:37px;
+	background:url(/share/pixmaps/layout/logo-label.png);
 }
 
 header .logo .text {
@@ -142,8 +159,10 @@ header .main, header .main li {
 header .main {
 	position:absolute;
 	bottom:0px;
-	left:125px;
 }
+
+header .main.left { left:120px; }
+header .main.right { left:600px; }
 
 header .main li {
 	display:inline-block;
@@ -152,17 +171,16 @@ header .main li {
 
 header .main li a {
 	display:block;
-	padding:5px 10px;
-	font-size:18px;
+	padding:3px 11px 4px;
+	font-size:22px;
 	text-decoration:none;
 	font-weight:bold;
 	color:#fff;
-
+	border-radius:5px;
 }
 
-header .main li .link-selected {
-	color:#B82429;
-}
+header .main li a:hover { background-color:#666 }
+header .main li .link-selected { background-color:#c12630 }
 
 footer {
 	background:#333;
@@ -174,13 +192,9 @@ footer .container {
 	padding-top:10px;
 }
 
-h1,h2,h3,h4 {
-	margin-top:0;
-}
-
 #content {
 	margin:0;
-	padding:60px 0 20px;
+	padding:0 0 20px;
 	border-bottom:1px solid #333;
 	box-shadow:0 0 25px rgba(0,0,0,0.15);
 	position:relative;
@@ -197,7 +211,7 @@ h1,h2,h3,h4 {
 }
 
 .block {
-	padding:20px;
+	padding:20px 30px;
 	background:rgba(0,0,0,0.85);
 	border:1px solid rgba(255,255,255,0.2);
 	border-radius:15px;
@@ -206,7 +220,6 @@ h1,h2,h3,h4 {
 }
 
 .block p {
-	font-size:16px;
 }
 
 .block.events {
@@ -221,6 +234,10 @@ h1,h2,h3,h4 {
 {
 	float:left;
 	width:430px;
+}
+
+.block.right {
+	float:right;
 }
 
 .block.left_big {

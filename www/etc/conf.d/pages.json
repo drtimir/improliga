@@ -5,11 +5,13 @@
 		"modules":[
 			["system/text/detail", {"slot":"left", "id":1}],
 			["impro/event/latest", {
-				"slot":"events_left",
+				"slot":"events",
 				"link_cont":"/udalosti/{seoname}/",
 				"link_team":"/tymy/{seoname}/",
 				"conds":{"published":true},
-				"per_page":3
+				"thumb_width":216,
+				"thumb_height":165,
+				"per_page":4
 			}],
 			["impro/event/calendar", {
 				"slot":"right",

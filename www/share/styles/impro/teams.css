@@ -9,7 +9,7 @@
 
 .team_list li {
 	display:block;
-	width:479px;
+	width:460px;
 	float:left;
 	margin-bottom:10px;
 }
@@ -17,14 +17,19 @@
 .team_list img {
 	display:block;
 	float:left;
-	width:120px;
-	height:80px;
+	width:118px;
+	height:100px;
 	margin-right:10px;
 }
 
 .team_list .desc {
 	float:left;
-	width:345px;
+	width:325px;
+	font-size:16px;
+}
+
+.team_list .desc strong a {
+	font-size:18px;
 }
 
 

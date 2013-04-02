@@ -6,6 +6,7 @@ Tag::html();
 		content_for('styles', 'pwf/calendar');
 		content_for('styles', 'impro/layout/base');
 		content_for('styles', 'impro/layout/footer');
+		content_for('styles', 'impro/layout/homepage');
 		content_for('styles', 'impro/events');
 		content_for('styles', 'impro/teams');
 		echo content_from('head');
@@ -14,23 +15,33 @@ Tag::html();
 	Tag::body();
 
 		Tag::header();
-			Tag::div(array("class" => 'container'));
-				Tag::div(array("class" => 'logo', "content" =>
-					link_for(Stag::strong(array("class" => 'hidden text', "content" => l('impro_name'))), '/')
-				));
+			echo div('inner');
+				echo div('container');
+					echo div('logo', link_for(Stag::strong(array("class" => 'hidden text', "content" => l('impro_name'))), '/'));
+					echo div('logo-label', link_for(Stag::strong(array("class" => 'hidden text', "content" => l('impro_name'))), '/'));
 
-				Tag::menu(array("class" => 'plain main'));
-					Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
-					Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
-					Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
-					Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
-				Tag::close('menu');
+					Tag::menu(array("class" => 'plain main left'));
+						Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
+						Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
+						Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
+					Tag::close('menu');
+
+					Tag::menu(array("class" => 'plain main right'));
+						Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
+						Tag::li(array("content" => link_for(l('impro_contact'), '/kontakty/')));
+					Tag::close('menu');
+
+
+
+				Tag::close('div');
+				echo div('header-bottom');
 			Tag::close('div');
+
 		Tag::close('header');
 
 		Tag::div(array("class" => 'top'));
 			Tag::div(array("class" => 'bg', "content" => Tag::img(array(
-				"src" => '/share/pixmaps/impro/bg.jpg',
+				"src" => '/share/pixmaps/layout/background.jpg',
 				"alt" => 'background',
 				"output" => false,
 			))));

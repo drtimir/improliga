@@ -69,7 +69,7 @@ Tag::div(array("class" => 'event_detail'));
 		Tag::div(array("class" => 'text full', "content" => $event->desc_full));
 
 		if ($event->location) {
-			echo $event->location->map_html($col_width, round($col_width/2));
+			echo $event->location->map_html(460, round($col_width/1.5));
 		}
 
 	Tag::close('div');

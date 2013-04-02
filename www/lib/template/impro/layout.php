@@ -31,8 +31,6 @@ Tag::html();
 						Tag::li(array("content" => link_for(l('impro_contact'), '/kontakty/')));
 					Tag::close('menu');
 
-
-
 				Tag::close('div');
 				echo div('header-bottom');
 			Tag::close('div');
@@ -57,20 +55,31 @@ Tag::html();
 		Tag::footer();
 			Tag::div(array("class" => 'container'));
 				Tag::div(array("class" => 'dynamic'));
-					Tag::div(array("class" => 'contact'));
-						echo section_heading(l('impro_contact'), 3);
-						Tag::address(array("content" => l('impro_address')));
-						echo link_for(l('impro_more_contacts'), '/kontakty/');
-					Tag::close('div');
-
 					Tag::div(array("class" => 'partners'));
 						echo section_heading(l('impro_partners'), 3);
 					Tag::close('div');
 					Tag::span(array("class" => 'cleaner', "close" => true));
 				Tag::close('div');
 
-				Tag::div(array("class" => 'system', "content" => t('impro_credits', System\Output::introduce())));
-			Tag::close('div');
-		Tag::close('footer');
-	Tag::close('body');
-Tag::close('html');
+
+				echo div('system');
+					echo div('left');
+						Tag::menu(array("class" => 'plain main'));
+							Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
+							Tag::li(array("content" => link_for(l('impro_menu_intranet'), '/intranet/')));
+							Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
+							Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
+							Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
+							Tag::li(array("content" => link_for(l('impro_contact'), '/kontakty/')));
+						close('menu');
+					close('div');
+
+					echo div('right');
+						echo div('credits', t('impro_credits', System\Output::introduce()));
+					close('div');
+					Tag::span(array("class" => 'cleaner', "close" => true));
+				close('div');
+			close('div');
+		close('footer');
+	close('body');
+close('html');

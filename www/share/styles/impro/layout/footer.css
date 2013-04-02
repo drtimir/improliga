@@ -1,3 +1,19 @@
+footer {
+	background:#333;
+	padding:0;
+	display:block;
+	opacity:.5;
+	border-top:1px solid #666;
+}
+
+footer:hover {
+	opacity:1;
+}
+
+footer .container {
+	padding-top:10px;
+}
+
 footer h3 {
 	margin:0 0 7px;
 	padding:0;
@@ -20,14 +36,39 @@ footer .contact address {
 }
 
 footer .partners {
-	float:right;
-	width:700px;
+	float:left;
 }
 
 footer .system {
-	border-top:1px solid #aaa;
+	border-top:1px solid #666;
 	clear:both;
 	padding:7px 0 10px;
 	color:#999;
 	font-size:13px;
+}
+
+footer .system .left {
+	float:left;
+	width:400px;
+}
+
+footer .system .left menu li {
+	display:inline-block;
+	margin:0 10px 0 0;
+	padding:0 0 0 10px;
+	border-left:1px solid #666;
+}
+
+footer .system .left menu li:first-child {
+	border:none;
+	padding:0
+}
+
+footer .system .left menu li a {
+	color:#999;
+}
+
+footer .system .right {
+	float:right;
+	width:200px;
 }

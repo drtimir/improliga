@@ -58,6 +58,59 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			$rels[$rel] = 'pick';
 		} else throw new System\Error\Format(sprintf('Cannot use picker for "%s". It is not model relation of any kind.', $rel));
 	}
+<<<<<<< HEAD
+
+	foreach ($rel_tab as $rel) {
+		if (System\Model\Database::attr_is_rel($model, $rel)) {
+			$rel_data[$rel] = $item->$rel->fetch();
+			$rels[$rel] = 'manage';
+		} else throw new System\Error\Format(sprintf('Cannot manage "%s" in tabs. It is not model relation of any kind.', $rel));
+	}
+
+	$f = new System\Form(array(
+		"default" => $default,
+		"heading" => $heading,
+		"desc" => $desc,
+		"class" => 'model_edit_'.\System\Loader::get_link_from_class($model),
+	));
+
+	if (any($rel_inline) || any($rel_pick) || any($rel_tab)) {
+		$f->tab(l('godmode_model_basic_attrs'));
+	}
+
+	foreach ($attrs as $attr=>$def) {
+		$required = !(isset($def['is_null']) || isset($def['default']));
+
+		if ($def['type'] === 'attr') {
+			$type = \System\Form::get_field_type($def[0]);
+
+			if ($def[0] === 'bool') {
+				$required = false;
+			}
+
+			if (in_array($attr, array('created_at', 'updated_at'))) {
+				$name = l($attr);
+			} else {
+				$name = System\Model\Attr::get_model_attr_name($model, $attr);
+			}
+
+			$input_options = array(
+				"type"  => $type,
+				"name"  => $attr,
+				"label" => $name,
+				"required" => $required,
+			);
+
+			if (isset($def['options'])) {
+				$input_options['options'] = \Godmode\Form::get_attr_options($model, $attr, $def);
+
+				if (any($input_options['options'])) {
+					$input_options['type'] = 'select';
+				}
+			}
+
+			$f->input($input_options);
+=======
 
 	foreach ($rel_tab as $rel) {
 		if (System\Model\Database::attr_is_rel($model, $rel)) {
@@ -100,6 +153,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 				"label" => $name,
 				"required" => $required,
 			));
+>>>>>>> e750f4fe90bfea916e6458655e718d28fab422b1
 		} else {
 			$link = \System\Loader::get_link_from_class($def['model']);
 

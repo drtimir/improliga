@@ -20,7 +20,7 @@ namespace Impro
 		const ID_SETUP_STATUS_NOT_NEEDED = 2;
 
 		protected static $attrs = array(
-			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW),
+			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW, "options" => array('callback', '\Impro\Event\Type', 'get_all')),
 			"name"          => array('varchar'),
 			"image"         => array('image'),
 			"desc_short"    => array('text', "default" => ''),

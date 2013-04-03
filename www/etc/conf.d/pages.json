@@ -35,6 +35,24 @@
 			]
 		},
 
+		"fauly":{
+			"#":{
+				"title":"Fauly",
+				"modules":[
+					["impro/foul/list", {"slot":"right"}]
+				]
+			},
+
+			"*":{
+				"#":{
+					"modules":[
+						["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
+						["impro/foul/list", {"slot":"right"}]
+					]
+				}
+			}
+		},
+
 		"*":{
 			"#":{
 				"title":"impro_article",

@@ -61,11 +61,14 @@ Tag::html();
 		Tag::footer();
 			Tag::div(array("class" => 'container'));
 				Tag::div(array("class" => 'dynamic'));
-					Tag::div(array("class" => 'partners'));
+					echo div('social', array(
+						icon_for('impro/social/facebook', 32, 'http://www.facebook.com/improligacz', 'Improliga na facebooku')
+					));
+					echo div(array("class" => 'partners'));
 						echo section_heading(l('impro_partners'), 3);
-					Tag::close('div');
+					close('div');
 					Tag::span(array("class" => 'cleaner', "close" => true));
-				Tag::close('div');
+				close('div');
 
 
 				echo div('system');

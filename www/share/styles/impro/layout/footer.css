@@ -35,8 +35,14 @@ footer .contact address {
 	margin-bottom:5px;
 }
 
+footer .social {
+	float:left;
+	width:64px;
+}
+
 footer .partners {
 	float:left;
+	width:600px;
 }
 
 footer .system {

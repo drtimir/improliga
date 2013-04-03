@@ -1,12 +1,11 @@
-5bc417edbf6821af32e55ac67c30fdae  lib/include/system.php
-0317dc6280735614707cdcb623481d3e  bin/db
+c1c6b41bf1d478185f070307de322e56  lib/include/system.php
+3e58c29b7159501088b28f0cc335dcb9  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 d600c65b5a66a29f33267c38443ac2f9  bin/santa
 56a26a702bc4cb609a67754b06a191fc  bin/system
 22864653de8e84d5f52aec88232b18e2  doc/INSTALL
 d32239bcb673463ab874e80d47fae504  doc/LICENSE
 d41d8cd98f00b204e9800998ecf8427e  etc/conf.d/.repo_fix
-97db8f77c0bc59495bc53847b0684706  etc/database/data.d/users.json
 d41d8cd98f00b204e9800998ecf8427e  etc/database/migrations.d/.repo_fix
 54e00f8fd3bdd057af6cc14b2d8f1629  etc/default/conf.d/cache.json
 07602d616a5e819618d2829aec5a761e  etc/default/conf.d/database.json
@@ -27,7 +26,7 @@ bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
 3bbc41d66904b57cc5c0f5eacb478b70  etc/init.d/session.php
 7d9a8a1568c93679b6ba29bd3a3296e3  etc/locales/cs_CZ/messages.d/core.json
-096f0106fb680ec8b4270d19802ab1d9  etc/locales/cs_CZ/messages.d/dump_bar.json
+9d62f39e0e8451ae6b6cae7706b6e93e  etc/locales/cs_CZ/messages.d/dump_bar.json
 6cd0dace23b8c4cfd253fed812a2a473  etc/locales/cs_CZ/modules.d/date.core.json
 7ac95ee75dec0d50fb230e4a39391cb5  etc/locales/cs_CZ/modules.d/system.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -66,7 +65,7 @@ c44500f84faedd2bcf21a8687f5ccc09  lib/template/partial/system/error/bug.txt.php
 7ffd4145b0b80d7c4f188a746afaa360  lib/template/partial/system/form.php
 439ec95a557bf60f7d8cd55b682385e9  lib/template/partial/system/message.php
 b80a8f7b0f1ca2336e6a4eb9232b0163  lib/template/partial/system/status-full.php
-09ed210b218e1d761211a40f7dd9e211  lib/template/partial/system/status.html.php
+afe0ccc372e2c66e3a9164f2874ebb1d  lib/template/partial/system/status.html.php
 3d6012ce6f207d66725e16d9a3659517  lib/template/partial/system/status.txt.php
 98961a527515e5890793eba9c9594f51  lib/template/pwf/default.html.php
 bbdd1456446d48d55003f87223dfcf1c  lib/template/pwf/errors/fatal.html.php

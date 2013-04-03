@@ -12,7 +12,7 @@
 		"not_found":{
 			"title":"Stránka nenalezena",
 			"template":["impro/layout"],
-			"partial":"system/error/bug"
+			"partial":"impro/not_found"
 		}
 	}
 }

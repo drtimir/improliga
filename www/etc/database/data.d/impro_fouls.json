@@ -1,0 +1,109 @@
+{
+	"Impro\\Foul":[
+		{
+			"id":1,
+			"name":"Plynulost hry",
+			"points":1,
+			"desc":"<p>Hráči zdržují, blokují nebo nerozvíjejí příběh. Tento faul rozhodčí zapíská také pokud uplyne dlouhá doba od začátku kategorie a nikdo není na scéně.</p>",
+			"visible":true
+		},
+		{
+			"id":2,
+			"name":"Nerespektování rekvizity",
+			"points":1,
+			"desc":"<p>Pokud si hráči na scéně vytvoří imaginární rekvizity, musí je také respektovat. Pokud třeba projdou kusem nábytku, který si na scéně definovali, tak zazní nerespektování rekvizity.</p>",
+			"visible":true
+		},
+		{
+			"id":3,
+			"name":"Přečíslení",
+			"points":1,
+			"desc":"<p>Na scéně je více hráčů než povoluje kategorie.</p><p>Ve většině případů to znamená, že na scéně nesmí být přečísleni hráči počtem lidí z druhého týmu na scéně o více jak jednoho. Některé improvizační kategorie ale jasně definují počet hráčů na scéně.</p>",
+			"visible":true
+		},
+		{
+			"id":4,
+			"name":"Šaškování",
+			"points":1,
+			"desc":"<p>Hráči zbytečně šaškují, aby byli vtipnější a nebo nerespektují rozhodnutí rozhodčího.</p>",
+			"visible":true
+		},
+		{
+			"id":5,
+			"name":"Nepřijatelné chování",
+			"points":1,
+			"desc":"<p>Hráč se zachoval proti pravidlům hry a nebo obecným morálním předpokladům.</p>",
+			"visible":true
+		},
+		{
+			"id":6,
+			"name":"Klišé",
+			"points":1,
+			"desc":"<p>Na zápasech Improligy nikdy neuvidíte nic stejného dvakrát. Pokud hráči použijí nějakou známou frázi nebo jméno, na které jde narazit v médiích, zazní tento faul.</p>",
+			"visible":true
+		},
+		{
+			"id":7,
+			"name":"Vypadnutí z role",
+			"points":1,
+			"desc":"<p>Hráč ztratil kontrolu nad svojí postavou.</p>",
+			"visible":true
+		},
+		{
+			"id":8,
+			"name":"Nejasnost",
+			"points":1,
+			"desc":"<p>Když hráči vytváří situaci, která není jasná.</p>",
+			"visible":true
+		},
+		{
+			"id":9,
+			"name":"Mimo rámec kategorie",
+			"points":1,
+			"desc":"<p>Když hráči ignorují zadané téma a nebo kategorii.</p>",
+			"visible":true
+		},
+		{
+			"id":10,
+			"name":"Nepozornost",
+			"points":1,
+			"desc":"<p>Když hráči nedávají pozor a zapomínají důležité detaily ve scénce.</p>",
+			"visible":true
+		},
+		{
+			"id":11,
+			"name":"Nepřiměřený nátlak",
+			"points":1,
+			"desc":"<p>Když hráč nerespektuje postavy vytvořené ostatními.</p>",
+			"visible":true
+		},
+		{
+			"id":12,
+			"name":"Blokování hry",
+			"points":2,
+			"desc":"<p>Když hráč přímo blokuje rozvoj příběhu.</p>",
+			"visible":true
+		},
+		{
+			"id":13,
+			"name":"Nevhodné chování",
+			"points":2,
+			"desc":"<p>Použití sprostých slov a nerespektování rozhodčího.</p>",
+			"visible":true
+		},
+		{
+			"id":14,
+			"name":"Varování",
+			"points":2,
+			"desc":"<p>Závažné opakování více chyb.</p>",
+			"visible":true
+		},
+		{
+			"id":15,
+			"name":"Hrubá chyba",
+			"points":2,
+			"desc":"<p>Po varování přichází hrubá chyba. Hráč je vyloučen ze zápasu.</p>",
+			"visible":true
+		}
+	]
+}

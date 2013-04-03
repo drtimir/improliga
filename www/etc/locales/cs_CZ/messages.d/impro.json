@@ -219,6 +219,16 @@
 	"attr_impro_article_visible":"Viditelné",
 
 
+	"impro_fouls":"Improvizační fauly",
+	"model_impro_foul":"Improvizační faul",
+	"model_impro_foul_plural":"Improvizační fauly",
+	"attr_impro_foul_name":"Název",
+	"attr_impro_foul_points":"Trestné body",
+	"attr_impro_foul_image":"Obrázek",
+	"attr_impro_foul_desc":"Popis",
+	"attr_impro_foul_visible":"Viditelnost",
+
+
 
 
 	"today":"Dnes",

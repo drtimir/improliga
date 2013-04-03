@@ -24,12 +24,25 @@
 		"model":"Impro::Team"
 	},
 	{
-		"name":"impro_articles",
+		"name":"Dokumentace",
 		"icon":"items/text",
-		"attrs_list":["name", "visible", "created_at"],
-		"rel_tab":["chapters"],
-		"window_root":true,
-		"model":"Impro::Article"
+		"items":[
+			{
+				"name":"impro_articles",
+				"icon":"items/text",
+				"attrs_list":["name", "visible", "created_at"],
+				"rel_tab":["chapters"],
+				"window_root":true,
+				"model":"Impro::Article"
+			},
+			{
+				"name":"impro_fouls",
+				"icon":"items/text",
+				"attrs_list":["name", "visible", "created_at"],
+				"window_root":true,
+				"model":"Impro::Foul"
+			}
+		]
 	},
 	{
 		"name":"impro_discussions",

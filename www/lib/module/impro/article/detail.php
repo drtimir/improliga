@@ -12,4 +12,4 @@ if ($article = find('Impro\Article', $id)) {
 		"chapters" => $article->chapters->where($conds)->fetch(),
 	));
 
-} else throw new NotFound();
+} else throw new System\Error\NotFound();

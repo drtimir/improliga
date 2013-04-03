@@ -55,7 +55,7 @@ Tag::div(array("class" => 'events'));
 				)),
 				$match,
 				$location,
-				$show_desc ? div('text', $event->desc_short):'',
+				$show_desc ? div('text', \System\Template::to_html($event->desc_short)):'',
 			));
 
 			$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));

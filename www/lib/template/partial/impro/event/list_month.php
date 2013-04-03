@@ -44,12 +44,7 @@ Tag::div(array("class" => 'events'));
 					$ts[] = Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name));
 				}
 
-				$location = Tag::div(array(
-					"class" => 'ts_location',
-					"output"  => false,
-					"content" => $ts,
-				));
-
+				$location = div('ts_location', $ts);
 				$match = '';
 
 				if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
@@ -86,7 +81,7 @@ Tag::div(array("class" => 'events'));
 						$location,
 						Tag::div(array(
 							"class"   => 'text',
-							"content" => $event->desc_short,
+							"content" => \System\Template::to_html($event->desc_short),
 							"output"  => false,
 						)),
 					)

@@ -62,7 +62,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			$f->input(array(
 				"type"     => 'checkbox',
 				"name"     => 'players_'.$side,
-				"label"    => l('impro_event_players_'.$side.($event->id_impro_event_type === Impro\Event\Type::ID_MATCH ? '':'_owner')),
+				"label"    => l('impro_event_players_'.$side.($event->type === Impro\Event\Type::ID_MATCH ? '':'_owner')),
 				"options"  => $players[$side],
 				"multiple" => true,
 			));
@@ -80,7 +80,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$part = array();
-			if ($event->id_impro_event_type === Impro\Event\Type::ID_MATCH) {
+			if ($event->type === Impro\Event\Type::ID_MATCH) {
 				$part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
 				$part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
 			}

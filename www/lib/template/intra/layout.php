@@ -1,5 +1,9 @@
 <?
 
+if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
+	redirect_now('http://intra.'.str_replace('www.', '', $_SERVER['HTTP_HOST']), 301);
+}
+
 Tag::doctype();
 Tag::html();
 	Tag::head();

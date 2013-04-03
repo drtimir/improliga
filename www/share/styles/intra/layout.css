@@ -130,8 +130,15 @@ menu.user li {
 	position:absolute;
 	left:0;
 	top:0;
-	background:#666;
-	border-right:1px solid #616161;
+	background:#666 url(/share/pixmaps/intra/logo.png) 4px center no-repeat;
+}
+
+.logo a .hidden {
+	display:inline-block;
+	line-height:30px;
+	padding-left:40px;
+	color:#EDD868;
+	font-weight:bold;
 }
 
 

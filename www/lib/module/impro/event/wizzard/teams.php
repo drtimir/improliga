@@ -16,16 +16,11 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 	if ($event->type === Impro\Event\Type::ID_MATCH) {
 		$teams = get_all('\Impro\Team')->where(array("visible" => true))->sort_by('name')->fetch();
-		$teams_opts = array();
-
-		foreach ($teams as $team) {
-			$teams_opts[$team->name] = $team->id;
-		}
 
 		$f->input(array(
 			"type"     => 'select',
 			"name"     => 'id_team_home',
-			"options"  => $teams_opts,
+			"options"  => $teams,
 			"label"    => l('impro_event_team_home'),
 			"required" => true,
 		));
@@ -33,7 +28,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$f->input(array(
 			"type"     => 'select',
 			"name"     => 'id_team_away',
-			"options"  => $teams_opts,
+			"options"  => $teams,
 			"label"    => l('impro_event_team_away'),
 			"required" => true,
 		));
@@ -48,16 +43,10 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			$teams = get_all('\Impro\Team')->where(array("visible" => true))->sort_by('name')->fetch();
 		}
 
-		$teams_opts = array();
-
-		foreach ($teams as $team) {
-			$teams_opts[$team->name] = $team->id;
-		}
-
 		$f->input(array(
 			"type"     => 'select',
 			"name"     => 'id_team_home',
-			"options"  => $teams_opts,
+			"options"  => $teams,
 			"label"    => l('impro_event_team_owner'),
 			"required" => true,
 		));

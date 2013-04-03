@@ -6,6 +6,6 @@ Tag::div(array("class" => 'system_text'));
 		echo section_heading($text->name);
 	}
 
-	Tag::div(array("class" => 'text', "content" => $text->text));
+	Tag::div(array("class" => 'text', "content" => \System\Template::to_html($text->text)));
 
 Tag::close('div');

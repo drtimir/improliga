@@ -31,11 +31,5 @@ namespace Impro
 		{
 			return $this->members->count();
 		}
-
-
-		public function get_name($pattern = null)
-		{
-			return $this->name.' - '.$this->name_full;
-		}
 	}
 }

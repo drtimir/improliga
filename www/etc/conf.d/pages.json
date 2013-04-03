@@ -97,7 +97,8 @@
 		"title":"impro_contacts",
 		"template":["impro/layout", "impro/dual"],
 		"modules":[
-			["system/partial", {"template":"impro/static/contacts", "slot":"left"}]
+			["system/text/detail", {"id":4, "slot":"left"}],
+			["system/text/detail", {"id":3, "slot":"right"}]
 		]
 	}},
 
@@ -186,6 +187,14 @@
 					]
 				}
 			}
+		}
+	},
+
+	"intranet":{
+		"#":{
+			"modules":[
+				["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]
+			]
 		}
 	},
 

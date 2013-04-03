@@ -1,0 +1,6 @@
+{
+	"System\\Text":[
+		{"id":3, "name":"Chcete to taky zkusit?", "text":"&lt;p&gt;Byli jste na zápase, zaujala vás kreativita a teď věříte, že by pro vás nebyl problém to taky dokázat? Máte divadelní ambice, ale nebaví vás učit se texty? Hledáte tým?&lt;/p&gt;&lt;p&gt;Některé týmy jsou uzavřené, některé občas dělají otevřený trénink a některé zrovna dokonce dělají nábor. V budoucnu se zde objeví aktuální seznam týmů pro celou republiku, které nabírají nováčky. Do té doby, než to bude, nám můžete napsat.&lt;/p&gt;", "visible":true},
+		{"id":4, "name":"Kontakty", "text":"&lt;p&gt;&lt;strong&gt;Sídlo občanského sdružení Improliga&lt;/strong&gt;&lt;br&gt;Česká improvizační liga, o.s.&lt;br&gt;Přemyšlenská 1102&lt;br&gt;182 00 Praha 8&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Jednatelka Improligy&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Jana Machalíková&lt;/li&gt;&lt;li&gt;Web: &lt;a href=\"http://www.janamachalikova.cz\"&gt;www.janamachalikova.cz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;E-mail: &lt;a href=\"mailto:machalikova@centrum.cz\"&gt;machalikova@centrum.cz&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Správa webu&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Pavel Žák&lt;/li&gt;&lt;li&gt;Email: &lt;a href=\"mailto:just-paja@improliga.cz\"&gt;just-paja@improliga.cz&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;", "visible":true}
+	]
+}

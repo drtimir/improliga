@@ -469,7 +469,7 @@
         {
             "id_system_text": 1,
             "name": "Úvod",
-            "text": "<p> Improliga je malinko o sportu, ale především o divadle. Dva týmy se navzájem utkávají v improvizacích na divácká témata. Cílem NENÍ navzájem se vyřadit, ale SPOLEČNĚ vytvářet kvalitní improvizaci, mít radost ze hry, moci si kdykoliv zahrát/zaimprovizovat s různými týmy z různých měst.</p>",
+            "text": "<p> Improliga je malinko o sportu, ale především o divadle. Dva týmy se navzájem utkávají v improvizacích na divácká témata. Cílem NENÍ navzájem se vyřadit, ale SPOLEČNĚ vytvářet kvalitní improvizaci, mít radost ze hry, moci si kdykoliv zahrát/zaimprovizovat s různými týmy z různých měst.</p><p><a href=\"/o-improlize/\">Více o Improlize</a></p><p>Přijďte se podívat na představení některého z týmů a vhoďte si do košíku vlastní téma.</p><p><a href=\"/udalosti/\">Události</a></p>",
             "visible": true,
             "created_at": "2013-03-02 05:07:32",
             "updated_at": "2013-03-02 05:07:32"

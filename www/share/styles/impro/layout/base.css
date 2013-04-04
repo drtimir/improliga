@@ -15,7 +15,8 @@
 	font-family: 'biolinum';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Linux Biolinum'), local('Linux-Biolinum'), url(/share/fonts/biolinum/regular.woff) format('woff');
+	src:url(/share/fonts/biolinum/regular.eot?) format('eot');
+	src:local('Linux Biolinum'), local('Linux-Biolinum'), url(/share/fonts/biolinum/regular.woff) format('woff');
 }
 
 @font-face {
@@ -207,7 +208,9 @@ header .main li .link-selected { background-color:#c12630 }
 
 .block {
 	padding:20px 30px;
+	background:#000;
 	background:rgba(0,0,0,0.85);
+	border:1px solid #333;
 	border:1px solid rgba(255,255,255,0.2);
 	border-radius:12px;
 	margin:0 0 15px;

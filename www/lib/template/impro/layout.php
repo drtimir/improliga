@@ -3,6 +3,7 @@
 Tag::doctype();
 Tag::html();
 	Tag::head();
+		content_for('scripts', 'lib/html5');
 		content_for('styles', 'pwf/calendar');
 		content_for('styles', 'impro/layout/base');
 		content_for('styles', 'impro/layout/footer');

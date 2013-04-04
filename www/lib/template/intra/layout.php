@@ -8,6 +8,7 @@ Tag::doctype();
 Tag::html();
 	Tag::head();
 		content_for('scripts', 'lib/functions');
+		content_for('scripts', 'lib/html5');
 		content_for('scripts', 'lib/jquery');
 		content_for('scripts', 'pwf');
 

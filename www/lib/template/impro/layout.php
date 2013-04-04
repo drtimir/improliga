@@ -67,6 +67,8 @@ Tag::html();
 					));
 					echo div(array("class" => 'partners'));
 						echo section_heading(l('impro_partners'), 3);
+
+						\System\Template::partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
 					close('div');
 					Tag::span(array("class" => 'cleaner', "close" => true));
 				close('div');

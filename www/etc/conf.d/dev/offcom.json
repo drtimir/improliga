@@ -1,9 +1,0 @@
-{
-	"default":{
-		"email_sender":"robot@improliga.cz"
-	},
-
-	"disable":0,
-	"enable-email":1,
-	"enable-sms":1
-}

@@ -19,7 +19,7 @@ Tag::div(array("class" => 'team_detail'));
 
 	echo div('header', array(
 		div('team_heading', array(
-			div('team_logo', link_for(Stag::img(array("src" => $team->logo->thumb(188, 165))), $team->logo->get_path())),
+			div('team_logo', link_for(Stag::img(array("src" => $team->logo->thumb_trans(188, 165))), $team->logo->get_path())),
 			div('name', array(
 				section_heading($team->name),
 				heading($team->name_full),

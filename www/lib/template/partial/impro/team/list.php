@@ -6,7 +6,7 @@ Tag::div(array("class" => 'team_list'));
 
 		foreach ($teams as $team) {
 			Tag::li();
-				echo link_for(Stag::img(array("src" => $team->logo->thumb(118, 100), "alt" => $team->name)), soprintf($link_team, $team));
+				echo link_for(Stag::img(array("src" => $team->logo->thumb_trans(118, 100), "alt" => $team->name)), soprintf($link_team, $team));
 
 				Tag::div(array("class" => "desc", "content" => array(
 					Stag::strong(array("content" => link_for($team->name, soprintf($link_team, $team)))),

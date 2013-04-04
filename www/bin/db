@@ -446,12 +446,17 @@
 		public static function seed()
 		{
 			\System\Init::full();
-			$data;
-			$data = System\Json::read_dist(ROOT.System\Database::DIR_INITIAL_DATA, $data, true);
-			out("Injecting initial data ..");
+			out('Seeding initial system data ..');
+			\System\Database::seed_initial_data();
 
-			foreach ($data as $data_set_name => $data_set_models) {
-				self::seed_data($data_set_name, $data_set_models);
+			\System\Init::full();
+			$data = System\Json::read_dist(ROOT.System\Database::DIR_INITIAL_DATA, $data, true);
+
+			if ($data) {
+				out("Injecting initial data ..");
+				foreach ($data as $data_set_name => $data_set_models) {
+					self::seed_data($data_set_name, $data_set_models);
+				}
 			}
 		}
 

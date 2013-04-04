@@ -74,5 +74,12 @@
 		"attrs_list":["name", "visible", "created_at"],
 		"window_root":true,
 		"model":"Impro::Gallery"
+	},
+	{
+		"name":"impro_partners",
+		"icon":"items/misc",
+		"attrs_list":["name", "visible", "created_at"],
+		"window_root":true,
+		"model":"Impro::Partner"
 	}
 ]

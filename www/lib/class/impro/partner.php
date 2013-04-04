@@ -12,5 +12,11 @@ namespace Impro
 			"clicked" => array('int', "is_unsigned" => true),
 			"visible" => array('bool'),
 		);
+
+
+		public static function visible()
+		{
+			return get_all('\Impro\Partner')->where(array("visible" => true))->sort_by('clicked desc');
+		}
 	}
 }

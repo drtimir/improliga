@@ -352,3 +352,28 @@
 .event_wizzard .buttons .input-field_cancel button:hover {
 	border:1px solid #666;
 }
+
+
+.event .event_image,
+.event .event_info
+{
+	float:left;
+}
+
+.event .part {
+	display:block;
+}
+
+.event .event_image { margin-right:10px; }
+.event .event_image img { display:block; }
+
+.event .name {
+	font-weight:bold;
+	margin-bottom:2px;
+}
+
+.event .city,
+.event .date
+{
+	font-size:12px;
+}

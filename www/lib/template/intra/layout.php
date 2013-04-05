@@ -23,6 +23,8 @@ Tag::html();
 		content_for('styles', 'intra/events');
 		content_for('styles', 'intra/discussions');
 		content_for('styles', 'intra/forms');
+		content_for('styles', 'intra/teams');
+		content_for('styles', 'intra/profile');
 
 		echo content_from('head');
 	Tag::close('head');

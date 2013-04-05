@@ -208,6 +208,7 @@
 		}
 	},
 
+
 	"intranet":{
 		"#":{
 			"modules":[
@@ -266,8 +267,9 @@
 		"profile":{
 			"#":{
 				"title":"Můj profil",
+				"template":["intra/layout", "intra/single"],
 				"modules":[
-					["impro/user/profile", {"self":true, "slot":"left"}]
+					["impro/user/profile", {"self":true}]
 				]
 			},
 
@@ -347,6 +349,7 @@
 				}
 			}
 		},
+
 
 		"events":{
 			"#":{

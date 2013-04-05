@@ -31,5 +31,21 @@ namespace Impro
 		{
 			return $this->members->count();
 		}
+
+
+		public function to_html_link($link)
+		{
+			if (mb_strlen($this->name_full) > 32) {
+				$long_name = substr($this->name_full, 0, 32) . '...';
+			} else {
+				$long_name = $this->name_full;
+			}
+
+			return div('name', array(
+				link_for($this->name, soprintf($link, $this)),
+				' - ',
+				link_for($long_name, soprintf($link, $this)),
+			));
+		}
 	}
 }

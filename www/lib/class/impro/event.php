@@ -227,5 +227,18 @@ namespace Impro
 			}
 		}
 
+
+		public function to_html($link)
+		{
+			return div('event', array(
+				div('event_image', link_for(\Stag::img(array("src" => $this->image->thumb_trans(78, 56), "alt" => '')), soprintf($link, $this))),
+				div('event_info', array(
+					span('part name', link_for($this->name, soprintf($link, $this))),
+					span('part city', link_for($this->location->name, $this->location->map_link())),
+					span('part date', format_date($this->start, 'human-full-datetime')),
+				)),
+				span('cleaner', ''),
+			));
+		}
 	}
 }

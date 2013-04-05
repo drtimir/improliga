@@ -26,7 +26,7 @@ Tag::div(array("class" => 'menu_left'));
 
 	Tag::menu(array("class" => array('plain', 'main')));
 		foreach (user()->teams as $team) {
-			Tag::li(array("content" => label_for('godmode/items/team', 16, $team->name, '/teams/'.$team->id.'/')));
+			Tag::li(array("content" => label_for('godmode/items/team', 16, '/teams/'.$team->id.'/', $team->name)));
 		}
 
 	Tag::close('menu');

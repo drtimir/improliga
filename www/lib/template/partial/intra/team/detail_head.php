@@ -25,10 +25,10 @@ Tag::div(array("class" => 'team_detail'));
 		)),
 		div('menu', array(
 			div('name', section_heading($team->to_html_link($link_team))),
-			ul('options', array(
-				Stag::li(array("content" => link_for(l('intra_team_home')))),
-				Stag::li(array("content" => link_for(l('intra_team_info')))),
-				Stag::li(array("content" => link_for(l('intra_team_events')))),
+			ul('plain options', array(
+				Stag::li(array("content" => link_for(l('intra_team_home'), soprintf($link_team, $team)))),
+				Stag::li(array("content" => link_for(l('intra_team_info'), sprintf($link_team_menu, 'info')))),
+				Stag::li(array("content" => link_for(l('intra_team_events'), sprintf($link_team_menu, 'events')))),
 			)),
 		)),
 		div('cleaner', ''),

@@ -7,7 +7,6 @@
 
 
 .team_detail .header {
-	height:425px;
 	position:relative;
 }
 
@@ -124,4 +123,29 @@
 	padding-bottom:5px;
 	margin-bottom:10px;
 	border-bottom:1px solid #e0e0e0;
+}
+
+
+
+
+.team_detail .header .menu .options li a {
+	display:block;
+	padding:7px 15px;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+.team_detail .header .menu .options li {
+	display:inline-block;
+	margin:0 0 0 5px;
+}
+
+.team_detail .header .menu .options {
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.team_detail .header .menu {
+	position:relative;
 }

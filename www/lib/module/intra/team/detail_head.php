@@ -7,10 +7,11 @@ def($link_cont,    '/udalosti/{seoname}/');
 def($link_book,    '/udalosti/{seoname}/rezervace/');
 def($link_day,     '/udalosti/seznam/{year}-{month}/#'.l('day').'{day}');
 def($link_team,    '/teams/{seoname}/');
+def($link_team_menu, '/teams/{seoname}/%s/');
 def($link_month,   '/udalosti/seznam/{year}-{month}/');
 def($thumb_width,  100);
 def($thumb_height, 100);
-def($template,     'intra/team/detail');
+def($template,     'intra/team/detail_head');
 def($slot_events, 'events');
 
 if ($team = find('Impro\Team', $id)) {
@@ -31,5 +32,8 @@ if ($team = find('Impro\Team', $id)) {
 	$this->template($template, array(
 		"team" => $team,
 		"link_team" => $link_team,
+		"link_team_menu" => soprintf($link_team_menu, $team),
 	));
+
+	$propagate['team'] = $team;
 }

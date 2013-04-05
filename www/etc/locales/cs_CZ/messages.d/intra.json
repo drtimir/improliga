@@ -14,7 +14,9 @@
 	"intra_user_events":"Události",
 
 	"intra_user_has_no_teams":"Uživatel není zařazen v žádném týmu.",
-
+	"intra_team_home":"Přehled",
+	"intra_team_info":"Informace",
+	"intra_team_events":"Události",
 
 	"intra_user_login":"Přihlášení",
 	"intra_user_do_login":"Přihlásit"

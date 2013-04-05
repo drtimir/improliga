@@ -256,9 +256,9 @@
 			"*":{
 				"#":{
 					"title":"Můj tým",
-					"template":["intra/layout", "intra/dual_34_14"],
+					"template":["intra/layout", "intra/single"],
 					"modules":[
-
+						["intra/team/detail", {"id":"#{0}"}]
 					]
 				}
 			}

@@ -63,24 +63,6 @@
 	margin-right:15px;
 }
 
-.team_heading .name {
-	position:absolute;
-	left:210px;
-	top:75px;
-}
-
-.team_heading h1 {
-	margin:0 0 5px;
-}
-
-.team_heading h2 {
-	width:700px;
-}
-
-.team_desc {
-	line-height:21px;
-}
-
 .team_info .city { background-image:url(/share/icons/impro/16/objects/city.png); }
 .team_info .site { background-image:url(/share/icons/impro/16/objects/site.png); }
 
@@ -118,4 +100,28 @@
 
 .team_detail .right .events .desc {
 	width:210px;
+}
+
+
+.team_detail .header .name .sep { display:none }
+.team_detail .header .name .full {
+	display:block;
+	font-size:18px;
+}
+
+.team_detail .header .name a {
+	color:#000;
+}
+
+.team_detail .header .name h1 {
+	margin:0
+
+
+}
+
+
+.team_detail .header .gallery {
+	padding-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:1px solid #e0e0e0;
 }

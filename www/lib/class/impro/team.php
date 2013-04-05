@@ -42,9 +42,9 @@ namespace Impro
 			}
 
 			return div('name', array(
-				link_for($this->name, soprintf($link, $this)),
-				' - ',
-				link_for($long_name, soprintf($link, $this)),
+				link_for($this->name, soprintf($link, $this), array("class" => 'short')),
+				span('sep', ' - '),
+				link_for($long_name, soprintf($link, $this), array("class" => 'full')),
 			));
 		}
 	}

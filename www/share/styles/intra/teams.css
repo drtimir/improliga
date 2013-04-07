@@ -1,4 +1,6 @@
-.team_member img {
+.team_user img,
+.team_member img
+{
 	float:left;
 	margin-right:12px;
 }
@@ -101,6 +103,9 @@
 	width:210px;
 }
 
+.team_detail .header {
+	margin-bottom:10px;
+}
 
 .team_detail .header .name .sep { display:none }
 .team_detail .header .name .full {
@@ -114,9 +119,11 @@
 
 .team_detail .header .name h1 {
 	margin:0;
+	width:500px;
 }
 
 .team_detail .header .name h1 a.short {
+	display:block;
 	margin:0 0 5px;
 }
 
@@ -166,4 +173,9 @@
 
 .team_info .props {
 	padding:0;
+}
+
+
+.right .team_people .team_member_info {
+	width:217px;
 }

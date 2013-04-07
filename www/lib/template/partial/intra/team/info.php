@@ -2,7 +2,7 @@
 
 echo div('team_info');
 
-	echo div('desc', $team->about);
+	echo div('desc', \System\Template::to_html($team->about));
 
 	$props = array();
 

@@ -8,11 +8,11 @@ echo div('page-block');
 		slot('head');
 	close('div');
 
-	echo div(array('block', 'left', 'layout_34'));
+	echo div(array('block', 'left', 'layout_58'));
 		slot('left');
 	close('div');
 
-	echo div(array('block', 'right', 'layout_14'));
+	echo div(array('block', 'right', 'layout_38'));
 		slot('right');
 	close('div');
 

@@ -265,7 +265,8 @@
 					"template":["intra/layout", "intra/team"],
 					"modules":{
 						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-						"info":["intra/team/info", {"slot":"left"}, ["head"]]
+						"info":["intra/team/info", {"slot":"left"}, ["head"]],
+						"mans":["intra/team/managers", {"slot":"right"}, ["head"]]
 					}
 				}}
 			}

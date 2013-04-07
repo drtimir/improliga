@@ -19,6 +19,9 @@ namespace Impro\Team\Member
 		);
 
 
+		private static $types_managers = array(self::ID_MANAGER, self::ID_TRAINER);
+
+
 		public static function get_all()
 		{
 			$types = array();

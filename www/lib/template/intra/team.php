@@ -16,5 +16,6 @@ echo div('page-block');
 		slot('right');
 	close('div');
 
+	slot();
 close('div');
 

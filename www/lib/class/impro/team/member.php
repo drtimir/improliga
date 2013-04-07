@@ -44,5 +44,11 @@ namespace Impro\Team
 				div('cleaner', ''),
 			));
 		}
+
+
+		public static function get_manager_types()
+		{
+			return self::$types_managers;
+		}
 	}
 }

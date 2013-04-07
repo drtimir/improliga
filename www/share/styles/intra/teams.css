@@ -113,9 +113,11 @@
 }
 
 .team_detail .header .name h1 {
-	margin:0
+	margin:0;
+}
 
-
+.team_detail .header .name h1 a.short {
+	margin:0 0 5px;
 }
 
 
@@ -148,4 +150,20 @@
 
 .team_detail .header .menu {
 	position:relative;
+}
+
+.team_info .left,
+.team_info .right
+{
+	float:left;
+}
+
+.team_info .left {
+	width:400px
+}
+
+.team_info .right { width:200px }
+
+.team_info .props {
+	padding:0;
 }

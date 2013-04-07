@@ -7,11 +7,11 @@ echo div('team_info');
 	$props = array();
 
 	if ($team->city) {
-		$props[] = Stag::li(array("class" => 'city', "content" => $team->city));
+		$props[] = Stag::li(array("class" => 'icon city', "content" => $team->city));
 	}
 
 	if ($team->site) {
-		$props[] = Stag::li(array("class" => 'site', "content" => link_for($team->site, $team->site)));
+		$props[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
 	}
 
 	if (any($props)) {

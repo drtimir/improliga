@@ -24,7 +24,7 @@ Tag::div(array("class" => 'team_detail'));
 			div('cleaner', ''),
 		)),
 		div('menu', array(
-			div('name', section_heading($team->to_html_link($link_team))),
+			div('name', section_heading($team->to_html_link($link_team, false))),
 			ul('plain options', array(
 				Stag::li(array("content" => link_for(l('intra_team_home'), soprintf($link_team, $team)))),
 				Stag::li(array("content" => link_for(l('intra_team_info'), sprintf($link_team_menu, 'info')))),

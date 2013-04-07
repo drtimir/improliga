@@ -1,3 +1,36 @@
+.team_list {
+}
+
+.team_list ul, .team_list li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.team_list li {
+	display:block;
+	width:400px;
+	float:left;
+	margin-bottom:10px;
+}
+
+.team_list img {
+	display:block;
+	float:left;
+	width:118px;
+	height:100px;
+	margin-right:10px;
+}
+
+.team_list .desc {
+	float:left;
+	width:265px;
+}
+
+.team_list .desc strong a {
+	font-size:18px;
+}
+
 .team_user img,
 .team_member img
 {

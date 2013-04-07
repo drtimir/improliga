@@ -14,6 +14,7 @@ Tag::div(array("class" => 'menu_left'));
 
 	Tag::menu(array("class" => array('plain', 'main')));
 		Tag::li(array("content" => label_for('godmode/locations/home', 16, '/', l('intra_wall'))));
+		Tag::li(array("content" => label_for('godmode/items/team', 16, '/teams/', l('impro_teams'))));
 		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/events/', l('impro_events'))));
 		Tag::li(array("content" => label_for('impro/objects/discussion', 16, '/discussion/', l('intra_discussion'))));
 		Tag::li(array("content" => label_for('impro/actions/download', 16, '/files/', l('intra_file_share'))));
@@ -26,7 +27,7 @@ Tag::div(array("class" => 'menu_left'));
 
 	Tag::menu(array("class" => array('plain', 'main')));
 		foreach (user()->teams as $team) {
-			Tag::li(array("content" => label_for('godmode/items/team', 16, '/teams/'.$team->id.'/', $team->name)));
+			Tag::li(array("content" => $team->label('/teams/{seoname}/')));
 		}
 
 	Tag::close('menu');

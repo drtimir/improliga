@@ -252,7 +252,13 @@
 		},
 
 		"teams":{
-			"#":{},
+			"#":{
+				"title":"impro_teams",
+				"template":["intra/layout", "intra/single"],
+				"modules":[
+					["impro/team/list", {"link_team":"/teams/{seoname}"}]
+				]
+			},
 			"*":{
 				"#":{
 					"template":["intra/layout", "intra/team"],
@@ -262,11 +268,17 @@
 				},
 
 				"info":{"#":{
-					"template":["intra/layout", "intra/team"],
 					"modules":{
 						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 						"info":["intra/team/info", {"slot":"left"}, ["head"]],
 						"mans":["intra/team/managers", {"slot":"right"}, ["head"]]
+					}
+				}},
+
+				"events":{"#":{
+					"modules":{
+						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+						"events":["intra/team/events", {"slot":"left"}, ["head"]]
 					}
 				}}
 			}

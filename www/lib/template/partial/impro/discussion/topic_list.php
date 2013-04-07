@@ -31,7 +31,7 @@ Tag::div(array("class" => 'discussion topic_list'));
 					Tag::tr();
 						Tag::td(array("content" => link_for($topic->name, soprintf($link_topic, $topic))));
 						Tag::td(array("content" => $topic->last_post_author ? Impro\User::link($topic->last_post_author):'-'));
-						Tag::td(array("content" => $topic->updated_at));
+						Tag::td(array("content" => format_date($topic->updated_at, 'human')));
 
 					Tag::close('tr');
 				}

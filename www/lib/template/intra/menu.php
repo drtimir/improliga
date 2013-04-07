@@ -14,7 +14,6 @@ Tag::div(array("class" => 'menu_left'));
 
 	Tag::menu(array("class" => array('plain', 'main')));
 		Tag::li(array("content" => label_for('godmode/locations/home', 16, '/', l('intra_wall'))));
-		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/profile/events/', l('impro_event_list_my'))));
 		Tag::li(array("content" => label_for('godmode/modules/calendar', 16, '/events/create/', l('impro_event_create_new'))));
 	Tag::close('menu');
 

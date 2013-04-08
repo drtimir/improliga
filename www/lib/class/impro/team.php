@@ -24,6 +24,7 @@ namespace Impro
 		protected static $has_many = array(
 			"members"   => array("model" => "\Impro\Team\Member"),
 			"galleries" => array("model" => '\Impro\Gallery', "is_bilinear" => true),
+			"comments"  => array("model" => '\Impro\Team\Comment'),
 		);
 
 

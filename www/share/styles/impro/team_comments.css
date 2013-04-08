@@ -1,0 +1,88 @@
+.team_comments .post {
+	clear:both;
+	margin:0 0 5px;
+}
+
+.team_comments .name {
+	font-weight:bold;
+}
+
+.team_comments .name,
+.team_comments .text
+{
+	margin-bottom:3px;
+}
+
+.team_comments .content {
+	width:435px;
+}
+
+
+.team_comment_outer h2 {
+	margin:0 0 5px;
+}
+
+.team_comment_outer {
+	margin-bottom:10px;
+}
+
+
+.team_comments .footer .item {
+	border-right:1px solid #ccc;
+	padding-right:7px;
+	margin-right:7px;
+	display:inline-block;
+}
+
+.team_comments .footer .link_responses {
+	color:#B82429
+}
+
+.team_comments .footer .item:last-child {
+	margin-right:0;
+	padding-right:0;
+	border-right:none;
+}
+
+form.team_comment label {
+	display:none;
+}
+
+
+form.team_comment .inputs_container,
+form.team_comment .buttons_container
+{
+	float:left;
+	display:block;
+}
+
+form.team_comment .inputs_container,
+form.team_comment .rte_container
+{
+	width:416px;
+	max-width:416px;
+	height:auto;
+	min-height:auto;
+}
+
+form.team_comment .rte_container .rte_content {
+	min-height:auto;
+}
+
+form.team_comment .buttons_container {
+	float:right;
+	width:74px;
+}
+
+form.team_comment .buttons {
+	margin:0;
+	padding:0;
+}
+
+form.team_comment .buttons li button {
+	margin:0;
+}
+
+.team_comments .content p {
+	margin:0 0 5px;
+}

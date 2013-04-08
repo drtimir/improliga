@@ -24,7 +24,7 @@ namespace Impro
 		protected static $has_many = array(
 			"members"   => array("model" => "\Impro\Team\Member"),
 			"galleries" => array("model" => '\Impro\Gallery', "is_bilinear" => true),
-			"comments"  => array("model" => '\Impro\Team\Comment'),
+			"comments"  => array("model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
 		);
 
 
@@ -61,7 +61,25 @@ namespace Impro
 					.span('team_name_short', $this->name),
 				soprintf($link_team, $this)
 			);
+		}
 
+
+		public function get_leaders()
+		{
+			$members = $this->members->fetch();
+			$roles   = \Impro\Team\Member\Role::get_manager_roles();
+			$people  = array();
+
+			foreach ($members as $member) {
+				foreach ($member->roles as $role) {
+					if (in_array($role, $roles)) {
+						$people[] = $member;
+						break;
+					}
+				}
+			}
+
+			return $people;
 		}
 	}
 }

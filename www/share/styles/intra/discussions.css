@@ -119,8 +119,7 @@
 
 
 .post .avatar,
-.post .author,
-.post .text
+.post .content
 {
 	float:left
 }
@@ -128,14 +127,13 @@
 .post .avatar { margin-right:15px; }
 .post .author { margin-bottom:3px }
 .post .author a { font-weight:bold }
-.post .text {
+.post .content {
 	width:585px;
 	margin-bottom:3px;
 }
 
 .post .footer {
 	clear:both;
-	margin-left:55px;
 	font-size:11px;
 	color:#999;
 }

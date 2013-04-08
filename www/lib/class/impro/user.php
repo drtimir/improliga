@@ -22,13 +22,13 @@ namespace Impro
 				"output" => false,
 				"src"    => $user->avatar->thumb($w, $h),
 				"alt"    => '',
-			)));
+			)), soprintf('/profile/{id_system_user}/', $user));
 		}
 
 
 		public static function link(\System\User $user)
 		{
-			return link_for($user->get_name(), '/profile/'.$user->id.'/');
+			return link_for($user->get_name(), soprintf('/profile/{id_system_user}/', $user));
 		}
 
 

@@ -7,11 +7,6 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 Tag::doctype();
 Tag::html();
 	Tag::head();
-		content_for('scripts', 'lib/functions');
-		content_for('scripts', 'lib/html5');
-		content_for('scripts', 'lib/jquery');
-		content_for('scripts', 'pwf');
-
 		content_for('styles', 'pwf/elementary');
 		content_for('styles', 'pwf/calendar');
 
@@ -24,7 +19,9 @@ Tag::html();
 		content_for('styles', 'intra/discussions');
 		content_for('styles', 'intra/forms');
 		content_for('styles', 'intra/teams');
+		content_for('styles', 'impro/team_comments');
 		content_for('styles', 'intra/profile');
+		content_for('styles', 'intra/rte');
 
 		echo content_from('head');
 	Tag::close('head');

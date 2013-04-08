@@ -49,10 +49,10 @@ namespace Impro\Team
 		public function to_html_member($link_user)
 		{
 			return div('team_user', array(
-				link_for(\Stag::img(array("src" => $this->user->avatar->thumb_trans(56, 38))), soprintf($link_user, $this->user)),
+				\Impro\User::avatar($this->user, 56, 38),
 				div('team_member_info', array(
 					div('name', array(
-						link_for($this->user->get_name(), soprintf($link_user, $this->user)),
+						\Impro\User::link($this->user),
 					)),
 					div('roles', implode(', ', $this->get_roles())),
 				)),

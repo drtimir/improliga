@@ -263,7 +263,9 @@
 				"#":{
 					"template":["intra/layout", "intra/team"],
 					"modules":[
-						["intra/team/detail_head", {"id":"#{0}", "slot":"head"}]
+						["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+						["impro/team/comment_edit", {"id_team":"#{0}", "slot":"left"}],
+						["impro/team/comment_list", {"id_team":"#{0}", "slot":"left"}]
 					]
 				},
 

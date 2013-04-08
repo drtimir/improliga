@@ -3,7 +3,7 @@
 
 namespace Impro\Team\Comment
 {
-	class Response extends \System\Model\Database
+	class Response extends \Impro\Team\Comment
 	{
 		protected static $attrs = array(
 			"text"    => array('text'),

@@ -50,6 +50,12 @@ System\Output::set_opts(array(
 	"page"     => $page->seoname,
 ));
 
+content_for('scripts', 'lib/functions');
+content_for('scripts', 'lib/html5');
+content_for('scripts', 'lib/jquery');
+content_for('scripts', 'pwf');
+
+
 System\Flow::run();
 System\Flow::run_messages();
 

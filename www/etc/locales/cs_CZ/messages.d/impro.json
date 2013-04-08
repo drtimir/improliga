@@ -228,6 +228,10 @@
 	"attr_impro_foul_desc":"Popis",
 	"attr_impro_foul_visible":"Viditelnost",
 
+	"impro_team_comment_add":"Pošlete vzkaz týmu",
+	"impro_team_comment_add_short":"Přidat",
+	"impro_team_comment_respond":"Odpovědět",
+	"impro_team_comment_response_count":"%d odpovědí",
 
 
 

@@ -10,23 +10,26 @@ echo div('team_comments');
 			foreach ($comments as $post) {
 				$responses_html = '';
 
-				if ($post->responses_count) {
-					$responses_html .= ul('responses');
+				if ($post->response_count) {
+					$responses = array_reverse($post->get_responses()->paginate(3)->fetch());
 
-					foreach ($post->responses as $response) {
+					foreach ($responses as $response) {
 						$responses_html .= Stag::li(array(
-							"content" => $response->to_html(),
+							"content" => $response->to_html($link_response),
 						));
 					}
 
-					$responses_html .= \Stag::close('ul');
+					$responses_html = div('responses', array(
+						ul('plain response_list', $responses_html),
+						div('more', link_for(l('impro_team_comment_respond'), soprintf($link_respond, $post))),
+					));
 				}
 
 
 				Tag::li(array(
 					"class" => 'post',
 					"content" => array(
-						$post->to_html(),
+						$post->to_html($link_respond),
 						$responses_html,
 					)
 				));

@@ -262,11 +262,11 @@
 			"*":{
 				"#":{
 					"template":["intra/layout", "intra/team"],
-					"modules":[
-						["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-						["impro/team/comment_edit", {"id_team":"#{0}", "slot":"left"}],
-						["impro/team/comment_list", {"id_team":"#{0}", "slot":"left"}]
-					]
+					"modules":{
+						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+						"edit":["impro/team/comment_edit", {"slot":"left"}, ["head"]],
+						"list":["impro/team/comment_list", {"slot":"left"}, ["head"]]
+					}
 				},
 
 				"info":{"#":{
@@ -282,7 +282,20 @@
 						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 						"events":["intra/team/events", {"slot":"left"}, ["head"]]
 					}
-				}}
+				}},
+
+				"respond":{
+					"#":{},
+					"*":{
+						"#":{
+							"modules":{
+								"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+								"responses":["impro/team/comment_responses", {"id_comment":"#{1}", "slot":"left"}, ["head"]],
+								"edit":["impro/team/comment_response_edit", {"id_comment":"#{1}", "slot":"response_edit"}, ["head", "responses"]]
+							}
+						}
+					}
+				}
 			}
 		},
 

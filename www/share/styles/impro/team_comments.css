@@ -19,7 +19,6 @@
 
 
 .team_comment_outer h2 {
-	margin:0 0 5px;
 }
 
 .team_comment_outer {
@@ -48,7 +47,6 @@ form.team_comment label {
 	display:none;
 }
 
-
 form.team_comment .inputs_container,
 form.team_comment .buttons_container
 {
@@ -65,6 +63,22 @@ form.team_comment .rte_container
 	min-height:auto;
 }
 
+form.team_response .inputs_container,
+form.team_response .rte_container
+{
+	width:314px;
+	max-width:314px;
+}
+
+form.team_response {
+	padding:0 5px;
+}
+
+
+form.team_response .rte_container .rte_content {
+	min-width:294px;
+}
+
 form.team_comment .rte_container .rte_content {
 	min-height:auto;
 }
@@ -72,6 +86,10 @@ form.team_comment .rte_container .rte_content {
 form.team_comment .buttons_container {
 	float:right;
 	width:74px;
+}
+
+form.team_response .buttons_container {
+	width:106px;
 }
 
 form.team_comment .buttons {
@@ -85,4 +103,44 @@ form.team_comment .buttons li button {
 
 .team_comments .content p {
 	margin:0 0 5px;
+}
+
+
+.team_comment_responses {
+
+}
+
+.responses {
+	margin-left:60px;
+	margin-bottom:15px;
+	background:#efefef;
+}
+
+.responses .response_list {
+	padding:5px 5px 0;
+}
+
+.responses .content {
+	width:365px;
+}
+
+.responses li {
+	display:block;
+}
+
+.responses .more {
+	text-align:center;
+}
+
+.responses .more a {
+	display:block;
+	padding:5px;
+	background:#e0e0e0;
+	font-weight:bold;
+	font-size:13px;
+}
+
+.responses .more a:hover {
+	background-color:#b82429;
+	color:#fff;
 }

@@ -169,12 +169,10 @@
 
 
 
-
-.team_detail .header .menu .options li a {
-	display:block;
-	padding:7px 15px;
-	border:1px solid #ccc;
-	border-radius:5px;
+.team_detail .header .menu .options li a:hover,
+.team_detail .header .menu .options li a.link_selected {
+	background:#fff;
+	color:#b82429;
 }
 
 .team_detail .header .menu .options li {

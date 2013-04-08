@@ -8,10 +8,8 @@ if (System\User::logged_in()) {
 	System\Flow::redirect($redirect_to);
 
 } else {
-
 	$f = new System\Form(array(
 		"heading" => $heading,
-		"action"  => '/login/',
 	));
 
 	$f->input_text('login', l("godmode_login_name"), true);

@@ -19,10 +19,9 @@ if ($item = new Impro\Discussion\Post()) {
 
 	$f = new System\Form(array(
 		"default" => $item->get_data(),
-		"action"  => intra_path(),
 	));
 
-	$f->input_textarea('text', l('impro_discussion_post_text'), true);
+	$f->input_rte('text', l('impro_discussion_post_text'), true);
 	$f->submit($heading);
 
 	if ($f->passed()) {

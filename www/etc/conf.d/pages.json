@@ -1,177 +1,142 @@
 {
-	"#":{
-		"title":"impro_name",
-		"template":["impro/layout", "impro/homepage"],
-		"modules":[
-			["system/text/detail", {"slot":"left", "id":1}],
-			["impro/event/latest", {
-				"slot":"events",
-				"link_cont":"/udalosti/{seoname}/",
-				"link_team":"/tymy/{seoname}/",
-				"conds":{"published":true},
-				"thumb_width":216,
-				"thumb_height":165,
-				"per_page":4
-			}],
-			["impro/event/calendar", {
-				"slot":"right",
-				"day_link_integrate":true,
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"heading":"Kalendář",
-				"conds":{"published":true}
-			}]
-		]
-	},
-
-
-	"o-improlize":{
+	"*":{
 		"#":{
-			"title":"impro_menu_about",
-			"template":["impro/layout", "impro/dual_34_14"],
+			"title":"impro_name",
+			"template":["impro/layout", "impro/homepage"],
 			"modules":[
-				["system/text/detail", {"id":2, "slot":"left"}],
-				["impro/article/category/list", {"slot":"right"}]
-			]
-		},
-
-		"fauly":{
-			"#":{
-				"title":"Fauly",
-				"modules":[
-					["impro/foul/list", {"slot":"right"}]
-				]
-			},
-
-			"*":{
-				"#":{
-					"modules":[
-						["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
-						["impro/foul/list", {"slot":"right"}]
-					]
-				}
-			}
-		},
-
-		"*":{
-			"#":{
-				"title":"impro_article",
-				"modules":[
-					["impro/article/detail", {"id":"#{0}", "slot":"left"}],
-					["impro/article/category/list", {"slot":"right"}]
-				]
-			}
-		}
-	},
-
-
-	"media-o-nas":{"#":{
-		"title":"impro_menu_media",
-		"template":["impro/layout", "impro/single"],
-		"modules":[
-			["system/partial", {"template":"impro/static/media"}]
-		]
-	}},
-
-
-	"tymy":{"#":
-		{
-			"title":"impro_menu_teams",
-			"template":["impro/layout", "impro/single"],
-			"modules":[
-				["impro/team/list"]
-			]
-		},
-
-		"*":{
-			"#":{
-				"modules":[
-					["impro/team/detail", {"id":"#{0}"}]
-				]
-			}
-		}
-	},
-
-
-	"novinky":{
-		"#":{
-			"title":"impro_menu_news",
-			"template":["impro/layout", "impro/dual"],
-			"modules":[
-				["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}]
-			]
-		},
-
-		"*":{"#":{
-			"modules":{
-				"detail":["impro/news/detail", {"id":"#{0}", "slot":"left", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}],
-				"list":["impro/news/list", {"slot":"right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}, ["detail"]]
-			}
-		}}
-	},
-
-
-	"kontakty":{"#":{
-		"title":"impro_contacts",
-		"template":["impro/layout", "impro/dual"],
-		"modules":[
-			["system/text/detail", {"id":4, "slot":"left"}],
-			["system/text/detail", {"id":3, "slot":"right"}]
-		]
-	}},
-
-
-	"udalosti":{
-		"#":{
-			"title":"impro_events",
-			"template":["impro/layout", "impro/dual"],
-			"modules":[
-				["impro/event/calendar", {
-					"slot":"left",
-					"template":"impro/event/list_month",
+				["system/text/detail", {"slot":"left", "id":1}],
+				["impro/event/latest", {
+					"slot":"events",
 					"link_cont":"/udalosti/{seoname}/",
-					"link_month":"/udalosti/seznam/{year}-{month}/",
-					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-					"link_day_piece":"den_{day}"
+					"link_team":"/tymy/{seoname}/",
+					"conds":{"published":true},
+					"thumb_width":216,
+					"thumb_height":165,
+					"per_page":4
 				}],
 				["impro/event/calendar", {
 					"slot":"right",
 					"day_link_integrate":true,
 					"link_month":"/udalosti/seznam/{year}-{month}/",
 					"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-					"link_day_piece":"den_{day}",
 					"heading":"Kalendář",
 					"conds":{"published":true}
 				}]
 			]
 		},
 
-		"*":{"#":{
+
+		"o-improlize":{
+			"#":{
+				"title":"impro_menu_about",
+				"template":["impro/layout", "impro/dual_34_14"],
+				"modules":[
+					["system/text/detail", {"id":2, "slot":"left"}],
+					["impro/article/category/list", {"slot":"right"}]
+				]
+			},
+
+			"fauly":{
+				"#":{
+					"title":"Fauly",
+					"modules":[
+						["impro/foul/list", {"slot":"right"}]
+					]
+				},
+
+				"*":{
+					"#":{
+						"modules":[
+							["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
+							["impro/foul/list", {"slot":"right"}]
+						]
+					}
+				}
+			},
+
+			"*":{
+				"#":{
+					"title":"impro_article",
+					"modules":[
+						["impro/article/detail", {"id":"#{0}", "slot":"left"}],
+						["impro/article/category/list", {"slot":"right"}]
+					]
+				}
+			}
+		},
+
+
+		"media-o-nas":{"#":{
+			"title":"impro_menu_media",
 			"template":["impro/layout", "impro/single"],
 			"modules":[
-				["impro/event/detail", {
-					"id":"#{0}",
-					"col_width":440,
-					"template":"impro/event/detail_short",
-					"link_team":"/tymy/{seoname}/",
-					"link_event":"/udalosti/{seoname}/"
-				}]
+				["system/partial", {"template":"impro/static/media"}]
 			]
 		}},
 
-		"seznam":{
+
+		"tymy":{"#":
+			{
+				"title":"impro_menu_teams",
+				"template":["impro/layout", "impro/single"],
+				"modules":[
+					["impro/team/list"]
+				]
+			},
+
+			"*":{
+				"#":{
+					"modules":[
+						["impro/team/detail", {"id":"#{0}"}]
+					]
+				}
+			}
+		},
+
+
+		"novinky":{
+			"#":{
+				"title":"impro_menu_news",
+				"template":["impro/layout", "impro/dual"],
+				"modules":[
+					["impro/news/list", {"slot":"events_right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}]
+				]
+			},
+
+			"*":{"#":{
+				"modules":{
+					"detail":["impro/news/detail", {"id":"#{0}", "slot":"left", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}],
+					"list":["impro/news/list", {"slot":"right", "link_cont":"/novinky/{seoname}/", "conds":{"published":true}}, ["detail"]]
+				}
+			}}
+		},
+
+
+		"kontakty":{"#":{
+			"title":"impro_contacts",
+			"template":["impro/layout", "impro/dual"],
+			"modules":[
+				["system/text/detail", {"id":4, "slot":"left"}],
+				["system/text/detail", {"id":3, "slot":"right"}]
+			]
+		}},
+
+
+		"udalosti":{
 			"#":{
 				"title":"impro_events",
+				"template":["impro/layout", "impro/dual"],
 				"modules":[
-					["impro/event/latest", {
-						"slot":"events_left",
+					["impro/event/calendar", {
+						"slot":"left",
+						"template":"impro/event/list_month",
 						"link_cont":"/udalosti/{seoname}/",
-						"link_team":"/tymy/{seoname}/",
-						"link_day_piece":"den_{day}",
-						"conds":{"published":true}
+						"link_month":"/udalosti/seznam/{year}-{month}/",
+						"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+						"link_day_piece":"den_{day}"
 					}],
 					["impro/event/calendar", {
-						"slot":"events_right",
+						"slot":"right",
 						"day_link_integrate":true,
 						"link_month":"/udalosti/seznam/{year}-{month}/",
 						"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
@@ -182,42 +147,79 @@
 				]
 			},
 
-			"*":{
+			"*":{"#":{
+				"template":["impro/layout", "impro/single"],
+				"modules":[
+					["impro/event/detail", {
+						"id":"#{0}",
+						"col_width":440,
+						"template":"impro/event/detail_short",
+						"link_team":"/tymy/{seoname}/",
+						"link_event":"/udalosti/{seoname}/"
+					}]
+				]
+			}},
+
+			"seznam":{
 				"#":{
+					"title":"impro_events",
 					"modules":[
+						["impro/event/latest", {
+							"slot":"events_left",
+							"link_cont":"/udalosti/{seoname}/",
+							"link_team":"/tymy/{seoname}/",
+							"link_day_piece":"den_{day}",
+							"conds":{"published":true}
+						}],
 						["impro/event/calendar", {
-							"slot":"right",
+							"slot":"events_right",
 							"day_link_integrate":true,
 							"link_month":"/udalosti/seznam/{year}-{month}/",
 							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 							"link_day_piece":"den_{day}",
-							"month_input":"#{0}"
-						}],
-						["impro/event/calendar", {
-							"slot":"left",
-							"template":"impro/event/list_month",
-							"link_cont":"/udalosti/{seoname}/",
-							"link_month":"/udalosti/seznam/{year}-{month}/",
-							"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-							"link_day_piece":"den_{day}",
-							"month_input":"#{0}"
+							"heading":"Kalendář",
+							"conds":{"published":true}
 						}]
 					]
+				},
+
+				"*":{
+					"#":{
+						"modules":[
+							["impro/event/calendar", {
+								"slot":"right",
+								"day_link_integrate":true,
+								"link_month":"/udalosti/seznam/{year}-{month}/",
+								"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+								"link_day_piece":"den_{day}",
+								"month_input":"#{0}"
+							}],
+							["impro/event/calendar", {
+								"slot":"left",
+								"template":"impro/event/list_month",
+								"link_cont":"/udalosti/{seoname}/",
+								"link_month":"/udalosti/seznam/{year}-{month}/",
+								"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+								"link_day_piece":"den_{day}",
+								"month_input":"#{0}"
+							}]
+						]
+					}
 				}
+			}
+		},
+
+
+		"intranet":{
+			"#":{
+				"modules":[
+					["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]
+				]
 			}
 		}
 	},
 
-
-	"intranet":{
-		"#":{
-			"modules":[
-				["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]
-			]
-		}
-	},
-
-	"intra":{
+	"intra.improliga.cz.local":{
 		"#":{
 			"template":["intra/layout", "intra/dual"],
 			"title":"Intranet Improligy",

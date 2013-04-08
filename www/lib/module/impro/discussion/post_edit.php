@@ -22,7 +22,6 @@ if (($id && $item = find('\Impro\Discussion\Post', $id)) || ($new && $item = new
 	$f = new System\Form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,
-		"action"  => intra_path(),
 	));
 
 	$f->input_textarea('text', l('impro_discussion_post_text'), true);

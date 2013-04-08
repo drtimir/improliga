@@ -6,7 +6,6 @@ def($redirect, '/teams/{seoname}/');
 if ((any($propagated['team']) && $team = $propagated['team']) || ($id_team && ($team = find('\Impro\Team', $id_team)))) {
 	$f = new \System\Form(array(
 		"heading" => l('impro_team_comment_add'),
-		"action"  => intra_path(),
 		"class"   => 'team_comment',
 	));
 

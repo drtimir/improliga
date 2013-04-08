@@ -12,7 +12,6 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		"info" => array(
 			l('impro_event_name').':' => $event->name,
 		),
-		"action"  => intra_path(),
 		"heading" => l("impro_event_wizzard"),
 		"desc" => l('impro_event_wizzard_step_cancel'),
 		"default" => $data,

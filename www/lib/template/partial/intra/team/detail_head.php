@@ -26,9 +26,9 @@ Tag::div(array("class" => 'team_detail'));
 		div('menu', array(
 			div('name', section_heading($team->to_html_link($link_team, false))),
 			ul('plain options', array(
-				Stag::li(array("content" => link_for(l('intra_team_home'), soprintf($link_team, $team)))),
-				Stag::li(array("content" => link_for(l('intra_team_info'), sprintf($link_team_menu, 'info')))),
-				Stag::li(array("content" => link_for(l('intra_team_events'), sprintf($link_team_menu, 'events')))),
+				Stag::li(array("content" => link_for(l('intra_team_home'), soprintf($link_team, $team), array("class" => 'button')))),
+				Stag::li(array("content" => link_for(l('intra_team_info'), sprintf($link_team_menu, 'info'), array("class" => 'button')))),
+				Stag::li(array("content" => link_for(l('intra_team_events'), sprintf($link_team_menu, 'events'), array("class" => 'button')))),
 			)),
 		)),
 		div('cleaner', ''),

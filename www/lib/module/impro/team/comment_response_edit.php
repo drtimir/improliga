@@ -8,7 +8,6 @@ if (any($propagated['comment']) && any($propagated['team'])) {
 	$team    = $propagated['team'];
 
 	$f = new \System\Form(array(
-		"action"  => intra_path(),
 		"class"   => 'team_comment team_response',
 	));
 

@@ -9,7 +9,6 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$data = $event->get_data();
 	$f = new System\Form(array(
 		"class"   => 'event_wizzard',
-		"action"  => intra_path(),
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_name'),
 		"default" => $data

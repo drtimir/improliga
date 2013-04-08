@@ -265,7 +265,8 @@
 					"modules":{
 						"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 						"edit":["impro/team/comment_edit", {"slot":"left"}, ["head"]],
-						"list":["impro/team/comment_list", {"slot":"left"}, ["head"]]
+						"list":["impro/team/comment_list", {"slot":"left"}, ["head"]],
+						"people":["impro/team/member_list", {"slot":"right"}, ["head"]]
 					}
 				},
 

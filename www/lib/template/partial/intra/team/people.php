@@ -3,6 +3,10 @@
 
 echo div('team_people');
 
+	if ($heading) {
+		echo section_heading($heading);
+	}
+
 	echo ul('plain');
 
 		foreach ($people as $member) {

@@ -1,14 +1,16 @@
 <?
 
 def($id_team);
-def($template, 'impro/team/member_list');
+def($template, 'intra/team/people');
+def($link_user, '/profile/{seoname}/');
+def($heading, l('impro_team_members'));
 
-if ($id_team && ($team = find('\Impro\Team', $id_team))) {
-	$roles = \Impro\Team\Member\Role::get_all();
-	$users = get_all('\Impro\Team\Member')->where(array("id_impro_team" => $id_team))->fetch();
+if ((any($propagated['team']) && ($team = $propagated['team'])) || $id_team && ($team = find('\Impro\Team', $id_team))) {
+	$people = $team->members->fetch();
 
 	$this->template($template, array(
-		"roles" => $roles,
-		"users" => $users,
+		"people"    => $people,
+		"link_user" => $link_user,
+		"heading"   => $heading,
 	));
 }

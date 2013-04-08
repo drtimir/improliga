@@ -234,7 +234,9 @@
 	"impro_team_comment_response":"Odpověď",
 	"impro_team_comment_response_count":"%d odpovědí",
 	"impro_team_comment_responses":"Diskuze k příspěvku",
-
+	"impro_team_managers":"Vedení týmu",
+	"impro_team_members":"Členové",
+	"impro_team_info":"Informace o týmu",
 
 	"today":"Dnes",
 	"end":""

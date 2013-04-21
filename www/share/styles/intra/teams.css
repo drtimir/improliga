@@ -186,6 +186,10 @@
 	top:0;
 }
 
+.team_detail .header .menu .manage {
+	top:34px;
+}
+
 .team_detail .header .menu {
 	position:relative;
 }
@@ -209,4 +213,30 @@
 
 .right .team_people .team_member_info {
 	width:217px;
+}
+
+
+.team-layout .right .team_people {
+	margin-bottom:10px;
+}
+
+.team-layout .right .team_people li {
+	float:none;
+}
+
+.team-layout .events {
+	clear:both;
+}
+
+.team-layout .right .events .event .image {
+	width:56px;
+}
+
+.team-layout .right .events .event .desc {
+	width:180px;
+}
+
+.team-layout .right .events .event .versus {
+	display:inline-block;
+	padding:0 5px;
 }

@@ -80,8 +80,8 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		} else {
 			$part = array();
 			if ($event->type === Impro\Event\Type::ID_MATCH) {
-				$part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
-				$part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
+				isset($p['players_home']) && $part[Impro\Event\Participant\Type::ID_PLAYER_HOME] = (array) $p['players_home'];
+				isset($p['players_away']) && $part[Impro\Event\Participant\Type::ID_PLAYER_AWAY] = (array) $p['players_away'];
 			}
 
 			$event->assign($part);
@@ -95,13 +95,4 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$propagate['event'] = $event;
 	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS;
 } else throw new System\Error\AccessDenied();
-
-
-//~ Název, Typ
-//~ Místo, Datum a čas
-//~ Týmy
-//~ Hráči, Rozhodčí, Konferenciér, Hudebníci, Technici, Pomocňáci
-//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
-//~ Plakát, Vstupenky
-//~ Zveřejnění
 

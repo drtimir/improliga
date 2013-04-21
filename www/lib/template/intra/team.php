@@ -1,11 +1,15 @@
 <?
 
-echo div('page-block');
+echo div('page-block team-layout');
 
 	require ROOT.'/lib/template/intra/menu.php';
 
 	echo div(array('block', 'left', 'layout_11', 'content'));
 		slot('head');
+	close('div');
+
+	echo div(array('block', 'left', 'layout_11', 'content'));
+		slot('big');
 	close('div');
 
 	echo div(array('block', 'left', 'layout_58'));

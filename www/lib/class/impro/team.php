@@ -11,6 +11,7 @@ namespace Impro
 			"about"      => array("text", "default" => ''),
 			"logo"       => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"      => array('image', "default" => "/share/pixmaps/impro/team.png"),
+			"mail"       => array("varchar", "default" => ''),
 			"site"       => array("varchar", "default" => ''),
 			"played"     => array("int", "is_unsigned" => true, "default" => 0),
 			"visible"    => array("bool"),
@@ -80,6 +81,21 @@ namespace Impro
 			}
 
 			return $people;
+		}
+
+
+		/** Get current user member object if user is a member
+		 * @return false|Impro\Team\Member
+		 */
+		public function member()
+		{
+			foreach (user()->members as $member) {
+				if ($member->id_impro_team == $this->id) {
+					return $member;
+				}
+			}
+
+			return false;
 		}
 	}
 }

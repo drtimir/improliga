@@ -1,14 +1,22 @@
+608665e5c00aa4fde128dd2f65b05ac281e1db95 Merge branch 'master' of ssh://github.com/just-paja/pwf
+a30ef7cdd4ccf0653d680e8b16346f21391275e2 Settings, init
+c72853537df887b74f54ce2f651c62ce7ab65a8a Page, search
 27d590305826dcb6bc6935cd24f31a18e08abd03 Routes, regex
 ad64cd7722bb5720074bcb89929a7ac60f62e365 Directory structure
 e328957bed32350ac29f0805f2d3ef16db065e82 Drop old files
 9ffafd4222d977ab0a3f44c3ccc7fc680eb6693b Dev bar, transparency
 941d4d4f110c3789d6252bd0355f539ffda871bd Forms, template
+e13743f9f38916c8d750c022b134656bc6b89ab1 Merge branch 'master' of ssh://github.com/just-paja/pwf
 2a8899963fe586faf378c4888352d5744baec0ad Image class
 4cd2f6a5e52fcdee21ad11d2def8fa9e74dd6d4a Anonymous user
+cb7711137d47e8ebcd433602af67f5153398716e Merge branch 'master' of ssh://github.com/just-paja/pwf
 9b13d33685bcb81708a66514cc8e0acc603aaf0c [fix] Contact, namespaces
+5094a280df605008538f78ac687f11100ab4058a Merge branch 'master' of ssh://github.com/just-paja/pwf
 6559be8f303759ef47107b6eb38feabfc3f00c91 [fix] Contact, namespaces
+5916ee8d76090144bc4e228642c2ee7337af4e96 Merge branch 'master' of ssh://github.com/just-paja/pwf
 b73b6345ced6a74471328abf7eaa16be670ee298 Span alias
 30030081c72c1a406b63d38aa01c73d4de358dda User contact
+1a0ee15e7f5caa7a6452015729dbce236c53b3f0 Merge branch 'master' of ssh://github.com/just-paja/pwf
 3ff5657cfc16e9ce2337d2dbf63bac26e55b8705 Make script, origin
 6787c34a0db59850a7f8617482ff23bad67f7674 Image class
 0be66e3f31c5355c6986ef04fbb648f5b5f6ac61 [fix] Image save
@@ -30,14 +38,22 @@ a0f2a659723a8ca030220fa4f5ac12fb7e32acf6 Database model
 e1e3c62e49041f15671b414c6094056e5a7fb5a0 Settings optimalization
 af884d9f5eac91815a5c93e29d9d91f76ed1a3c1 Tag class, revert to_html
 ced5693644831d1930d4288754513286e3c586db Form, data protection
+9bcce2a4f756de3793f63ebc189094e2f37ffe90 Merge branch 'master' of ssh://github.com/just-paja/pwf
 1bad9d685f8296945bab7114190c7b0877d192e3 Tags, content
+9474dd55010303df8dc38e0792fbd55f6c2e1127 Merge branch 'master' of ssh://github.com/just-paja/pwf
 507e802518ebcfe556c0ac35f0474f7dc144923a [temp] Data seed
+1c2e4f50e1bebf518f6a820c5a8980f49161b714 Merge branch 'master' of ssh://github.com/just-paja/pwf
 f1d8f8ef4cdb27fac8a5888d7a91c5079432f14e [temp] Images, data seed
+b3b0315ff6840b6978805bfff94966de722ff013 Merge branch 'master' of ssh://github.com/just-paja/pwf
 35b7b54e1cd9ef6343d54f7b24aa093e2083fe16 [fix] Attr model, attr convert
+d5c96bd4cfd0d6f8badf5bc1dc2c8cf93cbe4ba5 Merge branch 'master' of ssh://github.com/just-paja/pwf
 f0dbdc1787151c3930d9c6bd5405d8ac982633a5 JSON tweaks
+0213108420e5984c4ed697b0e822b6d1aff53d2b Merge branch 'master' of ssh://github.com/just-paja/pwf
 908c692a25d6b62e916758fce369bd360cb6b9d3 Attr model, revive gps
 3071c6a1bc4f4631ea0b490c299dc64b3007acf8 [fix] Database script
+07267443a8132972fbd5a258863472809caf75cc Merge branch 'master' of ssh://github.com/just-paja/pwf
 a1c8ed8d1ddd17adadfe3c6fdd7c92a752bfdd3f [fix] Template, to_json
+c41f6f4c2dbfe01ec7e3dd0b258f7e3c85419335 Merge branch 'master' of ssh://github.com/just-paja/pwf
 e235d4bb1984c6f33aa5bb02a3531009504ebb06 Database script, json dump and restore
 ce2354d0c18c4f9b095fd78848946fc6bef522c3 User setup, drop
 2b341496c448b0035ed292e442309a171affb618 Attr model, to_json
@@ -45,8 +61,10 @@ ce2354d0c18c4f9b095fd78848946fc6bef522c3 User setup, drop
 a474f83f6ea56cdb7dc1c2cada6934625e2d18fd Cli class, do_over
 3400abd8a8819defe2375bb1fa20d1bf61a7521d Functions, collect
 f1dd965de851398a7cd9f419e7d061cdc5bed3ec Dump bar, Minor changes
+7f30ce2b7172eadc50a89781567aca503af7c808 Merge branch 'master' of ssh://github.com/just-paja/pwf
 0435ae113e28d6991c176664ba9b08e9cb2cf627 Dump bar, templates
 626fed178014f1461ffc91a542be1566c537e330 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+f2bb87c8aa284be1507d261a03f09bf8cb30ffbc Merge branch 'master' of ssh://github.com/just-paja/pwf
 1c8d9f274131b00d25b0f32b57df14679a317a67 [fix] Module class, slots
 c94be3aa15b35abcffe72b53fbdb8680cd6a551a [fix] Santa, deprecated files
 1fd94337e789845df67139e44b6538e420f16d94 [fix] Santa

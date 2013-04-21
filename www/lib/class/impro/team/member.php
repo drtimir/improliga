@@ -64,5 +64,17 @@ namespace Impro\Team
 		{
 			return self::$types_managers;
 		}
+
+
+		public function has_right($perm_id)
+		{
+			foreach ($this->roles as $role) {
+				if (\Impro\Team\Member\Role::has_right($role, $perm_id)) {
+					return true;
+				}
+			}
+
+			return false;
+		}
 	}
 }

@@ -167,12 +167,18 @@
 	border-bottom:1px solid #e0e0e0;
 }
 
-
-
-.team_detail .header .menu .options li a:hover,
-.team_detail .header .menu .options li a.link_selected {
+.team_detail .header .menu .options li a {
 	background:#fff;
 	color:#b82429;
+	border-color:transparent;
+}
+
+.team_detail .header .menu .options li a:hover,
+.team_detail .header .menu .options li a.link-selected
+{
+	background:#B82429;
+	border-color:#B82429;
+	color:#fff;
 }
 
 .team_detail .header .menu .options li {
@@ -239,4 +245,9 @@
 .team-layout .right .events .event .versus {
 	display:inline-block;
 	padding:0 5px;
+}
+
+
+.team_settings input[type=text] {
+	width:300px;
 }

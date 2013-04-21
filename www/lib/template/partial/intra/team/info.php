@@ -11,6 +11,10 @@ echo div('team_info');
 		$props[] = Stag::li(array("class" => 'icon city', "content" => $team->city));
 	}
 
+	if ($team->mail) {
+		$props[] = Stag::li(array("class" => 'icon mail', "content" => $team->mail));
+	}
+
 	if ($team->site) {
 		$props[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
 	}

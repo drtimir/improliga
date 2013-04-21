@@ -30,7 +30,8 @@ if ($team = find('Impro\Team', $id)) {
 
 
 	$this->template($template, array(
-		"team" => $team,
+		"member" => $team->member(),
+		"team"   => $team,
 		"link_team" => $link_team,
 		"link_team_menu" => soprintf($link_team_menu, $team),
 	));

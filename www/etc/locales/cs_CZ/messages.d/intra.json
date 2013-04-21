@@ -6,6 +6,7 @@
 	"intra_wall":"Zeď",
 	"intra_discussion":"Diskuze",
 	"intra_file_share":"Ke stažení",
+	"intra_wiki":"Wiki",
 	"intra_profile_edit":"Upravit profil",
 	"intra_events":"Události",
 
@@ -17,6 +18,8 @@
 	"intra_team_home":"Přehled",
 	"intra_team_info":"Informace",
 	"intra_team_events":"Události",
+	"intra_team_discussion":"Diskuze",
+	"intra_team_settings":"Nastavení",
 
 	"intra_user_login":"Přihlášení",
 	"intra_user_do_login":"Přihlásit"

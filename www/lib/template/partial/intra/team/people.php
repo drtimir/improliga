@@ -11,7 +11,10 @@ echo div('team_people');
 
 		foreach ($people as $member) {
 			Tag::li(array(
-				"content" => $member->to_html_member($link_user),
+				"content" => array(
+					$member->to_html_member($link_user),
+					span('cleaner', ''),
+				)
 			));
 		}
 

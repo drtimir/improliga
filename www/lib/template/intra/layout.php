@@ -12,6 +12,7 @@ Tag::html();
 
 		content_for("styles", "form/search_tool");
 
+		content_for('styles', 'lib/fancybox');
 		content_for('styles', 'intra/layout');
 		content_for('styles', 'intra/calendar');
 		content_for('styles', 'intra/news');
@@ -22,6 +23,9 @@ Tag::html();
 		content_for('styles', 'impro/team_comments');
 		content_for('styles', 'intra/profile');
 		content_for('styles', 'intra/rte');
+
+		content_for('scripts', 'lib/jquery/fancybox');
+		content_for('scripts', 'site/intranet');
 
 		echo content_from('head');
 	Tag::close('head');

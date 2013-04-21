@@ -1,2 +1,2 @@
-$('a.fancybox, .fancybox a').fancybox({
+$('a.fancybox, .fancybox a, .input-image a').fancybox({
 });

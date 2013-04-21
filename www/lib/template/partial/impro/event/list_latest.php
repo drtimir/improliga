@@ -47,12 +47,7 @@ Tag::div(array("class" => 'events'));
 
 
 			$html_event[] = div('desc', array(
-				Tag::a(array(
-					"class"   => 'name',
-					"output"  => false,
-					"content" => $event->name,
-					"href"    => soprintf($link_cont, $event),
-				)),
+				link_for($event->name, soprintf($link_cont, $event), array("class" => 'name')),
 				$match,
 				$location,
 				$show_desc ? div('text', \System\Template::to_html($event->desc_short)):'',

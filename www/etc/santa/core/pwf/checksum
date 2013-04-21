@@ -1,4 +1,4 @@
-5f0250a98cbe0dc674775af04cee2863  lib/include/system.php
+865f43ef17eed589df76be53c3bc9c7e  lib/include/system.php
 0986e15881f79312f8e169f9be435714  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 d600c65b5a66a29f33267c38443ac2f9  bin/santa
@@ -17,10 +17,10 @@ e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 68348c4c8859ae442189700f984bd655  etc/default/conf.d/offcom.json
 ace7bfbb1a577c612e9e44b5eb2a957f  etc/default/conf.d/output.json
 1107cb35935925edcf1fd1ca88fa67a9  etc/default/conf.d/santa.json
-07ac8b41c66ed14a270117f9ee80eca4  etc/default/conf.d/site.json
+5c80f00e4db31fca451d8d081892501f  etc/default/conf.d/site.json
 f27ca2fb626d55689c5a4c0aa4efbc7f  etc/default/routes.d/api.json
 bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
-ff402989989b064402a4dc6776f01472  etc/init.d/page.php
+c8c5f9ea86b1c1ef416410c5436fe84d  etc/init.d/page.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
 3bbc41d66904b57cc5c0f5eacb478b70  etc/init.d/session.php
 7d9a8a1568c93679b6ba29bd3a3296e3  etc/locales/cs_CZ/messages.d/core.json

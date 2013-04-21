@@ -7,7 +7,6 @@ def($link_team, '/teams/{seoname}/');
 def($link_event, '/events/{seoname}/');
 
 
-
 if (($self && $user = user()) || ($id && $user = find('\System\User', $id))) {
 
 	$member_of = get_all('\Impro\Team\Member')->where(array("id_system_user" => $user->id))->fetch();

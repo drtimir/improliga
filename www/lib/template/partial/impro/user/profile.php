@@ -38,7 +38,7 @@ echo div('profile');
 
 	echo div('right');
 
-		echo div('profile_block member_avatar', link_for(\Stag::img(array('src' => $user->avatar->thumb_trans(360,275))), $user->avatar->get_path()));
+		echo div('profile_block member_avatar fancybox', link_for(\Stag::img(array('src' => $user->avatar->thumb_trans(360,275))), $user->avatar->get_path()));
 
 		if (any($events)) {
 			echo div('profile_block member_events');

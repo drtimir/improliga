@@ -75,15 +75,7 @@ Tag::div(array("class" => 'event_detail'));
 	Tag::close('div');
 	Tag::div(array("class" => 'right'));
 
-		Tag::a(array(
-			"class"   => 'image',
-			"href"    => $event->image->get_path(),
-			"content" => Tag::img(array(
-				"output" => false,
-				"src"    => $event->image->thumb($col_width),
-				"alt"    => $event->name,
-			)),
-		));
+		echo link_for($event->image->to_html($col_width, $col_width), $event->image->get_path(), array("class" => 'image fancybox'));
 
 	Tag::close('div');
 

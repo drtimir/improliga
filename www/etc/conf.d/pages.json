@@ -47,7 +47,7 @@
 				"*":{
 					"#":{
 						"modules":[
-							["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
+							["impro/foul/detail", {"id":"#{1}", "slot":"left"}],
 							["impro/foul/list", {"slot":"right"}]
 						]
 					}
@@ -58,7 +58,7 @@
 				"#":{
 					"title":"impro_article",
 					"modules":[
-						["impro/article/detail", {"id":"#{0}", "slot":"left"}],
+						["impro/article/detail", {"id":"#{1}", "slot":"left"}],
 						["impro/article/category/list", {"slot":"right"}]
 					]
 				}
@@ -87,7 +87,7 @@
 			"*":{
 				"#":{
 					"modules":[
-						["impro/team/detail", {"id":"#{0}"}]
+						["impro/team/detail", {"id":"#{1}"}]
 					]
 				}
 			}
@@ -151,7 +151,7 @@
 				"template":["impro/layout", "impro/single"],
 				"modules":[
 					["impro/event/detail", {
-						"id":"#{0}",
+						"id":"#{1}",
 						"col_width":440,
 						"template":"impro/event/detail_short",
 						"link_team":"/tymy/{seoname}/",
@@ -192,7 +192,7 @@
 								"link_month":"/udalosti/seznam/{year}-{month}/",
 								"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 								"link_day_piece":"den_{day}",
-								"month_input":"#{0}"
+								"month_input":"#{1}"
 							}],
 							["impro/event/calendar", {
 								"slot":"left",
@@ -201,7 +201,7 @@
 								"link_month":"/udalosti/seznam/{year}-{month}/",
 								"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 								"link_day_piece":"den_{day}",
-								"month_input":"#{0}"
+								"month_input":"#{1}"
 							}]
 						]
 					}
@@ -219,7 +219,7 @@
 		}
 	},
 
-	"intra.improliga.cz.local":{
+	"intra.improliga.cz":{
 		"#":{
 			"template":["intra/layout", "intra/dual"],
 			"title":"Intranet Improligy",

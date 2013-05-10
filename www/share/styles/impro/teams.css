@@ -7,12 +7,15 @@
 	list-style:none;
 }
 
-.team_list li {
+.team_list .teams li {
 	display:block;
 	width:460px;
 	float:left;
 	margin-bottom:10px;
 }
+
+.team_list .cities li { clear:both; }
+.team_list .teams li { clear:none; }
 
 .team_list img {
 	display:block;
@@ -124,3 +127,4 @@
 .team_detail .right .events .desc {
 	width:210px;
 }
+

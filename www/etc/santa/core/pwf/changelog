@@ -1,4 +1,7 @@
-8cb22dfae900972eff0ddfc4252fab9c77b58812 Merge branch 'master' of ssh://github.com/just-paja/pwf
+50631464614adf61051fbb543dc98b68e12ca109 Merge branch 'master' of ssh://github.com/just-paja/pwf
+867b37940f591f73d092bfc843212620ec5b67e9 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+fd0583f0e8d01a20c89f5614ef612f3e2e62f626 Forms, null values
+53202e565f3a402b9e6fe0d7470cbd6ad1b02369 Browser lib
 c84f9707b870e19e47e6284fc4f669e1ecc58bfc Template, to_html, code minification
 40b3bc82b30a37aa7f8c799d2a62b10f80bf07f7 Image, to_html, default size
 20072f54c70e20c2ec5aba0bfc5412e437f8a620 Fatal error page title
@@ -6,6 +9,7 @@ a3c31773a5d391514535247267188c9261985c97 Image size
 ec62c028a9b5748a95fffc034714b15870a00f70 Forms, input alias
 ca40ffd4e09ec10cdd0fd930806a5064ed196eab Li alias
 234ad0f5ffe1306c07d953e312af26602138d2cb Img alias
+8cb22dfae900972eff0ddfc4252fab9c77b58812 Merge branch 'master' of ssh://github.com/just-paja/pwf
 30807e2772abfc91e0983ca117bc77204848b3aa Merge branch 'master' of ssh://github.com/just-paja/pwf
 608665e5c00aa4fde128dd2f65b05ac281e1db95 Merge branch 'master' of ssh://github.com/just-paja/pwf
 a30ef7cdd4ccf0653d680e8b16346f21391275e2 Settings, init

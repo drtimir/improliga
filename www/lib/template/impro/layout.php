@@ -4,6 +4,7 @@ Tag::doctype();
 Tag::html();
 	Tag::head();
 		content_for('scripts', 'lib/html5');
+		content_for('scripts', 'pwf/browser_control');
 		content_for('styles', 'pwf/calendar');
 		content_for('styles', 'impro/layout/base');
 		content_for('styles', 'impro/layout/footer');
@@ -11,6 +12,7 @@ Tag::html();
 		content_for('styles', 'impro/events');
 		content_for('styles', 'impro/teams');
 		content_for('styles', 'impro/about');
+		content_for('styles', 'pwf/browser_control');
 		echo content_from('head');
 
 		?>

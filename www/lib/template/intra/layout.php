@@ -9,6 +9,7 @@ Tag::html();
 	Tag::head();
 		content_for('styles', 'pwf/elementary');
 		content_for('styles', 'pwf/calendar');
+		content_for('styles', 'pwf/browser_control');
 
 		content_for("styles", "form/search_tool");
 
@@ -25,6 +26,7 @@ Tag::html();
 		content_for('styles', 'intra/rte');
 
 		content_for('scripts', 'lib/jquery/fancybox');
+		content_for('scripts', 'pwf/browser_control');
 		content_for('scripts', 'site/intranet');
 
 		echo content_from('head');

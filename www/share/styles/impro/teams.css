@@ -23,6 +23,7 @@
 	width:118px;
 	height:100px;
 	margin-right:10px;
+	border:none;
 }
 
 .team_list .desc {
@@ -69,6 +70,10 @@
 .team_heading .team_logo {
 	float:left;
 	margin-right:15px;
+}
+
+.team_heading .team_logo img {
+	border:none;
 }
 
 .team_heading .name {

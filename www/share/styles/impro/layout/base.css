@@ -301,3 +301,7 @@ header .main li .link-selected { background-color:#c12630 }
 	padding:0;
 	list-style:none;
 }
+
+.browser-deprecation .box, .browser-deprecation .icon {
+	z-index:100;
+}

@@ -1,7 +1,7 @@
 pwf.register('browser_control.js', function()
 {
 	var min_versions = {
-		"firefox":22,
+		"firefox":15,
 		"chrome":14,
 		"opera":12,
 		"ie":10,

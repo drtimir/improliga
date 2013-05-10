@@ -5,7 +5,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 }
 
 Tag::doctype();
-Tag::html();
+Tag::html(array("lang" => \System\Locales::get_lang()));
 	Tag::head();
 		content_for('styles', 'pwf/elementary');
 		content_for('styles', 'pwf/calendar');

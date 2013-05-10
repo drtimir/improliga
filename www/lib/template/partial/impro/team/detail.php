@@ -2,30 +2,27 @@
 
 Tag::div(array("class" => 'team_detail'));
 
-	$hq = $team->hq ? Stag::div(array("class" => 'map', "content" => array(
+	$hq = $team->hq ? div('map', array(
 		$team->hq->map_html(300, 300),
-		Stag::div(array(
-			"class" => 'playground',
-			"content" => array(
-				heading('Domácí hřiště', false, 3),
-				Stag::div(array("class" => 'location', "content" => array(
-					Stag::strong(array("content" => $team->hq->name)),
-					Stag::br(),
-					Stag::span(array("class" => 'addr',"content" => $team->hq->addr)),
-				))),
-			)
+		div('playground', array(
+			heading('Domácí hřiště', false, 3),
+			div('location', array(
+				Stag::strong(array("content" => $team->hq->name)),
+				Stag::br(),
+				span('addr', $team->hq->addr),
+			)),
 		)),
-	))):'';
+	)):'';
 
 	echo div('header', array(
 		div('team_heading', array(
-			div('team_logo', link_for(Stag::img(array("src" => $team->logo->thumb_trans(188, 165))), $team->logo->get_path())),
+			div('team_logo', link_for($team->logo->to_html(188, 165), $team->logo->get_path(), array("class" => 'fancybox'))),
 			div('name', array(
 				section_heading($team->name),
 				heading($team->name_full),
 			))
 		)),
-		div('img', link_for(Stag::img(array("src" => $team->photo->thumb(600, 300), "alt" => $team->get_name())), $team->photo->get_path())),
+		div('img', link_for($team->photo->to_html(600, 300), $team->photo->get_path(), array("class" => 'fancybox'))),
 		$hq,
 		Stag::div(array("class" => 'cleaner', 'close' => true)),
 	));

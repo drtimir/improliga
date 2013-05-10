@@ -1,0 +1,10 @@
+7a82e562dcb014f7072d6b198062f0aa  share/pixmaps/pwf/browsers/chrome.gif
+c058e01ec060737fa17d3e42e433e2ca  share/pixmaps/pwf/browsers/firefox.gif
+9a430786e0a719752bee7ecccec960b6  share/pixmaps/pwf/browsers/opera.gif
+f236ade74d0ed2687e264422785949b4  share/pixmaps/pwf/browsers/src/chrome.png
+f01a547c6fd26cebd2e175c8dfc9fbf5  share/pixmaps/pwf/browsers/src/firefox.png
+e5fc01bcdfd99177e58e7031053a88b9  share/pixmaps/pwf/browsers/src/opera.png
+d892137a7dd1b7000dc0a397aad0b8ff  share/pixmaps/pwf/warning_browser.png
+811cc967d942abc9abd252544d5f60d5  share/scripts/lib/browser.js
+2c2d389e55620f54d2a81caedf398054  share/scripts/pwf/browser_control.js
+ceb0bf28bc5faa0ad9eb7f77c36a1938  share/styles/pwf/browser_control.css

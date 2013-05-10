@@ -1,0 +1,96 @@
+.browser-deprecation {
+
+}
+
+.browser-deprecation .icon {
+	width:32px;
+	height:32px;
+	display:block;
+	background:url(/share/pixmaps/pwf/warning_browser.png);
+	position:absolute;
+	position:fixed;
+	right:0;
+	top:66px;
+	cursor:pointer;
+}
+
+.browser-deprecation .box {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.browser-deprecation .box .overlay {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:.85;
+	filter:alpha(opacity=85);
+	display:block;
+}
+
+
+.browser-deprecation .box .message {
+	color:#fff;
+	position:absolute;
+	width:100%;
+	height:20%;
+	top:25%;
+}
+
+.browser-deprecation .box .message .inner {
+	width:640px;
+	background:#000;
+	padding:3%;
+	margin:0 auto;
+	box-shadow:0 0 100px #333;
+	font-size:18px;
+}
+
+.browser-deprecation .box .message .heading {
+	font-size:48px;
+	margin-bottom:20px;
+}
+
+.browser-deprecation .box .message .text p {
+	margin:15px 0;
+}
+
+.browser-deprecation .box .message a { color:#FFFFFF }
+.browser-deprecation .box .message a:hover { color:#f90 }
+
+.browser-deprecation .box .message .text,
+.browser-deprecation .box .message .pass,
+.browser-deprecation .box .message .browsers
+{
+	font-family:"Droid Sans", "Segoe UI", _sans;
+}
+
+.browser-deprecation .box .message .pass { text-align:center; }
+
+.browser-deprecation .box .browsers {
+	height:65px;
+	width:300px;
+	margin:20px auto 10px;
+}
+
+.browser-deprecation .box .browsers a {
+	width:100px;
+	padding-top:53px;
+	height:12px;
+	display:block;
+	float:left;
+	font-size:10px;
+	text-decoration:none;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
+.browser-deprecation .box .browsers a.firefox { background-image:url(/share/pixmaps/pwf/browsers/firefox.gif); }
+.browser-deprecation .box .browsers a.chrome { background-image:url(/share/pixmaps/pwf/browsers/chrome.gif); }
+.browser-deprecation .box .browsers a.opera { background-image:url(/share/pixmaps/pwf/browsers/opera.gif); }

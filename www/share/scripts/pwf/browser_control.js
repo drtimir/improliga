@@ -1,7 +1,7 @@
 pwf.register('browser_control.js', function()
 {
 	var min_versions = {
-		"firefox":15,
+		"firefox":22,
 		"chrome":14,
 		"opera":12,
 		"ie":10,
@@ -95,6 +95,7 @@ pwf.register('browser_control.js', function()
 			var pass     = $('<a href="#">' + msg_pass + '</a>');
 			var pass_box = $('<div class="pass"/>')
 			var bro_box  = $('<div class="browsers"/>');
+			var show = pwf.storage.get('pwf_browser_warning');
 
 			cont.append([icon, box]);
 			box.append([overlay, msg_box]);
@@ -116,6 +117,10 @@ pwf.register('browser_control.js', function()
 			icon.bind('click', {"box":box}, callback_show);
 
 			$('html').append(cont);
+
+			if (show == 'hide') {
+				box.hide();
+			}
 		}
 	};
 
@@ -125,6 +130,7 @@ pwf.register('browser_control.js', function()
 		e.preventDefault();
 		e.stopPropagation();
 		e.data.box.stop(true).fadeIn(200);
+		pwf.storage.store('pwf_browser_warning', 'show');
 	};
 
 
@@ -133,6 +139,7 @@ pwf.register('browser_control.js', function()
 		e.preventDefault();
 		e.stopPropagation();
 		e.data.box.stop(true).fadeOut(200);
+		pwf.storage.store('pwf_browser_warning', 'hide');
 	};
 
 

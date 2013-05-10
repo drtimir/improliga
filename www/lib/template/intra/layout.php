@@ -27,6 +27,7 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 
 		content_for('scripts', 'lib/jquery/fancybox');
 		content_for('scripts', 'pwf/browser_control');
+		content_for('scripts', 'site/global');
 		content_for('scripts', 'site/intranet');
 
 		echo content_from('head');

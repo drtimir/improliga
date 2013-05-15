@@ -7,12 +7,15 @@
 	list-style:none;
 }
 
-.team_list li {
+.team_list .teams li {
 	display:block;
 	width:460px;
 	float:left;
 	margin-bottom:10px;
 }
+
+.team_list .cities li { clear:both; }
+.team_list .teams li { clear:none; }
 
 .team_list img {
 	display:block;
@@ -20,6 +23,7 @@
 	width:118px;
 	height:100px;
 	margin-right:10px;
+	border:none;
 }
 
 .team_list .desc {
@@ -66,6 +70,10 @@
 .team_heading .team_logo {
 	float:left;
 	margin-right:15px;
+}
+
+.team_heading .team_logo img {
+	border:none;
 }
 
 .team_heading .name {
@@ -124,3 +132,4 @@
 .team_detail .right .events .desc {
 	width:210px;
 }
+

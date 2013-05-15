@@ -124,7 +124,7 @@
 
 		"udalosti":{
 			"#":{
-				"title":"impro_events",
+				"title":"title_impro_events",
 				"template":["impro/layout", "impro/dual"],
 				"modules":[
 					["impro/event/calendar", {

@@ -15,8 +15,9 @@ footer .container {
 }
 
 footer h3 {
-	margin:0 0 7px;
+	margin:0 10px 7px;
 	padding:0;
+	float:left;
 }
 
 footer .dynamic {

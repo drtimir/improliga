@@ -1,9 +1,16 @@
 <?
 
 Tag::doctype();
-Tag::html();
+Tag::html(array("lang" => \System\Locales::get_lang()));
 	Tag::head();
+
 		content_for('scripts', 'lib/html5');
+		content_for('scripts', 'pwf/browser_control');
+		content_for('scripts', 'lib/jquery/fancybox');
+		content_for('scripts', 'site/global');
+		content_for('scripts', 'site/public');
+
+		content_for('styles', 'lib/fancybox');
 		content_for('styles', 'pwf/calendar');
 		content_for('styles', 'impro/layout/base');
 		content_for('styles', 'impro/layout/footer');
@@ -11,6 +18,8 @@ Tag::html();
 		content_for('styles', 'impro/events');
 		content_for('styles', 'impro/teams');
 		content_for('styles', 'impro/about');
+		content_for('styles', 'pwf/browser_control');
+
 		echo content_from('head');
 
 		?>

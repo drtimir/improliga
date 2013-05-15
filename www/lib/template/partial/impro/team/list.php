@@ -1,22 +1,29 @@
 <?
 
-Tag::div(array("class" => 'team_list'));
+echo div('team_list');
 
-	Tag::ul();
+	echo section_heading(l('title_impro_teams'));
+	echo ul('plain cities');
 
-		foreach ($teams as $team) {
+		foreach ($cities as $city=>$teams) {
 			Tag::li();
-				echo link_for(Stag::img(array("src" => $team->logo->thumb_trans(118, 100), "alt" => $team->name)), soprintf($link_team, $team));
+			echo heading($city, false);
 
-				Tag::div(array("class" => "desc", "content" => array(
-					Stag::strong(array("content" => link_for($team->name, soprintf($link_team, $team)))),
-					Stag::div(array("class" => 'name_full', "content" => $team->name_full)),
-					Stag::div(array("class" => 'city', "content" => $team->city)),
-				)));
-
-			Tag::close('li');
+			echo ul('plain teams');
+				foreach ($teams as $team) {
+					echo li(array(
+						link_for($team->logo->to_html(118, 100), soprintf($link_team, $team)),
+						div("desc", array(
+							Stag::strong(array("content" => link_for($team->name, soprintf($link_team, $team)))),
+							div('name_full', $team->name_full),
+							div('city', $team->city),
+						)),
+					));
+				}
+				close('ul');
+			close('li');
 		}
 
-	Tag::close('ul');
-	Tag::div(array("class" => 'cleaner', "close" => true));
-Tag::close('div');
+	close('ul');
+	echo span('cleaner', '');
+close('div');

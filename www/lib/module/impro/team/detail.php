@@ -16,7 +16,7 @@ def($slot_events, 'events');
 
 if ($team = find('Impro\Team', $id)) {
 
-	System\Output::set_title($team->name);
+	System\Output::set_title(t('title_impro_team', $team->name));
 
 	$start = new DateTime();
 	$events = get_all('\Impro\Event')->where(array(

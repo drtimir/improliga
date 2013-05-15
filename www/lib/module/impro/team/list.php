@@ -2,14 +2,25 @@
 
 def($template, "impro/team/list");
 def($conds, array("visible" => true));
-def($link_team, '/tymy/{seoname}');
+def($link_team, '/tymy/{seoname}/');
 
 $query = get_all('Impro\Team')->where($conds);
-$items = $query->paginate($per_page, $page)->sort_by('name')->fetch();
+$items = $query->sort_by('name')->fetch();
 $count = $query->count();
+$cities = array();
+
+foreach ($items as $team) {
+	if (!isset($cities[$team->city])) {
+		$cities[$team->city] = array();
+	}
+
+	$cities[$team->city][] = $team;
+}
+
+ksort($cities);
 
 $this->template($template, array(
-	"teams"     => $items,
+	"cities"     => $cities,
 	"count"     => $count,
 	"link_team" => $link_team,
 ));

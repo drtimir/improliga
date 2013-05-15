@@ -8,6 +8,10 @@
 	"impro_menu_news":"Novinky",
 	"impro_menu_intranet":"Intranet",
 
+	"title_impro_events":"Události Improligy",
+	"title_impro_teams":"Týmy Improligy",
+	"title_impro_team":"%s - Improliga",
+
 	"impro_match":"Zápas",
 	"impro_show":"Improshow",
 	"impro_long_form":"Longformy",

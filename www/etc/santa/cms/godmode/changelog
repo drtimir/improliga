@@ -1,4 +1,19 @@
-649b04ee68d042cd4e52af89bd52c8fe7b364641 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+d261da43e0931b576664690ec97bb56dc822d03e Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+24ce9490f4e6307fe754dfd7179ec66b8e63ab61 Godmode conditional init
+1203aa6e89a511689db5bac899810f0c5f517417 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+88355907ac33d392ce4db2cb3c4d9afee1def8b3 [fix] Admin, edit redirect
+26d0f39b5d8d2df13186b04da370ba3b1294745a Godmode conf
+e1f4679fa467479cb32ef1b6b593e060eade88ef Gitignore update
+6be08032baf368f3ead253aad1891b45a2086913 Redirects
+b3e87fd0edffe6ad3711fa9fca561347451a0cdf Routes, windows
+c33a344b453d59fa977832e0a0784167f9faa536 Drop godmode script
+a042348813c10c97d0721ad4f1710c9b73026298 Routes, new api
+5aeb89010a35c6242c7330fd0cf9b37054b1e2a9 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+a424a837221aa4aae7a9684226f6d10516e95e32 Gitignore update
+28d59f7bfbb2c7677edb215df227498685cee0df Merge branch 'dev' of ssh://github.com/just-paja/purple_godmode into dev
+2b0deb041f19d9c0859ff18ff7617a6cd7d31c1f Admin: edit belongs_to relations
+eeea39a619c604e5b9387f9962656d5280f4c1c3 [fix] Admin list
+722b8b2b60a43b114054d9561be53c65888f688b Gitignore update
 54505b67fcb5916201c8e099d25df7688b8a60dc Admin, edit, belongs_to
 cef94a46173165821ce191b259c69412e6676515 Admin, edit
 8b19c01612019b8c24370bb62d87676a5db2cadf Admin, list
@@ -7,9 +22,6 @@ cef94a46173165821ce191b259c69412e6676515 Admin, edit
 7bc83eb2c98a49d1b5f4064bf278cf9aba4fac98 [fix] Stash
 42eff9d74d3c6172fbeb5e0b34969e2fbf66815b Admin forms, choices
 b139e2feb932e970bdef76762ef38e5caa0cb416 Admin, detail
-a76cadddba9c79a236f86c3b382ec8090b7fb5da Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
-edc26f7766d3606785a01c4cb9ee3c7889055bc4 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
-ae8738bbd23232e6f082e6ca413a8ca2970c529b Merge branches 'master' and 'master' of ssh://github.com/just-paja/purple_godmode
 2ede528256bf4c7ec53b2da683d34d251cb57ac9 Gitignore update
 666c9376c6d7e207358981b4174066b16bb118ae Admin, relations
 e32ef12abd00f0d4777894e22c808df73409b91b Admin edit, protection

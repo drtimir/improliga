@@ -1,39 +1,11 @@
 <?
 
-require_once ROOT.'/etc/init.d/session.php';
+if (Godmode\Router::entered($request)) {
+	Godmode\Router::init();
 
-System\Init::full();
-Godmode\Router::init();
-
-content_for('scripts', 'lib/functions');
-content_for('scripts', 'lib/jquery');
-content_for('scripts', 'pwf');
-content_for('styles', 'pwf/elementary');
-
-$page = Godmode\Router::page();
-if (!($page instanceof System\Page)) {
-	throw new System\Error\NotFound();
-}
-
-foreach ($page->template as $t) {
-	if ($t == 'pwf/godmode/window') {
-		System\Flow::add('godmode/window/menu', array("slot" => 'menu'));
-		break;
+	if (!$request->logged_in()) {
+		if ($request->path != $request->url('god_login')) {
+			redirect_now($request->url('god_login'));
+		}
 	}
 }
-
-
-System\Output::set_title(System\Output::introduce(), l('GodMode'));
-System\Output::set_opts(array(
-	"format" => 'html',
-	"lang" => 'cs',
-	"title" => $page->title,
-	"template" => $page->template,
-));
-
-System\Flow::run();
-System\Flow::run_messages();
-
-System\Output::out();
-exit;
-System\Message::dequeue_all();

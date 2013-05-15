@@ -1,12 +1,12 @@
 <?
 
 $this->req('id');
-$this->req('link_cont');
+$this->req('link_god');
 
 if ($id && $user = find("\System\User", $id)) {
 
 	$heading = l('godmode_user_edit_passwd');
-	$f = new System\Form(array("id" => 'edit_user_groups', "heading" => $heading));
+	$f = $this->form(array("id" => 'edit_user_groups', "heading" => $heading));
 
 	$f->input_password('password', l('godmode_user_password'), true);
 	$f->input_password('password_check', l('godmode_user_password_check'), true);
@@ -18,7 +18,7 @@ if ($id && $user = find("\System\User", $id)) {
 		if ($p['password'] === $p['password_check']) {
 			$p['password'] = hash_passwd($p['password']);
 			$user->update_attrs($p)->save();
-			redirect(soprintf($link_cont, $user));
+			$flow->redirect(\Godmode\Router::url($request, $link_god, 'detail', array($user->id)));
 		} else {
 			$f->out($this);
 		}
@@ -26,7 +26,4 @@ if ($id && $user = find("\System\User", $id)) {
 		$f->out($this);
 	}
 
-} else {
-v($id);
-	//~ throw new System\Error\NotFound();
-}
+} else throw new System\Error\NotFound();

@@ -128,7 +128,7 @@
 .app-drawer menu li a .inner { display:none; }
 .app-drawer li a .icon {
 	vertical-align:middle;
-
+	line-height:32p;x
 }
 
 .app-drawer li.active a { background:rgba(160,32,240,0.5); }

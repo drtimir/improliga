@@ -2,21 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<?
-		content_for('styles', 'pwf/elementary');
-		content_for('styles', 'pwf/form');
-		content_for("styles", "pwf/god/base");
-		content_for("styles", "pwf/god/login");
+		$renderer->content_for('styles', 'pwf/elementary');
+		$renderer->content_for('styles', 'pwf/form');
+		$renderer->content_for("styles", "pwf/god/base");
+		$renderer->content_for("styles", "pwf/god/login");
 
-		cfg("dev", "debug") && content_for("styles", "devbar");
-		content_from("head");
+		cfg("dev", "debug") && $renderer->content_for("styles", "devbar");
+		$renderer->content_from("head");
 		?>
 	</head>
 
 	<body class="setup">
 		<div class="viewport">
 			<?
-				System\Output::yield();
-				System\Output::slot();
+				$renderer->yield();
+				$renderer->slot();
 			?>
 
 			<div class="browsers">

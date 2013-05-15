@@ -1,10 +1,11 @@
 [
 	{
-		"name":"godmode_users",
+		"title":"godmode_users",
+		"name":"users",
 		"icon":"modules/user_group",
 		"items":[
 			{
-				"name":"godmode_user_list",
+				"title":"godmode_user_list",
 				"icon":"items/user",
 				"model":"System::User",
 				"sort":["id desc"],
@@ -15,6 +16,7 @@
 				"window_root":true,
 				"object_menu":[
 					{
+						"title":"godmode_edit_passwd",
 						"name":"edit_passwd",
 						"icon":"modules/password",
 						"modules":[
@@ -24,7 +26,7 @@
 				]
 			},
 			{
-				"name":"godmode_user_groups",
+				"title":"godmode_user_groups",
 				"icon":"modules/user_group",
 				"model":"System::User::Group",
 				"window_root":true,
@@ -33,18 +35,19 @@
 		]
 	},
 	{
-		"name":"godmode_simple_objects",
+		"title":"godmode_simple_objects",
+		"name":"simple_objects",
 		"icon":"items/other",
 		"items":[
 			{
-				"name":"godmode_static_texts",
+				"title":"godmode_static_texts",
 				"icon":"items/text",
 				"model":"System::Text",
 				"window_root":true,
 				"attrs_list":["name", "visible", "updated_at"]
 			},
 			{
-				"name":"godmode_locations",
+				"title":"godmode_locations",
 				"icon":"items/location",
 				"model":"System::Location",
 				"window_root":true,

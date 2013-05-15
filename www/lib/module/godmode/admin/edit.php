@@ -1,7 +1,7 @@
 <?
 
 $this->req('model');
-$this->req('link_redir');
+$this->req('link_god');
 
 $model = System\Loader::get_class_from_model($model);
 
@@ -24,13 +24,22 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 	$rels = array();
 	$attrs = \Godmode\Admin::get_attr_list($item, $attrs_edit, $attrs_edit_exclude);
 	$default = $item->get_data();
-
 	$rel_attrs = \System\Model\Database::get_model_relations($model);
 
 	// Add belongs-to data
 	foreach ($rel_attrs as $rel_name=>$rel_def) {
 		if ($rel_def['type'] == \System\Model\Database::REL_BELONGS_TO) {
-			$default[$rel_name] = $item->$rel_name;
+			try {
+				$default[$rel_name] = $item->$rel_name;
+			} catch(\Exception $e) {
+				$default[$rel_name] = null;
+			}
+
+			$attrs[$rel_name] = array(
+				"type"  => \System\Model\Database::REL_BELONGS_TO,
+				"model" => $rel_def['model'],
+				"attrs" => $rel_def,
+			);
 		}
 	}
 
@@ -50,7 +59,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 		} else throw new System\Error\Format(sprintf('Cannot manage "%s" in tabs. It is not model relation of any kind.', $rel));
 	}
 
-	$f = new System\Form(array(
+	$f = $module->form(array(
 		"default" => $default,
 		"heading" => $heading,
 		"desc" => $desc,
@@ -224,7 +233,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			}
 		}
 
-		redirect(stprintf($link_redir, $item->get_data()));
+		$flow->redirect(\Godmode\Router::url($request, $link_god, 'detail', array($item->id)));
 
 	} else {
 		$f->out($this);

@@ -75,6 +75,7 @@
 
 	"godmode_model_object":"%s #%s",
 	"godmode_model_object_new":"Nový %s",
+	"godmode_model_object_list":"Seznam objektů třídy %s",
 
 	"end":""
 }

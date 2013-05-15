@@ -2,11 +2,11 @@
 
 $this->req('id');
 $this->req('model');
-$this->req('link_redir');
+$this->req('link_god');
 
 $model = System\Loader::get_class_from_model($model);
 
-def($heading, t('godmode_delete_object', strtolower(System\Model\Attr::get_model_model_name($model))));
+def($heading, t('godmode_delete_object', strtolower(System\Loader::get_model_from_class($model))));
 def($attrs_detail);
 
 
@@ -35,7 +35,7 @@ if ($item = find($model, $id)) {
 	}
 
 
-	$f = System\Form::create_delete_checker(array(
+	$f = $module->form_checker(array(
 		"heading" => $heading,
 		"info" => $info,
 	));
@@ -43,7 +43,7 @@ if ($item = find($model, $id)) {
 
 	if ($f->passed()) {
 		$item->drop();
-		redirect(soprintf($link_redir, $item));
+		$flow->redirect(\Godmode\Router::url($request, $link_god, 'list'));
 	} else {
 		$f->out($this);
 	}

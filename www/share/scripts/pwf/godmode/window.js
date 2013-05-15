@@ -103,6 +103,7 @@ $(function(){
 					this.update_size();
 					this.reset_events();
 					this.load_content();
+					this.focus();
 					return this;
 				};
 

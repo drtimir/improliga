@@ -2,7 +2,7 @@
 
 $this->req('model');
 $this->req('attrs_list');
-$this->req('link_cont');
+$this->req('link_god');
 
 $model = System\Loader::get_class_from_model($model);
 
@@ -52,10 +52,10 @@ foreach ($attrs_list as $attr) {
 		$col = array($attr, System\Model\Attr::get_model_attr_name($model, $attr), 'function');
 	}
 
-	if (isset($col)) {
+	if (any($col)) {
 		if ($x === 0) {
 			$col[2] = 'link-'.$col[2];
-			$col[3] = $link_cont;
+			$col[3] = $link_god;
 		}
 
 		$cols[] = $col;
@@ -66,11 +66,11 @@ foreach ($attrs_list as $attr) {
 
 $cols[] = array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete'));
 
-$this->template($template, array(
+$this->partial($template, array(
 	"cols"      => $cols,
 	"items"     => $items,
 	"heading"   => $heading,
 	"desc"      => $desc,
 	"count"     => $count,
-	"link_cont" => $link_cont,
+	"link_god"  => $link_god,
 ));

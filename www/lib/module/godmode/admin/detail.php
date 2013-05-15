@@ -2,7 +2,7 @@
 
 $this->req('id');
 $this->req('model');
-$this->req('link_cont');
+$this->req('link_god');
 
 def($heading, '');
 def($conds, array());
@@ -30,10 +30,10 @@ foreach ($attrs_detail as $attr) {
 	}
 }
 
-$this->template($template, array(
-	"item"      => $item,
-	"heading"   => $heading,
-	"link_cont" => $link_cont,
-	"attrs"     => $attrs,
-	"model"     => $model,
+$this->partial($template, array(
+	"item"     => $item,
+	"heading"  => $heading,
+	"link_god" => $link_god,
+	"attrs"    => $attrs,
+	"model"    => $model,
 ));

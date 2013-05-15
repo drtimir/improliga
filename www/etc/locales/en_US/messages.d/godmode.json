@@ -37,7 +37,7 @@
 	"godmode_user_perms":"Permissions",
 	"godmode_user_groups":"User groups",
 	"godmode_user_login":"Login name",
-	"godmode_user_name":"Name",
+	"godmode_user_name":Name",
 	"godmode_user_first_name":"First name",
 	"godmode_user_last_name":"Last name",
 	"godmode_last_login":"Last login",

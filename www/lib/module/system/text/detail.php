@@ -5,7 +5,7 @@ def($show_heading, true);
 def($template, 'system/text/detail');
 
 if ($id && $item = find('\System\Text', $id)) {
-	$this->template($template, array(
+	$this->partial($template, array(
 		"text" => $item,
 		"show_heading" => true,
 	));

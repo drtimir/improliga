@@ -149,9 +149,11 @@
 .window-content .menu-panel li.active { background:#696969; }
 .window-content .menu-panel li:hover { background:rgba(255,255,255,0.5); }
 
-.window-content .menu-panel .separator
+.window-content .menu-panel li.separator,
+.window-content .menu-panel li.separator:hover
 {
 	border-left:1px solid #ccc;
+	background:none;
 	width:1px;
 	height:42px;
 	margin-left:5px;

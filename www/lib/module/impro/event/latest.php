@@ -18,7 +18,7 @@ $start = new DateTime();
 $conds[] = "t0.start >= '".format_date($start, 'sql')."'";
 $items = get_all("\Impro\Event")->where($conds)->sort_by('start')->paginate($per_page, $page)->fetch();
 
-$this->template($template, array(
+$this->partial($template, array(
 	"events"       => $items,
 	"start"        => $start,
 	"heading"      => $heading,

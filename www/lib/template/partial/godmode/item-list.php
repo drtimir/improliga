@@ -3,11 +3,17 @@
 def($desc, '');
 def($heading, '');
 def($locals['heading']);
-def($locals['link_cont']);
 def($locals['name_format'], '{login}');
 
 if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 	define("H_TEMPLATE_UNIVERSAL_ADMIN_LIST", true);
+
+
+	function admin_list_url(array $static, array $args, $action = null)
+	{
+		return $static['request']->url('god_'.implode('_', $static['link_god']).'_'.$action, $args);
+	}
+
 
 	function admin_list_format_value(array $col, $item, array $static)
 	{
@@ -19,13 +25,14 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 
 			$str = '';
 			foreach ($col[3] as $label=>$action) {
-				$str .= icon_for('godmode/actions/'.($action ? $action:'detail'), 16, stprintf($static['link_cont'], $item->get_data()).$action, $label);
+				$url = admin_list_url($static, array($item->id), $action);
+				$str .= icon_for('godmode/actions/'.($action ? $action:'detail'), 16, $url, $label);
 			}
 
 			return $str;
 		} elseif (strpos($col[2], "link") === 0) {
 			$label_type = substr($col[2], 5);
-			return '<a href="'.stprintf($col[3], $item->get_data()).'">'.admin_list_format_value(array($col[0], $col[1], $label_type), $item, $static).'</a>';
+			return '<a href="'.admin_list_url($static, array($item->id), 'detail').'">'.admin_list_format_value(array($col[0], $col[1], $label_type), $item, $static).'</a>';
 		} elseif (strpos($col[2], "function") !== false) {
 			return call_user_func(array($item, $col[0]));
 		} elseif (strpos($col[2], "helper") !== false) {
@@ -111,7 +118,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 								foreach ($cols as $col) {
 									isset($col[2]) && $col[2] == 'actions' && $col[0] = 'actions';
 									?>
-									<td class="<?=$col[0]?>"><?=admin_list_format_value($col, $item, array("module_id" => $module_id, "link_cont" => $link_cont, "name_format" => $name_format))?></td>
+									<td class="<?=$col[0]?>"><?=admin_list_format_value($col, $item, array("request" => $locals['request'], "module_id" => $module_id, "link_god" => $link_god, "name_format" => $name_format))?></td>
 									<?
 								}
 								?>
@@ -216,10 +223,12 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		admin_list_draw_pagination($page, $count, $per_page, array('top'));
 	}
 
+	$locals['request'] = $request;
+
 	admin_list_draw_table($locals);
 
 	if (empty($items)) {
-		t_message("info", $heading, l('godmode_no_items'));
+		echo div("info", $heading, l('godmode_no_items'));
 	}
 
 	if (isset($count) && isset($per_page) && $count > $per_page) {

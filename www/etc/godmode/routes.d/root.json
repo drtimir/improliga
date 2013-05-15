@@ -1,22 +1,17 @@
-{
-	"#":{
+[
+	["/$", {
 		"title":"God Mode",
-		"template":["pwf/godmode/base"],
-		"modules":[
-		]
-	},
+		"layout":["pwf/godmode/base"],
+		"modules":[]
+	}, "god_home"],
 
-	"login":{"#":{
-		"template":["pwf/godmode/login"],
-		"modules":[
-			["godmode/login"]
-		]
-	}},
+	["/login/$", {
+		"layout":["pwf/godmode/login"],
+		"modules":[["godmode/login"]]
+	}, "god_login"],
 
-	"logout":{"#":{
-		"template":["pwf/godmode/logout"],
-		"modules":[
-			["godmode/logout"]
-		]
-	}}
-}
+	["/logout/$", {
+		"layout":["pwf/godmode/logout"],
+		"modules":[["godmode/logout"]]
+	}, "god_logout"]
+]

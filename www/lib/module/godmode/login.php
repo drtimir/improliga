@@ -1,15 +1,14 @@
 <?
 
-def($redirect_to, def($_SESSION['yacms-referer'], '/god/'));
-def($heading, l('User login'));
+def($heading, l('godmode_user_login'));
 
-if (System\User::logged_in()) {
+if ($request->logged_in()) {
 
-	redirect($redirect_to);
+	$flow->redirect($request->url('god_home'));
 
 } else {
 
-	$f = new System\Form(array(
+	$f = $this->form(array(
 		"id" => 'core-user-login',
 		"heading" => $heading,
 	));
@@ -22,9 +21,9 @@ if (System\User::logged_in()) {
 		$p = $f->get_data();
 
 		if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
-			if (System\User::login($user, $p['password'])) {
+			if ($user->login($request, $p['password'])) {
 				message('success', l('godmode_login_was_successful'), NULL, true);
-				redirect($redirect_to);
+				$flow->redirect($request->url('god_home'));
 			} else message('error', l('godmode_login'), l('godmode_bad_password'));
 		} else message('error', l('godmode_login'), l('godmode_bad_login'), true);
 	}

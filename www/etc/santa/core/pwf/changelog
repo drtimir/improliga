@@ -1,4 +1,98 @@
-8cb22dfae900972eff0ddfc4252fab9c77b58812 Merge branch 'master' of ssh://github.com/just-paja/pwf
+137807c2657685fe1f2d185b5f6dd2e9542e1eb4 Router, json preg
+7fb27a4e01d13cd420d4249a3847de5be9e7d5b7 Settings, global
+420cc0d23ff485b149dc24b24998113aadeb0677 [fix] Output error layout
+f5c31b464cab04080f5d7e42ad7abc1789d4b8a2 [fix] User, cookie name
+55231e74559277c6bd6ba39dd86ab9e6a71e1ce3 Redirect
+216402f88c3c4ab074cd34282ea16c9f034f3521 Contacts, name
+91e1fd0d847299f40d52dc225f4381ca03304219 Forms, Mistyped trololo
+ac4863728049ccf6c5600852e93f305f6416e3fd Router, args
+00e73a02400fee8976ad786a0abf731d9330fd2a Form, action
+a54f0b58e98cbc54292ca5de5738d0d0f6c0ba3c Forms, checker
+565a060dd7f22e4f994bb801e040322a9e3d4ad2 Forms, templates
+8def464fa84ac6f24d327977623bde3c5535286b Router, path propagation
+6e06731217a9f005528c9a63d490940425fc0f6e Modules, page
+4a9f63932440da85cbfb478c4b68855b3940c7ee Modules, required input
+81bc9a76c0b64f44c87e643476ff7d0bf8d2529a Request, user
+275b6384076159514d7d474cd893ae72e475808f Page init, session
+89c8bc22a5b12f598545744c6913286504db4c54 User, login
+44ea7cf0533af24b3ed5be8362150a35d6e40217 Response, templates
+2af8603d1aacf11c1f16aba25c6246fdbed6db3e User, drop old static methods
+5d97bb41afe23618883aa93664eea4176353890a Router, reverse urls
+151f4380203e311fc8b326828ce42675eb0f94ca Request, url shortcut
+dc09323e17f023239583074df0212abaa0c93500 Init, locals
+1eb691aa24d054b64efd36eec300b9ef8213f716 Page init
+7025358d3a5d13debb819f1b4f027d80a5f031dd Renderer - return values, docs
+efbda36ab965fd5098d6e8da10b1d0fbda3bc455 Response, attrs, docs
+3664a08bb8167dc724da89d1906fbd913c892d18 Page attrs
+b54a662e19eefb1f804c5f22cfb33991d8454cb1 Attr model, objects
+4acfbb7436445a1442d034dc0f4708693e329b8d Request inline docs
+ef97979227c306ce4aef7a1b8040b9b08be2da52 Non static users
+7241e687d3a924579da4b52b7f59cdfe9a7278cd Error reporting
+ccef4cc8367f9034f59d296bbe8563363e959261 Request, init
+49e850cedc9f71b01b4b47d091c0bf31c6971713 Class init
+36dd8fe9a11c293b1022e240e7e47bd5c2069303 Low level debug
+d2815996340a66348d1560d9b69a7c65f95556a2 Package postprocess
+2ca84488ae967778b6b1474c8edc10df05165c6e Renderer
+0e1df517852baeb6cb91ff45d61f9080444eb001 Autocompleter, post
+3ae0c4428167a4a8585d4fe2f0a4b982eb1d4ba8 Resources
+13f1f27dc21fd302f6642550d08030b21dd0309d Module class, old code
+e55890e4b3700aa93f1852d5f37681763ade9ff9 Response redirect
+b7912cced17cf5805eb9adbf41815b10a38c45a5 Aliases
+068637806b3e4a9d4d19e84c0b5ab950258c481f Renderer scripts
+7844c27460568684386ee4e9ae264083d6d2c41b Forms, locations
+9415bb2732a8f03b3f85701c18d7480b2e11854f Page init
+4fda37ae63b9e17833f5ef31b064fec67f8cd039 Form helper, ref
+ed572eee8875ae6e001ab713325e80f712077fcc Forms, binding
+86bae03c7d77d84f1dc8f8a45cc4a94c993cd50f Status txt template
+b7916f23e3f04cadb7c4ecdc9cdf377d91227fc6 Response output, modules
+2025052c7f9659aa3b244945986fa3e10274365f Init
+37c5f685f89af636f8fc720b638a9ae78932e5c6 Output
+af7e4f50e6027141857f45773f708774e8650e3c Form class
+bc1208c9c8d2d6ebb02bc2c30a1cd5041d57750c Api
+e82a926ad6f9ce799ec289cb944e65b11dfafcd7 Partial module
+35e8440569ea6e63bd2b0e09f9e41f0ea23ba555 Module, response
+2c54fe8e5feba429344f3849020e70f9b19a2d9f Dev bar
+a16e76869ae13812ec921ac3cb42572a1a0e08a1 Request, locales
+7398e672fb36f982083684cd33c902c98953684d Drop unused code
+c08c9c2bb40ee943b03e82ee0c062fde53442a53 Status class
+465faa0826f3805311733e0a6c46fb0e14fda9af Tag class
+8e33b7c94dc71ecf7691f9eb1dfab0cdcbd82339 Default template
+ea0a235bedd541fa4d05521e6fd89ea80a9b4c47 HTML Aliases
+1a648d54a84d3eb62925665a5d1a4c76b83dfa61 Output class
+f5bb2e16a71662d60a50b9e3c36c5d31721c9a50 HTTP class
+84ba0d0dd1a673f12792a5271f38492d838f78c6 Errors, http status
+36b7447be83aa00714007ae0fb08426c77524fc4 HTTP
+48f602e11a8c6392bd6db3af0c42878903cc63b6 Resources
+47006d7ee941d860d6a33da5efa002959420322b Icons
+e9d885c7252c3e65d4cd41a1b4ac0fd536cc11e8 Response docs
+e7fb18039bf97ac64d116a2ab7fbf449c7cc1f47 Request flow
+232cde1f20ad36b4cf3ed192961201d81aced8ca Router, reverse matching
+5548eba4fb95a428e1cabef3fe261a414af9aa3e Drop input class
+b5eb487bed21742e309e6980094db988eb8ae5dc Init, drop old code
+90207a6ae3c42d016b207c6cd184b68752c1601e Forms, path
+451782a9fa5a48b413d30d262dbe4c359949c51c System page, unused code
+5c7001c3f96dfbade35370a814536a420b0162cc Response flow
+cdc4aa3265860fd0b87e1b5510216667a7e4d7e8 Init
+4014c626d5779c00df86122ab2e390cdae9df677 Request, response - cli
+ccd3bb70a3c9e2a4714b3b8858293861324eb623 Database init
+377ecd26ef07506d925455d8f765fb2ce43e7834 Drop debug messages
+e2bb02076b1058706e21dcbbfac68d8d9cd5c339 Init, lld
+29d678f266e7d1ce17eaa8942e41f0e4b93877a8 Modules, forms
+2f08b9ecf21418c17c45993159529ecc755eb37b Tags, objects
+f9c1ce487f0a4b022145ea6220d17a3ecafaf50d Page
+19f334f822bb733d02ea3f8670cc889d1ef524b5 Form, response
+96e5047acf80c7303a801ebfaa8c8cf69afa56ca LLD
+b17c8cf15c5e3110de8209cde4a05d0862c2ad2d Alias to_json
+65d5fcffff774416344e23ae31e781dcc7053529 Various fixes
+c20d6d83cb36f7386d71369ca7f1174bc0f038c8 Api migrations
+0e76a880aaead395b117f4d9bfb6c3de1802b234 Page render rebuild
+746a8d607c087f9e2ee921ddc17b1c53fc327589 Gitignore update
+f9ecb3f5d53784006cbdcf48f4dc076843a059da Attr protection
+45c12c97771755756dfefe7e3726ba5d213325d4 Aliases, li
+d8b09fd4f06acf72b64f6f3ef1a028b37d381d26 Tags, html lang
+867b37940f591f73d092bfc843212620ec5b67e9 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
+fd0583f0e8d01a20c89f5614ef612f3e2e62f626 Forms, null values
+53202e565f3a402b9e6fe0d7470cbd6ad1b02369 Browser lib
 c84f9707b870e19e47e6284fc4f669e1ecc58bfc Template, to_html, code minification
 40b3bc82b30a37aa7f8c799d2a62b10f80bf07f7 Image, to_html, default size
 20072f54c70e20c2ec5aba0bfc5412e437f8a620 Fatal error page title
@@ -6,8 +100,6 @@ a3c31773a5d391514535247267188c9261985c97 Image size
 ec62c028a9b5748a95fffc034714b15870a00f70 Forms, input alias
 ca40ffd4e09ec10cdd0fd930806a5064ed196eab Li alias
 234ad0f5ffe1306c07d953e312af26602138d2cb Img alias
-30807e2772abfc91e0983ca117bc77204848b3aa Merge branch 'master' of ssh://github.com/just-paja/pwf
-608665e5c00aa4fde128dd2f65b05ac281e1db95 Merge branch 'master' of ssh://github.com/just-paja/pwf
 a30ef7cdd4ccf0653d680e8b16346f21391275e2 Settings, init
 c72853537df887b74f54ce2f651c62ce7ab65a8a Page, search
 27d590305826dcb6bc6935cd24f31a18e08abd03 Routes, regex
@@ -15,17 +107,12 @@ ad64cd7722bb5720074bcb89929a7ac60f62e365 Directory structure
 e328957bed32350ac29f0805f2d3ef16db065e82 Drop old files
 9ffafd4222d977ab0a3f44c3ccc7fc680eb6693b Dev bar, transparency
 941d4d4f110c3789d6252bd0355f539ffda871bd Forms, template
-e13743f9f38916c8d750c022b134656bc6b89ab1 Merge branch 'master' of ssh://github.com/just-paja/pwf
 2a8899963fe586faf378c4888352d5744baec0ad Image class
 4cd2f6a5e52fcdee21ad11d2def8fa9e74dd6d4a Anonymous user
-cb7711137d47e8ebcd433602af67f5153398716e Merge branch 'master' of ssh://github.com/just-paja/pwf
 9b13d33685bcb81708a66514cc8e0acc603aaf0c [fix] Contact, namespaces
-5094a280df605008538f78ac687f11100ab4058a Merge branch 'master' of ssh://github.com/just-paja/pwf
 6559be8f303759ef47107b6eb38feabfc3f00c91 [fix] Contact, namespaces
-5916ee8d76090144bc4e228642c2ee7337af4e96 Merge branch 'master' of ssh://github.com/just-paja/pwf
 b73b6345ced6a74471328abf7eaa16be670ee298 Span alias
 30030081c72c1a406b63d38aa01c73d4de358dda User contact
-1a0ee15e7f5caa7a6452015729dbce236c53b3f0 Merge branch 'master' of ssh://github.com/just-paja/pwf
 3ff5657cfc16e9ce2337d2dbf63bac26e55b8705 Make script, origin
 6787c34a0db59850a7f8617482ff23bad67f7674 Image class
 0be66e3f31c5355c6986ef04fbb648f5b5f6ac61 [fix] Image save
@@ -47,22 +134,14 @@ a0f2a659723a8ca030220fa4f5ac12fb7e32acf6 Database model
 e1e3c62e49041f15671b414c6094056e5a7fb5a0 Settings optimalization
 af884d9f5eac91815a5c93e29d9d91f76ed1a3c1 Tag class, revert to_html
 ced5693644831d1930d4288754513286e3c586db Form, data protection
-9bcce2a4f756de3793f63ebc189094e2f37ffe90 Merge branch 'master' of ssh://github.com/just-paja/pwf
 1bad9d685f8296945bab7114190c7b0877d192e3 Tags, content
-9474dd55010303df8dc38e0792fbd55f6c2e1127 Merge branch 'master' of ssh://github.com/just-paja/pwf
 507e802518ebcfe556c0ac35f0474f7dc144923a [temp] Data seed
-1c2e4f50e1bebf518f6a820c5a8980f49161b714 Merge branch 'master' of ssh://github.com/just-paja/pwf
 f1d8f8ef4cdb27fac8a5888d7a91c5079432f14e [temp] Images, data seed
-b3b0315ff6840b6978805bfff94966de722ff013 Merge branch 'master' of ssh://github.com/just-paja/pwf
 35b7b54e1cd9ef6343d54f7b24aa093e2083fe16 [fix] Attr model, attr convert
-d5c96bd4cfd0d6f8badf5bc1dc2c8cf93cbe4ba5 Merge branch 'master' of ssh://github.com/just-paja/pwf
 f0dbdc1787151c3930d9c6bd5405d8ac982633a5 JSON tweaks
-0213108420e5984c4ed697b0e822b6d1aff53d2b Merge branch 'master' of ssh://github.com/just-paja/pwf
 908c692a25d6b62e916758fce369bd360cb6b9d3 Attr model, revive gps
 3071c6a1bc4f4631ea0b490c299dc64b3007acf8 [fix] Database script
-07267443a8132972fbd5a258863472809caf75cc Merge branch 'master' of ssh://github.com/just-paja/pwf
 a1c8ed8d1ddd17adadfe3c6fdd7c92a752bfdd3f [fix] Template, to_json
-c41f6f4c2dbfe01ec7e3dd0b258f7e3c85419335 Merge branch 'master' of ssh://github.com/just-paja/pwf
 e235d4bb1984c6f33aa5bb02a3531009504ebb06 Database script, json dump and restore
 ce2354d0c18c4f9b095fd78848946fc6bef522c3 User setup, drop
 2b341496c448b0035ed292e442309a171affb618 Attr model, to_json
@@ -70,10 +149,8 @@ ce2354d0c18c4f9b095fd78848946fc6bef522c3 User setup, drop
 a474f83f6ea56cdb7dc1c2cada6934625e2d18fd Cli class, do_over
 3400abd8a8819defe2375bb1fa20d1bf61a7521d Functions, collect
 f1dd965de851398a7cd9f419e7d061cdc5bed3ec Dump bar, Minor changes
-7f30ce2b7172eadc50a89781567aca503af7c808 Merge branch 'master' of ssh://github.com/just-paja/pwf
 0435ae113e28d6991c176664ba9b08e9cb2cf627 Dump bar, templates
 626fed178014f1461ffc91a542be1566c537e330 Merge branch 'dev' of ssh://github.com/just-paja/pwf into dev
-f2bb87c8aa284be1507d261a03f09bf8cb30ffbc Merge branch 'master' of ssh://github.com/just-paja/pwf
 1c8d9f274131b00d25b0f32b57df14679a317a67 [fix] Module class, slots
 c94be3aa15b35abcffe72b53fbdb8680cd6a551a [fix] Santa, deprecated files
 1fd94337e789845df67139e44b6538e420f16d94 [fix] Santa

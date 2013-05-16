@@ -3,7 +3,7 @@
 Tag::div(array("class" => 'events'));
 
 	$months = System\Locales::get('date:months');
-	echo section_heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
+	echo $renderer->heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));

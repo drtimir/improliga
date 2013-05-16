@@ -67,9 +67,9 @@ $pm = clone $start;
 $pm->modify("-1 month");
 
 $months = System\Locales::get('date:months');
-title(t('impro_event_list_for_month', $months[$month]));
+$response->renderer()->title = t('impro_event_list_for_month', $months[$month]);
 
-$this->template($template, array(
+$this->partial($template, array(
 	"events"     => $events,
 	"year"       => $year,
 	"month"      => $month,

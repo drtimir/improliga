@@ -1,26 +1,26 @@
 <?
 
-Tag::doctype();
+echo doctype();
 Tag::html(array("lang" => \System\Locales::get_lang()));
 	Tag::head();
 
-		content_for('scripts', 'lib/html5');
-		content_for('scripts', 'pwf/browser_control');
-		content_for('scripts', 'lib/jquery/fancybox');
-		content_for('scripts', 'site/global');
-		content_for('scripts', 'site/public');
+		$renderer->content_for('scripts', 'lib/html5');
+		$renderer->content_for('scripts', 'pwf/browser_control');
+		$renderer->content_for('scripts', 'lib/jquery/fancybox');
+		$renderer->content_for('scripts', 'site/global');
+		$renderer->content_for('scripts', 'site/public');
 
-		content_for('styles', 'lib/fancybox');
-		content_for('styles', 'pwf/calendar');
-		content_for('styles', 'impro/layout/base');
-		content_for('styles', 'impro/layout/footer');
-		content_for('styles', 'impro/layout/homepage');
-		content_for('styles', 'impro/events');
-		content_for('styles', 'impro/teams');
-		content_for('styles', 'impro/about');
-		content_for('styles', 'pwf/browser_control');
+		$renderer->content_for('styles', 'lib/fancybox');
+		$renderer->content_for('styles', 'pwf/calendar');
+		$renderer->content_for('styles', 'impro/layout/base');
+		$renderer->content_for('styles', 'impro/layout/footer');
+		$renderer->content_for('styles', 'impro/layout/homepage');
+		$renderer->content_for('styles', 'impro/events');
+		$renderer->content_for('styles', 'impro/teams');
+		$renderer->content_for('styles', 'impro/about');
+		$renderer->content_for('styles', 'pwf/browser_control');
 
-		echo content_from('head');
+		echo $renderer->content_from('head');
 
 		?>
 		<link rel="icon" type="image/ico" href="/favicon.ico">
@@ -62,8 +62,8 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 
 			Tag::div(array("id" => 'content'));
 				Tag::div(array("class" => 'container'));
-					yield();
-					slot();
+					$renderer->yield();
+					$renderer->slot();
 				Tag::close('div');
 			Tag::close('div');
 		Tag::close('div');
@@ -71,34 +71,29 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 		Tag::footer();
 			Tag::div(array("class" => 'container'));
 				Tag::div(array("class" => 'dynamic'));
-					echo div('social', array(
-						icon_for('impro/social/facebook', 32, 'http://www.facebook.com/improligacz', 'Improliga na facebooku')
-					));
+					echo div('social', icon_for('impro/social/facebook', 32, 'http://www.facebook.com/improligacz', 'Improliga na facebooku'));
 					echo div(array("class" => 'partners'));
-						echo section_heading(l('impro_partners'), 3);
-
-						\System\Template::partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
+						echo $renderer->heading(l('impro_partners'));
+						$renderer->render_partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
 					close('div');
-					Tag::span(array("class" => 'cleaner', "close" => true));
+					echo span('cleaner', '');
 				close('div');
 
-
 				echo div('system');
-					echo div('left');
-						Tag::menu(array("class" => 'plain main'));
-							Tag::li(array("content" => link_for(l('impro_menu_home'), '/')));
-							Tag::li(array("content" => link_for(l('impro_menu_intranet'), '/intranet/')));
-							Tag::li(array("content" => link_for(l('impro_menu_teams'), '/tymy/')));
-							Tag::li(array("content" => link_for(l('impro_menu_events'), '/udalosti/')));
-							Tag::li(array("content" => link_for(l('impro_menu_about'), '/o-improlize/')));
-							Tag::li(array("content" => link_for(l('impro_contact'), '/kontakty/')));
-						close('menu');
-					close('div');
+					echo div('left', STag::menu(array(
+						"class" => 'plain main',
+						"content" => array(
+							li(link_for(l('impro_menu_home'), '/')),
+							li(link_for(l('impro_menu_intranet'), '/intranet/')),
+							li(link_for(l('impro_menu_teams'), '/tymy/')),
+							li(link_for(l('impro_menu_events'), '/udalosti/')),
+							li(link_for(l('impro_menu_about'), '/o-improlize/')),
+							li(link_for(l('impro_contact'), '/kontakty/')),
+						)
+					)));
 
-					echo div('right');
-						echo div('credits', t('impro_credits', System\Output::introduce()));
-					close('div');
-					Tag::span(array("class" => 'cleaner', "close" => true));
+					echo div('right', div('credits', t('impro_credits', introduce())));
+					echo span('cleaner', '');
 				close('div');
 			close('div');
 		close('footer');

@@ -16,7 +16,7 @@ def($slot_events, 'events');
 
 if ($team = find('Impro\Team', $id)) {
 
-	System\Output::set_title(t('title_impro_team', $team->name));
+	$response->renderer()->title = t('title_impro_team', $team->name);
 
 	$start = new DateTime();
 	$events = get_all('\Impro\Event')->where(array(
@@ -29,8 +29,8 @@ if ($team = find('Impro\Team', $id)) {
 	))->sort_by('start desc')->fetch();
 
 
-	$this->template($template, array("team" => $team));
-	$this->template($template_events, array(
+	$this->partial($template, array("team" => $team));
+	$this->partial($template_events, array(
 		"slot"         => $slot_events,
 		"events"       => $events,
 		"start"        => $start,

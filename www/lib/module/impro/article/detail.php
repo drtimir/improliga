@@ -7,7 +7,7 @@ def($conds, array("visible" => true));
 
 if ($article = find('Impro\Article', $id)) {
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"article"  => $article,
 		"chapters" => $article->chapters->where($conds)->fetch(),
 	));

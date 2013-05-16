@@ -1,3 +1,9 @@
+b47aeeff8cbf1bb2a1f733d77b7a87e9add8b0e2 Introduce fix
+a808ba032e3de7e6ac943a845054edc93e52bc02 Headings
+3db531c743b0298fb7cb71bb2653c3e134570097 Template class modernization
+f4646f47d32fe2d7332af8c493dd009154096de1 Drop old aliases
+f33b2d6a95557cf64b3b05e6245946de6587b3aa Page init
+d9845564d6e108852d69996527cd391077fc35a8 Drop old aliases
 137807c2657685fe1f2d185b5f6dd2e9542e1eb4 Router, json preg
 7fb27a4e01d13cd420d4249a3847de5be9e7d5b7 Settings, global
 420cc0d23ff485b149dc24b24998113aadeb0677 [fix] Output error layout

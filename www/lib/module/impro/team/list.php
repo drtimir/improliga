@@ -19,7 +19,7 @@ foreach ($items as $team) {
 
 ksort($cities);
 
-$this->template($template, array(
+$this->partial($template, array(
 	"cities"     => $cities,
 	"count"     => $count,
 	"link_team" => $link_team,

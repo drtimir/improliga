@@ -1,11 +1,11 @@
 <?
 
-Tag::div(array("class" => 'team_detail'));
+echo div('team_detail');
 
 	$hq = $team->hq ? div('map', array(
 		$team->hq->map_html(300, 300),
 		div('playground', array(
-			heading('Domácí hřiště', false, 3),
+			$renderer->heading_static('Domácí hřiště', 3),
 			div('location', array(
 				Stag::strong(array("content" => $team->hq->name)),
 				Stag::br(),
@@ -18,13 +18,13 @@ Tag::div(array("class" => 'team_detail'));
 		div('team_heading', array(
 			div('team_logo', link_for($team->logo->to_html(188, 165), $team->logo->get_path(), array("class" => 'fancybox'))),
 			div('name', array(
-				section_heading($team->name),
-				heading($team->name_full),
+				$renderer->heading($team->name, 1),
+				$renderer->heading($team->name_full),
 			))
 		)),
 		div('img', link_for($team->photo->to_html(600, 300), $team->photo->get_path(), array("class" => 'fancybox'))),
 		$hq,
-		Stag::div(array("class" => 'cleaner', 'close' => true)),
+		span('cleaner', ''),
 	));
 
 	$info = array();
@@ -38,18 +38,16 @@ Tag::div(array("class" => 'team_detail'));
 	}
 
 	echo div('left', array(
-		Stag::ul(array("content" => $info, "class" => 'info plain team_info')),
+		ul('info plain team_info', $info),
 		div('team_desc desc', $team->about),
 	));
 
 	echo div('right');
-		echo heading(l('impro_team_events'));
+		echo $renderer->heading_static(l('impro_team_events'));
 
-		//~ if (any($events)) {
-			slot('events');
-		//~ }
+		$renderer->slot('events');
 
 	close('div');
 
-	Tag::div(array("class" => 'cleaner', 'close' => true));
+	echo span('cleaner', '');
 close('div');

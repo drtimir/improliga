@@ -1,7 +1,7 @@
 [
 	["^/$", {
 		"title":"impro_name",
-		"template":["impro/layout", "impro/homepage"],
+		"layout":["impro/layout", "impro/homepage"],
 		"modules":[
 			["system/text/detail", {"slot":"left", "id":1}],
 			["impro/event/latest", {
@@ -27,7 +27,7 @@
 
 	["^/o-improlize/$", {
 		"title":"impro_menu_about",
-		"template":["impro/layout", "impro/dual_34_14"],
+		"layout":["impro/layout", "impro/dual_34_14"],
 		"modules":[
 			["system/text/detail", {"id":2, "slot":"left"}],
 			["impro/article/category/list", {"slot":"right"}]
@@ -43,22 +43,23 @@
 
 	["^/fauly/([^/]+)/$", {
 		"modules":[
-			["impro/foul/detail", {"id":"#{1}", "slot":"left"}],
+			["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
 			["impro/foul/list", {"slot":"right"}]
 		]
 	}, "public_foul_detail"],
 
 	["^/o-improlize/([^/]+)/$", {
+		"layout":["impro/layout", "impro/dual_34_14"],
 		"title":"impro_article",
 		"modules":[
-			["impro/article/detail", {"id":"#{1}", "slot":"left"}],
+			["impro/article/detail", {"id":"#{0}", "slot":"left"}],
 			["impro/article/category/list", {"slot":"right"}]
 		]
 	}, "public_article"],
 
 	["^/media-o-nas/$", {
 		"title":"impro_menu_media",
-		"template":["impro/layout", "impro/single"],
+		"layout":["impro/layout", "impro/single"],
 		"modules":[
 			["system/partial", {"template":"impro/static/media"}]
 		]
@@ -66,21 +67,22 @@
 
 	["^/tymy/$", {
 		"title":"impro_menu_teams",
-		"template":["impro/layout", "impro/single"],
+		"layout":["impro/layout", "impro/single"],
 		"modules":[
 			["impro/team/list"]
 		]
 	}, "public_teams"],
 
 	["^/tymy/([^/]+)/$", {
+		"layout":["impro/layout", "impro/single"],
 		"modules":[
-			["impro/team/detail", {"id":"#{1}"}]
+			["impro/team/detail", {"id":"#{0}"}]
 		]
 	}, "public_team_detail"],
 
 	["^/kontakty/$", {
 		"title":"impro_contacts",
-		"template":["impro/layout", "impro/dual"],
+		"layout":["impro/layout", "impro/dual"],
 		"modules":[
 			["system/text/detail", {"id":4, "slot":"left"}],
 			["system/text/detail", {"id":3, "slot":"right"}]
@@ -89,7 +91,7 @@
 
 	["^/udalosti/$", {
 		"title":"impro_events",
-		"template":["impro/layout", "impro/dual"],
+		"layout":["impro/layout", "impro/dual"],
 		"modules":[
 			["impro/event/calendar", {
 				"slot":"left",
@@ -112,10 +114,10 @@
 	}, "public_events"],
 
 	["^/udalosti/([^/]+)/$", {
-		"template":["impro/layout", "impro/single"],
+		"layout":["impro/layout", "impro/single"],
 		"modules":[
 			["impro/event/detail", {
-				"id":"#{1}",
+				"id":"#{0}",
 				"col_width":440,
 				"template":"impro/event/detail_short",
 				"link_team":"/tymy/{seoname}/",
@@ -125,6 +127,7 @@
 	}, "public_event_detail"],
 
 	["^/udalosti/seznam/$", {
+		"layout":["impro/layout", "impro/dual"],
 		"title":"impro_events",
 		"modules":[
 			["impro/event/latest", {
@@ -147,6 +150,7 @@
 	}, "public_event_list"],
 
 	["^/udalosti/seznam/([^/]+)/$", {
+		"layout":["impro/layout", "impro/dual"],
 		"modules":[
 			["impro/event/calendar", {
 				"slot":"right",
@@ -154,7 +158,7 @@
 				"link_month":"/udalosti/seznam/{year}-{month}/",
 				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"link_day_piece":"den_{day}",
-				"month_input":"#{1}"
+				"month_input":"#{0}"
 			}],
 			["impro/event/calendar", {
 				"slot":"left",
@@ -163,7 +167,7 @@
 				"link_month":"/udalosti/seznam/{year}-{month}/",
 				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"link_day_piece":"den_{day}",
-				"month_input":"#{1}"
+				"month_input":"#{0}"
 			}]
 		]
 	}, "public_event_month"],

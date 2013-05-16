@@ -11,11 +11,10 @@ def($col_width, 270);
 
 if ($id && $item = find('\Impro\Event', $id)) {
 
-	title($item->title);
-	$controls = user()->id == $item->id_author || user()->has_right('edit_events');
-	System\Output::set_title($item->name);
+	$controls = $request->user()->id == $item->id_author || $request->user()->has_right('edit_events');
+	$response->renderer()->title = $item->name;
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"event"       => $item,
 		"link_cont"   => $link_cont,
 		"link_team"   => $link_team,

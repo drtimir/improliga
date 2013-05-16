@@ -1,9 +1,9 @@
 <?
 
-content_for("styles", 'calendar');
+$renderer->content_for("styles", 'calendar');
 
 Tag::div(array("class" => 'calendar'));
-	if ($heading) echo section_heading($heading, 1);
+	if ($heading) echo $renderer->heading($heading);
 
 	Tag::div(array("class" => 'calendar-'.$mode));
 		Tag::div(array("class" => 'calendar-'.$mode.'-inner'));

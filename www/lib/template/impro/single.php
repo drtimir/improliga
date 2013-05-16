@@ -1,10 +1,10 @@
 <?
 
-Tag::div(array("class" => 'page-block'));
+echo div('page-block');
 
-	Tag::div(array("class" => array('block', 'content')));
-		slot();
-	Tag::close('div');
+	echo div(array('block', 'content'));
+		$renderer->slot();
+	close('div');
 
-Tag::close('div');
+close('div');
 

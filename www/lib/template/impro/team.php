@@ -1,8 +1,6 @@
 <?
 
-Tag::div(array("class" => 'page-block'));
-
-	slot();
-
-Tag::close('div');
+echo div(array("class" => 'page-block'));
+	$renderer->slot();
+close('div');
 

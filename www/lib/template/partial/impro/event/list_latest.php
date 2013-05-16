@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'events'));
 
-	echo section_heading($heading);
+	echo $renderer->heading($heading);
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));

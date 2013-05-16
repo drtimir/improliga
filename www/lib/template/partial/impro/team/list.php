@@ -2,12 +2,12 @@
 
 echo div('team_list');
 
-	echo section_heading(l('title_impro_teams'));
+	echo $renderer->heading(l('title_impro_teams'));
 	echo ul('plain cities');
 
 		foreach ($cities as $city=>$teams) {
 			Tag::li();
-			echo heading($city, false);
+			echo $renderer->heading_static($city);
 
 			echo ul('plain teams');
 				foreach ($teams as $team) {

@@ -1,4 +1,4 @@
-569be76d7f44822b518ad93929c80654  lib/include/system.php
+48ed4efd0ac0b6a8ef5e838ec2bf6424  lib/include/system.php
 0986e15881f79312f8e169f9be435714  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 d600c65b5a66a29f33267c38443ac2f9  bin/santa
@@ -33,7 +33,6 @@ fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
 8686e05b8e7442da221a07665f3e6f9c  etc/locales/en_US/modules.d/date.core.json
 cd3080dc84bff793c79a82a205e6e678  etc/rewrite.d/010-init
 7cbca75ba7dd283cc64af359a297f1b3  etc/rewrite.d/040-resources
-64c2090d7243b29582a71dc6ec6e6241  etc/rewrite.d/041-status
 19f30fe9cacb97fec2c26e1a71ab35c5  etc/rewrite.d/050-end_slash
 19dadc06da8b56fbd31dff6e7b56d3c8  etc/rewrite.d/060-security
 d271908728164867d07bcae9f4252907  etc/rewrite.d/090-pass
@@ -41,7 +40,6 @@ d41d8cd98f00b204e9800998ecf8427e  etc/routes.d/.repo_fix
 5b92db83b23338dff7d4eedf6fb2b68a  index.php
 050a9be852f0f4c82874a7fdd4538125  lib/common/icon.php
 8b4dec4a995be52ded9da0684e99a2c2  lib/common/resource.php
-098e4f8d2665caa9c5190a2ead6557b5  lib/common/status.php
 b7a7bbc4f78ae77a4ccf360261c4c214  lib/helper/database/attr.php
 bb549517929139ac38bd16edf605eb52  lib/helper/database/mysqli/column.php
 798adf4305080539bacdfcc76ba3a22c  lib/helper/database/mysqli/database.php
@@ -62,9 +60,7 @@ fe28d8cb5ce0445eb23e3de96b604911  lib/template/partial/system/error/403.php
 5e0e4ab2a29fbac712e41c62de740d49  lib/template/partial/system/error/bug.php
 5d085b082ecfc791a603fad984d981f7  lib/template/partial/system/error/bug.txt.php
 9aafebf669735008954f95ecf7dbbcad  lib/template/partial/system/form.php
-439ec95a557bf60f7d8cd55b682385e9  lib/template/partial/system/message.php
-b80a8f7b0f1ca2336e6a4eb9232b0163  lib/template/partial/system/status-full.php
-b680f730b82f1fe1acd574d7b74714b2  lib/template/partial/system/status.html.php
+488cb9ab2ff2eb2a693300486949bf19  lib/template/partial/system/status.html.php
 2e88a3ee48db73d55b7fd4e546963b3f  lib/template/partial/system/status.txt.php
 a6e0d558610fbe21092104292c49b091  lib/template/pwf/default.html.php
 7a2410539eea2643e8636abb9c5db065  lib/template/pwf/errors/fatal.html.php

@@ -187,7 +187,7 @@ header .main li a {
 }
 
 header .main li a:hover { background-color:#666 }
-header .main li .link-selected { background-color:#c12630 }
+header .main li .active { background-color:#c12630 }
 
 #content {
 	margin:0;

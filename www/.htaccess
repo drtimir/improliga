@@ -12,17 +12,11 @@ RewriteRule ^share/icons/(([a-zA-Z0-9\-\_]*)/)?([0-9]{1,4})/([a-zA-Z0-9\-]*)/([a
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^share/([a-zA-Z]+)/([0-9a-zA-Z\.\-;_=:\/]*)$ lib/common/resource.php?type=$1&modules=$2 [L]
 
-# Catch status page
-RewriteRule ^status\/?$ lib/common/status.php [L]
-
 # Add trailing slash to the end
 RewriteCond %{REQUEST_URI} ^.+$
 RewriteCond %{REQUEST_URI} [^/]$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule (.*) /$1\/ [R=301,L]
-
-# Pass request to YaCMS
-RewriteRule ^god/ /godmode.php [L,QSA]
 
 # Deny access to sensitive dirs
 RewriteRule ^(bin|etc|(lib(?!/common))|(var/(backups|cache|log))) ./index.php [QSA]

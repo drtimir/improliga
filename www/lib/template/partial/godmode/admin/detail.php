@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'admin_detail'));
 
-	echo section_heading(t('godmode_object_name', ucfirst(System\Loader::get_class_trans($model)), $item->get_name()));
+	echo $renderer->heading(t('godmode_object_name', ucfirst(System\Loader::get_class_trans($model)), $item->get_name()));
 
 	Tag::ul(array("class" => 'attrs plain'));
 		$parity = 'odd';

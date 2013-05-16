@@ -1,17 +1,20 @@
 <?
 
-Tag::div(array("class" => 'events'));
 
-	$months = System\Locales::get('date:months');
-	echo $renderer->heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
+$months = System\Locales::get('date:months');
+$ren->content_for('title', t('title_impro_global', t('impro_event_list_for_month', $months[$month].' '.$year)));
+
+echo div('events');
+
+	echo $ren->heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
-	Tag::div(array("class" => 'controls'));
-		echo label_for('godmode/navi/prev', 16, stprintf($link_month, array("year" => $prev->format('Y'), "month" => $prev->format('m'))), l('impro_prev_month'));
-		echo label_right_for('godmode/navi/next', 16, stprintf($link_month, array("year" => $next->format('Y'), "month" => $next->format('m'))), l('impro_next_month'));
-	Tag::close('div');
+	echo div('controls', array(
+		$ren->label_for($request->url('public_events_month', array($prev->format('Y-m'))), l('impro_prev_month'), 'godmode/navi/prev', 16),
+		$ren->label_for_left($request->url('public_events_month', array($next->format('Y-m'))), l('impro_next_month'), 'godmode/navi/next', 16),
+	));
 
 
 	foreach ($events as $d=>$list) {
@@ -22,16 +25,8 @@ Tag::div(array("class" => 'events'));
 			foreach ($list as $event) {
 				$html_event = array();
 
-				$html_event[] = Tag::a(array(
-					"class"   => 'image',
-					"output"  => false,
-					"href"    => soprintf($link_cont, $event),
-					"content" => Tag::img(array(
-						"output" => false,
-						"src"    => $event->image->thumb(100, 100),
-						"alt"    => $event->name,
-					)),
-				));
+				$url = $request->url('public_event_detail', array($event));
+				$html_event[] = $ren->link($url, $event->image->to_html(100, 100), array("class" => 'image'));
 
 				$ts = array(
 					Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
@@ -41,54 +36,29 @@ Tag::div(array("class" => 'events'));
 
 				if ($event->location) {
 					$ts[] = ', ';
-					$ts[] = Tag::a(array("class" => 'location', "output" => false, "href" => $event->location->map_link(), "content" => $event->location->name));
+					$ts[] = $ren->link_ext($event->location->map_link(), $event->location->name, array("class" => 'location'));
 				}
 
 				$location = div('ts_location', $ts);
 				$match = '';
 
 				if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
-					$match = Tag::div(array(
-						"class"   => 'match_participants',
-						"output"  => false,
-						"content" => array(
-							Tag::a(array(
-								"href"    => soprintf($link_team, $event->team_home),
-								"content" => $event->team_home->name,
-								"output"  => false,
-							)),
-							Tag::span(array("output" => false, "content" => ' vs ', 'class' => 'versus')),
-							Tag::a(array(
-								"href"    => soprintf($link_team, $event->team_away),
-								"content" => $event->team_away->name,
-								"output"  => false,
-							)),
-						),
+					$match = div('match_participants', array(
+						$ren->link($request->url('public_team_detail', array($event->team_home)), $event->team_home->name),
+						span('versus', ' vs '),
+						$ren->link($request->url('public_team_detail', array($event->team_away)), $event->team_away->name),
 					));
 				}
 
-				$html_event[] = Tag::div(array(
-					"class"   => 'desc',
-					"output"  => false,
-					"content" => array(
-						Tag::a(array(
-							"class"   => 'name',
-							"content" => $event->name,
-							"href"    => soprintf($link_cont, $event),
-							"output"  => false,
-						)),
-						$match,
-						$location,
-						Tag::div(array(
-							"class"   => 'text',
-							"content" => \System\Template::to_html($event->desc_short),
-							"output"  => false,
-						)),
-					)
+				$html_event[] = div('desc', array(
+					$ren->link($url, $event->name, array("class" => 'name')),
+					$match,
+					$location,
+					div('text', \System\Template::to_html($event->desc_short)),
 				));
 
-				$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));
-				$html_events[] = Tag::li(array("class" => 'event', "content" => implode('', $html_event), "output" => false));
+				$html_event[] = span('cleaner', '');
+				$html_events[] = li(implode('', $html_event), 'event');
 			}
 
 			$dutime = mktime(0,0,0, $month, $d, $year);
@@ -107,25 +77,17 @@ Tag::div(array("class" => 'events'));
 				"output"  => false,
 			));
 
-			$html[] = Tag::ul(array(
-				"class"   => 'plain',
-				"content" => $html_events,
-				"output"  => false,
-			));
-
-			$content[] = Tag::li(array("output" => false, "class" => 'day', "content" => $html));
+			$html[] = ul('plain', $html_events);
+			$content[] = li($html, 'day');
 		}
 	}
 
 	if (any($content)) {
 
-		Tag::ul(array(
-			"class"   => 'event_list plain',
-			"content" => $content,
-		));
+		echo ul('event_list plain', $content);
 
 	} else {
 		Tag::p(array("class" => 'info', "content" => l('impro_event_lists_empty')));
 	}
 
-Tag::close('div');
+close('div');

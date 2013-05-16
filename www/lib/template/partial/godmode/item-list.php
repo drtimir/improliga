@@ -15,7 +15,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 	}
 
 
-	function admin_list_format_value(array $col, $item, array $static)
+	function admin_list_format_value(\System\Template\Renderer $ren, array $col, $item, array $static)
 	{
 		def($col[2], '');
 		def($col[3], '');
@@ -26,13 +26,13 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 			$str = '';
 			foreach ($col[3] as $label=>$action) {
 				$url = admin_list_url($static, array($item->id), $action);
-				$str .= icon_for('godmode/actions/'.($action ? $action:'detail'), 16, $url, $label);
+				$str .= $ren->icon_for($url, 'godmode/actions/'.($action ? $action:'detail'), 16, array("title" => $label));
 			}
 
 			return $str;
 		} elseif (strpos($col[2], "link") === 0) {
 			$label_type = substr($col[2], 5);
-			return '<a href="'.admin_list_url($static, array($item->id), 'detail').'">'.admin_list_format_value(array($col[0], $col[1], $label_type), $item, $static).'</a>';
+			return '<a href="'.admin_list_url($static, array($item->id), 'detail').'">'.admin_list_format_value($ren, array($col[0], $col[1], $label_type), $item, $static).'</a>';
 		} elseif (strpos($col[2], "function") !== false) {
 			return call_user_func(array($item, $col[0]));
 		} elseif (strpos($col[2], "helper") !== false) {
@@ -83,7 +83,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 	}
 
 
-	function admin_list_draw_table($locals)
+	function admin_list_draw_table(\System\Template\Renderer $ren, $locals)
 	{
 		$i=0;
 		foreach ($locals as $key=>$val) {
@@ -118,7 +118,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 								foreach ($cols as $col) {
 									isset($col[2]) && $col[2] == 'actions' && $col[0] = 'actions';
 									?>
-									<td class="<?=$col[0]?>"><?=admin_list_format_value($col, $item, array("request" => $locals['request'], "module_id" => $module_id, "link_god" => $link_god, "name_format" => $name_format))?></td>
+									<td class="<?=$col[0]?>"><?=admin_list_format_value($ren, $col, $item, array("request" => $locals['request'], "module_id" => $module_id, "link_god" => $link_god, "name_format" => $name_format))?></td>
 									<?
 								}
 								?>
@@ -133,7 +133,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 											<?
 												$attrs['items'] = $item->$rel->fetch();
 												$attrs['module_id'] = $module_id;
-												admin_list_draw_table($attrs);
+												admin_list_draw_table($ren, $attrs);
 											?>
 										</td>
 									</tr>
@@ -167,72 +167,52 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 	}
 
 
-	function admin_list_draw_pagination($cur_page, $count, $per_page, array $class = array())
+	function admin_list_draw_pagination(\System\Template\Renderer $ren, $cur_page, $count, $per_page, array $class = array())
 	{
 		$out = array();
-		$p = System\Input::get('path');
+		$p = $ren->response()->request()->path;
 
 		if ($cur_page > 0) {
-			$out[] = Tag::li(array("output" => false, "content" => Tag::a(array(
-				"output"  => false,
-				"href"    => $p.'?page='.($cur_page-1),
-				"content" => '&laquo;',
-				"title"   => l('godode_prev_page'),
-			))));
+			$out[] = li($ren->link($p.'?page='.($cur_page-1), '&laquo;', array("title" => l('godode_prev_page'))));
 		}
 
 		for ($page = 1; $count > ($page - 1) * $per_page; $page++) {
 			$fn = ($cur_page === $page - 1) ? 'span':'a';
 
-			$out[] = Tag::li(array(
-				"output"  => false,
-				"class"   => array($cur_page === $page - 1 ? 'active':'inactive'),
-				"content" => Tag::$fn(array(
-					"output"  => false,
-					"content" => $page,
-					"href"    => $p.'?page='.($page - 1),
-					"title"   => t('godmode_page', $page),
-				))
-			));
+			$out[] = li(
+				$ren->link($p.'?page='.($page - 1), $page, array("title" => t('godmode_page', $page))),
+				array($cur_page === $page - 1 ? 'active':'inactive')
+			);
 		}
 
 		if ($cur_page + 1 < floor($count/$per_page)) {
-			$out[] = Tag::li(array("output" => false, "content" => Tag::a(array(
-				"output" => false,
-				"href" => $p.'?page='.($cur_page+1),
-				"content" => '&raquo;',
-				"title"   => l('godode_next_page'),
-			))));
+			$out[] = li($ren->link($p.'?page='.($cur_page+1), '&raquo;', array("title" => l('godode_next_page'))));
 		}
 
-		Tag::ul(array(
-			"content" => $out,
-			"class"   => array_merge($class, array('paginator')),
-		));
+		echo ul(array_merge($class, array('paginator')), $out);
 	}
 }
 
-?>
-<div class="admin-list">
-	<?
 
-	echo section_heading($heading);
+echo div("admin-list");
+
+	echo $renderer->heading($heading);
 	$desc && Tag::p(array("content" => $desc));
 
 	if (isset($count) && isset($per_page) && $count > $per_page) {
-		admin_list_draw_pagination($page, $count, $per_page, array('top'));
+		admin_list_draw_pagination($ren, $page, $count, $per_page, array('top'));
 	}
 
 	$locals['request'] = $request;
 
-	admin_list_draw_table($locals);
+	admin_list_draw_table($ren, $locals);
 
 	if (empty($items)) {
 		echo div("info", $heading, l('godmode_no_items'));
 	}
 
 	if (isset($count) && isset($per_page) && $count > $per_page) {
-		admin_list_draw_pagination($page, $count, $per_page, array('bottom'));
+		admin_list_draw_pagination($ren, $page, $count, $per_page, array('bottom'));
 	}
-	?>
-</div>
+
+close('div');

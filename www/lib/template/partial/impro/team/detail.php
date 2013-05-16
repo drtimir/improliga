@@ -1,11 +1,13 @@
 <?
 
+$ren->content_for('title', t('title_impro_team', $team->name));
+
 echo div('team_detail');
 
 	$hq = $team->hq ? div('map', array(
 		$team->hq->map_html(300, 300),
 		div('playground', array(
-			$renderer->heading_static('Domácí hřiště', 3),
+			$ren->heading_static('Domácí hřiště', 3),
 			div('location', array(
 				Stag::strong(array("content" => $team->hq->name)),
 				Stag::br(),
@@ -16,13 +18,13 @@ echo div('team_detail');
 
 	echo div('header', array(
 		div('team_heading', array(
-			div('team_logo', link_for($team->logo->to_html(188, 165), $team->logo->get_path(), array("class" => 'fancybox'))),
+			div('team_logo', $ren->link($team->logo->get_path(), $team->logo->to_html(188, 165), array("class" => 'fancybox'))),
 			div('name', array(
-				$renderer->heading($team->name, 1),
-				$renderer->heading($team->name_full),
+				$ren->heading($team->name, 1),
+				$ren->heading($team->name_full),
 			))
 		)),
-		div('img', link_for($team->photo->to_html(600, 300), $team->photo->get_path(), array("class" => 'fancybox'))),
+		div('img', $ren->link($team->photo->get_path(), $team->photo->to_html(600, 300), array("class" => 'fancybox'))),
 		$hq,
 		span('cleaner', ''),
 	));
@@ -30,11 +32,11 @@ echo div('team_detail');
 	$info = array();
 
 	if ($team->city) {
-		$info[] = Stag::li(array("class" => 'icon city', "content" => $team->city));
+		$info[] = li($team->city, 'icon city');
 	}
 
 	if ($team->site) {
-		$info[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
+		$info[] = li($ren->link($team->site, $team->site), 'icon site');
 	}
 
 	echo div('left', array(
@@ -43,9 +45,9 @@ echo div('team_detail');
 	));
 
 	echo div('right');
-		echo $renderer->heading_static(l('impro_team_events'));
+		echo $ren->heading_static(l('impro_team_events'));
 
-		$renderer->slot('events');
+		$ren->slot('events');
 
 	close('div');
 

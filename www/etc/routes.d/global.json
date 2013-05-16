@@ -57,6 +57,8 @@
 		]
 	}, "public_article"],
 
+	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "public_article_chapter"],
+
 	["^/media-o-nas/$", {
 		"title":"impro_menu_media",
 		"layout":["impro/layout", "impro/single"],
@@ -90,28 +92,42 @@
 	}, "public_contacts"],
 
 	["^/udalosti/$", {
-		"title":"impro_events",
 		"layout":["impro/layout", "impro/dual"],
 		"modules":[
 			["impro/event/calendar", {
 				"slot":"left",
 				"template":"impro/event/list_month",
 				"link_cont":"/udalosti/{seoname}/",
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"link_day_piece":"den_{day}"
 			}],
 			["impro/event/calendar", {
 				"slot":"right",
 				"day_link_integrate":true,
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"link_day_piece":"den_{day}",
 				"heading":"Kalendář",
 				"conds":{"published":true}
 			}]
 		]
 	}, "public_events"],
+
+	["^/udalosti/seznam/([^/]+)/$", {
+		"layout":["impro/layout", "impro/dual"],
+		"modules":[
+			["impro/event/calendar", {
+				"slot":"right",
+				"day_link_integrate":true,
+				"link_day_piece":"den_{day}",
+				"month_input":"#{0}"
+			}],
+			["impro/event/calendar", {
+				"slot":"left",
+				"template":"impro/event/list_month",
+				"link_cont":"/udalosti/{seoname}/",
+				"link_day_piece":"den_{day}",
+				"month_input":"#{0}"
+			}]
+		]
+	}, "public_events_month"],
 
 	["^/udalosti/([^/]+)/$", {
 		"layout":["impro/layout", "impro/single"],
@@ -125,52 +141,6 @@
 			}]
 		]
 	}, "public_event_detail"],
-
-	["^/udalosti/seznam/$", {
-		"layout":["impro/layout", "impro/dual"],
-		"title":"impro_events",
-		"modules":[
-			["impro/event/latest", {
-				"slot":"events_left",
-				"link_cont":"/udalosti/{seoname}/",
-				"link_team":"/tymy/{seoname}/",
-				"link_day_piece":"den_{day}",
-				"conds":{"published":true}
-			}],
-			["impro/event/calendar", {
-				"slot":"events_right",
-				"day_link_integrate":true,
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"link_day_piece":"den_{day}",
-				"heading":"Kalendář",
-				"conds":{"published":true}
-			}]
-		]
-	}, "public_event_list"],
-
-	["^/udalosti/seznam/([^/]+)/$", {
-		"layout":["impro/layout", "impro/dual"],
-		"modules":[
-			["impro/event/calendar", {
-				"slot":"right",
-				"day_link_integrate":true,
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"link_day_piece":"den_{day}",
-				"month_input":"#{0}"
-			}],
-			["impro/event/calendar", {
-				"slot":"left",
-				"template":"impro/event/list_month",
-				"link_cont":"/udalosti/{seoname}/",
-				"link_month":"/udalosti/seznam/{year}-{month}/",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"link_day_piece":"den_{day}",
-				"month_input":"#{0}"
-			}]
-		]
-	}, "public_event_month"],
 
 	["^/intranet/$", {
 		"modules":[

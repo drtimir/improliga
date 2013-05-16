@@ -3,7 +3,7 @@
 echo div('event_detail');
 	echo div('left');
 
-		echo $renderer->heading($event->name);
+		echo $ren->heading($event->name);
 
 		$date = '';
 		if (is_null($event->end)) {
@@ -43,7 +43,7 @@ echo div('event_detail');
 
 
 		if ($event->desc_short) {
-			echo div('text short', $event->desc_short);
+			echo div('text short', \System\Template::to_html($event->desc_short));
 		}
 
 
@@ -51,9 +51,9 @@ echo div('event_detail');
 
 			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 				echo div('participants', array(
-					div('part home', link_for($event->team_home->name, soprintf($link_team, $event->team_home))),
+					div('part home', $ren->link($request->url('public_team_detail', array($event->team_home)), $event->team_home->name)),
 					span('vs', 'vs'),
-					div('part away', link_for($event->team_away->name, soprintf($link_team, $event->team_away))),
+					div('part away', $ren->link($request->url('public_team_detail', array($event->team_home)), $event->team_away->name)),
 				));
 			}
 
@@ -69,7 +69,7 @@ echo div('event_detail');
 	close('div');
 
 	echo div('right',
-		link_for($event->image->to_html($col_width, $col_width), $event->image->get_path(), array("class" => 'image fancybox'))
+		$ren->link($event->image->get_path(), $event->image->to_html($col_width, $col_width), array("class" => 'image fancybox'))
 	);
 
 	echo span('cleaner', '');

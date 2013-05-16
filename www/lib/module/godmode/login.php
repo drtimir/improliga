@@ -22,10 +22,9 @@ if ($request->logged_in()) {
 
 		if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
 			if ($user->login($request, $p['password'])) {
-				message('success', l('godmode_login_was_successful'), NULL, true);
 				$flow->redirect($request->url('god_home'));
-			} else message('error', l('godmode_login'), l('godmode_bad_password'));
-		} else message('error', l('godmode_login'), l('godmode_bad_login'), true);
+			}
+		}
 	}
 
 	$f->out($this);

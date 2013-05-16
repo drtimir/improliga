@@ -1,2 +1,0 @@
-# Pass request to YaCMS
-RewriteRule ^god/ /godmode.php [L,QSA]

@@ -11,10 +11,11 @@ echo div('team_list');
 
 			echo ul('plain teams');
 				foreach ($teams as $team) {
+					$url = $request->url('public_team_detail', array($team->get_seoname()));
 					echo li(array(
-						link_for($team->logo->to_html(118, 100), soprintf($link_team, $team)),
+						$ren->link($url, $team->logo->to_html(118, 100)),
 						div("desc", array(
-							Stag::strong(array("content" => link_for($team->name, soprintf($link_team, $team)))),
+							Stag::strong(array("content" => $ren->link($url, $team->name))),
 							div('name_full', $team->name_full),
 							div('city', $team->city),
 						)),

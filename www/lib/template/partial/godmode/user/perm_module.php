@@ -1,6 +1,6 @@
 <?
 
-echo section_heading(l('godmode_user_perms_for_module'));
+echo $renderer->heading(l('godmode_user_perms_for_module'));
 
 Tag::table();
 	Tag::thead();

@@ -2,10 +2,7 @@
 
 Tag::menu(array("class" => 'menu-panel'));
 
-	Tag::li(array(
-		"class"   => array('button', 'refresh'),
-		"content" => label_for('godmode/window/refresh', 24, '#', l('godmode_window_refresh'))
-	));
+	echo li($ren->icon_for('#', 'godmode/window/refresh', 24, array("title" => l('godmode_window_refresh'))), array('button', 'refresh'));
 
 	$count = count($options);
 	$x = 0;
@@ -17,8 +14,8 @@ Tag::menu(array("class" => 'menu-panel'));
 			Tag::li(array(
 				"class" => is_null($opt) ? 'separator':'',
 				"content" => is_null($opt) ?
-					Tag::span(array("output" => false, "close" => true)):
-					label_for('godmode/'.$opt['icon'], 24, $opt['url'], t($opt['title'], $model))
+					span(null, ''):
+					$ren->icon_for($opt['url'], 'godmode/'.$opt['icon'], 24, array("title" => t($opt['title'], $model)))
 			));
 		}
 	}

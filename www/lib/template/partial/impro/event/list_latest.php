@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'events'));
 
-	echo $renderer->heading($heading);
+	echo $ren->heading($heading);
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
@@ -16,15 +16,11 @@ Tag::div(array("class" => 'events'));
 				"class"   => 'image',
 				"output"  => false,
 				"href"    => soprintf($link_cont, $event),
-				"content" => Tag::img(array(
-					"output" => false,
-					"src"    => $event->image->thumb($thumb_width, $thumb_height),
-					"alt"    => $event->name,
-				)),
+				"content" => $event->image->to_html($thumb_width, $thumb_height),
 			));
 
 			$ts = array(
-				Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
+				span('date', format_date($event->start, 'human')),
 				'<br>',
 				$event->get_type_name(),
 			);
@@ -39,21 +35,21 @@ Tag::div(array("class" => 'events'));
 
 			if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 				$match = div('match_participants', array(
-					link_for($event->team_home->name, soprintf($link_team, $event->team_home)),
+					$ren->link($request->url('public_team_detail', array($event->team_home->get_seoname())), $event->team_home->name),
 					div('versus', ' vs '),
-					link_for($event->team_away->name, soprintf($link_team, $event->team_away)),
+					$ren->link($request->url('public_team_detail', array($event->team_away->get_seoname())), $event->team_away->name),
 				));
 			}
 
 
 			$html_event[] = div('desc', array(
-				link_for($event->name, soprintf($link_cont, $event), array("class" => 'name')),
+				$ren->link($request->url('public_event_detail', array($event->get_seoname())), $event->name, array("class" => 'name')),
 				$match,
 				$location,
 				$show_desc ? div('text', \System\Template::to_html($event->desc_short)):'',
 			));
 
-			$html_event[] = Tag::span(array("class" => 'cleaner', "output" => false, "close" => true));
+			$html_event[] = span('cleaner', '');
 			$html_events[] = Tag::li(array("class" => 'event', "content" => implode('', $html_event), "output" => false));
 		}
 

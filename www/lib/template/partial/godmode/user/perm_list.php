@@ -1,6 +1,6 @@
 <?
 
-echo section_heading(l('godmode_user_perms_list'));
+echo $renderer->heading(l('godmode_user_perms_list'));
 
 Tag::ul(array("class" => 'perm-list'));
 

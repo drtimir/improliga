@@ -5,49 +5,49 @@ $manage_menu = '';
 if ($member) {
 	$manage_menu = ul('plain options manage', array(
 		$member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION) ? Stag::li(array(
-			"content" => link_for(l('intra_team_discussion'), sprintf($link_team_menu, 'discussion'), array("class" => 'button'))
+			"content" => $ren->link_for('intra_team_discussion', l('intra_team_discussion'), array("args" => array($team), "class" => 'button'))
 		)):'',
 		$member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DATA) ? Stag::li(array(
-			"content" => link_for(l('intra_team_settings'), sprintf($link_team_menu, 'settings'), array("class" => 'button'))
+			"content" => $ren->link_for('intra_team_settings', l('intra_team_settings'), array("args" => array($team), "class" => 'button'))
 		)):'',
 	));
 }
 
 
-Tag::div(array("class" => 'team_detail'));
+echo div('team_detail');
 
 	echo div('header', array(
 		div('gallery fancybox', array(
-			div('team_logo', link_for(Stag::img(array("src" => $team->logo->thumb_trans(210, 180))), $team->logo->get_path())),
-			div('img', link_for(Stag::img(array("src" => $team->photo->thumb(370, 180), "alt" => $team->get_name())), $team->photo->get_path())),
+			div('team_logo', $ren->link($team->logo->get_path(), $team->logo->to_html(210, 180))),
+			div('img', $ren->link($team->photo->get_path(), $team->photo->to_html(370, 180))),
 			$team->hq ?
 				div('map', array(
 					$team->hq->map_html(210, 180),
-					div('playground label', link_for(
+					div('playground label', $ren->link(
+						$team->hq->map_link(),
 						div('inner', array(
-							heading('Domácí hřiště', false, 3),
+							$ren->heading('Domácí hřiště', false, 3),
 							div('location', array(
 								Stag::strong(array("content" => $team->hq->name)),
 								Stag::br(),
 								span('addr', $team->hq->addr),
 							)),
-						)),
-						$team->hq->map_link()
+						))
 					)),
 				)):'',
-			div('cleaner', ''),
+			span('cleaner', ''),
 		)),
 		div('menu', array(
-			div('name', section_heading($team->to_html_link($link_team, false))),
+			div('name', $ren->heading($team->to_html_link($ren, false))),
 			ul('plain options', array(
-				Stag::li(array("content" => link_for(l('intra_team_home'), soprintf($link_team, $team), array("class" => 'button', "strict" => true)))),
-				Stag::li(array("content" => link_for(l('intra_team_info'), sprintf($link_team_menu, 'info'), array("class" => 'button')))),
-				Stag::li(array("content" => link_for(l('intra_team_events'), sprintf($link_team_menu, 'events'), array("class" => 'button')))),
+				li($ren->link_for('intra_team', l('intra_team_home'), array("args" => array($team), "class" => 'button', "strict" => true))),
+				li($ren->link_for('intra_team_info', l('intra_team_info'), array("args" => array($team), "class" => 'button'))),
+				li($ren->link_for('intra_team_events', l('intra_team_events'), array("args" => array($team), "class" => 'button'))),
 			)),
 			$manage_menu,
 		)),
 		div('cleaner', ''),
 	));
 
-	Tag::div(array("class" => 'cleaner', 'close' => true));
+	span('cleaner', '');
 close('div');

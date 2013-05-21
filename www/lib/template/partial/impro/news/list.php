@@ -1,19 +1,15 @@
 <?
-Tag::div(array("class" => 'news'));
-	echo section_heading(l('impro_news'), 1, true);
+echo div('news');
+	echo $ren->heading(l('impro_news'));
 
 	if (any($news)) {
 
-		Tag::ul(array("class" => array('items', 'plain')));
+		echo ul(array('items', 'plain'));
 
 		foreach ($news as $item) {
 			$content = array();
-			$content[] = section_heading(link_for($item->name, soprintf($link_cont, $item)));
-			$content[] = Tag::div(array(
-				"class"   => 'text',
-				"content" => $item->text,
-				"output"  => false,
-			));
+			$content[] = $ren->heading($ren->link_for('intra_news_detail', $item->name, array("args" => array($item))), false);
+			$content[] = div('text', to_html($item->text));
 
 			if ($display_author) {
 				$author = Stag::a(array(
@@ -23,20 +19,16 @@ Tag::div(array("class" => 'news'));
 				));
 			} else $author = '';
 
-			$content[] = Tag::div(array(
-				"class"   => 'footer',
-				"output"  => false,
-				"content" => array(
-					Tag::datetime(array("output" => false, "content" => format_date($item->created_at, 'human-full-date'))),
+			$content[] = div('footer', array(
+					Stag::datetime(array("content" => format_date($item->created_at, 'human-full-date'))),
 					$author,
-				)
 			));
 
-			Tag::li(array("content" => $content));
+			echo li($content);
 		}
 
-		Tag::close('ul');
+		close('ul');
 
 	} else Tag::p(array("content" => l('impro_no_news')));
 
-Tag::close('div');
+close('div');

@@ -11,7 +11,7 @@ echo div('team_list');
 
 			echo ul('plain teams');
 				foreach ($teams as $team) {
-					$url = $request->url('public_team_detail', array($team->get_seoname()));
+					$url = $ren->url($link_team, array($team->get_seoname()));
 					echo li(array(
 						$ren->link($url, $team->logo->to_html(118, 100)),
 						div("desc", array(

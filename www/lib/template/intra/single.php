@@ -1,12 +1,12 @@
 <?
 
-Tag::div(array("class" => 'page-block'));
+echo div('page-block');
 
 	require ROOT.'/lib/template/intra/menu.php';
 
-	Tag::div(array("class" => array('block', 'left', 'layout_11', 'content')));
-		slot();
+	echo div(array('block', 'left', 'layout_11', 'content'));
+		$ren->slot();
 
-	Tag::close('div');
-Tag::close('div');
+	close('div');
+close('div');
 

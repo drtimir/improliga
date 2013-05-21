@@ -35,7 +35,7 @@ namespace Impro
 		}
 
 
-		public function to_html_link($link, $short_name = true)
+		public function to_html_link(\System\Template\Renderer $ren, $short_name = true)
 		{
 			if ($short_name && mb_strlen($this->name_full) > 32) {
 				$long_name = substr($this->name_full, 0, 32) . '...';
@@ -44,9 +44,9 @@ namespace Impro
 			}
 
 			return div('name', array(
-				link_for($this->name, soprintf($link, $this), array("class" => 'short')),
+				$ren->link_for('intra_team', $this->name, array("args" => array($this), "class" => 'short')),
 				span('sep', ' - '),
-				link_for($long_name, soprintf($link, $this), array("class" => 'full')),
+				$ren->link_for('intra_team', $long_name, array("args" => array($this), "class" => 'full')),
 			));
 		}
 
@@ -87,9 +87,9 @@ namespace Impro
 		/** Get current user member object if user is a member
 		 * @return false|Impro\Team\Member
 		 */
-		public function member()
+		public function member(\System\User $user)
 		{
-			foreach (user()->members as $member) {
+			foreach ($user->members as $member) {
 				if ($member->id_impro_team == $this->id) {
 					return $member;
 				}

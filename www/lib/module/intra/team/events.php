@@ -26,7 +26,7 @@ if (isset($propagated['team'])) {
 	))->sort_by('start desc')->fetch();
 
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"events"       => $events,
 		"start"        => $start,
 		"heading"      => $heading,

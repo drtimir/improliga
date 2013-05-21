@@ -16,19 +16,15 @@ namespace Impro
 		}
 
 
-		public static function avatar(\System\User $user, $w = 40, $h = 40)
+		public static function avatar(\System\Template\Renderer $ren, \System\User $user, $w = 40, $h = 40)
 		{
-			return link_for(\Tag::img(array(
-				"output" => false,
-				"src"    => $user->avatar->thumb($w, $h),
-				"alt"    => '',
-			)), soprintf('/profile/{id_system_user}/', $user));
+			return $ren->link_for('intra_user', $user->avatar->to_html($w, $h), array("args" => array($user)));
 		}
 
 
-		public static function link(\System\User $user)
+		public static function link(\System\Template\Renderer $ren, \System\User $user)
 		{
-			return link_for($user->get_name(), soprintf('/profile/{id_system_user}/', $user));
+			return $ren->link_for('intra_user', $user->get_name(), array("args" => $user));
 		}
 
 

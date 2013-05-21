@@ -4,7 +4,7 @@ def($id_team);
 def($redirect, '/teams/{seoname}/');
 
 if ((any($propagated['team']) && $team = $propagated['team']) || ($id_team && ($team = find('\Impro\Team', $id_team)))) {
-	$f = new \System\Form(array(
+	$f = $ren->form(array(
 		"heading" => l('impro_team_comment_add'),
 		"class"   => 'team_comment',
 	));

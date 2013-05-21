@@ -17,7 +17,7 @@ if ((any($propagated['team']) && $team = $propagated['team']) || ($id_team && ($
 		->paginate($per_page, $page)
 		->fetch();
 
-	$this->template($template, array(
+	$module->partial($template, array(
 		"team"         => $team,
 		"comments"     => $comments,
 		"link_user"    => $link_user,

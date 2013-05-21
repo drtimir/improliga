@@ -1,16 +1,16 @@
 <?
 
-Tag::div(array("class" => 'page-block'));
+echo div('page-block');
 
 	require ROOT.'/lib/template/intra/menu.php';
 
-	Tag::div(array("class" => array('block', 'left')));
-		slot('left');
-	Tag::close('div');
+	echo div(array('block', 'left'));
+		$ren->slot('left');
+	close('div');
 
-	Tag::div(array("class" => array('block', 'right')));
-		slot('right');
-	Tag::close('div');
+	echo div(array('block', 'right'));
+		$ren->slot('right');
+	close('div');
 
-	Tag::span(array("class" => 'cleaner', "close" => true));
-Tag::close('div');
+	echo span('cleaner', '');
+close('div');

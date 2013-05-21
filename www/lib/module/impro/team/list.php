@@ -2,7 +2,7 @@
 
 def($template, "impro/team/list");
 def($conds, array("visible" => true));
-def($link_team, '/tymy/{seoname}/');
+def($link_team, 'public_team_detail');
 
 $query = get_all('Impro\Team')->where($conds);
 $items = $query->sort_by('name')->fetch();

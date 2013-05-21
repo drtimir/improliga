@@ -17,7 +17,7 @@ $news = get_all("\Impro\News", $conds, $opts)->sort_by('created_at DESC')->pagin
 $count = count_all("\Impro\News", $conds, $opts);
 
 
-$this->template("impro/news/list", array(
+$module->partial("impro/news/list", array(
 	"link_cont" => $link_cont,
 	"link_author" => $link_author,
 	"news"  => $news,

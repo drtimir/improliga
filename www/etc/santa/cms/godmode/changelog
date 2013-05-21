@@ -1,5 +1,16 @@
-03369f0d792ce719e355a4c471f1be6b8f1baf24 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+621e24d7752f5c06d75af0540aa084f8eec1dda9 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+3e084675db6fccb159d8f4b6c2a19c25832df44c Godmode windows, scan
+a58acf4e20cff512df43490f8cf71a840884dcd5 Drop datetime picker
+db9ce9041c705de32481f4ccba7430e2c54f2992 Godmode admin, edit
+5265bdeca5f668a050fffc60fe25c81da85abc3b Admin, user passwd
+5278bff2046306dd31500742edbf17fecea5e3d6 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+9b2ecce6db0c73ab69858b21be9e0dda6bb7cbde Godmode, login
+39d25b2505272a4da4dd38120de2b5f4042c9333 Godmode admin, delete
+d6299f16872d8288479f01ebceb907a93c86b3d9 Godmode router, window menu
+e428a7219ec938c2da64ea204439a0f90c2fd01d Godmode config
+b4f5cebddb578e5491c843e8e41b6a3ef7949715 Gitignore update
 d1e71e7203674dba42ac2ca06f627ed53db88a03 [fix] Pagination
+03369f0d792ce719e355a4c471f1be6b8f1baf24 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
 951f2f2c1ae2462f7cd294a26674c36dce75bdf4 Godmode, admin
 e4b446fd12da075428e3407678317ad7c1c9a893 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
 2b5088238ac652d1e09a0496b34ef501b5155743 Login, messages

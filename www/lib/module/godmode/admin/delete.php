@@ -31,13 +31,22 @@ if ($item = find($model, $id)) {
 	}
 
 	foreach ($attrs as $attr) {
-		$info[$attr] = System\Template::to_html($item->$attr);
+		if ($attr == System\Model\Database::get_id_col($model)) {
+			$name = l('Id');
+		} elseif (in_array($attr, array('created_at', 'updated_at'))) {
+			$name = l($attr);
+		} else {
+			$name = System\Model\Attr::get_model_attr_name($model, $attr);
+		}
+
+		$info[$name] = System\Template::to_html($item->$attr);
 	}
 
 
-	$f = $module->form_checker(array(
+	$f = $ren->form_checker(array(
 		"heading" => $heading,
 		"info" => $info,
+		"class" => 'admin-delete',
 	));
 
 

@@ -13,7 +13,6 @@
 				"attrs_edit_exclude":["last_login"],
 				"rel_pick":["groups"],
 				"rel_tab":["contacts"],
-				"window_root":true,
 				"object_menu":[
 					{
 						"title":"godmode_edit_passwd",
@@ -29,7 +28,6 @@
 				"title":"godmode_user_groups",
 				"icon":"modules/user_group",
 				"model":"System::User::Group",
-				"window_root":true,
 				"attrs_list":["name", "count_users", "updated_at", "created_at"]
 			}
 		]
@@ -43,14 +41,12 @@
 				"title":"godmode_static_texts",
 				"icon":"items/text",
 				"model":"System::Text",
-				"window_root":true,
 				"attrs_list":["name", "visible", "updated_at"]
 			},
 			{
 				"title":"godmode_locations",
 				"icon":"items/location",
 				"model":"System::Location",
-				"window_root":true,
 				"attrs_list":["name", "addr", "updated_at"]
 			}
 		]

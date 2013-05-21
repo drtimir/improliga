@@ -334,12 +334,13 @@ namespace Godmode
 			$path_str = preg_replace('/'.$prefix.'/', '', $request->path);
 			$menu_temp = array();
 			$menu = array(null);
+			$selected = null;
 
 			foreach (self::$window_menu as $key=>$items) {
-				foreach ($items as &$item) {
+				foreach ($items as $item) {
 					if (!is_null($item)) {
 						if (preg_match('/'.$prefix.str_replace('/', '\\/', $item['url_pattern']).'/', $request->path)) {
-							$item['selected'] = true;
+							$selected = $item['url_name'];
 							$menu_temp = $items;
 							break;
 						}
@@ -357,7 +358,24 @@ namespace Godmode
 				} catch (\Exception $e) {}
 			}
 
-			return $menu;
+			$menu_clear = array();
+			$last_null = false;
+
+
+			foreach ($menu as $item) {
+				if (!($null = is_null($item)) || !$last_null) {
+
+					if ($selected == $item['url_name']) {
+						$item['selected'] = true;
+					}
+
+					$menu_clear[] = $item;
+				}
+
+				$last_null = $null;
+			}
+
+			return $menu_clear;
 		}
 
 

@@ -6,7 +6,7 @@ $this->req('link_god');
 if ($id && $user = find("\System\User", $id)) {
 
 	$heading = l('godmode_user_edit_passwd');
-	$f = $this->form(array("id" => 'edit_user_groups', "heading" => $heading));
+	$f = $ren->form(array("id" => 'edit_user_groups', "heading" => $heading));
 
 	$f->input_password('password', l('godmode_user_password'), true);
 	$f->input_password('password_check', l('godmode_user_password_check'), true);

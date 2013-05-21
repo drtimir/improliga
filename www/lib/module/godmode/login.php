@@ -8,7 +8,7 @@ if ($request->logged_in()) {
 
 } else {
 
-	$f = $this->form(array(
+	$f = $ren->form(array(
 		"id" => 'core-user-login',
 		"heading" => $heading,
 	));

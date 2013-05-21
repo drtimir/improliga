@@ -59,7 +59,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 		} else throw new System\Error\Format(sprintf('Cannot manage "%s" in tabs. It is not model relation of any kind.', $rel));
 	}
 
-	$f = $module->form(array(
+	$f = $ren->form(array(
 		"default" => $default,
 		"heading" => $heading,
 		"desc" => $desc,

@@ -51,16 +51,17 @@ namespace Impro
 		}
 
 
-		public function label($link_team)
+		public function label(\System\Template\Renderer $ren)
 		{
-			return link_for(
+			return $ren->link_for(
+				'intra_team',
 				\Stag::span(array(
 					"class" => "icon",
 					"style" => "background:url(".$this->logo->thumb_trans(16, 16).'); width:16px; height:16px;',
 					"close" => true,
 				))
 					.span('team_name_short', $this->name),
-				soprintf($link_team, $this)
+				array("args" => array($this))
 			);
 		}
 

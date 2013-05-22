@@ -1,6 +1,4 @@
 <?
 
-System\User::logout();
-
-message('success', l('godmode_user_logout_success'));
-redirect('/');
+$request->user()->logout();
+$flow->redirect($ren->url('intra_home'));

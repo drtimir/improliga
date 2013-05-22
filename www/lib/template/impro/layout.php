@@ -34,23 +34,23 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 		Tag::header();
 			echo div('inner');
 				echo div('container');
-					echo div('logo', $ren->link('/', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
-					echo div('logo-label', $ren->link('/', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
+					echo div('logo', $ren->link_for('public_home', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
+					echo div('logo-label', $ren->link_for('public_home', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
 
-					Tag::menu(array("class" => 'plain main left'));
-						echo li($ren->link($request->url('public_home'), l('impro_menu_home')));
-						echo li($ren->link($request->url('public_teams'), l('impro_menu_teams')));
-						echo li($ren->link($request->url('public_events'), l('impro_menu_events')));
-					Tag::close('menu');
+					echo menu('plain main left', array(
+						li($ren->link_for('public_home', l('impro_menu_home'))),
+						li($ren->link_for('public_teams', l('impro_menu_teams'))),
+						li($ren->link_for('public_events', l('impro_menu_events'))),
+					));
 
-					Tag::menu(array("class" => 'plain main right'));
-						echo li($ren->link($request->url('public_about'), l('impro_menu_about')));
-						echo li($ren->link($request->url('public_contacts'), l('impro_contact')));
-					Tag::close('menu');
+					echo menu('plain main right', array(
+						li($ren->link_for('public_about', l('impro_menu_about'))),
+						li($ren->link_for('public_contacts', l('impro_contact'))),
+					));
 
-				Tag::close('div');
-				echo div('header-bottom');
-			Tag::close('div');
+				close('div');
+				echo div('header-bottom', '');
+			close('div');
 
 		Tag::close('header');
 
@@ -84,12 +84,12 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 					echo div('left', STag::menu(array(
 						"class" => 'plain main',
 						"content" => array(
-							li($ren->link($request->url('public_home'), l('impro_menu_home'))),
-							li($ren->link($request->url('public_intranet_redir'), l('impro_menu_intranet'))),
-							li($ren->link($request->url('public_teams'), l('impro_menu_teams'))),
-							li($ren->link($request->url('public_events'), l('impro_menu_events'))),
-							li($ren->link($request->url('public_about'), l('impro_menu_about'))),
-							li($ren->link($request->url('public_contacts'), l('impro_contact'))),
+							li($ren->link_for('public_home', l('impro_menu_home'))),
+							li($ren->link_for('public_intranet_redir', l('impro_menu_intranet'))),
+							li($ren->link_for('public_teams', l('impro_menu_teams'))),
+							li($ren->link_for('public_events', l('impro_menu_events'))),
+							li($ren->link_for('public_about', l('impro_menu_about'))),
+							li($ren->link_for('public_contacts', l('impro_contact'))),
 						)
 					)));
 

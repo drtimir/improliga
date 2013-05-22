@@ -10,7 +10,7 @@ echo div('menu_left');
 
 	echo menu(array('plain', 'main'));
 		foreach ($request->user()->teams as $team) {
-			echo li($team->label('/teams/{seoname}/'));
+			echo li($team->label($ren));
 		}
 	close('menu');
 

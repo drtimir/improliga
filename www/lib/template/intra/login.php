@@ -4,39 +4,39 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 	redirect_now('http://intra.'.str_replace('www.', '', $_SERVER['HTTP_HOST']), 301);
 }
 
-Tag::doctype();
-Tag::html();
+echo doctype();
+echo html(\System\Locales::get_lang());
 	Tag::head();
 
-		content_for("styles", "form/search_tool");
-		content_for('styles', 'intra/layout');
-		content_for('styles', 'intra/calendar');
-		content_for('styles', 'intra/news');
-		content_for('styles', 'intra/events');
-		content_for('styles', 'intra/forms');
-		content_for('styles', 'intra/login');
+		$ren->content_for("styles", "form/search_tool");
+		$ren->content_for('styles', 'intra/layout');
+		$ren->content_for('styles', 'intra/calendar');
+		$ren->content_for('styles', 'intra/news');
+		$ren->content_for('styles', 'intra/events');
+		$ren->content_for('styles', 'intra/forms');
+		$ren->content_for('styles', 'intra/login');
 
-		echo content_from('head');
-	Tag::close('head');
+		echo $ren->content_from('head');
+	close('head');
 
 	Tag::body(array("class" => 'page_login'));
-		Tag::div(array("id" => 'container'));
-			Tag::div(array("class" => 'page-block'));
+		echo div('', null, 'container');
+			echo div('page-block');
 
-				Tag::div(array("class" => array('block', 'left')));
-					echo link_for(section_heading(l('intra_name')), '/');
+				echo div(array('block', 'left'));
+					echo $ren->link_for('intra_home', $ren->heading_layout(l('intra_name')));
 					Tag::p(array("content" => l('intra_desc')));
 
-				Tag::close('div');
+				close('div');
 
-				Tag::div(array("class" => array('block', 'right')));
-					slot();
-				Tag::close('div');
+				echo div(array('block', 'right'));
+					$ren->slot();
+				close('div');
 
-				Tag::span(array("class" => 'cleaner', "close" => true));
-				yield();
-			Tag::close('div');
-			Tag::span(array("class" => 'cleaner', "close" => true));
-		Tag::close('div');
-	Tag::close('body');
-Tag::close('html');
+				echo span('cleaner', '');
+				$ren->yield();
+			close('div');
+			echo span('cleaner', '');
+		close('div');
+	close('body');
+close('html');

@@ -1,31 +1,9 @@
 <?
 
-Tag::div(array("class" => 'event_detail'));
+echo div('event_detail');
+	echo div('left');
 
-	Tag::div(array("class" => 'left'));
-
-		echo section_heading($event->name);
-
-		Tag::div(array("class" => 'desc'));
-
-			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
-				Tag::div(array("class" => 'participants'));
-					Tag::div(array("class" => 'part home', "content" => array(
-						link_for($event->team_home->name, soprintf($link_team, $event->team_home)),
-					)));
-					Tag::span(array("class" => 'vs', "content" => 'vs'));
-					Tag::div(array("class" => 'part away', "content" => array(
-						link_for($event->team_away->name, soprintf($link_team, $event->team_away)),
-					)));
-				Tag::close('div');
-			}
-
-		Tag::close('div');
-
-		if ($event->desc_short) {
-			Tag::div(array("class" => 'text short', "content" => $event->desc_short));
-		}
-
+		echo $ren->heading($event->name);
 
 		$date = '';
 		if (is_null($event->end)) {
@@ -34,44 +12,65 @@ Tag::div(array("class" => 'event_detail'));
 			$date = format_date($event->start, 'human-date') . ' - ' . format_date($event->end, 'human-date');
 		}
 
-		Tag::ul(array("class" => 'info plain'));
-			Tag::li(array("class" => 'icon date', "content" => $date));
+		echo ul('info plain');
+			echo li($date, 'icon date');
 
 			if (is_null($event->end)) {
-				Tag::li(array("class" => 'icon time', "content" => t('impro_event_start_at', format_date($event->start, 'human-time'))));
+				echo li(t('impro_event_start_at', format_date($event->start, 'human-time')), 'icon time');
 			}
 
 			if ($event->location) {
-				Tag::li(array("class" => 'icon location', "content" => $event->location->name.Tag::span(array("output" => false, "class" => 'addr', "content" => $event->location->addr))));
+				echo li(array($event->location->name, span('addr', $event->location->addr)), 'icon location');
 			}
 
 			if ($event->has_booking) {
 				$total = $event->reservations->count();
-				Tag::li(array("class" => 'icon booking', "content" => $event->capacity.'/'.$total));
+				echo li('icon booking', $event->capacity.'/'.$total);
 			}
-		Tag::close('ul');
+
+			if ($event->price) {
+
+				if ($event->price_student) {
+					$content = t('impro_event_price_value_both', $event->price, $event->price_student);
+				} else {
+					$content = t('impro_event_price_value', $event->price);
+				}
+
+				echo li('icon price', $content);
+			}
+		close('ul');
 
 
-		Tag::div(array("class" => 'text full', "content" => $event->desc_full));
 
-	Tag::close('div');
-	Tag::div(array("class" => 'right'));
-;
-		echo link_for($event->image->to_html($col_width, $col_width), $event->image->get_path(), array("class" => 'image fancybox'));
-
-		if ($controls) {
-			Tag::ul(array("class" => 'controls'));
-				Tag::li(array("content" => label_for('godmode/actions/edit', 16, stprintf(soprintf($link_action, $event), array("action" => 'edit')), l('impro_event_edit'))));
-				Tag::li(array("content" => label_for('godmode/actions/delete', 16, stprintf(soprintf($link_action, $event), array("action" => 'delete')), l('impro_event_delete'))));
-
-			Tag::close('ul');
+		if ($event->desc_short) {
+			echo div('text short', \System\Template::to_html($event->desc_short));
 		}
+
+
+		echo div('desc');
+
+			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
+				echo div('participants', array(
+					div('part home', $ren->link_for('team', $event->team_home->name, array("args" => array($event->team_home)))),
+					span('vs', 'vs'),
+					div('part away', $ren->link_for('team', $event->team_away->name, array("args" => array($event->team_home)))),
+				));
+			}
+
+		close('div');
+
+
+		echo div('text full', \System\Template::to_html($event->desc_full));
+
+	close('div');
+
+	echo div('right');
+		echo $ren->link($event->image->get_path(), $event->image->to_html($col_width), array("class" => 'image fancybox'));
 
 		if ($event->location) {
-			echo $event->location->map_html($col_width, $col_width);
+			echo $event->location->map_html($col_width);
 		}
 
-	Tag::close('div');
 
-	Tag::span(array("class" => 'cleaner', "close" => true));
-Tag::close('div');
+	echo span('cleaner', '');
+close('div');

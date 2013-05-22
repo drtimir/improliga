@@ -35,15 +35,15 @@ Tag::div(array("class" => 'events'));
 
 			if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 				$match = div('match_participants', array(
-					$ren->link($request->url('public_team_detail', array($event->team_home->get_seoname())), $event->team_home->name),
+					$ren->link_for('team', $event->team_home->name, args($event->team_home)),
 					div('versus', ' vs '),
-					$ren->link($request->url('public_team_detail', array($event->team_away->get_seoname())), $event->team_away->name),
+					$ren->link_for('team', $event->team_away->name, args($event->team_away)),
 				));
 			}
 
 
 			$html_event[] = div('desc', array(
-				$ren->link($request->url('public_event_detail', array($event->get_seoname())), $event->name, array("class" => 'name')),
+				$ren->link_for('event', $event->name, array("args" => array($event), "class" => 'name')),
 				$match,
 				$location,
 				$show_desc ? div('text', \System\Template::to_html($event->desc_short)):'',

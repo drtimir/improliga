@@ -2,21 +2,21 @@
 
 echo div('team_info');
 
-	echo section_heading(l('impro_team_info'));
+	echo $ren->heading(l('impro_team_info'));
 	echo div('desc', \System\Template::to_html($team->about));
 
 	$props = array();
 
 	if ($team->city) {
-		$props[] = Stag::li(array("class" => 'icon city', "content" => $team->city));
+		$props[] = li($team->city, 'icon city');
 	}
 
 	if ($team->mail) {
-		$props[] = Stag::li(array("class" => 'icon mail', "content" => $team->mail));
+		$props[] = li($team->mail, 'icon mail');
 	}
 
 	if ($team->site) {
-		$props[] = Stag::li(array("class" => 'icon site', "content" => link_for($team->site, $team->site)));
+		$props[] = li($ren->link($team->site, $team->site), 'icon site');
 	}
 
 	if (any($props)) {

@@ -79,7 +79,7 @@ namespace Impro
 		);
 
 
-		public static function wizzard_for($id = 0, $new = false)
+		public static function wizzard_for(\System\User $user, $id = 0, $new = false)
 		{
 			if (!$id) {
 				if (any($_SESSION['impro_event_wizzard_id'])) {
@@ -95,7 +95,7 @@ namespace Impro
 					"name"        => l('impro_event_unfinished'),
 					"published"   => false,
 					"visible"     => false,
-					"id_author"   => user()->id,
+					"id_author"   => $user->id,
 					"start"       => new \DateTime(),
 					"use_booking" => true,
 				));

@@ -12,23 +12,23 @@ namespace Impro\Team\Comment
 
 
 		protected static $belongs_to = array(
-			"comment" => array("model" => '\Impro\Team'),
+			"comment" => array("model" => '\Impro\Team\Comment'),
 			"user"    => array("model" => '\System\User', "is_null" => true),
 		);
 
 
-		public function to_html($link_respond)
+		public function to_html(\System\Template\Renderer $ren)
 		{
 			return div('post', array(
 				div('avatar', $this->user ?
-					\Impro\User::avatar($this->user, 50, 50):
+					\Impro\User::avatar($ren, $this->user, 50, 50):
 					\System\User::guest()->image->to_html(50,50)
 				),
 				div('content', array(
-					div('name', $this->user ? \Impro\User::link($this->user):l('anonymous')),
-					div('text', \System\Template::to_html($this->text)),
+					div('name', $this->user ? \Impro\User::link($ren, $this->user):l('anonymous')),
+					div('text', to_html($this->text)),
 					div('footer', array(
-						link_for(format_date($this->created_at, 'human'), soprintf($link_respond, $this), array("class" => 'item date')),
+						$ren->link_for('team_discussion_respond', format_date($this->created_at, 'human'), array("args" => array($this->comment->team, $this->comment), "class" => 'item date')),
 					)),
 				)),
 				span('cleaner', ''),

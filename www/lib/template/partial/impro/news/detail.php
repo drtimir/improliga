@@ -2,7 +2,7 @@
 
 echo div('news_detail');
 
-	echo section_heading($item->name);
+	echo $ren->heading($item->name);
 
 	if ($display_author) {
 		$author = Stag::a(array(

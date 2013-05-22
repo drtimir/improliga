@@ -8,7 +8,7 @@ if (isset($propagated['team'])) {
 
 	$people = $team->get_leaders();
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"team"      => $team,
 		"people"    => $people,
 		"link_user" => $link_user,

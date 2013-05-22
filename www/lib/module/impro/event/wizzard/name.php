@@ -4,10 +4,10 @@ def($id);
 def($new, false);
 def($link_wizzard, '/events/create/{step}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_name'),
@@ -44,7 +44,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 			}
 
 			$event->save();
-			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+			$flow->redirect($ren->url('intra_event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_TEAMS)));
 		}
 	} else {
 		$f->out($this);
@@ -53,13 +53,4 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 	$propagate['event'] = $event;
 	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_NAME;
 } else throw new System\Error\AccessDenied();
-
-
-//~ Název, Typ
-//~ Místo, Datum a čas
-//~ Týmy
-//~ Hráči, Rozhodčí, Konferenciér, Hudebníci, Technici, Pomocňáci
-//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
-//~ Plakát, Vstupenky
-//~ Zveřejnění
 

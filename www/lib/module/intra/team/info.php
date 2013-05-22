@@ -4,7 +4,7 @@ def($template, 'intra/team/info');
 
 if (isset($propagated['team'])) {
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"team" => $team,
 	));
 

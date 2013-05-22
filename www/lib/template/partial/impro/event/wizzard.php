@@ -1,10 +1,10 @@
 <?
 
-Tag::div(array("class" => 'wizzard'));
+echo div('wizzard');
 
-	echo section_heading(l('impro_event_wizzard_status'));
+	echo $ren->heading(l('impro_event_wizzard_status'));
 
-	Tag::ul(array("class" => 'plain'));
+	echo ul('plain');
 		$passed = true;
 		$complete = true;
 		$prev = false;
@@ -45,7 +45,7 @@ Tag::div(array("class" => 'wizzard'));
 			}
 
 			if (($current !== $step && ($passed || $prev)) || $step == Impro\Event::ID_WIZZARD_STEP_NAME) {
-				$content = link_for($label, stprintf(soprintf($link_wizzard, $event), array("step" => $step)));
+				$content = $ren->link_for('intra_event_create_step', $label, array("args" => array($step)));
 			} else {
 				$content = $label;
 			}
@@ -59,11 +59,8 @@ Tag::div(array("class" => 'wizzard'));
 
 			$prev = $passed;
 
-			Tag::li(array(
-				"class"   => $class,
-				"content" => $content,
-			));
+			echo li($content, $class);
 		}
 
-	Tag::close('ul');
-Tag::close('div');
+	close('ul');
+close('div');

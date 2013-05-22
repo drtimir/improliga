@@ -12,8 +12,8 @@ echo div('events');
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
 	echo div('controls', array(
-		$ren->label_for_url('public_events_month', l('impro_prev_month'), 'godmode/navi/prev', 16, array("args" => array($prev->format('Y-m')))),
-		$ren->label_for_left($ren->url('public_events_month', array($next->format('Y-m'))), l('impro_next_month'), 'godmode/navi/next', 16),
+		$ren->label_for_url('events_month', l('impro_prev_month'), 'godmode/navi/prev', 16, array("args" => array($prev->format('Y-m')))),
+		$ren->label_for_left($ren->url('events_month', array($next->format('Y-m'))), l('impro_next_month'), 'godmode/navi/next', 16),
 	));
 
 
@@ -25,7 +25,7 @@ echo div('events');
 			foreach ($list as $event) {
 				$html_event = array();
 
-				$url = $ren->url('public_event_detail', array($event));
+				$url = $ren->url('event', array($event));
 				$html_event[] = $ren->link($url, $event->image->to_html(100, 100), array("class" => 'image'));
 
 				$ts = array(
@@ -44,9 +44,9 @@ echo div('events');
 
 				if ($event->type === \Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
 					$match = div('match_participants', array(
-						$ren->link_for('public_team_detail', $event->team_home->name, array("args" => array($event->team_home))),
+						$ren->link_for('team', $event->team_home->name, array("args" => array($event->team_home))),
 						span('versus', ' vs '),
-						$ren->link_for('public_team_detail', $event->team_away->name, array("args" => array($event->team_away))),
+						$ren->link_for('team', $event->team_away->name, array("args" => array($event->team_away))),
 					));
 				}
 

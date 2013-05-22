@@ -24,6 +24,7 @@ echo html(\System\Locales::get_lang());
 		$ren->content_for('styles', 'intra/profile');
 		$ren->content_for('styles', 'intra/rte');
 
+		$ren->content_for('scripts', 'lib/browser');
 		$ren->content_for('scripts', 'lib/html5');
 		$ren->content_for('scripts', 'lib/jquery/fancybox');
 		$ren->content_for('scripts', 'pwf/browser_control');
@@ -36,12 +37,12 @@ echo html(\System\Locales::get_lang());
 	Tag::body();
 		echo htmlheader();
 			echo div('page-block');
-				echo div('logo', $ren->link_for('intra_home', span('hidden', 'Intranet Improligy')));
+				echo div('logo', $ren->link_for('home', span('hidden', 'Intranet Improligy')));
 
 				echo menu('plain user', array(
-					li($ren->icon_for($response->url('intra_profile'), 'impro/objects/profile',  24, array('title' => l('intra_user_profile')))),
-					li($ren->icon_for($response->url('intra_profile_settings'), 'impro/objects/settings', 24, array("title" => l('intra_user_settings')))),
-					li($ren->icon_for($response->url('intra_logout'), 'godmode/actions/logout', 24, array("title" => l('godmode_user_logout')))),
+					li($ren->icon_for($response->url('profile'), 'impro/objects/profile',  24, array('title' => l('intra_user_profile')))),
+					li($ren->icon_for($response->url('profile_settings'), 'impro/objects/settings', 24, array("title" => l('intra_user_settings')))),
+					li($ren->icon_for($response->url('logout'), 'godmode/actions/logout', 24, array("title" => l('godmode_user_logout')))),
 				));
 			close('div');
 		close('header');

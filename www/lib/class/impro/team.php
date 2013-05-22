@@ -44,9 +44,9 @@ namespace Impro
 			}
 
 			return div('name', array(
-				$ren->link_for('intra_team', $this->name, array("args" => array($this), "class" => 'short')),
+				$ren->link_for('team', $this->name, array("args" => array($this), "class" => 'short')),
 				span('sep', ' - '),
-				$ren->link_for('intra_team', $long_name, array("args" => array($this), "class" => 'full')),
+				$ren->link_for('team', $long_name, array("args" => array($this), "class" => 'full')),
 			));
 		}
 
@@ -54,7 +54,7 @@ namespace Impro
 		public function label(\System\Template\Renderer $ren)
 		{
 			return $ren->link_for(
-				'intra_team',
+				'team',
 				\Stag::span(array(
 					"class" => "icon",
 					"style" => "background:url(".$this->logo->thumb_trans(16, 16).'); width:16px; height:16px;',

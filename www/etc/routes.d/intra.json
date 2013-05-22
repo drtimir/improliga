@@ -6,34 +6,35 @@
 			"news":["impro/news/list", {"slot":"left"}],
 			"cl":["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "heading":"Kalendář"}, ["cc"]]
 		}
-	}, "intra_home"],
+	}, "home"],
 
 	["^/login/$", {
 		"title":"Přihlášení",
 		"layout":["intra/login"],
 		"modules":[["intra/user/login"]]
-	}, "intra_login"],
+	}, "login"],
 
 	["^/logout/$", {
 		"modules":[
 			["intra/user/logout", {"redirect":"/"}]
 		]
-	}, "intra_logout"],
+	}, "logout"],
 
 	["^/news/([^/]+)/$", {
+		"layout":["intra/layout", "intra/dual"],
 		"modules":[
 			["impro/news/list", {"slot":"right"}],
-			["godmode/impro/news/detail", {"id":"#{0}", "slot":"left"}]
+			["impro/news/detail", {"id":"#{0}", "slot":"left"}]
 		]
-	}, "intra_news_detail"],
+	}, "news_detail"],
 
 	["^/teams/$", {
 		"title":"impro_teams",
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["impro/team/list", {"link_team":"intra_team"}]
+			["impro/team/list"]
 		]
-	}, "intra_teams"],
+	}, "teams"],
 
 	["^/teams/([^/]+)/$", {
 		"layout":["intra/layout", "intra/team"],
@@ -44,29 +45,39 @@
 			"people":["impro/team/member_list", {"slot":"right"}, ["head"]],
 			"events":["intra/team/events", {"slot":"right", "heading":"Události", "per_page":3, "thumb_width":56, "thumb_height":38}, ["head"]]
 		}
-	}, "intra_team"],
+	}, "team"],
 
 	["^/teams/([^/]+)/info/$", {
+		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"info":["intra/team/info", {"slot":"left"}, ["head"]],
 			"mans":["intra/team/managers", {"slot":"right"}, ["head"]]
 		}
-	}, "intra_team_info"],
+	}, "team_info"],
 
 	["^/teams/([^/]+)/events/$", {
+		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"events":["intra/team/events", {"slot":"big"}, ["head"]]
 		}
-	}, "intra_team_events"],
+	}, "team_events"],
+
+	["^/teams/([^/]+)/discussion/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"events":["intra/team/events", {"slot":"big"}, ["head"]]
+		}
+	}, "team_discussion"],
 
 	["^/teams/([^/]+)/settings/$", {
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"settings":["intra/team/settings", {"slot":"big"}, ["head"]]
 		}
-	}, "intra_team_settings"],
+	}, "team_settings"],
 
 	["^/teams/([^/]+)/respond/([^/]+)/$", {
 		"modules":{
@@ -74,7 +85,7 @@
 			"responses":["impro/team/comment_responses", {"id_comment":"#{1}", "slot":"left"}, ["head"]],
 			"edit":["impro/team/comment_response_edit", {"id_comment":"#{1}", "slot":"response_edit"}, ["head", "responses"]]
 		}
-	}, "intra_team_discussion_respond"],
+	}, "team_discussion_respond"],
 
 	["^/profile/$", {
 		"title":"Můj profil",
@@ -82,21 +93,24 @@
 		"modules":[
 			["impro/user/profile", {"self":true}]
 		]
-	}, "intra_profile"],
+	}, "profile"],
 
 	["^/profile/events/$", {
-		"title":"intra_profile_my_events",
+		"title":"profile_my_events",
 		"modules":[
 			["impro/event/my", {"slot":"left", "month_input":"#{0}"}]
 		]
-	}, "intra_profile_events"],
+	}, "profile_events"],
 
 	["^/profile/settings/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
 			["intra/user/settings"]
 		]
-	}, "intra_profile_settings"],
+	}, "profile_settings"],
+
+	["^/profile/([^/]+)/$", {
+	}, "profile_user"],
 
 	["^/discussion/$", {
 		"title":"Diskuze",
@@ -104,119 +118,113 @@
 		"modules":[
 			["impro/discussion/board_list", {"conds":{"public":true}, "slot":"left"}]
 		]
-	}, "intra_discussion"],
+	}, "discussion"],
 
 	["^/discussion/create_board/$", {
 		"title":"Vytvořit nový obor témat",
 		"modules":[
 			["impro/discussion/board_edit", {"new":true, "slot":"left"}]
 		]
-	}, "intra_discussion_create_board"],
+	}, "discussion_create_board"],
 
 	["^/discussion/([^/]+)/$", {
 		"title":"Seznam témat",
 		"modules":[
 			["impro/discussion/topic_list", {"id_board":"#{0}", "slot":"left"}]
 		]
-	}, "intra_discussion_topic_list"],
+	}, "discussion_topic_list"],
 
 	["^/discussion/([^/]+)/edit/$", {
 		"title":"Upravit obor",
 		"modules":[
 			["impro/discussion/board_edit", {"id":"#{0}", "slot":"left"}]
 		]
-	}, "intra_discussion_board_edit"],
+	}, "discussion_board_edit"],
 
 	["^/discussion/([^/]+)/delete/$", {
 		"title":"Upravit obor",
 		"modules":[
 			["impro/discussion/board_delete", {"id":"#{0}", "slot":"left"}]
 		]
-	}, "intra_discussion_board_delete"],
+	}, "discussion_board_delete"],
 
 	["^/discussion/([^/]+)/create_topic/$", {
 		"title":"Vytvoření tématu",
 		"modules":[
 			["impro/discussion/topic_edit", {"id_board":"#{0}", "new":true, "slot":"left"}]
 		]
-	}, "intra_discussion_topic_create"],
+	}, "discussion_topic_create"],
 
 	["^/discussion/([^/]+)/([^/]+)/$", {
 		"modules":[
 			["impro/discussion/post_add",  {"id_board":"#{0}", "id_topic":"#{1}", "slot":"discussion_post_form"}],
 			["impro/discussion/post_list", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
 		]
-	}, "intra_discussion_topic"],
+	}, "discussion_topic"],
 
 	["^/discussion/([^/]+)/([^/]+)/edit/$", {
 		"title":"Upravit téma",
 		"modules":[
 			["impro/discussion/topic_edit", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
 		]
-	}, "intra_discussion_topic_edit"],
+	}, "discussion_topic_edit"],
 
 	["^/discussion/([^/]+)/([^/]+)/create_post/$", {
 		"title":"Vytvoření příspěvku",
 		"modules":[
 			["impro/discussion/post_edit", {"new":true, "id_board":"#{0}", "id_topic":"#{1}", "slot":"left"}]
 		]
-	}, "intra_discussion_post_create"],
+	}, "discussion_post_create"],
 
 	["^/events/$", {
-		"title":"intra_events",
+		"title":"events",
 		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
-			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "link_cont":"/events/{id_impro_event}/"}],
+			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month"}],
 			["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true}]
 		]
-	}, "intra_events"],
-
-	["^/events/([^/]+)/$", {
-		"title":"intra_event",
-		"layout":["intra/layout", "intra/single"],
-		"modules":[
-			["impro/event/detail", {"id":"#{0}"}]
-		]
-	}, "intra_event"],
-
-	["^/events/([^/]+)/edit/$", {
-		"layout":["intra/layout", "intra/dual_34_14"],
-		"title":"intra_create_event",
-		"modules":{
-			"step":["impro/event/wizzard/name", {"slot":"left", "id":"#{0}", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}],
-			"status":["impro/event/wizzard/status", {"slot":"right", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}, ["step"]]
-		}
-	}, "intra_event_edit"],
+	}, "events"],
 
 	["^/events/create/$", {
-		"title":"intra_create_event",
+		"title":"create_event",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":{
 			"step":["impro/event/wizzard/name", {"slot":"left", "new":true}],
 			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
 		}
-	}, "intra_event_create"],
-
-	["^/events/create/([^/]+)/$", {
-		"title":"intra_create_event",
-		"modules":{
-			"step":["impro/event/wizzard/step", {"step":"#{0}", "slot":"left", "new":true}],
-			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
-		}
-	}, "intra_event_create_step"],
-
-	["^/events/([^/]+)/([^/]+)/$", {
-		"title":"intra_create_event",
-		"modules":{
-			"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}],
-			"status":["impro/event/wizzard/status", {"slot":"right", "link_wizzard":"/events/{id_impro_event}/edit/{step}/"}, ["step"]]
-		}
-	}, "intra_event_edit_step"],
+	}, "event_create"],
 
 	["^/events/list/([^/]+)/$", {
-		"title":"intra_events",
+		"title":"events",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "day_names_short":true, "month_input":"#{0}"}],
-			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "link_cont":"/events/{id_impro_event}/", "month_input":"#{0}"}]
+			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month", "month_input":"#{0}"}]
 		]
-	}, "intra_event_list"]
+	}, "events_month"],
+
+	["^/events/([^/]+)/$", {
+		"title":"event",
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["impro/event/detail", {"id":"#{0}"}]
+		]
+	}, "event"],
+
+	["^/events/([^/]+)/edit/$", {
+		"layout":["intra/layout", "intra/dual_34_14"],
+		"title":"create_event",
+		"modules":{
+			"step":["impro/event/wizzard/name", {"slot":"left", "id":"#{0}"}],
+			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+		}
+	}, "event_edit"],
+
+	["^/events/([^/]+)/([^/]+)/$", {
+		"title":"create_event",
+		"modules":{
+			"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}"}],
+			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
+		}
+	}, "event_edit_step"]
 ]

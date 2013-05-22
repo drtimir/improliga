@@ -8,7 +8,7 @@ echo div('news');
 
 		foreach ($news as $item) {
 			$content = array();
-			$content[] = $ren->heading($ren->link_for('intra_news_detail', $item->name, array("args" => array($item))), false);
+			$content[] = $ren->heading($ren->link_for('news_detail', $item->name, array("args" => array($item))), false);
 			$content[] = div('text', to_html($item->text));
 
 			if ($display_author) {

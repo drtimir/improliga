@@ -8,7 +8,7 @@ if (isset($propagated['team'])) {
 	$data = $team->get_data();
 	$data['hq'] = $team->hq;
 
-	$f = new \System\Form(array(
+	$f = $ren->form(array(
 		"default" => $data,
 		"class"   => 'team_settings'
 	));

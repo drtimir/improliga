@@ -4,9 +4,9 @@ def($id);
 def($new, false);
 def($link_wizzard, '/events/create/{step}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_teams'),

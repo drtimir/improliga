@@ -42,7 +42,7 @@
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"edit":["impro/team/comment_edit", {"slot":"left"}, ["head"]],
 			"list":["impro/team/comment_list", {"slot":"left"}, ["head"]],
-			"people":["impro/team/member_list", {"slot":"right"}, ["head"]],
+			"mans":["intra/team/managers", {"slot":"right"}, ["head"]],
 			"events":["intra/team/events", {"slot":"right", "heading":"Události", "per_page":3, "thumb_width":56, "thumb_height":38}, ["head"]]
 		}
 	}, "team"],
@@ -52,6 +52,7 @@
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"info":["intra/team/info", {"slot":"left"}, ["head"]],
+			"people":["impro/team/member_list", {"slot":"left"}, ["head"]],
 			"mans":["intra/team/managers", {"slot":"right"}, ["head"]]
 		}
 	}, "team_info"],
@@ -67,8 +68,7 @@
 	["^/teams/([^/]+)/discussion/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"events":["intra/team/events", {"slot":"big"}, ["head"]]
+			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}]
 		}
 	}, "team_discussion"],
 
@@ -122,6 +122,10 @@
 	}, "profile_settings"],
 
 	["^/profile/([^/]+)/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["impro/user/profile", {"id":"#{0}"}]
+		]
 	}, "profile_user"],
 
 	["^/discussion/$", {

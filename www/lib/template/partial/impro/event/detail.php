@@ -70,6 +70,7 @@ echo div('event_detail');
 		if ($event->location) {
 			echo $event->location->map_html($col_width);
 		}
+	close('div');
 
 
 	echo span('cleaner', '');

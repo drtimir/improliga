@@ -1,14 +1,12 @@
 <?
 
-def($redirect, "/teams/{seoname}/respond/{id_impro_team_comment}/");
-
 if (any($propagated['comment']) && any($propagated['team'])) {
 
 	$comment = $propagated['comment'];
 	$team    = $propagated['team'];
 
-	$f = new \System\Form(array(
-		"class"   => 'team_comment team_response',
+	$f = $ren->form(array(
+		"class" => 'team_comment team_response',
 	));
 
 	$f->input_rte('text', l('impro_team_comment_response'), true);

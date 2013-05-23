@@ -2,7 +2,6 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
 
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
@@ -44,7 +43,7 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			}
 
 			$event->save();
-			$flow->redirect($ren->url('intra_event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_TEAMS)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_TEAMS)));
 		}
 	} else {
 		$f->out($this);

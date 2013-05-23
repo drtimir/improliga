@@ -2,17 +2,17 @@
 
 echo div('profile');
 	echo div('left');
-		echo section_heading($user->get_name());
-		echo section_heading($user->nick, 2);
+		echo $ren->heading($user->get_name());
+		echo $ren->heading($user->nick, 2);
 
 		echo div('member_teams profile_block');
-			echo heading(l('intra_user_teams'), false);
+			echo $ren->heading(l('intra_user_teams'), false);
 
 			if (any($member_of)) {
 				echo ul('plain teams');
 
 					foreach ($member_of as $member) {
-						Tag::li(array("content" => $member->to_html($link_team)));
+						echo li($member->to_html($ren));
 					}
 
 				Tag::close('ul');
@@ -24,11 +24,11 @@ echo div('profile');
 		if (any($contacts)) {
 
 			echo div('member_contact profile_block');
-				echo heading(l('intra_user_contacts'), false);
+				echo $ren->heading(l('intra_user_contacts'), false);
 
 					echo ul('plain contacts');
 						foreach ($contacts as $contact) {
-							Tag::li(array("content" => \Impro\User::contact_to_html($contact)));
+							echo li(\Impro\User::contact_to_html($ren, $contact));
 						}
 					close('ul');
 			close('div');
@@ -37,20 +37,18 @@ echo div('profile');
 	close('div');
 
 	echo div('right');
-
-		echo div('profile_block member_avatar fancybox', link_for(\Stag::img(array('src' => $user->avatar->thumb_trans(360,275))), $user->avatar->get_path()));
+		echo div('profile_block member_avatar fancybox', $ren->link($user->avatar->get_path(), $user->avatar->to_html(360,275)));
 
 		if (any($events)) {
 			echo div('profile_block member_events');
-				echo heading(l('intra_user_events'), false);
+				echo $ren->heading(l('intra_user_events'), false);
 
 				echo ul('plain events');
 					foreach ($events as $event) {
-						Tag::li(array("content" => $event->to_html($link_event)));
+						echo li($event->to_html($ren));
 					}
 				close('ul');
 			close('div');
-
 		}
 
 	close('div');

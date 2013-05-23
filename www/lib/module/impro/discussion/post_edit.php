@@ -19,7 +19,7 @@ if (($id && $item = find('\Impro\Discussion\Post', $id)) || ($new && $item = new
 	$item->id_topic = $id_topic;
 	$item->visible  = true;
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,
 	));

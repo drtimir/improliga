@@ -7,7 +7,7 @@ def($link_team, '/teams/{seoname}/');
 def($link_event, '/events/{seoname}/');
 
 
-if (($self && $user = user()) || ($id && $user = find('\System\User', $id))) {
+if (($self && $user = $request->user()) || ($id && $user = find('\System\User', $id))) {
 
 	$member_of = get_all('\Impro\Team\Member')->where(array("id_system_user" => $user->id))->fetch();
 	$event_conds = array(
@@ -26,7 +26,7 @@ if (($self && $user = user()) || ($id && $user = find('\System\User', $id))) {
 	$events = get_all('\Impro\Event')->where($event_conds)->paginate(5)->fetch();
 
 
-	$this->template($template, array(
+	$this->partial($template, array(
 		"user"      => $user,
 		"member_of" => $member_of,
 		"link_team" => $link_team,

@@ -2,8 +2,6 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
-def($link_redirect, '/profile/events/');
 
 if ($event = Impro\Event::wizzard_for($id, $new)) {
 
@@ -20,7 +18,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 	if ($f->passed()) {
 		$event->drop();
-		redirect($link_redirect);
+		$flow->redirect('profile_events');
 	} else {
 		$f->out($this);
 	}

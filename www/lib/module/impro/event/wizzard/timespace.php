@@ -2,18 +2,17 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
 	$data['location'] = $event->location;
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"class"   => 'event_wizzard event_timespace',
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_timespace'),
-		"default" => $data
+		"default" => $data,
 	));
 
 	$f->input_datetime("start", l('impro_event_start'), true);
@@ -24,12 +23,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$f->text('hint1', l('impro_event_wizzard_end_hint'));
 	}
 
-	$f->input(array(
-		"name"  => 'location',
-		"type"  => 'location',
-		"label" => l('impro_event_location'),
-		"required" => true,
-	));
+	$f->input_location('location', l('impro_event_location'), true);
 
 	$f->text('hint2', l('impro_event_wizzard_location_hint'));
 	$f->submit(l('impro_event_wizzard_next'));
@@ -41,24 +35,16 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		if (isset($p['cancel'])) {
 			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
+			v($p);
+			exit;
 			$event->id_location = $p['location']->save()->id;
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS)));
 		}
 	} else {
 		$f->out($this);
 	}
 
-	$propagate['event'] = $event;
-	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_TIMESPACE;
+	$module->propagate('event', $event);
+	$module->propagate('wizzard_step', Impro\Event::ID_WIZZARD_STEP_TIMESPACE);
 } else throw new System\Error\AccessDenied();
-
-
-//~ Název, Typ
-//~ Místo, Datum a čas
-//~ Týmy
-//~ Hráči, Rozhodčí, Konferenciér, Hudebníci, Technici, Pomocňáci
-//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
-//~ Plakát, Vstupenky
-//~ Zveřejnění
-

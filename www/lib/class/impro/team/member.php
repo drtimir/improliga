@@ -33,12 +33,12 @@ namespace Impro\Team
 		}
 
 
-		public function to_html($link_team)
+		public function to_html(\System\Template\Renderer $ren)
 		{
 			return div('team_member', array(
-				link_for(\Stag::img(array("src" => $this->team->logo->thumb_trans(56, 38))), soprintf($link_team, $this->team)),
+				$ren->link_for('team', $this->team->logo->to_html(56, 38), args($this->team)),
 				div('team_member_info', array(
-					$this->team->to_html_link($link_team),
+					$this->team->to_html_link($ren),
 					div('roles', implode(', ', $this->get_roles())),
 				)),
 				div('cleaner', ''),

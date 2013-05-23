@@ -86,7 +86,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 
 			$event->assign($part);
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_TOOLS)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_TOOLS)));
 		}
 	} else {
 		$f->out($this);

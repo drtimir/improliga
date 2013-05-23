@@ -15,7 +15,7 @@ if (($id_board && ($board = find('\Impro\Discussion\Board', $id_board)) && (($id
 		$item->visible = true;
 	}
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,
 	));

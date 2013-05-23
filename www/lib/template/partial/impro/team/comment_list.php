@@ -15,13 +15,13 @@ echo div('team_comments');
 
 					foreach ($responses as $response) {
 						$responses_html .= Stag::li(array(
-							"content" => $response->to_html($link_response),
+							"content" => $response->to_html($ren),
 						));
 					}
 
 					$responses_html = div('responses', array(
 						ul('plain response_list', $responses_html),
-						div('more', link_for(l('impro_team_comment_respond'), soprintf($link_respond, $post))),
+						div('more', $ren->link_for('team_comment_respond', l('impro_team_comment_respond'), args($team, $post))),
 					));
 				}
 
@@ -29,7 +29,7 @@ echo div('team_comments');
 				Tag::li(array(
 					"class" => 'post',
 					"content" => array(
-						$post->to_html($link_respond),
+						$post->to_html($ren),
 						$responses_html,
 					)
 				));

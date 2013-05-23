@@ -11,13 +11,13 @@ def($topic);
 $id_board && ($board = find('\Impro\Discussion\Board', $id_board));
 $id_topic && ($topic = find('\Impro\Discussion\Topic', $id_topic));
 
-if ($item = new Impro\Discussion\Post()) {
-
-	$item->id_board = $id_board;
-	$item->id_topic = $id_topic;
+if ($board && $topic) {
+	$item = new Impro\Discussion\Post();
+	$item->id_board = $board->id;
+	$item->id_topic = $topic->id;
 	$item->visible  = true;
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"default" => $item->get_data(),
 	));
 
@@ -26,12 +26,12 @@ if ($item = new Impro\Discussion\Post()) {
 
 	if ($f->passed()) {
 		$p = $f->get_data();
+		$item->id_author = $request->user()->id;
 		$item->update_attrs($p)->save();
 
-		redirect(soprintf($redirect, $item));
+		$flow->redirect($ren->url('discussion_topic', array($board, $topic)));
 
 	} else {
 		$f->out($this);
 	}
-}
-
+} else throw new \System\Error\NotFound();

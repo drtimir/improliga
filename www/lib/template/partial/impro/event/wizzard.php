@@ -45,7 +45,7 @@ echo div('wizzard');
 			}
 
 			if (($current !== $step && ($passed || $prev)) || $step == Impro\Event::ID_WIZZARD_STEP_NAME) {
-				$content = $ren->link_for('intra_event_create_step', $label, array("args" => array($step)));
+				$content = $ren->link_for('event_edit_step', $label, array("args" => array($event, $step)));
 			} else {
 				$content = $label;
 			}

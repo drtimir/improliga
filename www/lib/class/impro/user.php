@@ -28,10 +28,10 @@ namespace Impro
 		}
 
 
-		public static function contact_to_html(\System\User\Contact $contact)
+		public static function contact_to_html(\System\Template\Renderer $ren, \System\User\Contact $contact)
 		{
 			return div('user_contact', array(
-				icon('impro/contact/'.$contact->get_type_name(), 16),
+				$ren->icon('impro/contact/'.$contact->get_type_name(), 16),
 				span('contact_part contact_ident', $contact->ident),
 				$contact->name ? span('contact_part contact_name', '('.$contact->name.')'):'',
 			));

@@ -2,18 +2,18 @@
 
 echo div('team_comment_responses');
 
-	echo section_heading(l('impro_team_comment_responses'));
+	echo $this->heading(l('impro_team_comment_responses'));
 
 	$responses_html = '';
 
-	echo div('team_comments', div('post', $comment->to_html('')));
+	echo div('team_comments', div('post', $comment->to_html($ren)));
 	echo div('responses');
 
 		if (any($responses)) {
 			echo ul('plain team_comments response_list');
 				foreach ($responses as $response) {
 					Tag::li(array(
-						"content" => $response->to_html($link_response),
+						"content" => $response->to_html($ren),
 						"id" => 'post_'.$response->id,
 					));
 				}
@@ -21,7 +21,7 @@ echo div('team_comment_responses');
 		}
 
 		echo div('response');
-			slot('response_edit');
+			$ren->slot('response_edit');
 		close('div');
 	close('div');
 close('div');

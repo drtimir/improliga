@@ -73,6 +73,7 @@
 	}, "team_discussion"],
 
 	["^/teams/([^/]+)/settings/$", {
+		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"settings":["intra/team/settings", {"slot":"big"}, ["head"]]
@@ -80,12 +81,13 @@
 	}, "team_settings"],
 
 	["^/teams/([^/]+)/respond/([^/]+)/$", {
+		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"responses":["impro/team/comment_responses", {"id_comment":"#{1}", "slot":"left"}, ["head"]],
 			"edit":["impro/team/comment_response_edit", {"id_comment":"#{1}", "slot":"response_edit"}, ["head", "responses"]]
 		}
-	}, "team_discussion_respond"],
+	}, "team_comment_respond"],
 
 	["^/profile/$", {
 		"title":"Můj profil",
@@ -122,20 +124,23 @@
 
 	["^/discussion/create_board/$", {
 		"title":"Vytvořit nový obor témat",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/board_edit", {"new":true, "slot":"left"}]
 		]
-	}, "discussion_create_board"],
+	}, "discussion_board_create"],
 
 	["^/discussion/([^/]+)/$", {
 		"title":"Seznam témat",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/topic_list", {"id_board":"#{0}", "slot":"left"}]
 		]
-	}, "discussion_topic_list"],
+	}, "discussion_board"],
 
 	["^/discussion/([^/]+)/edit/$", {
 		"title":"Upravit obor",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/board_edit", {"id":"#{0}", "slot":"left"}]
 		]
@@ -143,6 +148,7 @@
 
 	["^/discussion/([^/]+)/delete/$", {
 		"title":"Upravit obor",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/board_delete", {"id":"#{0}", "slot":"left"}]
 		]
@@ -150,12 +156,14 @@
 
 	["^/discussion/([^/]+)/create_topic/$", {
 		"title":"Vytvoření tématu",
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/topic_edit", {"id_board":"#{0}", "new":true, "slot":"left"}]
 		]
 	}, "discussion_topic_create"],
 
 	["^/discussion/([^/]+)/([^/]+)/$", {
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/post_add",  {"id_board":"#{0}", "id_topic":"#{1}", "slot":"discussion_post_form"}],
 			["impro/discussion/post_list", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]
@@ -220,7 +228,8 @@
 		}
 	}, "event_edit"],
 
-	["^/events/([^/]+)/([^/]+)/$", {
+	["^/events/([^/]+)/edit/([^/]+)/$", {
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"title":"create_event",
 		"modules":{
 			"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}"}],

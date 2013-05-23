@@ -13,7 +13,7 @@ if (($id && $item = find('\Impro\Discussion\Board', $id)) || ($new && $item = ne
 		$item->public = true;
 	}
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"default" => $item->get_data(),
 		"heading" => $heading,
 	));

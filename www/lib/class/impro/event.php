@@ -228,13 +228,13 @@ namespace Impro
 		}
 
 
-		public function to_html($link)
+		public function to_html(\System\Template\Renderer $ren)
 		{
 			return div('event', array(
-				div('event_image', link_for(\Stag::img(array("src" => $this->image->thumb_trans(78, 56), "alt" => '')), soprintf($link, $this))),
+				div('event_image', $ren->link_for('event', $this->image->to_html(78, 56), args($this))),
 				div('event_info', array(
-					span('part name', link_for($this->name, soprintf($link, $this))),
-					$this->location ? span('part city', link_for($this->location->name, $this->location->map_link())):'',
+					span('part name', $ren->link_for('event', $this->name, args($this))),
+					$this->location ? span('part city', $ren->link_ext($this->location->map_link(), $this->location->name)):'',
 					span('part date', format_date($this->start, 'human-full-datetime')),
 				)),
 				span('cleaner', ''),

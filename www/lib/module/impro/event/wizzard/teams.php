@@ -69,14 +69,14 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			}
 
 			$event->save();
-			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_TIMESPACE)));
 		}
 	} else {
 		$f->out($this);
 	}
 
-	$propagate['event'] = $event;
-	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_TEAMS;
+	$this->propagate('event', $event);
+	$this->propagate('wizzard_step', Impro\Event::ID_WIZZARD_STEP_TEAMS);
 } else throw new System\Error\AccessDenied();
 
 

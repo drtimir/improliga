@@ -28,7 +28,7 @@ namespace Impro\Team\Comment
 					div('name', $this->user ? \Impro\User::link($ren, $this->user):l('anonymous')),
 					div('text', to_html($this->text)),
 					div('footer', array(
-						$ren->link_for('team_discussion_respond', format_date($this->created_at, 'human'), array("args" => array($this->comment->team, $this->comment), "class" => 'item date')),
+						$ren->link_for('team_comment_respond', format_date($this->created_at, 'human'), array("args" => array($this->comment->team, $this->comment), "class" => 'item date')),
 					)),
 				)),
 				span('cleaner', ''),

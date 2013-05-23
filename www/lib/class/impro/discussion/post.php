@@ -23,13 +23,9 @@ namespace Impro\Discussion
 
 		public function save()
 		{
-			if (!$this->id_author) {
-				$this->id_author = user()->id;
-				$this->author = user();
-			}
-
+			parent::save();
 			$this->topic->update_attrs(array("updated_at" => new \DateTime(), "id_last_post_author" => $this->author->id))->save();
-			return parent::save();
+			return $this;
 		}
 	}
 }

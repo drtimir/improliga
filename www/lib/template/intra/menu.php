@@ -2,7 +2,7 @@
 
 echo div('menu_left');
 	echo div('menu_profile');
-		//~ echo span('avatar', $ren->link_for('intra_profile', $request->user()->avatar->to_html(40, 40)));
+		echo span('avatar', $ren->link_for('profile', $request->user()->avatar->to_html(40, 40)));
 		echo span('name', $ren->link_for('profile', $request->user()->get_name()));
 		echo span('edit', $ren->link_for('profile_settings', l('intra_profile_edit')));
 		echo span('cleaner', '');

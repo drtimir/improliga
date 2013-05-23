@@ -14,6 +14,7 @@ html {
 
 body {
 	background:none;
+	padding-top:30px;
 }
 
 a {
@@ -37,10 +38,16 @@ fieldset {
 }
 
 header {
-	background:#ccc;
+	background:#333;
 	display:block;
 	height:30px;
-	position:relative;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:100000;
+	box-shadow:0 0 10px #000;
+	box-shadow:0 0 10px rgba(0,0,0,0.75);
 }
 
 header .page-block {
@@ -128,8 +135,10 @@ menu.user li {
 
 menu.user li a {
 	padding:2px 5px;
-	border-right:1px solid #aaa;
+	color:#fff;
 	margin:0;
+	font-size:13px;
+	font-weight:bold;
 	height:24px;
 	display:block;
 }
@@ -152,7 +161,7 @@ menu.user .label {
 	line-height:24px;
 	display:inline-block;
 	vertical-align:top;
-	padding:0 5px;
+	padding:0 5px 0 10px;
 }
 
 .logo a {
@@ -161,14 +170,14 @@ menu.user .label {
 	position:absolute;
 	left:0;
 	top:0;
-	background:#666 url(/share/pixmaps/intra/logo.png) 4px center no-repeat;
+	background:url(/share/pixmaps/intra/logo.png) 4px center no-repeat;
 }
 
 .logo a .hidden {
 	display:inline-block;
 	line-height:30px;
 	padding-left:40px;
-	color:#EDD868;
+	color:#fff;
 	font-weight:bold;
 }
 

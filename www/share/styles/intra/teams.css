@@ -283,3 +283,56 @@
 	color:#fff;
 	background:#b82429;
 }
+
+
+
+
+.team-layout .team_comment .input-container {
+	display:block;
+}
+
+.team_comment .inputs label {
+	display:none;
+
+}
+
+.team_comment {
+	margin-bottom:20px;
+}
+
+.team_comment form {
+	background:#efefef;
+	margin-bottom:15px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:0;
+}
+
+.team_comment .inputs li,
+.team_comment form,
+.team_comment fieldset,
+.team_comment ul.inputs
+{
+	padding:0;
+	margin:0;
+}
+
+.team-layout .team_comment .buttons {
+	margin-top:0;
+	margin-bottom:0;
+	text-align:right;
+}
+
+#container .team_comment .rte_controls {
+	left:5px;
+	bottom:-37px;
+	background:none;
+	box-shadow:none;
+}
+
+#container .team_comment .rte_content {
+	min-height:50px;
+	padding:10px;
+	font-size:14px;
+	border:none;
+}

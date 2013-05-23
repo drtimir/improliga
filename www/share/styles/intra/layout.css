@@ -88,7 +88,7 @@ menu.plain li {
 	margin-right:20px;
 	float:left;
 	border-right:1px solid #efefef;
-	min-height:100%;
+	min-height:600px;
 }
 
 menu.main {

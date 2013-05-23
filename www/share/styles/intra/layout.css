@@ -112,8 +112,11 @@ menu.main li a {
 	text-decoration:none;
 }
 
-menu.main li a:hover {
-	background:rgba(0,0,0,0.1)
+menu.main li a:hover,
+menu.main li a.active
+{
+	background:rgba(0,0,0,0.1);
+	border-radius:5px 0 0 5px;
 }
 
 menu.main li .icon {
@@ -269,4 +272,12 @@ footer .system {
 
 .fancybox-overlay {
 	z-index:100001;
+}
+
+.devbar {
+	z-index:1000000;
+}
+
+.devbar .open {
+	top:48px;
 }

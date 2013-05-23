@@ -117,11 +117,42 @@ menu.main li .icon {
 menu.user {
 	position:absolute;
 	right:25px;
-	top:3px;
+	top:1px;
 }
 
 menu.user li {
+	height:24px;
+	margin:0;
 	padding:0;
+}
+
+menu.user li a {
+	padding:2px 5px;
+	border-right:1px solid #aaa;
+	margin:0;
+	height:24px;
+	display:block;
+}
+
+menu.user li:last-child a {
+	padding-right:0;
+	border:none;
+	margin-right:0;
+}
+
+
+menu.user li a:hover {
+	background:#666;
+	color:#fff;
+	border-radius:5px;
+}
+
+menu.user .label {
+	height:24px;
+	line-height:24px;
+	display:inline-block;
+	vertical-align:top;
+	padding:0 5px;
 }
 
 .logo a {

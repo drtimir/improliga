@@ -40,7 +40,7 @@ echo html(\System\Locales::get_lang());
 				echo div('logo', $ren->link_for('home', span('hidden', 'Intranet Improligy')));
 
 				echo menu('plain user', array(
-					li($ren->icon_for($response->url('profile'), 'impro/objects/profile',  24, array('title' => l('intra_user_profile')))),
+					li($ren->link_for('profile', array($request->user()->avatar->to_html(24,24), span('label', $request->user()->get_name())), array('title' => l('intra_user_profile')))),
 					li($ren->icon_for($response->url('profile_settings'), 'impro/objects/settings', 24, array("title" => l('intra_user_settings')))),
 					li($ren->icon_for($response->url('logout'), 'godmode/actions/logout', 24, array("title" => l('godmode_user_logout')))),
 				));

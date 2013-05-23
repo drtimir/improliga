@@ -1,3 +1,6 @@
+9614831e5d401c3f385824eaec9ccd1a2dea7c0c Merge branches 'master' and 'master' of ssh://github.com/just-paja/pwf
+e3d34024f6f86d483ae86f69dfef958a7ea37dd9 [fix] Forms, action widget
+024ee554d80c218b44d4b54835de1aad6763ea0f Database model, seoname
 6db7209ad1ef9481910f0c48d234c75f6cfe452f Forms3, heading
 2f7148c98e0b1f61e7e1dcbc9bacc3a2acb77d58 Query class, empty null result
 d9b9c0a43aafc83c5544add327133e6e400fc3d2 User, avatar default

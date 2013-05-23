@@ -18,10 +18,10 @@ if ((any($propagated['team']) && $team = $propagated['team']) || ($id_team && ($
 		$c = new \Impro\Team\Comment($p);
 		$c->id_team = $team->id;
 		$c->visible = true;
-		$c->id_user = user()->id;
+		$c->id_user = $request->user()->id;
 
 		if ($c->save()) {
-			redirect(soprintf($redirect, $team));
+			$flow->redirect($ren->url('team', array($team)));
 		} else {
 			$f->out($this);
 		}

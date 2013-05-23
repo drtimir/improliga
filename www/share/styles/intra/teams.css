@@ -41,6 +41,10 @@
 .team_member_info { float:left }
 
 
+.team_detail {
+	padding-top:10px;
+}
+
 .team_detail .header {
 	position:relative;
 }

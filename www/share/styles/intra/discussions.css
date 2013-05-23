@@ -61,14 +61,36 @@
 	background:#efefef;
 	margin-bottom:15px;
 	border:1px solid #ccc;
+	border-radius:5px;
+	padding:0;
 }
 
+.post_form .inputs li,
 .post_form form,
 .post_form fieldset,
 .post_form ul.inputs
 {
 	padding:0;
 	margin:0;
+}
+
+.post_form .pwform .buttons {
+	margin-top:0;
+	margin-bottom:0;
+	text-align:right;
+}
+
+#container .post_form .rte_controls {
+	left:5px;
+	bottom:-37px;
+	background:none;
+	box-shadow:none;
+}
+
+#container .post_form .rte_content {
+	min-height:50px;
+	padding:10px;
+	font-size:14px;
 }
 
 .topic_list .desc,
@@ -113,6 +135,10 @@
 	padding:0;
 }
 
+.post_list .rte_content {
+	border:none;
+}
+
 .post {
 	margin:0 0 15px;
 }
@@ -145,3 +171,5 @@
 .post .footer a:hover {
 	text-decoration:underline;
 }
+
+

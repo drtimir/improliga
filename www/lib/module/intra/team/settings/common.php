@@ -1,7 +1,5 @@
 <?
 
-def($link_redirect, '/teams/{seoname}/');
-
 if (isset($propagated['team'])) {
 
 	$team = &$propagated['team'];
@@ -40,7 +38,7 @@ if (isset($propagated['team'])) {
 		}
 
 		if ($team->save()) {
-			redirect(soprintf($link_redirect, $team));
+			$flow->redirect($ren->url('team', array($team)));
 		}
 
 	} else {

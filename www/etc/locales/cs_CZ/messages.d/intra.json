@@ -5,7 +5,8 @@
 	"intra_user_not_member":"Nemáte oprávnění přistupovat do této sekce",
 	"intra_wall":"Zeď",
 	"intra_discussion":"Diskuze",
-	"intra_file_share":"Ke stažení",
+	"intra_files":"Ke stažení",
+	"intra_people":"Lidé",
 	"intra_wiki":"Wiki",
 	"intra_profile_edit":"Upravit profil",
 	"intra_events":"Události",
@@ -22,5 +23,9 @@
 	"intra_team_settings":"Nastavení",
 
 	"intra_user_login":"Přihlášení",
-	"intra_user_do_login":"Přihlásit"
+	"intra_user_do_login":"Přihlásit",
+
+
+	"intra_team_settings_common":"Obecné",
+	"intra_team_settings_members":"Členové"
 }

@@ -14,7 +14,7 @@ html {
 
 body {
 	background:none;
-	padding-top:30px;
+	padding-top:36px;
 }
 
 a {
@@ -40,7 +40,7 @@ fieldset {
 header {
 	background:#333;
 	display:block;
-	height:30px;
+	height:36px;
 	position:fixed;
 	left:0;
 	top:0;
@@ -124,7 +124,7 @@ menu.main li .icon {
 menu.user {
 	position:absolute;
 	right:25px;
-	top:1px;
+	top:4px;
 }
 
 menu.user li {
@@ -134,7 +134,7 @@ menu.user li {
 }
 
 menu.user li a {
-	padding:2px 5px;
+	padding:3px 5px;
 	color:#fff;
 	margin:0;
 	font-size:13px;
@@ -153,7 +153,7 @@ menu.user li:last-child a {
 menu.user li a:hover {
 	background:#666;
 	color:#fff;
-	border-radius:5px;
+	border-radius:3px;
 }
 
 menu.user .label {
@@ -169,7 +169,7 @@ menu.user .label {
 	height:30px;
 	position:absolute;
 	left:0;
-	top:0;
+	top:3px;
 	background:url(/share/pixmaps/intra/logo.png) 4px center no-repeat;
 }
 
@@ -265,4 +265,8 @@ footer .system {
 	margin:0;
 	padding:0;
 	list-style:none;
+}
+
+.fancybox-overlay {
+	z-index:100001;
 }

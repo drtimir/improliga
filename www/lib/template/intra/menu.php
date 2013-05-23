@@ -21,10 +21,11 @@ echo div('menu_left');
 
 	echo menu(array('plain', 'main'), array(
 		li($ren->label_for($response->url('teams'), l('impro_teams'), 'godmode/items/team', 16)),
+		li($ren->label_for($response->url('contacts'), l('intra_people'), 'impro/contact/email', 16)),
 		li($ren->label_for($response->url('events'),  l('impro_events'), 'godmode/modules/calendar', 16)),
 		li($ren->label_for($response->url('discussion'), l('intra_discussion'), 'impro/objects/discussion', 16)),
-		//~ li($ren->label_for('impro/objects/wiki', 16, '/wiki/', l('wiki'))));
-		//~ Tag::li(array("content" => label_for('impro/actions/download', 16, '/files/', l('file_share'))));
+		li($ren->label_for($response->url('wiki'), l('intra_wiki'), 'impro/objects/wiki', 16)),
+		li($ren->label_for($response->url('files'), l('intra_files'), 'impro/objects/share', 16)),
 	));
 
 	$ren->slot('secondary_menu');

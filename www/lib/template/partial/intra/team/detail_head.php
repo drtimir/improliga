@@ -23,10 +23,10 @@ echo div('team_detail');
 			$team->hq ?
 				div('map', array(
 					$team->hq->map_html(210, 180),
-					div('playground label', $ren->link(
+					div('playground label', $ren->link_ext(
 						$team->hq->map_link(),
 						div('inner', array(
-							$ren->heading('Domácí hřiště', false, 3),
+							$ren->heading('Domácí hřiště', 3, false),
 							div('location', array(
 								Stag::strong(array("content" => $team->hq->name)),
 								Stag::br(),
@@ -38,7 +38,7 @@ echo div('team_detail');
 			span('cleaner', ''),
 		)),
 		div('menu', array(
-			div('name', $ren->heading($team->to_html_link($ren, false))),
+			div('name', $ren->heading_layout($team->to_html_link($ren, false))),
 			ul('plain options', array(
 				li($ren->link_for('team', l('intra_team_home'), array("args" => array($team), "class" => 'button', "strict" => true))),
 				li($ren->link_for('team_info', l('intra_team_info'), array("args" => array($team), "class" => 'button'))),

@@ -172,13 +172,14 @@
 }
 
 .team_detail .header .menu .options li a {
-	background:#fff;
+	background:#eee;
 	color:#b82429;
+	color:#000;
 	border-color:transparent;
 }
 
 .team_detail .header .menu .options li a:hover,
-.team_detail .header .menu .options li a.link-selected
+.team_detail .header .menu .options li a.active
 {
 	background:#B82429;
 	border-color:#B82429;
@@ -254,4 +255,31 @@
 
 .team_settings input[type=text] {
 	width:300px;
+}
+
+.team_settings_menu {
+	border-bottom:1px solid  #e0e0e0;
+	padding-bottom:5px;
+	margin-bottom:15px;
+}
+
+.team_settings_menu ul li {
+	margin:0 5px 0 0;
+	display:inline-block;
+}
+
+.team_settings_menu a {
+	display:inline-block;
+	background:#eee;
+	padding:6px 15px;
+	border-radius:5px;
+	font-weight:bold;
+	color:#000;
+}
+
+.team_settings_menu a:hover,
+.team_settings_menu a.active
+ {
+	color:#fff;
+	background:#b82429;
 }

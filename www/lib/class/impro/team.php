@@ -98,5 +98,15 @@ namespace Impro
 
 			return false;
 		}
+
+
+		public function can_user(\System\User $user, $perm_id)
+		{
+			if ($mem = $this->member($user)) {
+				return $mem->has_right($perm_id);
+			}
+
+			return false;
+		}
 	}
 }

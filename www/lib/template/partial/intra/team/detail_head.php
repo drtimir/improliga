@@ -3,14 +3,17 @@
 $manage_menu = '';
 
 if ($member) {
-	$manage_menu = ul('plain options manage', array(
-		$member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION) ? Stag::li(array(
-			"content" => $ren->link_for('team_discussion', l('intra_team_discussion'), array("args" => array($team), "class" => 'button'))
-		)):'',
-		$member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DATA) ? Stag::li(array(
-			"content" => $ren->link_for('team_settings', l('intra_team_settings'), array("args" => array($team), "class" => 'button'))
-		)):'',
-	));
+	$manage_menu_opts = array();
+
+	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION)) {
+		$manage_menu_opts[] = li($ren->link_for('team_discussion', l('intra_team_discussion'), array("args" => array($team), "class" => 'button')));
+	}
+
+	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DATA)) {
+		$manage_menu_opts[] = li($ren->link_for('team_settings', l('intra_team_settings'), array("args" => array($team), "class" => 'button')));
+	}
+
+	$manage_menu = ul('plain options manage', $manage_menu_opts);
 }
 
 

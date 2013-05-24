@@ -103,6 +103,7 @@
 
 .team_info .city { background-image:url(/share/icons/impro/16/objects/city.png); }
 .team_info .site { background-image:url(/share/icons/impro/16/objects/site.png); }
+.team_info .mail { background-image:url(/share/icons/impro/16/contact/email.png); }
 
 .team_detail .team_info {
 	margin:10px 0;

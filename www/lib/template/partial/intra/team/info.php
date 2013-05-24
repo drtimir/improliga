@@ -12,7 +12,7 @@ echo div('team_info');
 	}
 
 	if ($team->mail) {
-		$props[] = li($team->mail, 'icon mail');
+		$props[] = li($ren->link('mailto:'.$team->mail, $team->mail), 'icon mail');
 	}
 
 	if ($team->site) {

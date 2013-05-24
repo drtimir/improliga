@@ -3,11 +3,7 @@
 $this->req('id');
 
 def($booking,      false);
-def($link_cont,    '/udalosti/{seoname}/');
-def($link_book,    '/udalosti/{seoname}/rezervace/');
 def($link_day,     '/udalosti/seznam/{year}-{month}/#'.l('day').'{day}');
-def($link_team,    '/teams/{seoname}/');
-def($link_team_menu, '/teams/{seoname}/%s/');
 def($link_month,   '/udalosti/seznam/{year}-{month}/');
 def($thumb_width,  100);
 def($thumb_height, 100);
@@ -32,8 +28,6 @@ if ($team = find('Impro\Team', $id)) {
 	$module->partial($template, array(
 		"member" => $team->member($request->user()),
 		"team"   => $team,
-		"link_team" => $link_team,
-		"link_team_menu" => soprintf($link_team_menu, $team),
 	));
 
 	$module->propagate('team', $team);

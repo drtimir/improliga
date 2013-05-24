@@ -10,7 +10,7 @@ def($heading, t('godmode_item_list'));
 def($desc, '');
 def($conds, array());
 def($opts, array());
-def($template, 'godmode/item-list');
+def($template, 'godmode/admin/list');
 def($sort, array('created_at desc'));
 
 

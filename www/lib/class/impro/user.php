@@ -4,6 +4,11 @@ namespace Impro
 {
 	abstract class User
 	{
+		private static $default = array(
+			"groups" => array(3),
+		);
+
+
 		public static function signature(\System\User $user)
 		{
 			return \Tag::div(array(
@@ -36,5 +41,29 @@ namespace Impro
 				$contact->name ? span('contact_part contact_name', '('.$contact->name.')'):'',
 			));
 		}
+
+
+		public static function get_default_data()
+		{
+			return self::$default;
+		}
+
+
+		public static function load_members(\System\User $user)
+		{
+			if (is_null($user->members)) {
+				$user->members = get_all('\Impro\Team\Member')->where(array("id_system_user" => $user->id))->fetch();
+				$teams = array();
+
+				foreach ($user->members as $mem) {
+					$teams[] = $mem->team;
+				}
+
+				$user->teams = $teams;
+			}
+		}
+
+
+		//~ public static function notify(\System\User $user,)
 	}
 }

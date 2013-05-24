@@ -4,7 +4,7 @@ def($heading, l('godmode_user_login'));
 
 if ($request->logged_in()) {
 
-	$flow->redirect($request->url('god_home'));
+	$flow->redirect($ren->url('god_home'));
 
 } else {
 
@@ -22,7 +22,7 @@ if ($request->logged_in()) {
 
 		if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
 			if ($user->login($request, $p['password'])) {
-				$flow->redirect($request->url('god_home'));
+				$flow->redirect($ren->url('god_home'));
 			}
 		}
 	}

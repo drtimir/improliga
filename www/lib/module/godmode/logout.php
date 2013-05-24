@@ -1,4 +1,4 @@
 <?
 
 $request->user()->logout();
-$flow->redirect($request->url('god_home'));
+$flow->redirect($ren->url('god_home'));

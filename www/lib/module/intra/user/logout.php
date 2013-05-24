@@ -1,4 +1,4 @@
 <?
 
 $request->user()->logout();
-$flow->redirect($ren->url('intra_home'));
+$flow->redirect($ren->url('home'));

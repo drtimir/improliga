@@ -351,7 +351,7 @@ namespace Godmode
 			foreach ($menu_temp as $item) {
 				try {
 					if (!is_null($item)) {
-						$item['url'] = $request->url($item['url_name'], $request->args);
+						$item['url'] = \System\Router::get_url($request->host, $item['url_name'], $request->args);
 					}
 
 					$menu[] = $item;

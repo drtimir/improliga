@@ -32,6 +32,7 @@ namespace Impro\Team\Member
 		);
 
 
+		private static $roles_default = array(self::ID_PLAYER, self::ID_MEMBER);
 		private static $types_manager = array(self::ID_MANAGER, self::ID_TRAINER);
 
 
@@ -66,6 +67,12 @@ namespace Impro\Team\Member
 			if (isset(self::$perms[$perm_id])) {
 				return in_array($role, self::$perms[$perm_id]);
 			} else throw new \System\Error\Argument(sprintf('Invalid permission id "%s"', $perm_id));
+		}
+
+
+		public static function get_default_roles()
+		{
+			return self::$roles_default;
 		}
 	}
 }

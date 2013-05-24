@@ -24,7 +24,7 @@ echo html(\System\Locales::get_lang());
 			echo div('page-block');
 
 				echo div(array('block', 'left'));
-					echo $ren->link_for('intra_home', $ren->heading_layout(l('intra_name')));
+					echo $ren->link_for('home', $ren->heading_layout(l('intra_name')));
 					Tag::p(array("content" => l('intra_desc')));
 
 				close('div');

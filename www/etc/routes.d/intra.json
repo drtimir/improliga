@@ -86,7 +86,7 @@
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"settings":["intra/team/settings", {"slot":"big"}, ["head"]]
+			"settings":["intra/team/settings/members", {"slot":"big"}, ["head"]]
 		}
 	}, "team_settings_members"],
 
@@ -250,6 +250,14 @@
 			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
 		}
 	}, "event_edit_step"],
+
+	["^/user/request/([^/]+)/([^/]+)/([^/]+)/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":{
+			"auth":["intra/user/auth", {"uid":"#{0}", "auth_key":"#{2}"}],
+			"rq":["intra/user/request", {"rqid":"#{1}"}, ["auth"]]
+		}
+	}, "request"],
 
 
 	["^/contacts/$", {

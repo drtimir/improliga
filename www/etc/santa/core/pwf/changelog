@@ -1,5 +1,11 @@
-9614831e5d401c3f385824eaec9ccd1a2dea7c0c Merge branches 'master' and 'master' of ssh://github.com/just-paja/pwf
+e98768b5bdb871bc88e727c7d5fc65f6d221ea5e Merge branch 'master' of ssh://github.com/just-paja/pwf
+d7aaddfdc862084c06beff58c458ede4dbbbf6de [fix] Forms, renderer
+a436e4ccab4e91a0144cb61fabea6a37e90d88a6 [fix] Form, label
+b63c9d5caac07bee627cc9eb1c34939adc0a61a1 Merge branch 'master' of ssh://github.com/just-paja/pwf
+04440409f4a95edb19cd49d8dd7ad116904cbeaf Code cleanup
+5c7ad281dd120c34235dd3c538561f9664cd2b20 Forms, render description
 e3d34024f6f86d483ae86f69dfef958a7ea37dd9 [fix] Forms, action widget
+9614831e5d401c3f385824eaec9ccd1a2dea7c0c Merge branches 'master' and 'master' of ssh://github.com/just-paja/pwf
 024ee554d80c218b44d4b54835de1aad6763ea0f Database model, seoname
 6db7209ad1ef9481910f0c48d234c75f6cfe452f Forms3, heading
 2f7148c98e0b1f61e7e1dcbc9bacc3a2acb77d58 Query class, empty null result

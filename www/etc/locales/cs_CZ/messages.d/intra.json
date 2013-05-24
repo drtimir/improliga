@@ -22,10 +22,27 @@
 	"intra_team_discussion":"Interní diskuze",
 	"intra_team_settings":"Nastavení",
 
+	"intra_team_member_add":"Přidat člena týmu",
+	"intra_team_member_existing":"Existující uživatel",
+	"intra_team_member_new":"Nový uživatel",
+	"save":"Uložit",
+
+
 	"intra_user_login":"Přihlášení",
 	"intra_user_do_login":"Přihlásit",
 
 
 	"intra_team_settings_common":"Obecné",
-	"intra_team_settings_members":"Členové"
+	"intra_team_settings_members":"Členové",
+
+	"intra_user_request_heading":"Potvrzení uživatelské žádosti",
+	"intra_user_request_desc":"Zvolte prosím jednu z vybraných možností.",
+	"intra_team_member_add_text":"Uživatel {link_user} vás požádal o připojení se k improvizačnímu týmu {link_team}. Přejete si stát se členem týmu?",
+	"intra_team_user_already_member":"Tento uživatel již je členem.",
+
+	"intra_request_subject":"[Improliga] Uživatelská žádost na intranetu",
+	"intra_request_mail_body":"Dobrý den, uživatel {user_name} vám zaslal žádost. {text} Potvrdit ji můžete zde: {link}",
+	"end":""
+
+
 }

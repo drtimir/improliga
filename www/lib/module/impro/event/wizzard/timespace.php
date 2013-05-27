@@ -35,8 +35,6 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		if (isset($p['cancel'])) {
 			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
-			v($p);
-			exit;
 			$event->id_location = $p['location']->save()->id;
 			$event->update_attrs($p)->save();
 			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_PARTICIPANTS)));

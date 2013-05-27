@@ -1,5 +1,7 @@
 <?
 
+$ren->content_for('title', 'Týmy Improligy');
+
 echo div('team_list');
 
 	echo $renderer->heading(l('title_impro_teams'));

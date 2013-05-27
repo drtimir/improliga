@@ -4,10 +4,10 @@ def($id);
 def($new, false);
 def($link_wizzard, '/events/create/{step}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_tools'),
 		"default" => $data,
@@ -40,10 +40,10 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$p = $f->get_data();
 
 		if (isset($p['cancel'])) {
-			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$event->update_attrs($p)->save();
-			redirect(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_POSTER)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_POSTER)));
 		}
 	} else {
 		$f->out($this);

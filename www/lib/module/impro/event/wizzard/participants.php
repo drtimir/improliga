@@ -4,7 +4,7 @@ def($id);
 def($new, false);
 def($link_wizzard, '/events/create/{step}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$event_participants = $event->participants->fetch();
 	$part = array();
@@ -23,7 +23,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$part[$roles[$participant->type]][] = $participant->id_impro_team_member;
 	}
 
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
 		"heading" => t("impro_event_wizzard"),
 		"desc"    => t('impro_event_wizzard_step_participants'),

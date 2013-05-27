@@ -3,10 +3,10 @@
 echo div('profile');
 	echo div('left');
 		echo $ren->heading($user->get_name());
-		echo $ren->heading($user->nick, 2);
+		echo $ren->heading($user->nick);
 
 		echo div('member_teams profile_block');
-			echo $ren->heading(l('intra_user_teams'), false);
+			echo $ren->heading_static(l('intra_user_teams'));
 
 			if (any($member_of)) {
 				echo ul('plain teams');
@@ -24,7 +24,7 @@ echo div('profile');
 		if (any($contacts)) {
 
 			echo div('member_contact profile_block');
-				echo $ren->heading(l('intra_user_contacts'), false);
+				echo $ren->heading_static(l('intra_user_contacts'));
 
 					echo ul('plain contacts');
 						foreach ($contacts as $contact) {
@@ -41,7 +41,7 @@ echo div('profile');
 
 		if (any($events)) {
 			echo div('profile_block member_events');
-				echo $ren->heading(l('intra_user_events'), false);
+				echo $ren->heading_static(l('intra_user_events'));
 
 				echo ul('plain events');
 					foreach ($events as $event) {

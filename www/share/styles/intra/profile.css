@@ -27,7 +27,8 @@
 .profile .teams li,
 .profile .events li
 {
-	padding:5px 0;
+	padding:5px 0 5px 5px;
+	border-radius:5px;
 }
 
 .profile .teams li:hover,

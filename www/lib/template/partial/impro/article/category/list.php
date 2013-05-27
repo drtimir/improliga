@@ -17,12 +17,12 @@ echo div('carticle_list');
 
 					echo li();
 
-						echo $ren->link($request->url('public_article', array($article)), $article->name);
+						echo $ren->link_for('article', $article->name, args($article));
 
 						if (count($chapters) > 2) {
 							Tag::ol(array("class" => 'chapter_list'));
 								foreach ($chapters as $chapter) {
-									echo li($ren->link($request->url('public_article_chapter', array($article, \System\Url::gen_seoname($chapter->name))), $chapter->name));
+									echo li($ren->link_for('article_chapter', $chapter->name, args($article, \System\Url::gen_seoname($chapter->name))));
 								}
 							close('ol');
 						}

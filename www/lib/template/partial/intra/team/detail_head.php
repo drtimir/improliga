@@ -1,5 +1,7 @@
 <?
 
+$ren->content_for('title', $team->name);
+
 $manage_menu = '';
 
 if ($member) {

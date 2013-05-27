@@ -29,7 +29,6 @@
 	}, "news_detail"],
 
 	["^/teams/$", {
-		"title":"impro_teams",
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
 			["impro/team/list"]
@@ -219,7 +218,6 @@
 	}, "discussion_post_create"],
 
 	["^/events/$", {
-		"title":"events",
 		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/event/calendar", {"slot":"left", "template":"impro/event/list_month"}],
@@ -228,7 +226,6 @@
 	}, "events"],
 
 	["^/events/create/$", {
-		"title":"create_event",
 		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":{
 			"step":["impro/event/wizzard/name", {"slot":"left", "new":true}],
@@ -246,7 +243,6 @@
 	}, "events_month"],
 
 	["^/events/([^/]+)/$", {
-		"title":"event",
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
 			["impro/event/detail", {"id":"#{0}"}]
@@ -255,7 +251,6 @@
 
 	["^/events/([^/]+)/edit/$", {
 		"layout":["intra/layout", "intra/dual_34_14"],
-		"title":"create_event",
 		"modules":{
 			"step":["impro/event/wizzard/name", {"slot":"left", "id":"#{0}"}],
 			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]
@@ -264,7 +259,6 @@
 
 	["^/events/([^/]+)/edit/([^/]+)/$", {
 		"layout":["intra/layout", "intra/dual_34_14"],
-		"title":"create_event",
 		"modules":{
 			"step":["impro/event/wizzard/step", {"slot":"left", "id":"#{0}", "step":"#{1}"}],
 			"status":["impro/event/wizzard/status", {"slot":"right"}, ["step"]]

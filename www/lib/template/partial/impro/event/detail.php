@@ -1,5 +1,7 @@
 <?
 
+$ren->content_for('title', $event->name.' - Improliga');
+
 echo div('event_detail');
 	echo div('left');
 

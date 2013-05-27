@@ -1,5 +1,8 @@
 <?
 
+$ren->content_for('title', ' - Informace');
+
+
 echo div('team_info');
 
 	echo $ren->heading(l('impro_team_info'));

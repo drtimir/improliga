@@ -1,5 +1,7 @@
 <?
 
+$ren->content_for('title', 'Úprava události ('.$event->name.') - Improliga');
+
 echo div('wizzard');
 
 	echo $ren->heading(l('impro_event_wizzard_status'));

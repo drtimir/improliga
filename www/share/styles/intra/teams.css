@@ -227,6 +227,15 @@
 	width:217px;
 }
 
+.team_people li {
+	margin-bottom:10px;
+}
+
+ .left .team_people li {
+	width:250px;
+	float:left;
+
+}
 
 .team-layout .right .team_people {
 	margin-bottom:10px;

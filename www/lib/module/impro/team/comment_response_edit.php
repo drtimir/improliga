@@ -16,13 +16,13 @@ if (any($propagated['comment']) && any($propagated['team'])) {
 		$p = $f->get_data();
 
 		$r = new \Impro\Team\Comment\Response($p);
-		$r->id_user    = user()->id;
+		$r->id_user    = $request->user()->id;
 		$r->id_comment = $comment->id;
 		$r->visible    = true;
 
 		if ($r->save()) {
 
-			redirect(soprintf(soprintf($redirect, $team), $comment));
+			$flow->redirect($ren->url('team_comment_respond', array($team, $comment)));
 
 		} else $f->out($this);
 	} else $f->out($this);

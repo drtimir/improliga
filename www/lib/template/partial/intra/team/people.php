@@ -11,7 +11,7 @@ echo div('team_people');
 
 			foreach ($people as $member) {
 				echo li(array(
-					$member->to_html_member($ren, $link_user),
+					$member->to_html_member($ren),
 					span('cleaner', ''),
 				));
 			}

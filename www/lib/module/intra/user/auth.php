@@ -10,5 +10,5 @@ if ($code = \System\User\Auth\Code::validate($auth_key, $uid)) {
 			$this->propagate('code', $code);
 			$this->propagate('user', $code->user);
 		} else throw new \System\Error\AccessDenied();
-	} else throw new \System\Error\AccessDenied();
+	} else redirect_now($ren->url('login'));
 } else throw new \System\Error\AccessDenied();

@@ -68,7 +68,8 @@
 	["^/teams/([^/]+)/discussion/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}]
+			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["system/partial", {"template":"intra/working", "slot":"big"}]
 		}
 	}, "team_discussion"],
 
@@ -86,9 +87,28 @@
 		"modules":{
 			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
 			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"settings":["intra/team/settings/members", {"slot":"big"}, ["head"]]
+			"set_add":["intra/team/settings/member_add", {"slot":"big"}, ["head"]],
+			"set_list":["intra/team/settings/member_list", {"slot":"big"}, ["head"]]
 		}
 	}, "team_settings_members"],
+
+	["^/teams/([^/]+)/settings/members/([^/]+)/roles/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
+			"settings":["intra/team/settings/member_roles", {"id":"#{1}", "slot":"big"}, ["head"]]
+		}
+	}, "team_settings_member_roles"],
+
+	["^/teams/([^/]+)/settings/members/([^/]+)/drop/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
+			"settings":["intra/team/settings/member_drop", {"id":"#{1}"}]
+		}
+	}, "team_settings_member_drop"],
 
 	["^/teams/([^/]+)/respond/([^/]+)/$", {
 		"layout":["intra/layout", "intra/team"],
@@ -261,11 +281,23 @@
 
 
 	["^/contacts/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"intra/working"}]
+		]
 	}, "contacts"],
 
 	["^/wiki/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"intra/working"}]
+		]
 	}, "wiki"],
 
 	["^/files/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"intra/working"}]
+		]
 	}, "files"]
 ]

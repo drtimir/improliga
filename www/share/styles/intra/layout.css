@@ -281,3 +281,11 @@ footer .system {
 .devbar .open {
 	top:48px;
 }
+
+
+.working {
+	font-size:32px;
+	color:#ccc;
+	padding:60px 0;
+	text-align:center;
+}

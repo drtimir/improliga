@@ -37,12 +37,26 @@
 
 	"intra_user_request_heading":"Potvrzení uživatelské žádosti",
 	"intra_user_request_desc":"Zvolte prosím jednu z vybraných možností.",
+	"intra_user_request_subject":"[Improliga] Uživatelská žádost na intranetu",
+	"intra_user_request_mail_body":"Dobrý den,\n\nuživatel {user_name} vám zaslal žádost. {text}\n\nŽádost můžete potvrdit zde: {link}",
+	"intra_user_request_response_subject":"[Improliga] Odpověď na žádost z intranetu",
+	"intra_user_request_response_mail_body_yes":"Dobrý den,\n\nuživatel {user_name} přijal vaši žádost. Text žádosti:\n\n{text}",
+	"intra_user_request_response_mail_body_no":"Dobrý den,\n\nuživatel {user_name} odmítl vaši žádost. Text žádosti:\n\n{text}",
+	"intra_user_registration":"Byl vám vytvořen nový uživatelský účet.\n\nPřihlašovací jméno: {login}\nHeslo: {password}",
+
+	"intra_user_notice_subject":"[Improliga] Upozornění na intranetu",
+	"intra_user_notice_mail_body":"Dobrý den,\n\nuživatel {user_name} vám poslal upozornění na intranetu.\n\n{text}\n\nDetaily naleznete na této adrese: {link}",
+
 	"intra_team_member_add_text":"Uživatel {link_user} vás požádal o připojení se k improvizačnímu týmu {link_team}. Přejete si stát se členem týmu?",
+	"intra_team_member_list":"Seznam členů týmu",
+	"intra_team_member_edit":"Upravit role uživatele",
+	"intra_team_member_drop":"Vyhodit uživatele z týmu",
 	"intra_team_user_already_member":"Tento uživatel již je členem.",
 
-	"intra_request_subject":"[Improliga] Uživatelská žádost na intranetu",
-	"intra_request_mail_body":"Dobrý den, uživatel {user_name} vám zaslal žádost. {text} Potvrdit ji můžete zde: {link}",
+	"intra_team_comment_new_text":"Uživatel {user_name} přidal nový komentář do týmu {team_name}.\n\n{text}",
+	"intra_team_comment_response":"Uživatel {user_name} také okomentoval komentář týmu {team_name}.\n\n{text}",
+	"intra_team_comment_response_owner":"Uživatel {user_name} okomentoval váš komentář na zdi týmu {team_name}.\n\n{text}",
+
+	"intra_warning_working":"Na této části webu zatím pracujeme.",
 	"end":""
-
-
 }

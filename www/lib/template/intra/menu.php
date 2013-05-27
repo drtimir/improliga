@@ -8,11 +8,13 @@ echo div('menu_left');
 		echo span('cleaner', '');
 	close('div');
 
-	echo menu(array('plain', 'main'));
-		foreach ($request->user()->teams as $team) {
-			echo li($team->label($ren));
-		}
-	close('menu');
+	if (count($request->user()->teams)) {
+		echo menu(array('plain', 'main'));
+			foreach ($request->user()->teams as $team) {
+				echo li($team->label($ren));
+			}
+		close('menu');
+	}
 
 	echo menu(array('plain', 'main'), array(
 		li($ren->label_for($response->url('home'), l('intra_wall'), 'godmode/locations/home', 16)),

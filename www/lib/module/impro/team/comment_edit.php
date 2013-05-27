@@ -21,6 +21,7 @@ if ((any($propagated['team']) && $team = $propagated['team']) || ($id_team && ($
 		$c->id_user = $request->user()->id;
 
 		if ($c->save()) {
+			$c->mail($ren);
 			$flow->redirect($ren->url('team', array($team)));
 		} else {
 			$f->out($this);

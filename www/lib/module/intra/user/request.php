@@ -12,7 +12,7 @@ if ($propagated['user'] && $propagated['code']) {
 
 			$f = $ren->form(array(
 				"heading" => l('intra_user_request_heading'),
-				"desc"    => l('intra_user_request_desc'),
+				"class"   => 'request',
 				"default" => array(
 					"yes" => 1,
 					"no" => 1,
@@ -21,15 +21,16 @@ if ($propagated['user'] && $propagated['code']) {
 			));
 
 			$f->hidden('submited', true);
-			$f->label($rq->text);
+			$f->text('label', $rq->text);
+			$f->text('desc', l('intra_user_request_desc'));
 
-			$f->input(array("name" => 'yes', "label" => l('yes'), "type" => 'submit', "kind" => 'button'));
-			$f->input(array("name" => 'no', "label" => l('no'), "type" => 'submit', "kind" => 'button'));
+			$f->input(array("name" => 'yes', "label" => ucfirsts(l('yes')), "type" => 'submit', "kind" => 'button'));
+			$f->input(array("name" => 'no', "label" => ucfirsts(l('no')), "type" => 'submit', "kind" => 'button'));
 
 			if ($rq->allow_maybe) {
 				$f->input(array(
 					"name"  => 'maybe',
-					"label" => l('maybe'),
+					"label" => ucfirsts(l('maybe')),
 					"type"  => 'submit',
 					"kind"  => 'button',
 				));
@@ -45,6 +46,8 @@ if ($propagated['user'] && $propagated['code']) {
 				if (isset($p['maybe'])) $value = \Impro\User\Request::RESPONSE_MAYBE;
 
 				$rq->callback($value);
+				$rq->mail_response($ren);
+				$rq->redirect();
 
 			} else $f->out($this);
 

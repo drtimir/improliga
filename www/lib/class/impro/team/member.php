@@ -46,7 +46,7 @@ namespace Impro\Team
 		}
 
 
-		public function to_html_member(\System\Template\Renderer $ren, $link_user)
+		public function to_html_member(\System\Template\Renderer $ren)
 		{
 			return div('team_user', array(
 				\Impro\User::avatar($ren, $this->user, 56, 38),

@@ -23,6 +23,7 @@ echo html(\System\Locales::get_lang());
 		$ren->content_for('styles', 'impro/team_comments');
 		$ren->content_for('styles', 'intra/profile');
 		$ren->content_for('styles', 'intra/rte');
+		$ren->content_for('styles', 'intra/requests');
 
 		$ren->content_for('scripts', 'lib/browser');
 		$ren->content_for('scripts', 'lib/html5');

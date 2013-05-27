@@ -52,17 +52,38 @@ namespace Impro\User
 		public function mail(\System\Template\Renderer $ren)
 		{
 			$contacts = $this->user->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
-
 			$mail = \System\Offcom\Mail::create(
-				l('intra_request_subject'),
-				stprintf(l('intra_request_mail_body'), array(
+				l('intra_user_request_subject'),
+				stprintf(l('intra_user_request_mail_body'), array(
+					"user_name" => $this->author->get_name(),
 					"text" => $this->text,
-					"link" => $ren->url('request', array($this->code->uid, $this->id, $this->code->key)),
+					"link" => $ren->uri('request', array($this->code->uid, $this->id, $this->code->key)),
 				)),
 				collect(array('attr', 'ident'), $contacts, true)
 			);
 
-			return $this;
+			return $mail->send();
+		}
+
+
+		public function mail_response(\System\Template\Renderer $ren)
+		{
+			if ($this->response && $this->response !== self::RESPONSE_MAYBE) {
+				$contacts = $this->author->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
+				$method = self::get_method($this->response);
+				$mail = \System\Offcom\Mail::create(
+					l('intra_user_request_response_subject'),
+					stprintf(l('intra_user_request_response_mail_body_'.$method), array(
+						"user_name" => $this->user->get_name(),
+						"text" => $this->text,
+					)),
+					collect(array('attr', 'ident'), $contacts, true)
+				);
+
+				return $mail->send();
+			}
+
+			return false;
 		}
 
 
@@ -78,38 +99,53 @@ namespace Impro\User
 
 		public function callback($value)
 		{
+			$method = self::get_method($value);
+
 			if ($this->callback) {
 				$name   = '\\Impro\\User\\Request\\'.$this->callback;
-				$method = null;
-
-				if ($value == self::RESPONSE_YES) {
-					$method = 'yes';
-				} else if ($value == self::RESPONSE_NO) {
-					$method = 'no';
-				} else if ($value == self::RESPONSE_MAYBE) {
-					$method = 'maybe';
-				}
-
-				if (is_null($method)) {
-					throw new \System\Error\Argument(sprintf("Did not recognize value '%s' for user request.", $value));
-				}
 
 				if (class_exists($name)) {
 					if (method_exists($name, $method)) {
 						$response = $name::$method($this);
 
 						if ($response) {
-							$url = $this->__get('redirect_'.$method);
 							$this->code->drop();
-
-							redirect_now($url ? $url:'/');
-							return $this;
 						} else throw new \System\Error\Code(sprintf("Callback method '%s' did not return true. It maybe failed.", $name.'::'.$method));
 					} else throw new \System\Error\Code(sprintf("Callback method '%s' was not found.", $name.'::'.$method));
 				} else throw new \System\Error\Model(sprintf("Callback model '%s' was not found.", $name));
 			}
 
-			return $this;
+			$this->read = true;
+			$this->response = $value;
+
+			return $this->save();
+		}
+
+
+		public function redirect()
+		{
+			if ($this->response) {
+				$method = self::get_method($this->response);
+				$url    = $this->__get('redirect_'.$method);
+
+				return redirect_now($url ? $url:'/');
+			}
+		}
+
+
+		public static function get_method($value)
+		{
+			$method = null;
+
+			if ($value == self::RESPONSE_YES) $method = 'yes';
+			elseif ($value == self::RESPONSE_NO) $method = 'no';
+			elseif ($value == self::RESPONSE_MAYBE) $method = 'maybe';
+
+			if (is_null($method)) {
+				throw new \System\Error\Argument(sprintf("Did not recognize value '%s' for user request.", $value));
+			}
+
+			return $method;
 		}
 	}
 }

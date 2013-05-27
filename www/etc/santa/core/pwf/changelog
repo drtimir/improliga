@@ -1,5 +1,16 @@
-e98768b5bdb871bc88e727c7d5fc65f6d221ea5e Merge branch 'master' of ssh://github.com/just-paja/pwf
+60357886a70095aad39c8c91f3062ac75ca3cd95 Merge branch 'master' of ssh://github.com/just-paja/pwf
+99c4755af687dea39eea54dedb4925d72d3fd0fa Forms3, label length
+5b19d0f15702d0b734e1ee1d1132e920722d11c3 Mailer, headers
+4c09fef750fd174e2731b0570bf1b2c7e4fab691 Merge branch 'master' of ssh://github.com/just-paja/pwf
+55755a2367f643d52a4fed118f6b5b350487565c [fix] Mail, offcom cfg
+8fa614bd499b3cf9d9907e9b873e1bac24d856f8 Merge branch 'master' of ssh://github.com/just-paja/pwf
+eccddb12b010de4033caa931e68f3dd533408d18 Offcom, settings
+3311733ed52b75c5905d0491ee04597b93e97844 Merge branch 'master' of ssh://github.com/just-paja/pwf
+ecb62667daefd123f6b18873743b5a58f25fa3b5 Mailer, validation
+7572e2a0172e1be294233a9d33ffb3a3409912d8 Renderer class, URI alias
+dd9e7b32af317f08fa2faf94e371d6ff74bc58a3 Merge branch 'master' of ssh://github.com/just-paja/pwf
 d7aaddfdc862084c06beff58c458ede4dbbbf6de [fix] Forms, renderer
+e98768b5bdb871bc88e727c7d5fc65f6d221ea5e Merge branch 'master' of ssh://github.com/just-paja/pwf
 a436e4ccab4e91a0144cb61fabea6a37e90d88a6 [fix] Form, label
 b63c9d5caac07bee627cc9eb1c34939adc0a61a1 Merge branch 'master' of ssh://github.com/just-paja/pwf
 04440409f4a95edb19cd49d8dd7ad116904cbeaf Code cleanup

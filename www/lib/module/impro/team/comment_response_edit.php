@@ -21,7 +21,7 @@ if (any($propagated['comment']) && any($propagated['team'])) {
 		$r->visible    = true;
 
 		if ($r->save()) {
-
+			$r->mail($ren);
 			$flow->redirect($ren->url('team_comment_respond', array($team, $comment)));
 
 		} else $f->out($this);

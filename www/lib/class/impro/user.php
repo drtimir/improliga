@@ -65,5 +65,30 @@ namespace Impro
 
 
 		//~ public static function notify(\System\User $user,)
+
+		public static function create(\System\Template\Renderer $ren, \System\User $author, $mail)
+		{
+			$pass = \System\User::gen_passwd();
+			$u = create('\System\User', array("login" => $mail, "password" => hash_passwd($pass)));
+			$c = create('\System\User\Contact', array(
+				"ident" => $mail,
+				"name"  => 'výchozí',
+				"type"  => \System\User\Contact::STD_EMAIL,
+				"id_system_user" => $u->id,
+			));
+
+			$notice = \Impro\User\Notice::for_user($u, array(
+				"text"         => stprintf(l('intra_user_registration'), array(
+					"login"    => $mail,
+					"password" => $pass,
+				)),
+				"redirect"     => $ren->uri('profile_settings'),
+				"generated_by" => 'system',
+				"id_author"    => $author->id,
+			));
+
+			$notice->mail();
+			return $u;
+		}
 	}
 }

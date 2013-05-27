@@ -108,5 +108,21 @@ namespace Impro
 
 			return false;
 		}
+
+		public function send_request(\System\User $user, \System\Template\Renderer $ren, \System\Http\Request $request)
+		{
+			return \Impro\User\Request::for_user($user, array(
+				"text"         => stprintf(l('intra_team_member_add_text'), array(
+					"link_team" => $this->to_html_link($ren),
+					"link_user" => \Impro\User::link($ren, $request->user()),
+				)),
+				"id_author"    => $request->user()->id,
+				"id_team"      => $this->id,
+				"callback"     => 'JoinTeam',
+				"redirect_yes" => $ren->uri('team', array($this)),
+				"allow_maybe"  => false,
+			))->mail($ren);
+		}
+
 	}
 }

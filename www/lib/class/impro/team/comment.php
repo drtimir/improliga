@@ -48,5 +48,29 @@ namespace Impro\Team
 		{
 			return $this->responses->where(array("visible" => true))->sort_by('created_at desc');
 		}
+
+
+		public function mail(\System\Template\Renderer $ren)
+		{
+			$leaders = $this->team->get_leaders();
+			$rcpt = array();
+
+			foreach ($leaders as $leader) {
+				$notice = \Impro\User\Notice::for_user($leader->user, array(
+					"id_user"   => $leader->id_user,
+					"id_author" => $this->id_user,
+					"redirect"  => $ren->uri('team_comment_respond', array($this->team, $this)),
+					"text"      => stprintf(l('intra_team_comment_new'), array(
+						"text"      => to_html($this->text),
+						"user_name" => \Impro\User::link($ren, $this->user),
+						"team_name" => $this->team->to_html_link($ren),
+					)),
+				));
+
+				$notice->mail();
+			}
+
+			return $this;
+		}
 	}
 }

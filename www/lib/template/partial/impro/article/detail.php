@@ -1,5 +1,7 @@
 <?
 
+$ren->content_for('title', $article->get_name().' - O Improlize');
+
 echo div('article');
 
 	echo $renderer->heading($article->get_name());

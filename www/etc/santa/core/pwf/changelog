@@ -1,3 +1,19 @@
+c02f8bffe3562df804916047655004301e47ffa4 Merge branch 'master' of ssh://github.com/just-paja/pwf
+7fbf1f0356cb6361442ba4ab6c0207190ad8c2bf [fix] Forms3, checkboxes
+6a82e89287ed5227ac910c6ed32cefbab14bb091 Forms, element class
+1fabaf073d533869d160212d1f803f8b8fd1b073 Merge branch 'master' of ssh://github.com/just-paja/pwf
+91608f0c5c7e4aab0a41d67ca626a6adbd277cd8 Forms, image widget
+159b900f8c7f3903e87465332221d04979ce1acb Merge branch 'master' of ssh://github.com/just-paja/pwf
+8915d87ced84cb356513a42937b3c5f2412d3161 Forms, action widget
+3653ea92ee72f944cd3d49c2f826a52fd44d6c72 Forms, widget class
+9c5de0970e2414cbe5f1c90bde518f606757bea2 Forms, renderer
+2e9ad90cbdfed22e53dcfd8ead6d5c2e5cb62393 Forms, input class
+9c6a8040f48f668c29b31a390674412dca6e8ea9 Forms, container
+2c090ce562bedb6c268aee005ff818a3cc00c5c8 Form class
+ac803496620b8d331464be1ecfecae79b36aa0e0 Forms3, errors
+9808478efdd678fa4b6b71677d934d231dacc9f3 Forms3, time picker
+cf5a3b0ac186b4005e1ebd0525a25656df57bb4c Page class
+e61e925167513400e0039f9cc89bf7e1f4606869 Attr model, write protected attrs
 60357886a70095aad39c8c91f3062ac75ca3cd95 Merge branch 'master' of ssh://github.com/just-paja/pwf
 99c4755af687dea39eea54dedb4925d72d3fd0fa Forms3, label length
 5b19d0f15702d0b734e1ee1d1132e920722d11c3 Mailer, headers

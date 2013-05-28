@@ -72,30 +72,31 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 		Tag::footer();
 			Tag::div(array("class" => 'container'));
 				Tag::div(array("class" => 'dynamic'));
-					echo div('social', $ren->icon_for('http://www.facebook.com/improligacz', 'impro/social/facebook', 32, array("title" => 'Improliga na facebooku')));
+					echo ul('plain social', array(
+						li($ren->icon_for('http://www.facebook.com/improligacz', 'impro/social/facebook', 32, array("class" => 'ext', "title" => 'Improliga na facebooku'))),
+						li($ren->icon_for('https://www.youtube.com/user/improliga', 'impro/social/youtube', 32, array("class" => 'ext', "title" => 'Improliga na youtube'))),
+					));
 					echo div(array("class" => 'partners'));
-						echo $renderer->heading(l('impro_partners'));
+						echo $renderer->heading(l('impro_partners').':', 3);
 						$renderer->render_partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
 					close('div');
 					echo span('cleaner', '');
 				close('div');
 
 				echo div('system');
-					echo div('left', STag::menu(array(
-						"class" => 'plain main',
-						"content" => array(
-							li($ren->link_for('home', l('impro_menu_home'))),
-							li($ren->link_for('intranet_redir', l('impro_menu_intranet'))),
-							li($ren->link_for('teams', l('impro_menu_teams'))),
-							li($ren->link_for('events', l('impro_menu_events'))),
-							li($ren->link_for('about', l('impro_menu_about'))),
-							li($ren->link_for('contacts', l('impro_contact'))),
-						)
-					)));
+					echo menu('plain main', array(
+						li($ren->link_for('home', l('impro_menu_home'))),
+						li($ren->link_for('intranet_redir', l('impro_menu_intranet'))),
+						li($ren->link_for('teams', l('impro_menu_teams'))),
+						li($ren->link_for('events', l('impro_menu_events'))),
+						li($ren->link_for('about', l('impro_menu_about'))),
+						li($ren->link_for('contacts', l('impro_contact'))),
+					));
 
-					echo div('right', div('credits', t('impro_credits', introduce())));
-					echo span('cleaner', '');
+					echo div('credits', t('impro_credits', introduce()));
 				close('div');
+				echo span('cleaner', '');
+
 			close('div');
 		close('footer');
 		?><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-40099806-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><?

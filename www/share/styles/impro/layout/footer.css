@@ -1,9 +1,10 @@
 footer {
 	background:#333;
 	padding:0;
+	padding-bottom:10px;
 	display:block;
-	opacity:.5;
-	border-top:1px solid #666;
+	opacity:.75;
+	border-top:1px solid #555;
 }
 
 footer:hover {
@@ -38,44 +39,95 @@ footer .contact address {
 
 footer .social {
 	float:left;
-	width:64px;
+	width:92px;
+}
+
+footer .social li {
+	float:left;
+	margin:0 10px 0 0;
+}
+
+footer .social li a {
+	display:block;
+}
+
+footer .social,
+footer .partners ul
+{
+	margin-top:5px;
 }
 
 footer .partners {
 	float:left;
-	width:600px;
-}
-
-footer .system {
-	border-top:1px solid #666;
-	clear:both;
-	padding:7px 0 10px;
-	color:#999;
-	font-size:13px;
-}
-
-footer .system .left {
-	float:left;
 	width:400px;
 }
 
-footer .system .left menu li {
+footer .partners h3,
+footer .partners ul
+{
+	float:left;
+}
+
+footer .partners ul li a {
+	display:block;
+}
+footer .partners ul li .icon {
+	width:80px;
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding-left:40px;
+	line-height:16px;
+	font-size:16px;
+}
+
+footer .partners h3 {
+	margin-right:12px;
+	margin-bottom:0;
+	padding-left:24px;
+	border-left:1px solid #666;
+	font-size:27px;
+}
+
+footer .dynamic {
+	float:left;
+}
+
+footer .system {
+	float:right;
+	width:400px;
+	padding:7px 0 10px;
+	color:#999;
+	font-size:13px;
+	line-height:16px;
+}
+
+
+footer .system menu {
+	display:block;
+	text-align:right;
+}
+footer .system menu li {
 	display:inline-block;
-	margin:0 10px 0 0;
+	margin:0 0 0 10px;
 	padding:0 0 0 10px;
 	border-left:1px solid #666;
 }
 
-footer .system .left menu li:first-child {
+footer .system menu li:first-child {
 	border:none;
-	padding:0
+	padding:0;
+	margin:0;
 }
 
-footer .system .left menu li a {
+footer .system menu li a {
 	color:#999;
 }
 
 footer .system .right {
 	float:right;
 	width:200px;
+}
+
+footer .system .credits {
+	text-align:right;
 }

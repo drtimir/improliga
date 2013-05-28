@@ -33,6 +33,8 @@ body,html {
 	font-size:18px;
 	padding:0;
 	margin:0;
+	background:#262626;
+	background-image:-moz-linear-gradient(top, #262626, #000);
 }
 
 a, a.visited {

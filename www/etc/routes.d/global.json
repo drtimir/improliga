@@ -1,6 +1,6 @@
 [
 	["^/$", {
-		"title":"impro_name",
+		"title":"Česká Improliga - divadlo jako hokejový zápas",
 		"layout":["impro/layout", "impro/homepage"],
 		"modules":[
 			["system/text/detail", {"slot":"left", "id":1}],
@@ -23,7 +23,7 @@
 
 
 	["^/o-improlize/$", {
-		"title":"impro_menu_about",
+		"title":"O Improlize",
 		"layout":["impro/layout", "impro/dual_34_14"],
 		"modules":[
 			["system/text/detail", {"id":2, "slot":"left"}],
@@ -36,7 +36,7 @@
 		"modules":[
 			["impro/foul/list", {"slot":"right"}]
 		]
-	}, "fauls"],
+	}, "fouls"],
 
 	["^/fauly/([^/]+)/$", {
 		"modules":[
@@ -47,7 +47,6 @@
 
 	["^/o-improlize/([^/]+)/$", {
 		"layout":["impro/layout", "impro/dual_34_14"],
-		"title":"impro_article",
 		"modules":[
 			["impro/article/detail", {"id":"#{0}", "slot":"left"}],
 			["impro/article/category/list", {"slot":"right"}]
@@ -65,7 +64,6 @@
 	}, "media"],
 
 	["^/tymy/$", {
-		"title":"impro_menu_teams",
 		"layout":["impro/layout", "impro/single"],
 		"modules":[
 			["impro/team/list"]
@@ -80,7 +78,7 @@
 	}, "team"],
 
 	["^/kontakty/$", {
-		"title":"impro_contacts",
+		"title":"Kontakty - Česká Improliga",
 		"layout":["impro/layout", "impro/dual"],
 		"modules":[
 			["system/text/detail", {"id":4, "slot":"left"}],

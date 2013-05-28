@@ -1,0 +1,10 @@
+{
+	"format_default":"html",
+	"errors":{
+		"not_found":{
+			"title":"Stránka nenalezena",
+			"layout":["impro/layout"],
+			"partial":"impro/not_found"
+		}
+	}
+}

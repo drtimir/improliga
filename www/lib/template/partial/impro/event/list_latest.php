@@ -46,7 +46,7 @@ Tag::div(array("class" => 'events'));
 				$ren->link_for('event', $event->name, array("args" => array($event), "class" => 'name')),
 				$match,
 				$location,
-				$show_desc ? div('text', \System\Template::to_html($event->desc_short)):'',
+				$show_desc ? div('text', to_html($ren, $event->desc_short)):'',
 			));
 
 			$html_event[] = span('cleaner', '');

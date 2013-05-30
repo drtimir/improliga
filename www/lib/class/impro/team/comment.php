@@ -60,14 +60,14 @@ namespace Impro\Team
 					"id_user"   => $leader->id_user,
 					"id_author" => $this->id_user,
 					"redirect"  => $ren->uri('team_comment_respond', array($this->team, $this)),
-					"text"      => stprintf(l('intra_team_comment_new'), array(
-						"text"      => to_html($this->text),
+					"text"      => stprintf($ren->trans('intra_team_comment_new'), array(
+						"text"      => to_html($ren, $this->text),
 						"user_name" => \Impro\User::link($ren, $this->user),
 						"team_name" => $this->team->to_html_link($ren),
 					)),
 				));
 
-				$notice->mail();
+				$notice->mail($ren->locales());
 			}
 
 			return $this;

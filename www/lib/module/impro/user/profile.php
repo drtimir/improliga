@@ -11,10 +11,8 @@ if (($self && $user = $request->user()) || ($id && $user = find('\System\User', 
 
 	$member_of = get_all('\Impro\Team\Member')->where(array("id_system_user" => $user->id))->fetch();
 	$event_conds = array(
-		array(
-			"id_author" => $user->id,
-		),
-		//~ "visible" => true
+		"visible" => true,
+		"id_author" => $user->id,
 	);
 
 	$participants = get_all('\Impro\Event\Participant')->where(array('id_impro_event_participant IN ('.implode(',', collect_ids($member_of)).')'))->fetch();

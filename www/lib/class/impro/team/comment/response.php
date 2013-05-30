@@ -54,12 +54,12 @@ namespace Impro\Team\Comment
 						"id_user"   => $user->id,
 						"id_author" => $this->id_user,
 						"redirect"  => $ren->uri('team_comment_respond', array($this->comment->team, $this->comment)).'#post_'.$this->id,
-						"text"      => stprintf(l('intra_team_comment_response'), array(
+						"text"      => stprintf($ren->trans('intra_team_comment_response'), array(
 							"text"      => to_html($this->text),
 							"user_name" => \Impro\User::link($ren, $this->user),
 							"team_name" => $this->comment->team->to_html_link($ren),
 						)),
-					))->mail();
+					))->mail($ren->locales());
 				}
 			}
 
@@ -68,12 +68,12 @@ namespace Impro\Team\Comment
 					"id_user"   => $user->id,
 					"id_author" => $this->id_user,
 					"redirect"  => $ren->uri('team_comment_respond', array($this->comment->team, $this->comment)).'#post_'.$this->id,
-					"text"      => stprintf(l('intra_team_comment_response_owner'), array(
+					"text"      => stprintf($ren->trans('intra_team_comment_response_owner'), array(
 						"text"      => to_html($this->text),
 						"user_name" => \Impro\User::link($ren, $this->user),
 						"team_name" => $this->comment->team->to_html_link($ren),
 					)),
-				))->mail();
+				))->mail($ren->locales());
 			}
 		}
 	}

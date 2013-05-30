@@ -40,7 +40,7 @@ echo div('team_comments');
 		close('ul');
 	} else {
 
-		Tag::p(array("comment" => l('impro_team_has_no_comments')));
+		Tag::p(array("comment" => $locales->trans('impro_team_has_no_comments')));
 
 	}
 close('div');

@@ -31,12 +31,12 @@ namespace Impro\User
 		}
 
 
-		public function mail()
+		public function mail(\System\Locales $locales)
 		{
 			$contacts = $this->user->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
 			$mail = \System\Offcom\Mail::create(
-				l('intra_user_notice_subject'),
-				stprintf(l('intra_user_notice_mail_body'), array(
+				$locales->trans('intra_user_notice_subject'),
+				stprintf($locales->trans('intra_user_notice_mail_body'), array(
 					"user_name" => $this->author->get_name(),
 					"text" => $this->text,
 					"link" => $this->redirect,

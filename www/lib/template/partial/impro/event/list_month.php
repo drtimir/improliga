@@ -64,7 +64,7 @@ echo div('events');
 			$dutime = mktime(0,0,0, $month, $d, $year);
 
 			if ($today == $dutime) {
-				$day_heading = l('today');
+				$day_heading = $locales->trans('today');
 			} else {
 				$day_heading = $locales->format_date(mktime(0,0,0, $month, $d, $year), 'l j. F');
 			}

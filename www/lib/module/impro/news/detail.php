@@ -2,7 +2,7 @@
 
 $this->req('id');
 
-def($display_author, false);
+def($display_author, true);
 
 if ($id && $item = find('\Impro\News', $id)) {
 

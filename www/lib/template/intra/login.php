@@ -5,7 +5,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 }
 
 echo doctype();
-echo html(\System\Locales::get_lang());
+echo html($locales->get_lang());
 	Tag::head();
 
 		$ren->content_for("styles", "form/search_tool");
@@ -24,8 +24,8 @@ echo html(\System\Locales::get_lang());
 			echo div('page-block');
 
 				echo div(array('block', 'left'));
-					echo $ren->link_for('home', $ren->heading_layout(l('intra_name')));
-					Tag::p(array("content" => l('intra_desc')));
+					echo $ren->link_for('home', $ren->heading_layout($locales->trans('intra_name')));
+					Tag::p(array("content" => $locales->trans('intra_desc')));
 
 				close('div');
 

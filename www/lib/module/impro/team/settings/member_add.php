@@ -8,12 +8,12 @@ if ($propagated['team']) {
 	if ($member && $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DATA)) {
 
 		$f = $ren->form(array(
-			"heading" => l('intra_team_member_add'),
+			"heading" => $locales->trans('intra_team_member_add'),
 			"class"   => 'intra_team_member_add',
 		));
 
-		$f->input_email('email', l('contact_type_email'));
-		$f->submit(l('save'));
+		$f->input_email('email', $locales->trans('contact_type_email'));
+		$f->submit($locales->trans('save'));
 
 		if ($f->passed()) {
 			$p = $f->get_data();
@@ -29,7 +29,7 @@ if ($propagated['team']) {
 					\Impro\User::load_members($user);
 
 					if ($team->member($user)) {
-						$f->report_error('email', l('intra_team_user_already_member'));
+						$f->report_error('email', $locales->trans('intra_team_user_already_member'));
 					} else {
 
 						$rq = get_first('\Impro\User\Request')->where(array(

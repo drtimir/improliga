@@ -1,6 +1,6 @@
 <?
 echo div('news');
-	echo $ren->heading(l('impro_news'));
+	echo $ren->heading($locales->trans('impro_news'));
 
 	if (any($news)) {
 
@@ -9,7 +9,7 @@ echo div('news');
 		foreach ($news as $item) {
 			$content = array();
 			$content[] = $ren->heading($ren->link_for('news_detail', $item->name, array("args" => array($item))), false);
-			$content[] = div('text', to_html($item->text));
+			$content[] = div('text', to_html($ren, $item->text));
 
 			if ($display_author) {
 				$author = Stag::a(array(
@@ -20,7 +20,7 @@ echo div('news');
 			} else $author = '';
 
 			$content[] = div('footer', array(
-					Stag::datetime(array("content" => format_date($item->created_at, 'human-full-date'))),
+					Stag::datetime(array("content" => $locales->format_date($item->created_at, 'human-full-date'))),
 					$author,
 			));
 
@@ -29,6 +29,6 @@ echo div('news');
 
 		close('ul');
 
-	} else Tag::p(array("content" => l('impro_no_news')));
+	} else Tag::p(array("content" => $locales->trans('impro_no_news')));
 
 close('div');

@@ -8,11 +8,11 @@ if ($member) {
 	$manage_menu_opts = array();
 
 	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION)) {
-		$manage_menu_opts[] = li($ren->link_for('team_discussion', l('intra_team_discussion'), array("args" => array($team), "class" => 'button')));
+		$manage_menu_opts[] = li($ren->link_for('team_discussion', $locales->trans('intra_team_discussion'), array("args" => array($team), "class" => 'button')));
 	}
 
 	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DATA)) {
-		$manage_menu_opts[] = li($ren->link_for('team_settings', l('intra_team_settings'), array("args" => array($team), "class" => 'button')));
+		$manage_menu_opts[] = li($ren->link_for('team_settings', $locales->trans('intra_team_settings'), array("args" => array($team), "class" => 'button')));
 	}
 
 	$manage_menu = ul('plain options manage', $manage_menu_opts);
@@ -45,9 +45,9 @@ echo div('team_detail');
 		div('menu', array(
 			div('name', $ren->heading_layout($team->to_html_link($ren, false))),
 			ul('plain options', array(
-				li($ren->link_for('team', l('intra_team_home'), array("args" => array($team), "class" => 'button', "strict" => true))),
-				li($ren->link_for('team_info', l('intra_team_info'), array("args" => array($team), "class" => 'button'))),
-				li($ren->link_for('team_events', l('intra_team_events'), array("args" => array($team), "class" => 'button'))),
+				li($ren->link_for('team', $locales->trans('intra_team_home'), array("args" => array($team), "class" => 'button', "strict" => true))),
+				li($ren->link_for('team_info', $locales->trans('intra_team_info'), array("args" => array($team), "class" => 'button'))),
+				li($ren->link_for('team_events', $locales->trans('intra_team_events'), array("args" => array($team), "class" => 'button'))),
 			)),
 			$manage_menu,
 		)),

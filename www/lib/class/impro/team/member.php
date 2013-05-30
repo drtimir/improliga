@@ -22,11 +22,11 @@ namespace Impro\Team
 		}
 
 
-		public function get_roles()
+		public function get_roles(\System\Template\Renderer $ren)
 		{
 			$roles = array();
 			foreach ($this->roles as $role) {
-				$roles[] = \Impro\Team\Member\Role::get_name($role);
+				$roles[] = $ren->trans(\Impro\Team\Member\Role::get_name($role));
 			}
 
 			return $roles;
@@ -39,7 +39,7 @@ namespace Impro\Team
 				$ren->link_for('team', $this->team->logo->to_html(56, 38), args($this->team)),
 				div('team_member_info', array(
 					$this->team->to_html_link($ren),
-					div('roles', implode(', ', $this->get_roles())),
+					div('roles', implode(', ', $this->get_roles($ren))),
 				)),
 				div('cleaner', ''),
 			));
@@ -49,12 +49,12 @@ namespace Impro\Team
 		public function to_html_member(\System\Template\Renderer $ren)
 		{
 			return div('team_user', array(
-				\Impro\User::avatar($ren, $this->user, 56, 38),
+				\Impro\User::avatar($ren, $this->user, 50, 50),
 				div('team_member_info', array(
 					div('name', array(
 						\Impro\User::link($ren, $this->user),
 					)),
-					div('roles', implode(', ', $this->get_roles())),
+					div('roles', implode(', ', $this->get_roles($ren))),
 				)),
 			));
 		}

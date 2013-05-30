@@ -4,7 +4,7 @@ $ren->content_for('title', 'Úprava události ('.$event->name.') - Improliga');
 
 echo div('wizzard');
 
-	echo $ren->heading(l('impro_event_wizzard_status'));
+	echo $ren->heading($locales->trans('impro_event_wizzard_status'));
 
 	echo ul('plain');
 		$passed = true;
@@ -47,9 +47,9 @@ echo div('wizzard');
 			}
 
 			if (($current !== $step && ($passed || $prev)) || $step == Impro\Event::ID_WIZZARD_STEP_NAME) {
-				$content = $ren->link_for('event_edit_step', $label, array("args" => array($event, $step)));
+				$content = $ren->link_for('event_edit_step', $locales->trans($label), array("args" => array($event, $step)));
 			} else {
-				$content = $label;
+				$content = $locales->trans($label);
 			}
 
 			!$complete && $class[] = 'incomplete';

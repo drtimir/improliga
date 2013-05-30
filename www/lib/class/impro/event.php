@@ -92,7 +92,7 @@ namespace Impro
 			if ($new && !$event) {
 				$event = new self(array(
 					"type"        => \Impro\Event\Type::ID_MATCH,
-					"name"        => l('impro_event_unfinished'),
+					"name"        => 'Nová událost',
 					"published"   => false,
 					"visible"     => false,
 					"id_author"   => $user->id,
@@ -140,7 +140,7 @@ namespace Impro
 			$steps = array();
 
 			foreach (self::$wizzard_steps as $step=>$trans) {
-				$steps[$step] = l($trans);
+				$steps[$step] = $trans;
 			}
 
 			return $steps;
@@ -235,7 +235,7 @@ namespace Impro
 				div('event_info', array(
 					span('part name', $ren->link_for('event', $this->name, args($this))),
 					$this->location ? span('part city', $ren->link_ext($this->location->map_link(), $this->location->name)):'',
-					span('part date', format_date($this->start, 'human-full-datetime')),
+					span('part date', $ren->format_date($this->start, 'human-full-datetime')),
 				)),
 				span('cleaner', ''),
 			));

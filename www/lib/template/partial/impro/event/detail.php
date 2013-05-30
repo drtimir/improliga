@@ -9,43 +9,44 @@ echo div('event_detail');
 
 		$date = '';
 		if (is_null($event->end)) {
-			$date = format_date($event->start, 'human-full-date');
+			$date = $locales->format_date($event->start, 'human-full-date');
 		} else {
-			$date = format_date($event->start, 'human-date') . ' - ' . format_date($event->end, 'human-date');
+			$date = $locales->format_date($event->start, 'human-date') . ' - ' . $locales->format_date($event->end, 'human-date');
 		}
 
 		echo ul('info plain');
 			echo li($date, 'icon date');
 
 			if (is_null($event->end)) {
-				echo li(t('impro_event_start_at', format_date($event->start, 'human-time')), 'icon time');
+				echo li($locales->trans('impro_event_start_at', $locales->format_date($event->start, 'human-time')), 'icon time');
 			}
 
 			if ($event->location) {
 				echo li(array($event->location->name, span('addr', $event->location->addr)), 'icon location');
 			}
 
-			if ($event->has_booking) {
-				$total = $event->reservations->count();
-				echo li('icon booking', $event->capacity.'/'.$total);
-			}
-
 			if ($event->price) {
 
 				if ($event->price_student) {
-					$content = t('impro_event_price_value_both', $event->price, $event->price_student);
+					$content = $locales->trans('impro_event_price_value_both', $event->price, $event->price_student);
 				} else {
-					$content = t('impro_event_price_value', $event->price);
+					$content = $locales->trans('impro_event_price_value', $event->price);
 				}
 
-				echo li('icon price', $content);
+				echo li($content, 'icon price');
+			}
+
+
+			if ($event->has_booking) {
+				$total = $event->reservations->count();
+				echo li($event->capacity.'/'.$total, 'icon booking');
 			}
 		close('ul');
 
 
 
 		if ($event->desc_short) {
-			echo div('text short', \System\Template::to_html($event->desc_short));
+			echo div('text short', to_html($ren, $event->desc_short));
 		}
 
 
@@ -62,7 +63,7 @@ echo div('event_detail');
 		close('div');
 
 
-		echo div('text full', \System\Template::to_html($event->desc_full));
+		echo div('text full', to_html($ren, $event->desc_full));
 
 	close('div');
 

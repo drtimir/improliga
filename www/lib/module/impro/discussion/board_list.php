@@ -2,7 +2,7 @@
 
 def($conds, array());
 def($template, 'impro/discussion/board_list');
-def($heading, l('impro_discussion_board_list'));
+def($heading, $locales->trans('impro_discussion_board_list'));
 
 $board_sql = get_all('\Impro\Discussion\Board')->where($conds);
 $count  = $board_sql->count();

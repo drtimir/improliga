@@ -8,25 +8,25 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 	$data = $event->get_data();
 	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_name'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_name'),
 		"default" => $data
 	));
 
-	$f->input_text('name', l('impro_event_name'), true);
-	$f->text('hint1', l('impro_event_wizzard_name_hint'));
+	$f->input_text('name', $locales->trans('impro_event_name'), true);
+	$f->text('hint1', $locales->trans('impro_event_wizzard_name_hint'));
 
 	$f->input(array(
 		"type"    => 'select',
 		"name"    => 'type',
 		"options" => Impro\Event\Type::get_all(),
-		"label"   => l('impro_event_type'),
+		"label"   => $locales->trans('impro_event_type'),
 		"required" => true,
 	));
-	$f->text('hint2', l('impro_event_wizzard_type_hint'));
+	$f->text('hint2', $locales->trans('impro_event_wizzard_type_hint'));
 
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

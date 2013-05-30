@@ -42,7 +42,7 @@ namespace Impro\Team\Member
 			$types = array();
 
 			foreach (self::$types_available as $key=>$val) {
-				$types[l($key)] = $val;
+				$types[$key] = $val;
 			}
 
 			return $types;
@@ -52,7 +52,7 @@ namespace Impro\Team\Member
 		public static function get_name($id)
 		{
 			if (isset(self::$types_available[$id])) {
-				return l(self::$types_available[$id]);
+				return self::$types_available[$id];
 			}
 		}
 

@@ -6,7 +6,7 @@ echo div('profile');
 		echo $ren->heading($user->nick);
 
 		echo div('member_teams profile_block');
-			echo $ren->heading_static(l('intra_user_teams'));
+			echo $ren->heading_static($locales->trans('intra_user_teams'));
 
 			if (any($member_of)) {
 				echo ul('plain teams');
@@ -17,14 +17,14 @@ echo div('profile');
 
 				Tag::close('ul');
 			} else {
-				Tag::p(array("class" => 'info', "content" => l('intra_user_has_no_teams')));
+				Tag::p(array("class" => 'info', "content" => $locales->trans('intra_user_has_no_teams')));
 			}
 		close('div');
 
 		if (any($contacts)) {
 
 			echo div('member_contact profile_block');
-				echo $ren->heading_static(l('intra_user_contacts'));
+				echo $ren->heading_static($locales->trans('intra_user_contacts'));
 
 					echo ul('plain contacts');
 						foreach ($contacts as $contact) {
@@ -41,7 +41,7 @@ echo div('profile');
 
 		if (any($events)) {
 			echo div('profile_block member_events');
-				echo $ren->heading_static(l('intra_user_events'));
+				echo $ren->heading_static($locales->trans('intra_user_events'));
 
 				echo ul('plain events');
 					foreach ($events as $event) {

@@ -2,7 +2,6 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
 
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
@@ -10,35 +9,35 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$f = $ren->form(array(
 		"class"   => array('event_wizzard', 'event_poster'),
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_poster'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_poster'),
 		"default" => $data
 	));
 
-	$f->input_number('price', l('impro_event_price'));
-	$f->input_number('price_student', l('impro_event_price_student'));
+	$f->input_number('price', $locales->trans('impro_event_price'));
+	$f->input_number('price_student', $locales->trans('impro_event_price_student'));
 
-	$f->input_checkbox('use_booking', l('impro_event_use_booking'));
-	$f->text('hint1', l('impro_event_wizzard_use_booking_hint'));
+	$f->input_checkbox('use_booking', $locales->trans('impro_event_use_booking'));
+	$f->text('hint1', $locales->trans('impro_event_wizzard_use_booking_hint'));
 
-	$f->text('hint0', l('impro_event_wizzard_poster_hint'));
+	$f->text('hint0', $locales->trans('impro_event_wizzard_poster_hint'));
 
 	$f->input(array(
 		"type"  => 'image',
 		"name"  => 'image',
-		"label" => l('impro_event_image'),
-		"hint"  => l('impro_event_image_hint'),
+		"label" => $locales->trans('impro_event_image'),
+		"hint"  => $locales->trans('impro_event_image_hint'),
 		"required" => true,
 	));
 
-	$f->input_checkbox('generic_poster', l('impro_event_generic_poster'));
-	$f->text('hint2', l('impro_event_wizzard_generic_poster_hint'));
-	$f->input_checkbox('generic_tickets', l('impro_event_generic_tickets'));
-	$f->text('hint3', l('impro_event_wizzard_generic_tickets_hint'));
+	$f->input_checkbox('generic_poster', $locales->trans('impro_event_generic_poster'));
+	$f->text('hint2', $locales->trans('impro_event_wizzard_generic_poster_hint'));
+	$f->input_checkbox('generic_tickets', $locales->trans('impro_event_generic_tickets'));
+	$f->text('hint3', $locales->trans('impro_event_wizzard_generic_tickets_hint'));
 
 
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

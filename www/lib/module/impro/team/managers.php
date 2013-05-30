@@ -1,8 +1,7 @@
 <?
 
-def($template, 'intra/team/people');
-def($link_user, '/profile/{seoname}/');
-def($heading, l('impro_team_managers'));
+def($template, 'impro/team/people');
+def($heading, $locales->trans('impro_team_managers'));
 
 if (isset($propagated['team'])) {
 
@@ -11,7 +10,6 @@ if (isset($propagated['team'])) {
 	$this->partial($template, array(
 		"team"      => $team,
 		"people"    => $people,
-		"link_user" => $link_user,
 		"heading"   => $heading,
 	));
 

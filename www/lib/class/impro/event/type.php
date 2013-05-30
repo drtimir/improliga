@@ -26,7 +26,7 @@ namespace Impro\Event
 			$types = array();
 
 			foreach (self::$types_available as $label=>$id) {
-				$types[$id] = l($label);
+				$types[$id] = $label;
 			}
 
 			return $types;

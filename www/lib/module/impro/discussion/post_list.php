@@ -4,7 +4,7 @@ def($id);
 def($id_board);
 def($conds, array("visible" => true));
 def($template, 'impro/discussion/post_list');
-def($heading, l('impro_discussion_post_list'));
+def($heading, $locales->trans('impro_discussion_post_list'));
 
 if (($board = find('\Impro\Discussion\Board', $id_board)) && $topic = find('\Impro\Discussion\Topic', $id)) {
 

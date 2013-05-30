@@ -5,7 +5,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 }
 
 echo doctype();
-echo html(\System\Locales::get_lang());
+echo html($locales->get_lang());
 	Tag::head();
 		$ren->content_for('styles', 'pwf/elementary');
 		$ren->content_for('styles', 'pwf/calendar');
@@ -41,9 +41,9 @@ echo html(\System\Locales::get_lang());
 				echo div('logo', $ren->link_for('home', span('hidden', 'Intranet Improligy')));
 
 				echo menu('plain user', array(
-					li($ren->link_for('profile', array($request->user()->avatar->to_html(24,24), span('label', $request->user()->get_name())), array('title' => l('intra_user_profile')))),
-					li($ren->icon_for($response->url('profile_settings'), 'impro/objects/settings', 24, array("title" => l('intra_user_settings')))),
-					li($ren->icon_for($response->url('logout'), 'godmode/actions/logout', 24, array("title" => l('godmode_user_logout')))),
+					li($ren->link_for('profile', array($request->user()->avatar->to_html(24,24), span('label', $request->user()->get_name())), array('title' => $locales->trans('intra_user_profile')))),
+					li($ren->icon_for($response->url('profile_settings'), 'impro/objects/settings', 24, array("title" => $locales->trans('intra_user_settings')))),
+					li($ren->icon_for($response->url('logout'), 'godmode/actions/logout', 24, array("title" => $locales->trans('godmode_user_logout')))),
 				));
 			close('div');
 		close('header');

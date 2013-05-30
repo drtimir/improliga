@@ -2,8 +2,7 @@
 
 def($id_topic);
 def($id_board);
-def($heading, l('impro_discussion_post_create'));
-def($redirect, '/discussion/{id_board}/{id_topic}/');
+def($heading, $locales->trans('impro_discussion_post_create'));
 
 def($board);
 def($topic);
@@ -21,7 +20,7 @@ if ($board && $topic) {
 		"default" => $item->get_data(),
 	));
 
-	$f->input_rte('text', l('impro_discussion_post_text'), true);
+	$f->input_rte('text', $locales->trans('impro_discussion_post_text'), true);
 	$f->submit($heading);
 
 	if ($f->passed()) {

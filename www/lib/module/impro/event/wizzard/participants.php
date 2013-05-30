@@ -2,7 +2,6 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
 
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
@@ -25,8 +24,8 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_participants'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_participants'),
 		"default" => $part,
 	));
 
@@ -61,16 +60,16 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			$f->input(array(
 				"type"     => 'checkbox',
 				"name"     => 'players_'.$side,
-				"label"    => l('impro_event_players_'.$side.($event->type === Impro\Event\Type::ID_MATCH ? '':'_owner')),
+				"label"    => $locales->trans('impro_event_players_'.$side.($event->type === Impro\Event\Type::ID_MATCH ? '':'_owner')),
 				"options"  => $players[$side],
 				"multiple" => true,
 			));
 		}
 	}
 
-	$f->text('hint0', l('impro_event_wizzard_participants_players_hint'));
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->text('hint0', $locales->trans('impro_event_wizzard_participants_players_hint'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

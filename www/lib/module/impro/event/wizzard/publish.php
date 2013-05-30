@@ -2,56 +2,54 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
-def($link_event, '/events/{id_impro_event}/');
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
-	$f = new System\Form(array(
+	$f = $ren->form(array(
 		"class"   => array('event_wizzard', 'event_publish'),
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_publish'),
-		"default" => $data
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_publish'),
+		"default" => $data,
 	));
 
-	$f->input_checkbox('visible', l('impro_event_visible'));
-	$f->text('hint0', l('impro_event_wizzard_visible_hint'));
+	$f->input_checkbox('visible', $locales->trans('impro_event_visible'));
+	$f->text('hint0', $locales->trans('impro_event_wizzard_visible_hint'));
 
 	//~ if (user()->has_right)
 
-	if (user()->has_right_to('publish_event')) {
+	if ($request->user()->has_right('publish_event')) {
 		$f->input(array(
 			"type" => 'checkbox',
 			"name" => 'published',
-			"label" => l('impro_event_publish'),
+			"label" => $locales->trans('impro_event_publish'),
 		));
 
-		$f->text('hint1', l('impro_event_wizzard_published_hint'));
+		$f->text('hint1', $locales->trans('impro_event_wizzard_published_hint'));
 	} else {
 		$f->input(array(
 			"type" => 'checkbox',
 			"name" => 'publish_wait',
-			"label" => l('impro_event_publish_queue'),
+			"label" => $locales->trans('impro_event_publish_queue'),
 		));
 
-		$f->text('hint1', l('impro_event_wizzard_published_rights_hint'));
+		$f->text('hint1', $locales->trans('impro_event_wizzard_published_rights_hint'));
 	}
 
-	$f->submit(l('impro_event_wizzard_finish'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_finish'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();
 
 		if (isset($p['cancel'])) {
-			redirect_now(stprintf($link_wizzard, array("id_impro_event" => $event->id, "step" => Impro\Event::ID_WIZZARD_STEP_CANCEL)));
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$event->update_attrs($p);
 			$event->save();
 
 			Impro\Event::free_wizzard();
-			redirect_now(soprintf($link_event, $event));
+			$flow->redirect($ren->url('event', array($event)));
 		}
 	} else {
 		$f->out($this);

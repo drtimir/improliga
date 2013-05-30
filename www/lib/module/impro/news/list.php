@@ -1,11 +1,9 @@
 <?
 
-def($link_cont, '/news/{id_impro_news}/');
-def($link_author, '/users/{id_author}/');
 def($conds, array("visible" => true));
 def($opts, array());
 def($show_heading, true);
-def($heading, l('impro_news_list'));
+def($heading, $locales->trans('impro_news_list'));
 def($per_page, 3);
 def($display_author, false);
 
@@ -18,8 +16,6 @@ $count = count_all("\Impro\News", $conds, $opts);
 
 
 $module->partial("impro/news/list", array(
-	"link_cont" => $link_cont,
-	"link_author" => $link_author,
 	"news"  => $news,
 	"count" => $count,
 	"display_author" => $display_author,

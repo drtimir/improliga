@@ -2,14 +2,13 @@
 
 def($id);
 def($new, false);
-def($link_wizzard, '/events/create/{step}/');
 
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_teams'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_teams'),
 		"default" => $event->get_data()
 	));
 
@@ -20,7 +19,7 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			"type"     => 'select',
 			"name"     => 'id_team_home',
 			"options"  => $teams,
-			"label"    => l('impro_event_team_home'),
+			"label"    => $locales->trans('impro_event_team_home'),
 			"required" => true,
 		));
 
@@ -28,11 +27,11 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			"type"     => 'select',
 			"name"     => 'id_team_away',
 			"options"  => $teams,
-			"label"    => l('impro_event_team_away'),
+			"label"    => $locales->trans('impro_event_team_away'),
 			"required" => true,
 		));
 
-		$f->text('hint0', l('impro_event_wizzard_teams_hint'));
+		$f->text('hint0', $locales->trans('impro_event_wizzard_teams_hint'));
 
 	} else {
 
@@ -46,15 +45,15 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			"type"     => 'select',
 			"name"     => 'id_team_home',
 			"options"  => $teams,
-			"label"    => l('impro_event_team_owner'),
+			"label"    => $locales->trans('impro_event_team_owner'),
 			"required" => true,
 		));
 
-		$f->text('hint0', l('impro_event_wizzard_team_owner_hint'));
+		$f->text('hint0', $locales->trans('impro_event_wizzard_team_owner_hint'));
 	}
 
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		if (isset($p['cancel'])) {

@@ -346,3 +346,21 @@
 	font-size:14px;
 	border:none;
 }
+
+.team_member_list li {
+	min-height:50px;
+	float:left;
+	width:250px;
+}
+
+.team_member_list li .controls {
+	clear:both;
+	display:block;
+	clear:both;
+}
+
+.team_member_list li .controls li {
+	min-height:auto;
+	width:auto;
+	display:inline-block;
+}

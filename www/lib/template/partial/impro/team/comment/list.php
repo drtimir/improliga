@@ -21,7 +21,7 @@ echo div('team_comments');
 
 					$responses_html = div('responses', array(
 						ul('plain response_list', $responses_html),
-						div('more', $ren->link_for('team_comment_respond', l('impro_team_comment_respond'), args($team, $post))),
+						div('more', $ren->link_for('team_comment_respond', $locales->trans('impro_team_comment_respond'), args($team, $post))),
 					));
 				}
 

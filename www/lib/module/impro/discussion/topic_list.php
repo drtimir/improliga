@@ -3,7 +3,7 @@
 def($id_board);
 def($conds, array("visible" => true));
 def($template, 'impro/discussion/topic_list');
-def($heading, l('impro_discussion_topic_list'));
+def($heading, $locales->trans('impro_discussion_topic_list'));
 
 if ($board = find('\Impro\Discussion\Board', $id_board)) {
 

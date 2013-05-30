@@ -10,24 +10,24 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$f = $ren->form(array(
 		"class"   => 'event_wizzard event_timespace',
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_timespace'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_timespace'),
 		"default" => $data,
 	));
 
-	$f->input_datetime("start", l('impro_event_start'), true);
-	$f->text('hint0', l('impro_event_wizzard_start_hint'));
+	$f->input_datetime("start", $locales->trans('impro_event_start'), true);
+	$f->text('hint0', $locales->trans('impro_event_wizzard_start_hint'));
 
 	if (in_array($event->type, Impro\Event\Type::get_types_with_end())) {
-		$f->input_datetime("end", l('impro_event_end'), true);
-		$f->text('hint1', l('impro_event_wizzard_end_hint'));
+		$f->input_datetime("end", $locales->trans('impro_event_end'), true);
+		$f->text('hint1', $locales->trans('impro_event_wizzard_end_hint'));
 	}
 
-	$f->input_location('location', l('impro_event_location'), true);
+	$f->input_location('location', $locales->trans('impro_event_location'), true);
 
-	$f->text('hint2', l('impro_event_wizzard_location_hint'));
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->text('hint2', $locales->trans('impro_event_wizzard_location_hint'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

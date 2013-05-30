@@ -3,11 +3,9 @@
 $this->req('id');
 
 def($booking,      false);
-def($link_day,     '/udalosti/seznam/{year}-{month}/#'.l('day').'{day}');
-def($link_month,   '/udalosti/seznam/{year}-{month}/');
 def($thumb_width,  100);
 def($thumb_height, 100);
-def($template,     'intra/team/detail_head');
+def($template,     'impro/team/detail_head');
 def($slot_events, 'events');
 
 if ($team = find('Impro\Team', $id)) {

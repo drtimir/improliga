@@ -1,6 +1,6 @@
 <?
 
-def($template, 'intra/team/info');
+def($template, 'impro/team/info');
 
 if (isset($propagated['team'])) {
 

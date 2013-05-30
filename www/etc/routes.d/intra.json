@@ -38,83 +38,83 @@
 	["^/teams/([^/]+)/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"edit":["impro/team/comment_edit", {"slot":"left"}, ["head"]],
-			"list":["impro/team/comment_list", {"slot":"left"}, ["head"]],
-			"mans":["intra/team/managers", {"slot":"right"}, ["head"]],
-			"events":["intra/team/events", {"slot":"right", "heading":"Události", "per_page":3, "thumb_width":56, "thumb_height":38}, ["head"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"edit":["impro/team/comment/edit", {"slot":"left"}, ["head"]],
+			"list":["impro/team/comment/list", {"slot":"left"}, ["head"]],
+			"mans":["impro/team/managers", {"slot":"right"}, ["head"]],
+			"events":["impro/team/events", {"slot":"right", "heading":"Události", "per_page":3, "thumb_width":56, "thumb_height":38}, ["head"]]
 		}
 	}, "team"],
 
 	["^/teams/([^/]+)/info/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"info":["intra/team/info", {"slot":"left"}, ["head"]],
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["impro/team/info", {"slot":"left"}, ["head"]],
 			"people":["impro/team/member_list", {"slot":"left"}, ["head"]],
-			"mans":["intra/team/managers", {"slot":"right"}, ["head"]]
+			"mans":["impro/team/managers", {"slot":"right"}, ["head"]]
 		}
 	}, "team_info"],
 
 	["^/teams/([^/]+)/events/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"events":["intra/team/events", {"slot":"big"}, ["head"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"events":["impro/team/events", {"slot":"big"}, ["head"]]
 		}
 	}, "team_events"],
 
 	["^/teams/([^/]+)/discussion/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"info":["system/partial", {"template":"intra/working", "slot":"big"}]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["system/partial", {"template":"working", "slot":"big"}]
 		}
 	}, "team_discussion"],
 
 	["^/teams/([^/]+)/settings/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"settings":["intra/team/settings/common", {"slot":"big"}, ["head"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["impro/team/settings/menu", {"slot":"big"}, ["head"]],
+			"settings":["impro/team/settings/common", {"slot":"big"}, ["head"]]
 		}
 	}, "team_settings"],
 
 	["^/teams/([^/]+)/settings/members/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"set_add":["intra/team/settings/member_add", {"slot":"big"}, ["head"]],
-			"set_list":["intra/team/settings/member_list", {"slot":"big"}, ["head"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["impro/team/settings/menu", {"slot":"big"}, ["head"]],
+			"set_add":["impro/team/settings/member_add", {"slot":"big"}, ["head"]],
+			"set_list":["impro/team/settings/member_list", {"slot":"big"}, ["head"]]
 		}
 	}, "team_settings_members"],
 
 	["^/teams/([^/]+)/settings/members/([^/]+)/roles/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"settings":["intra/team/settings/member_roles", {"id":"#{1}", "slot":"big"}, ["head"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["impro/team/settings/menu", {"slot":"big"}, ["head"]],
+			"settings":["impro/team/settings/member_roles", {"id":"#{1}", "slot":"big"}, ["head"]]
 		}
 	}, "team_settings_member_roles"],
 
 	["^/teams/([^/]+)/settings/members/([^/]+)/drop/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"menu":["intra/team/settings/menu", {"slot":"big"}, ["head"]],
-			"settings":["intra/team/settings/member_drop", {"id":"#{1}"}]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"menu":["impro/team/settings/menu", {"slot":"big"}, ["head"]],
+			"settings":["impro/team/settings/member_drop", {"id":"#{1}"}]
 		}
 	}, "team_settings_member_drop"],
 
 	["^/teams/([^/]+)/respond/([^/]+)/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
-			"head":["intra/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"responses":["impro/team/comment_responses", {"id_comment":"#{1}", "slot":"left"}, ["head"]],
-			"edit":["impro/team/comment_response_edit", {"id_comment":"#{1}", "slot":"response_edit"}, ["head", "responses"]]
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"responses":["impro/team/comment/responses", {"id_comment":"#{1}", "slot":"left"}, ["head"]],
+			"edit":["impro/team/comment/response_edit", {"id_comment":"#{1}", "slot":"response_edit"}, ["head", "responses"]]
 		}
 	}, "team_comment_respond"],
 
@@ -277,21 +277,21 @@
 	["^/contacts/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"intra/working"}]
+			["system/partial", {"template":"working"}]
 		]
 	}, "contacts"],
 
 	["^/wiki/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"intra/working"}]
+			["system/partial", {"template":"working"}]
 		]
 	}, "wiki"],
 
 	["^/files/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"intra/working"}]
+			["system/partial", {"template":"working"}]
 		]
 	}, "files"]
 ]

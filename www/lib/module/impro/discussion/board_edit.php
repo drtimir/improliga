@@ -2,7 +2,7 @@
 
 def($id);
 def($new, false);
-def($heading, l($new ? 'impro_discussion_board_create':'impro_discussion_board_edit'));
+def($heading, $locales->trans($new ? 'impro_discussion_board_create':'impro_discussion_board_edit'));
 def($redirect, '/discussion/{id_impro_discussion_board}');
 
 
@@ -18,11 +18,11 @@ if (($id && $item = find('\Impro\Discussion\Board', $id)) || ($new && $item = ne
 		"heading" => $heading,
 	));
 
-	$f->input_text('name', l('impro_discussion_board_name'), true);
-	$f->input_rte('desc', l('impro_discussion_board_desc'), true);
-	$f->input_checkbox('visible', l('godmode_visible'), false, l('impro_discussion_visible_hint'));
-	$f->input_checkbox('public', l('impro_discussion_public'), false, l('impro_discussion_public_hint'));
-	$f->input_checkbox('locked', l('impro_discussion_locked'), false, l('impro_discussion_locked_hint'));
+	$f->input_text('name', $locales->trans('impro_discussion_board_name'), true);
+	$f->input_rte('desc', $locales->trans('impro_discussion_board_desc'), true);
+	$f->input_checkbox('visible', $locales->trans('godmode_visible'), false, $locales->trans('impro_discussion_visible_hint'));
+	$f->input_checkbox('public', $locales->trans('impro_discussion_public'), false, $locales->trans('impro_discussion_public_hint'));
+	$f->input_checkbox('locked', $locales->trans('impro_discussion_locked'), false, $locales->trans('impro_discussion_locked_hint'));
 	$f->submit($heading);
 
 	if ($f->passed()) {

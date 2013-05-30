@@ -8,33 +8,33 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
 	$f = $ren->form(array(
-		"heading" => t("impro_event_wizzard"),
-		"desc"    => t('impro_event_wizzard_step_tools'),
+		"heading" => $locales->trans("impro_event_wizzard"),
+		"desc"    => $locales->trans('impro_event_wizzard_step_tools'),
 		"default" => $data,
 		"class"   => array('event_wizzard', 'event_tools'),
 	));
 
-	$f->text('hint0', l('impro_event_wizzard_tools_hint'));
+	$f->text('hint0', $locales->trans('impro_event_wizzard_tools_hint'));
 
 	$opts = array(
-		Impro\Event::ID_SETUP_STATUS_NO => l('impro_setup_status_no'),
-		Impro\Event::ID_SETUP_STATUS_OK => l('impro_setup_status_ok'),
-		Impro\Event::ID_SETUP_STATUS_NOT_NEEDED => l('impro_setup_status_not_needed'),
+		Impro\Event::ID_SETUP_STATUS_NO => $locales->trans('impro_setup_status_no'),
+		Impro\Event::ID_SETUP_STATUS_OK => $locales->trans('impro_setup_status_ok'),
+		Impro\Event::ID_SETUP_STATUS_NOT_NEEDED => $locales->trans('impro_setup_status_not_needed'),
 	);
 
 	foreach (Impro\Event::get_tools() as $tool) {
 		$f->input(array(
 			"type"    => 'radio',
 			"name"    => 'has_'.$tool,
-			"label"   => l('impro_event_tools_'.$tool),
+			"label"   => $locales->trans('impro_event_tools_'.$tool),
 			"options" => $opts,
 			"multiple" => true,
 		));
 	}
 
-	$f->text('hint1', l('impro_event_wizzard_tools_hint_lower'));
-	$f->submit(l('impro_event_wizzard_next'));
-	$f->input_submit('cancel', l('impro_event_wizzard_cancel'));
+	$f->text('hint1', $locales->trans('impro_event_wizzard_tools_hint_lower'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

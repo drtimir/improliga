@@ -15,20 +15,20 @@ if (isset($propagated['team'])) {
 			"class"   => 'team_settings'
 		));
 
-		$f->input_text("name", l('attr_impro_team_name'), true);
-		$f->input_text("name_full", l('attr_impro_team_name_full'), true);
-		$f->input_text("city", l('attr_impro_team_city'), true);
+		$f->input_text("name", $locales->trans('attr_impro_team_name'), true);
+		$f->input_text("name_full", $locales->trans('attr_impro_team_name_full'), true);
+		$f->input_text("city", $locales->trans('attr_impro_team_city'), true);
 
-		$f->input_image('logo', l('attr_impro_team_logo'));
-		$f->input_image('photo', l('attr_impro_team_photo'));
-		$f->input_rte('about', l('attr_impro_team_about'));
+		$f->input_image('logo', $locales->trans('attr_impro_team_logo'));
+		$f->input_image('photo', $locales->trans('attr_impro_team_photo'));
+		$f->input_rte('about', $locales->trans('attr_impro_team_about'));
 
-		$f->input_email("mail", l('attr_impro_team_mail'));
-		$f->input_url("site", l('attr_impro_team_site'));
+		$f->input_email("mail", $locales->trans('attr_impro_team_mail'));
+		$f->input_url("site", $locales->trans('attr_impro_team_site'));
 
-		$f->input_location("hq", l('attr_impro_team_hq'));
+		$f->input_location("hq", $locales->trans('attr_impro_team_hq'));
 
-		$f->submit(l('godmode_save'));
+		$f->submit($locales->trans('godmode_save'));
 
 		if ($f->passed()) {
 

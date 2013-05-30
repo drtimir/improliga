@@ -5,8 +5,8 @@ $ren->content_for('title', ' - Informace');
 
 echo div('team_info');
 
-	echo $ren->heading(l('impro_team_info'));
-	echo div('desc', \System\Template::to_html($team->about));
+	echo $ren->heading($locales->trans('impro_team_info'));
+	echo div('desc', to_html($ren, $team->about));
 
 	$props = array();
 

@@ -3,7 +3,7 @@
 
 if (isset($propagated['team'])) {
 
-	$this->partial('intra/team/settings/menu', array(
+	$this->partial('impro/team/settings/menu', array(
 		"team" => $propagated['team'],
 	));
 

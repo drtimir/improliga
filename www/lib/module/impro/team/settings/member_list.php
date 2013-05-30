@@ -1,6 +1,6 @@
 <?
 
-def($template, 'intra/team/settings/member_list');
+def($template, 'impro/team/settings/member_list');
 
 if ($propagated['team']) {
 

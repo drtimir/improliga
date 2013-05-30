@@ -1,6 +1,6 @@
 <?
 
-def($heading, l('intra_user_login'));
+def($heading, $locales->trans('intra_user_login'));
 def($redirect, $ren->url('home'));
 
 if ($request->get('redirect')) {
@@ -15,9 +15,9 @@ if ($request->logged_in()) {
 
 	$f = $ren->form(array("heading" => $heading, "action" => $request->path.'?'.$request->query));
 
-	$f->input_text('login', l("godmode_login_name"), true);
-	$f->input_password('password', l("godmode_password"), true);
-	$f->submit(l('intra_user_do_login'));
+	$f->input_text('login', $locales->trans("godmode_login_name"), true);
+	$f->input_password('password', $locales->trans("godmode_password"), true);
+	$f->submit($locales->trans('intra_user_do_login'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

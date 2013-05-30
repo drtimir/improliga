@@ -32,11 +32,11 @@ namespace Impro\Team
 					\System\User::guest()->image->to_html(50,50)
 				),
 				div('content', array(
-					div('name', $this->user ? \Impro\User::link($ren, $this->user):l('anonymous')),
-					div('text', \System\Template::to_html($this->text)),
+					div('name', $this->user ? \Impro\User::link($ren, $this->user):$ren->trans('anonymous')),
+					div('text', to_html($ren, $this->text)),
 					div('footer', array(
-						$ren->link($url_respond, format_date($this->created_at, 'human'), array("class" => 'item date')),
-						$ren->link($url_respond, $this->responses_count ? t('impro_team_comment_response_count', $this->responses_count):l('impro_team_comment_respond'), array("class" => 'item link_responses')),
+						$ren->link($url_respond, $ren->format_date($this->created_at, 'human'), array("class" => 'item date')),
+						$ren->link($url_respond, $this->responses_count ? $ren->trans('impro_team_comment_response_count', $this->responses_count):$ren->trans('impro_team_comment_respond'), array("class" => 'item link_responses')),
 					)),
 				)),
 				span('cleaner', ''),

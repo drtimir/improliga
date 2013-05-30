@@ -15,12 +15,12 @@ Tag::div(array("class" => 'events'));
 			$html_event[] = Tag::a(array(
 				"class"   => 'image',
 				"output"  => false,
-				"href"    => soprintf($link_cont, $event),
+				"href"    => $ren->url('event', array($event)),
 				"content" => $event->image->to_html($thumb_width, $thumb_height),
 			));
 
 			$ts = array(
-				span('date', format_date($event->start, 'human')),
+				span('date', $locales->format_date($event->start, 'human')),
 				'<br>',
 				$event->get_type_name(),
 			);
@@ -50,7 +50,7 @@ Tag::div(array("class" => 'events'));
 			));
 
 			$html_event[] = span('cleaner', '');
-			$html_events[] = Tag::li(array("class" => 'event', "content" => implode('', $html_event), "output" => false));
+			$html_events[] = li(implode('', $html_event), 'event');
 		}
 
 		Tag::ul(array(
@@ -61,7 +61,7 @@ Tag::div(array("class" => 'events'));
 		Tag::span(array("class" => 'cleaner', "close" => true));
 
 	} else {
-		Tag::p(array("class" => 'info', "content" => l('impro_event_lists_empty')));
+		Tag::p(array("class" => 'info', "content" => $locales->trans('impro_event_lists_empty')));
 	}
 
 close('div');

@@ -11,7 +11,7 @@ def($rel_pick, array());
 def($rel_tab, array());
 def($new, false);
 def($desc, '');
-def($heading, t($new ? 'godmode_create_object':'godmode_edit_object', strtolower(System\Loader::get_class_trans($model))));
+def($heading, $locales->trans($new ? 'godmode_create_object':'godmode_edit_object', strtolower($locales->trans_class_name($model))));
 def($attrs_edit, array());
 def($attrs_edit_exclude, array());
 
@@ -67,7 +67,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 	));
 
 	if (any($rel_inline) || any($rel_pick) || any($rel_tab)) {
-		$f->tab(l('godmode_model_basic_attrs'));
+		$f->tab($locales->trans('godmode_model_basic_attrs'));
 	}
 
 	foreach ($attrs as $attr=>$def) {
@@ -81,9 +81,9 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			}
 
 			if (in_array($attr, array('created_at', 'updated_at'))) {
-				$name = l($attr);
+				$name = $locales->trans($attr);
 			} else {
-				$name = System\Model\Attr::get_model_attr_name($model, $attr);
+				$name = $locales->trans_model_attr_name($model, $attr);
 			}
 
 			$input_options = array(
@@ -94,7 +94,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			);
 
 			if (isset($def['options'])) {
-				$input_options['options'] = \Godmode\Form::get_attr_options($model, $attr, $def);
+				$input_options['options'] = \Godmode\Form::get_attr_options($ren, $model, $attr, $def);
 
 				if (any($input_options['options'])) {
 					$input_options['type'] = 'select';
@@ -106,7 +106,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 			$link = \System\Loader::get_link_from_class($def['model']);
 
 			if ($link === 'system_location') {
-				$f->input_location($attr, System\Model\Attr::get_model_attr_name($model, $attr));
+				$f->input_location($attr, $locales->trans_model_attr_name($model, $attr));
 			} else {
 				if (empty($all[$link])) {
 					$all[$link] = get_all($def['model'])->fetch();
@@ -116,19 +116,19 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 					"type" => 'select',
 					"name" => \System\Model\Database::get_attr_name_from_belongs_to_rel($attr, $def),
 					"options" => $all[$link],
-					"label"   => System\Model\Attr::get_model_attr_name($model, $attr),
+					"label"   => $locales->trans_model_attr_name($model, $attr),
 				));
 			}
 		}
 	}
 
 	foreach ($rel_tab as $rel) {
-		$f->tab(System\Model\Attr::get_model_attr_name($model, $rel));
+		$f->tab($locales->trans_model_attr_name($model, $rel));
 		Godmode\Form::add_rel_edit($f, $model, $rel, $rel_data[$rel]);
 	}
 
 	foreach ($rel_pick as $rel) {
-		$f->tab(System\Model\Attr::get_model_attr_name($model, $rel));
+		$f->tab($locales->trans_model_attr_name($model, $rel));
 
 		$type = \System\Model\Database::get_rel_type($model, $rel);
 		$def  = \System\Model\Database::get_rel_def($model, $rel);
@@ -141,13 +141,13 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 				"options"  => $models,
 				"name"     => $rel,
 				"multiple" => true,
-				"label"    => System\Model\Attr::get_model_attr_name($model, $rel),
+				"label"    => $locales->trans_model_attr_name($model, $rel),
 			));
 		}
 	}
 
 	$f->tab_group_end();
-	$f->submit(l('godmode_save'));
+	$f->submit($locales->trans('godmode_save'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

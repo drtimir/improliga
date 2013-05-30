@@ -6,7 +6,7 @@ $this->req('link_god');
 
 $model = System\Loader::get_class_from_model($model);
 
-def($heading, t('godmode_delete_object', strtolower(System\Loader::get_model_from_class($model))));
+def($heading, $locales->trans('godmode_delete_object', strtolower(System\Loader::get_model_from_class($model))));
 def($attrs_detail);
 
 
@@ -32,14 +32,14 @@ if ($item = find($model, $id)) {
 
 	foreach ($attrs as $attr) {
 		if ($attr == System\Model\Database::get_id_col($model)) {
-			$name = l('Id');
+			$name = $locales->trans('Id');
 		} elseif (in_array($attr, array('created_at', 'updated_at'))) {
-			$name = l($attr);
+			$name = $locales->trans($attr);
 		} else {
-			$name = System\Model\Attr::get_model_attr_name($model, $attr);
+			$name = $locales->trans_model_attr_name($model, $attr);
 		}
 
-		$info[$name] = System\Template::to_html($item->$attr);
+		$info[$name] = to_html($ren, $item->$attr);
 	}
 
 

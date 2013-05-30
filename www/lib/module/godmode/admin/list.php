@@ -6,7 +6,7 @@ $this->req('link_god');
 
 $model = System\Loader::get_class_from_model($model);
 
-def($heading, t('godmode_item_list'));
+def($heading, $locales->trans('godmode_item_list'));
 def($desc, '');
 def($conds, array());
 def($opts, array());
@@ -41,15 +41,15 @@ foreach ($attrs_list as $attr) {
 		}
 
 		if (in_array($attr, array('created_at', 'updated_at'))) {
-			$name = l($attr);
+			$name = $locales->trans($attr);
 		} else {
-			$name = System\Model\Attr::get_model_attr_name($model, $attr);
+			$name = $locales->trans_model_attr_name($model, $attr);
 		}
 
 		$col = array($attr, $name, $type);
 
 	} elseif (method_exists($model, $attr)) {
-		$col = array($attr, System\Model\Attr::get_model_attr_name($model, $attr), 'function');
+		$col = array($attr, $locales->trans_model_attr_name($model, $attr), 'function');
 	}
 
 	if (any($col)) {
@@ -64,7 +64,7 @@ foreach ($attrs_list as $attr) {
 }
 
 
-$cols[] = array(null, null, 'actions', array(l('godmode_edit') => 'edit', l('godmode_delete') => 'delete'));
+$cols[] = array(null, null, 'actions', array($locales->trans('godmode_edit') => 'edit', $locales->trans('godmode_delete') => 'delete'));
 
 $this->partial($template, array(
 	"cols"      => $cols,

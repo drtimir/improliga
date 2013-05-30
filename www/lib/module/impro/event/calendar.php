@@ -12,7 +12,7 @@ def($day_link_integrate, false);
 def($day_names_short, false);
 def($template, '/impro/event/calendar');
 def($conds, array("visible" => true));
-def($heading, l('impro_event_calendar'));
+def($heading, $locales->trans('impro_event_calendar'));
 def($day, intval(date("d")));
 def($link_book, '/');
 def($link_cont, '/god/impro/events/{id_impro_event}/');
@@ -40,8 +40,8 @@ if ($shift) {
 $end = clone $start;
 $end->modify("+1 month");
 
-$conds[] = "t0.start >= '".format_date($start, 'sql')."'";
-$conds[] = "t0.start <= '".format_date($end, 'sql')."'";
+$conds[] = "t0.start >= '".$locales->format_date($start, 'sql', 0)."'";
+$conds[] = "t0.start <= '".$locales->format_date($end, 'sql', 0)."'";
 
 $items = get_all("\Impro\Event")->where($conds)->sort_by('start')->fetch();
 $events = array_fill(1, 31, array());
@@ -66,8 +66,8 @@ $nm->modify("+1 month");
 $pm = clone $start;
 $pm->modify("-1 month");
 
-$months = System\Locales::get('date:months');
-$response->renderer()->title = t('impro_event_list_for_month', $months[$month]);
+$months = $locales->get_path('date:months');
+$response->renderer()->title = $locales->trans('impro_event_list_for_month', $months[$month]);
 
 $this->partial($template, array(
 	"events"     => $events,

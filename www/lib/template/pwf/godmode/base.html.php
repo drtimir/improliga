@@ -11,10 +11,10 @@ Tag::html();
 			"name"  => $request->user()->get_name(),
 		)).';';
 
-		$script[] = 'var pwf_locale = '.json_encode(System\Locales::get_lang()).';';
-		$script[] = 'var pwf_main_menu = '.json_encode(Godmode\Router::get_menu($request)).';';
+		$script[] = 'var pwf_locale = '.json_encode($ren->locales()->get_locale()).';';
+		$script[] = 'var pwf_main_menu = '.json_encode(Godmode\Router::get_menu($request, $ren)).';';
 		$script[] = 'var pwf_icons = '.json_encode(Godmode\Icon::get_list()).';';
-		$script[] = 'var pwf_trans = '.json_encode(System\Locales::get_all_messages()).';';
+		$script[] = 'var pwf_trans = '.json_encode($locales->get_messages()).';';
 
 		$renderer->content_for("head", '<script type="text/javascript">'.implode('', $script).'</script>');
 		$renderer->content_for('scripts', 'lib/jquery');
@@ -49,6 +49,7 @@ Tag::html();
 		$renderer->content_for("styles", "pwf/form/search_tool");
 		$renderer->content_for("styles", "pwf/form/tabs");
 		$renderer->content_for("styles", "pwf/form/rte");
+		$renderer->content_for("styles", "pwf/form/datepicker");
 		$renderer->content_for("styles", "pwf/god/common");
 		$renderer->content_for("styles", "pwf/god/base");
 		$renderer->content_for("styles", "pwf/god/preloader");

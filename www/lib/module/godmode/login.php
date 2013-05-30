@@ -1,6 +1,6 @@
 <?
 
-def($heading, l('godmode_user_login'));
+def($heading, $ren->trans('godmode_user_login'));
 
 if ($request->logged_in()) {
 
@@ -13,9 +13,9 @@ if ($request->logged_in()) {
 		"heading" => $heading,
 	));
 
-	$f->input_text('login', l("godmode_login_name"), true);
-	$f->input_password('password', l("godmode_password"), true);
-	$f->submit(l('Log in'));
+	$f->input_text('login', $ren->trans("godmode_login_name"), true);
+	$f->input_password('password', $ren->trans("godmode_password"), true);
+	$f->submit($ren->trans('Log in'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

@@ -1,7 +1,7 @@
 <?
 
 echo doctype();
-Tag::html(array("lang" => \System\Locales::get_lang()));
+Tag::html(array("lang" => $locales->get_lang()));
 	Tag::head();
 
 		$renderer->content_for('scripts', 'lib/browser');
@@ -34,18 +34,18 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 		Tag::header();
 			echo div('inner');
 				echo div('container');
-					echo div('logo', $ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
-					echo div('logo-label', $ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => l('impro_name')))));
+					echo div('logo', $ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => $locales->trans('impro_name')))));
+					echo div('logo-label', $ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => $locales->trans('impro_name')))));
 
 					echo menu('plain main left', array(
-						li($ren->link_for('home', l('impro_menu_home'))),
-						li($ren->link_for('teams', l('impro_menu_teams'))),
-						li($ren->link_for('events', l('impro_menu_events'))),
+						li($ren->link_for('home', $locales->trans('impro_menu_home'))),
+						li($ren->link_for('teams', $locales->trans('impro_menu_teams'))),
+						li($ren->link_for('events', $locales->trans('impro_menu_events'))),
 					));
 
 					echo menu('plain main right', array(
-						li($ren->link_for('about', l('impro_menu_about'))),
-						li($ren->link_for('contacts', l('impro_contact'))),
+						li($ren->link_for('about', $locales->trans('impro_menu_about'))),
+						li($ren->link_for('contacts', $locales->trans('impro_contact'))),
 					));
 
 				close('div');
@@ -77,7 +77,7 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 						li($ren->icon_for('https://www.youtube.com/user/improliga', 'impro/social/youtube', 32, array("class" => 'ext', "title" => 'Improliga na youtube'))),
 					));
 					echo div(array("class" => 'partners'));
-						echo $renderer->heading(l('impro_partners').':', 3);
+						echo $renderer->heading($locales->trans('impro_partners').':', 3);
 						$renderer->render_partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
 					close('div');
 					echo span('cleaner', '');
@@ -85,15 +85,15 @@ Tag::html(array("lang" => \System\Locales::get_lang()));
 
 				echo div('system');
 					echo menu('plain main', array(
-						li($ren->link_for('home', l('impro_menu_home'))),
-						li($ren->link_for('intranet_redir', l('impro_menu_intranet'))),
-						li($ren->link_for('teams', l('impro_menu_teams'))),
-						li($ren->link_for('events', l('impro_menu_events'))),
-						li($ren->link_for('about', l('impro_menu_about'))),
-						li($ren->link_for('contacts', l('impro_contact'))),
+						li($ren->link_for('home', $locales->trans('impro_menu_home'))),
+						li($ren->link_for('intranet_redir', $locales->trans('impro_menu_intranet'))),
+						li($ren->link_for('teams', $locales->trans('impro_menu_teams'))),
+						li($ren->link_for('events', $locales->trans('impro_menu_events'))),
+						li($ren->link_for('about', $locales->trans('impro_menu_about'))),
+						li($ren->link_for('contacts', $locales->trans('impro_contact'))),
 					));
 
-					echo div('credits', t('impro_credits', introduce()));
+					echo div('credits', $locales->trans('impro_credits', introduce()));
 				close('div');
 				echo span('cleaner', '');
 

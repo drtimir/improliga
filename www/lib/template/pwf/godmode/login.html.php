@@ -20,11 +20,11 @@
 			?>
 
 			<div class="browsers">
-				<span class="firefox" title="<?=l("godmode_browser_supported")?>"></span>
-				<span class="chrome" title="<?=l("godmode_browser_supported")?>"></span>
-				<span class="opera" title="<?=l("godmode_browser_supported")?>"></span>
-				<span class="safari" title="<?=l("godmode_browser_not_supported")?>"></span>
-				<span class="ie" title="<?=l("godmode_browser_not_supported")?>"></span>
+				<span class="firefox" title="<?=$ren->trans("godmode_browser_supported")?>"></span>
+				<span class="chrome" title="<?=$ren->trans("godmode_browser_supported")?>"></span>
+				<span class="opera" title="<?=$ren->trans("godmode_browser_supported")?>"></span>
+				<span class="safari" title="<?=$ren->trans("godmode_browser_not_supported")?>"></span>
+				<span class="ie" title="<?=$ren->trans("godmode_browser_not_supported")?>"></span>
 			</div>
 
 		</div>

@@ -5,12 +5,12 @@ $this->req('link_god');
 
 if ($id && $user = find("\System\User", $id)) {
 
-	$heading = l('godmode_user_edit_passwd');
+	$heading = $locales->trans('godmode_user_edit_passwd');
 	$f = $ren->form(array("id" => 'edit_user_groups', "heading" => $heading));
 
-	$f->input_password('password', l('godmode_user_password'), true);
-	$f->input_password('password_check', l('godmode_user_password_check'), true);
-	$f->submit(l('godmode_save'));
+	$f->input_password('password', $locales->trans('godmode_user_password'), true);
+	$f->input_password('password_check', $locales->trans('godmode_user_password_check'), true);
+	$f->submit($locales->trans('godmode_save'));
 
 	if ($f->passed()) {
 

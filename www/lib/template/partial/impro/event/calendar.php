@@ -13,7 +13,7 @@ Tag::div(array("class" => 'calendar'));
 					def($dn, 0);
 
 					Tag::ul(array("class" => 'calendar-head'));
-						foreach (System\Locales::get($day_names_short ? 'date:days-short':'date:days') as $d) {
+						foreach ($locales->get_path($day_names_short ? 'date:days-short':'date:days') as $d) {
 							Tag::li(array("class" => 'day', "content" => '<span>'.$d.'</span>'));
 						}
 					Tag::close('ul');
@@ -70,7 +70,7 @@ Tag::div(array("class" => 'calendar'));
 							Tag::$tag(array(
 								"href"  => stprintf($link_day, array("year" => $date->format('Y'), 'month' => $date->format('m'), "day" => intval($date->format('d')))),
 								"class" => 'day-head',
-								"title" => format_date($date, 'human-full-date'),
+								"title" => $locales->format_date($date, 'human-full-date'),
 								"content" => Tag::span(array(
 									"class" => 'date-info',
 									"content" => $dn,

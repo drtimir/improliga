@@ -1,6 +1,6 @@
 <?
 
-$ren->content_for('title', t('title_impro_team', $team->name));
+$ren->content_for('title', $locales->trans('title_impro_team', $team->name));
 
 echo div('team_detail');
 
@@ -45,7 +45,7 @@ echo div('team_detail');
 	));
 
 	echo div('right');
-		echo $ren->heading_static(l('impro_team_events'));
+		echo $ren->heading_static($locales->trans('impro_team_events'));
 
 		$ren->slot('events');
 

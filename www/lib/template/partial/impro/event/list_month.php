@@ -1,19 +1,19 @@
 <?
 
 
-$months = System\Locales::get('date:months');
-$ren->content_for('title', t('title_impro_global', t('impro_event_list_for_month', $months[$month].' '.$year)));
+$months = $locales->get_path('date:months');
+$ren->content_for('title', $locales->trans('title_impro_global', $locales->trans('impro_event_list_for_month', $months[$month].' '.$year)));
 
 echo div('events');
 
-	echo $ren->heading(sprintf(l('impro_event_list_for_month'), $months[$month]));
+	echo $ren->heading($locales->trans('impro_event_list_for_month', $months[$month]));
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));
 
 	echo div('controls', array(
-		$ren->label_for_url('events_month', l('impro_prev_month'), 'godmode/navi/prev', 16, array("args" => array($prev->format('Y-m')))),
-		$ren->label_for_left($ren->url('events_month', array($next->format('Y-m'))), l('impro_next_month'), 'godmode/navi/next', 16),
+		$ren->label_for_url('events_month', $locales->trans('impro_prev_month'), 'godmode/navi/prev', 16, array("args" => array($prev->format('Y-m')))),
+		$ren->label_for_left($ren->url('events_month', array($next->format('Y-m'))), $locales->trans('impro_next_month'), 'godmode/navi/next', 16),
 	));
 
 
@@ -29,9 +29,9 @@ echo div('events');
 				$html_event[] = $ren->link($url, $event->image->to_html(100, 100), array("class" => 'image'));
 
 				$ts = array(
-					Tag::span(array("class" => 'date', "output"  => false, "content" => format_date($event->start, 'human'))),
+					Tag::span(array("class" => 'date', "output"  => false, "content" => $locales->format_date($event->start, 'human'))),
 					'<br>',
-					$event->get_type_name(),
+					$locales->trans($event->get_type_name()),
 				);
 
 				if ($event->location) {
@@ -54,7 +54,7 @@ echo div('events');
 					$ren->link($url, $event->name, array("class" => 'name')),
 					$match,
 					$location,
-					div('text', \System\Template::to_html($event->desc_short)),
+					div('text', to_html($ren, $event->desc_short)),
 				));
 
 				$html_event[] = span('cleaner', '');
@@ -66,7 +66,7 @@ echo div('events');
 			if ($today == $dutime) {
 				$day_heading = l('today');
 			} else {
-				$day_heading = format_date(mktime(0,0,0, $month, $d, $year), 'l j. F');
+				$day_heading = $locales->format_date(mktime(0,0,0, $month, $d, $year), 'l j. F');
 			}
 
 			$html[] = Tag::a(array(
@@ -87,7 +87,7 @@ echo div('events');
 		echo ul('event_list plain', $content);
 
 	} else {
-		Tag::p(array("class" => 'info', "content" => l('impro_event_lists_empty')));
+		Tag::p(array("class" => 'info', "content" => $locales->trans('impro_event_lists_empty')));
 	}
 
 close('div');

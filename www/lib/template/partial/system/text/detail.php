@@ -1,11 +1,11 @@
 <?
 
-Tag::div(array("class" => 'system_text'));
+echo div('system_text');
 
 	if ($show_heading) {
 		echo $renderer->heading($text->name);
 	}
 
-	Tag::div(array("class" => 'text', "content" => \System\Template::to_html($text->text)));
+	echo div('text', to_html($ren, $text->text));
 
-Tag::close('div');
+close('div');

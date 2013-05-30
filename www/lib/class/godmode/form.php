@@ -6,6 +6,7 @@ namespace Godmode
 	{
 		public static function add_rel_edit(&$f, $model, $rel, array $objects)
 		{
+			$locales = $f->response()->locales();
 			$type  = \System\Model\Database::get_rel_type($model, $rel);
 			$def   = \System\Model\Database::get_rel_def($model, $rel);
 			$attrs = \System\Model\Database::get_attr_def($def['model']);
@@ -14,10 +15,9 @@ namespace Godmode
 			$x = 0;
 
 			foreach ($objects as $key=>$obj) {
-
 				$group_name = $obj->id ? 'obj_'.$obj->id:'obj_add_'.$x;
-				$cname = \System\Loader::get_class_trans($def['model']);
-				$label = $obj->id ? t('godmode_model_object', $cname, $obj->id):t('godmode_model_object_new', strtolower($cname));
+				$cname = $locales->trans_class_name($def['model']);
+				$label = $obj->id ? $locales->trans('godmode_model_object', $cname, $obj->id):$locales->trans('godmode_model_object_new', strtolower($cname));
 				$f->group_start('inputs', $group_name, $label);
 
 				foreach ($attrs as $attr=>$attr_def) {
@@ -38,11 +38,11 @@ namespace Godmode
 							$opts = array();
 
 							foreach ($options as $val=>$label) {
-								$opts[$val] = l($label);
+								$opts[$val] = $locales->trans($label);
 							}
 
 							$f->input(array(
-								"label"    => \System\Model\Attr::get_model_attr_name($def['model'], $attr),
+								"label"    => $locales->trans_model_attr_name($def['model'], $attr),
 								"name"     => $name,
 								"type"     => 'select',
 								"options"  => $opts,
@@ -51,7 +51,7 @@ namespace Godmode
 						} else {
 							$f->input(array(
 								"type"     => \System\Form::get_field_type($attr_def[0]),
-								"label"    => \System\Model\Attr::get_model_attr_name($def['model'], $attr),
+								"label"    => $locales->trans_model_attr_name($def['model'], $attr),
 								"name"     => $name,
 								"value"    => $obj->$attr,
 							));
@@ -60,7 +60,7 @@ namespace Godmode
 				}
 
 				if ($obj->id) {
-					$f->input_checkbox($rel.'['.$obj->id.'][delete]', l('delete'));
+					$f->input_checkbox($rel.'['.$obj->id.'][delete]', $locales->trans('delete'));
 				}
 
 				$x++;
@@ -68,7 +68,7 @@ namespace Godmode
 		}
 
 
-		public static function get_attr_options($model, $attr, $def)
+		public static function get_attr_options(\System\Template\Renderer $ren, $model, $attr, $def)
 		{
 			$options = array();
 
@@ -89,7 +89,7 @@ namespace Godmode
 
 			} else {
 				foreach ($def['options'] as $oid=>$olabel) {
-					$options[$oid] = l($olabel);
+					$options[$oid] = $ren->locales()->trans()($olabel);
 				}
 			}
 

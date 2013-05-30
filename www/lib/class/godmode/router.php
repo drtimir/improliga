@@ -316,9 +316,9 @@ namespace Godmode
 		}
 
 
-		public static function get_menu(\System\Http\Request $request)
+		public static function get_menu(\System\Http\Request $request, \System\Template\Renderer $ren)
 		{
-			self::trans_menu(self::$menu);
+			self::trans_menu($ren, self::$menu);
 			$menu = self::$menu;
 
 			self::link_menu($request, $menu);
@@ -379,13 +379,13 @@ namespace Godmode
 		}
 
 
-		private static function trans_menu(&$menu)
+		private static function trans_menu(\System\Template\Renderer $ren, &$menu)
 		{
 			foreach ($menu as &$m) {
-				$m['name'] = l($m['name']);
+				$m['name'] = $ren->trans($m['name']);
 
 				if (isset($m['items'])) {
-					self::trans_menu($m['items']);
+					self::trans_menu($ren, $m['items']);
 				}
 			}
 		}
@@ -410,7 +410,7 @@ namespace Godmode
 		 */
 		public static function sort_menu_data_helper($a, $b)
 		{
-			$c = strcoll(l($a['name']), l($b['name']));
+			$c = strcoll($a['name'], $b['name']);
 			return $c === 0 ? 0:($c < 0 ? -1:1);
 		}
 

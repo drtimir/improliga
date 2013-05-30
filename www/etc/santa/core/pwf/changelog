@@ -1,9 +1,23 @@
-c02f8bffe3562df804916047655004301e47ffa4 Merge branch 'master' of ssh://github.com/just-paja/pwf
+5cabf87773cb2c3ba4e7f7645d0fdf752b6cbb48 Locales2, response lld
+93f7bdd6da00489c5055b4b9dc4af20124fbf334 Locales2, timestamps
+5b6ed658168a9e3dc59dec0a848e3fc7e9356ffe [fix] Scripts
+d3f49083047601e1220d1b751e460d379d1d5c5f [fix] Locales2, renderer
+f1e058f01fe93fd4c34a021edac506dc174bf3b7 Locales2, fix to_html alias
+a0b459c4c6a3a8800ac96186df57d40eaa5a35e2 Locales2, trans
+6daa69d5a78191f6982d405e67a90117bbafeb04 Locales2, modules, templates
+9fb325b53694cd98d8358a0adf321b66e8d4efd5 Locales 2 API fix
+d6a7fc79aa61869b32f526e63e4436e402172f82 Locales, response binding
+ca7fba188f18f0360889a9bd8f52cf09280d0835 Locales2, DateTime translations
+3d6371cded4a1bd12799a25340053a18976247e4 Global fix
+ebd8b4303c14d893f30c0ef93659ddae67e3d74d Locales2, Config
+92016c180109c73b3b17e06521e5f7f6c744e78d Locales2, deprecated aliases
+357a4b04efbab51c6ea8a368b566cc02f2027953 Locales2, templates
+e8303e3edf45b3ec2e7a66fc003cfe84cd1930ae Locales 2 implementation
+1e36efe1f679fd01556839f83e398eec467e631b [fix] Locales, sql date
+5a678208a49cd9a179e38ee4dcbcd69afa471e37 Http request, response creation
 7fbf1f0356cb6361442ba4ab6c0207190ad8c2bf [fix] Forms3, checkboxes
 6a82e89287ed5227ac910c6ed32cefbab14bb091 Forms, element class
-1fabaf073d533869d160212d1f803f8b8fd1b073 Merge branch 'master' of ssh://github.com/just-paja/pwf
 91608f0c5c7e4aab0a41d67ca626a6adbd277cd8 Forms, image widget
-159b900f8c7f3903e87465332221d04979ce1acb Merge branch 'master' of ssh://github.com/just-paja/pwf
 8915d87ced84cb356513a42937b3c5f2412d3161 Forms, action widget
 3653ea92ee72f944cd3d49c2f826a52fd44d6c72 Forms, widget class
 9c5de0970e2414cbe5f1c90bde518f606757bea2 Forms, renderer
@@ -14,25 +28,17 @@ ac803496620b8d331464be1ecfecae79b36aa0e0 Forms3, errors
 9808478efdd678fa4b6b71677d934d231dacc9f3 Forms3, time picker
 cf5a3b0ac186b4005e1ebd0525a25656df57bb4c Page class
 e61e925167513400e0039f9cc89bf7e1f4606869 Attr model, write protected attrs
-60357886a70095aad39c8c91f3062ac75ca3cd95 Merge branch 'master' of ssh://github.com/just-paja/pwf
 99c4755af687dea39eea54dedb4925d72d3fd0fa Forms3, label length
 5b19d0f15702d0b734e1ee1d1132e920722d11c3 Mailer, headers
-4c09fef750fd174e2731b0570bf1b2c7e4fab691 Merge branch 'master' of ssh://github.com/just-paja/pwf
 55755a2367f643d52a4fed118f6b5b350487565c [fix] Mail, offcom cfg
-8fa614bd499b3cf9d9907e9b873e1bac24d856f8 Merge branch 'master' of ssh://github.com/just-paja/pwf
 eccddb12b010de4033caa931e68f3dd533408d18 Offcom, settings
-3311733ed52b75c5905d0491ee04597b93e97844 Merge branch 'master' of ssh://github.com/just-paja/pwf
 ecb62667daefd123f6b18873743b5a58f25fa3b5 Mailer, validation
 7572e2a0172e1be294233a9d33ffb3a3409912d8 Renderer class, URI alias
-dd9e7b32af317f08fa2faf94e371d6ff74bc58a3 Merge branch 'master' of ssh://github.com/just-paja/pwf
 d7aaddfdc862084c06beff58c458ede4dbbbf6de [fix] Forms, renderer
-e98768b5bdb871bc88e727c7d5fc65f6d221ea5e Merge branch 'master' of ssh://github.com/just-paja/pwf
 a436e4ccab4e91a0144cb61fabea6a37e90d88a6 [fix] Form, label
-b63c9d5caac07bee627cc9eb1c34939adc0a61a1 Merge branch 'master' of ssh://github.com/just-paja/pwf
 04440409f4a95edb19cd49d8dd7ad116904cbeaf Code cleanup
 5c7ad281dd120c34235dd3c538561f9664cd2b20 Forms, render description
 e3d34024f6f86d483ae86f69dfef958a7ea37dd9 [fix] Forms, action widget
-9614831e5d401c3f385824eaec9ccd1a2dea7c0c Merge branches 'master' and 'master' of ssh://github.com/just-paja/pwf
 024ee554d80c218b44d4b54835de1aad6763ea0f Database model, seoname
 6db7209ad1ef9481910f0c48d234c75f6cfe452f Forms3, heading
 2f7148c98e0b1f61e7e1dcbc9bacc3a2acb77d58 Query class, empty null result

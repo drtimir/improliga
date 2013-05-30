@@ -20,6 +20,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		def($col[2], '');
 		def($col[3], '');
 		def($col[4], '');
+		$locales = $ren->locales();
 
 		if ($col[2] == "actions") {
 
@@ -41,7 +42,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 			}
 			return call_user_func_array($col[0], $col[3]);
 		} elseif (strpos($col[2], "date") !== false) {
-			return format_date($item->$col[0], 'human');
+			return $ren->locales()->format_date($item->$col[0], 'human');
 		} elseif (strpos($col[2], "number")) {
 			$val = $col[3] ? eval("return ".$item->$col[0].$col[3].";"):$col[0];
 			return $col[4] ? sprintf($col[4], $val):$val;
@@ -75,7 +76,7 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 			} else {
 
 				return is_bool($item->$col[0]) ?
-					($item->$col[0] ? l('yes'):l('no')):
+					($item->$col[0] ? $locales->trans('yes'):$locales->trans('no')):
 					($col[4] ? sprintf($col[4], $item->$col[0]):$item->$col[0]);
 			}
 
@@ -173,20 +174,20 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		$p = $ren->response()->request()->path;
 
 		if ($cur_page > 0) {
-			$out[] = li($ren->link($p.'?page='.($cur_page-1), '&laquo;', array("title" => l('godode_prev_page'))));
+			$out[] = li($ren->link($p.'?page='.($cur_page-1), '&laquo;', array("title" => $renderer->locales()->trans('godode_prev_page'))));
 		}
 
 		for ($page = 1; $count > ($page - 1) * $per_page; $page++) {
 			$fn = ($cur_page === $page - 1) ? 'span':'a';
 
 			$out[] = li(
-				$ren->link($p.'?page='.($page - 1), $page, array("title" => t('godmode_page', $page))),
+				$ren->link($p.'?page='.($page - 1), $page, array("title" => $renderer->trans('godmode_page', $page))),
 				array($cur_page === $page - 1 ? 'active':'inactive')
 			);
 		}
 
 		if ($cur_page + 1 < floor($count/$per_page)) {
-			$out[] = li($ren->link($p.'?page='.($cur_page+1), '&raquo;', array("title" => l('godode_next_page'))));
+			$out[] = li($ren->link($p.'?page='.($cur_page+1), '&raquo;', array("title" => $renderer->locales()->trans('godode_next_page'))));
 		}
 
 		echo ul(array_merge($class, array('paginator')), $out);
@@ -209,7 +210,7 @@ echo div("admin-list");
 	admin_list_draw_table($ren, $locals);
 
 	if (empty($items)) {
-		echo div("info", $heading, l('godmode_no_items'));
+		echo div("info", $heading, $renderer->locales()->trans('godmode_no_items'));
 	}
 
 	if (isset($count) && isset($per_page) && $count > $per_page) {

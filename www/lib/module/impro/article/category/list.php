@@ -1,6 +1,6 @@
 <?
 
-def($heading, l('impro_article_list'));
+def($heading, $locales->trans('impro_article_list'));
 def($conds, array("visible" => true));
 def($template, "impro/article/category/list");
 def($link_article, "/o-improlize/{seoname}");

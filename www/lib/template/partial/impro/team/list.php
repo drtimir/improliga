@@ -4,7 +4,7 @@ $ren->content_for('title', 'Týmy Improligy');
 
 echo div('team_list');
 
-	echo $renderer->heading(l('title_impro_teams'));
+	echo $renderer->heading($locales->trans('title_impro_teams'));
 	echo ul('plain cities');
 
 		foreach ($cities as $city=>$teams) {

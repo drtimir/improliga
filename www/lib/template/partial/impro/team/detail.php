@@ -41,7 +41,7 @@ echo div('team_detail');
 
 	echo div('left', array(
 		ul('info plain team_info', $info),
-		div('team_desc desc', $team->about),
+		div('team_desc desc', to_html($ren, $team->about)),
 	));
 
 	echo div('right');

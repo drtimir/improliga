@@ -18,6 +18,6 @@ echo div('team_people');
 
 		close('ul');
 	} else {
-		echo Tag::p(array("content" => l('intra_team_no_members')));
+		Tag::p(array("content" => $locales->trans('intra_team_no_members')));
 	}
 close('div');

@@ -11,12 +11,12 @@
 	["^/login/$", {
 		"title":"Přihlášení",
 		"layout":["intra/login"],
-		"modules":[["intra/user/login"]]
+		"modules":[["impro/user/login"]]
 	}, "login"],
 
 	["^/logout/$", {
 		"modules":[
-			["intra/user/logout", {"redirect":"/"}]
+			["impro/user/logout", {"redirect":"/"}]
 		]
 	}, "logout"],
 
@@ -136,7 +136,7 @@
 	["^/profile/settings/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["intra/user/settings"]
+			["impro/user/settings"]
 		]
 	}, "profile_settings"],
 
@@ -268,8 +268,8 @@
 	["^/user/request/([^/]+)/([^/]+)/([^/]+)/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":{
-			"auth":["intra/user/auth", {"uid":"#{0}", "auth_key":"#{2}"}],
-			"rq":["intra/user/request", {"rqid":"#{1}"}, ["auth"]]
+			"auth":["impro/user/auth", {"uid":"#{0}", "auth_key":"#{2}"}],
+			"rq":["impro/user/request", {"rqid":"#{1}"}, ["auth"]]
 		}
 	}, "request"],
 

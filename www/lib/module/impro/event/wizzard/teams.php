@@ -35,8 +35,8 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	} else {
 
-		if (!empty(user()->teams)) {
-			$teams = user()->teams;
+		if (count($request->user()->teams)) {
+			$teams = $request->user()->teams;
 		} else {
 			$teams = get_all('\Impro\Team')->where(array("visible" => true))->sort_by('name')->fetch();
 		}

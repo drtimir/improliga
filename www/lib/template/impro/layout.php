@@ -20,6 +20,7 @@ Tag::html(array("lang" => $locales->get_lang()));
 		$renderer->content_for('styles', 'impro/teams');
 		$renderer->content_for('styles', 'impro/about');
 		$renderer->content_for('styles', 'pwf/browser_control');
+		$renderer->content_for('styles', 'calendar');
 
 		echo $renderer->content_from('head');
 

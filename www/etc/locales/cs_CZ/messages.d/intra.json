@@ -56,6 +56,7 @@
 	"intra_team_comment_new_text":"Uživatel {user_name} přidal nový komentář do týmu {team_name}.\n\n{text}",
 	"intra_team_comment_response":"Uživatel {user_name} také okomentoval komentář týmu {team_name}.\n\n{text}",
 	"intra_team_comment_response_owner":"Uživatel {user_name} okomentoval váš komentář na zdi týmu {team_name}.\n\n{text}",
+	"intra_team_no_members":"Žádní členové",
 
 	"intra_warning_working":"Na této části webu zatím pracujeme.",
 	"end":""

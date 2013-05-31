@@ -89,7 +89,7 @@ namespace Godmode
 
 			} else {
 				foreach ($def['options'] as $oid=>$olabel) {
-					$options[$oid] = $ren->locales()->trans()($olabel);
+					$options[$oid] = $ren->locales()->trans($olabel);
 				}
 			}
 

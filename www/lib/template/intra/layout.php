@@ -37,6 +37,14 @@ echo html($locales->get_lang());
 		$ren->content_for('scripts', 'lib/html5');
 		$ren->content_for('scripts', 'lib/jquery/fancybox');
 		$ren->content_for('scripts', 'pwf/browser_control');
+		$ren->content_for('scripts', 'pwf/form/tab_manager');
+		$ren->content_for('scripts', 'pwf/lib/rte');
+		$ren->content_for('scripts', 'pwf/form/date_picker');
+		$ren->content_for('scripts', 'pwf/form/time_picker');
+		$ren->content_for('scripts', 'pwf/form/autocompleter');
+		$ren->content_for('scripts', 'pwf/form/location_picker');
+		$ren->content_for('scripts', 'pwf/form/jquery.gmap');
+		$ren->content_for('scripts', 'pwf/form/gps');
 		$ren->content_for('scripts', 'site/global');
 		$ren->content_for('scripts', 'site/intranet');
 

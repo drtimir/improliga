@@ -22,7 +22,7 @@ Tag::div(array("class" => 'events'));
 			$ts = array(
 				span('date', $locales->format_date($event->start, 'human')),
 				'<br>',
-				$event->get_type_name(),
+				$locales->trans($event->get_type_name()),
 			);
 
 			if ($event->location) {

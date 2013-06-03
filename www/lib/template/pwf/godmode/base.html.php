@@ -50,8 +50,6 @@ Tag::html();
 		$renderer->content_for("styles", "pwf/form/tabs");
 		$renderer->content_for("styles", "pwf/form/rte");
 		$renderer->content_for("styles", "pwf/form/datepicker");
-		$renderer->content_for("styles", "pwf/form/timepicker");
-		$renderer->content_for("styles", "pwf/form/datetimepicker");
 		$renderer->content_for("styles", "pwf/god/common");
 		$renderer->content_for("styles", "pwf/god/base");
 		$renderer->content_for("styles", "pwf/god/preloader");

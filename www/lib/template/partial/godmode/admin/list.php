@@ -174,20 +174,20 @@ if (!defined("H_TEMPLATE_UNIVERSAL_ADMIN_LIST")) {
 		$p = $ren->response()->request()->path;
 
 		if ($cur_page > 0) {
-			$out[] = li($ren->link($p.'?page='.($cur_page-1), '&laquo;', array("title" => $renderer->locales()->trans('godode_prev_page'))));
+			$out[] = li($ren->link($p.'?page='.($cur_page-1), '&laquo;', array("title" => $ren->locales()->trans('godode_prev_page'))));
 		}
 
 		for ($page = 1; $count > ($page - 1) * $per_page; $page++) {
 			$fn = ($cur_page === $page - 1) ? 'span':'a';
 
 			$out[] = li(
-				$ren->link($p.'?page='.($page - 1), $page, array("title" => $renderer->trans('godmode_page', $page))),
+				$ren->link($p.'?page='.($page - 1), $page, array("title" => $ren->trans('godmode_page', $page))),
 				array($cur_page === $page - 1 ? 'active':'inactive')
 			);
 		}
 
 		if ($cur_page + 1 < floor($count/$per_page)) {
-			$out[] = li($ren->link($p.'?page='.($cur_page+1), '&raquo;', array("title" => $renderer->locales()->trans('godode_next_page'))));
+			$out[] = li($ren->link($p.'?page='.($cur_page+1), '&raquo;', array("title" => $ren->locales()->trans('godode_next_page'))));
 		}
 
 		echo ul(array_merge($class, array('paginator')), $out);

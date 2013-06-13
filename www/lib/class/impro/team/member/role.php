@@ -30,6 +30,7 @@ namespace Impro\Team\Member
 			self::PERM_TEAM_DATA       => array(self::ID_MANAGER, self::ID_TRAINER),
 			self::PERM_TEAM_EVENTS     => array(self::ID_MANAGER, self::ID_TRAINER),
 			self::PERM_TEAM_DISCUSSION => array(self::ID_MANAGER, self::ID_TRAINER, self::ID_MEMBER, self::ID_PLAYER),
+			self::PERM_TEAM_ATTENDANCE => array(self::ID_MANAGER, self::ID_TRAINER, self::ID_MEMBER, self::ID_PLAYER),
 		);
 
 

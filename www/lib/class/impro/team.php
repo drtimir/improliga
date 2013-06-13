@@ -5,20 +5,23 @@ namespace Impro
 	class Team extends \System\Model\Database
 	{
 		protected static $attrs = array(
-			"name"       => array("varchar"),
-			"name_full"  => array("varchar"),
-			"city"       => array("varchar", "default" => ''),
-			"hq"         => array('belongs_to', "model" => "\System\Location"),
-			"about"      => array("text", "default" => ''),
-			"logo"       => array('image', "default" => "/share/pixmaps/logo_original.png"),
-			"photo"      => array('image', "default" => "/share/pixmaps/impro/team.png"),
-			"mail"       => array("varchar", "default" => ''),
-			"site"       => array("varchar", "default" => ''),
-			"played"     => array("int", "is_unsigned" => true, "default" => 0),
-			"visible"    => array("bool"),
-			"author"     => array('belongs_to', "model" => "\System\User"),
-			"members"    => array('has_many', "model" => "\Impro\Team\Member"),
-			"galleries"  => array('has_many', "model" => '\Impro\Gallery'),
+			"name"           => array("varchar"),
+			"name_full"      => array("varchar"),
+			"city"           => array("varchar", "default" => ''),
+			"hq"             => array('belongs_to', "model" => "\System\Location"),
+			"about"          => array("text", "default" => ''),
+			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
+			"photo"          => array('image', "default" => "/share/pixmaps/impro/team.png"),
+			"mail"           => array("varchar", "default" => ''),
+			"site"           => array("varchar", "default" => ''),
+			"played"         => array("int", "is_unsigned" => true, "default" => 0),
+			"visible"        => array("bool"),
+			"author"         => array('belongs_to', "model" => "\System\User"),
+			"members"        => array('has_many', "model" => "\Impro\Team\Member"),
+			"galleries"      => array('has_many', "model" => '\Impro\Gallery'),
+			"use_attendance" => array('bool'),
+			"use_booking"    => array('bool'),
+
 			"comments"   => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
 		);
 

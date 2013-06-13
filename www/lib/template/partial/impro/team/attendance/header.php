@@ -1,11 +1,13 @@
 <?
 
-echo div('attd');
+echo div('attd-header');
 	echo $ren->heading($locales->trans('intra_team_attendance'));
 
-	echo div('controls', array(
-		$ren->label_for_url('team_training_create', $locales->trans('intra_team_training_create'), 'godmode/actions/create', 16, args($team)),
-	));
+	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_ORGANIZE)) {
+		echo div('controls', array(
+			$ren->label_for_url('team_training_create', $locales->trans('intra_team_training_create'), 'godmode/actions/create', 16, args($team)),
+		));
+	}
 
 	if ($latest) {
 		Tag::p(array(

@@ -15,7 +15,7 @@ if ($member) {
 		$manage_menu_opts[] = li($ren->link_for('team_settings', $locales->trans('intra_team_settings'), array("args" => array($team), "class" => 'button')));
 	}
 
-	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_ATTENDANCE)) {
+	if ($team->use_attendance && $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_ATTENDANCE)) {
 		$manage_menu_opts[] = li($ren->link_for('team_attendance', $locales->trans('intra_team_attendance'), array("args" => array($team), "class" => 'button')));
 	}
 

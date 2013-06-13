@@ -397,8 +397,63 @@
 	vertical-align:middle;
 	background:#efefef;
 	color:#000;
+	border:1px solid transparent;
 }
 
-.attd .status.not-sent { background:#892326; }
+.attd .status.not-sent { background:#6F1C1F; color:#fff }
 .attd .status.sent { background:#008dd7; }
+.attd .status.no { background:#EC0D15; }
 .attd .status.yes { background:#23EA23; }
+.attd .status.maybe { background:#FFDA2D; }
+
+.attd .status:hover {
+	border-color:#666;
+}
+
+
+.attd-list li {
+	width:230px;
+	height:56px;
+	padding:10px;
+	display:inline-block;
+	vertical-align:top;
+	border:1px solid #ddd;
+	background:#f2f2f2;
+	border-radius:6px;
+	margin:0 5px;
+}
+
+.attd-list li .l,
+.attd-list li .r
+{
+	float:left;
+}
+
+.attd-list li .l {
+	margin-right:10px;
+}
+
+.attd-list li .r {
+	width:172px;
+	font-size:12px;
+}
+
+.attd-list li.not-sent { box-shadow:0 0 3px #6F1C1F; }
+.attd-list li.sent { box-shadow:0 0 3px #008dd7; }
+.attd-list li.no { box-shadow:0 0 3px #EC0D15; }
+.attd-list li.yes { box-shadow:0 0 3px #23EA23; }
+.attd-list li.maybe { box-shadow:0 0 3px #FFDA2D; }
+
+.training .location span {
+	display:block;
+}
+
+.training .location .addr,
+.training .location .site
+{
+	font-size:12px;
+}
+
+.training .info p {
+	margin-top:0;
+}

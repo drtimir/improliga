@@ -17,7 +17,7 @@ echo div('attd');
 					$attendance[$t->id] = 0;
 					Tag::th(array(
 						'class' => array('tg', 'tg_'.$t->id, $t->start->getTimestamp() > time() ? 'new':'old'),
-						'content' => $ren->format_date($t->start, 'human-date')
+						'content' => $ren->link_for('team_training', $ren->format_date($t->start, 'human-date'), args($team, $t)),
 					));
 				}
 			close('tr');
@@ -37,63 +37,24 @@ echo div('attd');
 						$class     = array('tg', 'tg_'.$t->id);
 						$title     = '';
 						$availible = $member->id_system_user == $request->user()->id && $t->start->getTimestamp() > time();
+						$status    = \Impro\Team\Training\Ack::get_status_class($ren, $attd);
+						$count     = span('count', $status['c']);
 
-						if ($attd instanceof \Impro\Team\Training\Ack) {
-
-							if ($attd->status == \Impro\Team\Training\Ack::NOT_SENT) {
-								$status = 'not-sent';
-								$title = $locales->trans('intra_team_attd_not_sent');
-								$c = '?';
-							}
-
-							if ($attd->status == \Impro\Team\Training\Ack::SENT) {
-								$status = 'sent';
-								$title = $locales->trans('intra_team_attd_sent');
-								$c = '.';
-							}
-
-							if ($attd->status == \Impro\Team\Training\Ack::RESPONSE_YES) {
-								$status = 'yes';
-								if ($attd->count > 1) {
-									$title = $locales->trans('intra_team_attd_yes_guests', $attd->count);
-								} else {
-									$title = $locales->trans('intra_team_attd_yes');
-								}
-
-								$attendance[$t->id] += $attd->count;
-								$c = $attd->count;
-							}
-
-							if ($attd->status == \Impro\Team\Training\Ack::RESPONSE_NO) {
-								$status = 'no';
-								$title = $locales->trans('intra_team_attd_no');
-								$c = '-';
-							}
-
-							if ($attd->status == \Impro\Team\Training\Ack::RESPONSE_MAYBE) {
-								$status = 'maybe';
-								$title = $locales->trans('intra_team_attd_maybe');
-								$c = '?';
-							}
-						} else {
-							$status = 'no-info';
-							$title = $locales->trans('intra_team_attd_no_info');
-							$c = '?';
+						if ($attd instanceof \Impro\Team\Training\Ack && $attd->status == \Impro\Team\Training\Ack::RESPONSE_YES) {
+							$attendance[$t->id] += $attd->count;
 						}
-
-						$count = span('count', $c);
 
 						Tag::td(array(
 							'class' => $class,
 							'content' => $availible ?
 								$ren->link_for('team_training_attd_edit', $count, array(
 									'args'  => array($team, $t),
-									'class' => array('status', $status),
-									'title' => $title,
+									'class' => array('status', $status['status']),
+									'title' => $status['title'],
 								)):Stag::div(array(
-									"class"   => array('status', $status),
+									"class"   => array('status', $status['status']),
 									"content" => $count,
-									"title"   => $title
+									"title"   => $status['title']
 								)),
 						));
 					}

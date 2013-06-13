@@ -93,6 +93,15 @@
 	"intra_team_attd_no":"Nezúčastní se",
 	"intra_team_attd_maybe":"Neví",
 	"intra_team_training_create":"Vytvořit trénink",
+	"intra_team_training_edit":"Upravit trénink",
+	"intra_team_training_drop":"Zrušit trénink",
+
+	"intra_team_attd_ack_response":"Vaše účast na tréninku %s",
+	"intra_team_attd_ack_response_status":"Stav",
+	"intra_team_attd_ack_guests":"Přivedu hosty",
+	"intra_attd_yes":"Zúčastním se",
+	"intra_attd_no":"Nezúčastním se",
+	"intra_attd_maybe":"Ještě dám vědět",
 
 	"end":""
 }

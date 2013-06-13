@@ -1,74 +1,62 @@
 <?
 
-def($new, false);
-$model = '\Impro\Team\Training';
+$this->req('id');
 
 if (isset($propagated['team']) && $team = $propagated['team']) {
-
-	if ($team->use_attendance()) {
-
+	if ($team->use_attendance) {
 		$member = $team->member($request->user());
-		if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_ORGANIZE)) {
-			if ($new) {
-				$trn = new $model(array(
-					"author" => $request->user(),
-					"team"   => $team,
+		if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_ATTENDANCE)) {
+			if ($training = find('\Impro\Team\Training', $id)) {
+
+				$ack = $training->acks->where(array("id_user" => $request->user()->id))->fetch_one();
+
+				if (!$ack) {
+					$ack = new \Impro\Team\Training\Ack(array(
+						"training" => $training,
+						"count"    => 1,
+						"user"     => $request->user(),
+						"member"   => $member,
+					));
+				}
+
+				$default = $ack->get_data();
+				$default['guests'] = $ack->count - 1;
+				$f = $ren->form(array(
+					"heading" => $locales->trans('intra_team_attd_ack_response', $ren->format_date($training->start, 'human-date')),
+					"default" => $default,
 				));
-			} else {
-				$trn = find($model, $id);
-			}
 
-			$f = $ren->form(array(
-				"default" => $trn->get_data()
-			));
+				$f->input(array(
+					"name"     => 'status',
+					"type"     => 'select',
+					"required" => true,
+					"label"    => $locales->trans('intra_team_attd_ack_response_status'),
+					"options"  => \Impro\Team\Training\Ack::get_responses($ren),
+				));
+				$f->input_number('guests', $locales->trans('intra_team_attd_ack_guests'));
+				$f->submit($locales->trans('godmode_save'));
 
+				$f->out($this);
 
-			$f->input_text('name', $locales->trans_model_attr_name($model, 'name'));
-			$f->input_datetime('start',$locales->trans_model_attr_name($model, 'start'), true);
-			$f->input(array(
-				"name" => 'open',
-				"type" => 'radio',
-				"multiple" => true,
-				"label" => $locales->trans_model_attr_name($model, 'open'),
-				"options" => array(
-					true  => 'open',
-					false => 'closed',
-				),
-			));
+				if ($f->passed()) {
+					$p = $f->get_data();
 
-			$f->input_rte('desc', $locales->trans_model_attr_name($model, 'desc'));
-			$f->input_location('location', $locales->trans_model_attr_name($model, 'location'));
-			$f->submit($locales->trans($new ? 'godmode_create':'godmode_edit'));
-
-			$f->out($this);
-
-			if ($f->passed()) {
-				$p = $f->get_data();
-
-				if (isset($p['location'])) {
-					if (any($p['location'])) {
-						$p['location']->save();
+					if (any($p['guests']) && $p['guests'] > 0) {
+						$p['count'] = $p['guests'] + 1;
 					}
+
+					$ack->update_attrs($p);
+
+					if ($ack->status != \Impro\Team\Training\Ack::RESPONSE_YES) {
+						$ack->count = 0;
+					}
+
+					$ack->save();
+					$flow->redirect($ren->url('team_attendance', array($team)));
 				}
 
-				if (is_null($p['location'])) {
-					unset($p['location']);
-				}
 
-				$trn->update_attrs($p);
-
-				if (!$trn->name) {
-					$trn->name = $locales->trans($trn->open ? 'intra_team_training_open':'intra_team_training_closed');
-				}
-
-				$trn->save();
-
-				if ($new) {
-					$trn->send_invites($ren);
-				}
-
-				$flow->redirect($ren->url('team_attendance', array($team)));
-			}
+			} else throw new \System\Error\NotFound();
 		} else throw new \System\Error\AccessDenied();
 	} else throw new \System\Error\AccessDenied();
 } else throw new \System\Error\NotFound();

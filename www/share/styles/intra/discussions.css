@@ -82,7 +82,7 @@
 
 #container .post_form .rte_controls {
 	left:5px;
-	bottom:-37px;
+	bottom:-41px;
 	background:none;
 	box-shadow:none;
 }
@@ -141,6 +141,7 @@
 
 .post {
 	margin:0 0 15px;
+	clear:both;
 }
 
 
@@ -150,18 +151,39 @@
 	float:left
 }
 
-.post .avatar { margin-right:15px; }
-.post .author { margin-bottom:3px }
-.post .author a { font-weight:bold }
+.post .avatar {
+	margin-right:15px;
+	opacity:.75;
+}
+.post .avatar:hover {
+	opacity:1;
+}
+.post .author {
+	margin-bottom:5px;
+}
+.post .author a.link-profile {
+	font-weight:bold;
+}
+
+.post .author a.link-date {
+	font-size:11px;
+	color:#999;
+	border-left:1px solid #ccc;
+	margin-left:7px;
+	padding-left:5px;
+}
+
+.post .author a.link-date:hover {
+	text-decoration:underline;
+}
+
 .post .content {
 	width:585px;
 	margin-bottom:3px;
 }
 
-.post .footer {
-	clear:both;
-	font-size:11px;
-	color:#999;
+.post .text * {
+	margin-top:0;
 }
 
 .post .footer a {
@@ -171,5 +193,4 @@
 .post .footer a:hover {
 	text-decoration:underline;
 }
-
 

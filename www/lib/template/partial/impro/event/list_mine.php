@@ -2,7 +2,7 @@
 
 Tag::div(array("class" => 'events'));
 
-	echo div('controls', $ren->label_for($response->url('event_create'), $locales->trans('impro_event_create_new'), 'godmode/modules/calendar', 16));
+	echo div('controls', $ren->label_for($response->url('event_create'), $locales->trans('impro_event_create_new'), 'godmode/actions/create', 16));
 
 	$content = array();
 	$today = mktime(0,0,0,date('m'), date('d'), date('Y'));

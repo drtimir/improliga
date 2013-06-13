@@ -53,16 +53,6 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		$f->out($this);
 	}
 
-	$propagate['event'] = $event;
-	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_POSTER;
+	$this->propagate('event', $event);
+	$this->propagate('wizzard_step', Impro\Event::ID_WIZZARD_STEP_POSTER);
 } else throw new System\Error\AccessDenied();
-
-
-//~ Název, Typ
-//~ Místo, Datum a čas
-//~ Týmy
-//~ Hráči, Rozhodčí, Konferenciér, Hudebníci, Technici, Pomocňáci
-//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
-//~ Plakát, Vstupenky
-//~ Zveřejnění
-

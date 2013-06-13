@@ -55,8 +55,8 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		$f->out($this);
 	}
 
-	$propagate['event'] = $event;
-	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_PUBLISH;
+	$this->propagate('event', $event);
+	$this->propagate('wizzard_step', Impro\Event::ID_WIZZARD_STEP_PUBLISH);
 } else throw new System\Error\AccessDenied();
 
 

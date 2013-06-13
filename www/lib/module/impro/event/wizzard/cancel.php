@@ -23,7 +23,7 @@ if ($event = Impro\Event::wizzard_for($id, $new)) {
 		$f->out($this);
 	}
 
-	$propagate['event'] = $event;
-	$propagate['wizzard_step'] = Impro\Event::ID_WIZZARD_STEP_CANCEL;
+	$this->propagate('event', $event);
+	$this->propagate('wizzard_step', Impro\Event::ID_WIZZARD_STEP_CANCEL);
 } else throw new System\Error\AccessDenied();
 

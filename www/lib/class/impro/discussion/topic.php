@@ -9,10 +9,10 @@ namespace Impro\Discussion
 			"desc"    => array('text'),
 			"locked"  => array('bool'),
 			"visible" => array('bool'),
-			"board"            => array('belongs_to', "model" => '\Impro\Discussion\Board'),
-			"author"           => array('belongs_to', "model" => '\System\User'),
-			"last_post_author" => array('belongs_to', "model" => '\System\User'),
-			"posts" => array('has_many', "model" => '\Impro\Discussion\Post', "foreign_name" => 'id_topic'),
+			"board"            => array('belongs_to', "model" => 'Impro\Discussion\Board'),
+			"author"           => array('belongs_to', "model" => 'System\User'),
+			"last_post_author" => array('belongs_to', "model" => 'System\User'),
+			"posts" => array('has_many', "model" => 'Impro\Discussion\Post', "foreign_name" => 'id_topic'),
 		);
 
 

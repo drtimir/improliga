@@ -11,14 +11,16 @@ if (($self && $user = $request->user()) || ($id && $user = find('\System\User', 
 
 	$member_of = get_all('\Impro\Team\Member')->where(array("id_system_user" => $user->id))->fetch();
 	$event_conds = array(
+		array("id_author" => $user->id),
 		"visible" => true,
-		"id_author" => $user->id,
 	);
 
-	$participants = get_all('\Impro\Event\Participant')->where(array('id_impro_event_participant IN ('.implode(',', collect_ids($member_of)).')'))->fetch();
+	if (any($member_of)) {
+		$participants = get_all('\Impro\Event\Participant')->where(array('id_impro_event_participant IN ('.implode(',', collect_ids($member_of)).')'))->fetch();
 
-	if (any($participants)) {
-		$event_conds[0][] = "id_impro_event IN (".implode(',', collect(array('attr', 'id_impro_event'), $participants)).')';
+		if (any($participants)) {
+			$event_conds[0][] = "id_impro_event IN (".implode(',', collect(array('attr', 'id_event'), $participants)).')';
+		}
 	}
 
 	$events = get_all('\Impro\Event')->where($event_conds)->paginate(5)->fetch();

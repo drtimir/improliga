@@ -12,7 +12,7 @@ echo ul(array('boards', 'plain'));
 
 	foreach ($boards as $board) {
 		echo li(null, 'board');
-			$ren->heading($ren->link_for('discussion_board', $board->name, args($board)), false);
+			echo $ren->heading_static($ren->link_for('discussion_board', $board->name, args($board)));
 			echo div('topics');
 				$latest = $board->latest();
 

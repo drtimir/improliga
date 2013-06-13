@@ -22,9 +22,9 @@ namespace Impro
 		protected static $attrs = array(
 			"name"          => array('varchar'),
 			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW, "options" => array('callback', '\Impro\Event\Type', 'get_all')),
-			"team_home"     => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
-			"team_away"     => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
-			"location"      => array('belongs_to', "model" => '\System\Location', "is_null" => true),
+			"team_home"     => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
+			"team_away"     => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
+			"location"      => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"image"         => array('image'),
 			"desc_short"    => array('text', "default" => ''),
 			"desc_full"     => array('text', "default" => ''),
@@ -39,7 +39,7 @@ namespace Impro
 			"visible"       => array('bool'),
 			"published"     => array('bool'),
 			"publish_wait"  => array('bool'),
-			"author"        => array('belongs_to', "model" => "\System\User"),
+			"author"        => array('belongs_to', "model" => "System\User"),
 
 			"has_whistle"   => array('int', "default" => 0),
 			"has_kazoo"     => array('int', "default" => 0),
@@ -53,8 +53,8 @@ namespace Impro
 			"has_camera"    => array('int', "default" => 0),
 			"has_photo"     => array('int', "default" => 0),
 
-			"participants"  => array('has_many', "model" => '\Impro\Event\Participant'),
-			"reservations"  => array('has_many', "model" => '\Impro\Event\Booking')
+			"participants"  => array('has_many', "model" => 'Impro\Event\Participant'),
+			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking')
 		);
 
 
@@ -221,7 +221,7 @@ namespace Impro
 		public function to_html(\System\Template\Renderer $ren)
 		{
 			return div('event', array(
-				div('event_image', $ren->link_for('event', $this->image->to_html(78, 56), args($this))),
+				div('event_image', $ren->link_for('event', $this->image->to_html($ren, 78, 56), args($this))),
 				div('event_info', array(
 					span('part name', $ren->link_for('event', $this->name, args($this))),
 					$this->location ? span('part city', $ren->link_ext($this->location->map_link(), $this->location->name)):'',

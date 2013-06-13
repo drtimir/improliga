@@ -37,7 +37,7 @@ echo div('profile');
 	close('div');
 
 	echo div('right');
-		echo div('profile_block member_avatar fancybox', $ren->link($user->avatar->get_path(), $user->avatar->to_html(360,275)));
+		echo div('profile_block member_avatar fancybox', $ren->link($user->avatar->get_path(), $user->avatar->to_html($ren, 360,275)));
 
 		if (any($events)) {
 			echo div('profile_block member_events');

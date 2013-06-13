@@ -23,7 +23,7 @@ namespace Impro
 
 		public static function avatar(\System\Template\Renderer $ren, \System\User $user, $w = 40, $h = 40)
 		{
-			return $ren->link_for('profile_user', $user->avatar->to_html($w, $h), array("args" => array($user)));
+			return $ren->link_for('profile_user', $user->avatar->to_html($ren, $w, $h), array("args" => array($user)));
 		}
 
 

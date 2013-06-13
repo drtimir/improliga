@@ -7,7 +7,7 @@ def($event);
 
 if (any($propagated['event'])) {
 	$event = &$propagated['event'];
-	$current  = $propagated['wizzard_step'];
+	$current = $propagated['wizzard_step'];
 } else {
 	$current = null;
 }

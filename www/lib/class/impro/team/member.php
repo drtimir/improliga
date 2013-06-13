@@ -5,8 +5,8 @@ namespace Impro\Team
 	class Member extends \System\Model\Database
 	{
 		protected static $attrs = array(
-			"team"   => array('belongs_to', "model" => "\Impro\Team", "is_natural" => true),
-			"user"   => array('belongs_to', "model" => "\System\User", "is_natural" => true),
+			"team"   => array('belongs_to', "model" => "Impro\Team", "is_natural" => true),
+			"user"   => array('belongs_to', "model" => "System\User", "is_natural" => true),
 			"roles"  => array("int_set"),
 			"active" => array("bool"),
 		);
@@ -32,7 +32,7 @@ namespace Impro\Team
 		public function to_html(\System\Template\Renderer $ren)
 		{
 			return div('team_member', array(
-				$ren->link_for('team', $this->team->logo->to_html(56, 38), args($this->team)),
+				$ren->link_for('team', $this->team->logo->to_html($ren, 56, 38), args($this->team)),
 				div('team_member_info', array(
 					$this->team->to_html_link($ren),
 					div('roles', implode(', ', $this->get_roles($ren))),

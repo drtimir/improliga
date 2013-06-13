@@ -3,22 +3,22 @@
 def($id);
 def($new, false);
 
-if ($event = Impro\Event::wizzard_for($id, $new)) {
+if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
-	$f = System\Form::create_delete_checker(array(
+	$f = $ren->form_checker(array(
 		"info" => array(
 			$locales->trans('impro_event_name').':' => $event->name,
 		),
 		"heading" => $locales->trans("impro_event_wizzard"),
-		"desc" => $locales->trans('impro_event_wizzard_step_cancel'),
+		"desc"    => $locales->trans('impro_event_wizzard_step_cancel'),
 		"default" => $data,
 		"class" => array('event_wizzard', 'event_wizzard_cancel'),
 	));
 
 	if ($f->passed()) {
 		$event->drop();
-		$flow->redirect('profile_events');
+		$flow->redirect($ren->url('profile_events'));
 	} else {
 		$f->out($this);
 	}

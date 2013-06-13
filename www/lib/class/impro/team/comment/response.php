@@ -6,7 +6,7 @@ namespace Impro\Team\Comment
 	class Response extends \Impro\Team\Comment
 	{
 		protected static $attrs = array(
-			"comment" => array('belongs_to', "model" => '\Impro\Team\Comment'),
+			"comment" => array('belongs_to', "model" => 'Impro\Team\Comment'),
 			"user"    => array('belongs_to', "model" => '\System\User', "is_null" => true),
 			"text"    => array('text'),
 			"visible" => array('bool', "default" => false),

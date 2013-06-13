@@ -3,7 +3,7 @@
 echo div('discussion');
 
 	echo $ren->heading($heading);
-	echo ul('actions plain', array(
+	echo ul('controls plain', array(
 		li(array("content" => $ren->label_for_url('discussion_board_create', $locales->trans('impro_discussion_board_create'), 'godmode/actions/create', 16))),
 	));
 
@@ -17,7 +17,7 @@ echo ul(array('boards', 'plain'));
 				$latest = $board->latest();
 
 				if (!$board->locked) {
-					echo ul('actions plain', array(
+					echo ul('controls plain', array(
 						li($ren->label_for_url('discussion_topic_create', $locales->trans('impro_discussion_topic_create'), 'godmode/actions/create', 16, args($board))),
 					));
 				}

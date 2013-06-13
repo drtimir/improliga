@@ -139,6 +139,7 @@
 	"impro_event_wizzard_next":"Další krok",
 	"impro_event_wizzard_finish":"Dokončit",
 	"impro_event_wizzard_cancel":"Zrušit",
+	"impro_event_wizzard_prev":"Zpátky",
 	"impro_event_wizzard_step_name":"Název a typ",
 	"impro_event_wizzard_step_timespace":"Místo a čas",
 	"impro_event_wizzard_step_teams":"Týmy",

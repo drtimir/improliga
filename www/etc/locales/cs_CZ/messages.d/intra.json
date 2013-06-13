@@ -59,5 +59,13 @@
 	"intra_team_no_members":"Žádní členové",
 
 	"intra_warning_working":"Na této části webu zatím pracujeme.",
+
+	"intra_visible":"Viditelné",
+	"intra_invisible":"Neviditelné",
+	"intra_published":"Veřejné",
+	"intra_unpublished":"Nezveřejněné",
+	"intra_archive":"Archivní",
+	"intra_planned":"Naplánované",
+	"intra_events_my":"Moje události",
 	"end":""
 }

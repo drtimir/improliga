@@ -7,7 +7,7 @@ Tag::div(array("class" => 'discussion topic_list'));
 
 	echo div('desc', $board->desc);
 
-	echo ul('actions plain', array(
+	echo ul('controls plain', array(
 		li($ren->label_for_url('discussion_topic_create', $locales->trans('impro_discussion_topic_create'), 'godmode/actions/create', 16, args($board))),
 	));
 

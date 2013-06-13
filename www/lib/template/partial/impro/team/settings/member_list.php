@@ -7,7 +7,7 @@ echo div('team_member_list');
 	foreach ($members as $member) {
 		echo li(array(
 			$member->to_html_member($ren),
-			ul('controls', array(
+			ul('actions', array(
 				li($ren->icon_for_url('team_settings_member_roles', 'godmode/actions/edit', 16, array(
 					"args"  => array($team, $member->id),
 					"title" => $locales->trans('intra_team_member_edit'),

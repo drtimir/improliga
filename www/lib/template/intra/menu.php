@@ -18,7 +18,7 @@ echo div('menu_left');
 
 	echo menu(array('plain', 'main'), array(
 		li($ren->label_for($response->url('home'), $locales->trans('intra_wall'), 'godmode/locations/home', 16)),
-		li($ren->label_for($response->url('event_create'), $locales->trans('impro_event_create_new'), 'godmode/modules/calendar', 16)),
+		li($ren->label_for($response->url('profile_events'), $locales->trans('intra_events_my'), 'godmode/modules/calendar', 16)),
 	));
 
 	echo menu(array('plain', 'main'), array(

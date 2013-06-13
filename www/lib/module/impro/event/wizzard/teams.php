@@ -4,12 +4,14 @@ def($id);
 def($new, false);
 
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
+	$default = $event->get_data();
+	$default['cancel'] = $default['prev'] = true;
 
 	$f = $ren->form(array(
 		"class"   => 'event_wizzard',
 		"heading" => $locales->trans("impro_event_wizzard"),
 		"desc"    => $locales->trans('impro_event_wizzard_step_teams'),
-		"default" => $event->get_data()
+		"default" => $default,
 	));
 
 	if ($event->type === Impro\Event\Type::ID_MATCH) {
@@ -52,8 +54,9 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		$f->text('hint0', $locales->trans('impro_event_wizzard_team_owner_hint'));
 	}
 
-	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));
 	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
 
 	if ($f->passed()) {
 		if (isset($p['cancel'])) {

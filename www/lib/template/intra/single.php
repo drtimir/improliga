@@ -8,5 +8,7 @@ echo div('page-block');
 		$ren->slot();
 
 	close('div');
+	echo span('cleaner', '');
+
 close('div');
 

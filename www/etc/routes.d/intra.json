@@ -127,9 +127,10 @@
 	}, "profile"],
 
 	["^/profile/events/$", {
+		"layout":["intra/layout", "intra/single"],
 		"title":"profile_my_events",
 		"modules":[
-			["impro/event/my", {"slot":"left", "month_input":"#{0}"}]
+			["impro/event/my"]
 		]
 	}, "profile_events"],
 

@@ -344,12 +344,20 @@
 }
 
 
-.event_wizzard .buttons .input-field_cancel button {
+.event_wizzard .buttons .input-field_button_submited {
+	float:right
+}
+
+.event_wizzard .buttons .input-field_cancel button,
+.event_wizzard .buttons .input-field_prev button
+ {
 	background:#999;
 	border-color:#999;
 }
 
-.event_wizzard .buttons .input-field_cancel button:hover {
+.event_wizzard .buttons .input-field_cancel button:hover,
+.event_wizzard .buttons .input-field_prev button:hover
+{
 	border:1px solid #666;
 }
 
@@ -376,4 +384,87 @@
 .event .date
 {
 	font-size:12px;
+}
+
+
+.event_table {
+	width:100%;
+}
+
+.event_table th {
+	text-align:left;
+}
+
+.event_table td,
+.event_table td * {
+	vertical-align:top;
+}
+
+.event_table .loc {
+	display:block;
+	font-size:12px;
+}
+
+.event_table td {
+	border-bottom:1px solid #e0e0e0;
+	padding:5px 0;
+}
+
+.event_table .img {
+	width:54px;
+}
+
+.event_table .actions {
+	width:44px;
+}
+
+.event_table .actions a {
+	padding:2px;
+	border:1px solid transparent;
+}
+.event_table .actions a:hover {
+	border:1px solid #999
+}
+
+.event_filter {
+	margin-bottom:20px;
+}
+
+.event_filter .inputs_container,
+.event_filter .buttons_container
+{
+	float:left;
+}
+
+.event_filter .inputs,
+.event_filter .buttons
+ {
+	margin:0;
+}
+
+.event_filter .inputs {
+	background:#efefef;
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:0 10px;
+	margin-right:10px;
+}
+
+.event_filter .inputs li {
+	display:inline-block;
+	padding:2px 0 1px;
+	margin:0 10px 0 0;
+}
+
+.event_filter .inputs li input {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.event_filter .inputs li label {
+	width:auto;
+}
+
+.event_filter .buttons li {
+	margin-top:0;
 }

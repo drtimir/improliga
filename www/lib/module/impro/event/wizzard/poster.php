@@ -35,9 +35,9 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 	$f->input_checkbox('generic_tickets', $locales->trans('impro_event_generic_tickets'));
 	$f->text('hint3', $locales->trans('impro_event_wizzard_generic_tickets_hint'));
 
-
-	$f->submit($locales->trans('impro_event_wizzard_next'));
+	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));
 	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

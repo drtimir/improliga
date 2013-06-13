@@ -36,8 +36,9 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		$f->text('hint1', $locales->trans('impro_event_wizzard_published_rights_hint'));
 	}
 
-	$f->submit($locales->trans('impro_event_wizzard_finish'));
+	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));
 	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_finish'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

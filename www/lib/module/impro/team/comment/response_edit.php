@@ -9,8 +9,8 @@ if (any($propagated['comment']) && any($propagated['team'])) {
 		"class" => 'team_comment team_response',
 	));
 
-	$f->input_rte('text', l('impro_team_comment_response'), true);
-	$f->submit(l('impro_team_comment_respond'));
+	$f->input_rte('text', $locales->trans('impro_team_comment_response'), true);
+	$f->submit($locales->trans('impro_team_comment_respond'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

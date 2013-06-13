@@ -23,11 +23,11 @@ echo div('team_detail');
 
 	echo div('header', array(
 		div('gallery fancybox', array(
-			div('team_logo', $ren->link($team->logo->get_path(), $team->logo->to_html(210, 180))),
-			div('img', $ren->link($team->photo->get_path(), $team->photo->to_html(370, 180))),
+			div('team_logo', $ren->link($team->logo->get_path(), $team->logo->to_html($ren, 210, 180))),
+			div('img', $ren->link($team->photo->get_path(), $team->photo->to_html($ren, 370, 180))),
 			$team->hq ?
 				div('map', array(
-					$team->hq->map_html(210, 180),
+					$team->hq->map_html($ren, 210, 180),
 					div('playground label', $ren->link_ext(
 						$team->hq->map_link(),
 						div('inner', array(

@@ -1,0 +1,30 @@
+.controls {
+	position:absolute;
+	right:0;
+	top:10px;
+}
+
+.controls a {
+	display:inline-block;
+	border-radius:3px;
+	background:#fbfbfc;
+	border:1px solid #ccc;
+	padding:5px 6px;
+	color:#000;
+	box-shadow:0 0 3px rgba(0,0,0,0.05);
+	color:#333;
+	margin-left:10px;
+}
+
+.controls a:hover {
+	box-shadow:0 0 3px #C94B50;
+}
+
+.controls a .icon {
+	margin-right:7px;
+	vertical-align:top;
+}
+
+.controls a .label {
+	font-weight:bold;
+}

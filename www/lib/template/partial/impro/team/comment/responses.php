@@ -2,7 +2,7 @@
 
 echo div('team_comment_responses');
 
-	echo $this->heading(l('impro_team_comment_responses'));
+	echo $this->heading($locales->trans('impro_team_comment_responses'));
 
 	$responses_html = '';
 

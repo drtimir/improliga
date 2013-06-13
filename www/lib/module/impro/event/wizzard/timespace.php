@@ -26,8 +26,10 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 	$f->input_location('location', $locales->trans('impro_event_location'), true);
 
 	$f->text('hint2', $locales->trans('impro_event_wizzard_location_hint'));
-	$f->submit($locales->trans('impro_event_wizzard_next'));
+
+	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));
 	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
+	$f->submit($locales->trans('impro_event_wizzard_next'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();

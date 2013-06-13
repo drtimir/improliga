@@ -6,7 +6,7 @@ namespace Impro\Team
 	class Comment extends \System\Model\Database
 	{
 		protected static $attrs = array(
-			"team"      => array('belongs_to', "model" => '\Impro\Team'),
+			"team"      => array('belongs_to', "model" => 'Impro\Team'),
 			"user"      => array('belongs_to', "model" => '\System\User', "is_null" => true),
 			"text"      => array('text'),
 			"visible"   => array('bool', "default" => false),
@@ -21,7 +21,7 @@ namespace Impro\Team
 			return div('post', array(
 				div('avatar', $this->user ?
 					\Impro\User::avatar($ren, $this->user, 50, 50):
-					\System\User::guest()->image->to_html(50,50)
+					\System\User::guest()->image->to_html($ren, 50,50)
 				),
 				div('content', array(
 					div('name', $this->user ? \Impro\User::link($ren, $this->user):$ren->trans('anonymous')),

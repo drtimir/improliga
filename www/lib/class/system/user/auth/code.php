@@ -14,10 +14,7 @@ namespace System\User\Auth
 			"due"      => array('datetime', "is_null" => true),
 			"used"     => array('int', "default" => 0),
 			"one_time" => array('bool', "default" => false),
-		);
-
-		protected static $belongs_to = array(
-			"user" => array("model" => '\System\User'),
+			"user"     => array('belongs_to', "model" => '\System\User'),
 		);
 
 

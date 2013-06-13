@@ -9,11 +9,7 @@ namespace Impro
 			"text"      => array("text"),
 			"visible"   => array("bool"),
 			"published" => array("bool"),
-		);
-
-
-		protected static $belongs_to = array(
-			"author" => array("model" => 'System\User')
+			"author"    => array('belongs_to', "model" => 'System\User')
 		);
 	}
 }

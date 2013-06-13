@@ -42,6 +42,7 @@ Tag::html();
 		$renderer->content_for("scripts", "pwf/godmode/main_menu");
 		$renderer->content_for("scripts", "pwf/godmode/desktop");
 		$renderer->content_for("scripts", "pwf/godmode/shortcuts");
+		$renderer->content_for("scripts", "pwf/godmode/relman");
 
 		$renderer->content_for('styles', 'pwf/elementary');
 		$renderer->content_for('styles', 'pwf/form');

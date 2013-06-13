@@ -8,7 +8,12 @@ Tag::div(array("class" => 'admin_detail'));
 		$parity = 'odd';
 
 		foreach ($attrs as $attr) {
-			$value = System\Template::to_html($ren, $item->$attr);
+			if ($item->$attr instanceof \System\Database\Query) {
+				$value = to_html($ren, $item->$attr->fetch());
+			} else {
+				$value = to_html($ren, $item->$attr);
+			}
+
 			if ($attr == System\Model\Database::get_id_col($model)) {
 				$name = $locales->trans('Id');
 			} elseif (in_array($attr, array('created_at', 'updated_at'))) {

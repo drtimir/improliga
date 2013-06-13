@@ -124,14 +124,12 @@ $(function(){
 					els.menu = $('<menu class="window-menu"></menu>');
 					els.buttons = $('<ul class="window-buttons"></ul>');
 					els.content_container = $('<div class="window-content-container"></div>');
+					els.content_menu = $('<div class="window-content-menu-container"></div>');
 					els.content = $('<div class="window-content"></div>');
 					els.preloader = $('<div class="window-preloader"><span>'+pwf.godmode.trans('godmode_please_wait')+'</span></div>');
 
-					els.title_container.append(els.icon);
-					els.title_container.append(els.title);
-					els.title_container.append(els.menu);
-					els.title_container.append(els.buttons);
-					els.content_container.append(els.content);
+					els.title_container.append([els.icon, els.title, els.menu, els.buttons]);
+					els.content_container.append([els.content_menu, els.content]);
 
 					els.container.append(els.title_container);
 					els.container.append(els.content_container);
@@ -227,6 +225,7 @@ $(function(){
 				this.reset_events = function()
 				{
 					this.get_el('title_container').bind('mousedown', {"win":this}, function(e) { e.data.win.start_drag(e); });
+					this.get_el('title_container').bind('dblclick', {"win":this}, function(e) { e.data.win.switch_maximization(e); });
 				};
 
 
@@ -395,7 +394,7 @@ $(function(){
 
 				this.roll_up = function()
 				{
-					this.get_el('content').slideUp();
+					this.get_el('content_container').css({"overflow":'hidden'}).animate({"height": 0});
 					this.get_el('border').addClass('rolled_up');
 					this.attr('rolled_up', true);
 					pwf.godmode.components.app_drawer.update_window(this.attr('id'));
@@ -405,7 +404,7 @@ $(function(){
 
 				this.roll_down = function()
 				{
-					this.get_el('content').slideDown();
+					this.get_el('content_container').css({"height":'auto', "overflow":'hidden'});
 					this.get_el('border').removeClass('rolled_up');
 					this.attr('rolled_up', false);
 					pwf.godmode.components.app_drawer.update_window(this.attr('id'));
@@ -459,23 +458,30 @@ $(function(){
 
 					$.ajax({
 						"url":url,
-						"context":this,
+						"context":{"win":this, "url":url},
 						"complete":function() {
-							this.hide_preloader();
+							this.win.hide_preloader();
 						},
 						"success":function(data, textStatus, jqXHR) {
-							var html = data;
-
-							if (html.indexOf('<body>') > -1) {
-								html = html.substr(html.indexOf('<body>'));
-								html = html.substr(0, html.indexOf('</body>'));
-							}
-
-							this.attr('url', url);
-							this.set_content(html);
+							this.win.attr('url', this.url);
+							this.win.set_content(data);
 						},
-
+						"error":function(res) {
+							v(res);
+						}
 					});
+				};
+
+
+				this.use_body = function(html)
+				{
+					if (html.indexOf('<body>') > -1) {
+						html = html.substr(html.indexOf('<body'));
+						html = html.substr(html.indexOf('>'));
+						html = html.substr(0, html.indexOf('</body>'));
+					}
+
+					this.set_content(html);
 				};
 
 
@@ -483,7 +489,11 @@ $(function(){
 				{
 					if (typeof html != 'undefined' && html.length > 0) {
 						var h;
+
 						this.get_el('content').html(html);
+
+						var menu = this.get_el('content').find('.window-content-menu');
+						this.get_el('content_menu').html(menu);
 
 						(h = this.get_el('content').find('h1')).length >= 1 ||
 						(h = this.get_el('content').find('h2')).length >= 1;
@@ -516,7 +526,7 @@ $(function(){
 
 				this.update_menu = function()
 				{
-					var items = this.get_el('content').find('.window-content-menu a');
+					var items = this.get_el('content_menu').find('.window-content-menu a');
 
 					for (var i = 0; i<items.length; i++) {
 						var el = $(items[i]);
@@ -530,7 +540,7 @@ $(function(){
 				this.set_callbacks = function()
 				{
 					var els_body = this.get_el('content').find('.window-content-inner a');
-					var els = this.get_el('content').find('.window-content-menu .menu-panel li');
+					var els = this.get_el('content_menu').find('.window-content-menu .menu-panel li');
 
 					for (var i = 0; i<els.length; i++) {
 						var el = $(els[i]);
@@ -573,13 +583,13 @@ $(function(){
 
 				this.hide_preloader = function()
 				{
-					this.get_el('preloader').fadeOut(200);
+					this.get_el('preloader').fadeOut(150);
 				};
 
 
 				this.show_preloader = function()
 				{
-					this.get_el('preloader').fadeIn(200);
+					this.get_el('preloader').fadeIn(150);
 				};
 
 

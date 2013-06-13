@@ -12,10 +12,7 @@ namespace Impro\Article
 			"weight"    => array('int', "is_unsigned" => true),
 			"published" => array('bool'),
 			"visible"   => array('bool'),
-		);
-
-		protected static $belongs_to = array(
-			"article" => array("model" => '\Impro\Article'),
+			"article"   => array('belongs_to', "model" => 'Impro\Article'),
 		);
 	}
 }

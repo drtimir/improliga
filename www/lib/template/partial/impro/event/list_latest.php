@@ -16,7 +16,7 @@ Tag::div(array("class" => 'events'));
 				"class"   => 'image',
 				"output"  => false,
 				"href"    => $ren->url('event', array($event)),
-				"content" => $event->image->to_html($thumb_width, $thumb_height),
+				"content" => $event->image->to_html($ren, $thumb_width, $thumb_height),
 			));
 
 			$ts = array(

@@ -26,7 +26,7 @@ echo div('events');
 				$html_event = array();
 
 				$url = $ren->url('event', array($event));
-				$html_event[] = $ren->link($url, $event->image->to_html(100, 100), array("class" => 'image'));
+				$html_event[] = $ren->link($url, $event->image->to_html($ren, 100, 100), array("class" => 'image'));
 
 				$ts = array(
 					Tag::span(array("class" => 'date', "output"  => false, "content" => $locales->format_date($event->start, 'human'))),

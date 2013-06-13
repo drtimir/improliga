@@ -8,6 +8,7 @@ namespace Impro
 			"name"       => array("varchar"),
 			"name_full"  => array("varchar"),
 			"city"       => array("varchar", "default" => ''),
+			"hq"         => array('belongs_to', "model" => "\System\Location"),
 			"about"      => array("text", "default" => ''),
 			"logo"       => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"      => array('image', "default" => "/share/pixmaps/impro/team.png"),
@@ -15,17 +16,10 @@ namespace Impro
 			"site"       => array("varchar", "default" => ''),
 			"played"     => array("int", "is_unsigned" => true, "default" => 0),
 			"visible"    => array("bool"),
-		);
-
-		protected static $belongs_to = array(
-			"author" => array("model" => "\System\User"),
-			"hq"     => array("model" => "\System\Location"),
-		);
-
-		protected static $has_many = array(
-			"members"   => array("model" => "\Impro\Team\Member"),
-			"galleries" => array("model" => '\Impro\Gallery', "is_bilinear" => true),
-			"comments"  => array("model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
+			"author"     => array('belongs_to', "model" => "\System\User"),
+			"members"    => array('has_many', "model" => "\Impro\Team\Member"),
+			"galleries"  => array('has_many', "model" => '\Impro\Gallery'),
+			"comments"   => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
 		);
 
 

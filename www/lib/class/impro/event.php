@@ -20,8 +20,11 @@ namespace Impro
 		const ID_SETUP_STATUS_NOT_NEEDED = 2;
 
 		protected static $attrs = array(
-			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW, "options" => array('callback', '\Impro\Event\Type', 'get_all')),
 			"name"          => array('varchar'),
+			"type"          => array("int", "is_unsigned" => true, "default" => Event\Type::ID_SHOW, "options" => array('callback', '\Impro\Event\Type', 'get_all')),
+			"team_home"     => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
+			"team_away"     => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
+			"location"      => array('belongs_to', "model" => '\System\Location', "is_null" => true),
 			"image"         => array('image'),
 			"desc_short"    => array('text', "default" => ''),
 			"desc_full"     => array('text', "default" => ''),
@@ -31,6 +34,12 @@ namespace Impro
 			"capacity"      => array('int', "default" => 0),
 			"price"         => array('int', "is_null" => true),
 			"price_student" => array('int', "is_null" => true),
+
+			"use_booking"   => array('bool'),
+			"visible"       => array('bool'),
+			"published"     => array('bool'),
+			"publish_wait"  => array('bool'),
+			"author"        => array('belongs_to', "model" => "\System\User"),
 
 			"has_whistle"   => array('int', "default" => 0),
 			"has_kazoo"     => array('int', "default" => 0),
@@ -44,27 +53,8 @@ namespace Impro
 			"has_camera"    => array('int', "default" => 0),
 			"has_photo"     => array('int', "default" => 0),
 
-			"visible"       => array('bool'),
-			"published"     => array('bool'),
-			"publish_wait"  => array('bool'),
-			"gen_poster"    => array('bool'),
-			"gen_tickets"   => array('bool'),
-			"use_booking"   => array('bool'),
-		);
-//~ Píšťalka, Kazoo, Mikrofony, Dresy rozhodčích, Hlasovací kartičky, Košík na témata, Papíry a tužky
-
-
-		protected static $has_many = array(
-			"participants" => array("model" => '\Impro\Event\Participant'),
-			"reservations" => array("model" => '\Impro\Event\Booking')
-		);
-
-		protected static $belongs_to = array(
-			"author"    => array("model" => "\System\User"),
-			"team_home" => array("model" => '\Impro\Team', "is_null" => true),
-			"team_away" => array("model" => '\Impro\Team', "is_null" => true),
-			"gallery"   => array("model" => '\Impro\Gallery'),
-			"location"  => array("model" => '\System\Location'),
+			"participants"  => array('has_many', "model" => '\Impro\Event\Participant'),
+			"reservations"  => array('has_many', "model" => '\Impro\Event\Booking')
 		);
 
 

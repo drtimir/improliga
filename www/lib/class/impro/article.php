@@ -6,17 +6,11 @@ namespace Impro
 	{
 		protected static $attrs = array(
 			"name"      => array('varchar'),
+			"category"  => array('belongs_to', "model" => 'Impro\Article\Category'),
 			"desc"      => array('text'),
 			"published" => array('bool'),
 			"visible"   => array('bool'),
-		);
-
-		protected static $has_many = array(
-			"chapters" => array("model" => '\Impro\Article\Chapter', "foreign_name" => 'id_article'),
-		);
-
-		protected static $belongs_to = array(
-			"category" => array("model" => '\Impro\Article\Category'),
+			"chapters"  => array('has_many', "model" => 'Impro\Article\Chapter', "foreign_name" => 'id_article'),
 		);
 	}
 }

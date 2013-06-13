@@ -1,5 +1,27 @@
-c9cbda6b023c4f284ec7bfa4f981ffa1f490c11d Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+a85fd2f57d9420e4a807a362ba87ed8cb60bd0fa Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+aa604f42733c9dea9846849ff852abdbbc308e68 Admin detail: has_many
+31d5367e3ac0ea05bbf4082a306a63229f057eb4 Admin detail, display
+ba9a4a0e60873d3b6da10fc6ac65f7f354dd0fe2 Godmode editor, times
+ff30abb892ba9c216bda4d8bc78df46e5ad0086b Godmode styles
+8bda6c8d380eb0a1ed6ba60718d6a5bd542d0777 Editor: Comments, coding style
+5f27370108b1016c9af356558d3a5a2222ced44e Godmode security
+08b8e99edd014d8536b74ab6a21b85b87567f516 Editor: Form styles
+a762f9dbf63d1f975b429fc6ba3f8e31d76f2b57 Editor: relman, buttons
+f151fe1f9681496405f42b786e93228c151bd5c0 Editor: Relman frontend
+21ae36de7a95ac29ef13e6cfaa7a6433988f120c Editor, trans delete
+8e9346bf9b548dfab99e304657225eca348c4a41 Editor, container classes
+ba61326bf02fc9f30da961a9c451f6192422f153 Editor, relman styles
+0c527625f9a514f6b86ca0f450233d5e3f4b8e25 Editor, relation managers
+251412debd40662f0f072301f4ff087121ade788 Godmode editor
+db8e056749b297bf60ee646cf6c1dca63b9f6cb6 Window form styles
+bd9a86ed84ceeed53fa9cb624632ecbcb836062d Godmode windows, roll up/down
+838dddc94f04477a69372d74d6ad999c4b846969 Godmode windows
+ec88181213b2c4f0b8079527efa2bd50a19b2e09 Godmode windows, fixed menu
+15c0199523d4e8817bab7a3f9b95b92aa36f4c5a Gitignore update
+b7b56a2762dbb4cb343cabb625a3eb124bb24558 Godmode windows, maximize
+640555cbcff02a449fcefda475ee7aa222e216b2 Godmode editor base
 7617bc30af893aaa62e8849bb941518f8525e10b [fix] Godmode form
+c9cbda6b023c4f284ec7bfa4f981ffa1f490c11d Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
 eb4e192ba6073c237c6465ac643d10d38a95faec [fix] Admin list
 a37770f896b6f8f021fd7deefdfa649dcd94a4b3 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
 667285c72d7977f85edb7b468d1685ff2d14a7af Locales2

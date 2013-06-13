@@ -6,19 +6,11 @@ namespace Impro\Team
 	class Comment extends \System\Model\Database
 	{
 		protected static $attrs = array(
-			"text"    => array('text'),
-			"visible" => array('bool', "default" => false),
-		);
-
-
-		protected static $belongs_to = array(
-			"team" => array("model" => '\Impro\Team'),
-			"user" => array("model" => '\System\User', "is_null" => true),
-		);
-
-
-		protected static $has_many = array(
-			"responses" => array("model" => '\Impro\Team\Comment\Response', "foreign_name" => 'id_comment'),
+			"team"      => array('belongs_to', "model" => '\Impro\Team'),
+			"user"      => array('belongs_to', "model" => '\System\User', "is_null" => true),
+			"text"      => array('text'),
+			"visible"   => array('bool', "default" => false),
+			"responses" => array('has_many', "model" => '\Impro\Team\Comment\Response', "foreign_name" => 'id_comment'),
 		);
 
 

@@ -68,10 +68,10 @@ echo div('event_detail');
 	close('div');
 
 	echo div('right');
-		echo $ren->link($event->image->get_path(), $event->image->to_html($col_width), array("class" => 'image fancybox'));
+		echo $ren->link($event->image->get_path(), $event->image->to_html($ren, $col_width), array("class" => 'image fancybox'));
 
 		if ($event->location) {
-			echo $event->location->map_html($col_width);
+			echo $event->location->map_html($ren, $col_width);
 		}
 	close('div');
 

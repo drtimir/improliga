@@ -19,8 +19,12 @@
 
 	"godmode_edit":"Upravit",
 	"godmode_delete":"Smazat",
+	"godmode_return_back":"Vrátit",
 	"godmode_create":"Vytvořit",
+	"godmode_add_another":"Přidat další",
 	"godmode_save":"Uložit",
+	"godmode_save_and_edit":"Uložit a editovat",
+	"godmode_save_and_add":"Uložit a přidat další",
 	"godmode_detail":"Detail",
 	"godmode_visible":"Viditelnost",
 	"godmode_whole_public":"Veřejnost",

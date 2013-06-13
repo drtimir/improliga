@@ -9,16 +9,10 @@ namespace Impro\Discussion
 			"desc"    => array('text'),
 			"locked"  => array('bool'),
 			"visible" => array('bool'),
-		);
-
-		protected static $belongs_to = array(
-			"board"            => array("model" => '\Impro\Discussion\Board'),
-			"author"           => array("model" => '\System\User'),
-			"last_post_author" => array("model" => '\System\User'),
-		);
-
-		protected static $has_many = array(
-			"posts" => array("model" => '\Impro\Discussion\Post', "foreign_name" => 'id_topic'),
+			"board"            => array('belongs_to', "model" => '\Impro\Discussion\Board'),
+			"author"           => array('belongs_to', "model" => '\System\User'),
+			"last_post_author" => array('belongs_to', "model" => '\System\User'),
+			"posts" => array('has_many', "model" => '\Impro\Discussion\Post', "foreign_name" => 'id_topic'),
 		);
 
 

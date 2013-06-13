@@ -22,7 +22,8 @@ namespace Impro
 			"use_attendance" => array('bool'),
 			"use_booking"    => array('bool'),
 
-			"comments"   => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
+			"comments"  => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
+			"trainings" => array('has_many', "model" => '\Impro\Team\Training'),
 		);
 
 

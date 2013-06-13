@@ -14,6 +14,7 @@ namespace Impro\Team\Member
 		const PERM_TEAM_DATA       = 1;
 		const PERM_TEAM_EVENTS     = 2;
 		const PERM_TEAM_DISCUSSION = 3;
+		const PERM_TEAM_ATTENDANCE = 4;
 
 
 		private static $types_available = array(

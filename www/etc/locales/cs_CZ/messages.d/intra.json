@@ -21,6 +21,7 @@
 	"intra_team_events":"Události",
 	"intra_team_discussion":"Interní diskuze",
 	"intra_team_settings":"Nastavení",
+	"intra_team_attendance":"Docházka",
 
 	"intra_team_member_add":"Přidat člena týmu",
 	"intra_team_member_existing":"Existující uživatel",
@@ -67,5 +68,30 @@
 	"intra_archive":"Archivní",
 	"intra_planned":"Naplánované",
 	"intra_events_my":"Moje události",
+
+	"attr_impro_team_use_attendance":"Používat docházku",
+	"attr_impro_team_use_attendance_desc":"Zapne docházkový systém na stránce vašeho týmu.",
+	"attr_impro_team_use_booking":"Používat rezervace",
+	"attr_impro_team_use_booking_desc":"Pokud budete vytvářet události, předzaškrtne se políčko 'použít rezervace'.",
+
+	"intra_team_training_invite":"Uživatel {link_user} vytvořil trénink v docházkovém systému týmu {link_team}. Potvrdíte účast?",
+
+	"intra_team_upcoming_tg":"Další trénink bude %s v %s %s a je naplánován jako %s.",
+	"intra_team_no_upcoming_trainings":"Nejsou naplánovány žádné další tréninky.",
+	"intra_team_tg_loc":"v lokalitě '%s'",
+	"intra_team_tg_loc_usual":"tam co obvykle",
+
+	"intra_tg_open":"otevřený",
+	"intra_tg_closed":"uzavřený",
+
+	"intra_team_attd_total":"Celkem",
+	"intra_team_attd_no_info":"Žádné informace.",
+	"intra_team_attd_not_sent":"Pozvánka nebyla odeslána. Pravděpodobně se stala chyba při odesílání.",
+	"intra_team_attd_sent":"Pozvánka byla odeslána a čeká na potvrzení.",
+	"intra_team_attd_yes_guests":"Zúčastní se s %s hosty",
+	"intra_team_attd_yes":"Zúčastní se",
+	"intra_team_attd_no":"Nezúčastní se",
+	"intra_team_attd_maybe":"Neví",
+
 	"end":""
 }

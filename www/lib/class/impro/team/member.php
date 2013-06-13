@@ -9,6 +9,7 @@ namespace Impro\Team
 			"user"   => array('belongs_to', "model" => "System\User", "is_natural" => true),
 			"roles"  => array("int_set"),
 			"active" => array("bool"),
+			"attd"   => array('has_many', "model" => 'Impro\Team\Training\Ack'),
 		);
 
 

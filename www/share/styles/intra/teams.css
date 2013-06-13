@@ -364,3 +364,38 @@
 	width:auto;
 	display:inline-block;
 }
+
+
+.attd table {
+	width:100%;
+}
+
+.attd td,
+.attd th
+{
+	text-align:center;
+	padding:4px 8px;
+}
+
+.attd .name {
+	text-align:left;
+	width:200px;
+}
+
+.attd .even {
+	background-color:#efefef;
+}
+
+.attd .status {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	vertical-align:middle;
+	background:#efefef;
+	color:#000;
+}
+
+.attd .status.not-sent { background:#892326; }
+.attd .status.sent { background:#008dd7; }
+.attd .status.yes { background:#23EA23; }

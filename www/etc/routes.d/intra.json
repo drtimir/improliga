@@ -72,6 +72,30 @@
 		}
 	}, "team_discussion"],
 
+	["^/teams/([^/]+)/attendance/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"attd":["impro/team/attendance/index", {"slot":"big"}, ["head"]]
+		}
+	}, "team_attendance"],
+
+	["^/teams/([^/]+)/attendance/create-training/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"attd":["impro/team/attendance/edit", {"new":true, "slot":"big"}, ["head"]]
+		}
+	}, "team_training_create"],
+
+	["^/teams/([^/]+)/attendance/([^/]+)/edit-attd/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"attd":["impro/team/attendance/edit-attd", {"slot":"big"}, ["head"]]
+		}
+	}, "team_training_attd_edit"],
+
 	["^/teams/([^/]+)/settings/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{

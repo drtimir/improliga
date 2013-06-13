@@ -28,6 +28,9 @@ if (isset($propagated['team'])) {
 
 		$f->input_location("hq", $locales->trans('attr_impro_team_hq'));
 
+		$f->input_checkbox('use_attendance', $locales->trans_model_attr_name('Impro\Team', 'use_attendance'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_attendance'));
+		$f->input_checkbox('use_booking', $locales->trans_model_attr_name('Impro\Team', 'use_booking'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_booking'));
+
 		$f->submit($locales->trans('godmode_save'));
 
 		if ($f->passed()) {

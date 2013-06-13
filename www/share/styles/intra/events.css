@@ -468,3 +468,8 @@
 .event_filter .buttons li {
 	margin-top:0;
 }
+
+.event .match_participants .versus {
+	display:inline-block;
+	margin:0 4px;
+}

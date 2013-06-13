@@ -12,8 +12,6 @@ namespace Impro\User\Request
 			))->count();
 
 			if (empty($members)) {
-				$req->team->id;
-
 				$member = create('\Impro\Team\Member', array(
 					"roles" => \Impro\Team\Member\Role::get_default_roles(),
 					"active" => 1,

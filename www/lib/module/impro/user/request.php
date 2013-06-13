@@ -11,7 +11,7 @@ if ($propagated['user'] && $propagated['code']) {
 		if ($rq->id_user == $user->id) {
 
 			$f = $ren->form(array(
-				"heading" => l('intra_user_request_heading'),
+				"heading" => $locales->trans('intra_user_request_heading'),
 				"class"   => 'request',
 				"default" => array(
 					"yes" => 1,
@@ -22,15 +22,15 @@ if ($propagated['user'] && $propagated['code']) {
 
 			$f->hidden('submited', true);
 			$f->text('label', $rq->text);
-			$f->text('desc', l('intra_user_request_desc'));
+			$f->text('desc', $locales->trans('intra_user_request_desc'));
 
-			$f->input(array("name" => 'yes', "label" => ucfirsts(l('yes')), "type" => 'submit', "kind" => 'button'));
-			$f->input(array("name" => 'no', "label" => ucfirsts(l('no')), "type" => 'submit', "kind" => 'button'));
+			$f->input(array("name" => 'yes', "label" => ucfirsts($locales->trans('yes')), "type" => 'submit', "kind" => 'button'));
+			$f->input(array("name" => 'no', "label" => ucfirsts($locales->trans('no')), "type" => 'submit', "kind" => 'button'));
 
 			if ($rq->allow_maybe) {
 				$f->input(array(
 					"name"  => 'maybe',
-					"label" => ucfirsts(l('maybe')),
+					"label" => ucfirsts($locales->trans('maybe')),
 					"type"  => 'submit',
 					"kind"  => 'button',
 				));

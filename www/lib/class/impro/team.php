@@ -111,7 +111,7 @@ namespace Impro
 		public function send_request(\System\User $user, \System\Template\Renderer $ren, \System\Http\Request $request)
 		{
 			return \Impro\User\Request::for_user($user, array(
-				"text"         => stprintf(l('intra_team_member_add_text'), array(
+				"text"         => stprintf($ren->locales()->trans('intra_team_member_add_text'), array(
 					"link_team" => $this->to_html_link($ren),
 					"link_user" => \Impro\User::link($ren, $request->user()),
 				)),

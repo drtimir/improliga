@@ -1,3 +1,7 @@
+30a4d67fd2d0d34d0b4f84c9ba137bb563ac4c2d Merge branch 'master' of ssh://github.com/just-paja/pwf
+094987b01dabd76d8fc0a73990c35ffd3c272d55 [fix] Settings cache ttl
+9e7ee139fcc8c7c41eff11ecf82889bd0281c21d Tags, tables
+b2b4dcac7c63fb93d2a51a896c618fb68f300c43 [fix] Location, gps to_html
 e609337dd3e9c8356337f15932fb7e68a4506caf Merge branch 'master' of ssh://github.com/just-paja/pwf
 18ecca24672b22e76fcb99f218de0f6d69b76773 Contact to_html
 08835f65e2325e34fd7a19194c61bb7482829c3d [fix] Template: to_html

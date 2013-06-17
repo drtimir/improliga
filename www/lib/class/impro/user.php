@@ -78,7 +78,7 @@ namespace Impro
 			));
 
 			$notice = \Impro\User\Notice::for_user($u, array(
-				"text"         => stprintf(l('intra_user_registration'), array(
+				"text"         => stprintf($ren->trans('intra_user_registration'), array(
 					"login"    => $mail,
 					"password" => $pass,
 				)),
@@ -87,7 +87,7 @@ namespace Impro
 				"id_author"    => $author->id,
 			));
 
-			$notice->mail();
+			$notice->mail($ren->locales());
 			return $u;
 		}
 	}

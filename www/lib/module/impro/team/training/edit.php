@@ -19,23 +19,30 @@ if (isset($propagated['team']) && $team = $propagated['team']) {
 			}
 
 			$default = $trn->get_data();
-			$default['location'] = $trn->location;
+
+			if ($new && $team->loc_trainings) {
+				$default['location'] = $team->loc_trainings;
+				$trn->location = $team->loc_trainings;
+			} else {
+				$default['location'] = $trn->location;
+			}
 
 			$f = $ren->form(array(
 				"default" => $default,
+				"class" => 'tgform',
 			));
 
 
-			$f->input_text('name', $locales->trans_model_attr_name($model, 'name'));
 			$f->input_datetime('start',$locales->trans_model_attr_name($model, 'start'), true);
+			$f->input_text('name', $locales->trans_model_attr_name($model, 'name'), false, $locales->trans_model_attr_desc($model, 'name'));
 			$f->input(array(
 				"name" => 'open',
 				"type" => 'radio',
 				"multiple" => true,
 				"label" => $locales->trans_model_attr_name($model, 'open'),
 				"options" => array(
-					true  => 'open',
-					false => 'closed',
+					true  => 'intra_tg_open',
+					false => 'intra_tg_closed',
 				),
 			));
 

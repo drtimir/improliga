@@ -9,6 +9,7 @@ if (isset($propagated['team'])) {
 
 		$data = $team->get_data();
 		$data['hq'] = $team->hq;
+		$data['loc_trainings'] = $team->loc_trainings;
 
 		$f = $ren->form(array(
 			"default" => $data,
@@ -28,6 +29,10 @@ if (isset($propagated['team'])) {
 
 		$f->input_location("hq", $locales->trans('attr_impro_team_hq'));
 
+		if ($team->use_attendance) {
+			$f->input_location("loc_trainings", $locales->trans_model_attr_name('Impro\Team', 'loc_trainings'), false, $locales->trans_model_attr_desc('Impro\Team', 'loc_trainings'));
+		}
+
 		$f->input_checkbox('use_attendance', $locales->trans_model_attr_name('Impro\Team', 'use_attendance'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_attendance'));
 		$f->input_checkbox('use_booking', $locales->trans_model_attr_name('Impro\Team', 'use_booking'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_booking'));
 
@@ -42,6 +47,11 @@ if (isset($propagated['team'])) {
 			if ($p['hq']) {
 				$p['hq']->save();
 				$team->id_hq = $p['hq']->id;
+			}
+
+			if ($p['loc_trainings']) {
+				$p['loc_trainings']->save();
+				$team->id_loc_trainings = $p['loc_trainings']->id;
 			}
 
 			if ($team->save()) {

@@ -9,6 +9,7 @@ namespace Impro
 			"name_full"      => array("varchar"),
 			"city"           => array("varchar", "default" => ''),
 			"hq"             => array('belongs_to', "model" => "\System\Location"),
+			"loc_trainings"  => array('belongs_to', "model" => "\System\Location", "is_null" => true),
 			"about"          => array("text", "default" => ''),
 			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"          => array('image', "default" => "/share/pixmaps/impro/team.png"),

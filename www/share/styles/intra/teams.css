@@ -457,3 +457,37 @@
 .training .info p {
 	margin-top:0;
 }
+
+
+.tgform .inputs label {
+	width:190px;
+}
+
+.pwform .options {
+	background:#f9f9f9;
+	border:1px solid #e0e0e0;
+	display:inline-block;
+	padding:3px 5px;
+	border-radius:5px;
+}
+
+.pwform .options li {
+	display:inline-block;
+}
+
+.pwform .options li {
+	padding:0;
+	margin:0 5px 0 0;
+}
+
+.pwform .options li label {
+	width:auto;
+	padding-left:0;
+}
+
+.pwform input[type=radio],
+.pwform input[type=checkbox]
+{
+	vertical-align:middle;
+	margin-top:0;
+}

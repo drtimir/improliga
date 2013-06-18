@@ -85,8 +85,14 @@ menu.plain li {
 	z-index:5;
 	overflow:hidden;
 	position:relative;
-	width:180px;
+	width:178px;
 	float:left;
+	padding-top:10px;
+	left:1px;
+}
+
+.menu_left .active {
+	position:relative;
 }
 
 .block_right {
@@ -96,9 +102,12 @@ menu.plain li {
 	float:right;
 	width:790px;
 	border-radius:10px;
-	box-shadow:0 0 250px #ccc;
+	box-shadow:
+		0 0 50px #ccc,
+		0 0 250px #ccc;
 	min-height:500px;
 	z-index:4;
+	border:1px solid #ccc;
 }
 
 menu.main {
@@ -123,6 +132,7 @@ menu.main li a {
 	display:block;
 	padding:4px 5px;
 	text-decoration:none;
+	border:1px solid transparent;
 }
 
 menu.main li a:hover,
@@ -137,6 +147,8 @@ menu.main li a.active,
 .menu_profile.active
 {
 	box-shadow:0 0 10px #ccc;
+	border-color:#ccc;
+	border-right:none;
 }
 
 menu.main li .icon {

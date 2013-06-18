@@ -83,12 +83,17 @@ menu.plain li {
 
 .menu_left {
 	z-index:5;
-	overflow:hidden;
 	position:relative;
 	width:178px;
 	float:left;
 	padding-top:10px;
 	left:1px;
+}
+
+.menu_left_inner {
+	overflow:hidden;
+	width:178px;
+	position:fixed;
 }
 
 .menu_left .active {

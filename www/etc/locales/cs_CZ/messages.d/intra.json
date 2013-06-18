@@ -69,6 +69,8 @@
 	"intra_planned":"Naplánované",
 	"intra_events_my":"Moje události",
 
+	"attr_impro_team_use_discussion":"Používat diskuze",
+	"attr_impro_team_use_discussion_desc":"Zapne interní diskuzi na stránce týmu",
 	"attr_impro_team_use_attendance":"Používat docházku",
 	"attr_impro_team_use_attendance_desc":"Zapne docházkový systém na stránce vašeho týmu.",
 	"attr_impro_team_use_booking":"Používat rezervace",
@@ -102,6 +104,13 @@
 	"intra_attd_yes":"Zúčastním se",
 	"intra_attd_no":"Nezúčastním se",
 	"intra_attd_maybe":"Ještě dám vědět",
+
+	"intra_team_discussion_no_topics":"Zatím nejsou žádná témata",
+	"intra_team_discussion_topic_create":"Vytvořit téma",
+	"intra_team_discussion_topic_delete":"Chystáte se smazat celé téma z diskuze",
+	"intra_team_discussion_topic_delete_desc":"Opravdu chcete smazat celé téma '%s' včetně všech příspěvků z této diskuze?",
+	"intra_team_discussion_post_delete":"Chystáte se smazat příspěvek z diskuze",
+	"intra_team_discussion_post_delete_desc":"Opravdu chcete smazat tento příspěvek z diskuze?",
 
 	"end":""
 }

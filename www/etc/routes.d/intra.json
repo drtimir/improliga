@@ -31,7 +31,7 @@
 	["^/teams/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["impro/team/list"]
+			["impro/team/list", {"ts":[80, 80]}]
 		]
 	}, "teams"],
 

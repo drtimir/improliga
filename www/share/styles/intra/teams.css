@@ -1,14 +1,15 @@
 .team_list {
+	display:inline-block;
 }
 
 .team_list ul, .team_list li {
 	margin:0;
 	padding:0;
 	list-style:none;
+	display:inline-block;
 }
 
-.team_list li {
-	display:block;
+.team_list .teams li {
 	width:400px;
 	float:left;
 	margin-bottom:10px;
@@ -17,8 +18,6 @@
 .team_list img {
 	display:block;
 	float:left;
-	width:118px;
-	height:100px;
 	margin-right:10px;
 }
 

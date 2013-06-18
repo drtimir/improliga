@@ -15,7 +15,7 @@ echo div('team_list');
 				foreach ($teams as $team) {
 					$url = $ren->url('team', array($team->get_seoname()));
 					echo li(array(
-						$ren->link($url, $team->logo->to_html($ren, 118, 100)),
+						$ren->link($url, $team->logo->to_html($ren, $ts[0], $ts[1])),
 						div("desc", array(
 							Stag::strong(array("content" => $ren->link($url, $team->name))),
 							div('name_full', $team->name_full),

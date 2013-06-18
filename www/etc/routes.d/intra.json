@@ -232,11 +232,11 @@
 		}
 	}, "team_comment_delete"],
 
-	["^/teams/([^/]+)/delete-response/([^/]+)/([^/]+)/$", {
+	["^/teams/([^/]+)/([^/]+)/([^/]+)/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"edit":["impro/team/comment/response_delete", {"id_comment":"#{1}"}, ["head"]]
+			"edit":["impro/team/comment/response_delete", {"id":"#{2}"}, ["head"]]
 		}
 	}, "team_comment_response_delete"],
 

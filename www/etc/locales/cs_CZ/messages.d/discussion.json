@@ -1,0 +1,30 @@
+{
+	"impro_discussion_visible_hint":"Diskuze bude viditelná",
+	"impro_discussion_public":"Veřejná diskuze",
+	"impro_discussion_public_hint":"Diskutovat budou moci všichni na intranetu",
+	"impro_discussion_locked":"Uzamčeno",
+	"impro_discussion_locked_hint":"Nepůjde přidávat žádné příspěvky",
+
+	"impro_discussion_board_list":"Seznam oborů diskuze",
+	"impro_discussion_board_name":"Název oboru",
+	"impro_discussion_board_desc":"Krátký popis",
+	"impro_discussion_board_create":"Vytvořit obor",
+	"impro_discussion_board_edit":"Upravit obor",
+	"impro_discussion_board_delete":"Smazat obor",
+
+	"impro_discussion_topic_list":"Seznam témat v oboru",
+	"impro_discussion_topic_name":"Téma",
+	"impro_discussion_topic_desc":"Krátký popis tématu",
+	"impro_discussion_topic_create":"Vytvořit téma",
+	"impro_discussion_topic_edit":"Upravit téma",
+
+	"impro_discussion_topic":"Téma",
+	"impro_discussion_last_author":"Poslední pisálek",
+	"impro_discussion_updated_at":"Poslední příspěvek",
+
+	"impro_discussion_post_create":"Vložit příspěvek",
+	"impro_discussion_post_edit":"Uložit příspěvek",
+	"impro_discussion_post_text":"Text příspěvku",
+
+	"impro_discussion_no_topics":"V tomto oboru zatím nejsou žádná témata"
+}

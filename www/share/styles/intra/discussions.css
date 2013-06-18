@@ -2,6 +2,33 @@
 	position:relative;
 }
 
+.discussion table {
+	width:100%;
+	border:1px solid #ccc;
+}
+
+.discussion table th,
+.discussion table td
+{
+	padding:5px;
+}
+
+.discussion table .odd td {
+	background:#f5f5f5;
+}
+
+.discussion table .editor {
+	width:45px;
+}
+
+.discussion table .editor a {
+	margin-right:3px;
+}
+
+.discussion table .editor a:last-child {
+	margin:0;
+}
+
 .discussion .boards .board {
 	border-top:1px solid #efefef;
 	padding:10px 0;
@@ -34,8 +61,8 @@
 	margin-bottom:0;
 }
 
-.discussion .actions li {
-
+.discussion .controls li {
+	display:inline-block;
 }
 
 .topic_list h1,

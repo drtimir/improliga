@@ -17,27 +17,15 @@ namespace Impro\Discussion
 		);
 
 
-		public static function get_team_board($id_team)
+		public function latest()
 		{
-			$board_sql = get_first('\Impro\Discussion\Board')->where(array("id_team" => $id_team));
-
-			if ($board_sql->count() == 0) {
-				$team = find('\Impro\Team', $id_team);
-
-				create('\Impro\Discussion\Board', array(
-					"name"    => $team->name,
-					"visible" => true,
-					"public"  => true,
-				));
-			}
-
-			return $board_sql->fetch();
+			return $this->topics->where(array("visible" => true))->sort_by('updated_at DESC')->paginate(10, 0)->fetch();
 		}
 
 
-		public function latest()
+		public function is_managable(\System\User $user)
 		{
-			return $this->topics->where(array("visible" => true))->sort_by('created_at DESC')->paginate(10, 0)->fetch();
+			return \Impro\Discussion::is_managable($user, $this);
 		}
 	}
 }

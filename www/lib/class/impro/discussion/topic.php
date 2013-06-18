@@ -18,13 +18,15 @@ namespace Impro\Discussion
 
 		public function save()
 		{
-			if (!$this->id_author) {
-				$this->id_author = user()->id;
-				$this->author = user();
-			}
-
+			parent::save();
 			$this->board->update_attrs(array("updated_at" => new \DateTime(), "id_last_post_author" => $this->id_author))->save();
-			return parent::save();
+			return $this;
+		}
+
+
+		public function is_managable(\System\User $user)
+		{
+			return \Impro\Discussion::is_managable($user, $this);
 		}
 	}
 }

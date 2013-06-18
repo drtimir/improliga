@@ -20,15 +20,13 @@ if (($id && $item = find('\Impro\Discussion\Board', $id)) || ($new && $item = ne
 
 	$f->input_text('name', $locales->trans('impro_discussion_board_name'), true);
 	$f->input_rte('desc', $locales->trans('impro_discussion_board_desc'), true);
-	$f->input_checkbox('visible', $locales->trans('godmode_visible'), false, $locales->trans('impro_discussion_visible_hint'));
-	$f->input_checkbox('public', $locales->trans('impro_discussion_public'), false, $locales->trans('impro_discussion_public_hint'));
 	$f->input_checkbox('locked', $locales->trans('impro_discussion_locked'), false, $locales->trans('impro_discussion_locked_hint'));
 	$f->submit($heading);
 
 	if ($f->passed()) {
 		$p = $f->get_data();
 		$item->update_attrs($p)->save();
-		redirect(soprintf($redirect, $item));
+		$flow->redirect($ren->url('discussion_board', array($item)));
 
 	} else {
 		$f->out($this);

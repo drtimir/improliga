@@ -116,3 +116,7 @@ footer .system {
 	padding:120px 0;
 	text-align:center;
 }
+
+.block h1 {
+	margin-top:10px;
+}

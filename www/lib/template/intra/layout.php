@@ -81,7 +81,7 @@ echo html($locales->get_lang());
 
 		echo footer();
 			echo div('page-block');
-				echo span('system', $ren->link('http://pwf.scourge.cz/', introduce()));
+				echo span('system', $ren->link_ext('http://pwf.scourge.cz/', introduce()));
 
 				echo span('cleaner', '');
 			close('div');

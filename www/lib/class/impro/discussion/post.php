@@ -21,5 +21,11 @@ namespace Impro\Discussion
 			$this->topic->update_attrs(array("updated_at" => new \DateTime(), "id_last_post_author" => $this->author->id))->save();
 			return $this;
 		}
+
+
+		public function is_managable(\System\User $user)
+		{
+			return \Impro\Discussion::is_managable($user, $this);
+		}
 	}
 }

@@ -1,3 +1,25 @@
+a {
+	text-decoration:none;
+	color:#b82429
+}
+
+a:hover {
+	color:#FF9825
+}
+
+h1 {
+	font-size:30px;
+	font-weight:bold;
+}
+
+fieldset {
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+.gray { color:#ccc; }
+
 .controls {
 	position:absolute;
 	right:0;
@@ -38,3 +60,23 @@
 .icon:hover {
 	background-position:right top;
 }
+
+.plain, .plain li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+menu.plain,
+menu.plain li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+menu.plain li {
+	display:inline-block;
+	padding:2px 5px;
+}
+

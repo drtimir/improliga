@@ -23,6 +23,8 @@ echo html($locales->get_lang());
 		$ren->content_for('styles', 'lib/fancybox');
 		$ren->content_for('styles', 'intra/layout');
 		$ren->content_for('styles', 'intra/common');
+		$ren->content_for('styles', 'intra/header');
+		$ren->content_for('styles', 'intra/menu_left');
 		$ren->content_for('styles', 'intra/calendar');
 		$ren->content_for('styles', 'intra/news');
 		$ren->content_for('styles', 'intra/events');

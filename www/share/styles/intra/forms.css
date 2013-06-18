@@ -1,11 +1,16 @@
 .form-input input,
 .pwform .datetime_picker .container_time,
-.pwform .datetime_picker .container_date
+.pwform .datetime_picker .container_date,
+.pwform .rte_content
 {
 	border-radius:4px;
 	padding:5px 8px;
-	border:1px solid #666;
+	border:1px solid #999;
 	background:#fefefe;
+}
+
+.pwform .rte_content {
+	min-height:150px;
 }
 
 .form-input input,
@@ -33,7 +38,9 @@
 }
 
 
-.pwform .input-label-left {
+.pwform .input-label-left,
+.pwform .form-widget label
+{
 	font-size:15px;
 	line-height:31px;
 	vertical-align:middle;

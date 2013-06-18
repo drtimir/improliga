@@ -139,7 +139,7 @@
 	border:none;
 }
 
-.post {
+.posts .post {
 	margin:0 0 15px;
 	clear:both;
 }
@@ -160,6 +160,7 @@
 }
 .post .author {
 	margin-bottom:5px;
+	position:relative;
 }
 .post .author a.link-profile {
 	font-weight:bold;
@@ -194,3 +195,14 @@
 	text-decoration:underline;
 }
 
+
+
+.menu-moderator {
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.menu-moderator li {
+	display:inline-block;
+}

@@ -85,12 +85,11 @@ menu.plain li {
 	position:relative;
 	width:180px;
 	float:left;
-	min-height:600px;
 }
 
 .block_right {
 	position:relative;
-	padding:10px 20px 0 20px;
+	padding:10px 20px 10px 20px;
 	background:#fff;
 	float:right;
 	width:800px;
@@ -235,7 +234,7 @@ menu.user .label {
 .block.layout_11 { width:800px; }
 .block.layout_78 { width:700px; }
 .block.layout_34 { width:600px; }
-.block.layout_14 { width:200px; }
+.block.layout_14 { width:180px; }
 .block.layout_18 { width:100px; }
 .block.layout_38 { width:270px; padding-left:15px; }
 .block.layout_58 { width:500px; }

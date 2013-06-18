@@ -74,6 +74,8 @@ namespace Impro
 				"ident" => $mail,
 				"name"  => 'výchozí',
 				"type"  => \System\User\Contact::STD_EMAIL,
+				"spam"  => true,
+				"visible" => true,
 				"id_system_user" => $u->id,
 			));
 

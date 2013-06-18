@@ -30,7 +30,10 @@ namespace Impro\User
 
 		public function mail(\System\Locales $locales)
 		{
-			$contacts = $this->user->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
+			$contacts = $this->user->contacts->where(array(
+				"type" => \System\User\Contact::STD_EMAIL,
+				"spam" => true,
+			))->fetch();
 			$mail = \System\Offcom\Mail::create(
 				$locales->trans('intra_user_notice_subject'),
 				stprintf($locales->trans('intra_user_notice_mail_body'), array(

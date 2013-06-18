@@ -67,7 +67,11 @@ namespace Impro\User
 		public function mail_response(\System\Template\Renderer $ren)
 		{
 			if ($this->response && $this->response !== self::RESPONSE_MAYBE) {
-				$contacts = $this->author->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
+				$contacts = $this->author->contacts->where(array(
+					"type" => \System\User\Contact::STD_EMAIL,
+					"spam" => true,
+				))->fetch();
+
 				$method = self::get_method($this->response);
 				$mail = \System\Offcom\Mail::create(
 					$ren->locales()->trans('intra_user_request_response_subject'),

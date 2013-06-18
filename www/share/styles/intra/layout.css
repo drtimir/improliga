@@ -2,7 +2,7 @@ body, html
 {
 	font-family:"Droid Sans", "Arial";
 	font-size:14px;
-	background:#fff;
+	background:#efefef;
 	color:#333;
 	padding:0;
 	margin:0;
@@ -14,7 +14,7 @@ html {
 
 body {
 	background:none;
-	padding-top:36px;
+	padding-top:42px;
 }
 
 a {
@@ -38,16 +38,16 @@ fieldset {
 }
 
 header {
-	background:#333;
+	background:#bb000c;
 	display:block;
-	height:36px;
+	height:32px;
 	position:fixed;
 	left:0;
 	top:0;
 	width:100%;
 	z-index:100000;
-	box-shadow:0 0 10px #000;
-	box-shadow:0 0 10px rgba(0,0,0,0.75);
+	border-bottom:1px solid #666;
+	box-shadow:0 0 10px #ccc;
 }
 
 header .page-block {
@@ -84,10 +84,20 @@ menu.plain li {
 .menu_left {
 	position:relative;
 	width:180px;
-	margin-right:20px;
 	float:left;
-	border-right:1px solid #efefef;
 	min-height:600px;
+}
+
+.block_right {
+	position:relative;
+	padding:10px 20px 0 20px;
+	background:#fff;
+	float:right;
+	width:800px;
+	border-radius:10px;
+	box-shadow:0 0 250px #ccc;
+	min-height:500px;
+	z-index:4;
 }
 
 menu.main {
@@ -95,7 +105,10 @@ menu.main {
 	display:block;
 	border-top:1px solid #efefef;
 	padding-top:10px;
-	margin-bottom:10px;
+	padding-bottom:10px;
+	margin-bottom:0;
+	z-index:5;
+	overflow:hidden;
 }
 
 menu.main li {
@@ -103,6 +116,7 @@ menu.main li {
 	line-height:16px;
 	padding:0;
 	margin-bottom:1px;
+	margin-left:10px;
 }
 
 menu.main li a {
@@ -114,8 +128,12 @@ menu.main li a {
 menu.main li a:hover,
 menu.main li a.active
 {
-	background:rgba(0,0,0,0.1);
+	background:#fff;
 	border-radius:5px 0 0 5px;
+}
+
+menu.main li a.active {
+	box-shadow:0 0 10px #ccc;
 }
 
 menu.main li .icon {
@@ -126,11 +144,11 @@ menu.main li .icon {
 menu.user {
 	position:absolute;
 	right:25px;
-	top:4px;
+	top:2px;
 }
 
 menu.user li {
-	height:24px;
+	height:22px;
 	margin:0;
 	padding:0;
 }
@@ -141,7 +159,7 @@ menu.user li a {
 	margin:0;
 	font-size:13px;
 	font-weight:bold;
-	height:24px;
+	height:22px;
 	display:block;
 }
 
@@ -153,7 +171,7 @@ menu.user li:last-child a {
 
 
 menu.user li a:hover {
-	background:#666;
+	background:#000;
 	color:#fff;
 	border-radius:3px;
 }
@@ -171,7 +189,8 @@ menu.user .label {
 	height:30px;
 	position:absolute;
 	left:0;
-	top:3px;
+	top:1px;
+	line-height:33px;
 	background:url(/share/pixmaps/intra/logo.png) 4px center no-repeat;
 }
 
@@ -218,7 +237,7 @@ menu.user .label {
 .block.layout_34 { width:600px; }
 .block.layout_14 { width:200px; }
 .block.layout_18 { width:100px; }
-.block.layout_38 { width:285px; padding-left:15px; }
+.block.layout_38 { width:270px; padding-left:15px; }
 .block.layout_58 { width:500px; }
 
 
@@ -253,12 +272,13 @@ menu.user .label {
 }
 
 footer {
-	padding:20px 0 10px;
+	padding:0;
+	font-size:10px;
 }
 
 footer .page-block {
-	padding-top:5px;
-	border-top:1px solid #eaeaea;
+	padding:10px;
+	width:1000px;
 }
 
 footer .system {

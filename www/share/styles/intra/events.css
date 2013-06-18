@@ -473,3 +473,14 @@
 	display:inline-block;
 	margin:0 4px;
 }
+
+
+.layout_38 .event_list .image {
+	width:56px;
+}
+
+.layout_38 .event_list .desc {
+	width:210px;
+	padding-right:0;
+	padding-left:15px;
+}

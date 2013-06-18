@@ -66,8 +66,15 @@ echo html($locales->get_lang());
 		close('header');
 
 		echo div('', null, 'container');
-			$ren->yield();
-			echo span('cleaner', '');
+			echo div('page-block');
+				require ROOT.'/lib/template/intra/menu.php';
+
+				echo div('block_right');
+					$ren->yield();
+					echo span('cleaner', '');
+				close('div');
+				echo span('cleaner', '');
+			close('div');
 		close('div');
 
 		echo footer();

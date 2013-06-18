@@ -272,6 +272,11 @@
 	"impro_team_members":"Členové",
 	"impro_team_info":"Informace o týmu",
 
+	"impro_team_comment_delete":"Chystáte se smazat komentář",
+	"impro_team_comment_delete_desc":"Opravdu chcete trvale odstranit komentář od uživatele %s se všemi odpověďmi? Tato akce nelze vrátit.",
+
+
 	"today":"Dnes",
 	"end":""
 }
+

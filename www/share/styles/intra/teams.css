@@ -10,7 +10,6 @@
 }
 
 .team_list .teams li {
-	width:400px;
 	float:left;
 	margin-bottom:10px;
 }
@@ -234,7 +233,7 @@
 }
 
  .left .team_people li {
-	width:250px;
+	width:245px;
 	float:left;
 
 }

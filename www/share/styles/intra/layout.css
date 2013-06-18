@@ -56,7 +56,7 @@ header .page-block {
 }
 
 .page-block {
-	width:1020px;
+	width:1010px;
 	padding:0;
 	margin:0 auto;
 }
@@ -94,7 +94,7 @@ menu.plain li {
 	padding:10px 20px 10px 20px;
 	background:#fff;
 	float:right;
-	width:800px;
+	width:790px;
 	border-radius:10px;
 	box-shadow:0 0 250px #ccc;
 	min-height:500px;
@@ -235,13 +235,13 @@ menu.user .label {
 	clear:both;
 }
 
-.block.layout_11 { width:800px; }
+.block.layout_11 { width:790px; }
 .block.layout_78 { width:700px; }
 .block.layout_34 { width:600px; }
 .block.layout_14 { width:180px; }
 .block.layout_18 { width:100px; }
 .block.layout_38 { width:270px; padding-left:15px; }
-.block.layout_58 { width:500px; }
+.block.layout_58 { width:490px; }
 
 
 .menu_profile {
@@ -251,12 +251,18 @@ menu.user .label {
 	padding:5px;
 }
 
-.menu_profile .avatar{
+.menu_profile .avatar {
 	float:left;
 	display:block;
 	width:40px;
 	height:40px;
-	margin-right:10px;
+	margin-right:7px;
+}
+
+.menu_profile .avatar a {
+	display:block;
+	width:40px;
+	height:40px;
 }
 
 .menu_profile .name,
@@ -282,8 +288,8 @@ footer {
 }
 
 footer .page-block {
-	padding:10px;
-	width:1000px;
+	padding:10px 0;
+	width:980px;
 }
 
 footer .system {

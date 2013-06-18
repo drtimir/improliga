@@ -43,11 +43,9 @@ if ($propagated['team']) {
 							$team->send_request($user, $ren, $request);
 							$flow->redirect($request->path.'?result=sent');
 						} else {
-
 							// Not a team member but request was already sent. Resend email.
 							$rq->mail($ren);
 							$flow->redirect($request->path.'?result=resent');
-
 						}
 					}
 				} else {

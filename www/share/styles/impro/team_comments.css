@@ -1,6 +1,7 @@
 .team_comments .post {
 	clear:both;
 	margin:0 0 5px;
+	position:relative;
 }
 
 .team_comments .name {
@@ -14,7 +15,7 @@
 }
 
 .team_comments .content {
-	width:435px;
+	width:425px;
 }
 
 
@@ -121,11 +122,12 @@ form.team_comment .buttons li button {
 }
 
 .responses .content {
-	width:365px;
+	width:355px;
 }
 
 .responses li {
 	display:block;
+	position:relative;
 }
 
 .responses .more {

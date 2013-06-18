@@ -16,7 +16,7 @@ if (any($propagated['comment']) && any($propagated['team'])) {
 		$p = $f->get_data();
 
 		$r = new \Impro\Team\Comment\Response($p);
-		$r->id_user    = $request->user()->id;
+		$r->author     = $request->user;
 		$r->id_comment = $comment->id;
 		$r->visible    = true;
 

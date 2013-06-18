@@ -30,3 +30,11 @@
 .controls a .label {
 	font-weight:bold;
 }
+
+.icon {
+	background-position:left top;
+}
+
+.icon:hover {
+	background-position:right top;
+}

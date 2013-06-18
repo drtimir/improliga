@@ -18,10 +18,10 @@ echo div('discussion post_list');
 				$opts = array();
 
 				if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_MODERATE)) {
-					$opts[] = li($ren->icon_for_url('team_discussion_post_edit', 'godmode/actions/edit', 16, args($team, $topic, $post)));
+					$opts[] = li($ren->icon_for_url('team_discussion_post_edit', 'impro/actions/edit', 16, args($team, $topic, $post)));
 				}
 
-				$opts[] = li($ren->icon_for_url('team_discussion_post_delete', 'godmode/actions/delete', 16, args($team, $topic, $post)));
+				$opts[] = li($ren->icon_for_url('team_discussion_post_delete', 'impro/actions/delete', 16, args($team, $topic, $post)));
 				$menu = ul('plain menu-moderator', $opts);
 			} else {
 				$menu = '';

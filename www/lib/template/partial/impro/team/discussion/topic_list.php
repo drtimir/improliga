@@ -30,8 +30,8 @@ Tag::div(array("class" => 'discussion topic_list'));
 						if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_MODERATE) || $topic->author->id == $request->user->id) {
 							Tag::td(array(
 								"content" => array(
-									$ren->icon_for_url('team_discussion_topic_edit', 'godmode/actions/edit', 16, args($team, $topic)),
-									$ren->icon_for_url('team_discussion_topic_delete', 'godmode/actions/delete', 16, args($team, $topic)),
+									$ren->icon_for_url('team_discussion_topic_edit', 'impro/actions/edit', 16, args($team, $topic)),
+									$ren->icon_for_url('team_discussion_topic_delete', 'impro/actions/delete', 16, args($team, $topic)),
 								),
 							));
 						}

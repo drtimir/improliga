@@ -46,7 +46,7 @@
 	"intra_user_registration":"Byl vám vytvořen nový uživatelský účet.\n\nPřihlašovací jméno: {login}\nHeslo: {password}",
 
 	"intra_user_notice_subject":"[Improliga] Upozornění na intranetu",
-	"intra_user_notice_mail_body":"Dobrý den,\n\nuživatel {user_name} vám poslal upozornění na intranetu.\n\n{text}\n\nDetaily naleznete na této adrese: {link}",
+	"intra_user_notice_mail_body":"Dobrý den,\n\nmáte nové upozornění na intranetu Improligy od uživatele {user_name}.\n\n{text}\n\n--------------------\nDetaily naleznete na této adrese: {link}",
 
 	"intra_team_member_add_text":"Uživatel {link_user} vás požádal o připojení se k improvizačnímu týmu {link_team}. Přejete si stát se členem týmu?",
 	"intra_team_member_list":"Seznam členů týmu",

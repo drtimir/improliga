@@ -4,6 +4,7 @@
 echo div('team_comments');
 
 	if (any($comments)) {
+		$has_right = $member && $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_MODERATE);
 		$anonym_avatar = \System\Image::from_path('/share/pixmaps/impro/anonymous_user.png');
 		echo ul('plain comments');
 
@@ -14,8 +15,17 @@ echo div('team_comments');
 					$responses = array_reverse($post->get_responses()->paginate(3)->fetch());
 
 					foreach ($responses as $response) {
-						$responses_html .= Stag::li(array(
-							"content" => $response->to_html($ren),
+
+						$menu = '';
+						if ($post->id_author == $request->user->id || $has_right) {
+							$menu = ul('plain menu-moderator', li(
+								$ren->icon_for_url('team_comment_response_delete', 'impro/actions/delete', 16, args($team, $post, $response))
+							));
+						}
+
+						$responses_html .= li(array(
+							$response->to_html($ren),
+							$menu,
 						));
 					}
 
@@ -25,12 +35,19 @@ echo div('team_comments');
 					));
 				}
 
+				$menu = '';
+				if ($post->id_author == $request->user->id || $has_right) {
+					$menu = ul('plain menu-moderator', li(
+						$ren->icon_for_url('team_comment_delete', 'impro/actions/delete', 16, args($team, $post))
+					));
+				}
 
 				Tag::li(array(
 					"class" => 'post',
 					"content" => array(
 						$post->to_html($ren),
 						$responses_html,
+						$menu,
 					)
 				));
 

@@ -15,7 +15,6 @@ if (any($propagated['team']) && $team = $propagated['team']) {
 				"desc"    => $ren->trans('impro_team_comment_delete_desc', $post->author ? Impro\User::link($ren, $post->author):'anonym'),
 				"info"    => array()
 			));
-
 			$f->out();
 
 			if ($f->passed()) {

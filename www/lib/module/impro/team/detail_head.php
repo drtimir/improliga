@@ -11,6 +11,7 @@ def($slot_events, 'events');
 if ($team = find('Impro\Team', $id)) {
 
 	$ren->title = $team->name.' - '.$team->name_full;
+	$member = $team->member($request->user());
 
 	$start = new DateTime();
 	$event_count = get_all('\Impro\Event')->where(array(
@@ -22,12 +23,12 @@ if ($team = find('Impro\Team', $id)) {
 		),
 	))->count();
 
-
 	$module->partial($template, array(
-		"member" => $team->member($request->user()),
+		"member" => $member,
 		"team"   => $team,
 	));
 
 	$module->propagate('team', $team);
+	$module->propagate('member', $member);
 }
 

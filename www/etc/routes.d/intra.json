@@ -68,9 +68,67 @@
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"info":["system/partial", {"template":"working", "slot":"big"}]
+			"info":["impro/team/discussion/topic_list", {"slot":"big"}, ["head"]]
 		}
 	}, "team_discussion"],
+
+	["^/discussion/([^/]+)/create_topic/$", {
+		"title":"Vytvoření tématu",
+		"layout":["intra/layout", "intra/dual_34_14"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"edit":["impro/team/discussion/topic_edit", {"id_board":"#{0}", "new":true, "slot":"left"}, ["head"]]
+		}
+	}, "team_discussion_topic_create"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"list":["impro/team/discussion/post_list", {"id":"#{1}", "slot":"big"}, ["head"]],
+			"edit":["impro/team/discussion/post_edit", {"id_topic":"#{1}", "slot":"discussion_post_form", "new":true}, ["head", "list"]]
+		}
+	}, "team_discussion_topic"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/edit/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"list":["impro/team/discussion/topic_edit", {"id":"#{1}", "slot":"big"}, ["head"]]
+		}
+	}, "team_discussion_topic_edit"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/delete/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"list":["impro/team/discussion/topic_delete", {"id":"#{1}", "slot":"big"}, ["head"]]
+		}
+	}, "team_discussion_topic_delete"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/respond/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["impro/team/discussion/post_edit", {"topic":"#{1}", "slot":"big"}, ["head"]]
+		}
+	}, "team_discussion_topic_respond"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/([^/]+)/edit/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["impro/team/discussion/post_edit", {"id":"#{2}", "id_topic":"#{1}", "slot":"big"}, ["head"]]
+		}
+	}, "team_discussion_post_edit"],
+
+	["^/teams/([^/]+)/discussion/([^/]+)/([^/]+)/delete/$", {
+		"layout":["intra/layout", "intra/team"],
+		"modules":{
+			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
+			"info":["impro/team/discussion/post_delete", {"id":"#{2}", "slot":"big"}, ["head"]]
+		}
+	}, "team_discussion_post_delete"],
 
 	["^/teams/([^/]+)/attendance/$", {
 		"layout":["intra/layout", "intra/team"],

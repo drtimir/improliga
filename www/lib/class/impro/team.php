@@ -20,9 +20,12 @@ namespace Impro
 			"author"         => array('belongs_to', "model" => "\System\User"),
 			"members"        => array('has_many', "model" => "\Impro\Team\Member"),
 			"galleries"      => array('has_many', "model" => '\Impro\Gallery'),
+
+			"use_discussion" => array('bool'),
 			"use_attendance" => array('bool'),
 			"use_booking"    => array('bool'),
 
+			"topics"    => array('has_many', "model" => "\Impro\Team\Discussion\Topic"),
 			"comments"  => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
 			"trainings" => array('has_many', "model" => '\Impro\Team\Training'),
 		);

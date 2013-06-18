@@ -16,6 +16,7 @@ namespace Impro\Team\Member
 		const PERM_TEAM_DISCUSSION = 3;
 		const PERM_TEAM_ATTENDANCE = 4;
 		const PERM_TEAM_ORGANIZE   = 5;
+		const PERM_TEAM_MODERATE   = 6;
 
 
 		private static $types_available = array(
@@ -34,6 +35,7 @@ namespace Impro\Team\Member
 			self::PERM_TEAM_DISCUSSION => array(self::ID_MANAGER, self::ID_TRAINER, self::ID_MEMBER, self::ID_PLAYER),
 			self::PERM_TEAM_ATTENDANCE => array(self::ID_MANAGER, self::ID_TRAINER, self::ID_MEMBER, self::ID_PLAYER),
 			self::PERM_TEAM_ORGANIZE   => array(self::ID_MANAGER, self::ID_TRAINER),
+			self::PERM_TEAM_MODERATE   => array(self::ID_MANAGER, self::ID_TRAINER),
 		);
 
 

@@ -1,7 +1,9 @@
 <?
 
 echo div('menu_left');
-	echo div('menu_profile');
+	$profile_class = strpos($request->path, '/profile') === 0 ? 'active':'inactive';
+
+	echo div('menu_profile '.$profile_class);
 		echo span('avatar', $ren->link_for('profile', $request->user()->avatar->to_html($ren, 40, 40)));
 		echo span('name', $ren->link_for('profile', $request->user()->get_name()));
 		echo span('edit', $ren->link_for('profile_settings', $locales->trans('intra_profile_edit')));

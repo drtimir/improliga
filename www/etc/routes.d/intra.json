@@ -72,7 +72,7 @@
 		}
 	}, "team_discussion"],
 
-	["^/teams/([^/]+)/discussion/([^/]+)/create_topic/$", {
+	["^/teams/([^/]+)/discussion/create_topic/$", {
 		"title":"Vytvoření tématu",
 		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":{

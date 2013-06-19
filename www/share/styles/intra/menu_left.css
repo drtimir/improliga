@@ -4,13 +4,13 @@
 	width:178px;
 	float:left;
 	padding-top:10px;
-	left:1px;
 }
 
 .menu_left_inner {
 	overflow:hidden;
 	width:178px;
 	position:fixed;
+	margin-left:1px;
 }
 
 .menu_left .active {

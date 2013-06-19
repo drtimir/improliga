@@ -2,5 +2,6 @@
 	"user_checkbox_desc":"Pokud zaškrtnete jedno z následujících polí, budete zařazen v intranetovém vyhledavači kontaktů. Nikdo mimo intranet Improligy vaše údaje neuvidí. Na druhou stranu zvažte sami, jestli byste se doporučili.",
 	"user_musician":"Troufám si říct, že jsem hudebník",
 	"user_conferencier":"Troufl bych si dělat konferenciéra",
-	"user_referee":"Troufl bych si dělat rozhodčího"
+	"user_referee":"Troufl bych si dělat rozhodčího",
+	"user_edit_cfg":"Upravit nastavení"
 }

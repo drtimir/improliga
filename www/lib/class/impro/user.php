@@ -29,7 +29,7 @@ namespace Impro
 
 		public static function link(\System\Template\Renderer $ren, \System\User $user)
 		{
-			return $ren->link_for('profile_user', $user->get_name(), array("args" => array($user), "class" => 'link-profile'));
+			return $ren->link_for('profile_user', $user->nick, array("args" => array($user), "class" => 'link-profile'));
 		}
 
 

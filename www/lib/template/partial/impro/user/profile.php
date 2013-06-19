@@ -2,8 +2,8 @@
 
 echo div('profile');
 	echo div('left');
-		echo $ren->heading($user->get_name());
 		echo $ren->heading($user->nick);
+		echo $ren->heading($user->get_name());
 
 		echo div('member_teams profile_block');
 			echo $ren->heading_static($locales->trans('intra_user_teams'));

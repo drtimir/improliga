@@ -76,7 +76,7 @@ namespace Impro
 				"type"  => \System\User\Contact::STD_EMAIL,
 				"spam"  => true,
 				"visible" => true,
-				"id_system_user" => $u->id,
+				"id_user" => $u->id,
 			));
 
 			$notice = \Impro\User\Notice::for_user($u, array(

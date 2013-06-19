@@ -460,3 +460,41 @@
 .tgform .inputs label {
 	width:190px;
 }
+
+
+.memberadd .inputs,
+.memberadd .inputs li,
+.memberadd .inputs_container,
+.memberadd .buttons,
+.memberadd .buttons li,
+.memberadd .buttons_container
+{
+	display:inline-block;
+	vertical-align:top;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.memberadd .inputs {
+	margin-right:10px;
+}
+
+.memberadd label.input-label {
+	width:auto;
+	margin-right:10px;
+}
+
+.memberadd input {
+	padding:2px 5px 1px;
+}
+
+.memberadd .form-text .input-container {
+	padding:20px 0 0;
+	line-height:125%;
+}
+
+.memberadd .group_2 {
+	display:block;
+	width:450px;
+	font-size:16px;
+}

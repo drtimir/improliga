@@ -16,7 +16,7 @@ $throw_up = !(
 	);
 
 if (!$throw_up) {
-	if (!$new || $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_MODERATE)) {
+	if ($new || $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_MODERATE)) {
 		$item->team  = $team;
 		$item->topic = $topic;
 		$item->visible  = true;

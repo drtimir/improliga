@@ -20,7 +20,7 @@ foreach ($groups as $group=>$gid) {
 
 $f = $ren->form(array(
 	"class"   => 'usercfg',
-	"heading" => $locales->trans('impro_user_settings_basic'),
+	"heading" => $locales->trans('user_settings_basic'),
 	"default" => $default,
 ));
 

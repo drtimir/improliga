@@ -34,3 +34,4 @@ if ($board && $topic) {
 		$f->out($this);
 	}
 } else throw new \System\Error\NotFound();
+

@@ -9,11 +9,16 @@ if ($propagated['team']) {
 
 		$f = $ren->form(array(
 			"heading" => $locales->trans('intra_team_member_add'),
-			"class"   => 'intra_team_member_add',
+			"class"   => 'memberadd',
 		));
 
 		$f->input_email('email', $locales->trans('contact_type_email'));
 		$f->submit($locales->trans('save'));
+
+		if ($request->get('result') == 'sent') {
+			$f->text('result', $locales->trans('user_regmail_sent'));
+		}
+
 
 		if ($f->passed()) {
 			$p = $f->get_data();

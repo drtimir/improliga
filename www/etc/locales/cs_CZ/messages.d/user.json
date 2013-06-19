@@ -3,5 +3,15 @@
 	"user_musician":"Troufám si říct, že jsem hudebník",
 	"user_conferencier":"Troufl bych si dělat konferenciéra",
 	"user_referee":"Troufl bych si dělat rozhodčího",
-	"user_edit_cfg":"Upravit nastavení"
+	"user_edit_cfg":"Upravit nastavení",
+	"user_regmail_sent":"Na zadaný e-mail byla odeslána zpráva obsahující instrukce jak se připojit k intranetu a pozvánka do týmu.",
+
+	"user_settings_basic":"Základní nastavení",
+	"user_settings_contacts":"Kontakty",
+	"user_settings_passwd":"Změnit heslo",
+
+	"user_settings_passwd_heading":"Změna hesla",
+	"user_passwd_old":"Staré heslo",
+	"user_passwd_new":"Nové heslo",
+	"user_passwd_recap":"Potvrzení hesla"
 }

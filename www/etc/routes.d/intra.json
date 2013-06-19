@@ -264,6 +264,14 @@
 		]
 	}, "profile_settings"],
 
+	["^/profile/settings/password/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"impro/user/settings/menu"}],
+			["impro/user/settings/password"]
+		]
+	}, "profile_settings_passwd"],
+
 	["^/profile/settings/contacts/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[

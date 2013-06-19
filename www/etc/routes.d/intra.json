@@ -82,10 +82,10 @@
 	}, "team_discussion_topic_create"],
 
 	["^/teams/([^/]+)/discussion/([^/]+)/$", {
-		"layout":["intra/layout", "intra/team"],
+		"layout":["intra/layout", "intra/team", "intra/dual"],
 		"modules":{
 			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"list":["impro/team/discussion/post_list", {"id":"#{1}", "slot":"big"}, ["head"]],
+			"list":["impro/team/discussion/post_list", {"id":"#{1}", "slot":"left"}, ["head"]],
 			"edit":["impro/team/discussion/post_edit", {"id_topic":"#{1}", "slot":"discussion_post_form", "new":true}, ["head", "list"]]
 		}
 	}, "team_discussion_topic"],
@@ -259,9 +259,18 @@
 	["^/profile/settings/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["impro/user/settings"]
+			["system/partial", {"template":"impro/user/settings/menu"}],
+			["impro/user/settings/common"]
 		]
 	}, "profile_settings"],
+
+	["^/profile/settings/contacts/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"impro/user/settings/menu"}],
+			["impro/user/settings/contacts"]
+		]
+	}, "profile_settings_contacts"],
 
 	["^/profile/([^/]+)/$", {
 		"layout":["intra/layout", "intra/single"],

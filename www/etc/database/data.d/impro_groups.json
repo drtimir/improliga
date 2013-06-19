@@ -1,0 +1,16 @@
+{
+	"System\\User\\Group":[
+		{
+			"id":5,
+			"name":"Hudebníci"
+		},
+		{
+			"id":6,
+			"name":"Konferenciéři"
+		},
+		{
+			"id":7,
+			"name":"Rozhodčí"
+		}
+	]
+}

@@ -8,7 +8,9 @@ echo doctype();
 echo html($locales->get_lang());
 	Tag::head();
 
-		$ren->content_for("styles", "form/search_tool");
+		$ren->content_for('styles', 'pwf/elementary');
+		$ren->content_for('styles', 'pwf/form');
+		$ren->content_for('styles', 'intra/common');
 		$ren->content_for('styles', 'intra/layout');
 		$ren->content_for('styles', 'intra/calendar');
 		$ren->content_for('styles', 'intra/news');
@@ -20,12 +22,23 @@ echo html($locales->get_lang());
 	close('head');
 
 	Tag::body(array("class" => 'page_login'));
+		echo htmlheader();
+			echo div('logo', '');
+		close('header');
+
 		echo div('', null, 'container');
 			echo div('page-block');
 
 				echo div(array('block', 'left'));
-					echo $ren->link_for('home', $ren->heading_layout($locales->trans('intra_name')));
-					Tag::p(array("content" => $locales->trans('intra_desc')));
+					echo div('context', array(
+						$ren->link_for('home', $ren->heading_layout($locales->trans('intra_name'))),
+						Stag::p(array("content" => $locales->trans('intra_desc'))),
+					));
+
+					echo div('context', array(
+						$ren->heading($locales->trans('intra_register')),
+						Stag::p(array("content" => $locales->trans('intra_register_desc', 'http://www.improliga.cz/kontakty/'))),
+					));
 
 				close('div');
 

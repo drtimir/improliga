@@ -1,21 +1,66 @@
 .page_login {
-	padding-top:60px;
+	padding-top:0;
+}
+
+.page_login header {
+	background:#333;
+	display:block;
+	height:100px;
+	padding:10px 0;
+	border-bottom:1px solid #999;
+	box-shadow:0 0 100px rgba(0,0,0,0.5);
+	position:relative;
+	z-index:2;
+}
+
+.page_login header .logo {
+	margin:0 auto;
+	background:url(/share/pixmaps/logo_opaque.png) left top no-repeat;
+	width:400px;
+	height:100px;
+}
+
+.page_login #container {
+	padding-top:80px;
+	font-size:16px;
 }
 
 .page_login .block.left {
-	width:580px;
-	padding:40px 0 0;
+	width:500px;
+	padding:0;
 }
 
 .page_login .block.right {
-	background:#efefef;
-	border:1px solid #e0e0e0;
-	padding:20px 0 20px 20px;
+	background:#fff;
+	border:1px solid #ccc;
+	padding:30px;
+	box-shadow:0 0 200px #ccc;
 	border-radius:10px;
+	float:right;
 }
 
 .page_login h1,
 .page_login h2
 {
 	margin-top:0;
+	color:#B82429;
+}
+
+.page_login h1 {
+	font-size:45px;
+	margin-bottom:15px;
+}
+
+.page_login h2 {
+	font-size:30px;
+	margin-bottom:15px;
+}
+
+.page_login .pwform label {
+	width:160px;
+}
+
+
+.page_login .context {
+	margin-bottom:30px;
 }

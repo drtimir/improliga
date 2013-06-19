@@ -1,4 +1,4 @@
-$(function() { $('a.fancybox, .fancybox a, .input-image a').fancybox(); });
+$(function() { $('a.fancybox, .fancybox a, .input-image a, a.lightbox').fancybox(); });
 
 
 var bind_ext_links = function()

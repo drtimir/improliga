@@ -18,4 +18,6 @@ echo div('team-layout');
 	close('div');
 
 	$ren->slot();
+	$ren->yield();
+
 close('div');

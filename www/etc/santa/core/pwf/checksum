@@ -1,4 +1,4 @@
-9973cafc944e0a5c2f0eacad238bcc71  lib/include/system.php
+b112de32c2f45a8be01846cceabb69b8  lib/include/system.php
 02dde35596706a3ab268d149f1be4328  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 6ae434029f345e2287d7389050106dc4  bin/santa
@@ -23,7 +23,7 @@ e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
 a67844492cf841ff134e7ad7dfada44b  etc/init.d/page.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
-8e99e0e6f4276e9d8a17488c232f2e56  etc/locales/cs_CZ/messages.d/core.json
+a0220d639394832767e04fb5792de0d5  etc/locales/cs_CZ/messages.d/core.json
 9d62f39e0e8451ae6b6cae7706b6e93e  etc/locales/cs_CZ/messages.d/dump_bar.json
 07d032940e2926459f318f2ecd6b4790  etc/locales/cs_CZ/modules.d/date.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -92,6 +92,7 @@ cab804e51bb110f065a7846cf9b9196d  share/scripts/pwf/devbar.js
 4ff2f84fa88105d414daac1f4608667c  share/scripts/pwf/form/gps.js
 f408e72d65e12368ab892853a3935104  share/scripts/pwf/form/jquery.gmap.js
 21a7130bd382ef95e7f4309b8bb5fe50  share/scripts/pwf/form/location_picker.js
+5cf9fe21af90de8ad15f30ebb300bfc0  share/scripts/pwf/form/picker_image.js
 a847b629286e506f30985ee38c41f078  share/scripts/pwf/form/rte.js
 e1a2b0e7fd28bd5ea84b97082cdb07c1  share/scripts/pwf/form/search_tool.js
 6878a6d66e46a16d6ff45f320c7fcade  share/scripts/pwf/form/tab_manager.js
@@ -104,7 +105,7 @@ f0eff940abb1dea4148adc60e8e0a912  share/scripts/pwf/storage.js
 5db4eea15c1ace59e5ed4b8645f5f5bc  share/styles/pwf/devbar.css
 0692742542317ac02dd28f56816493ee  share/styles/pwf/elementary.css
 ad37b78a0be00ad8f5524e79e5094b39  share/styles/pwf/errors.css
-355aa2034ee92f52ca336256149e9494  share/styles/pwf/form.css
+ff808c2b331dd56736c47e2a2f244d7a  share/styles/pwf/form.css
 24ef31d6f0a5f0b40ba1aa7ef78053d2  share/styles/pwf/form/autocompleter.css
 4cc09d1c23ca6933b3923e2f43918219  share/styles/pwf/form/datepicker.css
 c4b1f16d241da61d41c4abbe940200ee  share/styles/pwf/form/datetimepicker.css

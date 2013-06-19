@@ -82,13 +82,7 @@
 }
 
 
-.pwform .input-image .widget-tools .widget-action {
-	border:none;
-	background:none;
-}
-
-.pwform .options,
-.pwform .input-image .widget-tools .options{
+.pwform .options {
 	background:#f9f9f9;
 	border:1px solid #e0e0e0;
 	display:inline-block;
@@ -118,4 +112,15 @@
 {
 	vertical-align:middle;
 	margin-top:0;
+}
+
+.pwform .widget-image .options {
+	border-radius:5px;
+	border-color:#ccc;
+	background-color:#efefef;
+}
+
+.pwform .widget-image .options li label {
+	font-size:12px;
+	line-height:100%;
 }

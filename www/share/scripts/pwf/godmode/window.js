@@ -52,9 +52,11 @@ pwf.register('window', function()
 					"button_minimize":null,
 					"button_roll":null,
 					"content_container":null,
-					"content":null
+					"content":null,
+					"resize_handle":null
 				},
-				drag_last_cursor_pos = null;
+				drag_last_cursor_pos = null,
+				resize_offset = null;
 
 
 			if (typeof data !== 'undefined') {
@@ -117,6 +119,7 @@ pwf.register('window', function()
 			{
 				els.border = $('<div class="window"></div>');
 				els.container = $('<div class="window-inner"></div>');
+				els.resize_handle = $('<div class="window-resize-handle"></div>');
 				els.title_container = $('<div class="window-title-container"></div>');
 				els.icon = $('<span class="window-icon">' + pwf.icon.html(ref.attr('icon'), 16) + '</span>');
 				els.title = $('<span class="window-title"></span>');
@@ -133,6 +136,7 @@ pwf.register('window', function()
 				els.container.append(els.title_container);
 				els.container.append(els.content_container);
 				els.container.append(els.preloader);
+				els.container.append(els.resize_handle);
 
 				var winref = {"win":ref}
 				els.border.bind('click', winref, function(e) { e.data.win.focus(); });
@@ -223,8 +227,9 @@ pwf.register('window', function()
 
 			this.reset_events = function()
 			{
-				this.get_el('title_container').bind('mousedown', {"win":this}, function(e) { e.data.win.start_drag(e); });
-				this.get_el('title_container').bind('dblclick', {"win":this}, function(e) { e.data.win.switch_maximization(e); });
+				this.get_el('title_container').unbind('mousedown').bind('mousedown', {"win":this}, function(e) { e.data.win.start_drag(e); });
+				this.get_el('title_container').unbind('dblclick').bind('dblclick', {"win":this}, function(e) { e.data.win.switch_maximization(e); });
+				this.get_el('resize_handle').unbind('mousedown').bind('mousedown', {"win":this}, callback_mousedown_resize);
 			};
 
 
@@ -299,9 +304,11 @@ pwf.register('window', function()
 
 			this.start_drag = function(e)
 			{
-				pwf.viewport.get_el().bind('mousemove.godmode_window', {"win":this}, function(e) {
-					if (e.data.win.attr('drag')) { e.data.win.drag_reposition(e.pageX, e.pageY); };
-				});
+				pwf.viewport.get_el().bind('mousemove.godmode_window', {"win":this}, callback_mousemove_drag);
+
+				this.get_el('title_container')
+					.unbind('mousedown')
+					.bind('mouseup.godmode_window', {"win":this}, callback_mouseup_drag_stop);
 
 				pwf.window.set_dragged(this);
 				e.data.win.attr('drag', true);
@@ -312,6 +319,11 @@ pwf.register('window', function()
 
 			this.stop_drag = function(e)
 			{
+				pwf.viewport.get_el()
+					.unbind('mousemove.godmode_window')
+					.unbind('keyup.godmode_window');
+
+				this.reset_events();
 				this.drag_reposition(e.pageX, e.pageY);
 				this.attr('drag', false);
 				this.get_el('border').removeClass('drag');
@@ -350,6 +362,33 @@ pwf.register('window', function()
 					drag_last_cursor_pos.x = cursor_x;
 					drag_last_cursor_pos.y = cursor_y;
 				}
+			};
+
+
+			this.drag_resize = function(cursor_x, cursor_y)
+			{
+				var handle = this.get_el('resize_handle');
+				var winpos = handle.offset();
+
+				if (resize_offset === null) {
+					resize_offset = {
+						"size":this.attr('size'),
+						"x":winpos.left + handle.width() - (winpos.left + handle.width() - cursor_x),
+						"y":winpos.top + handle.height() - (winpos.top + handle.height() - cursor_y)
+					};
+				}
+
+				var w = resize_offset.size.x - (resize_offset.x - cursor_x);
+				var h = resize_offset.size.y - (resize_offset.y - cursor_y);
+				this.resize(w, h);
+			};
+
+
+			this.drag_resize_stop = function()
+			{
+				resize_offset = null;
+				pwf.viewport.get_el().unbind('mousemove.godmode_window');
+				this.reset_events();
 			};
 
 
@@ -758,5 +797,51 @@ pwf.register('window', function()
 	this.get_new_id = function()
 	{
 		return ++auto_increment;
+	};
+
+
+	var callback_mousemove_drag = function(e)
+	{
+		if (e.data.win.attr('drag')) { e.data.win.drag_reposition(e.pageX, e.pageY); };
+	};
+
+
+	var callback_mouseup_drag_stop = function(e)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+		e.data.win.stop_drag(e);
+	};
+
+
+	var stop_event = function(e)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+	};
+
+
+	var callback_mousedown_resize = function(e)
+	{
+		stop_event(e);
+
+		e.data.win.get_el('resize_handle')
+			.unbind('mousedown')
+			.bind('mouseup.gmwin', e.data.win, callback_mouseup_resize);
+		pwf.viewport.get_el()
+			.bind('mousemove.godmode_window', {"win":e.data.win}, callback_mousemove_resize);
+	};
+
+
+	var callback_mousemove_resize = function(e)
+	{
+		e.data.win.drag_resize(e.pageX, e.pageY);
+	};
+
+
+	var callback_mouseup_resize = function(e)
+	{
+		stop_event(e);
+		e.data.drag_resize_stop();
 	};
 });

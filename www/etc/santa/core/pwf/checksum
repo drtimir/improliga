@@ -1,4 +1,4 @@
-b7eb5ad44169e755fc9e9035e892ffba  lib/include/system.php
+8c8964667f294fe10f6257d5d4c190d8  lib/include/system.php
 02dde35596706a3ab268d149f1be4328  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 6ae434029f345e2287d7389050106dc4  bin/santa
@@ -23,7 +23,7 @@ e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
 a67844492cf841ff134e7ad7dfada44b  etc/init.d/page.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
-a0220d639394832767e04fb5792de0d5  etc/locales/cs_CZ/messages.d/core.json
+6039c190b7ba63c5478925223db2dbfd  etc/locales/cs_CZ/messages.d/core.json
 9d62f39e0e8451ae6b6cae7706b6e93e  etc/locales/cs_CZ/messages.d/dump_bar.json
 07d032940e2926459f318f2ecd6b4790  etc/locales/cs_CZ/modules.d/date.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -97,7 +97,9 @@ a847b629286e506f30985ee38c41f078  share/scripts/pwf/form/rte.js
 e1a2b0e7fd28bd5ea84b97082cdb07c1  share/scripts/pwf/form/search_tool.js
 6878a6d66e46a16d6ff45f320c7fcade  share/scripts/pwf/form/tab_manager.js
 1b74974879b5beab407746967952c77f  share/scripts/pwf/form/time_picker.js
+d9d2cff866a33748948cbeede5d0302f  share/scripts/pwf/icon.js
 261fe8a919b68316e9184b81a8defc74  share/scripts/pwf/lib/rte.list
+925cc5e1c4d767ca44d2d19b4f95bcb7  share/scripts/pwf/locales.js
 740f654f08f82d93580675ac22ac7605  share/scripts/pwf/preloader.js
 f0eff940abb1dea4148adc60e8e0a912  share/scripts/pwf/storage.js
 1e73a0ed60611ff263a00430fa7d2aeb  share/scripts/pwf/tooltip.js

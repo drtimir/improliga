@@ -185,3 +185,12 @@
 	display:none;
 }
 
+.window-resize-handle {
+	width:16px;
+	height:16px;
+	background:url(/share/pixmaps/godmode/window-handle.png);
+	position:absolute;
+	right:-1px;
+	bottom:-1px;
+	cursor:se-resize;
+}

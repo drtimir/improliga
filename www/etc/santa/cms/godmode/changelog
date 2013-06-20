@@ -1,3 +1,14 @@
+402c122a3f121fc855a8b72918510ca870508360 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+1b56c12aa5696e885cdc9ce6d464ed337fefbca1 Window resize
+b49a873861016f56629ba5f036aa5b3a9e75cf56 [fix] Window drag
+11de462cf708d65cd923bb2870e6c327a307a7d5 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
+7eebc8f32220ddb9933c7d2eab90709dca1df484 Object detail, exclude attrs
+07d25069833c8fce6b9cc7373abac39a1fc40ed0 Editor, relations
+91a2c22e6d4ca472d1a9922f4b013c85af15c9b9 Godmode layout
+9d621b7831f972ca315978924b4956f882bc56b7 Relman styles
+3834caae4d4b053e3207bbdf631385ef39e0b953 [drop] Godmode icon module
+8f10b3b99a1f43d0e05f6b658d34640fd70b70b6 Relman, free
+6b16851c67b6dd7af33ffb0b66e33750bd70b670 Godmode container
 b6860f78bbf2ee988d337577cc9946d62086b448 Merge branch 'master' of ssh://github.com/just-paja/purple_godmode
 dac226ab27f1d0690c64a9d182c931f9a24b730a Godmode scripts
 5696b48bce576d4c2ac362d4695a245b2dd34001 JS Components, main menu

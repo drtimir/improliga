@@ -199,3 +199,14 @@
 .window .editor button.dimm:hover {
 	background:#800080
 }
+
+.relman .options {
+	display:inline-block;
+}
+
+.window .pwform .relman .options li {
+	display: block;
+	float: none;
+	margin: 0;
+	padding: 0;
+}

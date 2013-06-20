@@ -19,7 +19,6 @@ namespace Impro
 			"visible"        => array("bool"),
 			"author"         => array('belongs_to', "model" => "\System\User"),
 			"members"        => array('has_many', "model" => "\Impro\Team\Member"),
-			"galleries"      => array('has_many', "model" => '\Impro\Gallery'),
 
 			"use_discussion" => array('bool'),
 			"use_attendance" => array('bool'),

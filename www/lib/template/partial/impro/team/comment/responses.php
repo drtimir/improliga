@@ -6,14 +6,14 @@ echo div('team_comment_responses');
 
 	$responses_html = '';
 
-	echo div('team_comments', div('post', $comment->to_html($ren)));
+	echo div('team_comments', div('post', $comment->render($ren)));
 	echo div('responses');
 
 		if (any($responses)) {
 			echo ul('plain team_comments response_list');
 				foreach ($responses as $response) {
 					Tag::li(array(
-						"content" => $response->to_html($ren),
+						"content" => $response->render($ren),
 						"id" => 'post_'.$response->id,
 					));
 				}

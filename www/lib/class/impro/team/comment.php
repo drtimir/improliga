@@ -14,7 +14,7 @@ namespace Impro\Team
 		);
 
 
-		public function to_html(\System\Template\Renderer $ren)
+		public function render(\System\Template\Renderer $ren)
 		{
 			$url_respond = $ren->url('team_comment_respond', array($this->team, $this));
 

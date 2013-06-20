@@ -13,7 +13,7 @@ namespace Impro\Team\Comment
 		);
 
 
-		public function to_html(\System\Template\Renderer $ren)
+		public function render(\System\Template\Renderer $ren)
 		{
 			return div('post', array(
 				div('avatar', $this->author ?

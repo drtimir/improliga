@@ -24,7 +24,7 @@ echo div('team_comments');
 						}
 
 						$responses_html .= li(array(
-							$response->to_html($ren),
+							$response->render($ren),
 							$menu,
 						));
 					}
@@ -45,7 +45,7 @@ echo div('team_comments');
 				Tag::li(array(
 					"class" => 'post',
 					"content" => array(
-						$post->to_html($ren),
+						$post->render($ren),
 						$responses_html,
 						$menu,
 					)

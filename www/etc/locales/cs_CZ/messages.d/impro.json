@@ -44,8 +44,15 @@
 	"attr_impro_team_played":"Odehráno zápasů",
 	"attr_impro_team_id_author":"ID Autora",
 	"attr_impro_team_id_hq":"Domácí hřiště",
+	"attr_impro_team_id_loc_trainings":"Místo tréninků",
 	"attr_impro_team_loc_trainings":"Místo tréninků",
 	"attr_impro_team_loc_trainings_desc":"Zvolte místo, kde obvykle probíhají vaše tréninky. Pokud používáte docházkový systém, použije se toto místo jako výchozí.",
+	"attr_impro_team_members":"Členové týmu",
+
+	"model_impro_team_member":"Člen týmu",
+	"attr_impro_team_member_user":"Uživatel",
+	"attr_impro_team_member_roles":"Role",
+	"attr_impro_team_member_active":"Aktivní",
 
 	"attr_impro_team_training_name":"Název tréninku",
 	"attr_impro_team_training_name_desc":"Popisující název tréninku. Pokud nezadáte, použije se generický název jako 'Uzavřený trénink' nebo 'Otevřený trénink'.",

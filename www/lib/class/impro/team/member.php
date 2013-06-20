@@ -7,7 +7,14 @@ namespace Impro\Team
 		protected static $attrs = array(
 			"team"   => array('belongs_to', "model" => "Impro\Team", "is_natural" => true),
 			"user"   => array('belongs_to', "model" => "System\User", "is_natural" => true),
-			"roles"  => array("int_set"),
+			"roles"  => array("int_set", "options" => array(
+				\Impro\Team\Member\Role::ID_MEMBER    => 'impro_team_member',
+				\Impro\Team\Member\Role::ID_MANAGER   => 'impro_team_member_manager',
+				\Impro\Team\Member\Role::ID_TRAINER   => 'impro_team_member_trainer',
+				\Impro\Team\Member\Role::ID_FINANCIAL => 'impro_team_member_financial',
+				\Impro\Team\Member\Role::ID_PLAYER    => 'impro_team_member_player',
+				\Impro\Team\Member\Role::ID_FAN       => 'impro_team_member_fan',
+			)),
 			"active" => array("bool"),
 			"attd"   => array('has_many', "model" => 'Impro\Team\Training\Ack'),
 		);

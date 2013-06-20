@@ -7,7 +7,7 @@ $manage_menu = '';
 if ($member) {
 	$manage_menu_opts = array();
 
-	if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION)) {
+	if ($team->use_discussion && $member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION)) {
 		$manage_menu_opts[] = li($ren->link_for('team_discussion', $locales->trans('intra_team_discussion'), array("args" => array($team), "class" => 'button')));
 	}
 

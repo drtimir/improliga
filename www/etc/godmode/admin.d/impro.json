@@ -27,6 +27,8 @@
 				"name":"news",
 				"icon":"items/team",
 				"attrs_list":["name", "visible", "created_at"],
+				"rel_tab":["members"],
+				"attrs_detail_exclude":["topics", "comments", "trainings"],
 				"window_root":true,
 				"model":"Impro::Team"
 			},

@@ -116,10 +116,65 @@ namespace Godmode
 
 		private function tabs_necessary()
 		{
-			$attrs_and_rels = count($this->rels) > 1 && any($this->attrs);
+			$attrs_and_rels = count($this->rels) >= 1 && any($this->attrs);
 			$more_rels = count($this->rels) > 1;
 
 			return $attrs_and_rels || $more_rels;
+		}
+
+
+		private function get_input_attrs($model, $attr, array $def)
+		{
+			if (\System\Model\Database::is_rel($model, $attr)) {
+				if ($def[0] !== \System\Model\Database::REL_BELONGS_TO) {
+					return null;
+				}
+			}
+
+			$type     = \System\Form::get_field_type($def[0]);
+			$required = !(isset($def['is_null']) || isset($def['default']));
+			$options  = null;
+
+			if ($def[0] === 'bool') {
+				$required = false;
+			}
+
+			if ($def[0] === \System\Model\Database::REL_BELONGS_TO) {
+				$type = 'select';
+				$options = get_all($def['model'])->fetch();
+			}
+
+			if (in_array($attr, array('created_at', 'updated_at'))) {
+				$label = $this->ren->locales()->trans($attr);
+			} else {
+				$label = $this->ren->locales()->trans_model_attr_name($model, $attr);
+			}
+
+			$input_options = array(
+				"type"  => $type,
+				"name"  => $attr,
+				"label" => $label,
+				"required" => $required,
+			);
+
+			if (is_array($options)) {
+				$input_options['options'] = $options;
+			}
+
+			if (isset($def['options']) && !isset($input_options['options'])) {
+				$input_options['options'] = $this->get_attr_options($attr, $def);
+
+				if (any($input_options['options'])) {
+					if ($def[0] == 'int_set') {
+						$input_options['type'] = 'checkbox';
+						$input_options['multiple'] = true;
+					} else {
+						$input_options['type'] = 'select';
+					}
+				}
+			}
+
+			return $input_options;
 		}
 
 
@@ -134,46 +189,10 @@ namespace Godmode
 				}
 
 				foreach ($this->attrs as $attr=>$def) {
-					$required = !(isset($def['is_null']) || isset($def['default']));
-
 					if ($def['type'] === 'attr') {
-						if (\System\Model\Database::is_rel($this->model, $attr)) {
-							if ($def[0] === \System\Model\Database::REL_BELONGS_TO) {
-								$attr = \System\Model\Database::get_belongs_to_id($this->model, $attr);
-								$def  = \System\Model\Database::get_attr($this->model, $attr);
-							} else {
-								continue;
-							}
+						if ($input_options = $this->get_input_attrs($this->model, $attr, $def)) {
+							$this->f->input($input_options);
 						}
-
-						$type = \System\Form::get_field_type($def[0]);
-
-						if ($def[0] === 'bool') {
-							$required = false;
-						}
-
-						if (in_array($attr, array('created_at', 'updated_at'))) {
-							$name = $this->ren->locales()->trans($attr);
-						} else {
-							$name = $this->ren->locales()->trans_model_attr_name($this->model, $attr);
-						}
-
-						$input_options = array(
-							"type"  => $type,
-							"name"  => $attr,
-							"label" => $name,
-							"required" => $required,
-						);
-
-						if (isset($def['options'])) {
-							$input_options['options'] = $this->get_attr_options($attr, $def);
-
-							if (any($input_options['options'])) {
-								$input_options['type'] = 'select';
-							}
-						}
-
-						$this->f->input($input_options);
 					} else {
 						$link = \System\Loader::get_link_from_class($def['model']);
 
@@ -236,9 +255,10 @@ namespace Godmode
 		private function attach_rel_manager($rel)
 		{
 			$locales = $this->ren->locales();
-			$type  = \System\Model\Database::get_attr_type($this->model, $rel);
-			$def   = \System\Model\Database::get_attr($this->model, $rel);
-			$attrs = \System\Model\Database::get_attr_def($def['model']);
+			$type   = \System\Model\Database::get_attr_type($this->model, $rel);
+			$def    = \System\Model\Database::get_attr($this->model, $rel);
+			$attrs  = \System\Model\Database::get_attr_def($def['model']);
+			$target = \System\Model\Database::get_rel_bound_to($this->model, $rel);
 
 			$objects = $this->data_default[$rel];
 			$objects[] = new $def['model']();
@@ -246,6 +266,7 @@ namespace Godmode
 
 			$noshow = $this->get_banned_attrs($def['model']);
 			$noshow[] = \System\Model\Database::get_id_col($this->model);
+			$noshow[] = $target;
 
 			if ($this->tabs_necessary()) {
 				$t = $this->f->tab($locales->trans_model_attr_name($this->model, $rel));
@@ -267,45 +288,29 @@ namespace Godmode
 						continue;
 					}
 
-					if (\System\Model\Database::is_rel($def['model'], $attr)) {
-						continue;
-					}
-
 					if (!in_array($attr, $noshow)) {
-						$required = !(isset($attr_def['is_null']) || isset($attr_def['default']));
-						if ($obj->id) {
-							$name = sprintf('%s[%s][%s]', $rel, $obj->id, $attr);
-						} else {
-							$name = sprintf('%s[%s][%s][%s]', $rel, 'add', $x, $attr);
-						}
+						$field_def = $this->get_input_attrs($def['model'], $attr, $attr_def);
 
-						if ($attr_def[0] === 'bool') {
-							$required = false;
-						}
-
-						$field_def = array(
-							"label"    => $locales->trans_model_attr_name($def['model'], $attr),
-							"name"     => $name,
-							"type"     => \System\Form::get_field_type($attr_def[0]),
-						);
-
-						if ($obj->id) {
-							$field_def["value"] = $obj->$attr;
-						}
-
-						if (isset($attr_def['options'])) {
-							$options = \System\Model\Database::get_model_attr_options($def['model'], $attr);
-							$opts = array();
-
-							foreach ($options as $val=>$label) {
-								$opts[$val] = $locales->trans($label);
+						if ($field_def) {
+							if ($obj->id) {
+								$name = sprintf('%s[%s][%s]', $rel, $obj->id, $attr);
+							} else {
+								$name = sprintf('%s[%s][%s][%s]', $rel, 'add', $x, $attr);
 							}
 
-							$field_def['type'] = 'select';
-							$field_def['options'] = $opts;
-						}
+							if ($attr_def[0] === 'bool') {
+								$required = false;
+							}
 
-						$this->f->input($field_def);
+							$field_def['name'] = $name;
+							$field_def['required'] = false;
+
+							if ($obj->id) {
+								$field_def["value"] = $obj->$attr;
+							}
+
+							$this->f->input($field_def);
+						}
 					}
 				}
 

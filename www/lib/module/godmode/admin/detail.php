@@ -8,6 +8,7 @@ def($heading, '');
 def($conds, array());
 def($opts, array());
 def($attrs_detail);
+def($attrs_detail_exclude, array());
 def($template, 'godmode/admin/detail');
 
 $model = System\Loader::get_class_from_model($model);
@@ -25,7 +26,7 @@ if ($item  = find($model, $id)) {
 	foreach ($attrs_detail as $attr=>$def) {
 		if ($item->has_attr($attr)) {
 
-			if ($def[0] != 'password' && strpos($attr, 'id') !== 0) {
+			if ($def[0] != 'password' && strpos($attr, 'id') !== 0 && !in_array($attr, $attrs_detail_exclude)) {
 				$attrs[] = $attr;
 			}
 

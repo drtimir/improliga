@@ -243,6 +243,7 @@ namespace Godmode
 							"id"    => '#{0}',
 							"model" => $item['model'],
 							"attrs_detail" => any($item['attrs_detail']) ? $item['attrs_detail']:null,
+							"attrs_detail_exclude" => any($item['attrs_detail_exclude']) ? $item['attrs_detail_exclude']:null,
 							"link_god"   => $link,
 						)),
 					),

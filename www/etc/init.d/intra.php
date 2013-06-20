@@ -3,6 +3,14 @@
 if (preg_match("/^intra/", $_SERVER['HTTP_HOST'])) {
 
 	if ($request->logged_in()) {
+		if (!$request->user()->first_name) {
+			$path_settings = \System\Router::get_url($request->host, 'profile_settings');
+
+			if ($request->path != $path_settings) {
+				redirect_now($path_settings.'?message=1');
+			}
+		}
+
 		\Impro\User::load_members($request->user());
 
 	} else {

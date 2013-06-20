@@ -25,6 +25,11 @@ $f = $ren->form(array(
 ));
 
 	$f->input_text('first_name', $locales->trans('godmode_user_first_name'), true);
+
+	if ($request->get('message')) {
+		$f->text('msg', $ren->trans('user_msg_fill_name'));
+	}
+
 	$f->input_text('last_name', $locales->trans('godmode_user_last_name'), true);
 	$f->input_text('nick', $locales->trans('godmode_nick'));
 	$f->input(array(
@@ -33,7 +38,7 @@ $f = $ren->form(array(
 		"label" => $locales->trans('impro_user_avatar'),
 	));
 
-	$f->text('', $locales->trans('user_checkbox_desc'));
+	$f->text('msg_check', $locales->trans('user_checkbox_desc'));
 	$f->input_checkbox('musician', $locales->trans('user_musician'));
 	$f->input_checkbox('conferencier', $locales->trans('user_conferencier'));
 	$f->input_checkbox('referee', $locales->trans('user_referee'));

@@ -13,5 +13,7 @@
 	"user_settings_passwd_heading":"Změna hesla",
 	"user_passwd_old":"Staré heslo",
 	"user_passwd_new":"Nové heslo",
-	"user_passwd_recap":"Potvrzení hesla"
+	"user_passwd_recap":"Potvrzení hesla",
+
+	"user_msg_fill_name":"Nepustím vás dál, dokud mi neřeknete, jak se jmenujete."
 }

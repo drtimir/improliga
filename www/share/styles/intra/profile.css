@@ -63,8 +63,19 @@
 	width:auto;
 }
 
+
+.usercontacts .group_label { display:none }
+.usercontacts .buttons { margin-top:0; }
 .usercontacts .relman_object {
 	position:relative;
+	background:#efefef;
+	border-radius:8px;
+	padding:15px;
+	margin:0 0 10px;
+}
+
+.usercontacts .relman_object .inputs {
+	margin-bottom:0;
 }
 
 .usercontacts .relman-drop-button {
@@ -82,7 +93,15 @@
 }
 
 .usercontacts .input-label-right { width:auto; }
-.usercontacts .input-left { padding-left:145px }
-.usercontacts li {
+.usercontacts .input-label-left { display:block; }
+.usercontacts .input-left { padding-left:0 }
+.usercontacts li.input-right {
+	display:inline-block;
+	vertical-align:top;
+	margin-right:10px;
+}
 
+.usercontacts li.input-right label {
+	line-height:22px;
+	width:auto;
 }

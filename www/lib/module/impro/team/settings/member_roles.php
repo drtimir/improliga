@@ -11,7 +11,7 @@ if ($propagated['team']) {
 		$profile = find('\Impro\Team\Member', $id);
 		$roles = \Impro\Team\Member\Role::get_all();
 		$f = $ren->form(array(
-			"heading" => l('intra_team_member_add'),
+			"heading" => $ren->trans('intra_team_member_add'),
 			"class"   => 'intra_team_member_add',
 			"default" => array("roles" => $profile->roles),
 		));
@@ -20,12 +20,12 @@ if ($propagated['team']) {
 			"name"     => 'roles',
 			"type"     => 'checkbox',
 			"options"  => $roles,
-			"label"    => l('intra_team_member_roles'),
+			"label"    => $ren->trans('intra_team_member_roles'),
 			"multiple" => true,
 			"required" => true,
 		));
 
-		$f->submit(l('save'));
+		$f->submit($ren->trans('save'));
 
 		if ($f->passed()) {
 			$p = $f->get_data();

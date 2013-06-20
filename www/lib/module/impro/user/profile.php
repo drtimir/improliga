@@ -31,7 +31,7 @@ if (($self && $user = $request->user()) || ($id && $user = find('\System\User', 
 		"member_of" => $member_of,
 		"link_team" => $link_team,
 		"link_event" => $link_event,
-		"contacts"  => $user->contacts->where(array("visible" => true))->fetch(),
+		"contacts"  => $user->contacts->where(array("public" => true))->fetch(),
 		"events"    => $events,
 	));
 } else throw new \System\Error\NotFound();

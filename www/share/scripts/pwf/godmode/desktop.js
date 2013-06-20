@@ -1,9 +1,7 @@
-$(function(){
-	pwf.godmode.register('desktop', function()
+pwf.register('desktop', function()
+{
+	this.init = function()
 	{
-		this.init = function()
-		{
-			return true;
-		};
-	});
+		return true;
+	};
 });

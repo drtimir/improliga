@@ -1,7 +1,7 @@
 pwf.register('relman', function()
 {
 	var
-		selectors = [".editor .relman"],
+		selectors = [".relman"],
 		marker = 'bound',
 		selector_drop = '.relman_drop',
 		selector_add_button = '.relman-add-button',
@@ -32,8 +32,8 @@ pwf.register('relman', function()
 					button
 						.html('')
 						.unbind('click')
-						.append(pwf.godmode.components.icon.html('godmode/window/refresh', 16))
-						.append(pwf.godmode.trans('godmode_return_back'))
+						.append(pwf.icon.html('godmode/window/refresh', 16))
+						.append(pwf.locales.trans('godmode_return_back'))
 						.bind('click', this, callback_item_return);
 				}
 
@@ -166,12 +166,12 @@ pwf.register('relman', function()
 	var add_relman_add_button = function(obj)
 	{
 		var button = $('<a href="#" class="' + selector_add_button.substr(1) + '"/>');
-		var button_label = '<span class="text">' + pwf.godmode.trans('godmode_add_another') + '</span>';
+		var button_label = '<span class="text">' + pwf.locales.trans('godmode_add_another') + '</span>';
 		var check  = obj.el().find(selector_drop);
 		var ctrl   = $('<div class="relman-controls"/>');
 
 		check.parents('li').hide();
-		button.append(pwf.godmode.components.icon.html('godmode/actions/create', 16));
+		button.append(pwf.icon.html('godmode/actions/create', 16));
 		button.append(button_label);
 		button.bind('click', obj, callback_item_add);
 		obj.el().append(ctrl.append(button));
@@ -181,11 +181,11 @@ pwf.register('relman', function()
 	var add_relman_drop_button = function(obj)
 	{
 		var button = $('<a href="#" class="' + selector_drop_button.substr(1) + '"/>');
-		var button_label = '<span class="text">' + pwf.godmode.trans('godmode_delete') + '</span>';
+		var button_label = '<span class="text">' + pwf.locales.trans('godmode_delete') + '</span>';
 		var check  = obj.el().find(selector_drop);
 
 		check.parents('li').hide();
-		button.append(pwf.godmode.components.icon.html('godmode/actions/delete', 16));
+		button.append(pwf.icon.html('godmode/actions/delete', 16));
 		button.append(button_label);
 		button.bind('click', obj, callback_item_drop);
 		obj.el().append(button);

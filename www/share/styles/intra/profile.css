@@ -37,6 +37,10 @@
 	background:#efefef;
 }
 
+.profile .contacts li {
+	margin-bottom:5px;
+}
+
 .user_contact .contact_part, .user_contact .icon {
 	display:inline-block;
 	vertical-align:middle;
@@ -57,4 +61,28 @@
 
 .usercfg .input-label-right {
 	width:auto;
+}
+
+.usercontacts .relman_object {
+	position:relative;
+}
+
+.usercontacts .relman-drop-button {
+	position:absolute;
+	left:300px;
+	top:0;
+}
+
+.usercontacts .relman-drop-button * {
+	vertical-align:top;
+}
+
+.usercontacts .relman-drop-button .icon {
+	margin-right:5px;
+}
+
+.usercontacts .input-label-right { width:auto; }
+.usercontacts .input-left { padding-left:145px }
+.usercontacts li {
+
 }

@@ -1,4 +1,4 @@
-pwf.godmode.register('preloader', function()
+pwf.register('preloader', function()
 {
 	var
 		element = null,
@@ -14,16 +14,19 @@ pwf.godmode.register('preloader', function()
 
 	this.init = function()
 	{
-		if (!ready) {
-			$(function() {
-				create();
-				pwf.godmode.components.preloader.preload();
-			});
-
+		if (this.is_ready()) {
+			create();
+			pwf.preloader.preload();
 			return ready = true;
 		}
 
 		return ready;
+	};
+
+
+	this.is_ready = function()
+	{
+		return $.isReady;
 	};
 
 

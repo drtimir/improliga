@@ -29,6 +29,11 @@ namespace Godmode
 			$ed->cfg    = $cfg;
 			$ed->ren    = $ren;
 
+			def($ed->cfg['picker'], array());
+			def($ed->cfg['manager'], array());
+			def($ed->cfg['attrs_edit'], null);
+			def($ed->cfg['extra_buttons'], true);
+
 			$ed
 				->collect_data()
 				->create_form()
@@ -83,8 +88,8 @@ namespace Godmode
 		{
 			$this->f = $this->ren->form(array(
 				"default" => $this->data_default,
-				"heading" => $this->cfg['heading'],
-				"desc"    => $this->cfg['desc'],
+				"heading" => def($this->cfg['heading'], ''),
+				"desc"    => def($this->cfg['desc'], ''),
 				"class"   => array(
 					'editor',
 					'model_edit',
@@ -101,10 +106,6 @@ namespace Godmode
 		 */
 		private function attach_inputs()
 		{
-			if (any($this->rels)) {
-				$this->f->tab($this->ren->locales()->trans('godmode_model_basic_attrs'));
-			}
-
 			return $this
 				->attach_attr_inputs()
 				->attach_manager_inputs()
@@ -113,68 +114,83 @@ namespace Godmode
 		}
 
 
+		private function tabs_necessary()
+		{
+			$attrs_and_rels = count($this->rels) > 1 && any($this->attrs);
+			$more_rels = count($this->rels) > 1;
+
+			return $attrs_and_rels || $more_rels;
+		}
+
+
 		/** Attach basic attribute inputs
 		 * @return $this
 		 */
 		private function attach_attr_inputs()
 		{
-			foreach ($this->attrs as $attr=>$def) {
-				$required = !(isset($def['is_null']) || isset($def['default']));
+			if (any($this->attrs)) {
+				if ($this->tabs_necessary()) {
+					$this->f->tab($this->ren->locales()->trans('godmode_model_basic_attrs'));
+				}
 
-				if ($def['type'] === 'attr') {
-					if (\System\Model\Database::is_rel($this->model, $attr)) {
-						if ($def[0] === \System\Model\Database::REL_BELONGS_TO) {
-							$attr = \System\Model\Database::get_belongs_to_id($this->model, $attr);
-							$def  = \System\Model\Database::get_attr($this->model, $attr);
+				foreach ($this->attrs as $attr=>$def) {
+					$required = !(isset($def['is_null']) || isset($def['default']));
+
+					if ($def['type'] === 'attr') {
+						if (\System\Model\Database::is_rel($this->model, $attr)) {
+							if ($def[0] === \System\Model\Database::REL_BELONGS_TO) {
+								$attr = \System\Model\Database::get_belongs_to_id($this->model, $attr);
+								$def  = \System\Model\Database::get_attr($this->model, $attr);
+							} else {
+								continue;
+							}
+						}
+
+						$type = \System\Form::get_field_type($def[0]);
+
+						if ($def[0] === 'bool') {
+							$required = false;
+						}
+
+						if (in_array($attr, array('created_at', 'updated_at'))) {
+							$name = $this->ren->locales()->trans($attr);
 						} else {
-							continue;
+							$name = $this->ren->locales()->trans_model_attr_name($this->model, $attr);
 						}
-					}
 
-					$type = \System\Form::get_field_type($def[0]);
+						$input_options = array(
+							"type"  => $type,
+							"name"  => $attr,
+							"label" => $name,
+							"required" => $required,
+						);
 
-					if ($def[0] === 'bool') {
-						$required = false;
-					}
+						if (isset($def['options'])) {
+							$input_options['options'] = $this->get_attr_options($attr, $def);
 
-					if (in_array($attr, array('created_at', 'updated_at'))) {
-						$name = $this->ren->locales()->trans($attr);
+							if (any($input_options['options'])) {
+								$input_options['type'] = 'select';
+							}
+						}
+
+						$this->f->input($input_options);
 					} else {
-						$name = $this->ren->locales()->trans_model_attr_name($this->model, $attr);
-					}
+						$link = \System\Loader::get_link_from_class($def['model']);
 
-					$input_options = array(
-						"type"  => $type,
-						"name"  => $attr,
-						"label" => $name,
-						"required" => $required,
-					);
+						if ($link === 'system_location') {
+							$this->f->input_location($attr, $ren->locales()->trans_model_attr_name($this->model, $attr));
+						} else {
+							if (empty($all[$link])) {
+								$all[$link] = get_all($def['model'])->fetch();
+							}
 
-					if (isset($def['options'])) {
-						$input_options['options'] = $this->get_attr_options($attr, $def);
-
-						if (any($input_options['options'])) {
-							$input_options['type'] = 'select';
+							$this->f->input(array(
+								"type" => 'select',
+								"name" => \System\Model\Database::get_belongs_to_id($this->model, $attr),
+								"options" => $all[$link],
+								"label"   => $this->ren->locales()->trans_model_attr_name($this->model, $attr),
+							));
 						}
-					}
-
-					$this->f->input($input_options);
-				} else {
-					$link = \System\Loader::get_link_from_class($def['model']);
-
-					if ($link === 'system_location') {
-						$this->f->input_location($attr, $ren->locales()->trans_model_attr_name($this->model, $attr));
-					} else {
-						if (empty($all[$link])) {
-							$all[$link] = get_all($def['model'])->fetch();
-						}
-
-						$this->f->input(array(
-							"type" => 'select',
-							"name" => \System\Model\Database::get_belongs_to_id($this->model, $attr),
-							"options" => $all[$link],
-							"label"   => $this->ren->locales()->trans_model_attr_name($this->model, $attr),
-						));
 					}
 				}
 			}
@@ -231,8 +247,10 @@ namespace Godmode
 			$noshow = $this->get_banned_attrs($def['model']);
 			$noshow[] = \System\Model\Database::get_id_col($this->model);
 
-			$t = $this->f->tab($locales->trans_model_attr_name($this->model, $rel));
-			$t->class_outer = 'relman';
+			if ($this->tabs_necessary()) {
+				$t = $this->f->tab($locales->trans_model_attr_name($this->model, $rel));
+				$t->class_outer = 'relman';
+			}
 
 			foreach ($objects as $key=>$obj) {
 				$group_name = $obj->id ? 'obj_'.$obj->id:'obj_add_'.$x;
@@ -309,7 +327,9 @@ namespace Godmode
 		 */
 		private function attach_picker($rel)
 		{
-			$this->f->tab($this->ren->locales()->trans_model_attr_name($this->model, $rel));
+			if ($this->tabs_necessary()) {
+				$this->f->tab($this->ren->locales()->trans_model_attr_name($this->model, $rel));
+			}
 
 			$type = \System\Model\Database::get_attr_type($this->model, $rel);
 			$def  = \System\Model\Database::get_attr($this->model, $rel);
@@ -349,7 +369,7 @@ namespace Godmode
 			$attrs = array();
 			$banned_attrs = self::get_banned_attrs($this->model);
 
-			if (empty($this->cfg['attrs_edit'])) {
+			if (!isset($this->cfg['attrs_edit']) || !is_array($this->cfg['attrs_edit'])) {
 				$this->cfg['attrs_edit'] = \System\Model\Database::get_model_attrs($this->model);
 				$this->cfg['attrs_edit'] = array_merge($this->cfg['attrs_edit'], \System\Model\Database::get_location_attrs($this->model));
 			}
@@ -380,18 +400,21 @@ namespace Godmode
 		{
 			$this->f->tab_group_end();
 			$this->f->submit($this->ren->locales()->trans('godmode_save'));
-			$this->f->input(array(
-				"type"  => 'submit',
-				"name"  => 'save_and_edit',
-				"label" => $this->ren->locales()->trans('godmode_save_and_edit'),
-				"class" => 'dimm',
-			));
-			$this->f->input(array(
-				"type"  => 'submit',
-				"name"  => 'save_and_add',
-				"label" => $this->ren->locales()->trans('godmode_save_and_add'),
-				"class" => 'dimm',
-			));
+
+			if ($this->cfg['extra_buttons']) {
+				$this->f->input(array(
+					"type"  => 'submit',
+					"name"  => 'save_and_edit',
+					"label" => $this->ren->locales()->trans('godmode_save_and_edit'),
+					"class" => 'dimm',
+				));
+				$this->f->input(array(
+					"type"  => 'submit',
+					"name"  => 'save_and_add',
+					"label" => $this->ren->locales()->trans('godmode_save_and_add'),
+					"class" => 'dimm',
+				));
+			}
 
 			return $this;
 		}

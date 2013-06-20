@@ -17,7 +17,7 @@ if ($item = $new ? (new $model()):find($model, $id)) {
 		"desc"               => def($desc, ''),
 		"picker"             => def($rel_pick, array()),
 		"manager"            => def($rel_tab, array()),
-		"attrs_edit"         => def($attrs_edit, array()),
+		"attrs_edit"         => def($attrs_edit, null),
 		"attrs_edit_exclude" => def($attrs_edit_exclude, array()),
 	));
 

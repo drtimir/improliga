@@ -29,7 +29,8 @@ namespace Impro
 
 		public static function link(\System\Template\Renderer $ren, \System\User $user)
 		{
-			return $ren->link_for('profile_user', $user->nick ? $user->nick:$user->get_name(), array("args" => array($user), "class" => 'link-profile'));
+			$name = $user->nick ? $user->nick:$user->get_name();
+			return $ren->link_for('profile_user', $name ? $name:$user->login, array("args" => array($user), "class" => 'link-profile'));
 		}
 
 

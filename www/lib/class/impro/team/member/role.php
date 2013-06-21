@@ -4,12 +4,14 @@ namespace Impro\Team\Member
 {
 	abstract class Role
 	{
-		const ID_MEMBER    = 1;
-		const ID_MANAGER   = 2;
-		const ID_TRAINER   = 3;
-		const ID_PLAYER    = 4;
-		const ID_FAN       = 5;
-		const ID_FINANCIAL = 6;
+		const ID_MEMBER        = 1;
+		const ID_MANAGER       = 2;
+		const ID_TRAINER       = 3;
+		const ID_PLAYER        = 4;
+		const ID_FAN           = 5;
+		const ID_FINANCIAL     = 6;
+		const ID_OCCASIONALIST = 7;
+		const ID_MUSICIAN      = 8;
 
 		const PERM_TEAM_DATA       = 1;
 		const PERM_TEAM_EVENTS     = 2;
@@ -20,12 +22,14 @@ namespace Impro\Team\Member
 
 
 		private static $types_available = array(
-			self::ID_MEMBER    => 'impro_team_member',
-			self::ID_MANAGER   => 'impro_team_member_manager',
-			self::ID_TRAINER   => 'impro_team_member_trainer',
-			self::ID_FINANCIAL => 'impro_team_member_financial',
-			self::ID_PLAYER    => 'impro_team_member_player',
-			self::ID_FAN       => 'impro_team_member_fan',
+			self::ID_MEMBER        => 'impro_team_member',
+			self::ID_MANAGER       => 'impro_team_member_manager',
+			self::ID_TRAINER       => 'impro_team_member_trainer',
+			self::ID_FINANCIAL     => 'impro_team_member_financial',
+			self::ID_PLAYER        => 'impro_team_member_player',
+			self::ID_OCCASIONALIST => 'impro_team_member_player_occasional',
+			self::ID_MUSICIAN      => 'impro_team_member_musician',
+			self::ID_FAN           => 'impro_team_member_fan',
 		);
 
 

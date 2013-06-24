@@ -44,6 +44,14 @@ namespace Impro\User
 				collect(array('attr', 'ident'), $contacts, true)
 			);
 
+			$acontacts = $this->author->contacts->where(array(
+				"type" => \System\User\Contact::STD_EMAIL, "public" => true,
+				))->fetch();
+
+			if (any($acontacts)) {
+				$mail->reply_to = implode(', ', collect(array('attr', 'ident'), $acontacts, true));
+			}
+
 			return $mail->send();
 		}
 	}

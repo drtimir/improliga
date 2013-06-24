@@ -49,7 +49,10 @@ namespace Impro\User
 
 		public function mail(\System\Template\Renderer $ren)
 		{
-			$contacts = $this->user->contacts->where(array("type" => \System\User\Contact::STD_EMAIL))->fetch();
+			$contacts = $this->user->contacts->where(array(
+					"type" => \System\User\Contact::STD_EMAIL,
+					"spam" => true,
+				))->fetch();
 			$mail = \System\Offcom\Mail::create(
 				$ren->locales()->trans('intra_user_request_subject'),
 				stprintf($ren->locales()->trans('intra_user_request_mail_body'), array(
@@ -60,6 +63,14 @@ namespace Impro\User
 				collect(array('attr', 'ident'), $contacts, true)
 			);
 
+			$acontacts = $this->author->contacts->where(array(
+				"type" => \System\User\Contact::STD_EMAIL, "public" => true,
+				))->fetch();
+
+			if (any($acontacts)) {
+				$mail->reply_to = implode(', ', collect(array('attr', 'ident'), $acontacts, true));
+			}
+
 			return $mail->send();
 		}
 
@@ -68,8 +79,7 @@ namespace Impro\User
 		{
 			if ($this->response && $this->response !== self::RESPONSE_MAYBE) {
 				$contacts = $this->author->contacts->where(array(
-					"type" => \System\User\Contact::STD_EMAIL,
-					"spam" => true,
+					"type" => \System\User\Contact::STD_EMAIL, "spam" => true,
 				))->fetch();
 
 				$method = self::get_method($this->response);
@@ -81,6 +91,14 @@ namespace Impro\User
 					)),
 					collect(array('attr', 'ident'), $contacts, true)
 				);
+
+				$acontacts = $this->user->contacts->where(array(
+					"type" => \System\User\Contact::STD_EMAIL, "public" => true
+				))->fetch();
+
+				if (any($acontacts)) {
+					$mail->reply_to = implode(', ', collect(array('attr', 'ident'), $acontacts, true));
+				}
 
 				return $mail->send();
 			}

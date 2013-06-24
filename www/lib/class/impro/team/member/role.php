@@ -12,6 +12,7 @@ namespace Impro\Team\Member
 		const ID_FINANCIAL     = 6;
 		const ID_OCCASIONALIST = 7;
 		const ID_MUSICIAN      = 8;
+		const ID_MARKETING     = 9;
 
 		const PERM_TEAM_DATA       = 1;
 		const PERM_TEAM_EVENTS     = 2;
@@ -25,6 +26,7 @@ namespace Impro\Team\Member
 			self::ID_MEMBER        => 'impro_team_member',
 			self::ID_MANAGER       => 'impro_team_member_manager',
 			self::ID_TRAINER       => 'impro_team_member_trainer',
+			self::ID_MARKETING     => 'impro_team_member_marketing',
 			self::ID_FINANCIAL     => 'impro_team_member_financial',
 			self::ID_PLAYER        => 'impro_team_member_player',
 			self::ID_OCCASIONALIST => 'impro_team_member_player_occasional',
@@ -44,7 +46,7 @@ namespace Impro\Team\Member
 
 
 		private static $roles_default = array(self::ID_PLAYER, self::ID_MEMBER);
-		private static $types_manager = array(self::ID_MANAGER, self::ID_TRAINER);
+		private static $types_manager = array(self::ID_MANAGER, self::ID_TRAINER, self::ID_MARKETING);
 
 
 		public static function get_all()

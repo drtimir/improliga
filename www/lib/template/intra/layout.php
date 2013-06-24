@@ -35,6 +35,7 @@ echo html($locales->get_lang());
 		$ren->content_for('styles', 'intra/profile');
 		$ren->content_for('styles', 'intra/rte');
 		$ren->content_for('styles', 'intra/requests');
+		$ren->content_for('styles', "intra/reporter");
 
 		$ren->content_for('scripts', 'lib/browser');
 		$ren->content_for('scripts', 'lib/html5');
@@ -50,7 +51,8 @@ echo html($locales->get_lang());
 		$ren->content_for('scripts', 'pwf/form/location_picker');
 		$ren->content_for('scripts', 'pwf/form/jquery.gmap');
 		$ren->content_for('scripts', 'pwf/form/gps');
-		$ren->content_for("scripts", "pwf/godmode/relman");
+		$ren->content_for('scripts', "pwf/godmode/relman");
+		$ren->content_for('scripts', "site/reporter");
 		$ren->content_for('scripts', 'site/global');
 		$ren->content_for('scripts', 'site/intranet');
 
@@ -60,7 +62,8 @@ echo html($locales->get_lang());
 	Tag::body();
 		echo htmlheader();
 			echo div('page-block');
-				echo div('logo', $ren->link_for('home', span('hidden', 'Intranet Improligy')));
+				echo div('logo', $ren->link_for('home', span('hidden', 'Intranet')));
+				echo div('reporter', '');
 
 				echo menu('plain user', array(
 					li($ren->link_for('profile', array($request->user()->avatar->to_html($ren, 24,24), span('label', $request->user()->nick)), array('title' => $locales->trans('intra_user_profile')))),

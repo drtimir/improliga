@@ -8,6 +8,20 @@
 		}
 	}, "home"],
 
+	["^/user/status/$", {
+			"modules":[
+				["impro/user/status"]
+			]
+		}, "user_status"],
+
+	["^/user/status/detail.json/$", {
+			"modules":[
+				["impro/user/status/detail", {
+					"format":"json"
+				}]
+			]
+		}, "user_status"],
+
 	["^/login/$", {
 		"title":"Přihlášení",
 		"layout":["intra/login"],
@@ -55,6 +69,10 @@
 			"mans":["impro/team/managers", {"slot":"right"}, ["head"]]
 		}
 	}, "team_info"],
+
+	["^/teams/([^/]+)/logo/$", {
+		"modules":[["impro/team/logo_redir", {"id":"#{0}"}]]
+	}, "team_logo"],
 
 	["^/teams/([^/]+)/events/$", {
 		"layout":["intra/layout", "intra/team"],
@@ -287,6 +305,10 @@
 		]
 	}, "profile_user"],
 
+	["^/profile/([^/]+)/avatar/$", {
+		"modules":[["impro/user/avatar_redir", {"id":"#{0}"}]]
+	}, "profile_user"],
+
 	["^/discussion/$", {
 		"title":"Diskuze",
 		"layout":["intra/layout", "intra/single"],
@@ -421,7 +443,6 @@
 			"rq":["impro/user/request", {"rqid":"#{1}"}, ["auth"]]
 		}
 	}, "request"],
-
 
 	["^/contacts/$", {
 		"layout":["intra/layout", "intra/single"],

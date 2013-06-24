@@ -6,7 +6,13 @@ if (strpos($_SERVER['HTTP_HOST'], 'intra') !== 0) {
 
 echo doctype();
 echo html($locales->get_lang());
-	Tag::head();
+	echo head();
+
+		$script = array();
+		$script[] = 'var pwf_trans = '.json_encode($locales->get_messages()).';';
+
+		$renderer->content_for("head", '<script type="text/javascript">'.implode('', $script).'</script>');
+
 		$ren->content_for('styles', 'pwf/elementary');
 		$ren->content_for('styles', 'pwf/calendar');
 		$ren->content_for('styles', 'pwf/browser_control');
@@ -50,7 +56,7 @@ echo html($locales->get_lang());
 		$ren->content_for('scripts', 'pwf/form/time_picker');
 		$ren->content_for('scripts', 'pwf/form/autocompleter');
 		$ren->content_for('scripts', 'pwf/form/location_picker');
-		$ren->content_for('scripts', 'pwf/form/jquery.gmap');
+		//~ $ren->content_for('scripts', 'pwf/form/jquery.gmap');
 		$ren->content_for('scripts', 'pwf/form/gps');
 		$ren->content_for('scripts', "pwf/godmode/relman");
 		$ren->content_for('scripts', "site/reporter");

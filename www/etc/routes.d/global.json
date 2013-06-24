@@ -92,7 +92,8 @@
 			["impro/event/calendar", {
 				"slot":"left",
 				"template":"impro/event/list_month",
-				"link_day_piece":"den_{day}"
+				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
 			}],
 			["impro/event/calendar", {
 				"slot":"right",
@@ -111,13 +112,15 @@
 				"slot":"right",
 				"day_link_integrate":true,
 				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
 				"month_input":"#{0}"
 			}],
 			["impro/event/calendar", {
 				"slot":"left",
 				"template":"impro/event/list_month",
 				"link_day_piece":"den_{day}",
-				"month_input":"#{0}"
+				"month_input":"#{0}",
+				"conds":{"published":true}
 			}]
 		]
 	}, "events_month"],

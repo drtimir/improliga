@@ -55,6 +55,7 @@ namespace Impro\Team\Training
 					"redirect_maybe" => $ren->uri('team_attendance', array($training->team)),
 					"training"       => $training,
 					"member"         => $member,
+					"team"           => $training->team,
 					"text"           => stprintf($ren->locales()->trans('intra_team_training_invite'), array(
 						"link_team"    => $training->team->to_html_link($ren),
 						"link_user"    => \Impro\User::link($ren, $training->author),

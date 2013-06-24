@@ -45,7 +45,7 @@
 	"intra_user_request_response_subject":"[Improliga] Odpověď na žádost z intranetu",
 	"intra_user_request_response_mail_body_yes":"Dobrý den,\n\nuživatel {user_name} přijal vaši žádost. Text žádosti:\n\n{text}",
 	"intra_user_request_response_mail_body_no":"Dobrý den,\n\nuživatel {user_name} odmítl vaši žádost. Text žádosti:\n\n{text}",
-	"intra_user_registration":"Byl vám vytvořen nový uživatelský účet.\n\nPřihlašovací jméno: {login}\nHeslo: {password}",
+	"intra_user_registration":"Byl vám vytvořen nový uživatelský účet. Je důležité nastavit si základní údaje na profilu před pokračováním.\n\nPřihlašovací jméno: {login}\nHeslo: {password}",
 
 	"intra_user_notice_subject":"[Improliga] Upozornění na intranetu",
 	"intra_user_notice_mail_body":"Dobrý den,\n\nmáte nové upozornění na intranetu Improligy od uživatele {user_name}.\n\n{text}\n\n--------------------\nDetaily naleznete na této adrese: {link}",

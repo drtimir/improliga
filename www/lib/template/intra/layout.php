@@ -90,6 +90,11 @@ echo html($locales->get_lang());
 			echo div('page-block');
 				echo span('system', $ren->link_ext('http://pwf.scourge.cz/', introduce()));
 
+				echo ul('plain footer-menu', array(
+					li($ren->link('http://www.improliga.cz/', $locales->trans('intra_public'))),
+					li($ren->link_for('terms', $locales->trans('intra_terms'))),
+				));
+
 				echo span('cleaner', '');
 			close('div');
 		close('footer');

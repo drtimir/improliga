@@ -463,5 +463,13 @@
 		"modules":[
 			["system/partial", {"template":"working"}]
 		]
-	}, "files"]
+	}, "files"],
+
+
+	["^/terms/$", {
+		"layout":["intra/layout", "intra/single"],
+		"modules":[
+			["system/partial", {"template":"impro/static/intra-terms"}]
+		]
+	}, "terms"]
 ]

@@ -180,13 +180,13 @@
 		}
 	}, "team_training_edit"],
 
-	["^/teams/([^/]+)/attendance/([^/]+)/edit/$", {
+	["^/teams/([^/]+)/attendance/([^/]+)/cancel/$", {
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"attd":["impro/team/training/drop", {"id":"#{1}", "slot":"big"}, ["head"]]
+			"attd":["impro/team/training/cancel", {"id":"#{1}", "slot":"big"}, ["head"]]
 		}
-	}, "team_training_drop"],
+	}, "team_training_cancel"],
 
 	["^/teams/([^/]+)/attendance/([^/]+)/edit-attd/$", {
 		"layout":["intra/layout", "intra/team"],

@@ -20,6 +20,7 @@ namespace Impro\Team\Training
 			)),
 			"count"    => array('int', "is_unsigned" => true, "default" => 1),
 			"delay"    => array('int', "default" => 0, "is_null" => true),
+			"canceled" => array('bool', "default" => false),
 			"training" => array('belongs_to', "model" => 'Impro\Team\Training'),
 			"member"   => array('belongs_to', "model" => 'Impro\Team\Member'),
 			"user"     => array('belongs_to', "model" => 'System\User'),
@@ -70,6 +71,33 @@ namespace Impro\Team\Training
 				return $ack;
 			}
 		}
+
+
+		public function cancel(\System\Template\Renderer $ren, $drop)
+		{
+			$this->canceled = true;
+			$this->save();
+			$current_user = $ren->response()->request()->user();
+
+			if ($this->id_user != $current_user->id) {
+				$notice = \Impro\User\Notice::for_user($this->user, array(
+					"generated_by" => 'team_attendance',
+					"redirect"     => $drop ?
+						$ren->url('team_attendance', array($this->training->team)):
+						$ren->url('team_training', array($this->training->team, $this->training)),
+					"author"       => $current_user,
+					"team"         => $this->training->team,
+					"text"         => stprintf($ren->trans('training_cancel_mail'), array(
+						"link_user" => \Impro\User::link($ren),
+						"link_team" => $this->training->team->to_html_link($ren, true),
+						"tg_date"   => $ren->format_date($this->training->start, 'human'),
+					))
+				));
+			}
+
+			return $this;
+		}
+
 
 		public function get_status_name(\System\Template\Renderer $ren)
 		{

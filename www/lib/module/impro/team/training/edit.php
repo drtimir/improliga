@@ -38,7 +38,6 @@ if (isset($propagated['team']) && $team = $propagated['team']) {
 			$f->input(array(
 				"name" => 'open',
 				"type" => 'radio',
-				"multiple" => true,
 				"label" => $locales->trans_model_attr_name($model, 'open'),
 				"options" => array(
 					true  => 'intra_tg_open',
@@ -68,7 +67,7 @@ if (isset($propagated['team']) && $team = $propagated['team']) {
 				$trn->update_attrs($p);
 
 				if (!$trn->name) {
-					$trn->name = $locales->trans($trn->open ? 'intra_team_training_open':'intra_team_training_closed');
+					$trn->name = $locales->trans($trn->open ? 'training_open':'training_closed');
 				}
 
 				$trn->save();
@@ -77,7 +76,7 @@ if (isset($propagated['team']) && $team = $propagated['team']) {
 					$trn->send_invites($ren);
 				}
 
-				$flow->redirect($ren->url('team_attendance', array($team)));
+				$flow->redirect($ren->url('team_training', array($team, $trn)));
 			}
 		} else throw new \System\Error\AccessDenied();
 	} else throw new \System\Error\AccessDenied();

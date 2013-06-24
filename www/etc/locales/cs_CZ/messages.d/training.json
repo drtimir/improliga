@@ -1,0 +1,21 @@
+{
+	"training_time":"Čas tréninku",
+	"training_edit":"Upravit trénink",
+	"training_delete":"Smazat trénink",
+	"training_delete_desc":"Smazat trénink",
+	"training_cancel":"Zrušit trénink",
+	"training_canceled":"Zrušený trénink",
+	"training_cancel_heading":"Zrušení tréninku",
+	"training_cancel_desc":"Odešle se zpráva všem členům, kteří potvrdili účast a trénink bude označen jako zrušený. Opravdu chcete zrušit tento trénink?",
+	"training_cancel_mail":"Uživatel {link_user} zrušil trénink týmu {link_team} naplánovaný na {tg_date}.",
+
+	"training_open":"Otevřený trénink",
+	"training_closed":"Uzavřený trénink",
+	"training_no_desc":"<p>Trénink nemá žádný popis.</p>",
+
+	"training_date":"Datum",
+	"training_start":"Začátek",
+	"training_trainer":"Vede",
+
+	"":""
+}

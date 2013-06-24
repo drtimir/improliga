@@ -1,3 +1,11 @@
+85e882b4f8762af89961cb7edbc882a3e4230dfe Merge branch 'master' of ssh://github.com/just-paja/pwf
+9b59cde009ab9425e688c8131e32e108fe146c60 [fix][js] Locales
+f06a33de32b14cc7d22ccac0f0dbc3ca0a781667 Aliases, ol, p
+6a1fcf319ee557fe3463827fbfe678490e627834 Forms, rendering radios
+6f8ebc8f6b510efa39cac50117e89df1d18ff33c [fix] Input validation
+764d74707e0f29ffbb1e71740bbfdad927e25eec [js] Storage module compatibility
+33716f0daf83b3b042c76c6bb5e7c0a33aad2a91 User class, create session
+105f9801a8098c1ef40ad2aa5d66e3b1120ee7de [fix] Offcom, mailer
 9baf73f606441dbc76e8780057fce1abe83a2993 Merge branch 'master' of ssh://github.com/just-paja/pwf
 a114ebf552f89c45acb21b843bd6ebcb1dd0522b Forms, widget validations
 e6aaa59733d31814f4b0ac9b820af5d9b31c6e31 Forms, datetime validation

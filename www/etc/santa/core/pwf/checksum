@@ -1,4 +1,4 @@
-b24451e58f22f56e09abd4a8b8ee2b4d  lib/include/system.php
+737e6e9af7335e7d15b67b2df1fb1521  lib/include/system.php
 02dde35596706a3ab268d149f1be4328  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 6ae434029f345e2287d7389050106dc4  bin/santa
@@ -99,9 +99,9 @@ e1a2b0e7fd28bd5ea84b97082cdb07c1  share/scripts/pwf/form/search_tool.js
 1b74974879b5beab407746967952c77f  share/scripts/pwf/form/time_picker.js
 d9d2cff866a33748948cbeede5d0302f  share/scripts/pwf/icon.js
 261fe8a919b68316e9184b81a8defc74  share/scripts/pwf/lib/rte.list
-925cc5e1c4d767ca44d2d19b4f95bcb7  share/scripts/pwf/locales.js
+502800562d30299a344152817750b347  share/scripts/pwf/locales.js
 740f654f08f82d93580675ac22ac7605  share/scripts/pwf/preloader.js
-f0eff940abb1dea4148adc60e8e0a912  share/scripts/pwf/storage.js
+6c66997f934daaf9ca4fda88cd13fa4a  share/scripts/pwf/storage.js
 1e73a0ed60611ff263a00430fa7d2aeb  share/scripts/pwf/tooltip.js
 4c98b3739d5d39219024eff7354ecb3f  share/styles/pwf/base.css
 5db4eea15c1ace59e5ed4b8645f5f5bc  share/styles/pwf/devbar.css

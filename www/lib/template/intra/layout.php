@@ -14,6 +14,7 @@ echo html($locales->get_lang());
 		$ren->content_for("styles", "pwf/form/datetimepicker");
 		$ren->content_for("styles", "pwf/form/datepicker");
 		$ren->content_for("styles", "pwf/form/timepicker");
+		$ren->content_for("styles", "pwf/form/picker_image");
 		$ren->content_for("styles", "pwf/form/autocompleter");
 		$ren->content_for("styles", "pwf/form/rte");
 		$ren->content_for("styles", "pwf/form/tabs");
@@ -92,5 +93,6 @@ echo html($locales->get_lang());
 				echo span('cleaner', '');
 			close('div');
 		close('footer');
+		?><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-40099806-1']);_gaq.push(['_setDomainName', 'improliga.cz']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><?
 	close('body');
 close('html');

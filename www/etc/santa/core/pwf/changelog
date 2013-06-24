@@ -1,3 +1,11 @@
+9baf73f606441dbc76e8780057fce1abe83a2993 Merge branch 'master' of ssh://github.com/just-paja/pwf
+a114ebf552f89c45acb21b843bd6ebcb1dd0522b Forms, widget validations
+e6aaa59733d31814f4b0ac9b820af5d9b31c6e31 Forms, datetime validation
+c16bf5d15cd1b6ce297da2c93fdc0fa9ee4e0cfa Forms, rendering validation
+a0f627ebd3232491e9a89772849c4b115e63712c Forms, validations
+28ef53825b597336e790784f3cfa1cb59aa2e492 Forms, render classes
+c9af054162d98ccde3fd7e06a93d0e3b9d5dc3e1 Forms, validation
+3c679909bbe2065a9bffe32127724549cf9b6c95 Forms, image widget
 b6210005c25e2ecdebc1c5b65cd84789469ae886 Merge branch 'master' of ssh://github.com/just-paja/pwf
 0976eba4f83d16bc4f3ddb30e26b9d8d8aece6e8 Database model, has_many setter
 0c6a536b760e6d7228f0b129bb20129a82d54612 Database model, has_many

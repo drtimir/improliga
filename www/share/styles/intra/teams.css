@@ -412,10 +412,10 @@
 	padding:10px;
 	display:inline-block;
 	vertical-align:top;
-	border:1px solid #ddd;
-	background:#f2f2f2;
+	border:1px solid rgba(0,0,0,0.10);
+	background:#F6F7DC;
 	border-radius:6px;
-	margin:0 5px;
+	margin:0 10px 10px 0;
 }
 
 .attd-list li .l,
@@ -433,11 +433,49 @@
 	font-size:12px;
 }
 
-.attd-list li.not-sent { box-shadow:0 0 3px #6F1C1F; }
-.attd-list li.sent { box-shadow:0 0 3px #008dd7; }
-.attd-list li.no { box-shadow:0 0 3px #EC0D15; }
-.attd-list li.yes { box-shadow:0 0 3px #23EA23; }
-.attd-list li.maybe { box-shadow:0 0 3px #FFDA2D; }
+.attd-list li.not-sent { box-shadow:0 0 5px #6F1C1F; }
+.attd-list li.sent { box-shadow:0 0 5px #008dd7; }
+.attd-list li.no { box-shadow:0 0 5px #EC0D15; }
+.attd-list li.yes { box-shadow:0 0 5px #23EA23; }
+.attd-list li.maybe { box-shadow:0 0 5px #FFDA2D; }
+
+
+.training.off .inner {
+	opacity:.65;
+}
+.training.off .inner:hover {
+	opacity:1;
+}
+
+.training .iconed {
+	background-repeat:no-repeat;
+	padding-left:32px;
+}
+
+.training .info li {
+	margin:0 0 2px;
+	line-height:24px;
+}
+
+.training .info .date { background-image:url(/share/icons/impro/24/objects/datetime.png); }
+.training .info .time { background-image:url(/share/icons/impro/24/objects/time.png); }
+.training .info .leader { background-image:url(/share/icons/impro/24/social/leader.png); }
+.training .info .location { background-image:url(/share/icons/godmode/24/items/location.png); }
+.training .info .location .addr { font-size:12px; display:block; }
+.training .info .location .loc {
+	display:inline-block;
+	line-height:100%;
+}
+
+.training .info .desc {
+	font-size:17px;
+}
+
+
+.training .tg-warning h2 {
+	margin-top:10px;
+	text-decoration:blink;
+}
 
 .training .location span {
 	display:block;

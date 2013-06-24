@@ -29,8 +29,15 @@ namespace Impro
 
 		public static function link(\System\Template\Renderer $ren, \System\User $user)
 		{
+
+			return $ren->link_for('profile_user', self::get_name($user), array("args" => array($user), "class" => 'link-profile'));
+		}
+
+
+		public static function get_name(\System\User $user)
+		{
 			$name = $user->nick ? $user->nick:$user->get_name();
-			return $ren->link_for('profile_user', $name ? $name:$user->login, array("args" => array($user), "class" => 'link-profile'));
+			return $name ? $name:$user->login;
 		}
 
 

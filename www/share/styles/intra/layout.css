@@ -124,6 +124,12 @@ footer .footer-menu li:last-child {
 	text-align:center;
 }
 
+.working .small {
+	font-size:18px;
+	width:500px;
+	margin:0 auto;
+}
+
 .block h1 {
 	margin-top:10px;
 }

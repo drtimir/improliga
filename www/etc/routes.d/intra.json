@@ -447,21 +447,24 @@
 	["^/contacts/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"working"}]
+			["system/partial", {"template":"working"}],
+			["system/partial", {"template":"impro/static/intra/contacts", "slot":"working-desc"}]
 		]
 	}, "contacts"],
 
 	["^/wiki/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"working"}]
+			["system/partial", {"template":"working"}],
+			["system/partial", {"template":"impro/static/intra/wiki", "slot":"working-desc"}]
 		]
 	}, "wiki"],
 
 	["^/files/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"working"}]
+			["system/partial", {"template":"working"}],
+			["system/partial", {"template":"impro/static/intra/files", "slot":"working-desc"}]
 		]
 	}, "files"],
 
@@ -469,7 +472,7 @@
 	["^/terms/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[
-			["system/partial", {"template":"impro/static/intra-terms"}]
+			["system/partial", {"template":"impro/static/intra/terms"}]
 		]
 	}, "terms"]
 ]

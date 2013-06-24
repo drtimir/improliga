@@ -12,7 +12,7 @@ pwf.register('reporter', function()
 		url_detail       = '/user/status/detail.json/',
 		url_user_avatar  = '/profile/{id}/avatar/?size=40x40',
 		url_team_logo    = '/teams/{id}/logo/?size=40x40',
-		time_check       = 5000,
+		time_check       = 8000,
 		time_fade        = 200,
 		before_init      = true;
 

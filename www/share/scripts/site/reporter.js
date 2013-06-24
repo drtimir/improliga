@@ -94,11 +94,12 @@ pwf.register('reporter', function()
 		stop_glow(e.data);
 
 		if (!e.data.loading && e.data.menu === null) {
-			if (e.data.status.requests + e.data.status.notices > 0) {
-				e.data.icon.unbind('click.reporter');
-				e.data.loading = true;
-				e.data.container.addClass(selector_loader);
+			e.data.icon.unbind('click.reporter');
+			$(selector_root).bind('click.reporter', e.data, callback_close);
 
+			if (e.data.status.requests + e.data.status.notices > 0) {
+				e.data.container.addClass(selector_loader);
+				e.data.loading = true;
 				$.ajax({
 					"url":url_detail,
 					"dataType":"json",
@@ -106,9 +107,7 @@ pwf.register('reporter', function()
 					"complete":callback_detail_done,
 					"success":callback_detail_success,
 				});
-
-				$(selector_root).bind('click.reporter', e.data, callback_close);
-			}
+			} else callback_detail_empty(e.data);
 		}
 	};
 
@@ -130,6 +129,19 @@ pwf.register('reporter', function()
 	{
 		this.loading = false;
 		this.container.removeClass(selector_loader);
+	};
+
+
+	var callback_detail_empty = function(obj)
+	{
+		var inner = $('<ul class="plain"></ul>');
+		var row = $('<li></li>');
+		var avatar  = $('<div class="avatar"><img src="/share/icons/40/impro/status/empty" alt=""></div>');
+		var content = $('<div class="content">Nemám pro vás žádná nová upozornění. Nebojte, hlídám.<br>Kliknutím zavřete.</div>');
+
+		obj.menu = $('<div class="reporter-menu"/>');
+		obj.menu.append(inner.append(row.append([avatar, content])));
+		obj.container.append(obj.menu);
 	};
 
 

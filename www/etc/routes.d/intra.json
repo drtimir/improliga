@@ -358,7 +358,7 @@
 	}, "discussion_topic_create"],
 
 	["^/discussion/([^/]+)/([^/]+)/$", {
-		"layout":["intra/layout", "intra/dual"],
+		"layout":["intra/layout", "intra/dual_34_14"],
 		"modules":[
 			["impro/discussion/post_add",  {"id_board":"#{0}", "id_topic":"#{1}", "slot":"discussion_post_form"}],
 			["impro/discussion/post_list", {"id_board":"#{0}", "id":"#{1}", "slot":"left"}]

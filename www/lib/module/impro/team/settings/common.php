@@ -47,12 +47,12 @@ if (isset($propagated['team'])) {
 
 			if ($p['hq']) {
 				$p['hq']->save();
-				$team->id_hq = $p['hq']->id;
+				$team->hq = $p['hq'];
 			}
 
 			if (isset($p['loc_trainings']) && $p['loc_trainings']) {
 				$p['loc_trainings']->save();
-				$team->id_loc_trainings = $p['loc_trainings']->id;
+				$team->loc_trainings = $p['loc_trainings'];
 			}
 
 			if ($team->save()) {

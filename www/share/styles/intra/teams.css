@@ -413,7 +413,7 @@
 	display:inline-block;
 	vertical-align:top;
 	border:1px solid rgba(0,0,0,0.10);
-	background:#F6F7DC;
+	background:#f0f0f0;
 	border-radius:6px;
 	margin:0 10px 10px 0;
 }
@@ -434,10 +434,11 @@
 }
 
 .attd-list li.not-sent { box-shadow:0 0 5px #6F1C1F; }
-.attd-list li.sent { box-shadow:0 0 5px #008dd7; }
-.attd-list li.no { box-shadow:0 0 5px #EC0D15; }
-.attd-list li.yes { box-shadow:0 0 5px #23EA23; }
-.attd-list li.maybe { box-shadow:0 0 5px #FFDA2D; }
+.attd-list li.sent { background:#DBEDFF; box-shadow:0 0 5px #008dd7; }
+.attd-list li.no { background:#FFDFDF; box-shadow:0 0 5px #EC0D15; }
+.attd-list li.yes { background:#C5EBC5; box-shadow:0 0 5px #23EA23; }
+.attd-list li.maybe { background:#F6F7DC; box-shadow:0 0 5px #FFDA2D; }
+.attd-list li { box-shadow:none !important; }
 
 
 .training.off .inner {

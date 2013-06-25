@@ -6,7 +6,11 @@ namespace Impro\Event
 	{
 		const SIZE_DEFAULT = '1571x2222';
 		const SIZE_BORDER  = 30;
+		const SIZE_FOOTER_ITEMS = 300;
 		const TEXT_VS = '  vs  ';
+
+		const SHADOW_SIZE = 25;
+		const SHADOW_FUZZ = 5;
 
 		const TEXT_ALIGN_LEFT   = 1;
 		const TEXT_ALIGN_RIGHT  = 2;
@@ -16,10 +20,12 @@ namespace Impro\Event
 
 		protected static $attrs = array(
 			"event"  => array('object', "model" => 'Impro\Event'),
+			"ren"    => array('object', "model" => 'System\Template\Renderer'),
 			"width"  => array('int', "is_unsigned" => true),
 			"height" => array('int', "is_unsigned" => true),
 			"output" => array('string'),
 		);
+
 
 		private static $fonts = array(
 			'biolinum' => array(
@@ -33,6 +39,14 @@ namespace Impro\Event
 		);
 
 
+		private static $elements = array(
+			"header" => array(
+				'x' => 400,
+				'y' => 50,
+			),
+		);
+
+
 		private static $texts = array(
 			"header" => array(
 				"line-height" => 100,
@@ -40,7 +54,7 @@ namespace Impro\Event
 				"font-family" => 'biolinum',
 				"font-weight" => 'bold',
 				"color"       => 'white',
-				"x" => 500,
+				"x" => 480,
 				"y" => 200,
 				"angle" => 6,
 				"content" => array(
@@ -51,12 +65,12 @@ namespace Impro\Event
 
 			"versus" => array(
 				"line-height" => 150,
-				"font-size"   => 80,
+				"font-size"   => 90,
 				"font-family" => 'biolinum',
 				"font-weight" => 'bold',
 				"text-align"  => self::TEXT_ALIGN_CENTER,
 				"color"       => 'white',
-				"y" => 525,
+				"y" => 575,
 				"angle" => 0,
 			),
 			"cities" => array(
@@ -68,16 +82,38 @@ namespace Impro\Event
 				"color"       => 'white',
 				"angle" => 0,
 			),
+			"location" => array(
+				"line-height" => 75,
+				"font-size"   => 60,
+				"font-family" => 'biolinum',
+				"font-weight" => 'regular',
+				"color"       => 'white',
+				"text-align"  => self::TEXT_ALIGN_RIGHT,
+				"angle" => 0,
+				"x"     => 1450,
+				"y"     => 1200,
+			),
+			"footer" => array(
+				"line-height" => 30,
+				"font-size"   => 30,
+				"font-family" => 'biolinum',
+				"font-weight" => 'regular',
+				"color"       => 'white',
+				"angle" => 0,
+				"x"     => 500,
+				"y"     => 500,
+			),
 		);
 
 		private $canvas;
 		private $colors = array();
 
 
-		public static function generate(\Impro\Event $e, $size=self::SIZE_DEFAULT)
+		public static function generate(\System\Template\Renderer $ren, \Impro\Event $e, $size=self::SIZE_DEFAULT)
 		{
 			$size = explode('x', $size);
 			$poster = new self(array(
+				"ren"    => $ren,
 				"event"  => $e,
 				"width"  => $size[0],
 				"height" => $size[1],
@@ -89,6 +125,8 @@ namespace Impro\Event
 				->draw_background()
 				->draw_header()
 				->draw_team_names()
+				->draw_location()
+				->draw_footer()
 				->save();
 		}
 
@@ -119,6 +157,8 @@ namespace Impro\Event
 				->allocate_color('black', '#000')
 				->allocate_color('rtc', '#193d5f')
 				->allocate_color('lbc', '#301110')
+				->allocate_color('rtc', '#F7FA3E')
+				->allocate_color('lbc', '#51110F')
 				->allocate_color('back', '#000');
 			return $this;
 		}
@@ -164,8 +204,7 @@ namespace Impro\Event
 				array('x' => round($this->width - 3*$this->width/8), 'y' => $this->height),
 			);
 
-			$mask = new \Imagick();
-			$mask->newImage($this->width, $this->height, 'transparent');
+			$mask = $this->create_layer();
 
 			$draw = new \ImagickDraw();
 			$draw->setFillColor($this->color('#fff'));
@@ -209,8 +248,7 @@ namespace Impro\Event
 			$metrics = array();
 			$rect_width = 0;
 
-			$helper = new \Imagick();
-			$helper->newImage($this->width, $this->height, 'transparent');
+			$helper = $this->create_layer();
 
 			foreach ($css['content'] as $text) {
 				$m = $this->text($css, $text, $line++, $helper);
@@ -237,15 +275,21 @@ namespace Impro\Event
 			);
 
 			$helper->drawImage($draw);
+			$helper->trimImage(.3);
 
-			$shadow = clone $helper;
-			$shadow->negateImage(false);
-			$shadow->blurImage(25, 5);
-
-			$this->canvas->compositeImage($shadow, $shadow->getImageCompose(), 0, 0);
-			$this->canvas->compositeImage($helper, $helper->getImageCompose(), 0, 0);
+			$this->composite($helper, self::$elements['header']['x'], self::$elements['header']['y']);
+			return $this;
+		}
 
 
+		private function composite(\Imagick $helper, $x, $y, $use_shadow = true)
+		{
+			if ($use_shadow) {
+				$shadow = self::get_shadow($helper);
+				$this->canvas->compositeImage($shadow, $shadow->getImageCompose(), $x - self::SHADOW_SIZE, $y - self::SHADOW_SIZE);
+			}
+
+			$this->canvas->compositeImage($helper, $helper->getImageCompose(), $x, $y);
 			return $this;
 		}
 
@@ -285,8 +329,7 @@ namespace Impro\Event
 
 		private function draw_team_names()
 		{
-			$helper = new \Imagick();
-			$helper->newImage($this->width, $this->height, 'transparent');
+			$helper = $this->create_layer();
 			$helper->setFormat('png');
 
 			// Add versus sign to the center
@@ -328,9 +371,8 @@ namespace Impro\Event
 				$this->text($css, $text, 0, $helper);
 			}
 
-
 			// Add home team logo above its label
-			if ($home->logo) {
+			if ($home->logo->is_image()) {
 				$logo = new \Imagick($home->logo->get_path(true));
 				$logo->trimImage(0.3);
 				$logo->adaptiveResizeImage(null, self::LOGO_HEIGHT);
@@ -342,7 +384,7 @@ namespace Impro\Event
 			}
 
 			// Add away team logo above its label
-			if ($away->logo) {
+			if ($away->logo->is_image()) {
 				$logo = new \Imagick($away->logo->get_path(true));
 				$logo->trimImage(0.3);
 				$logo->adaptiveResizeImage(null, self::LOGO_HEIGHT);
@@ -355,8 +397,76 @@ namespace Impro\Event
 
 			$helper->trimImage(0.3);
 
-			$this->canvas->compositeImage($helper, $helper->getImageCompose(), ($this->width - $helper->getImageWidth())/2, self::$texts['versus']['y']);
+			$x = ($this->width - $helper->getImageWidth())/2;
+			$y = self::$texts['versus']['y'];
+
+			$this->composite($helper, $x, $y);
 			return $this;
+		}
+
+
+		private function draw_location()
+		{
+			$css = self::$texts['location'];
+			$helper = $this->create_layer();
+			$this->text($css, $this->ren->format_date($this->event->start, 'human'), 0, $helper);
+
+			if ($this->event->location) {
+				$location = $this->event->location;
+
+				$this->text($css, $location->name, 1, $helper);
+				$this->text($css, $location->addr, 2, $helper);
+
+			}
+
+			$helper->trimImage(0.3);
+			$this->composite($helper, $css['x'] - $helper->getImageWidth(), $css['y']);
+
+			return $this;
+		}
+
+
+		private function draw_footer()
+		{
+			$helper = $this->create_layer();
+			$css = self::$texts['footer'];
+
+			$this->text($css, 'Vygenerováno pomocí portálu Improliga.cz', 0, $helper);
+			$helper->trimImage(0.3);
+
+			$this->composite($helper, self::SIZE_BORDER*1.8, $this->height - 2.5*self::SIZE_BORDER);
+
+			$logo = new \Imagick(ROOT.'/share/logo.png');
+			$logo->setFormat('png');
+			$logo->adaptiveResizeImage(self::SIZE_FOOTER_ITEMS, self::SIZE_FOOTER_ITEMS);
+			$this->composite($logo, 800, 1800);
+			return $this;
+		}
+
+
+		private function create_layer()
+		{
+			$layer = new \Imagick();
+			$layer->newImage($this->width, $this->height, 'transparent');
+			return $layer;
+		}
+
+
+		public static function get_shadow(\Imagick $img)
+		{
+			$template = clone $img;
+			$template->trimImage(.3);
+			$template->modulateImage(0, 0, 0);
+
+			$shadow = new \Imagick();
+			$shadow->newImage(
+				$template->getImageWidth() + 2*self::SHADOW_SIZE,
+				$template->getImageHeight() + 2*self::SHADOW_SIZE,
+				'transparent'
+			);
+			$shadow->compositeImage($template, $template->getImageCompose(), self::SHADOW_SIZE, self::SHADOW_SIZE);
+			$shadow->blurImage(self::SHADOW_SIZE, self::SHADOW_FUZZ);
+			return $shadow;
 		}
 
 

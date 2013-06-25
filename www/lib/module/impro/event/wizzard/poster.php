@@ -45,7 +45,7 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		$p = $f->get_data();
 
 		if (isset($p['generate_poster'])) {
-			$poster = \Impro\Event\Poster::generate($event);
+			$poster = \Impro\Event\Poster::generate($ren, $event);
 			v($poster);
 			exit;
 		} else if (isset($p['cancel'])) {

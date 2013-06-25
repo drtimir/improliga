@@ -1,12 +1,15 @@
-.form-input input,
+.pwform .form-input input,
 .pwform .datetime_picker .container_time,
 .pwform .datetime_picker .container_date,
 .pwform .rte_content
 {
 	border-radius:4px;
-	padding:5px 8px;
+	padding:0 8px;
 	border:1px solid #999;
 	background:#fefefe;
+	font-size:13px;
+	line-height:29px;
+	height:29px;
 }
 
 .pwform .rte_content {
@@ -124,3 +127,109 @@
 	font-size:12px;
 	line-height:100%;
 }
+
+
+.deco-checkbox,
+.deco-radio,
+.pwform .deco-checkbox .input,
+.pwform .deco-radio .input
+{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:top;
+	padding:0;
+}
+
+.deco-checkbox,
+.deco-radio
+{
+	margin-right:6px;
+	vertical-align:middle;
+}
+
+.deco-checkbox .input,
+.deco-radio .input
+{
+	margin:0 !important;
+	cursor:pointer;
+	background:url(/share/pixmaps/intra/sprite.png) -40px 0 no-repeat;
+}
+
+.deco-checkbox .input:hover,
+.deco-radio .input:hover
+{
+	background-position:-58px 0;
+}
+
+.deco-checkbox .input.checked { background-position:-40px -18px; }
+.deco-checkbox .input.checked:hover { background-position:-58px -18px; }
+.deco-radio .input.checked { background-position:-40px -36px; }
+.deco-radio .input.checked:hover { background-position:-58px -36px; }
+
+
+.deco-select {
+	display:inline-block;
+	position:relative;
+}
+
+.deco-select .label {
+	display:block;
+	height:29px;
+	line-height:29px;
+	border:1px solid #999;
+	background:#fff;
+	border-radius:3px;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.deco-select .label .current {
+	padding:0 10px;
+}
+
+.deco-select .label .button {
+	height:29px;
+	line-height:29px;
+	display:inline-block;
+	padding:0 14px;
+	vertical-align:top;
+	border-radius:0;
+	background:#999 url(/share/pixmaps/intra/sprite.png) 8px 11px no-repeat;
+	border:none;
+}
+
+.deco-select .label:hover .button {
+	background-color:#b82429
+}
+
+.deco-select .menu {
+	position:absolute;
+	left:0;
+	padding:0;
+	margin:0;
+	z-index:1000;
+	min-width:150px;
+	border-radius:5px;
+	border:1px solid #ccc;
+	overflow:hidden;
+	font-size:13px;
+}
+
+.deco-select .menu li {
+	padding:3px 10px;
+	line-height:auto;
+	background:#fff;
+	margin:0;
+	cursor:pointer;
+}
+
+.deco-select .menu li.selected {
+	background:#ccc;
+}
+
+.deco-select .menu li:hover {
+	background:#b82429;
+	color:#fff;
+}
+

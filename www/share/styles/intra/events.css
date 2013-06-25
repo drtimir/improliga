@@ -12,7 +12,6 @@
 	font-size:13px;
 }
 
-
 .event_list .event {
 	border-bottom:1px solid #efefef;
 	padding-bottom:10px;
@@ -62,7 +61,7 @@
 }
 
 .event_detail .text.short {
-	padding:15px;
+	padding:1px 15px;
 	background:#efefef;
 	margin-bottom:20px;
 	color:#000;
@@ -70,11 +69,13 @@
 
 .event_detail {
 	padding-left:5px;
+	padding-top:10px;
 }
 
 .event_detail .left {
 	width:500px;
 	float:left;
+	position:relative;
 }
 
 .event_detail .right {
@@ -89,59 +90,6 @@
 {
 	display:block;
 }
-
-.event_detail .controls {
-	margin:15px 0;
-	padding:0;
-	border-right:1px solid #efefef;
-}
-
-.event_detail .controls li {
-	margin:0;
-	list-style:none;
-}
-
-.event_detail .controls a {
-	padding:5px 15px;
-	line-height:16px;
-	display:block;
-}
-
-.event_detail .controls a:hover {
-	background:#efefef;
-}
-
-.event_detail .controls .lt {
-	vertical-align:top;
-}
-.event_detail .controls .icon {
-	margin-right:10px;
-}
-
-.events .controls {
-	height:19px;
-	line-height:19px;
-	vertical-align:middle;
-	margin:0 0 10px;
-}
-
-.events .controls a:first-child {
-	float:left;
-}
-.events .controls a:last-child {
-	float:right;
-}
-
-.events .controls a:first-child .lt ,
-.events .controls a:last-child .icon
-{
-	margin-left:5px;
-}
-
-.events .controls a span {
-	vertical-align:middle;
-}
-
 
 .event_detail .participants {
 	font-size:28px;
@@ -164,9 +112,11 @@
 	margin:15px 0;
 }
 
-.event_detail .info .date { background-image:url(/share/icons/impro/16/objects/datetime.png); }
-.event_detail .info .time { background-image:url(/share/icons/impro/16/objects/time.png); }
-.event_detail .info .location { background-image:url(/share/icons/godmode/16/items/location.png); }
+.event_detail .info .date { background-image:url(/share/icons/16/impro/objects/datetime); }
+.event_detail .info .time { background-image:url(/share/icons/16/impro/objects/time); }
+.event_detail .info .price { background-image:url(/share/icons/16/impro/objects/price); }
+.event_detail .info .owner { background-image:url(/share/icons/16/godmode/items/user); }
+.event_detail .info .location { background-image:url(/share/icons/16/godmode/items/location); }
 .event_detail .info .location .addr { font-size:12px; display:block; }
 
 .event_detail .info li {
@@ -482,4 +432,8 @@
 .layout_38 .event_list .desc {
 	padding-right:0;
 	padding-left:15px;
+}
+
+.event_detail .controls li {
+	display:inline-block;
 }

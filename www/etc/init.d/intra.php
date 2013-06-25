@@ -15,6 +15,7 @@ if (preg_match("/^intra/", $_SERVER['HTTP_HOST'])) {
 			}
 		}
 
+		$request->intranet = true;
 		\Impro\User::load_members($request->user());
 
 	} else {

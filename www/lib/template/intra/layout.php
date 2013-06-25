@@ -13,7 +13,37 @@ echo html($locales->get_lang());
 
 		$renderer->content_for("head", '<script type="text/javascript">'.implode('', $script).'</script>');
 
-		$ren->content_for('styles',  "site/lib/intranet");
+		$ren->content_for('styles', 'pwf/elementary');
+		$ren->content_for('styles', 'pwf/calendar');
+		$ren->content_for('styles', 'pwf/browser_control');
+		$ren->content_for('styles', 'pwf/form');
+		$ren->content_for('styles', 'pwf/form/datetimepicker');
+		$ren->content_for('styles', 'pwf/form/datepicker');
+		$ren->content_for('styles', 'pwf/form/timepicker');
+		$ren->content_for('styles', 'pwf/form/picker_image');
+		$ren->content_for('styles', 'pwf/form/autocompleter');
+		$ren->content_for('styles', 'pwf/form/rte');
+		$ren->content_for('styles', 'pwf/form/tabs');
+		$ren->content_for('styles', 'form/search_tool');
+
+		$ren->content_for('styles', 'calendar');
+		$ren->content_for('styles', 'lib/fancybox');
+		$ren->content_for('styles', 'intra/layout');
+		$ren->content_for('styles', 'intra/common');
+		$ren->content_for('styles', 'intra/header');
+		$ren->content_for('styles', 'intra/menu_left');
+		$ren->content_for('styles', 'intra/calendar');
+		$ren->content_for('styles', 'intra/news');
+		$ren->content_for('styles', 'intra/events');
+		$ren->content_for('styles', 'intra/discussions');
+		$ren->content_for('styles', 'intra/forms');
+		$ren->content_for('styles', 'intra/teams');
+		$ren->content_for('styles', 'impro/team_comments');
+		$ren->content_for('styles', 'intra/profile');
+		$ren->content_for('styles', 'intra/rte');
+		$ren->content_for('styles', 'intra/requests');
+		$ren->content_for('styles', 'intra/reporter');
+
 		$ren->content_for('scripts', "site/lib/intranet");
 
 		echo $ren->content_from('head');

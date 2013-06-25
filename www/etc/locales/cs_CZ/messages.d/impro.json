@@ -99,6 +99,7 @@
 	"impro_event_price_value":"Vstupné: %s Kč",
 	"impro_event_price_value_both":"Vstupné: %s Kč, Studenti: %s Kč",
 	"impro_event_lists_empty":"Žádné události",
+	"impro_event_manager":"Organizátor",
 
 	"attr_impro_event_name":"Název události",
 	"attr_impro_event_location":"Místo",

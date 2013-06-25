@@ -48,7 +48,7 @@ body {
 .block.right_small
 {
 	float:left;
-	width:400px;
+	width:380px;
 }
 
 .block.left_big {
@@ -70,7 +70,7 @@ body {
 
 .block.layout_11 { width:790px; }
 .block.layout_78 { width:700px; }
-.block.layout_34 { width:600px; }
+.block.layout_34 { width:580px; }
 .block.layout_14 { width:180px; }
 .block.layout_18 { width:100px; }
 .block.layout_38 { width:270px; padding-left:15px; }

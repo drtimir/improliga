@@ -7,6 +7,13 @@ echo div('event_detail');
 
 		echo $ren->heading($event->name);
 
+		if ($request->intranet) {
+			echo ul('plain controls', array(
+				li($ren->label_for_url('event_edit', $locales->trans('godmode_edit'), 'impro/actions/edit', 16, args($event))),
+				li($ren->label_for_url('event_edit_step', $locales->trans('godmode_delete'), 'impro/actions/delete', 16, args($event, \Impro\Event::ID_WIZZARD_STEP_CANCEL))),
+			));
+		}
+
 		$date = '';
 		if (is_null($event->end)) {
 			$date = $locales->format_date($event->start, 'human-full-date');
@@ -40,6 +47,10 @@ echo div('event_detail');
 			if ($event->has_booking) {
 				$total = $event->reservations->count();
 				echo li($event->capacity.'/'.$total, 'icon booking');
+			}
+
+			if ($request->intranet) {
+				echo li($locales->trans('impro_event_manager').': '.\Impro\User::link($ren, $event->author), 'icon owner');
 			}
 		close('ul');
 

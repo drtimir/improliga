@@ -1,41 +1,43 @@
-.pwform .form-input input,
-.pwform .datetime_picker .container_time,
-.pwform .datetime_picker .container_date,
+.pwform input,
+.pwform .timepicker .inner,
 .pwform .rte_content
 {
 	border-radius:4px;
 	padding:0 8px;
 	border:1px solid #999;
 	background:#fefefe;
-	font-size:13px;
 	line-height:29px;
 	height:29px;
+}
+
+.pwform input,
+.pwform .datepicker input,
+.pwform .timepicker .inner input,
+.pwform .rte_content
+{
+	font-size:13px;
 }
 
 .pwform .rte_content {
 	min-height:150px;
 }
 
-.form-input input,
-.pwform .datetime_picker input.time,
-.pwform .datetime_picker input.date,
-.pwform .datetime_picker .sep
-{
-	font-size:16px;
-}
-
-.pwform .datetime_picker input.time,
-.pwform .datetime_picker input.date
-{
+.pwform .timepicker .inner input {
+	border:none;
+	line-height:100%;
+	background:none;
+	border-radius:0;
 	padding:0;
 }
 
-.form-input input:active,
-.form-input input:focus,
-.pwform .datetime_picker .container_time:active,
-.pwform .datetime_picker .container_time:focus,
-.pwform .datetime_picker .container_date:active,
-.pwform .datetime_picker .container_date:focus
+
+.pwform input:active,
+.pwform input:focus,
+.pwform .datepicker input:active,
+.pwform .datepicker input:focus
+.pwform .timepicker .inner:active,
+.pwform .timepicker .inner:focus,
+.deco-select .label:hover
 {
 	border-color:#b82429;
 }
@@ -48,10 +50,6 @@
 	line-height:31px;
 	vertical-align:middle;
 	width:150px;
-}
-
-.pwform .form-select .input-label-left {
-	line-height:22px;
 }
 
 .pwform .form-text {
@@ -108,13 +106,6 @@
 .pwform .options li label {
 	width:auto;
 	padding-left:0;
-}
-
-.pwform input[type=radio],
-.pwform input[type=checkbox]
-{
-	vertical-align:middle;
-	margin-top:0;
 }
 
 .pwform .widget-image .options {
@@ -200,7 +191,8 @@
 }
 
 .deco-select .label:hover .button {
-	background-color:#b82429
+	background-color:#b82429;
+	background-position:8px -7px;
 }
 
 .deco-select .menu {
@@ -233,3 +225,6 @@
 	color:#fff;
 }
 
+.pwform .datepicker .calendar .day {
+	width:20px;
+}

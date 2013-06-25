@@ -18,22 +18,24 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	//~ if (user()->has_right)
 
-	if ($request->user()->has_right('publish_event')) {
-		$f->input(array(
-			"type" => 'checkbox',
-			"name" => 'published',
-			"label" => $locales->trans('impro_event_publish'),
-		));
+	if (!$event->published) {
+		if ($request->user()->has_right('publish_event')) {
+			$f->input(array(
+				"type" => 'checkbox',
+				"name" => 'published',
+				"label" => $locales->trans('impro_event_publish'),
+			));
 
-		$f->text('hint1', $locales->trans('impro_event_wizzard_published_hint'));
-	} else {
-		$f->input(array(
-			"type" => 'checkbox',
-			"name" => 'publish_wait',
-			"label" => $locales->trans('impro_event_publish_queue'),
-		));
+			$f->text('hint1', $locales->trans('impro_event_wizzard_published_hint'));
+		} else {
+			$f->input(array(
+				"type" => 'checkbox',
+				"name" => 'publish_wait',
+				"label" => $locales->trans('impro_event_publish_queue'),
+			));
 
-		$f->text('hint1', $locales->trans('impro_event_wizzard_published_rights_hint'));
+			$f->text('hint1', $locales->trans('impro_event_wizzard_published_rights_hint'));
+		}
 	}
 
 	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));

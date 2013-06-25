@@ -28,7 +28,6 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 			"name"    => 'has_'.$tool,
 			"label"   => $locales->trans('impro_event_tools_'.$tool),
 			"options" => $opts,
-			"multiple" => true,
 		));
 	}
 

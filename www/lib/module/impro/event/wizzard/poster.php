@@ -6,6 +6,9 @@ def($new, false);
 if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 	$data = $event->get_data();
+	$data['generate_poster'] = true;
+	$data['button_prev'] = true;
+	$data['button_cancel'] = true;
 
 	$f = $ren->form(array(
 		"class"   => array('event_wizzard', 'event_poster'),
@@ -30,19 +33,22 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 		"required" => true,
 	));
 
-	$f->input_checkbox('generic_poster', $locales->trans('impro_event_generic_poster'));
-	$f->text('hint2', $locales->trans('impro_event_wizzard_generic_poster_hint'));
 	$f->input_checkbox('generic_tickets', $locales->trans('impro_event_generic_tickets'));
 	$f->text('hint3', $locales->trans('impro_event_wizzard_generic_tickets_hint'));
 
 	$f->input_submit('prev', $locales->trans('impro_event_wizzard_prev'));
 	$f->input_submit('cancel', $locales->trans('impro_event_wizzard_cancel'));
+	$f->input_submit('generate_poster', $locales->trans('impro_event_generic_poster'));
 	$f->submit($locales->trans('impro_event_wizzard_next'));
 
 	if ($f->passed()) {
 		$p = $f->get_data();
 
-		if (isset($p['cancel'])) {
+		if (isset($p['generate_poster'])) {
+			$poster = \Impro\Event\Poster::generate($event);
+			v($poster);
+			exit;
+		} else if (isset($p['cancel'])) {
 			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {
 			$event->update_attrs($p);

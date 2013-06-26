@@ -13,7 +13,7 @@ echo div('attd-header');
 		Tag::p(array(
 			"content" => $locales->trans(
 				'intra_team_upcoming_tg',
-				$ren->format_date($latest->start, 'human-date'),
+				$ren->link_for('team_training', $ren->format_date($latest->start, 'human-date'), args($team, $latest)),
 				$ren->format_date($latest->start, 'human-time'),
 				$latest->location ? $locales->trans('intra_team_tg_loc', $latest->location->name):$locales->trans('intra_team_tg_loc_usual'),
 				$locales->trans($latest->open ? 'intra_tg_open':'intra_tg_closed')

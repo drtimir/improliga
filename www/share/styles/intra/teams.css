@@ -397,6 +397,7 @@
 	background:#efefef;
 	color:#000;
 	border:1px solid transparent;
+	border-radius:5px;
 }
 
 .attd .status.not-sent { background:#6F1C1F; color:#fff }
@@ -405,7 +406,7 @@
 .attd .status.yes { background:#23EA23; }
 .attd .status.maybe { background:#FFDA2D; }
 
-.attd .status:hover {
+.attd a.status:hover {
 	border-color:#666;
 }
 

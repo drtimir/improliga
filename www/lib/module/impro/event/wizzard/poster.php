@@ -46,8 +46,11 @@ if ($event = Impro\Event::wizzard_for($request->user(), $id, $new)) {
 
 		if (isset($p['generate_poster'])) {
 			$poster = \Impro\Event\Poster::generate($ren, $event);
-			v($poster);
-			exit;
+			$poster->cache();
+			$event->image = $poster;
+			$event->save();
+
+			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_POSTER)));
 		} else if (isset($p['cancel'])) {
 			$flow->redirect($ren->url('event_edit_step', array($event, Impro\Event::ID_WIZZARD_STEP_CANCEL)));
 		} else {

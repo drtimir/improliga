@@ -4,6 +4,7 @@ namespace Impro\Event
 {
 	class Poster extends \System\Model\Attr
 	{
+		const DIR_TMP = '/var/tmp/posters';
 		const SIZE_DEFAULT = '1571x2222';
 		const SIZE_BORDER  = 30;
 		const SIZE_FOOTER_ITEMS = 300;
@@ -479,11 +480,13 @@ namespace Impro\Event
 
 		private function save()
 		{
-			//~ $status = imagepng($this->canvas, $this->get_file());
-			header('Content-Type: image/png');
-			echo $this->canvas;
-			exit;
-			return $this;
+			\System\Directory::check(ROOT.self::DIR_TMP);
+
+			$path = ROOT.self::DIR_TMP.'/'.$this->event->id.'.jpg';
+			$this->canvas->setFormat('jpg');
+			$this->canvas->writeImage($path);
+
+			return \System\Image::from_path($path);
 		}
 
 

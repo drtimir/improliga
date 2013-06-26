@@ -20,6 +20,7 @@
 
 .pwform .rte_content {
 	min-height:150px;
+	height:auto;
 }
 
 .pwform .timepicker .inner input {

@@ -54,13 +54,6 @@ echo div('event_detail');
 			}
 		close('ul');
 
-
-
-		if ($event->desc_short) {
-			echo div('text short', to_html($ren, $event->desc_short));
-		}
-
-
 		echo div('desc');
 
 			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
@@ -73,6 +66,9 @@ echo div('event_detail');
 
 		close('div');
 
+		if ($event->desc_short) {
+			echo div('text short', to_html($ren, $event->desc_short));
+		}
 
 		echo div('text full', to_html($ren, $event->desc_full));
 

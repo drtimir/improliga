@@ -137,9 +137,15 @@
 }
 
 .event_detail .text.short {
-	background:rgba(240,201,0,.4);
+	background:none;
 	border-radius:5px;
+	padding:0;
 	color:#fff;
+}
+
+
+.event_detail .short p {
+	margin:0 0 10px;
 }
 
 

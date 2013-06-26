@@ -21,7 +21,8 @@ if (preg_match("/^intra/", $_SERVER['HTTP_HOST'])) {
 	} else {
 		if (strpos($request->path, '/user/request/') !== 0) {
 			$login_path = \System\Router::get_url($request->host, 'login');
-			if ($request->path != $login_path) {
+
+			if (strpos($request->path, $login_path) !== 0) {
 				redirect_now($login_path.'?redirect='.$request->path);
 			}
 		}

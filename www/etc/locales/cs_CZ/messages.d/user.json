@@ -15,5 +15,14 @@
 	"user_passwd_new":"Nové heslo",
 	"user_passwd_recap":"Potvrzení hesla",
 
-	"user_msg_fill_name":"Nepustím vás dál, dokud mi neřeknete, jak se jmenujete."
+	"user_msg_fill_name":"Nepustím vás dál, dokud mi neřeknete, jak se jmenujete.",
+
+	"user_facebook_confirm":"Ověření přihlášení",
+	"user_facebook_confirm_desc":"Přihlášení pomocí Facebooku bylo úspěšné. Nyní stačí pro kontrolu zadat vaše uživatelské jméno a heslo a napříště se již budete moci snadno přihlásit pomocí Facebooku.",
+
+	"user_login_via_gateway":"Přihlásit přes portál",
+	"user_login_via_gateway_desc":"Nabízíme možnost přihlásit se k vašemu účtu pomocí sociálních služeb. Pokud jste líní zadávat nebo pamatovat si více hesel, je toto možnost pro vás.",
+	"user_login_via_facebook":"Přihlásit pomocí Facebooku",
+
+	"":""
 }

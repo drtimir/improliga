@@ -1,4 +1,4 @@
-737e6e9af7335e7d15b67b2df1fb1521  lib/include/system.php
+758a7ccd263b68ce08eb06464ee1614d  lib/include/system.php
 02dde35596706a3ab268d149f1be4328  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 6ae434029f345e2287d7389050106dc4  bin/santa
@@ -21,7 +21,7 @@ e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 5c80f00e4db31fca451d8d081892501f  etc/default/conf.d/site.json
 733695f8cd1f27bcefb4fb4d38e17cc1  etc/default/routes.d/forms.json
 bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
-a67844492cf841ff134e7ad7dfada44b  etc/init.d/page.php
+bec2e8a69e239e2bbb8612ee62341e73  etc/init.d/page.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
 c5bd2f818b70976a145212111426d4ab  etc/locales/cs_CZ/messages.d/core.json
 9d62f39e0e8451ae6b6cae7706b6e93e  etc/locales/cs_CZ/messages.d/dump_bar.json

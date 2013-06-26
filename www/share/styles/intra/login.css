@@ -64,3 +64,15 @@
 .page_login .context {
 	margin-bottom:30px;
 }
+
+.login-gateways {
+	padding-top:20px;
+}
+
+.login-gateways .desc {
+	font-size:14px;
+}
+
+.login-gateways li {
+	display:inline-block;
+}

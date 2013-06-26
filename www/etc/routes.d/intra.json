@@ -25,8 +25,17 @@
 	["^/login/$", {
 		"title":"Přihlášení",
 		"layout":["intra/login"],
-		"modules":[["impro/user/login"]]
+		"modules":[
+			["impro/user/login"],
+			["system/partial", {"template":"impro/user/login/gateways"}]
+		]
 	}, "login"],
+
+	["^/login/facebook/$", {
+		"layout":["intra/login"],
+		"init":"facebook",
+		"modules":[["impro/user/login_facebook"]]
+	}, "login_facebook"],
 
 	["^/logout/$", {
 		"modules":[

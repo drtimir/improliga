@@ -157,7 +157,16 @@
 .event_detail .info .time { background-image:url(/share/icons/impro/16/objects/time_white.png); }
 .event_detail .info .price { background-image:url(/share/icons/impro/16/objects/price.png); }
 .event_detail .info .location { background-image:url(/share/icons/godmode/16/items/location.png); }
-.event_detail .info .location .addr { font-size:12px; display:block; }
+.event_detail .info .location .name {
+	margin-bottom:2px;
+}
+
+.event_detail .info .location .addr,
+.event_detail .info .location .site
+{
+	font-size:12px;
+	display:block;
+}
 
 .event_detail .info li {
 	background-position:left 1px;

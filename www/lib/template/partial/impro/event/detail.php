@@ -29,7 +29,11 @@ echo div('event_detail');
 			}
 
 			if ($event->location) {
-				echo li(array($event->location->name, span('addr', $event->location->addr)), 'icon location');
+				echo li(array(
+					span('name', $event->location->name),
+					span('addr', $event->location->addr),
+					$event->location->site ? span('site', $ren->link_ext($event->location->site, $event->location->site)):'',
+				), 'icon location');
 			}
 
 			if ($event->price) {

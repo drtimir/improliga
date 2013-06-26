@@ -25,7 +25,10 @@ echo div('attd');
 
 		Tag::tbody();
 			foreach ($members as $member) {
-				Tag::tr(array("class" => ($row ++) % 2 ? 'odd':'even'));
+				echo tr(array(
+					($row ++) % 2 ? 'odd':'even',
+					$member->user->id == $request->user()->id ? 'me':'not-me',
+				));
 					Tag::th(array(
 						'class'   => 'name',
 						'content' => \Impro\User::link($ren, $member->user),

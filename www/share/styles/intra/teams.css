@@ -384,6 +384,10 @@
 	background-color:#efefef;
 }
 
+.attd tr.me {
+	background-color:#D1E9F5;
+}
+
 .attd .status {
 	display:inline-block;
 	width:24px;

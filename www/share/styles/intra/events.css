@@ -117,6 +117,7 @@
 .event_detail .info .price { background-image:url(/share/icons/16/impro/objects/price); }
 .event_detail .info .owner { background-image:url(/share/icons/16/godmode/items/user); }
 .event_detail .info .location { background-image:url(/share/icons/16/godmode/items/location); }
+.event_detail .info .booking { background-image:url(/share/icons/16/impro/objects/booking); }
 .event_detail .info .location .name {
 	display:block;
 	margin-bottom:3px;

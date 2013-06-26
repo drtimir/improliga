@@ -118,10 +118,12 @@
 	vertical-align:middle;
 }
 
-
+.event_detail h1 {
+	margin-bottom:15px;
+}
 .event_detail .participants {
 	font-size:28px;
-	text-align:center;
+	text-align:left;
 	margin-bottom:20px;
 }
 
@@ -143,6 +145,10 @@
 	color:#fff;
 }
 
+.event_detail .text.full {
+	font-size:15px;
+}
+
 
 .event_detail .short p {
 	margin:0 0 10px;
@@ -157,8 +163,15 @@
 .event_detail .info .time { background-image:url(/share/icons/impro/16/objects/time_white.png); }
 .event_detail .info .price { background-image:url(/share/icons/impro/16/objects/price.png); }
 .event_detail .info .location { background-image:url(/share/icons/godmode/16/items/location.png); }
+.event_detail .info .booking { background-image:url(/share/icons/16/impro/objects/booking); }
 .event_detail .info .location .name {
 	margin-bottom:2px;
+}
+
+.event_detail .info .booking .action,
+.event_detail .info .booking .count
+{
+	display:block;
 }
 
 .event_detail .info .location .addr,

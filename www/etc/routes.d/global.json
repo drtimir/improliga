@@ -135,6 +135,12 @@
 		]
 	}, "event"],
 
+	["^/udalosti/([^/]+)/rezervace/$", {
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+		]
+	}, "event_booking"],
+
 	["^/intranet/$", {
 		"modules":[
 			["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]

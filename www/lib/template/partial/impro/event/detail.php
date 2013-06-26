@@ -14,6 +14,19 @@ echo div('event_detail');
 			));
 		}
 
+
+		echo div('desc');
+
+			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
+				echo div('participants', array(
+					div('part home', $ren->link_for('team', $event->team_home->name, array("args" => array($event->team_home)))),
+					span('vs', 'vs'),
+					div('part away', $ren->link_for('team', $event->team_away->name, array("args" => array($event->team_away)))),
+				));
+			}
+
+		close('div');
+
 		$date = '';
 		if (is_null($event->end)) {
 			$date = $locales->format_date($event->start, 'human-full-date');
@@ -48,27 +61,38 @@ echo div('event_detail');
 			}
 
 
-			if ($event->has_booking) {
+			if ($event->use_booking) {
 				$total = $event->reservations->count();
-				echo li($event->capacity.'/'.$total, 'icon booking');
+
+				if (($free = $event->capacity - $total) < 0) {
+					$free = 0;
+				}
+
+				if ($free > 0) {
+					$action = $ren->link_for('event_booking', $locales->trans('impro_event_book'), array(
+						"args"  => array($event),
+						"class" => 'action',
+					));
+
+
+					$free_str = 'impro_event_free';
+
+					if ($free < 4) $free_str = 'impro_event_free_four';
+					if ($free == 1) $free_str = 'impro_event_free_one';
+
+					$count = span('count', $locales->trans($free_str, $free));
+				} else {
+					$action = span('action', $locales->trans('impro_event_sold_out'));
+					$count = '';
+				}
+
+				echo li(array($action, $count), 'icon booking');
 			}
 
 			if ($request->intranet) {
 				echo li($locales->trans('impro_event_manager').': '.\Impro\User::link($ren, $event->author), 'icon owner');
 			}
 		close('ul');
-
-		echo div('desc');
-
-			if ($event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away) {
-				echo div('participants', array(
-					div('part home', $ren->link_for('team', $event->team_home->name, array("args" => array($event->team_home)))),
-					span('vs', 'vs'),
-					div('part away', $ren->link_for('team', $event->team_away->name, array("args" => array($event->team_home)))),
-				));
-			}
-
-		close('div');
 
 		if ($event->desc_short) {
 			echo div('text short', to_html($ren, $event->desc_short));

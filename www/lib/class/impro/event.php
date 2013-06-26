@@ -54,7 +54,7 @@ namespace Impro
 			"has_photo"     => array('int', "default" => 0),
 
 			"participants"  => array('has_many', "model" => 'Impro\Event\Participant'),
-			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking')
+			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking'),
 		);
 
 

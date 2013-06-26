@@ -82,6 +82,7 @@ echo html($locales->get_lang());
 				echo ul('plain footer-menu', array(
 					li($ren->link('http://www.improliga.cz/', $locales->trans('intra_public'))),
 					li($ren->link_for('terms', $locales->trans('intra_terms'))),
+					li($ren->link_for('support', $locales->trans('intra_support'))),
 				));
 
 				echo span('cleaner', '');

@@ -105,3 +105,34 @@
 	line-height:22px;
 	width:auto;
 }
+
+
+.support ul .l,
+.support ul .r
+{
+	vertical-align:top;
+}
+
+.support ul .l {
+	display:inline-block;
+	width:40px;
+	margin-right:10px;
+}
+
+.support ul .r {
+	display:inline-block;
+	width:390px;
+}
+
+.support ul .contacts {
+	padding:0;
+}
+
+.support ul .contacts li {
+	margin-bottom:3px;
+}
+
+.support .name {
+	font-size:18px;
+	margin-bottom:10px;
+}

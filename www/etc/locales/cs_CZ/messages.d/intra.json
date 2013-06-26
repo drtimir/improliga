@@ -14,6 +14,7 @@
 	"intra_events":"Události",
 	"intra_public":"Veřejná část",
 	"intra_terms":"Podmínky použití",
+	"intra_support":"Podpora",
 
 	"intra_user_teams":"Týmy",
 	"intra_user_contacts":"Kontakty",
@@ -35,6 +36,8 @@
 
 	"intra_user_login":"Přihlášení",
 	"intra_user_do_login":"Přihlásit",
+
+	"intra_support_desc":"Něco nefunguje a potřebujete pomoc? Nevíte si s něčím rady? Vyhrožuje vám někdo přes intranet? Naše zpomalená technická podpora s tím možná něco udělá.",
 
 
 	"intra_team_settings_common":"Obecné",

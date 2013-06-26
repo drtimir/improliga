@@ -469,6 +469,14 @@
 	}, "files"],
 
 
+	["^/support/$", {
+		"layout":["intra/layout", "intra/dual_34_14"],
+		"modules":[
+			["impro/support/list", {"slot":"left"}]
+		]
+	}, "support"],
+
+
 	["^/terms/$", {
 		"layout":["intra/layout", "intra/single"],
 		"modules":[

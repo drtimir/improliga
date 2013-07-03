@@ -73,11 +73,11 @@
 
 .reporter-menu li {
 	border-radius:10px;
-	padding:10px 10px;
+	padding:14px;
 	margin-bottom:10px;
-	font-size:13px;
+	font-size:12px;
 	color:#333;
-	width:400px;
+	width:392px;
 	border-bottom:1px solid #ccc;
 	background:#fff;
 	cursor:pointer;
@@ -88,7 +88,7 @@
 }
 
 .reporter-menu .avatar,
-.reporter-menu .content
+.reporter-menu .right
 {
 	display:inline-block;
 	vertical-align:top;
@@ -98,10 +98,19 @@
 	margin-right:10px;
 }
 
-.reporter-menu .content {
-	width:350px;
+.reporter-menu .right {
+	width:342px;
 }
 
 .reporter-menu .content *{
 	display:inline-block;
+	line-height:16px;
+}
+
+.reporter-menu .content {
+	margin-bottom:5px;
+}
+
+.reporter-menu .date {
+	color:#999;
 }

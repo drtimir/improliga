@@ -57,9 +57,10 @@ namespace Impro\Team\Training
 					"training"       => $training,
 					"member"         => $member,
 					"team"           => $training->team,
-					"text"           => stprintf($ren->locales()->trans('intra_team_training_invite'), array(
+					"text"           => stprintf($ren->locales()->trans('training_invite'), array(
 						"link_team"    => $training->team->to_html_link($ren),
 						"link_user"    => \Impro\User::link($ren, $training->author),
+						"tg_date"      => $ren->format_date($training->start, 'human'),
 					)),
 				));
 

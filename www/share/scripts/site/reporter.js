@@ -137,7 +137,7 @@ pwf.register('reporter', function()
 		var inner = $('<ul class="plain"></ul>');
 		var row = $('<li></li>');
 		var avatar  = $('<div class="avatar"><img src="/share/icons/40/impro/status/empty" alt=""></div>');
-		var content = $('<div class="content">Nemám pro vás žádná nová upozornění. Nebojte, hlídám.<br>Kliknutím zavřete.</div>');
+		var content = $('<div class="right"><div class="content">Nemám pro vás žádná nová upozornění. Nebojte, hlídám.<br>Kliknutím zavřete.</div></div>');
 
 		obj.menu = $('<div class="reporter-menu"/>');
 		obj.menu.append(inner.append(row.append([avatar, content])));
@@ -165,7 +165,11 @@ pwf.register('reporter', function()
 		for (var i = 0; i < objects.length; i++) {
 			var row = $('<li/>');
 			var avatar  = $('<div class="avatar"/>');
+			var right   = $('<div class="right"/>');
 			var content = $('<div class="content"/>');
+			var created_at = new Date();
+			created_at.setTime(objects[i].created_at * 1000);
+			var date    = $('<span class="date">' + get_date_str(created_at) + '</span>');
 			var url = '';
 
 			if (objects[i].team) {
@@ -176,7 +180,11 @@ pwf.register('reporter', function()
 
 			avatar.html('<img src="' + url + '" alt="" />');
 			content.html(objects[i].text);
-			row.addClass(i%2?'odd':'even').append([avatar, content]);
+
+
+
+			right.append(content).append(date);
+			row.addClass(i%2?'odd':'even').append([avatar, right]);
 			row.bind('click', objects[i], callback_menu_link);
 			inner.append(row);
 		}
@@ -184,6 +192,21 @@ pwf.register('reporter', function()
 		this.container.append(this.menu.append(inner).hide());
 		this.menu.fadeIn(time_fade);
 	};
+
+
+	var get_date_str = function(date)
+	{
+		var str = '';
+		str += date.getDate() + '.';
+		str += (date.getMonth() + 1) + '.';
+		str += date.getFullYear();
+		str += ' ';
+		str += date.getHours() + ':';
+		str += date.getMinutes();
+		return str;
+	};
+
+
 
 	var sort_helper = function(l, r)
 	{

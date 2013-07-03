@@ -9,6 +9,8 @@
 	"training_cancel_desc":"Odešle se zpráva všem členům, kteří potvrdili účast a trénink bude označen jako zrušený. Opravdu chcete zrušit tento trénink?",
 	"training_cancel_mail":"Uživatel {link_user} zrušil trénink týmu {link_team} naplánovaný na {tg_date}.",
 
+	"training_invite":"Uživatel {link_user} vytvořil trénink v docházkovém systému týmu {link_team} naplánovaný na {tg_date}. Potvrdíte účast?",
+
 	"training_open":"Otevřený trénink",
 	"training_closed":"Uzavřený trénink",
 	"training_no_desc":"<p>Trénink nemá žádný popis.</p>",

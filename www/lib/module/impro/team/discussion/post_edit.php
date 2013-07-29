@@ -35,19 +35,33 @@ if (!$throw_up) {
 
 			if ($new) {
 				$item->author = $request->user();
-
-				//~ $notice = \Impro\User\Notice::for_user($u, array(
-					//~ "text"         => stprintf($ren->trans('internal_new_post_notice'), array(
-						//~ "user_name" => \Impro\User::get_name($user),
-						//~ "topic"     => $topic->name,
-					//~ )),
-					//~ "redirect"     => $ren->uri('team_discussion_topic', array($propagated['team'], $topic)),
-					//~ "generated_by" => 'discussions',
-					//~ "id_author"    => $author->id,
-				//~ ));
 			}
 
 			$item->update_attrs($p)->save();
+
+			if ($new) {
+				$users = $topic->posts
+					->group_by('`t0`.`id_author`')
+					->join('system_user', 'ON(`t0`.`id_author` = `users`.`id_system_user`)', 'users')
+					->assoc_with('\System\User')
+					->add_cols(\System\Model\Database::get_model_attr_list('\System\User'), 'users')
+					->where(array('`t0`.`id_author` != '.$item->author->id))
+					->fetch();
+
+				foreach ($users as $user) {
+					$notice = \Impro\User\Notice::for_user($user, array(
+						"text"         => stprintf($ren->trans('internal_new_post_notice'), array(
+							"link_user" => \Impro\User::link($ren, $item->author),
+							"link_team" => $ren->link_for('team', $team->name, args($team)),
+							"topic"     => $topic->name,
+						)),
+						"redirect"     => $ren->uri('team_discussion_topic', array($team, $topic)),
+						"generated_by" => 'discussions',
+						"id_author"    => $item->author->id,
+					));
+				}
+			}
+
 			$flow->redirect($ren->url('team_discussion_topic', array($team, $topic)));
 		}
 	} else throw new \System\Error\AccessDenied();

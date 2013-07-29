@@ -35,7 +35,7 @@ foreach ($notices as $ne) {
 		"team"   => $ne->id_team,
 		"text"   => $ne->text,
 		"link"   => $ne->redirect,
-		"created_at" => $rq->created_at->getTimestamp(),
+		"created_at" => $ne->created_at->getTimestamp(),
 	);
 
 	$ne->read = true;

@@ -51,6 +51,7 @@ if (any($propagated['team']) && $team = $propagated['team']) {
 							)),
 							"redirect"     => $ren->uri('team_discussion_topic', array($team, $item)),
 							"generated_by" => 'discussions',
+							"team"         => $team,
 							"id_author"    => $request->user()->id,
 						));
 

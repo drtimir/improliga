@@ -27,8 +27,8 @@
 	"intra_team_discussion":"Interní diskuze",
 	"intra_team_settings":"Nastavení",
 	"intra_team_attendance":"Docházka",
-	"internal_new_topic_notice":"Uživatel {link_user} vytvořil v interní diskuzi týmu {link_team} téma '{topic}'.",
-	"internal_new_post_notice":"Uživatel {link_user} odpověděl v diskuzi na téma '{topic}' týmu {link_team}.",
+	"internal_new_topic_notice":"Uživatel {link_user} vytvořil v interní diskuzi týmu {link_team} téma \"{topic}\".",
+	"internal_new_post_notice":"Uživatel {link_user} odpověděl v diskuzi na téma \"{topic}\" týmu {link_team}.",
 
 	"intra_team_member_add":"Přidat člena týmu",
 	"intra_team_member_existing":"Existující uživatel",

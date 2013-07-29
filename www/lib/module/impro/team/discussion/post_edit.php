@@ -35,6 +35,16 @@ if (!$throw_up) {
 
 			if ($new) {
 				$item->author = $request->user();
+
+				//~ $notice = \Impro\User\Notice::for_user($u, array(
+					//~ "text"         => stprintf($ren->trans('internal_new_post_notice'), array(
+						//~ "user_name" => \Impro\User::get_name($user),
+						//~ "topic"     => $topic->name,
+					//~ )),
+					//~ "redirect"     => $ren->uri('team_discussion_topic', array($propagated['team'], $topic)),
+					//~ "generated_by" => 'discussions',
+					//~ "id_author"    => $author->id,
+				//~ ));
 			}
 
 			$item->update_attrs($p)->save();

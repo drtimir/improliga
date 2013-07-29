@@ -37,8 +37,29 @@ if (any($propagated['team']) && $team = $propagated['team']) {
 			}
 
 			$item->update_attrs($p)->save();
-			$flow->redirect($ren->url('team_discussion_topic', array($team, $item)));
 
+			if ($new) {
+				$members = $team->members->fetch();
+
+				foreach ($members as $member) {
+					if ($member->has_right(\Impro\Team\Member\Role::PERM_TEAM_DISCUSSION)) {
+						$notice = \Impro\User\Notice::for_user($member->user, array(
+							"text"         => stprintf($ren->trans('internal_new_topic_notice'), array(
+								"link_user"  => \Impro\User::link($ren, $request->user()),
+								"link_team"  => $ren->link_for('team', $team->name, args($team)),
+								"topic"      => $item->name,
+							)),
+							"redirect"     => $ren->uri('team_discussion_topic', array($team, $item)),
+							"generated_by" => 'discussions',
+							"id_author"    => $request->user()->id,
+						));
+
+						$notice->mail($locales);
+					}
+				}
+			}
+
+			$flow->redirect($ren->url('team_discussion_topic', array($team, $item)));
 		} else {
 			$f->out($this);
 		}

@@ -20,7 +20,6 @@ namespace Impro\Team
 		public function send_invites(\System\Template\Renderer $ren)
 		{
 			$members = $this->team->members->fetch();
-			$rcpt = array();
 
 			foreach ($members as $member) {
 				$ack = \Impro\Team\Training\Ack::send($ren, $this, $member);

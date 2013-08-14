@@ -8,7 +8,7 @@ namespace Impro
 			"name"           => array("varchar"),
 			"name_full"      => array("varchar"),
 			"city"           => array("varchar", "default" => ''),
-			"hq"             => array('belongs_to', "model" => "\System\Location"),
+			"hq"             => array('belongs_to', "model" => "\System\Location", "is_null" => true),
 			"loc_trainings"  => array('belongs_to', "model" => "\System\Location", "is_null" => true),
 			"about"          => array("text", "default" => ''),
 			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
@@ -20,6 +20,7 @@ namespace Impro
 			"author"         => array('belongs_to', "model" => "\System\User"),
 			"members"        => array('has_many', "model" => "\Impro\Team\Member"),
 
+			"accepting"      => array('bool'),
 			"use_discussion" => array('bool'),
 			"use_attendance" => array('bool'),
 			"use_booking"    => array('bool'),

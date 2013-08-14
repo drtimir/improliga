@@ -35,9 +35,14 @@ echo div('team_detail');
 		$info[] = li($team->city, 'icon city');
 	}
 
+	if ($team->accepting) {
+		$info[] = li($ren->trans('team_accepting'), 'icon accepting');
+	}
+
 	if ($team->site) {
 		$info[] = li($ren->link($team->site, $team->site), 'icon site');
 	}
+
 
 	echo div('left', array(
 		ul('info plain team_info', $info),

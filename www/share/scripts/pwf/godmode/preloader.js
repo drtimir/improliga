@@ -6,7 +6,6 @@ pwf.register('preloader', function()
 		self = this,
 		els = {},
 		done = false,
-		ready = false,
 		special_resources = [];
 
 	this.resources = [];
@@ -14,13 +13,9 @@ pwf.register('preloader', function()
 
 	this.init = function()
 	{
-		if (this.is_ready()) {
-			create();
-			pwf.preloader.preload();
-			return ready = true;
-		}
-
-		return ready;
+		create();
+		pwf.preloader.preload();
+		return true;
 	};
 
 
@@ -49,12 +44,6 @@ pwf.register('preloader', function()
 		}
 
 		return typeof els[name] === 'undefined' ? null:els[name];
-	};
-
-
-	this.exists = function()
-	{
-		return true;
 	};
 
 

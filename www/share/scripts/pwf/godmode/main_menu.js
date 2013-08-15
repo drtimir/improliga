@@ -5,18 +5,13 @@ pwf.register('main_menu', function()
 		opened = false,
 		els = {
 			"container":null
-		},
-		ready = false;
+		};
 
 
 	this.init = function()
 	{
-		if (this.is_ready()) {
-			create();
-			return true;
-		}
-
-		return false;
+		create();
+		return true;
 	};
 
 

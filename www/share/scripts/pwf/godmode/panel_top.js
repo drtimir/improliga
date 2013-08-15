@@ -2,7 +2,6 @@ pwf.register('panel_top', function()
 {
 	var
 		self = this,
-		ready = false,
 		el_left = null,
 		el_right = null,
 		el_logout = null,
@@ -16,24 +15,14 @@ pwf.register('panel_top', function()
 
 	this.init = function()
 	{
-		if (this.exists()) {
-
-			init_elements();
-
-			return ready = true;
-		} else return ready = false;
+		init_elements();
+		return true;
 	};
 
 
 	this.is_ready = function()
 	{
-		return ready;
-	};
-
-
-	this.exists = function()
-	{
-		return (element = $('#panel_top')).length === 1;
+		return $.isReady && (element = $('#panel_top')).length == 1;
 	};
 
 

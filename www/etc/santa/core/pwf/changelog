@@ -1,3 +1,12 @@
+159f6b743a498804621acf3adbcb51fc929aad84 Merge branch 'master' of ssh://github.com/just-paja/pwf
+8683cb228094b4b42bfae2b04451f11ec71ec13f [js] PWF, inline docs
+88bef19e87e48e38169fbac312c62009ffd5f9a5 [js] PWF, use is_ready if available
+7558d45a32f646c0186e2fa1d8d76ddcd00545af Merge branch 'master' of ssh://github.com/just-paja/pwf
+f54a45e9f64b5d615ac7c793bea36ef263014689 Template aliases, docs
+e226c182a99a3a0c4933b2b9b8429f15c552543c [js] Functions, stop_event
+6d78f9511f12f1c3eee783026ede576d5ea38bc1 Merge branch 'master' of ssh://github.com/just-paja/pwf
+8d6b4604ad3c335414a3e6aa8d0b7a255ccde2d5 Request, ajax
+d336bfefbd9c52a41cfb7de764f956a15029b15d Forms, multi checkboxes
 b6c6d26d9053db3736c779f5ceaccbf411def53c Merge branch 'master' of ssh://github.com/just-paja/pwf
 f7fcf42aee35e42e859e6e4c18f07f0aa8af0f31 Response init
 a3d59c73e7279a0e59e5d09aab03ef49d80cd8d1 Forms, multi input validations

@@ -4,7 +4,6 @@ pwf.register('window', function()
 		self = this,
 		win = this,
 		element = null,
-		ready = false,
 		window_active = null,
 		window_drag = null,
 		auto_increment = 0;
@@ -647,7 +646,13 @@ pwf.register('window', function()
 	this.init = function()
 	{
 		$('body').bind("mouseup", {"win_ctrl":this}, function(e) { e.data.win_ctrl.undrag(e); });
-		return ready = true;
+		return true;
+	};
+
+
+	this.is_ready = function()
+	{
+		return pwf.component_initialized('app_drawer');
 	};
 
 
@@ -713,8 +718,11 @@ pwf.register('window', function()
 			for (var i = 0; i<windows.length; i++) {
 				windows[i].stop_drag(e);
 			}
-		} else if (typeof windows[window_drag-1] === 'object') {
-			windows[window_drag-1].stop_drag(e);
+		} else {
+			var win = windows[window_drag-1];
+			if (typeof win === 'object' && win !== null) {
+				windows[window_drag-1].stop_drag(e);
+			}
 		}
 
 		window_drag = null;
@@ -785,12 +793,6 @@ pwf.register('window', function()
 	this.get_all_windows = function()
 	{
 		return windows;
-	};
-
-
-	this.is_ready = function()
-	{
-		return ready;
 	};
 
 

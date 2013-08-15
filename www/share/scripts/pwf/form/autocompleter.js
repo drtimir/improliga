@@ -1,5 +1,5 @@
-pwf.register('autocompleter', function() {
-
+pwf.register('autocompleter', function()
+{
 	var
 		instances = {},
 		self = this,
@@ -159,12 +159,6 @@ pwf.register('autocompleter', function() {
 		e.stopPropagation();
 		e.data.ac.el('input').val(e.data.label);
 		e.data.ac.hide();
-	};
-
-
-	this.init = function()
-	{
-
 	};
 
 

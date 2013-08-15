@@ -2,12 +2,10 @@ pwf.register('window_form', function()
 {
 	var
 		self = this,
-		ready = false,
 		class_iframe_helper = function()
 		{
 			var
 				self  = this,
-				ready = false,
 				win   = null,
 				form  = null,
 				container = null,
@@ -23,12 +21,6 @@ pwf.register('window_form', function()
 				if_name = 'gm_iframe_helper_' + win.attr('id') + '_' + form.attr('id');
 				create_iframe();
 				target_form();
-			};
-
-
-			this.ready = function()
-			{
-				return ready;
 			};
 
 
@@ -89,17 +81,6 @@ pwf.register('window_form', function()
 				delete if_instance;
 			};
 		};
-
-	this.init = function()
-	{
-		return ready = true;
-	};
-
-
-	this.ready = function()
-	{
-		return ready;
-	};
 
 
 	this.bind = function(win)

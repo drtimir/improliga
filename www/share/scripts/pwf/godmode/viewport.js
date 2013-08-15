@@ -1,28 +1,11 @@
 pwf.register('viewport', function()
 {
 	var
-		element = null,
-		ready = false;
-
-	this.init = function()
-	{
-		if (this.exists()) {
-			return ready = true;
-		}
-
-		return false;
-	};
-
-
-	this.exists = function()
-	{
-		return (element = $('#viewport')).length === 1;
-	};
-
+		element = null;
 
 	this.is_ready = function()
 	{
-		return ready;
+		return $.isReady && (element = $('#viewport')).length === 1;
 	};
 
 

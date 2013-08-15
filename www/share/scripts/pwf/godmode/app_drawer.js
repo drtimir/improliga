@@ -6,7 +6,6 @@ pwf.register('app_drawer', function()
 		el_windows = null,
 		windows = [],
 		element = null,
-		ready = false,
 		menu = [
 			{
 				"label":"godmode_menu",
@@ -85,26 +84,16 @@ pwf.register('app_drawer', function()
 
 	this.init = function()
 	{
-		if (this.exists()) {
-			init_elements();
-			init_resize();
+		init_elements();
+		init_resize();
 
-			return ready = true;
-		}
-
-		return false;
+		return true;
 	};
 
 
 	this.is_ready = function()
 	{
-		return ready;
-	};
-
-
-	this.exists = function()
-	{
-		return (element = $('#app_drawer')).length === 1;
+		return $.isReady && (element = $('#app_drawer')).length == 1;
 	};
 
 

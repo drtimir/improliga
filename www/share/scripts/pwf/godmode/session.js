@@ -10,12 +10,15 @@ pwf.register('session', function()
 
 	this.init = function()
 	{
-		pwf.when_ready(['window', 'app_drawer'], function(sess_obj) {
-			sess_obj.init_stored_windows();
-			sess_obj.init_window_refresh();
-		}, this);
+		this.init_stored_windows();
+		this.init_window_refresh();
+		return true;
+	};
 
-		return ready = true;
+
+	this.is_ready = function()
+	{
+		return pwf.component_ready('window');
 	};
 
 

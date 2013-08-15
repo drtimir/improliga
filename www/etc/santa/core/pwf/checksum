@@ -1,4 +1,4 @@
-758a7ccd263b68ce08eb06464ee1614d  lib/include/system.php
+57dbd11522a10b5aac436db892591ec0  lib/include/system.php
 02dde35596706a3ab268d149f1be4328  bin/db
 3cad760a1417709665962992613df30d  bin/deploy
 6ae434029f345e2287d7389050106dc4  bin/santa
@@ -23,7 +23,7 @@ e5851d09516df6fa8a3a8faa4b7d05d3  etc/default/conf.d/locales.json
 bca7d62da596db1a1d33d4c163ead218  etc/init.d/core.php
 bec2e8a69e239e2bbb8612ee62341e73  etc/init.d/page.php
 3ccb6e1c1c818ab42fb11366538b8e55  etc/init.d/pre-cli.php
-c5bd2f818b70976a145212111426d4ab  etc/locales/cs_CZ/messages.d/core.json
+fa03f697d7c64da1af3673c4a5f1c34d  etc/locales/cs_CZ/messages.d/core.json
 9d62f39e0e8451ae6b6cae7706b6e93e  etc/locales/cs_CZ/messages.d/dump_bar.json
 07d032940e2926459f318f2ecd6b4790  etc/locales/cs_CZ/modules.d/date.core.json
 fcb7eeb6cd804f3e61a588e3292dab71  etc/locales/en_US/messages.d/core.json
@@ -79,13 +79,13 @@ d09e2294752b4852b4845881da1cdf52  share/icons/pwf/32/actions/turn-off.png
 6052ec41714b5cd72d26be2488921f0c  share/pixmaps/pwf/anonymous_user.png
 a231fc66f5a42c1d493d25823225a669  share/pixmaps/pwf/bad_thumb.jpg
 811cc967d942abc9abd252544d5f60d5  share/scripts/lib/browser.js
-280cd4d4739c41f5f7fb232940da1e59  share/scripts/lib/functions.js
+750e18c4d97bfc95d524e3d1e9438df6  share/scripts/lib/functions.js
 cfa9051cc0b05eb519f1e16b2a6645d7  share/scripts/lib/jquery.js
 ee0b0a1db357cfc9adf1f23352244416  share/scripts/lib/jquery/gmap.js
 d792b56495162e6fa2450acb4c2f863f  share/scripts/lib/jquery/hotkeys.js
 f875fcad242da4e2526dbfccb7b8db5e  share/scripts/lib/rte/proper.js
 53cb43b84a16723ffeee66be15e88ad7  share/scripts/lib/underscore.js
-8ef1117787bf424971a5eb15e269dd3c  share/scripts/pwf.js
+2ee3e1810f324dd4dfee196c0d5cc2ab  share/scripts/pwf.js
 cab804e51bb110f065a7846cf9b9196d  share/scripts/pwf/devbar.js
 55549fcab43850b5b1f2afd7a1ed1853  share/scripts/pwf/form/autocompleter.js
 6cd122d453daa9f239770b59d60c40a8  share/scripts/pwf/form/date_picker.js

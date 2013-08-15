@@ -26,7 +26,7 @@ dac1d62aa8d16dd899a1619d8eeee73a  lib/module/godmode/window/menu.php
 abf91653c5d95325f1a5e58727638018  lib/template/partial/godmode/user/perm_list.php
 97b7146a8b34f6f66ef2396e70a89a84  lib/template/partial/godmode/user/perm_module.php
 81810f01a4fd8085cba91d5dcd3909ab  lib/template/partial/godmode/window/menu.php
-243b9622eadb38790e2880ee79367f9d  lib/template/pwf/godmode/base.html.php
+f63131a317b872ed04df9c58bc7d4133  lib/template/pwf/godmode/base.html.php
 dd0a12aefa6f015577d9ecc4df2089be  lib/template/pwf/godmode/help.html.php
 5b848cb6b3825fd5c84f42be58331a57  lib/template/pwf/godmode/login.html.php
 934ce863fd0141efdf1bbe397035cd56  lib/template/pwf/godmode/window.html.php

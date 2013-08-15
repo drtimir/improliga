@@ -30,6 +30,7 @@ Tag::html();
 		$renderer->content_for("scripts", "pwf/form/gps");
 		$renderer->content_for("scripts", "pwf/form/autocompleter");
 		$renderer->content_for("scripts", "pwf/form/location_picker");
+		$renderer->content_for("scripts", "pwf/form/picker_image");
 		$renderer->content_for("scripts", "pwf/form/tab_manager");
 		$renderer->content_for("scripts", "pwf/lib/rte");
 		$renderer->content_for("scripts", "pwf/godmode/preloader");

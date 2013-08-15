@@ -2,7 +2,6 @@ pwf.register('shortcuts', function()
 {
 	var
 		self = this,
-		ready = false,
 		on = false,
 		global_selector = 'body',
 		shortcuts = [
@@ -20,13 +19,13 @@ pwf.register('shortcuts', function()
 	this.init = function()
 	{
 		init_shortcuts();
-		return ready = true;
+		return true;
 	};
 
 
 	this.is_ready = function()
 	{
-		return ready;
+		return pwf.components_ready(['main_menu', 'window']);
 	};
 
 

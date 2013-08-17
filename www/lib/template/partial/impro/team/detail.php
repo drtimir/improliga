@@ -36,7 +36,7 @@ echo div('team_detail');
 	}
 
 	if ($team->accepting) {
-		$info[] = li($ren->trans('team_accepting'), 'icon accepting');
+		$info[] = li($ren->trans('attr_impro_team_accepting'), 'icon accepting');
 	}
 
 	if ($team->site) {

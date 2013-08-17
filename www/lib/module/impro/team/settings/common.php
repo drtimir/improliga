@@ -33,6 +33,7 @@ if (isset($propagated['team'])) {
 			$f->input_location("loc_trainings", $locales->trans_model_attr_name('Impro\Team', 'loc_trainings'), false, $locales->trans_model_attr_desc('Impro\Team', 'loc_trainings'));
 		}
 
+		$f->input_checkbox('accepting',      $locales->trans_model_attr_name('Impro\Team', 'accepting'), false, $locales->trans_model_attr_desc('Impro\Team', 'accepting'));
 		$f->input_checkbox('use_discussion', $locales->trans_model_attr_name('Impro\Team', 'use_discussion'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_discussion'));
 		$f->input_checkbox('use_attendance', $locales->trans_model_attr_name('Impro\Team', 'use_attendance'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_attendance'));
 		$f->input_checkbox('use_booking',    $locales->trans_model_attr_name('Impro\Team', 'use_booking'), false, $locales->trans_model_attr_desc('Impro\Team', 'use_booking'));

@@ -48,6 +48,7 @@
 	"attr_impro_team_loc_trainings":"Místo tréninků",
 	"attr_impro_team_loc_trainings_desc":"Zvolte místo, kde obvykle probíhají vaše tréninky. Pokud používáte docházkový systém, použije se toto místo jako výchozí.",
 	"attr_impro_team_accepting":"Hledáme nové členy",
+	"attr_impro_team_accepting_desc":"Na webu bude zveřejněno, že tento tým aktivně hledá nové členy.",
 	"attr_impro_team_members":"Členové týmu",
 
 	"model_impro_team_member":"Člen týmu",

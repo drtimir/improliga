@@ -15,6 +15,7 @@ echo div('team_comments');
 					$responses = array_reverse($post->get_responses()->paginate(3)->fetch());
 
 					foreach ($responses as $response) {
+						break;
 
 						$menu = '';
 						if ($post->id_author == $request->user->id || $has_right) {

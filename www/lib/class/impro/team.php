@@ -27,6 +27,7 @@ namespace Impro
 
 			"topics"    => array('has_many', "model" => "\Impro\Team\Discussion\Topic"),
 			"comments"  => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
+			"posts"     => array('has_many', "model" => '\Impro\Post'),
 			"trainings" => array('has_many', "model" => '\Impro\Team\Training'),
 			"surveys"   => array('has_many', "model" => '\Impro\Team\Survey'),
 		);
@@ -127,5 +128,19 @@ namespace Impro
 			))->mail($ren);
 		}
 
+
+		public function mail_to(\System\Template\Renderer $ren, array $opts)
+		{
+			$leaders = $this->get_leaders();
+			$rcpt = array();
+
+			foreach ($leaders as $leader) {
+				$opts["id_user"] = $leader->id_user;
+				$notice = \Impro\User\Notice::for_user($leader->user, $opts);
+				$notice->mail($ren->locales());
+			}
+
+			return $this;
+		}
 	}
 }

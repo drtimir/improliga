@@ -62,7 +62,6 @@
 		"layout":["intra/layout", "intra/team"],
 		"modules":{
 			"head":["impro/team/detail_head", {"id":"#{0}", "slot":"head"}],
-			"surveys":["impro/team/survey/list", {"slot":"left"}, ["head"]],
 			"edit":["impro/team/comment/edit", {"slot":"left"}, ["head"]],
 			"list":["impro/team/comment/list", {"slot":"left"}, ["head"]],
 			"mans":["impro/team/managers", {"slot":"right"}, ["head"]],

@@ -13,13 +13,23 @@ if (any($propagated['team']) && $team = $propagated['team']) {
 	if ($f->passed()) {
 		$p = $f->get_data();
 
-		$c = new \Impro\Team\Comment($p);
+		$c = new \Impro\Post($p);
 		$c->team    = $team;
 		$c->visible = true;
 		$c->author  = $request->user;
 
 		if ($c->save()) {
-			$c->mail($ren);
+			$mail_opts = array(
+				"id_author" => $request->user->id,
+				"redirect"  => $ren->uri('team_comment_respond', array($team, $c)),
+				"text"      => stprintf($ren->trans('intra_team_comment_new_text'), array(
+					"text"      => to_html($ren, $c->text),
+					"user_name" => \Impro\User::link($ren, $c->author),
+					"team_name" => $team->to_html_link($ren),
+				)),
+			);
+
+			$team->mail_to($ren, $mail_opts);
 			$flow->redirect($ren->url('team', array($team)));
 		}
 	}

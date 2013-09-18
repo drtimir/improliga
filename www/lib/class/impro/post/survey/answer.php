@@ -1,6 +1,6 @@
 <?
 
-namespace Impro\Team\Survey
+namespace Impro\Post\Survey
 {
 	class Answer extends \System\Model\Database
 	{
@@ -12,8 +12,8 @@ namespace Impro\Team\Survey
 			"blue"       => array('int'),
 			"visible"    => array('bool'),
 			"deleted"    => array('bool'),
-			"votes"      => array('has_many', "model" => '\Impro\Team\Survey\Vote'),
-			"survey"     => array('belongs_to', "model" => 'Impro\Team\Survey'),
+			"votes"      => array('has_many', "model" => '\Impro\Post\Survey\Vote'),
+			"survey"     => array('belongs_to', "model" => '\Impro\Post', "conds" => array("type" => \Impro\Post::SURVEY)),
 		);
 
 		private $voted = null;

@@ -28,6 +28,7 @@ namespace Impro
 			"topics"    => array('has_many', "model" => "\Impro\Team\Discussion\Topic"),
 			"comments"  => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
 			"trainings" => array('has_many', "model" => '\Impro\Team\Training'),
+			"surveys"   => array('has_many', "model" => '\Impro\Team\Survey'),
 		);
 
 

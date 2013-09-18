@@ -33,6 +33,15 @@
 				"model":"Impro::Team"
 			},
 			{
+				"title":"impro_surveys",
+				"name":"surveys",
+				"icon":"items/survey",
+				"attrs_list":["name", "visible", "active", "end_at", "visible", "created_at"],
+				"window_root":true,
+				"rel_tab":["answers"],
+				"model":"Impro::Team::Survey"
+			},
+			{
 				"title":"Dokumentace",
 				"name":"docs",
 				"icon":"items/text",

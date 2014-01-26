@@ -1,2 +1,7 @@
-var/
-www/etc/conf.d/production
+/var
+/etc/conf.d/dev
+/etc/conf.d/preview
+/etc/conf.d/production
+/share/bower
+/lib/vendor
+

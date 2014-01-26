@@ -1,6 +1,0 @@
-1072470d906b4e49cf02978f3b71dcb5  etc/default/conf.d/facebook.json
-0b15c20e16600b2454295f689c54bdf2  etc/init.d/facebook.php
-d30060a0a8ff3021e5349d3206b48127  lib/class/social/facebook/account.php
-eb6f495d4a20716b73d737e51bc97f27  lib/helper/social/facebook.php
-1205626819e4c868df3fea46b6d23fde  lib/helper/social/facebook/api_exception.php
-0e7a739a9773a2cab1adb3423840eadb  lib/helper/social/facebook/base.php

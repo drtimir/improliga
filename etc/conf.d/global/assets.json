@@ -1,0 +1,7 @@
+{
+	"dependencies":{
+		"pwf-browser":"*",
+		"html5shiv":"*",
+		"fancybox":"*"
+	}
+}

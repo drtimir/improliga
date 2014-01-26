@@ -1,0 +1,47 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "9793963d86e70dc0a377c659f438de21",
+    "packages": [
+        {
+            "name": "just-paja/pwf",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/just-paja/pwf.git",
+                "reference": "c7d1f5cb78dc5efc0b22440205dafaea73c9554d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/just-paja/pwf/zipball/c7d1f5cb78dc5efc0b22440205dafaea73c9554d",
+                "reference": "c7d1f5cb78dc5efc0b22440205dafaea73c9554d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "Purple web framework; framework with modules and layouts",
+            "time": "2014-01-24 17:30:47"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

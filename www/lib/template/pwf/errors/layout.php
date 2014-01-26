@@ -1,5 +1,0 @@
-<?
-
-$this->yield();
-$this->slot();
-

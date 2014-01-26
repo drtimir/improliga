@@ -1,0 +1,13 @@
+{
+	"global":{
+		"rules":["^(www\\.)?improliga.cz$", "^(www\\.)?improliga.cz.local$"],
+		"init":["www", "godmode"]
+	},
+	"intra":{
+		"rules":["intra.improliga.cz$", "intra.improliga.cz.local$"],
+		"init":["intra"]
+	},
+	"static":{
+		"rules":["static.improliga.cz$", "static.improliga.cz.local$"]
+	}
+}

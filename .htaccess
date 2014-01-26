@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Deny access to sensitive dirs
+RewriteRule ^(bin|etc|(lib(?!/common))|(var/(backups|cache|log))) ./index.php [QSA]
+
+# Pass request to YaWF
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L,QSA]

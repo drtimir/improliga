@@ -1,0 +1,149 @@
+[
+	["^/$", {
+		"title":"Česká Improliga - divadlo jako hokejový zápas",
+		"layout":["impro/layout", "impro/homepage"],
+		"modules":[
+			["system/text/show", {"slot":"left", "id":1}],
+			["impro/event/latest", {
+				"slot":"events",
+				"conds":{"published":true},
+				"thumb_width":216,
+				"thumb_height":165,
+				"per_page":4
+			}],
+			["impro/event/calendar", {
+				"slot":"right",
+				"day_link_integrate":true,
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+				"heading":"Kalendář",
+				"conds":{"published":true}
+			}]
+		]
+	}, "home"],
+
+
+	["^/o-improlize/$", {
+		"title":"O Improlize",
+		"layout":["impro/layout", "impro/dual_34_14"],
+		"modules":[
+			["system/text/show", {"id":2, "slot":"left"}],
+			["impro/article/category/list", {"slot":"right"}]
+		]
+	}, "about"],
+
+	["^/fauly/$", {
+		"title":"Fauly",
+		"modules":[
+			["impro/foul/list", {"slot":"right"}]
+		]
+	}, "fouls"],
+
+	["^/fauly/([^/]+)/$", {
+		"modules":[
+			["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
+			["impro/foul/list", {"slot":"right"}]
+		]
+	}, "foul"],
+
+	["^/o-improlize/([^/]+)/$", {
+		"layout":["impro/layout", "impro/dual_34_14"],
+		"modules":[
+			["impro/article/detail", {"id":"#{0}", "slot":"left"}],
+			["impro/article/category/list", {"slot":"right"}]
+		]
+	}, "article"],
+
+	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "article_chapter"],
+
+	["^/media-o-nas/$", {
+		"title":"impro_menu_media",
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+			["system/partial", {"template":"impro/static/media"}]
+		]
+	}, "media"],
+
+	["^/tymy/$", {
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+			["impro/team/list"]
+		]
+	}, "teams"],
+
+	["^/tymy/([^/]+)/$", {
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+			["impro/team/detail", {"id":"#{0}"}]
+		]
+	}, "team"],
+
+	["^/kontakty/$", {
+		"title":"Kontakty - Česká Improliga",
+		"layout":["impro/layout", "impro/dual"],
+		"modules":[
+			["system/text/show", {"id":4, "slot":"left"}],
+			["system/text/show", {"id":3, "slot":"right"}]
+		]
+	}, "contacts"],
+
+	["^/udalosti/$", {
+		"layout":["impro/layout", "impro/dual"],
+		"modules":[
+			["impro/event/calendar", {
+				"slot":"left",
+				"template":"impro/event/list_month",
+				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+			}],
+			["impro/event/calendar", {
+				"slot":"right",
+				"day_link_integrate":true,
+				"link_day_piece":"den_{day}",
+				"heading":"Kalendář",
+				"conds":{"published":true}
+			}]
+		]
+	}, "events"],
+
+	["^/udalosti/seznam/([^/]+)/$", {
+		"layout":["impro/layout", "impro/dual"],
+		"modules":[
+			["impro/event/calendar", {
+				"slot":"right",
+				"day_link_integrate":true,
+				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
+				"month_input":"#{0}"
+			}],
+			["impro/event/calendar", {
+				"slot":"left",
+				"template":"impro/event/list_month",
+				"link_day_piece":"den_{day}",
+				"month_input":"#{0}",
+				"conds":{"published":true}
+			}]
+		]
+	}, "events_month"],
+
+	["^/udalosti/([^/]+)/$", {
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+			["impro/event/detail", {
+				"id":"#{0}",
+				"col_width":440
+			}]
+		]
+	}, "event"],
+
+	["^/udalosti/([^/]+)/rezervace/$", {
+		"layout":["impro/layout", "impro/single"],
+		"modules":[
+		]
+	}, "event_booking"],
+
+	["^/intranet/$", {
+		"modules":[
+			["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]
+		]
+	}, "intranet_redir"]
+]

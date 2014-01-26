@@ -1,3 +1,0 @@
-# Intra
-RewriteCond %{HTTP_HOST} ^intra\.
-RewriteRule ^intra/(.*)$ ./$1 [R,L,QSA]

@@ -17,7 +17,7 @@ if ($request->logged_in()) {
 		"id" => 'login',
 		"use_comm" => true,
 		"heading" => $heading,
-		"action" => $request->path.'?'.$request->query
+		"action" => $request->path.($request->query ? '?'.$request->query:'')
 	));
 
 	$f->input(array(
@@ -37,30 +37,24 @@ if ($request->logged_in()) {
 	$f->submit($locales->trans('intra_user_do_login'));
 
 	if ($f->submited()) {
-		$ren->flush()->reset_layout();
-		$ren->format = 'json';
-		$response = array("status" => 403, 'data' => array());
+		// Form expects JSON response
+		$status = 403;
+		$message = 'login-failed';
+		$data = null;
 
 		if ($f->passed()) {
 			$p = $f->get_data();
 
 			if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
 				if ($user->login($request, $p['password'])) {
-					$response['status'] = 200;
-					$response['message'] = 'logged-in';
-					$response['data']['redirect'] = $redirect;
-				} else {
-					$response['message'] = 'user-bad-login';
-				}
-			} else {
-				$response['message'] = 'user-does-not-exist';
-			}
-		} else {
-			$response['message'] = 'login-failed';
+					$status = 200;
+					$message = 'logged-in';
+					$data = array('redirect' => $redirect);
+				} else $message = 'user-bad-login';
+			} else $message = 'user-does-not-exist';
 		}
 
-		$this->partial('system/common', array('json_data' => $response));
-		$this->stop();
+		$this->json_response($status, $message, $data);
 	} else {
 		$f->out($this);
 	}

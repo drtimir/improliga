@@ -31,8 +31,12 @@ pwf.wi(['form'], function()
 	}, null, true);
 
 	pwf.queue.on('login_ready', function(event) {
-		v(event);
 		var loader = get_loader(event.response.form);
 		loader.fadeOut(250, pwf.jquery.callback_remove);
+
+		if (typeof event.response.data.redirect != 'undefined') {
+			document.location = event.response.data.redirect;
+		} else document.location = '/';
+
 	}, null, true);
 });

@@ -26,6 +26,7 @@
 
 	"user_login_name":"Přihlašovací jméno nebo e-mail",
 
+	"user-does-not-exist":"Uživatel neexistuje",
 	"user-bad-login":"Špatné jméno nebo heslo",
 
 	"":""

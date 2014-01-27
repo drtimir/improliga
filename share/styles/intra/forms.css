@@ -1,3 +1,16 @@
+.heading {
+	color:#B82429;
+}
+
+.pwform button {
+	color:#fff;
+	background:#B82429;
+	font-weight:bold;
+	border:none;
+	padding:5px 12px;
+	border-radius:3px;
+}
+
 .pwform input,
 .pwform .timepicker .inner,
 .pwform .rte_content
@@ -40,7 +53,7 @@
 .pwform .timepicker .inner:focus,
 .deco-select .label:hover
 {
-	border-color:#b82429;
+	border-color:#1DB3F0;
 }
 
 

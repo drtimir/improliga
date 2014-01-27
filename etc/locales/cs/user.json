@@ -24,5 +24,9 @@
 	"user_login_via_gateway_desc":"Nabízíme možnost přihlásit se k vašemu účtu pomocí sociálních služeb. Pokud jste líní zadávat nebo pamatovat si více hesel, je toto možnost pro vás.",
 	"user_login_via_facebook":"Přihlásit pomocí Facebooku",
 
+	"user_login_name":"Přihlašovací jméno nebo e-mail",
+
+	"user-bad-login":"Špatné jméno nebo heslo",
+
 	"":""
 }

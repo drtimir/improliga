@@ -7,7 +7,9 @@ a:hover {
 	color:#FF9825
 }
 
-h1 {
+h1,
+.heading
+{
 	font-size:30px;
 	font-weight:bold;
 }
@@ -80,3 +82,12 @@ menu.plain li {
 	padding:2px 5px;
 }
 
+
+
+.loader-tiny {
+	width:16px;
+	height:16px;
+	background:url(/share/pixmaps/animations/loader-tiny.gif);
+	display:inline-block;
+	vertical-align:middle;
+}

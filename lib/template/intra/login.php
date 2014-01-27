@@ -18,6 +18,7 @@ echo html($locales->get_lang());
 		$ren->content_for('styles', 'styles/intra/forms');
 		$ren->content_for('styles', 'styles/intra/login');
 
+		$ren->content_for('scripts', "scripts/intra/login");
 		echo $ren->content_from('head');
 	close('head');
 

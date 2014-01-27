@@ -13,21 +13,55 @@ if ($request->logged_in()) {
 
 } else {
 
-	$f = $ren->form(array("heading" => $heading, "action" => $request->path.'?'.$request->query));
+	$f = $ren->form(array(
+		"id" => 'login',
+		"use_comm" => true,
+		"heading" => $heading,
+		"action" => $request->path.'?'.$request->query
+	));
 
-	$f->input_text('login', $locales->trans("godmode_login_name"), true);
-	$f->input_password('password', $locales->trans("godmode_password"), true);
+	$f->input(array(
+		"type" => 'text',
+		'name' => 'login',
+		'placeholder' => $locales->trans("user_login_name"),
+		'required' => true
+	));
+
+	$f->input(array(
+		'type' => 'password',
+		'name' => 'password',
+		'placeholder' => $locales->trans("godmode_password"),
+		'required' => true
+	));
+
 	$f->submit($locales->trans('intra_user_do_login'));
 
-	if ($f->passed()) {
-		$p = $f->get_data();
+	if ($f->submited()) {
+		$ren->flush()->reset_layout();
+		$ren->format = 'json';
+		$response = array("status" => 403, 'data' => array());
 
-		if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
-			if ($user->login($request, $p['password'])) {
-				$flow->redirect($redirect);
+		if ($f->passed()) {
+			$p = $f->get_data();
+
+			if ($user = get_first('\System\User', array("login" => $p['login']))->fetch()) {
+				if ($user->login($request, $p['password'])) {
+					$response['status'] = 200;
+					$response['message'] = 'logged-in';
+					$response['data']['redirect'] = $redirect;
+				} else {
+					$response['message'] = 'user-bad-login';
+				}
+			} else {
+				$response['message'] = 'user-does-not-exist';
 			}
+		} else {
+			$response['message'] = 'login-failed';
 		}
-	}
 
-	$f->out($this);
+		$this->partial('system/common', array('json_data' => $response));
+		$this->stop();
+	} else {
+		$f->out($this);
+	}
 }

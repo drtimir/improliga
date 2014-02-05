@@ -1,0 +1,27 @@
+{
+	"attr-published":"Veřejné",
+
+	"model-Impro::Event":"Událost",
+	"model-Impro::Event-accusative":"události",
+	"model-Impro::Event-dative-plural":"událostí",
+	"model-Impro::Event-dative-plural":"událostí",
+
+	"model-Impro::Event-attr-type":"Typ události",
+	"model-Impro::Event-attr-team_home":"Domácí tým",
+	"model-Impro::Event-attr-team_away":"Tým hostů",
+	"model-Impro::Event-attr-location":"Umístění",
+	"model-Impro::Event-attr-image":"Obrázek",
+	"model-Impro::Event-attr-desc_short":"Krátký popis",
+	"model-Impro::Event-attr-desc_full":"Popis",
+	"model-Impro::Event-attr-start":"Začátek",
+	"model-Impro::Event-attr-end":"Konec",
+	"model-Impro::Event-attr-publish_at":"Datum zveřejnění",
+	"model-Impro::Event-attr-capacity":"Kapacita",
+	"model-Impro::Event-attr-price":"Cena",
+	"model-Impro::Event-attr-price_student":"Cena (student)",
+	"model-Impro::Event-attr-publish_wait":"Čekající na schválení",
+	"model-Impro::Event-attr-participants":"Účastníci",
+
+	"model-impro::Team":"Tým",
+	"model-impro::Team-plural":"Týmy"
+}

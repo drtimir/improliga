@@ -8,8 +8,8 @@ namespace Impro
 			"name"           => array("varchar"),
 			"name_full"      => array("varchar"),
 			"city"           => array("varchar", "default" => ''),
-			"hq"             => array('belongs_to', "model" => "\System\Location", "is_null" => true),
-			"loc_trainings"  => array('belongs_to', "model" => "\System\Location", "is_null" => true),
+			"hq"             => array('belongs_to', "model" => 'System\Location', "is_null" => true),
+			"loc_trainings"  => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"about"          => array("text", "default" => ''),
 			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"          => array('image', "default" => "/share/pixmaps/impro/team.png"),
@@ -17,19 +17,18 @@ namespace Impro
 			"site"           => array("varchar", "default" => ''),
 			"played"         => array("int", "is_unsigned" => true, "default" => 0),
 			"visible"        => array("bool"),
-			"author"         => array('belongs_to', "model" => "\System\User"),
-			"members"        => array('has_many', "model" => "\Impro\Team\Member"),
+			"author"         => array('belongs_to', "model" => "System\User"),
+			"members"        => array('has_many', "model" => "Impro\Team\Member"),
 
 			"accepting"      => array('bool'),
 			"use_discussion" => array('bool'),
 			"use_attendance" => array('bool'),
 			"use_booking"    => array('bool'),
 
-			"topics"    => array('has_many', "model" => "\Impro\Team\Discussion\Topic"),
-			"comments"  => array('has_many', "model" => '\Impro\Team\Comment', "foreign_name" => 'id_team'),
-			"posts"     => array('has_many', "model" => '\Impro\Post'),
-			"trainings" => array('has_many', "model" => '\Impro\Team\Training'),
-			"surveys"   => array('has_many', "model" => '\Impro\Team\Survey'),
+			"topics"    => array('has_many', "model" => "Impro\Team\Discussion\Topic"),
+			"comments"  => array('has_many', "model" => 'Impro\Team\Comment', "foreign_name" => 'id_team'),
+			"posts"     => array('has_many', "model" => 'Impro\Post'),
+			"trainings" => array('has_many', "model" => 'Impro\Team\Training'),
 		);
 
 

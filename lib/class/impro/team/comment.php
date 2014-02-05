@@ -7,10 +7,10 @@ namespace Impro\Team
 	{
 		protected static $attrs = array(
 			"team"      => array('belongs_to', "model" => 'Impro\Team'),
-			"author"    => array('belongs_to', "model" => '\System\User', "is_null" => true),
+			"author"    => array('belongs_to', "model" => 'System\User', "is_null" => true),
 			"text"      => array('text'),
 			"visible"   => array('bool', "default" => false),
-			"responses" => array('has_many', "model" => '\Impro\Team\Comment\Response', "foreign_name" => 'id_comment'),
+			"responses" => array('has_many', "model" => 'Impro\Team\Comment\Response', "foreign_name" => 'id_comment'),
 		);
 
 

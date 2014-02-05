@@ -41,18 +41,6 @@ namespace Impro
 			"publish_wait"  => array('bool'),
 			"author"        => array('belongs_to', "model" => "System\User"),
 
-			"has_whistle"   => array('int', "default" => 0),
-			"has_kazoo"     => array('int', "default" => 0),
-			"has_mic"       => array('int', "default" => 0),
-			"has_dress_ref" => array('int', "default" => 0),
-			"has_dress_oth" => array('int', "default" => 0),
-			"has_cards"     => array('int', "default" => 0),
-			"has_basket"    => array('int', "default" => 0),
-			"has_papers"    => array('int', "default" => 0),
-			"has_pencils"   => array('int', "default" => 0),
-			"has_camera"    => array('int', "default" => 0),
-			"has_photo"     => array('int', "default" => 0),
-
 			"participants"  => array('has_many', "model" => 'Impro\Event\Participant'),
 			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking'),
 		);

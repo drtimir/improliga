@@ -1,0 +1,80 @@
+doctype html
+html(lang=$loc->get_lang())
+	head
+		:php
+			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
+			$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
+			$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
+			$ren->content_for('scripts', 'scripts/site/browser_control');
+			$ren->content_for('scripts', 'scripts/site/global');
+			$ren->content_for('scripts', 'scripts/site/public');
+
+			$ren->content_for('styles', 'styles/lib/fancybox');
+			$ren->content_for('styles', 'styles/lib/calendar');
+			$ren->content_for('styles', 'styles/impro/layout/base');
+			$ren->content_for('styles', 'styles/impro/layout/footer');
+			$ren->content_for('styles', 'styles/impro/layout/homepage');
+			$ren->content_for('styles', 'styles/impro/events');
+			$ren->content_for('styles', 'styles/impro/teams');
+			$ren->content_for('styles', 'styles/impro/about');
+			$ren->content_for('styles', 'styles/pwf/browser_control');
+			$ren->content_for('styles', 'styles/impro/calendar');
+
+			$ren->content_from('head');
+
+		link(rel="icon",type="image/ico",href="/favicon.ico")
+		link(rel="icon",type="image/png",href="/favicon.png")
+
+	body
+		header
+			.inner
+				.container
+					.logo!=$ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => $loc->trans('impro_name'))))
+					.logo-label!=$ren->link_for('home', Stag::strong(array("class" => 'hidden text', "content" => $loc->trans('impro_name'))))
+					menu.main.left
+						li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
+						li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
+						li!=$ren->link_for('events', $loc->trans('impro_menu_events'))
+
+					menu.main.right
+						li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
+						li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
+
+				.header-bottom
+		.top
+			.bg
+				img(src='/share/pixmaps/layout/background.jpg', alt='background')
+
+			#content
+				.container
+					:php
+						$ren->yield();
+
+		footer
+			.container
+				.dynamic
+					ul.plain.social
+						li!=$ren->icon_for('http://www.facebook.com/improligacz', 'impro/social/facebook', 32, array("class" => 'ext', "title" => 'Improliga na facebooku'))
+						li!=$ren->icon_for('https://www.youtube.com/user/improliga', 'impro/social/youtube', 32, array("class" => 'ext', "title" => 'Improliga na youtube'))
+					.partners
+					span.cleaner
+				.system
+					menu.plain.main
+						.li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
+						.li!=$ren->link_for('intranet_redir', $loc->trans('impro_menu_intranet'))
+						.li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
+						.li!=$ren->link_for('events', $loc->trans('impro_menu_events'))
+						.li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
+						.li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
+
+					.credits!=$loc->trans('impro_credits', \System\Status::introduce())
+
+		script(type="text/javascript")
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-40099806-1']);
+			_gaq.push(['_setDomainName', 'improliga.cz']);
+			_gaq.push(['_trackPageview']);
+			(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+
+
+

@@ -1,28 +1,25 @@
-<?
+doctype html
+html(lang=$loc->get_lang)
+	head
+		$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
+		$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
+		$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
+		$ren->content_for('scripts', 'scripts/site/browser_control');
+		$ren->content_for('scripts', 'scripts/site/global');
+		$ren->content_for('scripts', 'scripts/site/public');
 
-echo doctype();
-Tag::html(array("lang" => $locales->get_lang()));
-	Tag::head();
+		$ren->content_for('styles', 'styles/lib/fancybox');
+		$ren->content_for('styles', 'styles/lib/calendar');
+		$ren->content_for('styles', 'styles/impro/layout/base');
+		$ren->content_for('styles', 'styles/impro/layout/footer');
+		$ren->content_for('styles', 'styles/impro/layout/homepage');
+		$ren->content_for('styles', 'styles/impro/events');
+		$ren->content_for('styles', 'styles/impro/teams');
+		$ren->content_for('styles', 'styles/impro/about');
+		$ren->content_for('styles', 'styles/pwf/browser_control');
+		$ren->content_for('styles', 'styles/impro/calendar');
 
-		$renderer->content_for('scripts', 'bower/pwf-browser/lib/browser');
-		$renderer->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
-		$renderer->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
-		$renderer->content_for('scripts', 'scripts/site/browser_control');
-		$renderer->content_for('scripts', 'scripts/site/global');
-		$renderer->content_for('scripts', 'scripts/site/public');
-
-		$renderer->content_for('styles', 'styles/lib/fancybox');
-		$renderer->content_for('styles', 'styles/lib/calendar');
-		$renderer->content_for('styles', 'styles/impro/layout/base');
-		$renderer->content_for('styles', 'styles/impro/layout/footer');
-		$renderer->content_for('styles', 'styles/impro/layout/homepage');
-		$renderer->content_for('styles', 'styles/impro/events');
-		$renderer->content_for('styles', 'styles/impro/teams');
-		$renderer->content_for('styles', 'styles/impro/about');
-		$renderer->content_for('styles', 'styles/pwf/browser_control');
-		$renderer->content_for('styles', 'styles/impro/calendar');
-
-		echo $renderer->content_from('head');
+		echo $ren->content_from('head');
 
 		?>
 		<link rel="icon" type="image/ico" href="/favicon.ico">
@@ -64,8 +61,8 @@ Tag::html(array("lang" => $locales->get_lang()));
 
 			Tag::div(array("id" => 'content'));
 				Tag::div(array("class" => 'container'));
-					$renderer->yield();
-					$renderer->slot();
+					$ren->yield();
+					$ren->slot();
 				Tag::close('div');
 			Tag::close('div');
 		Tag::close('div');
@@ -78,8 +75,8 @@ Tag::html(array("lang" => $locales->get_lang()));
 						li($ren->icon_for('https://www.youtube.com/user/improliga', 'impro/social/youtube', 32, array("class" => 'ext', "title" => 'Improliga na youtube'))),
 					));
 					echo div(array("class" => 'partners'));
-						echo $renderer->heading($locales->trans('impro_partners').':', 3);
-						$renderer->render_partial('impro/static/partners', array("partners" => \Impro\Partner::visible()->fetch()));
+						echo $ren->heading($locales->trans('impro_partners').':', 3);
+						$ren->slot('partners');
 					close('div');
 					echo span('cleaner', '');
 				close('div');

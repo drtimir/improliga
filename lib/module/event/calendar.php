@@ -10,7 +10,7 @@ def($month, intval(date("m")));
 def($shift, '');
 def($day_link_integrate, false);
 def($day_names_short, false);
-def($template, '/impro/event/calendar');
+def($template, 'event/calendar');
 def($conds, array("visible" => true));
 def($heading, $locales->trans('impro_event_calendar'));
 def($day, intval(date("d")));

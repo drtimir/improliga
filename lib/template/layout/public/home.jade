@@ -1,0 +1,15 @@
+.page-block.homepage
+	.block.left
+		:php
+			$ren->slot('left');
+
+	.block.right
+		:php
+			$ren->slot('right');
+
+	span.cleaner
+	.block
+		:php
+			$ren->slot('events');
+
+	span.cleaner

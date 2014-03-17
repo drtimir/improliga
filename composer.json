@@ -5,6 +5,7 @@
 		"vendor-dir":"lib/vendor"
 	},
 	"require":{
+		"ronan-gloo/jadephp":"dev-master@dev",
 		"just-paja/fudjan":"*",
 		"just-paja/fudjan-facebook":"*",
 		"just-paja/fudjan-godmode":"*"

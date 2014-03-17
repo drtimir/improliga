@@ -60,14 +60,15 @@ html(lang=$loc->get_lang())
 					span.cleaner
 				.system
 					menu.plain.main
-						.li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
-						.li!=$ren->link_for('intranet_redir', $loc->trans('impro_menu_intranet'))
-						.li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
-						.li!=$ren->link_for('events', $loc->trans('impro_menu_events'))
-						.li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
-						.li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
+						li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
+						li!=$ren->link_for('intranet_redir', $loc->trans('impro_menu_intranet'))
+						li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
+						li!=$ren->link_for('events', $loc->trans('impro_menu_events'))
+						li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
+						li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
 
 					.credits!=$loc->trans('impro_credits', \System\Status::introduce())
+				span.cleaner
 
 		script(type="text/javascript")
 			var _gaq = _gaq || [];

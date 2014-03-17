@@ -1,6 +1,6 @@
 <?
 
-def($template, '/impro/event/list_latest');
+def($template, 'event/list/latest');
 def($conds, array("visible" => true, "public" => true));
 def($heading, $locales->trans('impro_events_latest'));
 def($booking, false);

@@ -1,0 +1,6 @@
+{
+	"models":{
+		"url_schema":"/api/model/{model}",
+		"url_browse":"/api/model/{model}/browse"
+	}
+}

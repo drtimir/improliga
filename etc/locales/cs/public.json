@@ -1,9 +1,12 @@
 {
-	"impro_name":"Česká Improliga - divadlo jako hokejový zápas",
+	"impro_name":"Improliga",
+	"impro_name_desc":"divadlo jako hokejový zápas",
+
 	"impro_menu_home":"Úvod",
 	"impro_menu_about":"O Improlize",
 	"impro_menu_teams":"Týmy",
-	"impro_menu_events":"Události",
+	"impro_menu_shows":"Představení",
+	"impro_menu_workshops":"Workshopy",
 	"impro_menu_media":"Média o Improlize",
 	"impro_menu_news":"Novinky",
 	"impro_menu_intranet":"Intranet",
@@ -12,6 +15,9 @@
 	"title_impro_teams":"Týmy Improligy",
 	"title_impro_global":"Improliga - %s",
 	"title_impro_team":"%s - Improliga",
+
+	"impro_shows":"Představení",
+	"impro_workshops":"Workshopy",
 
 	"impro_match":"Zápas",
 	"impro_show":"Improshow",

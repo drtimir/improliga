@@ -1,0 +1,23 @@
+.carticle_list
+	!=$ren->heading($heading);
+
+	each category in $categories
+		:php
+			$articles = $category->articles->where(array("visible" => true, "published" => true))->fetch();
+
+		if any($articles)
+			.category
+				!=$ren->heading_static($category->name);
+				ul.article_list
+
+				each article in $articles
+					:php
+						$chapters = $article->chapters->where(array("visible" => true))->fetch();
+
+					li
+						!=$ren->link_for('article', $article->name, args($article))
+
+						if count($chapters) > 2
+							ol.chapter_list
+								each chapter in $chapters
+									li!=$ren->link_for('article_chapter', $chapter->name, args($article, \System\Url::gen_seoname($chapter->name)))

@@ -1,0 +1,25 @@
+:php
+	$ren->content_for('title', $loc->trans('title_impro_teams'))
+
+.team_list
+	!=$ren->heading($loc->trans('title_impro_teams'))
+
+	ul.plain.cities
+		each teams,city in $cities
+			li
+				!=$ren->heading_static($city);
+
+				ul.plain.teams
+					each team in $teams
+						:php
+							$url = $ren->url('team', array($team->get_seoname()));
+
+						li
+							!=$ren->link($url, $team->logo->to_html($ren->renderer, $ts[0], $ts[1]))
+
+							.desc
+								strong!=$ren->link($url, $team->name)
+								.name_full=$team->name_full
+								.city=$team->city
+
+	span.cleaner

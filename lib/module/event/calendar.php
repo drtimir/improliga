@@ -60,6 +60,12 @@ foreach ($items as &$item) {
 	}
 }
 
+foreach ($events as $index=>$elist) {
+	if (empty($elist)) {
+		unset($events[$index]);
+	}
+}
+
 $nm = clone $start;
 $nm->modify("+1 month");
 

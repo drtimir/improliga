@@ -1,0 +1,16 @@
+:php
+	$ren->content_for('title', $article->get_name().' - O Improlize');
+
+.article
+	!=$ren->heading($article->get_name())
+
+	if any($chapters)
+		if count($chapters) > 1
+			ol.chapters
+				each chapter in $chapters
+					li.chapter
+						!=$ren->heading_static($chapter->get_name())
+						!=$chapter->text
+		else
+			.chapter!=first($chapters)->text
+

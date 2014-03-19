@@ -1,35 +1,89 @@
 [
 	["^/$", {
 		"title":"Česká Improliga - divadlo jako hokejový zápas",
-		"layout":["layout/public", "layout/public/home"],
+		"layout":["layout/public", "layout/public/paralax"],
 		"modules":[
-			["system/text/show", {"slot":"left", "id":1}],
+			["system/text/show", {"id":1}],
+			["system/partial", {"template":"public/teams"}],
+			["system/partial", {"template":"public/shows"}],
+			["system/partial", {"template":"public/workshops"}],
+			["system/partial", {"template":"public/about"}],
+			["system/partial", {"template":"public/contacts"}],
 			["event/latest", {
-				"slot":"events",
 				"conds":{"published":true},
 				"thumb_width":216,
 				"thumb_height":165,
-				"per_page":4
-			}],
-			["event/calendar", {
-				"slot":"right",
-				"day_link_integrate":true,
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"heading":"Kalendář",
-				"conds":{"published":true}
+				"per_page":4,
+				"slot":"meta"
 			}]
 		]
 	}, "home"],
 
+	["^/tymy$", {
+		"layout":["layout/public", "layout/public/single"],
+		"modules":[
+			["team/list"]
+		]
+	}, "teams"],
 
-	["^/o-improlize/$", {
+	["^/predstaveni$", {
+		"modules":[
+			["event/calendar", {
+				"slot":"left",
+				"template":"event/list/month",
+				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+			}]
+		]
+	}, "events"],
+
+	["^/workshopy$", {
+		"modules":[
+			["event/calendar", {
+				"slot":"left",
+				"template":"event/list/month",
+				"link_day_piece":"den_{day}",
+				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+			}]
+		]
+	}, "workshops"],
+
+	["^/udalosti/seznam/([^/]+)/$", {
+		"modules":[
+			["event/calendar", {
+				"slot":"left",
+				"template":"event/list/month",
+				"link_day_piece":"den_{day}",
+				"month_input":"#{0}",
+				"conds":{"published":true}
+			}]
+		]
+	}, "events_month"],
+
+	["^/o-improlize$", {
 		"title":"O Improlize",
-		"layout":["layout/public", "impro/dual_34_14"],
+		"layout":["layout/public", "layout/public/dual-34"],
 		"modules":[
 			["system/text/show", {"id":2, "slot":"left"}],
-			["impro/article/category/list", {"slot":"right"}]
+			["article/category/list", {"slot":"right"}]
 		]
 	}, "about"],
+
+	["^/o-improlize/([^/]+)/$", {
+		"layout":["layout/public", "layout/public/dual-34"],
+		"modules":[
+			["article/detail", {"id":"#{0}", "slot":"left"}],
+			["article/category/list", {"slot":"right"}]
+		]
+	}, "article"],
+
+	["^/kontakty$", {
+		"title":"Kontakty - Česká Improliga",
+		"modules":[
+			["system/text/show", {"id":4, "slot":"left"}],
+			["system/text/show", {"id":3, "slot":"right"}]
+		]
+	}, "contacts"],
 
 	["^/fauly/$", {
 		"title":"Fauly",
@@ -45,13 +99,6 @@
 		]
 	}, "foul"],
 
-	["^/o-improlize/([^/]+)/$", {
-		"layout":["layout/public", "impro/dual_34_14"],
-		"modules":[
-			["impro/article/detail", {"id":"#{0}", "slot":"left"}],
-			["impro/article/category/list", {"slot":"right"}]
-		]
-	}, "article"],
 
 	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "article_chapter"],
 
@@ -63,67 +110,12 @@
 		]
 	}, "media"],
 
-	["^/tymy/$", {
-		"layout":["layout/public", "impro/single"],
-		"modules":[
-			["impro/team/list"]
-		]
-	}, "teams"],
-
 	["^/tymy/([^/]+)/$", {
 		"layout":["layout/public", "impro/single"],
 		"modules":[
 			["impro/team/detail", {"id":"#{0}"}]
 		]
 	}, "team"],
-
-	["^/kontakty/$", {
-		"title":"Kontakty - Česká Improliga",
-		"layout":["layout/public", "impro/dual"],
-		"modules":[
-			["system/text/show", {"id":4, "slot":"left"}],
-			["system/text/show", {"id":3, "slot":"right"}]
-		]
-	}, "contacts"],
-
-	["^/udalosti/$", {
-		"layout":["layout/public", "impro/dual"],
-		"modules":[
-			["impro/event/calendar", {
-				"slot":"left",
-				"template":"impro/event/list_month",
-				"link_day_piece":"den_{day}",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
-			}],
-			["impro/event/calendar", {
-				"slot":"right",
-				"day_link_integrate":true,
-				"link_day_piece":"den_{day}",
-				"heading":"Kalendář",
-				"conds":{"published":true}
-			}]
-		]
-	}, "events"],
-
-	["^/udalosti/seznam/([^/]+)/$", {
-		"layout":["layout/public", "impro/dual"],
-		"modules":[
-			["impro/event/calendar", {
-				"slot":"right",
-				"day_link_integrate":true,
-				"link_day_piece":"den_{day}",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}",
-				"month_input":"#{0}"
-			}],
-			["impro/event/calendar", {
-				"slot":"left",
-				"template":"impro/event/list_month",
-				"link_day_piece":"den_{day}",
-				"month_input":"#{0}",
-				"conds":{"published":true}
-			}]
-		]
-	}, "events_month"],
 
 	["^/udalosti/([^/]+)/$", {
 		"layout":["layout/public", "impro/single"],

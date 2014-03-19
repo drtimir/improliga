@@ -2,7 +2,7 @@
 
 $this->req('id');
 
-def($template, 'impro/article/detail');
+def($template, 'article/detail');
 def($conds, array("visible" => true));
 
 if ($article = find('Impro\Article', $id)) {

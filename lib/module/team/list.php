@@ -1,6 +1,6 @@
 <?
 
-def($template, "impro/team/list");
+def($template, "team/list");
 def($conds, array("visible" => true));
 def($ts, array(118, 100));
 
@@ -17,7 +17,6 @@ foreach ($items as $team) {
 
 	$cities[$team->city][] = $team;
 }
-
 
 ksort($cities);
 

@@ -1,7 +1,10 @@
 {
 	"global":{
 		"rules":["^(www\\.)?improliga.cz$", "^(www\\.)?improliga.cz.local$"],
-		"init":["www", "godmode"]
+		"layout":["layout/public", "layout/public/dual"],
+		"context":["partners"],
+		"policies":["www"],
+		"init":["godmode"]
 	},
 	"intra":{
 		"rules":["intra.improliga.cz$", "intra.improliga.cz.local$"],

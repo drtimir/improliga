@@ -8,6 +8,7 @@
 		"ronan-gloo/jadephp":"dev-master@dev",
 		"just-paja/fudjan":"*",
 		"just-paja/fudjan-facebook":"*",
+		"just-paja/fudjan-locations":"*",
 		"just-paja/fudjan-godmode":"*"
 	}
 }

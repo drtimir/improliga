@@ -2,6 +2,8 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$ren->content_for('scripts', 'bower/async/lib/async');
+			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/domel');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/container');
 			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
@@ -15,6 +17,7 @@ html(lang=$loc->get_lang())
 			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/model');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/list');
+			$ren->content_for('scripts', 'bower/pwf-models-schema/lib/schema');
 			$ren->content_for('scripts', 'scripts/site/browser_control');
 			$ren->content_for('scripts', 'scripts/site/global');
 			$ren->content_for('scripts', 'scripts/site/public');

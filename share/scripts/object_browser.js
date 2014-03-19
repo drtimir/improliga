@@ -1,7 +1,7 @@
 pwf.rc({
 	'name':'object_browser',
 	'parents':['container', 'domel'],
-	'uses':['list'],
+	'uses':['list', 'config', 'schema', 'async'],
 
 	'storage':{
 		'pager':null,
@@ -26,16 +26,26 @@ pwf.rc({
 		});
 
 		proto.storage.loader = pwf.list.create({
-			'model':proto('model')
+			'model':proto('model'),
+			'url':pwf.config.get('models.url_browse').replace('{model}', proto('model'))
 		});
 	},
 
 	'public':{
 		'load':function(proto)
 		{
-			proto.storage.loader.load(function(err, response) {
-				v(err);
-				v(response);
+			var jobs = [
+				function(next) {
+					pwf.schema.check(proto('model'), next);
+				},
+
+				function(next) {
+					proto.storage.loader.load(next);
+				}
+			];
+
+			pwf.async.series(jobs, function(err, response) {
+				v(err, response);
 			});
 		},
 

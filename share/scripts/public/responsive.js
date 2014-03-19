@@ -11,9 +11,80 @@ pwf.register('responsive', function()
 		pwf.jquery(window).bind('resize', this, callback_reset);
 
 		this
+			.init_objects()
 			.init_paralax()
 			.reset()
 			.init_anchors();
+	};
+
+
+	this.init_objects = function()
+	{
+		var
+			register = [
+				{
+					'el':'.team-browser',
+					'obj':'team_browser'
+				},
+				{
+					'el':'.event-browser.shows',
+					'obj':'event_browser',
+					'pass':{
+						'filters':[
+							{
+								'type':'static',
+								'name':'type',
+								'value':[1,2]
+							}
+						]
+					}
+				},
+				{
+					'el':'.event-browser.workshops',
+					'obj':'event_browser',
+					'pass':{
+						'filters':[
+							{
+								'type':'static',
+								'name':'type',
+								'value':[1,2]
+							}
+						]
+					}
+				},
+				{
+					'el':'.article-browser',
+					'obj':'article_browser'
+				},
+				{
+					'el':'.contact-form',
+					'obj':'contact_form'
+				}
+			];
+
+		for (var i = 0; i < register.length; i++) {
+			var
+				reg = register[i],
+				el = pwf.jquery(reg.el);
+
+			if (el.length) {
+				if (pwf.has_class(reg.obj)) {
+					var
+						opts = pwf.jquery.extend({'parent':el}, reg.pass),
+						obj;
+
+					v(['registering', reg.el, reg.obj]);
+					obj = pwf.create(reg.obj, opts);
+
+					if (typeof obj.load == 'function') {
+						obj.load();
+					}
+				}
+			}
+		}
+
+
+		return this;
 	};
 
 

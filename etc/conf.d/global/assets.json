@@ -2,6 +2,8 @@
 	"dependencies":{
 		"pwf-browser":"*",
 		"html5shiv":"*",
-		"fancybox":"*"
+		"fancybox":"*",
+		"pwf-paginator":"*"
+
 	}
 }

@@ -2,13 +2,25 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$ren->content_for('scripts', 'bower/pwf.js/lib/models/domel');
+			$ren->content_for('scripts', 'bower/pwf.js/lib/models/container');
 			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
 			$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
 			$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
+			$ren->content_for('scripts', 'bower/pwf-paginator/lib/paginator');
+			$ren->content_for('scripts', 'bower/pwf-queue/lib/queue');
+			$ren->content_for('scripts', 'bower/pwf-comm/lib/comm');
+			$ren->content_for('scripts', 'bower/pwf-comm/lib/mods/http');
+			$ren->content_for('scripts', 'bower/pwf-form/lib/form');
+			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
+			$ren->content_for('scripts', 'bower/pwf-models/lib/model');
+			$ren->content_for('scripts', 'bower/pwf-models/lib/list');
 			$ren->content_for('scripts', 'scripts/site/browser_control');
 			$ren->content_for('scripts', 'scripts/site/global');
 			$ren->content_for('scripts', 'scripts/site/public');
 			$ren->content_for('scripts', 'scripts/public/responsive');
+			$ren->content_for('scripts', 'scripts/object_browser');
+			$ren->content_for('scripts', 'scripts/team_browser');
 
 			$ren->content_for('styles', 'bower/reset-css/reset');
 			$ren->content_for('styles', 'styles/fonts');

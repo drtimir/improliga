@@ -2,7 +2,7 @@
 
 namespace Impro
 {
-	class Team extends \System\Model\Database
+	class Team extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"name"           => array("varchar"),
@@ -29,6 +29,12 @@ namespace Impro
 			"comments"  => array('has_many', "model" => 'Impro\Team\Comment', "foreign_name" => 'id_team'),
 			"posts"     => array('has_many', "model" => 'Impro\Post'),
 			"trainings" => array('has_many', "model" => 'Impro\Team\Training'),
+		);
+
+
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true
 		);
 
 
@@ -102,15 +108,6 @@ namespace Impro
 			return false;
 		}
 
-
-		public function can_user(\System\User $user, $perm_id)
-		{
-			if ($mem = $this->member($user)) {
-				return $mem->has_right($perm_id);
-			}
-
-			return false;
-		}
 
 		public function send_request(\System\User $user, \System\Template\Renderer $ren, \System\Http\Request $request)
 		{

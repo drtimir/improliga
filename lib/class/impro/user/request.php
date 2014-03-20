@@ -22,13 +22,13 @@ namespace Impro\User
 			"redirect_no"    => array('varchar'),
 			"redirect_maybe" => array('varchar', 'default' => ''),
 			"allow_maybe"    => array('bool'),
-			"code"           => array('belongs_to', "model" => '\System\User\Auth\Code'),
-			"user"           => array('belongs_to', "model" => '\System\User'),
-			"author"         => array('belongs_to', "model" => '\System\User'),
-			"event"          => array('belongs_to', "model" => '\Impro\Event', "is_null" => true),
-			"team"           => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
-			"member"         => array('belongs_to', "model" => '\Impro\Team\Member', "is_null" => true),
-			"training"       => array('belongs_to', "model" => '\Impro\Team\Training', "is_null" => true),
+			"code"           => array('belongs_to', "model" => 'System\User\Auth\Code'),
+			"user"           => array('belongs_to', "model" => 'System\User'),
+			"author"         => array('belongs_to', "model" => 'System\User'),
+			"event"          => array('belongs_to', "model" => 'Impro\Event', "is_null" => true),
+			"team"           => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
+			"member"         => array('belongs_to', "model" => 'Impro\Team\Member', "is_null" => true),
+			"training"       => array('belongs_to', "model" => 'Impro\Team\Training', "is_null" => true),
 		);
 
 

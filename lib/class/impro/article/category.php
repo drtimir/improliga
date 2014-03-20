@@ -8,7 +8,7 @@ namespace Impro\Article
 			"name"     => array('varchar'),
 			"weight"   => array('int', "is_unsigned" => true),
 			"visible"  => array('bool'),
-			"articles" => array('has_many', "model" => '\Impro\Article'),
+			"articles" => array('has_many', "model" => 'Impro\Article'),
 		);
 	}
 }

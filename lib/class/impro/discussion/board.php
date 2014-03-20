@@ -10,8 +10,8 @@ namespace Impro\Discussion
 			"locked"  => array('bool'),
 			"visible" => array('bool'),
 			"public"  => array('bool'),
-			"team"    => array('belongs_to', "model" => '\Impro\Team'),
-			"author"  => array('belongs_to', "model" => '\System\User'),
+			"team"    => array('belongs_to', "model" => 'Impro\Team'),
+			"author"  => array('belongs_to', "model" => 'System\User'),
 			"topics"  => array('has_many', "model" => 'Impro\Discussion\Topic', "foreign_name" => 'id_board'),
 			"posts"   => array('has_many', "model" => 'Impro\Discussion\Post',  "foreign_name" => 'id_board'),
 		);

@@ -5,14 +5,14 @@ namespace Impro\User
 	class Notice extends \System\Model\Database
 	{
 		protected static $attrs = array(
-			"user"         => array('belongs_to', "model" => '\System\User'),
+			"user"         => array('belongs_to', "model" => 'System\User'),
 			"text"         => array('text'),
 			"read"         => array('bool'),
 			"generated_by" => array('varchar'),
 			"redirect"     => array('varchar'),
-			"author"       => array('belongs_to', "model" => '\System\User'),
-			"event"        => array('belongs_to', "model" => '\Impro\Event', "is_null" => true),
-			"team"         => array('belongs_to', "model" => '\Impro\Team', "is_null" => true),
+			"author"       => array('belongs_to', "model" => 'System\User'),
+			"event"        => array('belongs_to', "model" => 'Impro\Event', "is_null" => true),
+			"team"         => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
 		);
 
 

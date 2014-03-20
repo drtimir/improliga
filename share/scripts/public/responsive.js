@@ -130,8 +130,9 @@ pwf.register('responsive', function()
 
 	this.init_anchors = function()
 	{
-		pwf.jquery(window).bind('hashchange', this, callback_hashchange);
-		pwf.jquery('.sections').bind('scroll', this, callback_scroll);
+		pwf.jquery(window)
+			.bind('hashchange', this, callback_hashchange)
+			.bind('scroll', this, callback_scroll);
 
 		return this.scroll_to_hash();
 	};
@@ -141,11 +142,9 @@ pwf.register('responsive', function()
 	{
 		var
 			top = el.position().top - pwf.jquery('.paralax').position().top,
-			sec = pwf.jquery('.sections');
+			sec = pwf.jquery('html');
 
-		sec.stop(true).animate({
-			'scrollTop':top
-		});
+		sec.animate({'scrollTop':top});
 	};
 
 
@@ -179,7 +178,7 @@ pwf.register('responsive', function()
 	this.update_menu = function(e)
 	{
 		var
-			sec = pwf.jquery('.sections'),
+			sec = pwf.jquery('html'),
 			lax = pwf.jquery('.paralax'),
 			els = pwf.jquery('.main-menu a'),
 			sel = null,
@@ -189,7 +188,7 @@ pwf.register('responsive', function()
 			var
 				item = pwf.jquery(els[i]),
 				el = this.get_el_from_hash(item.attr('href')),
-				et = el.position().top;
+				et = el.position().top - sec.scrollTop() + el.height();
 
 			item.removeClass('active');
 

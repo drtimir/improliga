@@ -3,7 +3,9 @@ html(lang=$loc->get_lang())
 	head
 		:php
 			$ren->content_for('scripts', 'bower/async/lib/async');
+			$ren->content_for('scripts', 'bower/moment/moment');
 			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
+			$ren->content_for('scripts', 'bower/pwf-moment-compat/lib/moment-compat');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/domel');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/container');
 			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
@@ -45,8 +47,8 @@ html(lang=$loc->get_lang())
 		link(rel="icon",type="image/png",href="/favicon.png")
 
 	body
-		.site-content.max
-			.wrapper
+		.wrapper
+			.wrapper-content
 				header
 					.inner
 						ul.main-menu
@@ -63,9 +65,8 @@ html(lang=$loc->get_lang())
 
 						a.logo(href=$ren->url('home'))
 
-			.sections.max
-				:php
-					$ren->yield();
+		:php
+			$ren->yield();
 
 		.meta
 			:php

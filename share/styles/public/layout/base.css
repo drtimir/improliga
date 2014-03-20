@@ -9,6 +9,9 @@ body {
 	padding:0;
 	margin:0;
 	background:#000;
+	min-width:1000px;
+	min-height:400px;
+	overflow:auto;
 }
 
 .max {
@@ -18,24 +21,18 @@ body {
 	height:100%;
 }
 
-.site-content {
-	position:absolute;
-	min-width:1000px;
-	min-height:400px;
-	z-index:1;
+.wrapper {
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	z-index:10;
 
-	.sections {
-		position:absolute;
-		overflow:auto;
-		z-index:2;
-	}
-
-	.wrapper {
+	.wrapper-content {
 		min-width:1000px;
 		max-width:1400px;
-		position:relative;
 		margin:0 auto;
-		height:100%;
+		position:relative;
 	}
 }
 

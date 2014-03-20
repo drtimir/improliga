@@ -1,7 +1,7 @@
 pwf.rc({
 	'name':'object_browser',
 	'parents':['container', 'domel'],
-	'uses':['list', 'config', 'schema', 'async'],
+	'uses':['list', 'config', 'schema', 'async', 'form'],
 
 	'storage':{
 		'pager':null,
@@ -9,7 +9,10 @@ pwf.rc({
 		'opts':{
 			'per_page':20,
 			'page':0,
-			'sort':'created_at'
+			'sort':'created_at',
+			'on_error':function(ctrl, ocurrence, msg) {
+				v(msg);
+			}
 		}
 	},
 
@@ -18,6 +21,9 @@ pwf.rc({
 		var el = this.get_el();
 
 		el.create_divs(['filters', 'data', 'pager']);
+
+		//~ proto.storage.filter = pwf.form.create({
+		//~ });
 
 		proto.storage.pager = pwf.create('paginator', {
 			'parent':el.pager,
@@ -44,21 +50,28 @@ pwf.rc({
 				}
 			];
 
-			pwf.async.series(jobs, function(err, response) {
-				v(err, response);
-			});
+			pwf.async.series(jobs, function(ctrl) {
+				return function(err, response) {
+					if (err === null)  {
+						ctrl.update_view();
+					} else ctrl.get('on_error')(ctrl, 'loading', err);
+				};
+			}(this));
 		},
 
-		'update_view':function()
+		'update_view':function(proto)
 		{
+			var data = proto.storage.loader.get_data();
+
+			return this.update_pagi();
 		},
 
 		'update_pagi':function(proto)
 		{
-			var data = loader.get_data();
+			var data = proto.storage.loader.get_data();
 
 			proto.storage.pager.update({
-				'per_page':this.get('per_column') * cols.length,
+				'per_page':this.get('per_page'),
 				'page':this.get('page'),
 				'total':data.total
 			});

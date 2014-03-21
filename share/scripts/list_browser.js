@@ -1,15 +1,25 @@
 pwf.rc({
-	'name':'object_browser',
+	'name':'list_browser',
 	'parents':['container', 'domel'],
 	'uses':['list', 'config', 'schema', 'async', 'form'],
 
 	'storage':{
 		'pager':null,
 		'loader':null,
+		'filter':null,
+		'renderer':null,
+
 		'opts':{
 			'per_page':20,
 			'page':0,
 			'sort':'created_at',
+
+			'after_load':null,
+			'after_render':null,
+
+			'before_load':null,
+			'before_render':null,
+
 			'on_error':function(ctrl, ocurrence, msg) {
 				v(msg);
 			}
@@ -18,12 +28,21 @@ pwf.rc({
 
 	'init':function(proto)
 	{
-		var el = this.get_el();
+		var
+			el = this.get_el(),
+			filter_update = function(ctrl) {
+				return function(form) {
+					ctrl.load();
+				};
+			}(this);
 
 		el.create_divs(['filters', 'data', 'pager']);
 
-		//~ proto.storage.filter = pwf.form.create({
-		//~ });
+		proto.storage.filter = pwf.form.create({
+			'on_send':filter_update,
+			'on_change':filter_update,
+			'elements':this.get_filter_inputs()
+		});
 
 		proto.storage.pager = pwf.create('paginator', {
 			'parent':el.pager,
@@ -42,6 +61,10 @@ pwf.rc({
 		{
 			var jobs = [
 				function(next) {
+					pwf.templater.load_all(next);
+				},
+
+				function(next) {
 					pwf.schema.check(proto('model'), next);
 				},
 
@@ -50,9 +73,20 @@ pwf.rc({
 				}
 			];
 
+			this.get_el().addClass('loading');
+
+			if (typeof this.get('before_load') == 'function') {
+				this.get('before_load')(this);
+			}
+
 			pwf.async.series(jobs, function(ctrl) {
 				return function(err, response) {
 					if (err === null)  {
+
+						if (typeof ctrl.get('after_load') == 'function') {
+							ctrl.get('after_load')(this);
+						}
+
 						ctrl.update_view();
 					} else ctrl.get('on_error')(ctrl, 'loading', err);
 				};
@@ -61,9 +95,24 @@ pwf.rc({
 
 		'update_view':function(proto)
 		{
-			var data = proto.storage.loader.get_data();
+			var list = proto.storage.loader.get_data();
 
-			return this.update_pagi();
+			if (typeof this.get('before_render') == 'function') {
+				this.get('before_render')(this);
+			}
+
+			if (typeof proto.storage.renderer == 'object' && proto.storage.renderer !== null) {
+				proto.storage.renderer.render(list.data, this.get_el().data);
+			}
+
+			this.update_pagi();
+			this.get_el().removeClass('loading');
+
+			if (typeof this.get('after_render') == 'function') {
+				this.get('after_render')(this);
+			}
+
+			return this;
 		},
 
 		'update_pagi':function(proto)
@@ -75,8 +124,11 @@ pwf.rc({
 				'page':this.get('page'),
 				'total':data.total
 			});
+		},
+
+		'get_filter_inputs':function(proto)
+		{
+
 		}
-
-
 	}
 });

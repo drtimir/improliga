@@ -3,7 +3,7 @@
 		"pwf-browser":"*",
 		"html5shiv":"*",
 		"fancybox":"*",
+		"icanhazjs":"*",
 		"pwf-paginator":"*"
-
 	}
 }

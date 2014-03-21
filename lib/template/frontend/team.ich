@@ -1,0 +1,11 @@
+<div class="team cols">
+	<div class="l">
+		<img src="{{item.get('logo')}}" alt="logo">
+	</div>
+
+	<div class="r">
+		<div class="team-name">{{item.get('name')}}</div>
+		<div class="team-city">{{item.get('city')}}</div>
+	</div>
+	<div class="cleaner"></div>
+</div>

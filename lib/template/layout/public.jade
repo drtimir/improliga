@@ -2,6 +2,8 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$ren->content_for('scripts', 'bower/icanhazjs/ICanHaz');
+
 			$ren->content_for('scripts', 'bower/async/lib/async');
 			$ren->content_for('scripts', 'bower/moment/moment');
 			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
@@ -17,14 +19,20 @@ html(lang=$loc->get_lang())
 			$ren->content_for('scripts', 'bower/pwf-comm/lib/mods/http');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/form');
 			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
+			$ren->content_for('scripts', 'bower/pwf-locales/lib/locales');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/model');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/list');
 			$ren->content_for('scripts', 'bower/pwf-models-schema/lib/schema');
+			$ren->content_for('scripts', 'bower/pwf-form/lib/form');
+			$ren->content_for('scripts', 'bower/pwf-form/lib/input');
+			$ren->content_for('scripts', 'bower/pwf-form/lib/input/default');
 			$ren->content_for('scripts', 'scripts/site/browser_control');
 			$ren->content_for('scripts', 'scripts/site/global');
 			$ren->content_for('scripts', 'scripts/site/public');
 			$ren->content_for('scripts', 'scripts/public/responsive');
-			$ren->content_for('scripts', 'scripts/object_browser');
+			$ren->content_for('scripts', 'scripts/templater');
+			$ren->content_for('scripts', 'scripts/list_renderer');
+			$ren->content_for('scripts', 'scripts/list_browser');
 			$ren->content_for('scripts', 'scripts/team_browser');
 
 			$ren->content_for('styles', 'bower/reset-css/reset');
@@ -33,13 +41,13 @@ html(lang=$loc->get_lang())
 			$ren->content_for('styles', 'styles/lib/fancybox');
 			$ren->content_for('styles', 'styles/lib/calendar');
 			$ren->content_for('styles', 'styles/public/layout/base');
-			$ren->content_for('styles', 'styles/public/layout/footer');
-			$ren->content_for('styles', 'styles/public/layout/homepage');
+			$ren->content_for('styles', 'styles/objects/browser');
 			$ren->content_for('styles', 'styles/public/events');
 			$ren->content_for('styles', 'styles/public/teams');
 			$ren->content_for('styles', 'styles/public/about');
 			$ren->content_for('styles', 'styles/pwf/browser_control');
 			$ren->content_for('styles', 'styles/public/calendar');
+			$ren->content_for('title', $loc->trans('impro_name').' - '.$loc->trans('impro_name_desc'));
 
 			$ren->content_from('head');
 

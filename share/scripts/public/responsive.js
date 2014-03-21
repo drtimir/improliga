@@ -245,7 +245,7 @@ pwf.register('responsive', function()
 			'top':Math.round((bg.height() - img.height())/2),
 		});
 
-		return this;
+		return this.scroll_to_hash();
 	};
 
 

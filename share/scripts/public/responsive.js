@@ -216,7 +216,7 @@ pwf.register('responsive', function()
 			lax = pwf.jquery('.paralax'),
 			ilax = lax.find('.paralax-inner'),
 			boxes = ilax.children('.template'),
-			center = ilax.find('.system-text-show');
+			center = ilax.find('.system-text-show, .block-trans');
 
 		if (horizontal) {
 			img.css({'width':bg.height()});

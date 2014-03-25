@@ -14,7 +14,10 @@ pwf.rc({
 					'type':'text',
 					'placeholder':'Filtrovat'
 				}
-			]
+			],
+			'after_render':function() {
+				pwf.responsive.reset();
+			}
 		}
 	},
 

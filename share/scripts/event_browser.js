@@ -16,7 +16,10 @@ pwf.rc({
 					'value':pwf.moment(),
 					'required':true
 				}
-			]
+			],
+			'after_render':function() {
+				pwf.responsive.reset();
+			}
 		},
 	},
 

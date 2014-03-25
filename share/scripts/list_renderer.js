@@ -31,10 +31,10 @@ pwf.rc({
 				attrs = this.get('attrs'),
 				el = pwf.jquery.div('item');
 
-			el.html(ich[this.get('template')]({
-				'item':item
-			}));
+			var html = pwf.templater.render(this.get('template'), item);
+			v(html);
 
+			el.html(html);
 			return el;
 		}
 	}

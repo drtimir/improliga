@@ -1,8 +1,8 @@
 <div class="event cols">
-	<div class="l">{{image item 'image'}}</div>
+	<div class="l">{{image item 'image' '60x60'}}</div>
 
 	<div class="r">
-		<div class="event-name">{{short item 'name' 22}}</div>
+		<div class="event-name">{{short item 'name' 26}}</div>
 		<div class="attrs">
 			<div class="event-type-and-location">
 				<span class="event-type">{{get item 'type'}}</span>

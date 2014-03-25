@@ -2,19 +2,20 @@ pwf.register('responsive', function()
 {
 	this.is_ready = function()
 	{
-		return pwf.mi(['jquery']);
+		return pwf.mi(['jquery', 'locales']);
 	};
 
 
 	this.init = function()
 	{
 		pwf.jquery(window).bind('resize', this, callback_reset);
-
-		this
-			.init_objects()
-			.init_paralax()
-			.reset()
-			.init_anchors();
+		pwf.queue.on('pwf-locales-loaded', function(pack) {
+			pack.data
+				.init_objects()
+				.init_paralax()
+				.reset()
+				.init_anchors();
+		}, this);
 	};
 
 

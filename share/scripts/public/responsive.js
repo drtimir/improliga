@@ -134,7 +134,7 @@ pwf.register('responsive', function()
 	{
 		var
 			top = el.position().top - pwf.jquery('.paralax').position().top,
-			sec = pwf.jquery('html');
+			sec = pwf.jquery('body');
 
 		sec.animate({'scrollTop':top});
 	};

@@ -28,13 +28,17 @@ pwf.rc({
 		'render_item':function(proto, item)
 		{
 			var
-				attrs = this.get('attrs'),
-				el = pwf.jquery.div('item');
+				el = pwf.jquery.div('item'),
+				data = {},
+				attrs = item.model().get_attrs();
 
-			var html = pwf.templater.render(this.get('template'), item);
-			v(html);
+			for (var i = 0; i < attrs.length; i++) {
+				data[attrs[i].name] = item.get(attrs[i].name);
+			}
 
-			el.html(html);
+			data.item = item;
+
+			el.html(pwf.templater.render(this.get('template'), data));
 			return el;
 		}
 	}

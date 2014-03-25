@@ -4,6 +4,7 @@
 		"url_browse":"/api/model/{model}/browse"
 	},
 	"templater":{
+		"renderer":"renderer_handlebars",
 		"url_source":"/api/templates/"
 	}
 }

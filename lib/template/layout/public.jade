@@ -2,10 +2,9 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
-			$ren->content_for('scripts', 'bower/mustache/mustache');
-
 			$ren->content_for('scripts', 'bower/async/lib/async');
 			$ren->content_for('scripts', 'bower/moment/moment');
+			$ren->content_for('scripts', 'bower/handlebars/handlebars');
 			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
 			$ren->content_for('scripts', 'bower/pwf-moment-compat/lib/moment-compat');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/domel');
@@ -27,8 +26,8 @@ html(lang=$loc->get_lang())
 			$ren->content_for('scripts', 'bower/pwf-form/lib/input');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/input/default');
 			$ren->content_for('scripts', 'bower/pwf-templater/lib/renderer');
-			$ren->content_for('scripts', 'bower/pwf-templater/lib/renderer/mustache');
 			$ren->content_for('scripts', 'bower/pwf-templater/lib/templater');
+			$ren->content_for('scripts', 'bower/pwf-templater-handlebars/lib/renderer-handlebars');
 			$ren->content_for('scripts', 'scripts/site/browser_control');
 			$ren->content_for('scripts', 'scripts/site/global');
 			$ren->content_for('scripts', 'scripts/site/public');

@@ -1,0 +1,16 @@
+<div class="team cols">
+	<div class="l">
+		<span class="team-logo">{{image item 'logo' '32x'}}</span>
+	</div>
+
+	<div class="r">
+		<div class="team-name">{{html item 'name'}}</div>
+		<div class="attrs">
+			<div class="team-city">{{html item 'city'}}</div>
+			{{#if accepting}}
+				<div class="team-accepting">Přijímá nové členy</div>
+			{{/if}}
+		</div>
+	</div>
+	<div class="cleaner"></div>
+</div>

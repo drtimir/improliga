@@ -3,7 +3,8 @@
 		"pwf-browser":"*",
 		"html5shiv":"*",
 		"fancybox":"*",
-		"icanhazjs":"*",
-		"pwf-paginator":"*"
+		"pwf-paginator":"*",
+		"handlebars":"*",
+		"pwf-templater-handlebars":"*"
 	}
 }

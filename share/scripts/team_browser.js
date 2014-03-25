@@ -8,7 +8,7 @@ pwf.rc({
 	'init':function(proto)
 	{
 		proto.storage.renderer = pwf.create('list_renderer', {
-			'template':'team.ich'
+			'template':'team'
 		});
 	},
 

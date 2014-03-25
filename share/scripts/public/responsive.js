@@ -1,21 +1,22 @@
 pwf.register('responsive', function()
 {
+	var img_path = '<pixmap(public/bg/block-iter.jpg)>';
+
 	this.is_ready = function()
 	{
-		return pwf.mi(['jquery', 'locales']);
+		return pwf.mi(['jquery', 'locales', 'async']);
 	};
 
 
 	this.init = function()
 	{
 		pwf.jquery(window).bind('resize', this, callback_reset);
-		pwf.queue.on('pwf-locales-loaded', function(pack) {
-			pack.data
-				.init_objects()
-				.init_paralax()
-				.reset()
-				.init_anchors();
-		}, this);
+
+		this
+			.init_objects()
+			.init_paralax()
+			.reset()
+			.init_anchors();
 	};
 
 
@@ -95,7 +96,13 @@ pwf.register('responsive', function()
 		for (var i = 0; i < boxes.length; i++) {
 			var
 				bg = pwf.jquery.div('bg max'),
-				img = pwf.jquery('<img/>').attr('src', '/share/pixmaps/public/bg.jpg').attr('alt', 'background');
+				img = pwf.jquery('<img/>')
+					.bind('load', function(ctrl) {
+						return function() { ctrl.reset(); }
+					}(this))
+					.attr('src', img_path.replace('iter', i))
+					.attr('alt', 'background')
+					.bind('click', pwf.callbacks.prevent);
 
 			bg.append(img).insertBefore(boxes[i].parentNode);
 		}
@@ -170,7 +177,7 @@ pwf.register('responsive', function()
 	this.update_menu = function(e)
 	{
 		var
-			sec = pwf.jquery('html'),
+			sec = pwf.jquery('body'),
 			lax = pwf.jquery('.paralax'),
 			els = pwf.jquery('.main-menu a'),
 			sel = null,
@@ -232,6 +239,11 @@ pwf.register('responsive', function()
 		}
 
 		content.css({'left':Math.max(0, Math.round((win.width() - content.width())/2))});
+
+		var ratio = img.width()/img.height();
+		var width = (bg.width() > bg.height() ? bg.width():bg.height())*ratio;
+
+		img.css({'width':width});
 		img.css({
 			'left':Math.round((bg.width() - img.width())/2),
 			'top':Math.round((bg.height() - img.height())/2),

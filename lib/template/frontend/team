@@ -1,6 +1,6 @@
-<div class="team cols">
+<div class="team hover cols">
 	<div class="l">
-		<span class="team-logo">{{image item 'logo' 'x36'}}</span>
+		<span class="team-logo">{{image item 'logo' '40x40'}}</span>
 	</div>
 
 	<div class="r">

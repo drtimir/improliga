@@ -1,4 +1,4 @@
-<div class="event cols">
+<div class="event hover cols">
 	<div class="l">{{image item 'image' '60x60'}}</div>
 
 	<div class="r">

@@ -7,6 +7,7 @@ pwf.rc({
 
 	'storage':{
 		'opts':{
+			'per_page':15,
 			'filters':[
 				{
 					'name':'search',

@@ -52,7 +52,13 @@ pwf.rc({
 		proto.storage.pager = pwf.create('paginator', {
 			'parent':el.pager,
 			'per_page':this.get('per_page'),
-			'page':this.get('page')
+			'page':this.get('page'),
+			'on_change':function(ctrl) {
+				return function(err, pager) {
+					v(pager.get('page'));
+					ctrl.set('page', pager.get('page')).load();
+				};
+			}(this)
 		});
 
 		proto.storage.loader = pwf.list.create({
@@ -135,8 +141,8 @@ pwf.rc({
 			proto.storage.pager.update({
 				'per_page':this.get('per_page'),
 				'page':this.get('page'),
-				'total':data.total
-			});
+				'total':parseInt(data.total)
+			}).update_status();
 		},
 
 		'get_filter_data':function(proto)

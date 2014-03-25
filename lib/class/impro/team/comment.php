@@ -3,7 +3,7 @@
 
 namespace Impro\Team
 {
-	class Comment extends \System\Model\Database
+	class Comment extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"team"      => array('belongs_to', "model" => 'Impro\Team'),

@@ -2,7 +2,7 @@
 
 namespace Impro
 {
-	class Post extends \System\Model\Database
+	class Post extends \System\Model\Perm
 	{
 		const MESSAGE = 1;
 		const SURVEY  = 2;
@@ -38,6 +38,12 @@ namespace Impro
 			'team_topic' => array('belongs_to', 'model' => 'Impro\Team\Discussion\Topic'),
 			'event'      => array('belongs_to', 'model' => 'Impro\Event'),
 			'author'     => array('belongs_to', 'model' => 'System\User'),
+		);
+
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true,
+			'view' => true,
 		);
 
 

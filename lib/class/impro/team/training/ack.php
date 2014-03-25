@@ -2,7 +2,7 @@
 
 namespace Impro\Team\Training
 {
-	class Ack extends \System\Model\Database
+	class Ack extends \System\Model\Perm
 	{
 		const NOT_SENT       = 1;
 		const SENT           = 2;

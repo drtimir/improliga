@@ -2,7 +2,7 @@
 
 namespace Impro\Event
 {
-	class Booking extends \System\Model\Database
+	class Booking extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"user"      => array('belongs_to', "model" => 'System\User'),

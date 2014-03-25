@@ -2,7 +2,7 @@
 
 namespace Impro\Team\Discussion
 {
-	class Post extends \System\Model\Database
+	class Post extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"text"      => array('text'),
@@ -12,6 +12,12 @@ namespace Impro\Team\Discussion
 			"parent"    => array('belongs_to', "model" => 'Impro\Team\Discussion\Post', "is_null" => true),
 			"author"    => array('belongs_to', "model" => 'System\User'),
 			"responses" => array('has_many', "model" => 'Impro\Team\Discussion\Post'),
+		);
+
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true,
+			'view' => true,
 		);
 
 

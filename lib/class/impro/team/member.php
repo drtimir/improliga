@@ -2,7 +2,7 @@
 
 namespace Impro\Team
 {
-	class Member extends \System\Model\Database
+	class Member extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"team"   => array('belongs_to', "model" => "Impro\Team", "is_natural" => true),
@@ -19,6 +19,13 @@ namespace Impro\Team
 			)),
 			"active" => array("bool"),
 			"attd"   => array('has_many', "model" => 'Impro\Team\Training\Ack'),
+		);
+
+
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true,
+			'view' => true,
 		);
 
 

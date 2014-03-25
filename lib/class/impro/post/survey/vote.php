@@ -2,7 +2,7 @@
 
 namespace Impro\Post\Survey
 {
-	class Vote extends \System\Model\Database
+	class Vote extends \System\Model\Perm
 	{
 		static protected $attrs = array(
 			"answer" => array('belongs_to', "model" => 'Impro\Post\Survey\Answer'),

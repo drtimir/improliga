@@ -2,7 +2,7 @@
 
 namespace Impro
 {
-	class Event extends \System\Model\Database
+	class Event extends \System\Model\Perm
 	{
 		const DURATION_DEFAULT = 86399;
 

@@ -2,7 +2,7 @@
 
 namespace Impro\Discussion
 {
-	class Post extends \System\Model\Database
+	class Post extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"text"    => array('text'),

@@ -2,7 +2,7 @@
 
 namespace Impro\Event
 {
-	class Participant extends \System\Model\Database
+	class Participant extends \System\Model\Perm
 	{
 		static protected $attrs = array(
 			"event"  => array('belongs_to', "model" => "Impro\Event"),

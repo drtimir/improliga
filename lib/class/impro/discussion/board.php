@@ -2,7 +2,7 @@
 
 namespace Impro\Discussion
 {
-	class Board extends \System\Model\Database
+	class Board extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"name"    => array('varchar'),

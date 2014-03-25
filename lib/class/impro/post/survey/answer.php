@@ -2,7 +2,7 @@
 
 namespace Impro\Post\Survey
 {
-	class Answer extends \System\Model\Database
+	class Answer extends \System\Model\Perm
 	{
 		static protected $attrs = array(
 			"name"       => array('varchar'),

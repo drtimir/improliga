@@ -2,7 +2,7 @@
 
 namespace Impro\Team
 {
-	class Training extends \System\Model\Database
+	class Training extends \System\Model\Perm
 	{
 		protected static $attrs = array(
 			"name"     => array('varchar'),

@@ -276,6 +276,10 @@ header {
 				color:#DEDEDE;
 			}
 
+			.block-trans {
+				color:#fff;
+			}
+
 			&.system-text-show {
 				border:none;
 				background:0;

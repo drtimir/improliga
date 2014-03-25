@@ -1,6 +1,6 @@
 <div class="team cols">
 	<div class="l">
-		<span class="team-logo">{{image item 'logo' '32x'}}</span>
+		<span class="team-logo">{{image item 'logo' 'x36'}}</span>
 	</div>
 
 	<div class="r">

@@ -1,0 +1,15 @@
+<div class="event cols">
+	<div class="l">{{image item 'image'}}</div>
+
+	<div class="r">
+		<div class="event-name">{{short item 'name' 22}}</div>
+		<div class="attrs">
+			<div class="event-type-and-location">
+				<span class="event-type">{{get item 'type'}}</span>
+				{{#if location}}<span class="event-location">{{get item 'location'}}</span>{{/if}}
+			</div>
+			<div class="event-date">{{date item 'start'}}</div>
+		</div>
+	</div>
+	<div class="cleaner"></div>
+</div>

@@ -2,29 +2,33 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
 			$ren->content_for('scripts', 'bower/async/lib/async');
 			$ren->content_for('scripts', 'bower/moment/moment');
 			$ren->content_for('scripts', 'bower/handlebars/handlebars');
+			$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
+
 			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
 			$ren->content_for('scripts', 'bower/pwf-moment-compat/lib/moment-compat');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/domel');
 			$ren->content_for('scripts', 'bower/pwf.js/lib/models/container');
 			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
-			$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
-			$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
+			$ren->content_for('scripts', 'bower/pwf-config/lib/config');
+			$ren->content_for('scripts', 'bower/pwf-locales/lib/locales');
 			$ren->content_for('scripts', 'bower/pwf-paginator/lib/paginator');
 			$ren->content_for('scripts', 'bower/pwf-queue/lib/queue');
 			$ren->content_for('scripts', 'bower/pwf-comm/lib/comm');
 			$ren->content_for('scripts', 'bower/pwf-comm/lib/mods/http');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/form');
 			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
-			$ren->content_for('scripts', 'bower/pwf-locales/lib/locales');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/model');
 			$ren->content_for('scripts', 'bower/pwf-models/lib/list');
 			$ren->content_for('scripts', 'bower/pwf-models-schema/lib/schema');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/form');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/input');
 			$ren->content_for('scripts', 'bower/pwf-form/lib/input/default');
+			$ren->content_for('scripts', 'bower/pwf-form/lib/input/month');
+			$ren->content_for('scripts', 'bower/pwf-form-models/lib/form-models');
 			$ren->content_for('scripts', 'bower/pwf-templater/lib/renderer');
 			$ren->content_for('scripts', 'bower/pwf-templater/lib/templater');
 			$ren->content_for('scripts', 'bower/pwf-templater-handlebars/lib/renderer-handlebars');
@@ -34,9 +38,12 @@ html(lang=$loc->get_lang())
 			$ren->content_for('scripts', 'scripts/public/responsive');
 			$ren->content_for('scripts', 'scripts/list_renderer');
 			$ren->content_for('scripts', 'scripts/list_browser');
+
 			$ren->content_for('scripts', 'scripts/team_browser');
+			$ren->content_for('scripts', 'scripts/event_browser');
 
 			$ren->content_for('styles', 'bower/reset-css/reset');
+			$ren->content_for('styles', 'bower/pwf-form/styles/date');
 			$ren->content_for('styles', 'styles/fonts');
 			$ren->content_for('styles', 'styles/public/common');
 			$ren->content_for('styles', 'styles/lib/fancybox');
@@ -65,6 +72,7 @@ html(lang=$loc->get_lang())
 							li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
 							li!=$ren->link_for('events', $loc->trans('impro_menu_shows'))
 							li!=$ren->link_for('workshops', $loc->trans('impro_menu_workshops'))
+							li!=$ren->link_for('media', $loc->trans('impro_menu_media'))
 							li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
 							li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
 

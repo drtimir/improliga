@@ -12,7 +12,10 @@ pwf.rc({
 		'opts':{
 			'per_page':20,
 			'page':0,
-			'sort':'created_at',
+			'sort':['created_at desc'],
+
+			'filters':[],
+			'static_filters':[],
 
 			'after_load':null,
 			'after_render':null,
@@ -32,6 +35,7 @@ pwf.rc({
 			el = this.get_el(),
 			filter_update = function(ctrl) {
 				return function(form) {
+					v('change');
 					ctrl.load();
 				};
 			}(this);
@@ -39,6 +43,7 @@ pwf.rc({
 		el.create_divs(['filters', 'data', 'pager']);
 
 		proto.storage.filter = pwf.form.create({
+			'parent':el.filters,
 			'on_send':filter_update,
 			'on_change':filter_update,
 			'elements':this.get_filter_inputs()
@@ -74,6 +79,12 @@ pwf.rc({
 			];
 
 			this.get_el().addClass('loading');
+			proto.storage.loader.update({
+				'per_page':this.get('per_page'),
+				'page':this.get('page'),
+				'sort':this.get('sort'),
+				'filters':this.get_filter_data()
+			});
 
 			if (typeof this.get('before_load') == 'function') {
 				this.get('before_load')(this);
@@ -101,6 +112,8 @@ pwf.rc({
 				this.get('before_render')(this);
 			}
 
+			this.get_el().data.html('');
+
 			if (typeof proto.storage.renderer == 'object' && proto.storage.renderer !== null) {
 				proto.storage.renderer.render(list.data, this.get_el().data);
 			}
@@ -126,9 +139,14 @@ pwf.rc({
 			});
 		},
 
+		'get_filter_data':function(proto)
+		{
+			return pwf.jquery.extend(proto.storage.filter.get_data(), this.get('static_filters'));
+		},
+
 		'get_filter_inputs':function(proto)
 		{
-
+			return this.get('filters');
 		}
 	}
 });

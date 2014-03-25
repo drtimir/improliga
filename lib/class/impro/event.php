@@ -45,6 +45,10 @@ namespace Impro
 			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking'),
 		);
 
+		protected static $access = array(
+			'browse' => true,
+		);
+
 
 		private static $wizzard_steps = array(
 			self::ID_WIZZARD_STEP_NAME         => 'impro_event_wizzard_step_name',
@@ -217,6 +221,25 @@ namespace Impro
 				)),
 				span('cleaner', ''),
 			));
+		}
+
+
+		public static function filter_month(\System\Database\Query $query, $val)
+		{
+			$date = new \DateTime($val);
+			$date->modify('midnight');
+
+			$start = clone $date;
+			$end = clone $date;
+
+			$start->modify('first day of this month');
+			$end->modify('last day of this month')->modify('tomorrow');
+			$conds = array(
+				"start >= '".$start->format('Y-m-d H:i:s')."'",
+				"start < '".$end->format('Y-m-d H:i:s')."'",
+			);
+
+			return $query->where($conds);
 		}
 	}
 }

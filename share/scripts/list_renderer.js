@@ -22,6 +22,7 @@ pwf.rc({
 				parent.append(item);
 			}
 
+			parent.append(pwf.jquery('<span/>').addClass('cleaner'));
 			return this;
 		},
 

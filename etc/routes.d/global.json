@@ -7,6 +7,7 @@
 			["system/partial", {"template":"public/teams"}],
 			["system/partial", {"template":"public/shows"}],
 			["system/partial", {"template":"public/workshops"}],
+			["system/partial", {"template":"public/media"}],
 			["system/partial", {"template":"public/about"}],
 			["system/partial", {"template":"public/contacts"}],
 			["event/latest", {
@@ -102,7 +103,7 @@
 
 	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "article_chapter"],
 
-	["^/media-o-nas/$", {
+	["^/media-o-improlize$", {
 		"title":"impro_menu_media",
 		"layout":["layout/public", "impro/single"],
 		"modules":[

@@ -30,26 +30,18 @@ pwf.register('responsive', function()
 					'el':'.event-browser.shows',
 					'obj':'event_browser',
 					'pass':{
-						'filters':[
-							{
-								'type':'static',
-								'name':'type',
-								'value':[1,2]
-							}
-						]
+						'static_filters':{
+							'type':[1,2,3,4]
+						}
 					}
 				},
 				{
 					'el':'.event-browser.workshops',
 					'obj':'event_browser',
 					'pass':{
-						'filters':[
-							{
-								'type':'static',
-								'name':'type',
-								'value':[1,2]
-							}
-						]
+						'static_filters':{
+							'type':5
+						}
 					}
 				},
 				{
@@ -73,7 +65,6 @@ pwf.register('responsive', function()
 						opts = pwf.jquery.extend({'parent':el}, reg.pass),
 						obj;
 
-					v(['registering', reg.el, reg.obj]);
 					obj = pwf.create(reg.obj, opts);
 
 					if (typeof obj.load == 'function') {

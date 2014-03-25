@@ -46,13 +46,11 @@ html(lang=$loc->get_lang())
 			$ren->content_for('styles', 'bower/pwf-form/styles/date');
 			$ren->content_for('styles', 'styles/fonts');
 			$ren->content_for('styles', 'styles/public/common');
-			$ren->content_for('styles', 'styles/lib/fancybox');
-			$ren->content_for('styles', 'styles/lib/calendar');
-			$ren->content_for('styles', 'styles/public/layout/base');
-			$ren->content_for('styles', 'styles/objects/browser');
+			$ren->content_for('styles', 'styles/public/layout');
 			$ren->content_for('styles', 'styles/public/events');
 			$ren->content_for('styles', 'styles/public/teams');
-			$ren->content_for('styles', 'styles/public/about');
+			$ren->content_for('styles', 'styles/objects/browser');
+
 			$ren->content_for('styles', 'styles/pwf/browser_control');
 			$ren->content_for('styles', 'styles/public/calendar');
 			$ren->content_for('title', $loc->trans('impro_name').' - '.$loc->trans('impro_name_desc'));

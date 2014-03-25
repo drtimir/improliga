@@ -138,5 +138,19 @@ namespace Impro
 
 			return $this;
 		}
+
+
+		public static function filter_search($query, $value)
+		{
+			if ($value) {
+				$value = \System\Database::get_db()->escape_string($value);
+				$query->where(array(
+					array(
+						"city LIKE '%".$value."%'",
+						"name LIKE '%".$value."%'",
+					)
+				));
+			}
+		}
 	}
 }

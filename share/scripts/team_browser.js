@@ -5,6 +5,18 @@ pwf.rc({
 		'model':'Impro::Team'
 	},
 
+	'storage':{
+		'opts':{
+			'filters':[
+				{
+					'name':'search',
+					'type':'text',
+					'placeholder':'Filtrovat'
+				}
+			]
+		}
+	},
+
 	'init':function(proto)
 	{
 		proto.storage.renderer = pwf.create('list_renderer', {

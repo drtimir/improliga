@@ -1,9 +1,10 @@
 {
-	"global":{
+	"overwrite":true,
+	"public":{
 		"rules":["^(www\\.)?improliga.cz$", "^(www\\.)?improliga.cz.local$"],
 		"layout":["layout/public", "layout/public/dual"],
 		"context":["partners"],
-		"policies":["www"],
+		"policies":["www", "frontend_config"],
 		"init":["godmode"]
 	},
 	"intra":{

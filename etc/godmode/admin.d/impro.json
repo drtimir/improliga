@@ -4,96 +4,51 @@
 		"name":"improliga",
 		"items":[
 			{
-				"title":"impro_menu_events",
+				"title":"impro_events",
 				"name":"events",
 				"icon":"modules/calendar",
-				"model":"Impro::Event",
 				"opts":{
-					"list_attrs":["name", "start", "visible", "public", "created_at"],
-					"edit_attrs_exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
-						"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster"],
-					"inline":["groups", "contacts"]
+					"model":"Impro::Event",
+					"list":{
+						"attrs":["name", "start", "visible", "public", "created_at"]
+					},
+					"edit":{
+						"exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
+						"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster"]
+					}
 				}
 			},
 			{
 				"title":"impro_news",
 				"name":"news",
 				"icon":"items/news",
-				"model":"Impro::News",
 				"opts":{
-					"list_attrs":["name", "visible", "public", "created_at"]
+					"model":"Impro::News",
+					"list":{
+						"attrs":["name", "visible", "public", "created_at"]
+					}
 				}
 			},
 			{
 				"title":"impro_teams",
 				"name":"news",
 				"icon":"items/team",
-				"model":"Impro::Team",
 				"opts":{
-					"list_attrs":["name", "visible", "created_at"],
-					"info_attrs_exclude":["topics", "comments", "trainings"],
-					"rel_tab":["members"]
+					"model":"Impro::Team",
+					"list":{
+						"attrs":["name", "visible", "created_at"]
+					}
 				}
-			},
-			{
-				"title":"Dokumentace",
-				"name":"docs",
-				"icon":"items/text",
-				"items":[
-					{
-						"title":"impro_articles",
-						"icon":"items/text",
-						"model":"Impro::Article",
-						"list_attrs":["name", "visible", "created_at"],
-						"rel_tab":["chapters"]
-					},
-					{
-						"title":"impro_fouls",
-						"icon":"items/text",
-						"list_attrs":["name", "visible", "created_at"],
-
-						"model":"Impro::Foul"
-					}
-				]
-			},
-			{
-				"title":"impro_discussions",
-				"name":"discussions",
-				"icon":"objects/discussion",
-				"items":[
-					{
-						"title":"impro_discussion_boards",
-						"list_attrs":["name", "visible", "created_at"],
-
-						"model":"Impro::Discussion::Board"
-					},
-					{
-						"title":"impro_discussion_topics",
-						"list_attrs":["name", "visible", "created_at"],
-
-						"model":"Impro::Discussion::Topic"
-					},
-					{
-						"title":"impro_discussion_posts",
-						"list_attrs":["name", "visible", "created_at"],
-
-						"model":"Impro::Discussion::Post"
-					}
-				]
-			},
-			{
-				"title":"impro_galleries",
-				"icon":"items/gallery",
-				"list_attrs":["name", "visible", "created_at"],
-
-				"model":"Impro::Gallery"
 			},
 			{
 				"title":"impro_partners",
 				"icon":"items/misc",
-				"list_attrs":["name", "visible", "created_at"],
-
-				"model":"Impro::Partner"
+				"opts":{
+					"model":"Impro::Partner",
+					"list":{
+						"attrs":["name", "visible", "created_at"]
+					}
+				}
 			}
 		]
 	}

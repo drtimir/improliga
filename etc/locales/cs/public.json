@@ -11,6 +11,9 @@
 	"impro_menu_news":"Novinky",
 	"impro_menu_intranet":"Intranet",
 
+	"impro_full_name":"Česká Improliga",
+	"impro_home_about":"<p>Improliga je malinko o sportu, ale především o divadle. Dva týmy se navzájem utkávají v improvizacích na divácká témata. Cílem NENÍ navzájem se vyřadit, ale SPOLEČNĚ vytvářet kvalitní improvizaci, mít radost ze hry, moci si kdykoliv zahrát/zaimprovizovat s různými týmy z různých měst.</p><p><a href=&quot;/o-improlize/&quot;>Více o Improlize</a></p><p>Přijďte se podívat na představení některého z týmů a vhoďte si do košíku vlastní téma.</p>",
+
 	"title_impro_events":"Události Improligy",
 	"title_impro_teams":"Týmy Improligy",
 	"title_impro_global":"Improliga - %s",
@@ -205,8 +208,6 @@
 	"attr_impro_team_survey_answer_green":"Zelená",
 	"attr_impro_team_survey_answer_blue":"Modrá",
 
-
-	"today":"Dnes",
 	"end":""
 }
 

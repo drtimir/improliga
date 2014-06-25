@@ -26,23 +26,23 @@ namespace Impro
 			"team_away"     => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
 			"location"      => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"image"         => array('image'),
-			"desc_short"    => array('text', "default" => ''),
-			"desc_full"     => array('text', "default" => ''),
-			"start"         => array('datetime'),
-			"end"           => array('datetime', "is_null" => true),
+			"desc_short"    => array('html', "default" => ''),
+			"desc_full"     => array('html', "default" => ''),
+			"start"         => array('date'),
+			"start_time"    => array('time', "is_null" => true),
+			"end"           => array('date', "is_null" => true),
+			"end_time"      => array('time', "is_null" => true),
 			"publish_at"    => array('datetime', "is_null" => true),
 			"capacity"      => array('int', "default" => 0),
 			"price"         => array('int', "is_null" => true),
 			"price_student" => array('int', "is_null" => true),
 
-			"use_booking"   => array('bool'),
 			"visible"       => array('bool'),
 			"published"     => array('bool'),
 			"publish_wait"  => array('bool'),
 			"author"        => array('belongs_to', "model" => "System\User"),
 
 			"participants"  => array('has_many', "model" => 'Impro\Event\Participant'),
-			"reservations"  => array('has_many', "model" => 'Impro\Event\Booking'),
 		);
 
 		protected static $access = array(

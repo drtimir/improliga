@@ -4,7 +4,7 @@
 		"rules":["^(www\\.)?improliga.cz$", "^(www\\.)?improliga.cz.local$"],
 		"layout":["layout/public", "layout/public/dual"],
 		"context":["partners"],
-		"policies":["www", "frontend_config"],
+		"policies":["www", "frontend_config", "frontend_api"],
 		"init":["godmode"]
 	},
 	"intra":{

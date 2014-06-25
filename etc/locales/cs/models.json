@@ -2,7 +2,8 @@
 	"attr-published":"Veřejné",
 
 	"model-Impro::Event":"Událost",
-	"model-Impro::Event-accusative":"události",
+	"model-Impro::Event-dative":"události",
+	"model-Impro::Event-accusative":"událost",
 	"model-Impro::Event-dative-plural":"událostí",
 	"model-Impro::Event-dative-plural":"událostí",
 
@@ -13,15 +14,20 @@
 	"model-Impro::Event-attr-image":"Obrázek",
 	"model-Impro::Event-attr-desc_short":"Krátký popis",
 	"model-Impro::Event-attr-desc_full":"Popis",
-	"model-Impro::Event-attr-start":"Začátek",
+	"model-Impro::Event-attr-start":"Datum",
+	"model-Impro::Event-attr-start_time":"Začátek",
 	"model-Impro::Event-attr-end":"Konec",
+	"model-Impro::Event-attr-end_time":"Čas konce",
 	"model-Impro::Event-attr-publish_at":"Datum zveřejnění",
 	"model-Impro::Event-attr-capacity":"Kapacita",
 	"model-Impro::Event-attr-price":"Cena",
 	"model-Impro::Event-attr-price_student":"Cena (student)",
 	"model-Impro::Event-attr-publish_wait":"Čekající na schválení",
-	"model-Impro::Event-attr-participants":"Účastníci",
+	"model-Impro::Event-attr-participants":"Seznam účastníků",
 
-	"model-impro::Team":"Tým",
-	"model-impro::Team-plural":"Týmy"
+	"model-Impro::Event::Participant":"Účastník",
+	"model-Impro::Event::Participant-plural":"Účastníci",
+
+	"model-Impro::Team":"Tým",
+	"model-Impro::Team-plural":"Týmy"
 }

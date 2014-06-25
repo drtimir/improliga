@@ -14,7 +14,7 @@
 					},
 					"edit":{
 						"exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
-						"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster"]
+						"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster", "author"]
 					}
 				}
 			},

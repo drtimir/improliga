@@ -10,75 +10,11 @@ pwf.register('responsive', function()
 
 	this.init = function()
 	{
-		pwf.jquery(window).bind('resize', this, callback_reset);
+		//~ pwf.jquery(window).bind('resize', this, callback_reset);
 
-		this
-			.init_objects()
-			.init_paralax()
-			.reset()
-			.init_anchors();
+		this.init_anchors();
 	};
 
-
-	this.init_objects = function()
-	{
-		var
-			register = [
-				{
-					'el':'.team-browser',
-					'obj':'team_browser'
-				},
-				{
-					'el':'.event-browser.shows',
-					'obj':'event_browser',
-					'pass':{
-						'static_filters':{
-							'type':[1,2,3,4]
-						}
-					}
-				},
-				{
-					'el':'.event-browser.workshops',
-					'obj':'event_browser',
-					'pass':{
-						'static_filters':{
-							'type':5
-						}
-					}
-				},
-				{
-					'el':'.article-browser',
-					'obj':'article_browser'
-				},
-				{
-					'el':'.contact-form',
-					'obj':'contact_form'
-				}
-			];
-
-		for (var i = 0; i < register.length; i++) {
-			var
-				reg = register[i],
-				el = pwf.jquery(reg.el);
-
-			if (el.length) {
-				if (pwf.has_class(reg.obj)) {
-					var
-						opts = pwf.jquery.extend({'parent':el}, reg.pass),
-						obj;
-
-					obj = pwf.create(reg.obj, opts);
-
-					if (typeof obj.load == 'function') {
-						obj.load();
-					}
-				}
-			}
-		}
-
-
-		return this;
-	};
 
 
 	this.init_paralax = function()
@@ -104,7 +40,8 @@ pwf.register('responsive', function()
 					.attr('alt', 'background')
 					.bind('click', pwf.callbacks.prevent);
 
-			bg.append(img).insertBefore(boxes[i].parentNode);
+			//~ bg.append(img).insertBefore(boxes[i].parentNode);
+			bg.insertBefore(boxes[i].parentNode);
 		}
 
 		for (var i = 0; i < mitems.length; i++) {
@@ -112,7 +49,7 @@ pwf.register('responsive', function()
 				item = pwf.jquery(mitems[i]),
 				href = item.attr('href').replace(/^\//, '');
 
-			item.attr('href', '#!' + href);
+			//~ item.attr('href', '#!' + href);
 
 			if (typeof boxes[i] != 'undefined') {
 				var
@@ -129,6 +66,13 @@ pwf.register('responsive', function()
 
 	this.init_anchors = function()
 	{
+		var links = pwf.jquery('#main-menu a');
+
+		for (var i = 0; i < links.length; i++) {
+			var link = pwf.jquery(links[i]);
+			link.attr('href', '#!' + link.attr('href').replace(/^\//, ''));
+		}
+
 		pwf.jquery(window)
 			.bind('hashchange', this, callback_hashchange)
 			.bind('scroll', this, callback_scroll);
@@ -186,7 +130,7 @@ pwf.register('responsive', function()
 		for (var i = 0; i < els.length; i++) {
 			var
 				item = pwf.jquery(els[i]),
-				el = this.get_el_from_hash(item.attr('href')),
+				el = this.get_el_from_hash('#' + item.attr('href')),
 				et = el.position().top - sec.scrollTop() + el.height();
 
 			item.removeClass('active');
@@ -267,6 +211,6 @@ pwf.register('responsive', function()
 
 	var callback_scroll = function(e)
 	{
-		e.data.update_menu();
+		//~ e.data.update_menu();
 	};
 });

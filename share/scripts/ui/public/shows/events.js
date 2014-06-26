@@ -7,6 +7,7 @@ pwf.rc('ui.shows.events', {
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
 			'per_page':15,
+			'reverse':true,
 			'ui_filters':[
 				{
 					'name':'from-future',

@@ -6,8 +6,26 @@ pwf.rc('ui.workshops.events', {
 			'heading':'Veřejné workshopy',
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
-			'per_page':20,
+			'per_page':15,
+			'reverse':true,
 			'ui_filters':[
+				{
+					'name':'from-future',
+					'label':'Pouze budoucí',
+					'type':'checkbox',
+					'value':true,
+					'get_filter':function() {
+						if (this.val()) {
+							return {
+								'attr':'start',
+								'type':'gte',
+								'gte':pwf.moment().format('YYYY-MM-DD')
+							};
+						}
+
+						return null;
+					}
+				},
 				{
 					'name':'search',
 					'type':'text',

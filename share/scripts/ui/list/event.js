@@ -22,7 +22,7 @@ pwf.rc('ui.list.event', {
 			el.data.append(el.name).append(el.info);
 			el.info.append(el.location).append(el.time);
 
-			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', '/predstaveni/' + this.get('id')));
+			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', this.get_url()));
 			el.time.html(proto('format_time'));
 
 			if (this.get('location')) {
@@ -37,6 +37,7 @@ pwf.rc('ui.list.event', {
 			}
 
 			el.image.html(pwf.thumb.create(image.name, el.image.width() + 'x' + el.image.height()));
+			this.get_el().bind('click', this, proto('callbacks').navigate);
 		},
 
 
@@ -50,6 +51,20 @@ pwf.rc('ui.list.event', {
 			}
 
 			return str;
+		},
+
+
+		'callbacks':{
+			'navigate':function(e) {
+				document.location = e.data.get_url();
+			}
+		}
+	},
+
+	'public':{
+		'get_url':function()
+		{
+			return '/predstaveni/' + this.get('item').get_seoname();
 		}
 	}
 });

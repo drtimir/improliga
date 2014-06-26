@@ -115,6 +115,8 @@ pwf.register('site', function() {
 	this.bind = function()
 	{
 		pwf.jquery(window).bind('resize', this, callback_resize);
+		pwf.jquery('body').bind('resize', this, callback_resize);
+
 		return this;
 	};
 

@@ -17,7 +17,7 @@ pwf.rc('ui.contact.form', {
 			},
 			{
 				'ident':'request',
-				'label':'Nabízím hraní'
+				'label':'Přijeďte si zahrát'
 			},
 			{
 				'ident':'cili',

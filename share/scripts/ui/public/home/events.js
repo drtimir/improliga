@@ -7,10 +7,9 @@ pwf.rc('ui.home.events', {
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
 			'per_page':6,
-			'ui_filters':['name'],
 			'filters':[
-				{'attr':'type', 'type':'in', 'in':[1,2,3,4]},
-				{'attr':'published', 'type':'exact', 'exact':true}
+				{'attr':'published', 'type':'exact', 'exact':true},
+				{'attr':'start', 'type':'gte', 'gte':pwf.moment().format('YYYY-MM-DD')}
 			],
 			'sort':[
 				{'attr':'start', 'mode':'desc'},

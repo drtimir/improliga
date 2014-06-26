@@ -7,9 +7,9 @@ pwf.rc('ui.teams.teams', {
 			'model':'Impro::Team',
 			'draw':'ui.list.team',
 			'per_page':50,
-			'filters':{
-				'visible':true
-			}
+			'filters':[
+				{'attr':'visible', 'type':'exact', 'exact':true}
+			]
 		}
 	}
 });

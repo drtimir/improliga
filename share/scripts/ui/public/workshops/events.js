@@ -7,9 +7,11 @@ pwf.rc('ui.workshops.events', {
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
 			'per_page':20,
-			'filters':{
-				'type':[5]
-			},
+			'ui_filters':['name'],
+			'filters':[
+				{'attr':'type', 'type':'exact', 'exact':5},
+				{'attr':'published', 'type':'exact', 'exact':true}
+			],
 			'sort':[
 				{'attr':'start', 'mode':'desc'},
 				{'attr':'start_time', 'mode':'desc'}

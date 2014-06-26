@@ -19,7 +19,9 @@ pwf.rc('ui.list.event', {
 			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', '/predstaveni/' + this.get('id')));
 			el.time.html(proto('format_time'));
 
-			el.location.html(this.get('item').attr_to_html('location'));
+			if (this.get('location')) {
+				el.location.html(this.get('item').attr_to_html('location'));
+			}
 		},
 
 

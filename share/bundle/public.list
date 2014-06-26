@@ -14,6 +14,8 @@ scripts/ui/public/home/events
 scripts/ui/public/shows/events
 scripts/ui/public/teams/teams
 scripts/ui/public/workshops/events
+
 scripts/ui/public/contact/form
+scripts/ui/public/contact/faq
 
 scripts/ui/public/loader

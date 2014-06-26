@@ -1,3 +1,23 @@
-.block
+.contacts-text
 	h1=$loc->trans('impro_contacts')
-	.contact-form
+	.text!=$loc->trans('impro_contacts_text')
+
+.contacts-addr
+	h2=$loc->trans('impro_contacts_addr_name')
+	.text!=$loc->trans('impro_contacts_addr')
+
+.faq-text
+	$questions = get_all('\Impro\Faq\Question')->where(array('visible' => true))->sort_by('weight')->fetch();
+
+	h2=$loc->trans('impro_faq')
+	.text
+		if $questions
+			:php
+				$questions = get_all('\Impro\Faq\Question')->where(array('visible' => true))->sort_by('weight')->fetch();
+
+				foreach ($questions as $q) {
+					echo '<h3>'.$q->text.'</h3>';
+					echo $q->answer;
+				}
+		else
+			.text!=$loc->trans('impro-no-faq')

@@ -4,7 +4,7 @@
 		"layout":["layout/public"],
 		"modules":[
 			["system/partial", {"template":"public/about"}],
-			["system/partial", {"template":"public/shows"}]
+			["system/partial", {"template":"public/contacts"}]
 		]
 	}, "home"],
 

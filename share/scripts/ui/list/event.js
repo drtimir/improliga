@@ -1,5 +1,6 @@
 pwf.rc('ui.list.event', {
 	'parents':['domel'],
+	'uses':['thumb'],
 
 	'storage':{
 		'opts':{
@@ -12,8 +13,13 @@ pwf.rc('ui.list.event', {
 			proto('construct');
 		},
 
+
 		'construct':function(proto) {
-			var el = this.get_el().create_divs(['name', 'info', 'location', 'time']);
+			var
+				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'location', 'time']),
+				image = this.get('image');
+
+			el.data.append(el.name).append(el.info);
 			el.info.append(el.location).append(el.time);
 
 			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', '/predstaveni/' + this.get('id')));
@@ -22,6 +28,15 @@ pwf.rc('ui.list.event', {
 			if (this.get('location')) {
 				el.location.html(this.get('item').attr_to_html('location'));
 			}
+
+			if (!image) {
+				image = {
+					'url':'<pixmap(logo.png)>'
+				};
+			}
+
+			image = pwf.thumb.create(image.url, '50x50');
+			v(image);
 		},
 
 

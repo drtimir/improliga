@@ -41,10 +41,10 @@ pwf.register('site', function() {
 
 			function(ctrl) {
 				return function(next) {
+					ctrl.bind().resize();
+
 					pwf.dispatcher.check_anchors();
 					loader.hide();
-
-					ctrl.bind().resize();
 				};
 			}(this)
 		];
@@ -64,7 +64,7 @@ pwf.register('site', function() {
 			var
 				build  = sections[i],
 				scope  = pwf.list_scope(build),
-				target = pwf.jquery.div('section ' + build.replace(/\-/g, '-'));
+				target = pwf.jquery.div('section ' + build.replace(/\./g, '-'));
 
 			viewport.append(target);
 
@@ -116,6 +116,7 @@ pwf.register('site', function() {
 	{
 		pwf.jquery(window).bind('resize', this, callback_resize);
 		pwf.jquery('body').bind('resize', this, callback_resize);
+		pwf.jquery(window).bind('scroll', this, callback_update_menu);
 
 		return this;
 	};
@@ -141,8 +142,48 @@ pwf.register('site', function() {
 	};
 
 
+	this.update_menu = function()
+	{
+		var
+			items  = pwf.jquery('#main-menu').first().find('a'),
+			active = null,
+			scroll = pwf.jquery('html, body').scrollTop();
+
+		for (var i = 0; i < items.length; i++) {
+			var
+				item = pwf.jquery(items[i]),
+				anchor = item.attr('href').substr(pwf.dispatcher.get_anchor_separator().length),
+				solution = pwf.dispatcher.get_solution_for(anchor);
+
+			item.removeClass('active');
+
+			if (solution) {
+				if (active === null) {
+					var
+						el  = pwf.jquery('.section.' + solution.get('bind')),
+						off = el.offset();
+
+					if ((off.top + el.height()/2) >= scroll) {
+						active = item;
+					}
+				}
+			}
+		}
+
+		if (active) {
+			active.addClass('active');
+		}
+	};
+
+
 	var callback_resize = function(e)
 	{
 		e.data.resize();
+	};
+
+
+	var callback_update_menu = function(e)
+	{
+		e.data.update_menu();
 	};
 });

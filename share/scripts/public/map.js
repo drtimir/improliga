@@ -4,7 +4,32 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 		{
 			'name':'home',
 			'anchor':'',
-			'build':'ui.home'
+			'bind':'ui-home'
+		},
+		{
+			'name':'about',
+			'anchor':'o-improlize',
+			'bind':'ui-about',
+		},
+		{
+			'name':'shows',
+			'anchor':'predstaveni',
+			'bind':'ui-shows',
+		},
+		{
+			'name':'teams',
+			'anchor':'tymy',
+			'bind':'ui-teams',
+		},
+		{
+			'name':'workshops',
+			'anchor':'workshopy',
+			'bind':'ui-workshops',
+		},
+		{
+			'name':'contacts',
+			'anchor':'kontakty',
+			'bind':'ui-contact',
 		}
 	]);
 
@@ -17,14 +42,14 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 
 			if (page !== null) {
 				var
-					el    = pwf.site.get_el(),
-					build = view.get('build'),
-					jobs  = {};
+					el    = pwf.jquery('.section.' + view.get('bind')),
+					build = view.get('build');
 
-				pwf.async.parallel(jobs, function(err, items) {
-					v(err);
-					v(items);
-				});
+				if (el.length) {
+					pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, function() {
+						pwf.jquery('#viewport').trigger('update_menu');
+					});
+				}
 			}
 		}, null, true)
 

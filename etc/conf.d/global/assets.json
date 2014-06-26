@@ -1,5 +1,6 @@
 {
 	"dependencies":{
+		"jquery.scrollTo":"*",
 		"pwf-browser":"*",
 		"html5shiv":"*",
 		"fancybox":"*",

@@ -32,6 +32,7 @@ pwf.rc('ui.abstract.list', {
 			}
 
 			this.get_el('content').append(pwf.jquery.span('cleaner'));
+			this.get_el().trigger('resize');
 		},
 
 

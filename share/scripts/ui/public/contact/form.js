@@ -137,6 +137,12 @@ pwf.rc('ui.contact.form', {
 					}
 				]
 			});
+
+			proto.storage.label_placeholder = pwf.jquery.div('placeholder')
+				.insertAfter(proto.storage.form.get_el().find('.heading').first())
+				.create_divs(['label', 'data']);
+
+			proto.storage.label_placeholder.label.html('Předmět:');
 		},
 
 
@@ -157,6 +163,7 @@ pwf.rc('ui.contact.form', {
 		'select_type':function(proto, type)
 		{
 			proto.storage.form.get_input('reason').val(type.ident);
+			proto.storage.label_placeholder.data.html(type.label);
 			proto('show_form');
 		},
 

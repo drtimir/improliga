@@ -6,7 +6,7 @@ pwf.rc('ui.loader', {
 		var el = this.get_el();
 
 		el.create_divs(['container']);
-		el.container.create_divs(['bar']);
+		el.container.create_divs(['bar', 'value']);
 		el.addClass('ui-loader').hide();
 	},
 
@@ -18,6 +18,7 @@ pwf.rc('ui.loader', {
 				size = cont.width() * status.finished,
 				css = {'width':size};
 
+			cont.value.html(Math.round(status.finished*100) + '%');
 			cont.bar.stop(true).animate(css, 200);
 		},
 

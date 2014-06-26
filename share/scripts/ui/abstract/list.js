@@ -28,11 +28,10 @@ pwf.rc('ui.abstract.list', {
 			this.get_el('content').html('');
 
 			for (var i = 0; i < list.data.length; i++) {
-				proto('draw_item', list.data[i]);
+				proto('draw_item', list.data[i], i);
 			}
 
 			this.get_el('content').append(pwf.jquery.span('cleaner'));
-			this.get_el().trigger('resize');
 		},
 
 
@@ -42,15 +41,23 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
-		'draw_item':function(proto, item)
+		'draw_item':function(proto, item, index)
 		{
-			var opts = pwf.merge({
-				'parent':this.get_el('content'),
-				'item':item
-			}, item.get_data());
+			var
+				target = this.get_el('content'),
+				el = pwf.jquery.div('ui-list-item').css('opacity', 0).appendTo(target),
+				opts = pwf.merge({
+					'parent':el,
+					'item':item
+				}, item.get_data()),
+				obj = pwf.create(proto('get_ui_comp', item), opts);
 
-
-			pwf.create(proto('get_ui_comp', item), opts);
+			setTimeout(function(ctrl) {
+				return function() {
+					el.animate({'opacity':1}, 100);
+					ctrl.get_el().trigger('resize');
+				};
+			}(this), index*25);
 		}
 	},
 

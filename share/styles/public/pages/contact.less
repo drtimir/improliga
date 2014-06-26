@@ -1,15 +1,71 @@
 .ui-contact-form {
-	width:515px;
-	min-height:400px;
+	width:475px;
+	min-height:360px;
 	left:0;
+	padding:20px;
 
 	.inner {
-		padding:20px;
+		position:relative;
 	}
 
 	.menu .items {
 		width:486px;
 		margin-bottom:20px;
+	}
+
+	.cf-handler {
+		position:absolute;
+		left:0;
+		top:0;
+		color:#fff;
+
+		.heading {
+			font-size:32px;
+			font-family:Oswald;
+			margin-bottom:20px;
+			line-height:46px;
+		}
+
+		label {
+			margin-right:10px;
+			width:60px;
+		}
+
+		label, .input-container {
+			display:inline-block;
+			line-height:28px;
+			vertical-align:top;
+		}
+
+		.input-email {
+
+			input {
+				width:200px;
+			}
+		}
+
+		.input-textarea {
+			textarea {
+				resize:none;
+				width:360px;
+				height:180px;
+			}
+		}
+
+		.form-group-typed-inputs {
+			li {
+				margin-bottom:10px;
+			}
+		}
+
+
+		.form-group-typed-buttons {
+			padding-left:70px;
+
+			li {
+				display:inline-block;
+			}
+		}
 	}
 
 	.cf-menu-item {

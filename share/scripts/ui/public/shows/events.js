@@ -9,6 +9,23 @@ pwf.rc('ui.shows.events', {
 			'per_page':15,
 			'ui_filters':[
 				{
+					'name':'from-future',
+					'label':'Pouze budoucí',
+					'type':'checkbox',
+					'value':true,
+					'get_filter':function() {
+						if (this.val()) {
+							return {
+								'attr':'start',
+								'type':'gte',
+								'gte':pwf.moment().format('YYYY-MM-DD')
+							};
+						}
+
+						return null;
+					}
+				},
+				{
 					'name':'search',
 					'type':'text',
 					'placeholder':'Vyhledat',

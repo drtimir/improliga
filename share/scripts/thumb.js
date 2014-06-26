@@ -7,7 +7,7 @@ pwf.register('thumb', function() {
 	this.get_url = function(url, size) {
 		var
 			schema = document.location.protocol == 'https:' ? 'https:':'http:',
-			url = pwf.comm.url('/tools/thumb/?name=' + url + '&size=' + size),
+			url = pwf.comm.url('/api/thumb/?name=' + url + '&size=' + size),
 			separator = '//';
 
 		if (url.indexOf('//') === 0) {

@@ -16,7 +16,7 @@ pwf.rc('ui.list.event', {
 
 		'construct':function(proto) {
 			var
-				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'location', 'time']),
+				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'location', 'time', 'cleaner']),
 				image = this.get('image');
 
 			el.data.append(el.name).append(el.info);
@@ -31,12 +31,12 @@ pwf.rc('ui.list.event', {
 
 			if (!image) {
 				image = {
+					'name':'logo.png',
 					'url':'<pixmap(logo.png)>'
 				};
 			}
 
-			image = pwf.thumb.create(image.url, '50x50');
-			v(image);
+			el.image.html(pwf.thumb.create(image.name, el.image.width() + 'x' + el.image.height()));
 		},
 
 

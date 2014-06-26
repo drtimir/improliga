@@ -27,6 +27,11 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			'bind':'ui-workshops',
 		},
 		{
+			'name':'media',
+			'anchor':'media-o-improlize',
+			'bind':'ui-media',
+		},
+		{
 			'name':'contacts',
 			'anchor':'kontakty',
 			'bind':'ui-contact',

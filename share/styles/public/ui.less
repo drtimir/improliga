@@ -36,47 +36,96 @@
 .paginator {
 	margin:0 auto;
 	width:400px;
+	position:relative;
 
 	.pagi-pages {
 		position:relative;
 		background:#333;
-		width:400px;
-		height:15px;
+		margin:0 25px;
+		height:13px;
 		border-radius:7px;
 
 		.bar {
-			width:200px;
-			height:15px;
-			line-height:15px;
-			background:#fff;
+			width:75px;
+			height:13px;
+			line-height:13px;
+			background:#D0AF04;
 			cursor:pointer;
 			border-radius:7px;
+
+			&:hover {
+				background:#efc800;
+			}
 
 			.value {
 				color:#000;
 				text-align:center;
-				font-size:13px;
+				font-size:11px;
 				font-weight:bold;
 			}
 		}
 	}
+
+	.pagi-prev,
+	.pagi-next {
+		position:absolute;
+		height:13px;
+		line-height:13px;
+		top:-3px;
+		font-size:11px;
+		cursor:pointer;
+		background:#333;
+		color:#fff;
+		padding:4px;
+		border-radius:15px;
+		font-family:Arial, sans;
+
+		&:hover {
+			background:#efc800;
+			color:#000;
+		}
+	}
+
+	.pagi-prev {
+		left:0;
+	}
+
+	.pagi-next {
+		right:0;
+	}
 }
 
 .ui-abstract-list {
-	.ui-list-inner {
+	.marginer {
 		padding:20px;
 	}
 
-	.ui-list-header {
+	.inner {
+		position:relative;
+	}
+
+	.filter {
+		position:absolute;
+		right:0;
+		top:0;
+	}
+
+	.header {
 		font-size:24px;
 		font-weight:bold;
 		color:#fff;
 	}
 
-	.ui-list-header,
-	.ui-list-content
+	.header,
+	.content
 	{
 		margin-bottom:20px;
+	}
+
+	.content {
+		.info {
+			font-size:13px;
+		}
 	}
 }
 

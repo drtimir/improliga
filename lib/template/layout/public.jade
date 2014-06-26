@@ -27,6 +27,10 @@ html(lang=$loc->get_lang())
 			$ren->content_for('scripts', 'bower/pwf-models');
 			$ren->content_for('scripts', 'bower/pwf-models-schema');
 
+			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/abstract/filters');
+			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/abstract/common');
+			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/list');
+
 			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
 			$ren->content_for('scripts', 'bower/pwf-form-models/lib/form-models');
 
@@ -44,6 +48,7 @@ html(lang=$loc->get_lang())
 			$ren->content_for('styles', 'styles/public/pages/home');
 			$ren->content_for('styles', 'styles/public/pages/shows');
 			$ren->content_for('styles', 'styles/public/pages/contact');
+			$ren->content_for('styles', 'styles/public/pages/workshops');
 			$ren->content_for('styles', 'styles/objects/browser');
 
 			$ren->content_for('styles', 'styles/pwf/browser_control');

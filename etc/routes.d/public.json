@@ -4,7 +4,9 @@
 		"layout":["layout/public"],
 		"modules":[
 			["system/partial", {"template":"public/about"}],
-			["system/partial", {"template":"public/contacts"}]
+			["system/partial", {"template":"public/contacts"}],
+			["system/partial", {"template":"public/knowledge"}],
+			["article/category/list"]
 		]
 	}, "home"],
 

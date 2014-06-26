@@ -51,9 +51,16 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					build = view.get('build');
 
 				if (el.length) {
-					pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, function() {
-						pwf.jquery('#viewport').trigger('update_menu');
-					});
+					var proceed = function() {
+						pwf.jquery('#viewport').trigger('scroll');
+					};
+
+					if (view.get('initial')) {
+						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 0);
+						proceed();
+					} else {
+						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, proceed);
+					}
 				}
 			}
 		}, null, true)

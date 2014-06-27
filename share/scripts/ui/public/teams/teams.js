@@ -9,6 +9,22 @@ pwf.rc('ui.teams.teams', {
 			'per_page':20,
 			'ui_filters':[
 				{
+					'name':'accepting',
+					'type':'checkbox',
+					'label':'Pouze přijímající',
+					'get_filter':function() {
+						if (this.val()) {
+							return {
+								'attr':'accepting',
+								'type':'exact',
+								'exact':true
+							};
+						}
+
+						return null;
+					}
+				},
+				{
 					'name':'search',
 					'type':'text',
 					'placeholder':'Vyhledat',

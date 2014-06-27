@@ -1,3 +1,22 @@
+bower/pwf-browser
+bower/pwf-config
+bower/pwf-storage
+bower/pwf-queue
+bower/pwf-locales
+bower/pwf-preloader
+bower/pwf-dispatcher
+bower/pwf-paginator
+bower/pwf-comm
+bower/pwf-comm-form
+bower/pwf-form
+bower/pwf-form-models
+bower/pwf-models
+bower/pwf-models-schema
+
+bower/pwf-adminer/lib/adminer/abstract/filters
+bower/pwf-adminer/lib/adminer/abstract/common
+bower/pwf-adminer/lib/adminer/list
+
 scripts/thumb
 
 scripts/public/map

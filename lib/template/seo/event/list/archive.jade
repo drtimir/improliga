@@ -1,0 +1,13 @@
+.event-archive
+	!=$ren->heading($loc->trans('impro_menu_shows'))
+
+	.event-list
+		-foreach $events as $event
+			.event
+				!=$ren->heading($ren->link_for('show_detail', $event->name, array("args" => array($event))), null, true)
+
+				.type!=$event->type
+				.date!=$event->format_start()
+				.desc!=html_entity_decode($event->desc_full)
+				.image!=$event->image->to_html($ren->renderer)
+

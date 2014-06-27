@@ -1,0 +1,11 @@
+bower/html5shiv/dist/html5shiv
+bower/jquery/dist/jquery
+bower/jquery.scrollTo/jquery.scrollTo.min
+bower/async/lib/async
+bower/moment/moment
+bower/fancybox/source/jquery.fancybox
+
+bower/pwf.js
+
+bower/pwf-async-compat
+bower/pwf-moment-compat

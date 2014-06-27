@@ -11,6 +11,7 @@ pwf.register('site', function() {
 			'editor':[]
 		};
 
+
 	this.is_ready = function()
 	{
 		return pwf.mi(['config', 'jquery', 'locales', 'dispatcher']);
@@ -62,26 +63,47 @@ pwf.register('site', function() {
 
 		for (var i = 0; i < sections.length; i++) {
 			var
-				build  = sections[i],
-				scope  = pwf.list_scope(build),
-				target = pwf.jquery.div('section ' + build.replace(/\./g, '-'));
+				name   = sections[i],
+				tname  = name.replace(/\./g, '-'),
+				target = viewport;
 
-			viewport.append(target);
+			if (!viewport) {
+				target = pwf.jquery('.section.' + tname);
+			}
 
-			for (var j = 0; j < scope.length; j++) {
-				var name = scope[j];
-
-				jobs[name] = function(name, target) {
-					return function(next) {
-						pwf.create(name, {
-							'parent':target
-						}).load(next);
-					};
-				}(name, target);
+			if (target) {
+				jobs[name] = this.get_ui_section_build_job(target, name);
 			}
 		}
 
 		pwf.async.parallel(jobs, next);
+	};
+
+
+	this.get_ui_section_build_job = function(parent, name)
+	{
+		var
+			scope  = pwf.list_scope(name),
+			target = pwf.jquery.div('section ' + name.replace(/\./g, '-')),
+			job = {};
+
+		viewport.append(target);
+
+		for (var j = 0; j < scope.length; j++) {
+			var name = scope[j];
+
+			job[name] = function(name, target) {
+				return function(next) {
+					pwf.create(name, {
+						'parent':target
+					}).load(next);
+				};
+			}(name, target);
+		}
+
+		return function(next) {
+			pwf.async.parallel(job, next);
+		};
 	};
 
 
@@ -114,9 +136,10 @@ pwf.register('site', function() {
 
 	this.bind = function()
 	{
-		pwf.jquery(window).bind('resize', this, callback_resize);
 		pwf.jquery('body').bind('resize', this, callback_resize);
-		pwf.jquery(window).bind('scroll', this, callback_update_menu);
+		pwf.jquery(window)
+			.bind('resize', this, callback_resize)
+			.bind('scroll', this, callback_update_menu);
 
 		return this;
 	};

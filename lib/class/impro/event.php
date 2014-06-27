@@ -241,5 +241,17 @@ namespace Impro
 
 			return $query->where($conds);
 		}
+
+
+		public function format_start()
+		{
+			$str = $this->start->format('d.m.Y');
+
+			if ($this->start_time) {
+				$str .= $this->start_time->format('H:i');
+			}
+
+			return $str;
+		}
 	}
 }

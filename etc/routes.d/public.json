@@ -1,8 +1,8 @@
 [
 	["^/$", {
 		"title":"Česká Improliga - divadlo jako hokejový zápas",
-		"layout":["layout/public"],
 		"modules":[
+			["system/partial", {"template":"public/viewport", "slot":"ui"}],
 			["system/partial", {"template":"public/about"}],
 			["system/partial", {"template":"public/contacts"}],
 			["system/partial", {"template":"public/knowledge"}],
@@ -10,55 +10,89 @@
 		]
 	}, "home"],
 
-	["^/tymy$", {
-		"layout":["layout/public", "layout/public/single"],
-		"modules":[
-			["team/list"]
-		]
-	}, "teams"],
+	["^/tymy$", {"modules":[["team/list"]]}, "teams"],
+	["^/predstaveni$", {"modules":[
+		["seo/event/list/archive", {
+			"conds":{
+				"0":"type in (1,2,3,4,6)",
+				"published":true
+			}
+		}]
+	]}, "events"],
+	["^/workshopy$", {"modules":[["seo/event/calendar"]]}, "workshops"],
+	["^/o-improlize$", {"title":"O Improlize", "modules":[["system/partial", {"template":"public/knowledge"}]]}, "about"],
+	["^/media-o-improlize$", {"title":"impro_menu_media", "layout":["layout/public"], "modules":[["system/partial", {"template":"impro/static/media"}]]}, "media"],
+	["^/kontakty$", {"title":"Kontakty - Česká Improliga", "modules":[["system/partial", {"template":"public/contacts"}]]}, "contacts"],
 
-	["^/predstaveni$", {
+	["^/predstaveni/mesic/([^/]+)$", {
 		"modules":[
-			["event/calendar", {
-				"slot":"left",
-				"template":"event/list/month",
-				"link_day_piece":"den_{day}",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+			["event/list/month", {
+				"month":"#{0}",
+				"conds":{
+					"published":true,
+					"type":[1,2,3,4,6]
+				}
 			}]
 		]
-	}, "events"],
+	}, "shows_month"],
 
-	["^/workshopy$", {
+	["^/predstaveni/archiv/([^/]+)$", {
 		"modules":[
-			["event/calendar", {
-				"slot":"left",
-				"template":"event/list/month",
-				"link_day_piece":"den_{day}",
-				"link_day":"/udalosti/seznam/{year}-{month}/#den_{day}"
+			["event/list/archive", {
+				"conds":{
+					"published":true,
+					"type":[1,2,3,4,6]
+				}
 			}]
 		]
-	}, "workshops"],
+	}, "shows_archive"],
 
-	["^/udalosti/seznam/([^/]+)/$", {
+	["^/predstaveni/([^/]+)$", {
 		"modules":[
-			["event/calendar", {
-				"slot":"left",
-				"template":"event/list/month",
-				"link_day_piece":"den_{day}",
-				"month_input":"#{0}",
-				"conds":{"published":true}
+			["event/list/archive", {
+				"conds":{
+					"published":true,
+					"type":[1,2,3,4,6]
+				}
 			}]
 		]
-	}, "events_month"],
+	}, "show_detail"],
 
-	["^/o-improlize$", {
-		"title":"O Improlize",
-		"layout":["layout/public", "layout/public/dual-34"],
+
+	["^/workshopy/mesic/([^/]+)$", {
 		"modules":[
-			["system/text/show", {"id":2, "slot":"left"}],
-			["article/category/list", {"slot":"right"}]
+			["event/list/month", {
+				"month":"#{0}",
+				"conds":{
+					"published":true,
+					"type":5
+				}
+			}]
 		]
-	}, "about"],
+	}, "workshops_month"],
+
+	["^/workshopy/archiv/([^/]+)$", {
+		"modules":[
+			["event/list/archive", {
+				"conds":{
+					"published":true,
+					"type":5
+				}
+			}]
+		]
+	}, "workshops_archive"],
+
+	["^/workshopy/([^/]+)$", {
+		"modules":[
+			["event/list/archive", {
+				"conds":{
+					"published":true,
+					"type":5
+				}
+			}]
+		]
+	}, "workshop_detail"],
+
 
 	["^/o-improlize/([^/]+)/$", {
 		"layout":["layout/public", "layout/public/dual-34"],
@@ -68,61 +102,15 @@
 		]
 	}, "article"],
 
-	["^/kontakty$", {
-		"title":"Kontakty - Česká Improliga",
-		"modules":[
-			["system/text/show", {"id":4, "slot":"left"}],
-			["system/text/show", {"id":3, "slot":"right"}]
-		]
-	}, "contacts"],
-
-	["^/fauly/$", {
-		"title":"Fauly",
-		"modules":[
-			["impro/foul/list", {"slot":"right"}]
-		]
-	}, "fouls"],
-
-	["^/fauly/([^/]+)/$", {
-		"modules":[
-			["impro/foul/detail", {"id":"#{0}", "slot":"left"}],
-			["impro/foul/list", {"slot":"right"}]
-		]
-	}, "foul"],
-
-
 	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "article_chapter"],
 
-	["^/media-o-improlize$", {
-		"title":"impro_menu_media",
-		"layout":["layout/public", "impro/single"],
-		"modules":[
-			["system/partial", {"template":"impro/static/media"}]
-		]
-	}, "media"],
 
-	["^/tymy/([^/]+)/$", {
-		"layout":["layout/public", "impro/single"],
+	["^/tymy/([^/]+)$", {
+		"layout":["layout/public"],
 		"modules":[
 			["impro/team/detail", {"id":"#{0}"}]
 		]
 	}, "team"],
-
-	["^/udalosti/([^/]+)/$", {
-		"layout":["layout/public", "impro/single"],
-		"modules":[
-			["impro/event/detail", {
-				"id":"#{0}",
-				"col_width":440
-			}]
-		]
-	}, "event"],
-
-	["^/udalosti/([^/]+)/rezervace/$", {
-		"layout":["layout/public", "impro/single"],
-		"modules":[
-		]
-	}, "event_booking"],
 
 	["^/intranet/$", {
 		"modules":[

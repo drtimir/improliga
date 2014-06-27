@@ -2,39 +2,7 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
-			$ren->content_for('scripts', 'bower/html5shiv/dist/html5shiv');
-			$ren->content_for("scripts", "bower/jquery/dist/jquery");
-			$ren->content_for("scripts", "bower/jquery.scrollTo/jquery.scrollTo.min");
-			$ren->content_for('scripts', 'bower/async/lib/async');
-			$ren->content_for('scripts', 'bower/moment/moment');
-			$ren->content_for('scripts', 'bower/fancybox/source/jquery.fancybox');
-
-			$ren->content_for('scripts', 'bower/pwf.js');
-
-			$ren->content_for('scripts', 'bower/pwf-async-compat/lib/async-compat');
-			$ren->content_for('scripts', 'bower/pwf-moment-compat/lib/moment-compat');
-
-			$ren->content_for('scripts', 'bower/pwf-browser/lib/browser');
-			$ren->content_for('scripts', 'bower/pwf-config/lib/config');
-			$ren->content_for('scripts', 'bower/pwf-storage/lib/storage');
-			$ren->content_for('scripts', 'bower/pwf-queue/lib/queue');
-			$ren->content_for('scripts', 'bower/pwf-locales/lib/locales');
-
-			$ren->content_for('scripts', 'bower/pwf-preloader');
-			$ren->content_for('scripts', 'bower/pwf-dispatcher');
-			$ren->content_for('scripts', 'bower/pwf-paginator');
-			$ren->content_for('scripts', 'bower/pwf-comm');
-			$ren->content_for('scripts', 'bower/pwf-form');
-			$ren->content_for('scripts', 'bower/pwf-models');
-			$ren->content_for('scripts', 'bower/pwf-models-schema');
-
-			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/abstract/filters');
-			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/abstract/common');
-			$ren->content_for('scripts', 'bower/pwf-adminer/lib/adminer/list');
-
-			$ren->content_for('scripts', 'bower/pwf-comm-form/lib/comm-form');
-			$ren->content_for('scripts', 'bower/pwf-form-models/lib/form-models');
-
+			$ren->content_for('scripts', 'scripts/bundle/libs');
 			$ren->content_for('scripts', 'scripts/bundle/public');
 
 			$ren->content_for('styles', 'bower/reset-css/reset');
@@ -80,7 +48,9 @@ html(lang=$loc->get_lang())
 
 						a.logo(href=$ren->url('home'))
 
-		#viewport
+		:php
+			$ren->slot('ui');
+
 		#meta
 			:php
 				$ren->slot();

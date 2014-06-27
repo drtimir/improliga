@@ -70,7 +70,7 @@ pwf.register('responsive', function()
 
 		for (var i = 0; i < links.length; i++) {
 			var link = pwf.jquery(links[i]);
-			link.attr('href', '#!' + link.attr('href').replace(/^\//, ''));
+			link.attr('href', '/#!' + link.attr('href').replace(/^\//, ''));
 		}
 
 		pwf.jquery(window)

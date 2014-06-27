@@ -2,7 +2,7 @@
 	"overwrite":true,
 	"public":{
 		"rules":["^(www\\.)?improliga.cz$", "^(www\\.)?improliga.cz.local$"],
-		"layout":["layout/public", "layout/public/dual"],
+		"layout":["layout/public"],
 		"context":["partners"],
 		"policies":["www", "frontend_config", "frontend_api"],
 		"init":["godmode"]

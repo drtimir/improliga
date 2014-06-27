@@ -1,6 +1,6 @@
 <?
 
-def($template, 'seo/event/list/archive');
+def($template, 'seo/event/archive');
 def($conds, array("published" => true));
 def($per_page, 20);
 

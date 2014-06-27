@@ -1,0 +1,49 @@
+:php
+	$ren->content_for('title', $event->name.' - Improliga');
+	$has_teams = $event->type === Impro\Event\Type::ID_MATCH && $event->team_home && $event->team_away;
+
+.event-detail
+	!=$ren->heading($event->name)
+
+	- if $has_teams
+		.event-desc
+			.participants
+				.part.home!=$ren->link_for('team', $event->team_home->name, array("args" => array($event->team_home)))
+				span.vs vs
+				.part.away!=$ren->link_for('team', $event->team_away->name, array("args" => array($event->team_away)))
+
+
+	ul.info.plain.event-labels
+		li.icon.date
+			- if is_null($event->end)
+					!=$loc->format_date($event->start, 'human-full-date');
+			- else
+				!=$loc->format_date($event->start, 'human-date') . ' - ' . $loc->format_date($event->end, 'human-date')
+
+		- if $event->start_time
+			li.icon.time != $loc->trans('impro_event_start_at', $loc->format_date($event->start, 'human-time'))
+
+		- if $event->location
+			li.icon.location
+				span.name!=$event->location->name
+				span.addr!=$event->location->addr
+				- if $event->location->site
+					span.site!=$ren->link_ext($event->location->site, $event->location->site)
+
+		- if $event->price
+				li.icon.price
+					- if $event->price_student
+						!=$loc->trans('impro_event_price_value_both', $event->price, $event->price_student)
+					- else
+						!=$loc->trans('impro_event_price_value', $event->price);
+
+	.event-info!=html_entity_decode($event->desc_full)
+
+	-if $event->image
+		.event-image!=$ren->link($event->image->get_path(), $event->image->to_html($ren->renderer, 280), array("class" => 'image fancybox'));
+
+	-if $event->location
+		.event-location!=$event->location->map_html($ren->renderer, $col_width);
+
+
+	.cleaner

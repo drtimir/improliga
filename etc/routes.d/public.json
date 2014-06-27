@@ -17,7 +17,7 @@
 	["^/tymy$", {"modules":[["team/list"]]}, "teams"],
 	["^/predstaveni$", {"modules":[
 		["system/partial", {"template":"public/viewport", "slot":"ui", "sections":["ui-shows"]}],
-		["seo/event/list/archive", {
+		["seo/event/archive", {
 			"conds":{
 				"0":"type in (1,2,3,4,6)",
 				"published":true
@@ -31,7 +31,7 @@
 
 	["^/predstaveni/mesic/([^/]+)$", {
 		"modules":[
-			["event/list/month", {
+			["seo/event/month", {
 				"month":"#{0}",
 				"conds":{
 					"published":true,
@@ -41,20 +41,10 @@
 		]
 	}, "shows_month"],
 
-	["^/predstaveni/archiv/([^/]+)$", {
-		"modules":[
-			["event/list/archive", {
-				"conds":{
-					"published":true,
-					"type":[1,2,3,4,6]
-				}
-			}]
-		]
-	}, "shows_archive"],
-
 	["^/predstaveni/([^/]+)$", {
 		"modules":[
-			["event/list/archive", {
+			["seo/event/detail", {
+				"id":"#{0}",
 				"conds":{
 					"published":true,
 					"type":[1,2,3,4,6]
@@ -75,17 +65,6 @@
 			}]
 		]
 	}, "workshops_month"],
-
-	["^/workshopy/archiv/([^/]+)$", {
-		"modules":[
-			["event/list/archive", {
-				"conds":{
-					"published":true,
-					"type":5
-				}
-			}]
-		]
-	}, "workshops_archive"],
 
 	["^/workshopy/([^/]+)$", {
 		"modules":[

@@ -33,6 +33,10 @@ html(lang=$loc->get_lang())
 			.wrapper-content
 				header
 					.inner
+						.site-name
+							.name=$loc->trans('impro_name')
+							.desc=$loc->trans('impro_name_desc')
+
 						ul.main-menu#main-menu
 							li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
 							li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
@@ -41,10 +45,6 @@ html(lang=$loc->get_lang())
 							li!=$ren->link_for('workshops', $loc->trans('impro_menu_workshops'))
 							li!=$ren->link_for('media', $loc->trans('impro_menu_media'))
 							li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
-
-						.site-name
-							.name=$loc->trans('impro_name')
-							.desc=$loc->trans('impro_name_desc')
 
 						a.logo(href=$ren->url('home'))
 

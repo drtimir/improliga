@@ -8,6 +8,7 @@ pwf.rc('ui.workshops.events', {
 			'draw':'ui.list.event',
 			'per_page':15,
 			'reverse':true,
+			'join':['location'],
 			'ui_filters':[
 				{
 					'name':'from-future',

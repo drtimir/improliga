@@ -15,6 +15,7 @@ bower/pwf-models-schema
 
 bower/pwf-adminer/lib/adminer/abstract/filters
 bower/pwf-adminer/lib/adminer/abstract/common
+bower/pwf-adminer/lib/adminer/abstract/object
 bower/pwf-adminer/lib/adminer/list
 
 scripts/thumb
@@ -41,5 +42,7 @@ scripts/ui/public/about/text
 
 scripts/ui/public/contact/form
 scripts/ui/public/contact/faq
+
+scripts/ui/public/event/detail
 
 scripts/ui/public/loader

@@ -35,6 +35,11 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			'name':'contacts',
 			'anchor':'kontakty',
 			'bind':'ui-contact',
+		},
+
+		{
+			'name':'show_detail',
+			'anchor':'predstaveni/.+\-{id:int}'
 		}
 	]);
 

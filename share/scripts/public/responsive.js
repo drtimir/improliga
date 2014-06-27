@@ -73,47 +73,7 @@ pwf.register('responsive', function()
 			link.attr('href', '/#!' + link.attr('href').replace(/^\//, ''));
 		}
 
-		pwf.jquery(window)
-			.bind('hashchange', this, callback_hashchange)
-			.bind('scroll', this, callback_scroll);
-
-		return this.scroll_to_hash();
-	};
-
-
-	this.scroll_to = function(el)
-	{
-		var
-			top = el.position().top - pwf.jquery('.paralax').position().top,
-			sec = pwf.jquery('body');
-
-		sec.animate({'scrollTop':top});
-	};
-
-
-	this.get_el_from_hash = function(hash)
-	{
-		var
-			hash = hash.substr(2),
-			ilax = pwf.jquery('.paralax-inner'),
-			el;
-
-		return hash ?
-			ilax.children('#' + hash):
-			ilax.children().first();
-
-		return el;
-	};
-
-
-	this.scroll_to_hash = function()
-	{
-		var el = this.get_el_from_hash(document.location.hash);
-
-		if (el.length) {
-			this.scroll_to(el);
-		}
-
+		pwf.jquery(window).bind('scroll', this, callback_scroll);
 		return this;
 	};
 
@@ -193,19 +153,13 @@ pwf.register('responsive', function()
 			'top':Math.round((bg.height() - img.height())/2),
 		});
 
-		return this.scroll_to_hash();
+		return this;
 	};
 
 
 	var callback_reset = function(e)
 	{
 		e.data.reset();
-	};
-
-
-	var callback_hashchange = function(e)
-	{
-		e.data.scroll_to_hash();
 	};
 
 

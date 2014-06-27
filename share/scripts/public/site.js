@@ -4,7 +4,7 @@ pwf.register('site', function() {
 		loader,
 
 		models = ['Impro::Event', 'Impro::Team'],
-		sections = ['ui.home', 'ui.about', 'ui.shows', 'ui.teams', 'ui.workshops', 'ui.media', 'ui.contact'],
+		sections = ['ui.home', 'ui.about', 'ui.shows', 'ui.teams', 'ui.workshops', 'ui.media', 'ui.contact', 'ui.event'],
 
 		resources = {
 			'essential':[],
@@ -59,7 +59,12 @@ pwf.register('site', function() {
 
 	this.build_ui = function(next)
 	{
-		var jobs = {};
+		var
+			jobs = {},
+			view = pwf.dispatcher.get_solution_for(pwf.dispatcher.get_anchor());
+
+		v(view.get('attrs'));
+		v(view.get('matches'));
 
 		for (var i = 0; i < sections.length; i++) {
 			var

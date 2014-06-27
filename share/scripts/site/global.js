@@ -1,4 +1,3 @@
-
 var bind_ext_links = function()
 {
 	var els = pwf.jquery('a.ext, a.location_map');

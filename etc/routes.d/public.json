@@ -2,7 +2,11 @@
 	["^/$", {
 		"title":"Česká Improliga - divadlo jako hokejový zápas",
 		"modules":[
-			["system/partial", {"template":"public/viewport", "slot":"ui"}],
+			["system/partial", {
+				"sections":["ui-home", "ui-about", "ui-shows", "ui-teams", "ui-workshops", "ui-media", "ui-contact"],
+				"template":"public/viewport",
+				"slot":"ui"
+			}],
 			["system/partial", {"template":"public/about"}],
 			["system/partial", {"template":"public/contacts"}],
 			["system/partial", {"template":"public/knowledge"}],
@@ -12,6 +16,7 @@
 
 	["^/tymy$", {"modules":[["team/list"]]}, "teams"],
 	["^/predstaveni$", {"modules":[
+		["system/partial", {"template":"public/viewport", "slot":"ui", "sections":["ui-shows"]}],
 		["seo/event/list/archive", {
 			"conds":{
 				"0":"type in (1,2,3,4,6)",

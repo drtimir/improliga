@@ -65,13 +65,9 @@ pwf.register('site', function() {
 			var
 				name   = sections[i],
 				tname  = name.replace(/\./g, '-'),
-				target = viewport;
+				target = pwf.jquery('.section-container.' + tname);
 
-			if (!viewport) {
-				target = pwf.jquery('.section.' + tname);
-			}
-
-			if (target) {
+			if (target.length) {
 				jobs[name] = this.get_ui_section_build_job(target, name);
 			}
 		}
@@ -87,7 +83,7 @@ pwf.register('site', function() {
 			target = pwf.jquery.div('section ' + name.replace(/\./g, '-')),
 			job = {};
 
-		viewport.append(target);
+		parent.append(target);
 
 		for (var j = 0; j < scope.length; j++) {
 			var name = scope[j];
@@ -150,7 +146,7 @@ pwf.register('site', function() {
 		var
 			win      = pwf.jquery(window),
 			height   = win.height(),
-			children = viewport.children(),
+			children = viewport.find('.section'),
 			inner    = children.children();
 
 		children.height(height);

@@ -1,1 +1,5 @@
 #viewport
+	-foreach $sections as $section
+		:php
+			$cname = "section-container $section"
+		div(class=$cname)

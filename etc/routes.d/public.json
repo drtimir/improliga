@@ -43,6 +43,7 @@
 
 	["^/predstaveni/([^/]+)$", {
 		"modules":[
+			["system/partial", {"template":"public/viewport", "slot":"ui", "sections":["ui-event"]}],
 			["seo/event/detail", {
 				"id":"#{0}",
 				"conds":{

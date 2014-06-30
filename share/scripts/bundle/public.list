@@ -4,7 +4,7 @@ bower/pwf-storage
 bower/pwf-queue
 bower/pwf-locales
 bower/pwf-preloader
-bower/pwf-dispatcher
+bower/pwf-history
 bower/pwf-paginator
 bower/pwf-comm
 bower/pwf-comm-form
@@ -22,12 +22,12 @@ scripts/thumb
 
 scripts/public/map
 scripts/public/site
-scripts/public/responsive
 
 scripts/ui/abstract/list
 scripts/ui/abstract/text
 
 scripts/ui/structure/section
+scripts/ui/structure/home
 
 scripts/ui/list/event
 scripts/ui/list/team

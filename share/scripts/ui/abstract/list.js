@@ -1,7 +1,6 @@
 pwf.rc('ui.abstract.list', {
 	'parents':['adminer.list'],
 
-
 	'storage':{
 		'filter':null,
 		'opts':{

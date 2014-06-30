@@ -32,19 +32,18 @@ pwf.register('site', function() {
 				return function(next) {
 					ctrl.load(next);
 				};
-			}(this)
+			}(this),
+
+			function(next) {
+				pwf.dispatcher.reload(next);
+			}
 		];
 
 		pwf.async.waterfall(jobs, function(ctrl) {
 			return function(err) {
 				loader.hide();
-
-				if (err) {
-					v('done', err);
-				} else {
-					pwf.dispatcher.check_anchors();
-					ctrl.bind().resize();
-				}
+				ctrl.bind();
+				v('done', err);
 			}
 		}(this));
 	};
@@ -79,7 +78,6 @@ pwf.register('site', function() {
 
 	this.bind = function()
 	{
-		pwf.jquery('body').bind('resize', this, callback_resize);
 		pwf.jquery(window)
 			.bind('resize', this, callback_resize)
 			.bind('scroll', this, callback_update_menu);
@@ -94,13 +92,24 @@ pwf.register('site', function() {
 			win      = pwf.jquery(window),
 			height   = win.height(),
 			root     = viewport.children('.ui-structure-section'),
-			children = root.children('.section-inner').children(),
-			inner    = children.find('.section-inner').children();
+			children = root.children('.section-inner').children('.ui-structure-section');
 
 		children.height(height);
 
-		for (var i = 0; i < inner.length; i++) {
-			var item = pwf.jquery(inner[i]);
+		return this
+			.center_all(children.find('.section-inner').children())
+			.center_all(root.children('.section-inner').children());
+	};
+
+
+	this.center_all = function(list)
+	{
+		var
+			win    = pwf.jquery(window),
+			height = win.height();
+
+		for (var i = 0; i < list.length; i++) {
+			var item = pwf.jquery(list[i]);
 
 			item.css('top', Math.round((height - item.outerHeight())/2));
 		}

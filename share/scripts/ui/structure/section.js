@@ -74,11 +74,14 @@ pwf.rc('ui.structure.section', {
 				}
 			}
 
-			pwf.async.parallel(jobs, function(ctrl, next) {
+			pwf.async.parallel(jobs, function(ctrl, proto, next) {
 				return function(err) {
+					proto('loaded');
 					ctrl.respond(next, [err]);
 				};
-			}(this, next));
+			}(this, proto, next));
+
+			return this;
 		}
 	}
 });

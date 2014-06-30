@@ -32,79 +32,21 @@ pwf.register('site', function() {
 				return function(next) {
 					ctrl.load(next);
 				};
-			}(this),
-
-			function(ctrl) {
-				return function(next) {
-					ctrl.build_ui(next);
-				};
-			}(this),
-
-			function(ctrl) {
-				return function(next) {
-					ctrl.bind().resize();
-
-					pwf.dispatcher.check_anchors();
-					loader.hide();
-				};
 			}(this)
 		];
 
-		pwf.async.waterfall(jobs, function(err) {
-			v('done');
-			//~ v(err);
-		});
-	};
+		pwf.async.waterfall(jobs, function(ctrl) {
+			return function(err) {
+				loader.hide();
 
-
-	this.build_ui = function(next)
-	{
-		var
-			jobs = {},
-			view = pwf.dispatcher.get_solution_for(pwf.dispatcher.get_anchor());
-
-		v(view.get('attrs'));
-		v(view.get('matches'));
-
-		for (var i = 0; i < sections.length; i++) {
-			var
-				name   = sections[i],
-				tname  = name.replace(/\./g, '-'),
-				target = pwf.jquery('.section-container.' + tname);
-
-			if (target.length) {
-				jobs[name] = this.get_ui_section_build_job(target, name);
+				if (err) {
+					v('done', err);
+				} else {
+					pwf.dispatcher.check_anchors();
+					ctrl.bind().resize();
+				}
 			}
-		}
-
-		pwf.async.parallel(jobs, next);
-	};
-
-
-	this.get_ui_section_build_job = function(parent, name)
-	{
-		var
-			scope  = pwf.list_scope(name),
-			target = pwf.jquery.div('section ' + name.replace(/\./g, '-')),
-			job = {};
-
-		parent.append(target);
-
-		for (var j = 0; j < scope.length; j++) {
-			var name = scope[j];
-
-			job[name] = function(name, target) {
-				return function(next) {
-					pwf.create(name, {
-						'parent':target
-					}).load(next);
-				};
-			}(name, target);
-		}
-
-		return function(next) {
-			pwf.async.parallel(job, next);
-		};
+		}(this));
 	};
 
 
@@ -151,8 +93,9 @@ pwf.register('site', function() {
 		var
 			win      = pwf.jquery(window),
 			height   = win.height(),
-			children = viewport.find('.section'),
-			inner    = children.children();
+			root     = viewport.children('.ui-structure-section'),
+			children = root.children('.section-inner').children(),
+			inner    = children.find('.section-inner').children();
 
 		children.height(height);
 
@@ -174,6 +117,7 @@ pwf.register('site', function() {
 			scroll = pwf.jquery('html, body').scrollTop();
 
 		for (var i = 0; i < items.length; i++) {
+			break;
 			var
 				item = pwf.jquery(items[i]),
 				anchor = item.attr('href').substr(pwf.dispatcher.get_anchor_separator().length),
@@ -184,7 +128,7 @@ pwf.register('site', function() {
 			if (solution) {
 				if (active === null) {
 					var
-						el  = pwf.jquery('.section.' + solution.get('bind')),
+						el  = pwf.jquery('.ui-structure-section.' + solution.get('bind')),
 						off = el.offset();
 
 					if ((off.top + el.height()/2) >= scroll) {

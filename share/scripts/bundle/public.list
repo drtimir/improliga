@@ -27,6 +27,8 @@ scripts/public/responsive
 scripts/ui/abstract/list
 scripts/ui/abstract/text
 
+scripts/ui/structure/section
+
 scripts/ui/list/event
 scripts/ui/list/team
 

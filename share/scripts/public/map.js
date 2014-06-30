@@ -3,43 +3,62 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 	pwf.dispatcher.map([
 		{
 			'name':'home',
-			'anchor':'',
-			'bind':'ui-home'
+			'anchor':'{section:string}?',
+			'structure':[
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'structure':['ui.home']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'o-improlize',
+						'structure':['ui.about']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'predstaveni',
+						'structure':['ui.shows']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'tymy',
+						'structure':['ui.teams']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'workshopy',
+						'structure':['ui.workshops']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'media-o-improlize',
+						'structure':['ui.media']
+					}
+				},
+				{
+					'cname':'ui.structure.section',
+					'pass':{
+						'link':'kontakty',
+						'structure':['ui.contact']
+					}
+				}
+			]
 		},
-		{
-			'name':'about',
-			'anchor':'o-improlize',
-			'bind':'ui-about',
-		},
-		{
-			'name':'shows',
-			'anchor':'predstaveni',
-			'bind':'ui-shows',
-		},
-		{
-			'name':'teams',
-			'anchor':'tymy',
-			'bind':'ui-teams',
-		},
-		{
-			'name':'workshops',
-			'anchor':'workshopy',
-			'bind':'ui-workshops',
-		},
-		{
-			'name':'media',
-			'anchor':'media-o-improlize',
-			'bind':'ui-media',
-		},
-		{
-			'name':'contacts',
-			'anchor':'kontakty',
-			'bind':'ui-contact',
-		},
-
 		{
 			'name':'show_detail',
-			'anchor':'predstaveni/.+\-{id:int}'
+			'anchor':'predstaveni/.+\-{item:int}',
+			'structure':['ui.event']
 		}
 	]);
 
@@ -47,27 +66,25 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 	pwf.queue
 		.on('dispatcher.load', function(pack) {
 			var
-				view = pack.response.view,
-				page = view.get('name');
-
-			if (page !== null) {
-				var
-					el    = pwf.jquery('.section.' + view.get('bind')),
-					build = view.get('build');
-
-				if (el.length) {
-					var proceed = function() {
-						pwf.jquery('#viewport').trigger('scroll');
-					};
-
-					if (view.get('initial')) {
-						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 0);
-						proceed();
-					} else {
-						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, proceed);
+				section,
+				view    = pack.response.view,
+				el      = pwf.site.get_el(),
+				opts    = {
+					'parent':el,
+					'structure':view.get('structure'),
+					'vars':view.get('attrs'),
+					'on_load':function() {
+						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, function(el) {
+							return function() {
+								el.trigger('scroll');
+							};
+						}(el));
 					}
-				}
-			}
+				};
+
+			section = pwf.create('ui.structure.section', opts).load(function(err) {
+				v('map-loaded', err);
+			});
 		}, null, true)
 
 		.on('dispatcher.error', function(pack) {

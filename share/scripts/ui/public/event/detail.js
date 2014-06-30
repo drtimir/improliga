@@ -1,8 +1,9 @@
 pwf.rc('ui.event.detail', {
-	'parents':['adminer.abstract.object', 'domel'],
+	'parents':['adminer.abstract.object'],
 
 	'storage':{
 		'opts':{
+			'attrs':[],
 			'model':'Impro::Event'
 		}
 	},
@@ -38,6 +39,26 @@ pwf.rc('ui.event.detail', {
 				.append(el.desc)
 				.append(el.image)
 				.append(el.map);
-		}
+		},
+
+
+		'construct_ui':function(proto)
+		{
+			var
+				el   = this.get_el(),
+				item = this.get('item');
+
+			el.heading.html(item.get('name'));
+			el.desc.html(item.get('desc_full'));
+
+			if (item.get('image')) {
+				el.image.html(pwf.thumb.create(item.get('image')));
+			}
+
+			if (item.get('location')) {
+				v(item.get('location'));
+				el.map.html();
+			}
+		},
 	}
 });

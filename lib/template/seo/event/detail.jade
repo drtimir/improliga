@@ -43,7 +43,7 @@
 		.event-image!=$ren->link($event->image->get_path(), $event->image->to_html($ren->renderer, 280), array("class" => 'image fancybox'));
 
 	-if $event->location
-		.event-location!=$event->location->map_html($ren->renderer, $col_width);
+		.event-location!=$event->location->map_html($ren->renderer, 280);
 
 
 	.cleaner

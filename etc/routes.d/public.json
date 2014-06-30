@@ -10,12 +10,7 @@
 	}, "home"],
 
 	["^/tymy$", {"modules":[
-		["team/list"],
-
-		["system/partial", {"template":"public/about"}],
-		["system/partial", {"template":"public/knowledge"}],
-		["article/category/list"]
-
+		["team/list"]
 	]}, "teams"],
 
 	["^/predstaveni$", {"modules":[
@@ -26,6 +21,7 @@
 			}
 		}]
 	]}, "events"],
+
 	["^/workshopy$", {"modules":[["seo/event/calendar"]]}, "workshops"],
 	["^/o-improlize$", {"title":"O Improlize", "modules":[["system/partial", {"template":"public/knowledge"}]]}, "about"],
 	["^/media-o-improlize$", {"title":"impro_menu_media", "layout":["layout/public"], "modules":[["system/partial", {"template":"impro/static/media"}]]}, "media"],

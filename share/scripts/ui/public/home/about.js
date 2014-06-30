@@ -3,7 +3,8 @@ pwf.rc('ui.home.about', {
 
 	'storage':{
 		'opts':{
-			'source':'.home-text-about'
+			'source':'.home-text-about',
+			'partial':'about'
 		}
 	}
 });

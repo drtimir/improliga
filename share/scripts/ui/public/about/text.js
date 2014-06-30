@@ -3,7 +3,8 @@ pwf.rc('ui.about.text', {
 
 	'storage':{
 		'opts':{
-			'source':'.about-text-brief'
+			'source':'.about-text-brief',
+			'partial':'articles'
 		}
 	}
 });

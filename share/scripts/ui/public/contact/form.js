@@ -64,12 +64,14 @@ pwf.rc('ui.contact.form', {
 
 			pwf.create('ui.abstract.text', {
 				'parent':el.header,
-				'source':'.contacts-text'
+				'source':'.contacts-text',
+				'partial':'contacts'
 			}).load();
 
 			pwf.create('ui.abstract.text', {
 				'parent':el.footer,
-				'source':'.contacts-addr'
+				'source':'.contacts-addr',
+				'partial':'addr'
 			}).load();
 
 			for (var i = 0; i < types.length; i++) {

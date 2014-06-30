@@ -3,7 +3,9 @@ pwf.rc('ui.abstract.text', {
 
 	'storage':{
 		'opts':{
-			'source':null
+			'source':null,
+			'locales':null,
+			'partial':null
 		}
 	},
 
@@ -22,23 +24,51 @@ pwf.rc('ui.abstract.text', {
 		},
 
 
-		'update_content':function()
+		'update_content':function(proto, data)
 		{
-			this.get_el('inner').html(this.get_source().html());
+			this.get_el('inner').html(data);
 		}
 	},
 
 	'public':{
 		'get_source':function()
 		{
-			return pwf.jquery(this.get('source'));
+			var data = pwf.jquery(this.get('source'));
+
+			if (!data.length) {
+				data = null;
+
+				if (pwf.locales.trans_msg(this.get('locales'))) {
+					data = pwf.locales.trans(this.get('locales'));
+				}
+			}
+
+			return data;
 		},
 
 
 		'load':function(proto, next)
 		{
-			proto('update_content');
-			this.respond(next, [null, this]);
+			var data = this.get_source();
+
+			if (data) {
+				proto('update_content', data);
+				this.respond(next, [null, this]);
+			} else if (this.get('partial')) {
+				pwf.jquery.ajax({
+					'url':'/static/' + this.get('partial'),
+					'dataType':'text',
+					'complete':function(ctrl, proto, next) {
+						return function(response, status) {
+							proto('update_content', response.responseText);
+							ctrl.respond(next);
+						};
+					}(this, proto, next)
+				});
+			} else {
+				v(proto.storage.opts);
+				this.respond(next, ['ui-text:failed-to-get-source']);
+			}
 		}
 	}
 });

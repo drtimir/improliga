@@ -26,6 +26,10 @@ pwf.register('site', function() {
 				pwf.preload(resources.essential, next);
 			},
 
+			function(next) {
+				pwf.locales.preload(next);
+			},
+
 			function(ctrl) {
 				return function(next) {
 					ctrl.load(next);
@@ -39,7 +43,10 @@ pwf.register('site', function() {
 
 		pwf.async.waterfall(jobs, function(ctrl) {
 			return function(err) {
-				loader.hide();
+				if (loader) {
+					loader.hide();
+				}
+
 				ctrl.bind();
 				v('done', err);
 			}

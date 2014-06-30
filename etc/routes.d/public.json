@@ -4,7 +4,6 @@
 		"modules":[
 			["system/partial", {"template":"public/about"}],
 			["system/partial", {"template":"public/knowledge"}],
-			["article/category/list"],
 			["system/partial", {"template":"public/contacts"}]
 		]
 	}, "home"],
@@ -98,5 +97,14 @@
 		"modules":[
 			["system/redirect", {"url":"http://intra.improliga.cz", "code":301}]
 		]
-	}, "intranet_redir"]
+	}, "intranet_redir"],
+
+	["^/static/([^/]+)$", {
+		"layout":[],
+		"modules":[
+			["seo/static", {
+				"partial":"#{0}"
+			}]
+		]
+	}]
 ]

@@ -1,0 +1,3 @@
+<?
+
+$this->partial('public/'.$partial);

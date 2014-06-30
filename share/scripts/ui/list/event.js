@@ -56,7 +56,7 @@ pwf.rc('ui.list.event', {
 
 		'callbacks':{
 			'navigate':function(e) {
-				document.location = e.data.get_url();
+				pwf.site.navigate(e.data.get_url());
 			}
 		}
 	},

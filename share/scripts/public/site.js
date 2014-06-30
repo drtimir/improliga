@@ -4,8 +4,6 @@ pwf.register('site', function() {
 		loader,
 
 		models = ['Impro::Event', 'Impro::Team'],
-		sections = ['ui.home', 'ui.about', 'ui.shows', 'ui.teams', 'ui.workshops', 'ui.media', 'ui.contact', 'ui.event'],
-
 		resources = {
 			'essential':[],
 			'editor':[]
@@ -78,9 +76,14 @@ pwf.register('site', function() {
 
 	this.bind = function()
 	{
+		pwf.jquery('#main-menu').first().find('a').bind('click', callback_history);
 		pwf.jquery(window)
-			.bind('resize', this, callback_resize)
-			.bind('scroll', this, callback_update_menu);
+			.bind('resize',  this, callback_resize)
+			.bind('scroll',  this, callback_update_menu);
+
+		viewport
+			.bind('loading', this, callback_loader_show)
+			.bind('ready',   this, callback_loader_hide);
 
 		return this;
 	};
@@ -153,6 +156,31 @@ pwf.register('site', function() {
 	};
 
 
+	this.navigate = function(url, title)
+	{
+		if (!title) {
+			title = document.title;
+		}
+
+		History.pushState(null, title, url);
+		return this;
+	};
+
+
+	this.loader_show = function()
+	{
+		v('loading');
+		return this;
+	};
+
+
+	this.loader_hide = function()
+	{
+		v('loaded');
+		return this;
+	};
+
+
 	var callback_resize = function(e)
 	{
 		e.data.resize();
@@ -162,5 +190,28 @@ pwf.register('site', function() {
 	var callback_update_menu = function(e)
 	{
 		e.data.update_menu();
+	};
+
+
+	var callback_history = function(e)
+	{
+		var
+			el    = pwf.jquery(this),
+			title = el.attr('title');
+
+		e.preventDefault();
+		pwf.site.navigate(el.attr('href'), title);
+	};
+
+
+	var callback_loader_show = function(e)
+	{
+		e.data.loader_show();
+	};
+
+
+	var callback_loader_hide = function(e)
+	{
+		e.data.loader_hide();
 	};
 });

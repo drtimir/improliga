@@ -67,7 +67,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 		'on_load':function(next) {
 			var
 				el    = pwf.site.get_el(),
-				cname = typeof this.get('cname') == 'undefined' ? 'ui.structure.section':this.get('cname'),
+				cname = this.get('cname') || 'ui.structure.section',
 				opts  = pwf.merge({
 					'parent':el,
 					'structure':this.get('structure'),
@@ -83,8 +83,11 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					}
 				}, this.get('attrs'));
 
+			el.html('').trigger('loading');
+
 			this.set('content', pwf.create(cname, opts).load(function(err) {
 				el.trigger('resize');
+				el.trigger('ready');
 				this.respond(next, [err]);
 			}));
 		},

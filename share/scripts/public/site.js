@@ -32,7 +32,7 @@ pwf.register('site', function() {
 
 			function(ctrl) {
 				return function(next) {
-					ctrl.load(next);
+					ctrl.bind().load(next);
 				};
 			}(this),
 
@@ -47,7 +47,6 @@ pwf.register('site', function() {
 					loader.hide();
 				}
 
-				ctrl.bind();
 				v('done', err);
 			}
 		}(this));
@@ -86,9 +85,7 @@ pwf.register('site', function() {
 		pwf.jquery('#main-menu').first().find('a').bind('click', callback_history);
 		pwf.jquery(window)
 			.bind('resize',  this, callback_resize)
-			.bind('scroll',  this, callback_update_menu);
-
-		viewport
+			.bind('scroll',  this, callback_update_menu)
 			.bind('loading', this, callback_loader_show)
 			.bind('ready',   this, callback_loader_hide);
 

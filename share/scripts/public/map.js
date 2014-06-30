@@ -83,7 +83,10 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					}
 				}, this.get('attrs'));
 
-			el.html('').trigger('loading');
+			el
+				.html('')
+				.trigger('resize')
+				.trigger('loading');
 
 			this.set('content', pwf.create(cname, opts).load(function(err) {
 				el.trigger('resize');

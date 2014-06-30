@@ -10,12 +10,14 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'home',
 							'structure':['ui.home']
 						}
 					},
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'about',
 							'link':'o-improlize',
 							'structure':['ui.about']
 						}
@@ -23,6 +25,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'shows',
 							'link':'predstaveni',
 							'structure':['ui.shows']
 						}
@@ -30,6 +33,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'teams',
 							'link':'tymy',
 							'structure':['ui.teams']
 						}
@@ -37,6 +41,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'workshops',
 							'link':'workshopy',
 							'structure':['ui.workshops']
 						}
@@ -44,6 +49,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'media',
 							'link':'media-o-improlize',
 							'structure':['ui.media']
 						}
@@ -51,6 +57,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
+							'bind':'contact',
 							'link':'kontakty',
 							'structure':['ui.contact']
 						}

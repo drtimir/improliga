@@ -38,13 +38,13 @@ html(lang=$loc->get_lang())
 							.desc=$loc->trans('impro_name_desc')
 
 						ul.main-menu#main-menu
-							li!=$ren->link_for('home', $loc->trans('impro_menu_home'))
-							li!=$ren->link_for('about', $loc->trans('impro_menu_about'))
-							li!=$ren->link_for('events', $loc->trans('impro_menu_shows'))
-							li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'))
-							li!=$ren->link_for('workshops', $loc->trans('impro_menu_workshops'))
-							li!=$ren->link_for('media', $loc->trans('impro_menu_media'))
-							li!=$ren->link_for('contacts', $loc->trans('impro_contact'))
+							li!=$ren->link_for('home', $loc->trans('impro_menu_home'), array("class" => 'menu-home'))
+							li!=$ren->link_for('about', $loc->trans('impro_menu_about'), array("class" => 'menu-about'))
+							li!=$ren->link_for('events', $loc->trans('impro_menu_shows'), array("class" => 'menu-shows'))
+							li!=$ren->link_for('teams', $loc->trans('impro_menu_teams'), array("class" => 'menu-teams'))
+							li!=$ren->link_for('workshops', $loc->trans('impro_menu_workshops'), array("class" => 'menu-workshops'))
+							li!=$ren->link_for('media', $loc->trans('impro_menu_media'), array("class" => 'menu-media'))
+							li!=$ren->link_for('contacts', $loc->trans('impro_contact'), array("class" => 'menu-contact'))
 
 						a.logo(href=$ren->url('home'))
 

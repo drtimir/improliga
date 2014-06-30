@@ -35,4 +35,29 @@ pwf.rc('ui.structure.home', {
 			}
 		}
 	},
+
+
+	'public':{
+		'update_menu':function(proto)
+		{
+			var
+				items  = pwf.jquery('#main-menu').first().find('a'),
+				active = null,
+				scroll = pwf.jquery('html, body').scrollTop();
+
+			items.removeClass('active');
+
+			for (var i = 0, len = proto.storage.objects.length; i < len; i++) {
+				var
+					obj = proto.storage.objects[i],
+					el  = obj.get_el(),
+					top = el.offset().top;
+v(scroll - (el.height()/2), top);
+				if (scroll - (2*el.height()/3) < top) {
+					pwf.jquery('.menu-' + obj.get('bind')).addClass('active');
+					break;
+				}
+			}
+		}
+	}
 });

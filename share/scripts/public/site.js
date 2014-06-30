@@ -130,34 +130,11 @@ pwf.register('site', function() {
 	this.update_menu = function()
 	{
 		var
-			items  = pwf.jquery('#main-menu').first().find('a'),
-			active = null,
-			scroll = pwf.jquery('html, body').scrollTop();
+			page = pwf.dispatcher.get_current(),
+			cont = page.get('content');
 
-		for (var i = 0; i < items.length; i++) {
-			break;
-			var
-				item = pwf.jquery(items[i]),
-				anchor = item.attr('href').substr(pwf.dispatcher.get_anchor_separator().length),
-				solution = pwf.dispatcher.get_solution_for(anchor);
-
-			item.removeClass('active');
-
-			if (solution) {
-				if (active === null) {
-					var
-						el  = pwf.jquery('.ui-structure-section.' + solution.get('bind')),
-						off = el.offset();
-
-					if ((off.top + el.height()/2) >= scroll) {
-						active = item;
-					}
-				}
-			}
-		}
-
-		if (active) {
-			active.addClass('active');
+		if (typeof cont.update_menu == 'function') {
+			cont.update_menu();
 		}
 	};
 

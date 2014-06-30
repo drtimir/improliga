@@ -1,9 +1,10 @@
 pwf.register('site', function() {
 	var
+		ui,
 		viewport,
 		loader,
 
-		models = ['Impro::Event', 'Impro::Team'],
+		models = ['Impro::Event', 'Impro::Team', 'Impro::Article'],
 		resources = {
 			'essential':[],
 			'editor':[]
@@ -18,6 +19,7 @@ pwf.register('site', function() {
 
 	this.init = function()
 	{
+		ui = pwf.jquery('#ui').create_divs(['preloader']);
 		viewport = pwf.jquery('#viewport');
 
 		var jobs = [
@@ -173,14 +175,14 @@ pwf.register('site', function() {
 
 	this.loader_show = function()
 	{
-		v('loading');
+		ui.preloader.stop(true).fadeIn(250);
 		return this;
 	};
 
 
 	this.loader_hide = function()
 	{
-		v('loaded');
+		ui.preloader.stop(true).fadeOut(250);
 		return this;
 	};
 

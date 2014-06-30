@@ -31,6 +31,7 @@ scripts/ui/structure/home
 
 scripts/ui/list/event
 scripts/ui/list/team
+scripts/ui/list/article
 
 scripts/ui/public/home/about
 scripts/ui/public/home/events

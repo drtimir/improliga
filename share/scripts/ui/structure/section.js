@@ -82,6 +82,14 @@ pwf.rc('ui.structure.section', {
 			}(this, proto, next));
 
 			return this;
+		},
+
+
+		'redraw':function(proto, next)
+		{
+			proto('loaded');
+			this.respond(next);
+			return this;
 		}
 	}
 });

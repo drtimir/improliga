@@ -17,5 +17,5 @@ pwf.rc('ui.structure.home', {
 				pwf.jquery('html,body').stop(true).scrollTo(child.offset().top, 750);
 			}
 		}
-	}
+	},
 });

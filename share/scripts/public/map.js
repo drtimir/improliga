@@ -66,10 +66,9 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 
 		'on_load':function(next) {
 			var
-				section,
 				el    = pwf.site.get_el(),
 				cname = typeof this.get('cname') == 'undefined' ? 'ui.structure.section':this.get('cname'),
-				opts  = {
+				opts  = pwf.merge({
 					'parent':el,
 					'structure':this.get('structure'),
 					'vars':this.get('attrs'),
@@ -82,13 +81,16 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							};
 						}(el));
 					}
-				};
+				}, this.get('attrs'));
 
-			opts = pwf.merge(opts, this.get('attrs'));
-			section = pwf.create(cname, opts).load(function(err) {
+			this.set('content', pwf.create(cname, opts).load(function(err) {
 				el.trigger('resize');
 				this.respond(next, [err]);
-			});
+			}));
+		},
+
+		'on_redraw':function(next) {
+			this.get('content').update(this.get('attrs')).redraw(next);
 		},
 
 		'on_error':function() {

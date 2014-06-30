@@ -28,6 +28,7 @@ pwf.rc('ui.structure.home', {
 
 				if (proto.storage.initial) {
 					pwf.jquery('html,body').stop(true).scrollTo(top, 0);
+					this.update_menu();
 					proto.storage.initial = false;
 				} else {
 					pwf.jquery('html,body').stop(true).scrollTo(top, 750);
@@ -52,7 +53,7 @@ pwf.rc('ui.structure.home', {
 					obj = proto.storage.objects[i],
 					el  = obj.get_el(),
 					top = el.offset().top;
-v(scroll - (el.height()/2), top);
+
 				if (scroll - (2*el.height()/3) < top) {
 					pwf.jquery('.menu-' + obj.get('bind')).addClass('active');
 					break;

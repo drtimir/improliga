@@ -103,6 +103,7 @@ pwf.register('site', function() {
 			root     = viewport.children('.ui-structure-section'),
 			children = root.children('.section-inner').children('.ui-structure-section');
 
+		viewport.css('min-height', height + 'px');
 		children.height(height);
 
 		return this

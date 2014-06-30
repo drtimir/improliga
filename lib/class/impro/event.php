@@ -248,7 +248,7 @@ namespace Impro
 			$str = $this->start->format('d.m.Y');
 
 			if ($this->start_time) {
-				$str .= $this->start_time->format('H:i');
+				$str .= $this->start_time;
 			}
 
 			return $str;

@@ -31,12 +31,12 @@ pwf.rc('ui.list.event', {
 
 			if (!image) {
 				image = {
-					'name':'logo.png',
+					'path':'logo.png',
 					'url':'<pixmap(logo.png)>'
 				};
 			}
 
-			el.image.html(pwf.thumb.create(image.name, el.image.width() + 'x' + el.image.height()));
+			el.image.html(pwf.thumb.create(image.path, el.image.width() + 'x' + el.image.height()));
 			this.get_el().bind('click', this, proto('callbacks').navigate);
 		},
 
@@ -46,8 +46,8 @@ pwf.rc('ui.list.event', {
 			str = this.get('start').format('D.M.');
 
 			if (this.get('start_time')) {
-				var tmp = pwf.moment(this.get('start_time'), 'HH:MM:SS');
-				str += tmp.format('H:MM');
+				var tmp = pwf.moment(this.get('start_time'), 'HH:II:SS');
+				str += ' ' + tmp.format('H:MM');
 			}
 
 			return str;

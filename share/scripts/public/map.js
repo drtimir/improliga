@@ -64,10 +64,16 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					}
 				]
 			},
+
 			{
 				'name':'show_detail',
-				'anchor':'/predstaveni/.+\-{item:int}',
+				'anchor':'/predstaveni/{item:seoname}',
 				'structure':['ui.event']
+			},
+			{
+				'name':'team_detail',
+				'anchor':'/tymy/{item:seoname}',
+				'structure':['ui.team']
 			}
 		],
 

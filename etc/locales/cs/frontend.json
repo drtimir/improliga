@@ -42,5 +42,10 @@
 	"form-prev":"&lt;",
 	"form-next":"&gt;",
 	"form-now":"Teď",
-	"form-clear":"Vymazat"
+	"form-clear":"Vymazat",
+
+	"event-start":"Datum",
+	"event-end":"Konec",
+	"event-price":"Vstupné",
+	"event-location":"Místo"
 }

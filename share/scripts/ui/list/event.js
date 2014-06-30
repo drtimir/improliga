@@ -22,7 +22,7 @@ pwf.rc('ui.list.event', {
 			el.data.append(el.name).append(el.info);
 			el.info.append(el.location).append(el.time);
 
-			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', this.get_url()));
+			el.name.html(pwf.jquery('<a/>').html(this.get_name()).attr('href', this.get_url()));
 			el.time.html(proto('format_time'));
 
 			if (this.get('location')) {
@@ -65,6 +65,18 @@ pwf.rc('ui.list.event', {
 		'get_url':function()
 		{
 			return '/predstaveni/' + this.get('item').get_seoname();
+		},
+
+
+		'get_name':function()
+		{
+			var name = this.get('name');
+
+			if (name.length > 54) {
+				name = name.substr(0, 54) + ' ..';
+			}
+
+			return name;
 		}
 	}
 });

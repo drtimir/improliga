@@ -46,6 +46,7 @@ namespace Impro
 		);
 
 		protected static $access = array(
+			'schema' => true,
 			'browse' => true,
 		);
 

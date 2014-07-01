@@ -5,7 +5,6 @@
 	"model-Impro::Event-dative":"události",
 	"model-Impro::Event-accusative":"událost",
 	"model-Impro::Event-dative-plural":"událostí",
-	"model-Impro::Event-dative-plural":"událostí",
 
 	"model-Impro::Event-attr-type":"Typ události",
 	"model-Impro::Event-attr-team_home":"Domácí tým",
@@ -27,6 +26,11 @@
 
 	"model-Impro::Event::Participant":"Účastník",
 	"model-Impro::Event::Participant-plural":"Účastníci",
+
+	"model-Impro::News":"Novinka",
+	"model-Impro::News-dative":"novinky",
+	"model-Impro::News-dative-plural":"novinek",
+	"model-Impro::News-accusative":"novinky",
 
 	"model-Impro::Team":"Tým",
 	"model-Impro::Team-accusative":"tým",

@@ -16,7 +16,11 @@ namespace Impro
 			"mail"           => array("varchar", "default" => ''),
 			"site"           => array("varchar", "default" => ''),
 			"played"         => array("int", "is_unsigned" => true, "default" => 0),
-			"visible"        => array("bool"),
+
+			"visible"        => array('bool'),
+			"published"      => array('bool'),
+			"dissolved"      => array('bool'),
+
 			"author"         => array('belongs_to', "model" => "System\User"),
 			"members"        => array('has_many', "model" => "Impro\Team\Member"),
 

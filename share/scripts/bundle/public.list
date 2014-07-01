@@ -26,6 +26,7 @@ scripts/public/site
 
 scripts/ui/abstract/list
 scripts/ui/abstract/text
+scripts/ui/abstract/detail
 
 scripts/ui/structure/section
 scripts/ui/structure/home
@@ -48,5 +49,6 @@ scripts/ui/public/contact/form
 scripts/ui/public/contact/faq
 
 scripts/ui/public/event/detail
+scripts/ui/public/team/detail
 
 scripts/ui/public/loader

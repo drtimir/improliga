@@ -32,7 +32,7 @@ pwf.rc('ui.teams.teams', {
 				}
 			],
 			'filters':[
-				{'attr':'visible', 'type':'exact', 'exact':true}
+				{'attr':'published', 'type':'exact', 'exact':true}
 			],
 			'sort':[
 				{'attr':'name'}

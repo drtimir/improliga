@@ -70,10 +70,11 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/predstaveni/{item:seoname}',
 				'structure':['ui.event']
 			},
+
 			{
 				'name':'team_detail',
 				'anchor':'/tymy/{item:seoname}',
-				'structure':['ui.team']
+				'structure':['ui.team.']
 			}
 		],
 

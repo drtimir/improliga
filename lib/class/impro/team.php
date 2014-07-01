@@ -5,17 +5,16 @@ namespace Impro
 	class Team extends \System\Model\Perm
 	{
 		protected static $attrs = array(
-			"name"           => array("varchar"),
-			"name_full"      => array("varchar"),
-			"city"           => array("varchar", "default" => ''),
+			"name"           => array('varchar'),
+			"name_full"      => array('varchar'),
+			"city"           => array('varchar', "default" => ''),
 			"hq"             => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"loc_trainings"  => array('belongs_to', "model" => 'System\Location', "is_null" => true),
-			"about"          => array("text", "default" => ''),
+			"about"          => array('text', "default" => ''),
 			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"          => array('image', "default" => "/share/pixmaps/impro/team.png"),
-			"mail"           => array("varchar", "default" => ''),
-			"site"           => array("varchar", "default" => ''),
-			"played"         => array("int", "is_unsigned" => true, "default" => 0),
+			"mail"           => array('varchar', "default" => ''),
+			"site"           => array('varchar', "default" => ''),
 
 			"visible"        => array('bool'),
 			"published"      => array('bool'),

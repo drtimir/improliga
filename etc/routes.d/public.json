@@ -26,18 +26,6 @@
 	["^/media-o-improlize$", {"title":"impro_menu_media", "layout":["layout/public"], "modules":[["system/partial", {"template":"impro/static/media"}]]}, "media"],
 	["^/kontakty$", {"title":"Kontakty - Česká Improliga", "modules":[["system/partial", {"template":"public/contacts"}]]}, "contacts"],
 
-	["^/predstaveni/mesic/([^/]+)$", {
-		"modules":[
-			["seo/event/month", {
-				"month":"#{0}",
-				"conds":{
-					"published":true,
-					"type":[1,2,3,4,6]
-				}
-			}]
-		]
-	}, "shows_month"],
-
 	["^/predstaveni/([^/]+)$", {
 		"modules":[
 			["seo/event/detail", {
@@ -50,19 +38,6 @@
 		]
 	}, "show_detail"],
 
-
-	["^/workshopy/mesic/([^/]+)$", {
-		"modules":[
-			["event/list/month", {
-				"month":"#{0}",
-				"conds":{
-					"published":true,
-					"type":5
-				}
-			}]
-		]
-	}, "workshops_month"],
-
 	["^/workshopy/([^/]+)$", {
 		"modules":[
 			["event/list/archive", {
@@ -74,7 +49,6 @@
 		]
 	}, "workshop_detail"],
 
-
 	["^/o-improlize/([^/]+)/$", {
 		"layout":["layout/public", "layout/public/dual-34"],
 		"modules":[
@@ -85,11 +59,10 @@
 
 	["^/o-improlize/([^/]+)/#([^/]+)$", {}, "article_chapter"],
 
-
 	["^/tymy/([^/]+)$", {
 		"layout":["layout/public"],
 		"modules":[
-			["impro/team/detail", {"id":"#{0}"}]
+			["seo/team/detail", {"id":"#{0}"}]
 		]
 	}, "team"],
 

@@ -1,6 +1,6 @@
 {
 	"allow":{
-		"schema":true,
+		"schema":false,
 		"create":false,
 		"browse":false,
 		"update":false,

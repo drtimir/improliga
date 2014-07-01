@@ -10,23 +10,22 @@ namespace Impro
 			"city"           => array('varchar', "default" => ''),
 			"hq"             => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"loc_trainings"  => array('belongs_to', "model" => 'System\Location', "is_null" => true),
-			"about"          => array('text', "default" => ''),
+			"about"          => array('text', "default" => '', 'is_null' => true),
 			"logo"           => array('image', "default" => "/share/pixmaps/logo_original.png"),
 			"photo"          => array('image', "default" => "/share/pixmaps/impro/team.png"),
-			"mail"           => array('varchar', "default" => ''),
-			"site"           => array('varchar', "default" => ''),
+			"mail"           => array('email', "default" => ''),
+			"site"           => array('url', "default" => ''),
 
 			"visible"        => array('bool'),
 			"published"      => array('bool'),
 			"dissolved"      => array('bool'),
 
-			"author"         => array('belongs_to', "model" => "System\User"),
-			"members"        => array('has_many', "model" => "Impro\Team\Member"),
-
 			"accepting"      => array('bool'),
 			"use_discussion" => array('bool'),
 			"use_attendance" => array('bool'),
-			"use_booking"    => array('bool'),
+
+			"author"    => array('belongs_to', "model" => "System\User"),
+			"members"   => array('has_many', "model" => "Impro\Team\Member"),
 
 			"topics"    => array('has_many', "model" => "Impro\Team\Discussion\Topic"),
 			"comments"  => array('has_many', "model" => 'Impro\Team\Comment', "foreign_name" => 'id_team'),

@@ -37,6 +37,9 @@
 					"model":"Impro::Team",
 					"list":{
 						"attrs":["name", "visible", "created_at"]
+					},
+					"edit":{
+						"exclude":["topics", "comments", "posts", "trainings"]
 					}
 				}
 			},

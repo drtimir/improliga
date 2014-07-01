@@ -59,5 +59,16 @@
 	"model-Impro::Team::Discussion::Topic":"Téma",
 	"model-Impro::Team::Training":"Trénink",
 	"model-Impro::Team::Comment":"Komentář",
+
+	"model-Impro::Partner":"Partner",
+	"model-Impro::Partner-plural":"Partneři",
+	"model-Impro::Partner-dative":"partnera",
+	"model-Impro::Partner-dative-plural":"partnerů",
+	"model-Impro::Partner-accusative":"partnera",
+	"model-Impro::Partner-attr-desc":"Popus",
+	"model-Impro::Partner-attr-site":"Web",
+	"model-Impro::Partner-attr-image":"Logo",
+	"model-Impro::Partner-attr-clicked":"Počet kliknutí",
+
 	"model-Impro::Post":"Zpráva"
 }

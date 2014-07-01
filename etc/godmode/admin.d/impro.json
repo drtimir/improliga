@@ -32,7 +32,7 @@
 		"opts":{
 			"model":"Impro::Team",
 			"list":{
-				"attrs":["name", "visible", "created_at"]
+				"attrs":["name", "visible", "updated_at", "created_at"]
 			},
 			"edit":{
 				"exclude":["topics", "comments", "posts", "trainings"]
@@ -45,7 +45,7 @@
 		"opts":{
 			"model":"Impro::Partner",
 			"list":{
-				"attrs":["name", "visible", "created_at"]
+				"attrs":["name", "visible", "updated_at", "created_at"]
 			}
 		}
 	}

@@ -15,7 +15,7 @@ pwf.rc('ui.list.team', {
 		'construct':function(proto) {
 			var
 				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'city', 'time', 'cleaner']),
-				image = this.get('image');
+				image = this.get('logo');
 
 			el.data.append(el.name).append(el.info);
 			el.info.append(el.city).append(el.time);
@@ -24,12 +24,12 @@ pwf.rc('ui.list.team', {
 
 			if (!image) {
 				image = {
-					'name':'logo.png',
+					'path':'logo.png',
 					'url':'<pixmap(logo.png)>'
 				};
 			}
 
-			el.image.html(pwf.thumb.create(image.name, el.image.width() + 'x' + el.image.height()));
+			el.image.html(pwf.thumb.fit(image.path, el.image));
 			el.name.html(pwf.jquery('<a/>').html(this.get('name')).attr('href', this.get_url()));
 			this.get_el().bind('click', this, proto('callbacks').navigate);
 		},

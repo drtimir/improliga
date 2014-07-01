@@ -104,6 +104,14 @@ pwf.rc('ui.abstract.detail', {
 				.html(team.get('name'));
 
 			return link;
+		},
+
+
+		'link':function(proto, title, url)
+		{
+			return pwf.jquery('<a/>')
+				.attr('href', url)
+				.html(title);
 		}
 	}
 });

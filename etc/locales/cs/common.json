@@ -6,5 +6,9 @@
 	"detail-price":"Vstupné",
 	"detail-location":"Místo",
 	"detail-city":"Město",
-	"detail-site":"Web"
+	"detail-site":"Web",
+
+
+	"team-is-dissolved":"Tým se již rozpadl",
+	"team-is-accepting":"Tým nabírá nové členy"
 }

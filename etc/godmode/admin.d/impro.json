@@ -1,58 +1,52 @@
 [
 	{
-		"title":"Improliga",
-		"name":"improliga",
-		"items":[
-			{
-				"title":"impro_events",
-				"name":"events",
-				"icon":"modules/calendar",
-				"opts":{
-					"model":"Impro::Event",
-					"list":{
-						"attrs":["name", "start", "visible", "public", "created_at"]
-					},
-					"edit":{
-						"exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
-						"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster", "author"]
-					}
-				}
+		"title":"impro_events",
+		"name":"events",
+		"icon":"modules/calendar",
+		"opts":{
+			"model":"Impro::Event",
+			"list":{
+				"attrs":["name", "start", "visible", "public", "created_at"]
 			},
-			{
-				"title":"impro_news",
-				"name":"news",
-				"icon":"items/news",
-				"opts":{
-					"model":"Impro::News",
-					"list":{
-						"attrs":["name", "visible", "public", "created_at"]
-					}
-				}
-			},
-			{
-				"title":"impro_teams",
-				"name":"news",
-				"icon":"items/team",
-				"opts":{
-					"model":"Impro::Team",
-					"list":{
-						"attrs":["name", "visible", "created_at"]
-					},
-					"edit":{
-						"exclude":["topics", "comments", "posts", "trainings"]
-					}
-				}
-			},
-			{
-				"title":"impro_partners",
-				"icon":"items/misc",
-				"opts":{
-					"model":"Impro::Partner",
-					"list":{
-						"attrs":["name", "visible", "created_at"]
-					}
-				}
+			"edit":{
+				"exclude":["has_whistle", "has_kazoo", "has_mic", "has_dress_ref", "has_dress_oth",
+				"has_cards", "has_basket", "has_papers", "has_pencils", "has_camera", "has_photo", "gen_tickets", "gen_poster", "author"]
 			}
-		]
+		}
+	},
+	{
+		"title":"impro_news",
+		"name":"news",
+		"icon":"items/news",
+		"opts":{
+			"model":"Impro::News",
+			"list":{
+				"attrs":["name", "visible", "public", "created_at"]
+			}
+		}
+	},
+	{
+		"title":"impro_teams",
+		"name":"news",
+		"icon":"items/team",
+		"opts":{
+			"model":"Impro::Team",
+			"list":{
+				"attrs":["name", "visible", "created_at"]
+			},
+			"edit":{
+				"exclude":["topics", "comments", "posts", "trainings"]
+			}
+		}
+	},
+	{
+		"title":"impro_partners",
+		"icon":"items/misc",
+		"opts":{
+			"model":"Impro::Partner",
+			"list":{
+				"attrs":["name", "visible", "created_at"]
+			}
+		}
 	}
 ]

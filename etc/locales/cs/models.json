@@ -29,5 +29,31 @@
 	"model-Impro::Event::Participant-plural":"Účastníci",
 
 	"model-Impro::Team":"Tým",
-	"model-Impro::Team-plural":"Týmy"
+	"model-Impro::Team-accusative":"tým",
+	"model-Impro::Team-dative":"týmu",
+	"model-Impro::Team-dative-plural":"týmů",
+	"model-Impro::Team-plural":"Týmy",
+
+	"model-Impro::Team-attr-name_full":"Dlouhý název",
+	"model-Impro::Team-attr-city":"Město",
+	"model-Impro::Team-attr-hq":"Domácí scéna",
+	"model-Impro::Team-attr-loc_trainings":"Místo tréninků",
+	"model-Impro::Team-attr-about":"O týmu",
+	"model-Impro::Team-attr-logo":"Logo",
+	"model-Impro::Team-attr-photo":"Hlavní fotka",
+	"model-Impro::Team-attr-mail":"E-mail",
+	"model-Impro::Team-attr-site":"Web",
+	"model-Impro::Team-attr-visible":"Viditelný na intranetu",
+	"model-Impro::Team-attr-published":"Veřejný tým",
+	"model-Impro::Team-attr-dissolved":"Rozpuštěný tým",
+	"model-Impro::Team-attr-members":"Členové",
+	"model-Impro::Team-attr-accepting":"Přijímá nové členy",
+	"model-Impro::Team-attr-use_discussion":"Používá diskuze",
+	"model-Impro::Team-attr-use_attendance":"Používá docházku",
+
+	"model-Impro::Team::Member":"Člen",
+	"model-Impro::Team::Discussion::Topic":"Téma",
+	"model-Impro::Team::Training":"Trénink",
+	"model-Impro::Team::Comment":"Komentář",
+	"model-Impro::Post":"Zpráva"
 }

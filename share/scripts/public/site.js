@@ -144,12 +144,18 @@ pwf.register('site', function() {
 
 	this.center_all = function(list)
 	{
-		var
-			win    = pwf.jquery(window),
-			height = win.height();
-
 		for (var i = 0; i < list.length; i++) {
-			var item = pwf.jquery(list[i]);
+			var
+				item = pwf.jquery(list[i]),
+				parent = item.parent(),
+				height;
+
+			if (parent.hasClass('section-inner')) {
+				parent = parent.parent();
+			}
+
+			height = parent.height();
+
 			item.css('top', Math.round((height - item.outerHeight())/2));
 		}
 

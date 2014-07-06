@@ -127,8 +127,8 @@ pwf.register('site', function() {
 					max = parseInt(max),
 					offset = item.offset(),
 					top = (win.scrollTop() - offset.top) * .95,
-					top_min = height - max - height/3,
-					top_max = -top_min + height/3,
+					top_min = height - max - height/2,
+					top_max = -top_min + height/2,
 					pos = Math.round(Math.min(top_max, Math.max(top_min, top))),
 					css = {
 						'background-position':'50% '+pos + 'px'

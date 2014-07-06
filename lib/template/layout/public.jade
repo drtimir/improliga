@@ -29,14 +29,17 @@ html(lang=$loc->get_lang())
 		link(rel="icon",type="image/png",href="/favicon.png")
 
 	body
-		.wrapper
-			.wrapper-content
-				header
-					.inner
-						.site-name
-							.name=$loc->trans('impro_name')
-							.desc=$loc->trans('impro_name_desc')
+		header
+			.inner
+				.site-icon
+					.site-name
+						.name=$loc->trans('impro_name')
+						.desc=$loc->trans('impro_name_desc')
 
+					a.logo(href=$ren->url('home'))
+
+				.main-menu-container
+					.main-menu-center
 						ul.main-menu#main-menu
 							li!=$ren->link_for('home', $loc->trans('impro_menu_home'), array("class" => 'menu-home'))
 							li!=$ren->link_for('about', $loc->trans('impro_menu_about'), array("class" => 'menu-about'))
@@ -45,8 +48,6 @@ html(lang=$loc->get_lang())
 							li!=$ren->link_for('workshops', $loc->trans('impro_menu_workshops'), array("class" => 'menu-workshops'))
 							li!=$ren->link_for('media', $loc->trans('impro_menu_media'), array("class" => 'menu-media'))
 							li!=$ren->link_for('contacts', $loc->trans('impro_contact'), array("class" => 'menu-contact'))
-
-						a.logo(href=$ren->url('home'))
 
 		#ui
 			#viewport

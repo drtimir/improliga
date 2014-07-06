@@ -3,7 +3,7 @@ pwf.rc('ui.shows.events', {
 
 	'storage':{
 		'opts':{
-			'heading':'Seznam představení',
+			'heading':'Představení',
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
 			'per_page':12,

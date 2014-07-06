@@ -2,7 +2,8 @@ pwf.rc('ui.structure.home', {
 	'parents':['ui.structure.section'],
 
 	'storage':{
-		'initial':true
+		'initial':true,
+		'locked':false
 	},
 
 	'proto':{
@@ -31,7 +32,14 @@ pwf.rc('ui.structure.home', {
 					this.update_menu();
 					proto.storage.initial = false;
 				} else {
-					pwf.jquery('html,body').stop(true).scrollTo(top, 750);
+					if (!proto.storage.locked) {
+						proto.storage.locked = true;
+						pwf.jquery('html,body').stop(true).scrollTo(top, 750, function(proto) {
+							return function() {
+								proto.storage.locked = false;
+							};
+						}(proto));
+					}
 				}
 			}
 		}
@@ -55,10 +63,22 @@ pwf.rc('ui.structure.home', {
 					top = el.offset().top;
 
 				if (scroll - (2*el.height()/3) < top) {
-					pwf.jquery('.menu-' + obj.get('bind')).addClass('active');
+					var els = pwf.jquery('.menu-' + obj.get('bind')).addClass('active');
+
+					if (!this.is_locked() && document.location.pathname != els.attr('href')) {
+						proto.storage.locked = true;
+						History.pushState(null, null, els.attr('href'));
+						proto.storage.locked = false;
+					}
+
 					break;
 				}
 			}
+		},
+
+		'is_locked':function(proto)
+		{
+			return proto.storage.locked;
 		}
 	}
 });

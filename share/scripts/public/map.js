@@ -89,16 +89,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				opts  = pwf.merge({
 					'parent':el,
 					'structure':this.get('structure'),
-					'vars':this.get('attrs'),
-					'on_load':function() {
-						el.trigger('resize');
-
-						pwf.jquery('html,body').stop(true).scrollTo(el.offset().top, 750, function(el) {
-							return function() {
-								el.trigger('scroll');
-							};
-						}(el));
-					}
+					'vars':this.get('attrs')
 				}, this.get('attrs'));
 
 			el

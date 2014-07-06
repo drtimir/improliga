@@ -107,12 +107,12 @@ pwf.register('site', function() {
 		children.height(height);
 
 		return this
-			.paralax_all(pwf.jquery('.structure-el-parallax'))
+			.parallax_all(pwf.jquery('.structure-el-parallax'))
 			.center_all(pwf.jquery('.structure-el-center'));
 	};
 
 
-	this.paralax_all = function(list)
+	this.parallax_all = function(list)
 	{
 		var win = pwf.jquery(window);
 
@@ -127,8 +127,8 @@ pwf.register('site', function() {
 					max = parseInt(max),
 					offset = item.offset(),
 					top = (win.scrollTop() - offset.top) * .95,
-					top_min = height - max,
-					top_max = -top_min,
+					top_min = height - max - height/3,
+					top_max = -top_min + height/3,
 					pos = Math.round(Math.min(top_max, Math.max(top_min, top))),
 					css = {
 						'background-position':'50% '+pos + 'px'

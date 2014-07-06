@@ -6,7 +6,7 @@ pwf.rc('ui.shows.events', {
 			'heading':'Seznam představení',
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
-			'per_page':15,
+			'per_page':12,
 			'reverse':true,
 			'center':true,
 			'join':['location'],

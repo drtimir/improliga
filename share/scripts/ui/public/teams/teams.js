@@ -6,7 +6,7 @@ pwf.rc('ui.teams.teams', {
 			'heading':'Seznam týmů',
 			'model':'Impro::Team',
 			'draw':'ui.list.team',
-			'per_page':20,
+			'per_page':16,
 			'center':true,
 			'ui_filters':[
 				{

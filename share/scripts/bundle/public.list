@@ -24,6 +24,7 @@ scripts/thumb
 scripts/public/map
 scripts/public/site
 
+scripts/ui/abstract/el
 scripts/ui/abstract/list
 scripts/ui/abstract/text
 scripts/ui/abstract/detail

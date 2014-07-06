@@ -3,6 +3,7 @@ pwf.rc('ui.home.events', {
 
 	'storage':{
 		'opts':{
+			'center':true,
 			'heading':'Nejbližší události',
 			'model':'Impro::Event',
 			'draw':'ui.list.event',

@@ -4,7 +4,8 @@ pwf.rc('ui.home.about', {
 	'storage':{
 		'opts':{
 			'source':'.home-text-about',
-			'partial':'about'
+			'partial':'about',
+			'center':true
 		}
 	}
 });

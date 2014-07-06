@@ -107,8 +107,8 @@ pwf.register('site', function() {
 		children.height(height);
 
 		return this
-			.paralax_all(children)
-			.paralax_all(root);
+			.paralax_all(pwf.jquery('.structure-el-parallax'))
+			.center_all(pwf.jquery('.structure-el-center'));
 	};
 
 
@@ -136,8 +136,6 @@ pwf.register('site', function() {
 
 				item.stop(true).css(css);
 			}
-
-			this.center_all(item.find('.section-inner').children());
 		}
 
 		return this;

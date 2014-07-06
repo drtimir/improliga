@@ -1,9 +1,10 @@
 pwf.rc('ui.abstract.list', {
-	'parents':['adminer.list'],
+	'parents':['adminer.list', 'ui.abstract.el'],
 
 	'storage':{
 		'filter':null,
 		'opts':{
+			'center':false,
 			'model':null,
 			'draw':null,
 			'filters':[],
@@ -14,6 +15,17 @@ pwf.rc('ui.abstract.list', {
 
 	'proto':{
 		'pagi_dest':['bottom'],
+
+		'construct':function(proto) {
+			proto('update_classes');
+			proto('create_base');
+			proto('create_heading');
+			proto('create_container');
+			proto('create_head');
+			proto('create_filters');
+			proto('create_pagi');
+		},
+
 
 		'update_heading':function(proto)
 		{

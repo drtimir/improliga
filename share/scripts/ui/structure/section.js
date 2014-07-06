@@ -1,5 +1,5 @@
 pwf.rc('ui.structure.section', {
-	'parents':['domel', 'caller'],
+	'parents':['domel', 'caller', 'ui.abstract.el'],
 
 	'storage':{
 		'objects':[],
@@ -20,6 +20,7 @@ pwf.rc('ui.structure.section', {
 
 		'construct':function(proto)
 		{
+			proto('update_classes');
 			proto('construct_ui');
 			proto('construct_all');
 		},

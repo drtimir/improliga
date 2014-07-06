@@ -11,6 +11,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'cname':'ui.structure.section',
 						'pass':{
 							'bind':'home',
+							'parallax':true,
 							'structure':['ui.home']
 						}
 					},

@@ -1,5 +1,5 @@
 pwf.rc('ui.abstract.text', {
-	'parents':['domel', 'caller'],
+	'parents':['domel', 'caller', 'ui.abstract.el'],
 
 	'storage':{
 		'opts':{
@@ -13,6 +13,7 @@ pwf.rc('ui.abstract.text', {
 	'proto':{
 		'el_attached':function(proto)
 		{
+			proto('update_classes');
 			proto('construct_ui');
 			proto('construct_extra');
 		},

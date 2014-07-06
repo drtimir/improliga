@@ -67,7 +67,7 @@ pwf.rc('ui.structure.home', {
 
 					if (!this.is_locked() && document.location.pathname != els.attr('href')) {
 						proto.storage.locked = true;
-						History.pushState(null, null, els.attr('href'));
+						History.pushState(null, els.html(), els.attr('href'));
 						proto.storage.locked = false;
 					}
 

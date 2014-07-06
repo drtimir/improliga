@@ -17,9 +17,7 @@
 
 #viewport {
 	position:relative;
-	margin:0 auto;
-	width:1000px;
-	min-height:500px;
+	margin:0 auto 150px;
 	overflow:hidden;
 }
 
@@ -40,6 +38,17 @@
 	min-height:600px;
 	position:relative;
 	border-bottom:1px solid rgba(0,0,0,0.5);
+	background-position:center center;
+	background-repeat:no-repeat;
+
+	&.ui-structure-home .ui-structure-section {
+		.section-inner {
+			width:1000px;
+			min-height:700px;
+			position:relative;
+			margin:0 auto;
+		}
+	}
 
 	&:last-child {
 		border-bottom:none;

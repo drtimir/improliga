@@ -4,6 +4,7 @@ pwf.rc('ui.structure.section', {
 	'storage':{
 		'objects':[],
 		'opts':{
+			'bind':null,
 			'structure':[],
 			'vars':{}
 		}
@@ -26,7 +27,9 @@ pwf.rc('ui.structure.section', {
 
 		'construct_ui':function(proto)
 		{
-			this.get_el().create_divs(['inner'], 'section');
+			this.get_el()
+				.create_divs(['inner'], 'section')
+				.addClass('section-' + this.get('bind'));
 		},
 
 

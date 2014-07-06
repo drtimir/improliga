@@ -59,6 +59,7 @@ header {
 		bottom:10px;
 		width:300px;
 		color:#fff;
+		text-shadow:0 0 3px #000;
 
 		.name {
 			font-size:24px;
@@ -104,20 +105,21 @@ header {
 				font-size:14px;
 				font-weight:300;
 				text-decoration:none;
-				color:#ddd;
+				color:#fff;
 				border:1px solid transparent;
 				opacity:.75;
+				text-shadow:0 0 3px #000;
 
 				&.active,
 				&:hover
 				{
-					border:1px solid #333;
+					border:1px solid rgba(255,255,255,.5);
 					color:#fff;
 					opacity:1;
 				}
 
 				&.active {
-					border-color:#999;
+					border-color:rgba(255,255,255,.75);
 				}
 			}
 		}
@@ -190,53 +192,21 @@ header {
 	z-index:100;
 }
 
+.section-home,
+.section-workshops,
+.section-contact
+{
+	max-height:1328px;
+}
 
-.paralax {
-	.paralax-inner {
-		.lax-body {
-			position:relative;
-			padding:40px;
+.section-home {
+	background-image:url(<pixmap(public/bg/home.jpg)>);
+}
 
-			.bg {
-				position:absolute;
-				overflow:hidden;
+.section-workshops {
+	background-image:url(<pixmap(public/bg/workshops.jpg)>);
+}
 
-				img {
-					position:absolute;
-				}
-			}
-
-			.lax-body-inner {
-				margin:0 auto;
-				width:700px;
-				height:100%;
-				position:relative;
-			}
-
-			.system-text,
-			.block {
-				position:relative;
-				padding:25px 30px 30px;
-				background:#000;
-				background:rgba(0,0,0,0.85);
-				border:1px solid rgba(255,255,255,0.07);
-				border-radius:1px;
-				color:#DEDEDE;
-			}
-
-			.block-trans {
-				color:#fff;
-				width:100%;
-
-				h1 {
-					margin-bottom:20px;
-				}
-			}
-
-			&.system-text-show {
-				border:none;
-				background:0;
-			}
-		}
-	}
+.section-contact {
+	background-image:url(<pixmap(public/bg/contacts.jpg)>);
 }

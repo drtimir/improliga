@@ -107,8 +107,40 @@ pwf.register('site', function() {
 		children.height(height);
 
 		return this
-			.center_all(children.find('.section-inner').children())
-			.center_all(root.children('.section-inner').children());
+			.paralax_all(children)
+			.paralax_all(root);
+	};
+
+
+	this.paralax_all = function(list)
+	{
+		var win = pwf.jquery(window);
+
+		for (var i = 0; i < list.length; i++) {
+			var
+				item   = pwf.jquery(list[i]),
+				max    = parseInt(item.css('max-height')),
+				height = item.height();
+
+			if (!isNaN(max)) {
+				var
+					max = parseInt(max),
+					offset = item.offset(),
+					top = (win.scrollTop() - offset.top) * .95,
+					top_min = height - max,
+					top_max = -top_min,
+					pos = Math.round(Math.min(top_max, Math.max(top_min, top))),
+					css = {
+						'background-position':'50% '+pos + 'px'
+					};
+
+				item.stop(true).css(css);
+			}
+
+			this.center_all(item.find('.section-inner').children());
+		}
+
+		return this;
 	};
 
 
@@ -120,7 +152,6 @@ pwf.register('site', function() {
 
 		for (var i = 0; i < list.length; i++) {
 			var item = pwf.jquery(list[i]);
-
 			item.css('top', Math.round((height - item.outerHeight())/2));
 		}
 
@@ -174,6 +205,7 @@ pwf.register('site', function() {
 	var callback_update_menu = function(e)
 	{
 		e.data.update_menu();
+		e.data.resize();
 	};
 
 

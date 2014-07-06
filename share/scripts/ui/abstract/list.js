@@ -27,6 +27,10 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
+		'create_head':function() {
+		},
+
+
 		'update_heading':function(proto)
 		{
 			this.get_el('header').html(this.get('heading'));
@@ -34,15 +38,76 @@ pwf.rc('ui.abstract.list', {
 
 
 		'redraw':function(proto) {
-			var list = this.get_data();
+			var
+				el = this.get_el('content'),
+				children = el.children('.ui-list-item'),
+				jobs = [];
 
-			this.get_el('content').html('');
+			jobs.push(function(next) {
+				proto('hide_items', next);
+			});
 
-			for (var i = 0; i < list.data.length; i++) {
-				proto('draw_item', list.data[i], i);
+			jobs.push(function(next) {
+				proto('draw_items', next);
+			});
+
+			pwf.async.series(jobs, function(ctrl) {
+				return function() {
+					ctrl.get_el('content')
+						.append(pwf.jquery.span('cleaner'))
+						.trigger('resize');
+				};
+			}(this));
+		},
+
+
+		'hide_items':function(proto, next)
+		{
+			var
+				el = this.get_el('content'),
+				children = el.children('.ui-list-item'),
+				jobs = [];
+
+			for (var i = 0; i < children.length; i++) {
+				jobs.push(function(item, time) {
+					return function(next) {
+						setTimeout(function() {
+							item.fadeOut(100, function() {
+								item.remove();
+								next();
+							});
+						}, time);
+					};
+				}(pwf.jquery(children[i]), (children.length-i)*25));
 			}
 
-			this.get_el('content').append(pwf.jquery.span('cleaner'));
+			pwf.async.parallel(jobs, function(ctrl, next) {
+				return function() {
+					ctrl.respond(next);
+				};
+			}(this, next));
+		},
+
+
+		'draw_items':function(proto, next)
+		{
+			var
+				list = this.get_data(),
+				jobs = [];
+
+			for (var i = 0; i < list.data.length; i++) {
+				jobs.push(function(item, index) {
+					return function(next) {
+						proto('draw_item', item, index, next);
+					};
+				}(list.data[i], i));
+			}
+
+			pwf.async.parallel(jobs, function(ctrl, next) {
+				return function() {
+					ctrl.respond(next);
+				};
+			}(this, next));
 		},
 
 
@@ -52,7 +117,7 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
-		'draw_item':function(proto, item, index)
+		'draw_item':function(proto, item, index, next)
 		{
 			var
 				target = this.get_el('content'),
@@ -63,12 +128,11 @@ pwf.rc('ui.abstract.list', {
 				}, item.get_data()),
 				obj = pwf.create(proto('get_ui_comp', item), opts);
 
-			setTimeout(function(ctrl) {
+			setTimeout(function(ctrl, next) {
 				return function() {
-					el.animate({'opacity':1}, 100);
-					ctrl.get_el().trigger('resize');
+					el.animate({'opacity':1}, 100, next);
 				};
-			}(this), index*25);
+			}(this, next), index*25);
 		}
 	},
 

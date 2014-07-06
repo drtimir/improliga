@@ -41,7 +41,7 @@ body {
 
 header {
 	position:relative;
-	height:130px;
+	height:80px;
 	left:0;
 	top:0;
 	right:0;
@@ -59,13 +59,13 @@ header {
 	.site-icon {
 		position:absolute;
 		left:0;
-		top:20px;
+		top:-30px;
 	}
 
 	.site-name {
 		position:absolute;
 		left:170px;
-		top:25px;
+		top:35px;
 		width:300px;
 		color:#fff;
 		z-index:2;
@@ -231,29 +231,31 @@ header {
 	z-index:100;
 }
 
-.section-home,
-.section-workshops,
-.section-shows,
-.section-contact
-{
-	max-height:1328px;
-}
+.ui-structure-section {
+	&.section-home,
+	&.section-workshops,
+	&.section-shows,
+	&.section-contact
+	{
+		max-height:1328px;
+	}
 
-.section-home {
-	background-image:url(<pixmap(public/bg/home.jpg)>);
-}
+	&.section-home {
+		background-image:url(<pixmap(public/bg/home.jpg)>);
+	}
 
-.section-about {
-	min-height:400px;
-	max-height:400px;
-}
+	&.section-about {
+		min-height:400px;
+		max-height:400px;
+	}
 
-.section-shows,
-.section-workshops
-{
-	background-image:url(<pixmap(public/bg/workshops.jpg)>);
-}
+	&.section-shows,
+	&.section-workshops
+	{
+		background-image:url(<pixmap(public/bg/workshops.jpg)>);
+	}
 
-.section-contact {
-	background-image:url(<pixmap(public/bg/contacts.jpg)>);
+	&.section-contact {
+		background-image:url(<pixmap(public/bg/contacts.jpg)>);
+	}
 }

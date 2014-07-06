@@ -7,6 +7,7 @@ pwf.rc('ui.teams.teams', {
 			'model':'Impro::Team',
 			'draw':'ui.list.team',
 			'per_page':20,
+			'center':true,
 			'ui_filters':[
 				{
 					'name':'accepting',

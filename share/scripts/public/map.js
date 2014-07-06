@@ -28,6 +28,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'shows',
 							'link':'predstaveni',
+							'parallax':true,
 							'structure':['ui.shows']
 						}
 					},
@@ -44,6 +45,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'workshops',
 							'link':'workshopy',
+							'parallax':true,
 							'structure':['ui.workshops']
 						}
 					},
@@ -60,6 +62,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'contact',
 							'link':'kontakty',
+							'parallax':true,
 							'structure':['ui.contact']
 						}
 					}

@@ -3,10 +3,10 @@ pwf.rc('ui.about.list', {
 
 	'storage':{
 		'opts':{
+			'center':true,
 			'heading':'Články',
 			'model':'Impro::Article',
 			'draw':'ui.list.article'
-
 		}
 	}
 });

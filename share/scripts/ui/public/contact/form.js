@@ -1,8 +1,11 @@
 pwf.rc('ui.contact.form', {
-	'parents':['domel', 'caller'],
+	'parents':['domel', 'caller', 'ui.abstract.el'],
 
 	'storage':{
-		'form':null
+		'form':null,
+		'opts':{
+			'center':true
+		}
 	},
 
 
@@ -38,6 +41,7 @@ pwf.rc('ui.contact.form', {
 		],
 
 		'el_attached':function(proto) {
+			proto('update_classes');
 			proto('construct_ui');
 			proto('construct_menu');
 			proto('construct_form');

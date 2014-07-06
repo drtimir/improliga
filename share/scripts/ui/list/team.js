@@ -14,13 +14,22 @@ pwf.rc('ui.list.team', {
 
 		'construct':function(proto) {
 			var
-				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'city', 'time', 'cleaner']),
+				el = this.get_el().create_divs(['image', 'data', 'name', 'info', 'city', 'accepting', 'cleaner']),
+				item = this.get('item'),
 				image = this.get('logo');
 
 			el.data.append(el.name).append(el.info);
-			el.info.append(el.city).append(el.time);
+			el.info
+				.append(el.city)
+				.append(el.accepting);
 
 			el.city.html(this.get('city'));
+
+			if (item.get('accepting')) {
+				el.accepting.html('Tým nabírá členy');
+			} else {
+				el.accepting.remove();
+			}
 
 			if (!image) {
 				image = {

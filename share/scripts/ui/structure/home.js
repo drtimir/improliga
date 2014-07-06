@@ -52,7 +52,7 @@ pwf.rc('ui.structure.home', {
 			var
 				items  = pwf.jquery('#main-menu').first().find('a'),
 				active = null,
-				scroll = pwf.jquery('html, body').scrollTop();
+				scroll = pwf.jquery(window).scrollTop();
 
 			items.removeClass('active');
 
@@ -62,7 +62,7 @@ pwf.rc('ui.structure.home', {
 					el  = obj.get_el(),
 					top = el.offset().top;
 
-				if (scroll - (2*el.height()/3) < top) {
+				if ((scroll - (2*el.height()/3)) < top) {
 					var els = pwf.jquery('.menu-' + obj.get('bind')).addClass('active');
 
 					if (!this.is_locked() && document.location.pathname != els.attr('href')) {

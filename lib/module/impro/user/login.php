@@ -13,7 +13,7 @@ if ($request->logged_in()) {
 
 } else {
 
-	$f = $ren->form(array(
+	$f = $response->form(array(
 		"id" => 'login',
 		"use_comm" => true,
 		"heading" => $heading,

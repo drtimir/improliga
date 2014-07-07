@@ -2,74 +2,33 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
-			$ren->content_for('styles', 'styles/pwf/elementary');
-			$ren->content_for('styles', 'styles/lib/calendar');
-			$ren->content_for('styles', 'styles/pwf/browser_control');
-			$ren->content_for('styles', 'styles/pwf/form');
-			$ren->content_for('styles', 'styles/pwf/form/datetimepicker');
-			$ren->content_for('styles', 'styles/pwf/form/datepicker');
-			$ren->content_for('styles', 'styles/pwf/form/timepicker');
-			$ren->content_for('styles', 'styles/pwf/form/picker_image');
-			$ren->content_for('styles', 'styles/pwf/form/autocompleter');
-			$ren->content_for('styles', 'styles/pwf/form/rte');
-			$ren->content_for('styles', 'styles/pwf/form/tabs');
+			$ren->content_for('scripts', "scripts/bundle/libs");
+			$ren->content_for('scripts', "scripts/bundle/intranet");
 
-			$ren->content_for('styles', 'styles/lib/fancybox');
-			$ren->content_for('styles', 'styles/intra/layout');
-			$ren->content_for('styles', 'styles/intra/common');
-			$ren->content_for('styles', 'styles/intra/header');
-			$ren->content_for('styles', 'styles/intra/menu_left');
-			$ren->content_for('styles', 'styles/intra/calendar');
-			$ren->content_for('styles', 'styles/intra/news');
-			$ren->content_for('styles', 'styles/intra/events');
-			$ren->content_for('styles', 'styles/intra/discussions');
-			$ren->content_for('styles', 'styles/intra/forms');
-			$ren->content_for('styles', 'styles/intra/teams');
-			$ren->content_for('styles', 'styles/impro/team_comments');
-			$ren->content_for('styles', 'styles/intra/profile');
-			$ren->content_for('styles', 'styles/intra/rte');
-			$ren->content_for('styles', 'styles/intra/requests');
-			$ren->content_for('styles', 'styles/intra/reporter');
+			$ren->content_for('styles', 'styles/bundle/common');
+			$ren->content_for('styles', 'styles/bundle/intranet');
 
-			$ren->content_for('scripts', "site/lib/intranet");
-
+			$ren->content_for('title', $loc->trans('impro_name').' - '.$loc->trans('impro_name_desc'));
 			$ren->content_from('head');
 
+		link(rel="icon",type="image/ico",href="/favicon.ico")
+		link(rel="icon",type="image/png",href="/favicon.png")
+
 	body
-		header.offset-y
-			.page-block
-				.logo!=$ren->link_for('home', span('hidden', 'Intranet'))
-				.reporter
-
-				menu.plain user
-					li!=$ren->link_for('profile', array($request->user()->avatar->to_html($ren, 24,24), span('label', \Impro\User::get_name($request->user()))), array('title' => $locales->trans('intra_user_profile')))
-					li!=$ren->icon_for($response->url('profile_settings'), 'impro/objects/settings', 24, array("title" => $locales->trans('intra_user_settings')))
-					li!=$ren->icon_for($response->url('logout'), 'godmode/actions/logout', 24, array("title" => $locales->trans('godmode_user_logout')))
-
-		#container
-			.page-block
-				:php
-					require BASE_DIR.'/lib/template/intra/menu.php';
-
-				.block_right
-					:php
-						$ren->yield();
-
-					span.cleaner
-				span.cleaner
+		#viewport
+		#meta
+			:php
+				$ren->slot();
 
 		footer
 			.page-block
 				span.system!=$ren->link_ext('http://pwf.scourge.cz/', \System\Status::introduce())
 
 				ul.plain.footer-menu
-					li!=$ren->link('http://www.improliga.cz/', $locales->trans('intra_public'))
-					li!=$ren->link_for('terms', $locales->trans('intra_terms'))
-					li!=$ren->link_for('support', $locales->trans('intra_support'))
+					li!=$ren->link('http://www.improliga.cz/', $loc->trans('intra_public'))
+					li!=$ren->link_for('terms', $loc->trans('intra_terms'))
+					li!=$ren->link_for('support', $loc->trans('intra_support'))
 
 				span.cleaner
-		script(type="text/javascript")
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-40099806-1']);
-			_gaq.push(['_setDomainName', 'improliga.cz']);
-			_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+
+		include ../partial/ga.jade

@@ -1,19 +1,15 @@
 doctype html
 html(lang=$loc->get_lang())
-	head()
+	head
 		:php
-			$ren->content_for('styles', 'styles/pwf/elementary');
-			$ren->content_for('styles', 'styles/pwf/form');
-			$ren->content_for('styles', 'styles/intra/common');
-			$ren->content_for('styles', 'styles/intra/layout');
-			$ren->content_for('styles', 'styles/intra/calendar');
-			$ren->content_for('styles', 'styles/intra/news');
-			$ren->content_for('styles', 'styles/intra/events');
-			$ren->content_for('styles', 'styles/intra/forms');
-			$ren->content_for('styles', 'styles/intra/login');
+			$ren->content_for('styles', 'styles/bundle/common');
+			$ren->content_for('styles', 'styles/bundle/intranet');
 
-			$ren->content_for('scripts', "scripts/intra/login");
+			$ren->content_for('scripts', "scripts/bundle/login");
 			$ren->content_from('head');
+
+		link(rel="icon",type="image/ico",href="/favicon.ico")
+		link(rel="icon",type="image/png",href="/favicon.png")
 
 	body.page_login
 		header
@@ -39,9 +35,4 @@ html(lang=$loc->get_lang())
 					$ren->yield();
 			span.cleaner
 
-		script(type="text/javascript)
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-40099806-1']);
-			_gaq.push(['_setDomainName', 'improliga.cz']);
-			_gaq.push(['_trackPageview']);
-			(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+		include ../partial/ga.jade

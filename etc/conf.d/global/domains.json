@@ -7,10 +7,14 @@
 		"policies":["www", "frontend_config", "frontend_api"],
 		"init":["godmode"]
 	},
+
 	"intra":{
+		"layout":["layout/intra"],
 		"rules":["intra.improliga.cz$", "intra.improliga.cz.local$"],
+		"policies":["frontend_config", "frontend_api"],
 		"init":["intra"]
 	},
+
 	"static":{
 		"rules":["static.improliga.cz$", "static.improliga.cz.local$"]
 	}

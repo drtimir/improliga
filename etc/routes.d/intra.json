@@ -24,10 +24,9 @@
 
 	["^/login/$", {
 		"title":"Přihlášení",
-		"layout":["layout/intra/login"],
 		"modules":[
 			["impro/user/login"],
-			["system/partial", {"template":"impro/user/login/gateways"}]
+			["system/partial", {"template":"login/gateways"}]
 		]
 	}, "login"],
 

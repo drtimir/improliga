@@ -4,7 +4,7 @@ pwf.register('site', function() {
 		viewport,
 		loader,
 
-		models = ['Impro::Event', 'Impro::Team', 'Impro::Article'],
+		models = ['Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
 		resources = {
 			'essential':[],
 			'editor':[]

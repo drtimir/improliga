@@ -48,5 +48,15 @@
 				"attrs":["name", "visible", "updated_at", "created_at"]
 			}
 		}
+	},
+	{
+		"title":"impro_media_articles",
+		"icon":"items/misc",
+		"opts":{
+			"model":"Impro::Media::Article",
+			"list":{
+				"attrs":["name", "visible", "published", "updated_at"]
+			}
+		}
 	}
 ]

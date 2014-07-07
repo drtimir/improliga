@@ -35,6 +35,7 @@ scripts/ui/structure/home
 scripts/ui/list/event
 scripts/ui/list/team
 scripts/ui/list/article
+scripts/ui/list/media_article
 
 scripts/ui/public/home/header
 scripts/ui/public/home/about
@@ -46,6 +47,8 @@ scripts/ui/public/workshops/events
 
 scripts/ui/public/about/list
 scripts/ui/public/about/text
+
+scripts/ui/public/media/list
 
 scripts/ui/public/contact/form
 scripts/ui/public/contact/faq

@@ -70,5 +70,15 @@
 	"model-Impro::Partner-attr-image":"Logo",
 	"model-Impro::Partner-attr-clicked":"Počet kliknutí",
 
+	"model-Impro::Media::Article":"Článek z médií",
+	"model-Impro::Media::Article-plural":"Články z médií",
+	"model-Impro::Media::Article-dative":"Článku z médií",
+	"model-Impro::Media::Article-dative-plural":"Článků z médií",
+	"model-Impro::Media::Article-accusative":"Článek z médií",
+	"model-Impro::Media::Article-attr-publisher":"Vydavatel",
+	"model-Impro::Media::Article-attr-desc":"Krátký popis",
+	"model-Impro::Media::Article-attr-url":"URL",
+	"model-Impro::Media::Article-attr-visible":"Intranet",
+
 	"model-Impro::Post":"Zpráva"
 }

@@ -31,7 +31,7 @@
 	]}, "workshops"],
 
 	["^/o-improlize$", {"title":"O Improlize", "modules":[["system/partial", {"template":"public/articles"}]]}, "about"],
-	["^/media-o-improlize$", {"title":"impro_menu_media", "layout":["layout/public"], "modules":[["system/partial", {"template":"impro/static/media"}]]}, "media"],
+	["^/media-o-improlize$", {"title":"impro_menu_media"}, "media"],
 	["^/kontakty$", {"title":"Kontakty - Česká Improliga", "modules":[["system/partial", {"template":"public/contacts"}]]}, "contacts"],
 
 	["^/predstaveni/([^/]+)$", {

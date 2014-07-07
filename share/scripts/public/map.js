@@ -5,14 +5,14 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'home',
 				'anchor':'/{section:string}?',
-				'cname':'ui.structure.home',
+				'cname':'ui.public.structure.home',
 				'structure':[
 					{
 						'cname':'ui.structure.section',
 						'pass':{
 							'bind':'home',
 							'parallax':true,
-							'structure':['ui.home']
+							'structure':['ui.public.home']
 						}
 					},
 					{
@@ -20,7 +20,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'about',
 							'link':'o-improlize',
-							'structure':['ui.about']
+							'structure':['ui.public.about']
 						}
 					},
 					{
@@ -29,7 +29,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'shows',
 							'link':'predstaveni',
 							'parallax':true,
-							'structure':['ui.shows']
+							'structure':['ui.public.shows']
 						}
 					},
 					{
@@ -37,7 +37,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'teams',
 							'link':'tymy',
-							'structure':['ui.teams']
+							'structure':['ui.public.teams']
 						}
 					},
 					{
@@ -46,7 +46,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'workshops',
 							'link':'workshopy',
 							'parallax':true,
-							'structure':['ui.workshops']
+							'structure':['ui.public.workshops']
 						}
 					},
 					{
@@ -54,7 +54,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'media',
 							'link':'media-o-improlize',
-							'structure':['ui.media']
+							'structure':['ui.public.media']
 						}
 					},
 					{
@@ -63,7 +63,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'contact',
 							'link':'kontakty',
 							'parallax':true,
-							'structure':['ui.contact']
+							'structure':['ui.public.contact']
 						}
 					}
 				]
@@ -72,13 +72,13 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'show_detail',
 				'anchor':'/predstaveni/{item:seoname}',
-				'structure':['ui.event']
+				'structure':['ui.public.event']
 			},
 
 			{
 				'name':'team_detail',
 				'anchor':'/tymy/{item:seoname}',
-				'structure':['ui.team.']
+				'structure':['ui.public.team']
 			}
 		],
 

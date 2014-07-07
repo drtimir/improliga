@@ -32,5 +32,3 @@ scripts/ui/abstract/detail
 
 scripts/intra/map
 scripts/intra/site
-
-scripts/ui/public/loader

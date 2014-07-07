@@ -1,4 +1,4 @@
-pwf.rc('ui.teams.teams', {
+pwf.rc('ui.public.teams.teams', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

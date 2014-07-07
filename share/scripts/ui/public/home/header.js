@@ -1,4 +1,4 @@
-pwf.rc('ui.home.header', {
+pwf.rc('ui.public.home.header', {
 	'parents':['domel', 'ui.abstract.el'],
 
 	'proto':{

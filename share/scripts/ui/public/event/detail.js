@@ -1,4 +1,4 @@
-pwf.rc('ui.event.detail', {
+pwf.rc('ui.public.event.detail', {
 	'parents':['ui.abstract.detail'],
 
 	'storage':{

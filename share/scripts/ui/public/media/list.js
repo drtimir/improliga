@@ -1,4 +1,4 @@
-pwf.rc('ui.media.list', {
+pwf.rc('ui.public.media.list', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

@@ -1,4 +1,4 @@
-pwf.rc('ui.contact.form', {
+pwf.rc('ui.public.contact.form', {
 	'parents':['domel', 'caller', 'ui.abstract.el'],
 
 	'storage':{

@@ -10,3 +10,5 @@ bower/pwf.js
 
 bower/pwf-async-compat
 bower/pwf-moment-compat
+
+scripts/ui/loader

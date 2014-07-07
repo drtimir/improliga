@@ -1,4 +1,4 @@
-pwf.rc('ui.workshops.events', {
+pwf.rc('ui.public.workshops.events', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

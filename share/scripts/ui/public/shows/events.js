@@ -1,4 +1,4 @@
-pwf.rc('ui.shows.events', {
+pwf.rc('ui.public.shows.events', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

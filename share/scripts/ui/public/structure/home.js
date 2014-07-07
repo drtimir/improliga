@@ -1,4 +1,4 @@
-pwf.rc('ui.structure.home', {
+pwf.rc('ui.public.structure.home', {
 	'parents':['ui.structure.section'],
 
 	'storage':{

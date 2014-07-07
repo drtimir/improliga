@@ -1,4 +1,4 @@
-pwf.rc('ui.home.about', {
+pwf.rc('ui.public.home.about', {
 	'parents':['ui.abstract.text'],
 
 	'storage':{

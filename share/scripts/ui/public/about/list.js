@@ -1,4 +1,4 @@
-pwf.rc('ui.about.list', {
+pwf.rc('ui.public.about.list', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

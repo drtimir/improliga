@@ -6,27 +6,33 @@ pwf.rc('ui.intra.menu', {
 		'items':[
 			{
 				'ident':'home',
-				'title':'menu-homepage'
+				'title':'menu-homepage',
+				'href':'/'
 			},
 			{
 				'ident':'main',
-				'title':'menu-main'
+				'title':'menu-main',
+				'fire':'ui.intra.menu.main'
 			},
 			{
 				'ident':'profile',
-				'title':'menu-profile'
+				'title':'menu-profile',
+				'fire':'ui.intra.menu.profile'
 			},
 			{
 				'ident':'search',
-				'title':'menu-search'
+				'title':'menu-search',
+				'fire':'ui.intra.menu.search'
 			},
 			{
 				'ident':'settings',
-				'title':'menu-settings'
+				'title':'menu-settings',
+				'fire':'ui.intra.menu.settings'
 			},
 			{
 				'ident':'exit',
-				'title':'menu-exit'
+				'title':'menu-exit',
+				'href':'/logout'
 			}
 		],
 
@@ -38,12 +44,18 @@ pwf.rc('ui.intra.menu', {
 
 		'construct':function(proto) {
 			var
-				el    = this.get_el().create_divs(['items']),
+				el    = this.get_el().create_divs(['inner', 'items']),
 				items = proto('items');
+
+
+			el.inner.append(el.items);
+			el.bind('deactivate', {'proto':proto}, proto('callbacks').deactivate);
 
 			for (var i = 0; i < items.length; i++) {
 				proto('create_item', items[i]);
 			}
+
+			this.resize();
 		},
 
 
@@ -51,9 +63,49 @@ pwf.rc('ui.intra.menu', {
 		{
 			var item = pwf.jquery.div('menu-item menu-' + item.ident)
 				.attr('title', pwf.locales.trans_msg(item.title))
+				.bind('click', {'item':item, 'ctrl':this, 'proto':proto}, proto('callbacks').activate)
 				.appendTo(this.get_el('items'));
 
 			return item;
+		},
+
+
+		'activate':function(proto, item)
+		{
+			if ('fire' in item) {
+				proto('deactivate');
+				proto.storage.active = pwf.create(item.fire, {
+					'parent':this.get_el()
+				});
+
+				proto.storage.active.show().load();
+			}
+
+			if ('href' in item) {
+				document.location = item.href;
+			}
+		},
+
+
+		'deactivate':function(proto)
+		{
+			if (proto.storage.active) {
+				proto.storage.active.hide();
+				proto.storage.active = null;
+			}
+		},
+
+
+		'callbacks':{
+			'activate':function(e) {
+				e.preventDefault();
+				e.data.proto('activate', e.data.item);
+			},
+
+			'deactivate':function(e) {
+				e.preventDefault();
+				e.data.proto('deactivate');
+			}
 		}
 	},
 
@@ -61,7 +113,7 @@ pwf.rc('ui.intra.menu', {
 	'public':{
 		'resize':function(proto)
 		{
-			this.get_el('items').css('top', Math.round((this.get_el().height() - this.get_el('items').height())/2));
+			this.get_el('items').css('top', Math.round((this.get_el('inner').height() - this.get_el('items').height())/2));
 		}
 	}
 });

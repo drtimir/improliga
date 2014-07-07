@@ -31,7 +31,10 @@ scripts/ui/abstract/text
 scripts/ui/abstract/detail
 
 scripts/ui/structure/section
+
 scripts/ui/intra/menu
+scripts/ui/intra/menu/abstract
+scripts/ui/intra/menu/main
 
 scripts/intra/map
 scripts/intra/site

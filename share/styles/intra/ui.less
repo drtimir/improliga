@@ -64,12 +64,16 @@ button,
 }
 
 .ui-intra-menu {
-	position:fixed;
-	left:0;
-	top:0;
-	bottom:0;
-	width:56px;
-	background:#333;
+
+	.inner {
+		position:fixed;
+		left:0;
+		top:0;
+		bottom:0;
+		width:56px;
+		background:rgba(0,0,0,.8);
+		z-index:100;
+	}
 
 	.items {
 		position:absolute;
@@ -118,4 +122,14 @@ button,
 			background-image:url(<pixmap(intra/menu/exit.png)>);
 		}
 	}
+}
+
+.ui-intra-menu-abstract {
+	position:fixed;
+	left:56px;
+	top:0;
+	bottom:0;
+	right:0;
+	display:none;
+	background:rgba(0,0,0,.8);
 }

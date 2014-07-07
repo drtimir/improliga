@@ -11,7 +11,7 @@
 	"intra":{
 		"layout":["layout/intra"],
 		"rules":["intra.improliga.cz$", "intra.improliga.cz.local$"],
-		"policies":["frontend_config", "frontend_api"],
+		"policies":["frontend_config", "frontend_api", "frontend_user"],
 		"init":["intra"]
 	},
 

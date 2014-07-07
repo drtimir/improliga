@@ -1,18 +1,13 @@
 styles/intra/ui
+styles/intra/ui/menu
+
 styles/intra/layout
 styles/intra/login
 
 styles/intra/common
 styles/intra/header
-styles/intra/menu_left
-styles/intra/calendar
-styles/intra/news
-styles/intra/events
 styles/intra/discussions
 styles/intra/forms
-styles/intra/teams
-styles/intra/profile
-styles/intra/rte
 styles/intra/requests
 styles/intra/reporter
 

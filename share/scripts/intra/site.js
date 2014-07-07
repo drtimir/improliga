@@ -4,8 +4,9 @@ pwf.register('site', function() {
 		viewport,
 		loader,
 		menu,
+		user,
 
-		models = ['Impro::News', 'Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
+		models = ['System::User', 'Impro::News', 'Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
 		resources = {
 			'essential':[],
 			'editor':[]
@@ -49,6 +50,8 @@ pwf.register('site', function() {
 				if (loader) {
 					loader.hide();
 				}
+
+				user = pwf.model.create('System::User', pwf.config.get('user'));
 
 				v('done', err);
 			}
@@ -144,6 +147,12 @@ pwf.register('site', function() {
 	{
 		ui.preloader.stop(true).fadeOut(250);
 		return this;
+	};
+
+
+	this.get_user = function()
+	{
+		return user;
 	};
 
 

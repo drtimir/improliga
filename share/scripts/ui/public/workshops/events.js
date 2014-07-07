@@ -6,7 +6,7 @@ pwf.rc('ui.workshops.events', {
 			'heading':'Veřejné workshopy',
 			'model':'Impro::Event',
 			'draw':'ui.list.event',
-			'per_page':12,
+			'per_page':6,
 			'reverse':true,
 			'center':true,
 			'join':['location'],

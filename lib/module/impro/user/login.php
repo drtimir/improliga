@@ -30,7 +30,7 @@ if ($request->logged_in()) {
 	$f->input(array(
 		'type' => 'password',
 		'name' => 'password',
-		'placeholder' => $locales->trans("godmode_password"),
+		'placeholder' => $locales->trans("user_login_pass"),
 		'required' => true
 	));
 

@@ -25,6 +25,7 @@
 	"user_login_via_facebook":"Přihlásit pomocí Facebooku",
 
 	"user_login_name":"Přihlašovací jméno nebo e-mail",
+	"user_login_pass":"Heslo",
 
 	"user-does-not-exist":"Uživatel neexistuje",
 	"user-bad-login":"Špatné jméno nebo heslo",

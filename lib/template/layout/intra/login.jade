@@ -2,21 +2,23 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$ren->content_for('scripts', "scripts/bundle/libs");
+			$ren->content_for('scripts', "scripts/bundle/login");
+
 			$ren->content_for('styles', 'styles/bundle/common');
 			$ren->content_for('styles', 'styles/bundle/intranet');
 
-			$ren->content_for('scripts', "scripts/bundle/login");
 			$ren->content_from('head');
 
 		link(rel="icon",type="image/ico",href="/favicon.ico")
 		link(rel="icon",type="image/png",href="/favicon.png")
 
-	body.page_login
+	body.login-page
 		header
 			.logo
 
-		#container
-			.page-block
+		#layout
+			.layout-inner
 				.block.left
 					.context
 						!=$ren->link_for('home', $ren->heading_layout($loc->trans('intra_name')))
@@ -33,6 +35,7 @@ html(lang=$loc->get_lang())
 				span.cleaner
 				:php
 					$ren->yield();
+
 			span.cleaner
 
-		include ../partial/ga.jade
+		include ../../partial/ga.jade

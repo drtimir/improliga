@@ -1,0 +1,8 @@
+.login-gateways
+	!=$ren->heading($loc->trans('user_login_via_gateway'));
+
+	p!=$loc->trans('user_login_via_gateway_desc');
+
+	ul
+		li
+			!=$ren->link_for('login_facebook', $loc->trans('user_login_via_facebook'), array('title' => $loc->trans('user_login_via_facebook')));

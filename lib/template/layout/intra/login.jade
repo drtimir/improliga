@@ -2,6 +2,10 @@ doctype html
 html(lang=$loc->get_lang())
 	head
 		:php
+			$fconfig = $rq->fconfig;
+			$fconfig['locales']['autoload'] = true;
+			$rq->fconfig = $fconfig;
+
 			$ren->content_for('scripts', "scripts/bundle/libs");
 			$ren->content_for('scripts', "scripts/bundle/login");
 

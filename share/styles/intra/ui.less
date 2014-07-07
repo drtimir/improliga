@@ -62,3 +62,60 @@ button,
 		}
 	}
 }
+
+.ui-intra-menu {
+	position:fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	width:56px;
+	background:#333;
+
+	.items {
+		position:absolute;
+		left:0;
+	}
+
+	.menu-item {
+		width:48px;
+		height:48px;
+		padding:4px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		cursor:pointer;
+		margin-bottom:4px;
+
+		&:hover {
+			background-color:#111;
+			opacity:1;
+		}
+
+		&:last-child {
+			margin-bottom:0;
+		}
+
+		&.menu-home {
+			background-image:url(<pixmap(intra/menu/logo.png)>);
+		}
+
+		&.menu-main {
+			background-image:url(<pixmap(intra/menu/main.png)>);
+		}
+
+		&.menu-profile {
+			background-image:url(<pixmap(intra/menu/global.png)>);
+		}
+
+		&.menu-search {
+			background-image:url(<pixmap(intra/menu/search.png)>);
+		}
+
+		&.menu-settings {
+			background-image:url(<pixmap(intra/menu/settings.png)>);
+		}
+
+		&.menu-exit {
+			background-image:url(<pixmap(intra/menu/exit.png)>);
+		}
+	}
+}

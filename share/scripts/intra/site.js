@@ -3,8 +3,9 @@ pwf.register('site', function() {
 		ui,
 		viewport,
 		loader,
+		menu,
 
-		models = ['Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
+		models = ['Impro::News', 'Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
 		resources = {
 			'essential':[],
 			'editor':[]
@@ -84,7 +85,10 @@ pwf.register('site', function() {
 
 	this.bind = function()
 	{
-		pwf.jquery('#main-menu').first().find('a').bind('click', callback_history);
+		menu = pwf.create('ui.intra.menu', {
+			'parent':pwf.jquery('body')
+		});
+
 		pwf.jquery(window)
 			.bind('resize',  this, callback_resize)
 			.bind('scroll',  this, callback_update_menu)
@@ -98,67 +102,10 @@ pwf.register('site', function() {
 	this.resize = function()
 	{
 		var
-			win      = pwf.jquery(window),
-			height   = win.height(),
-			root     = viewport.children('.ui-structure-section'),
-			children = root.children('.section-inner').children('.ui-structure-section');
+			win    = pwf.jquery(window),
+			height = win.height();
 
-		viewport.css('min-height', height + 'px');
-		children.height(height);
-
-		return this
-			.parallax_all(pwf.jquery('.structure-el-parallax'))
-			.center_all(pwf.jquery('.structure-el-center'));
-	};
-
-
-	this.parallax_all = function(list)
-	{
-		var win = pwf.jquery(window);
-
-		for (var i = 0; i < list.length; i++) {
-			var
-				item   = pwf.jquery(list[i]),
-				max    = parseInt(item.css('max-height')),
-				height = item.height();
-
-			if (!isNaN(max)) {
-				var
-					max = parseInt(max),
-					offset = item.offset(),
-					top = (win.scrollTop() - offset.top) * .95,
-					top_min = height - max - height/2,
-					top_max = -top_min + height/2,
-					pos = Math.round(Math.min(top_max, Math.max(top_min, top))),
-					css = {
-						'background-position':'50% '+pos + 'px'
-					};
-
-				item.stop(true).css(css);
-			}
-		}
-
-		return this;
-	};
-
-
-	this.center_all = function(list)
-	{
-		for (var i = 0; i < list.length; i++) {
-			var
-				item = pwf.jquery(list[i]),
-				parent = item.parent(),
-				height;
-
-			if (parent.hasClass('section-inner')) {
-				parent = parent.parent();
-			}
-
-			height = parent.height();
-
-			item.css('top', Math.round((height - item.outerHeight())/2));
-		}
-
+		menu.resize();
 		return this;
 	};
 

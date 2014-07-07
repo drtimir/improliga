@@ -11,5 +11,10 @@ namespace Impro
 			"published" => array("bool"),
 			"author"    => array('belongs_to', "model" => 'System\User')
 		);
+
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true,
+		);
 	}
 }

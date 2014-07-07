@@ -30,5 +30,7 @@ scripts/ui/abstract/list
 scripts/ui/abstract/text
 scripts/ui/abstract/detail
 
+scripts/ui/structure/section
+
 scripts/intra/map
 scripts/intra/site

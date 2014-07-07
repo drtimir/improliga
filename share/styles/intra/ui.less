@@ -19,3 +19,46 @@ button,
 		border-color:#333;
 	}
 }
+
+
+.ui-loader {
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:100;
+	background:rgba(0,0,0,.9);
+
+	.container {
+		position:absolute;
+		width:300px;
+		height:8x;
+		border-radius:5px;
+		background:rgba(239,200,0,.25);
+
+		.bar {
+			position:relative;
+			height:8px;
+			border-radius:5px;
+			background:rgba(239,200,0,1);
+			z-index:5;
+			width:0;
+		}
+
+		.value {
+			position:absolute;
+			right:-100px;
+			top:-100px;
+			height:200px;
+			width:500px;
+			line-height:200px;
+			font-size:180px;
+			font-family:Arial;
+			z-index:4;
+			color:#fff;
+			opacity:.1;
+			text-align:center;
+		}
+	}
+}

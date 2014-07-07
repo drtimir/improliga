@@ -2,7 +2,7 @@ body, html
 {
 	font-family:"Roboto", "Arial";
 	font-size:14px;
-	background:#efefef;
+	background:#333;
 	color:#333;
 }
 
@@ -11,7 +11,28 @@ body, html
 	clear:both;
 }
 
-#layout {
+#layout,
+.layout
+{
 	width:1000px;
 	margin:0 auto;
+}
+
+#viewport {
+	background:#fff;
+}
+
+footer {
+	padding:0;
+
+	.footer-menu {
+		li {
+			display:inline-block;
+			margin-right:10px;
+
+			&:last-child {
+				margin:0;
+			}
+		}
+	}
 }

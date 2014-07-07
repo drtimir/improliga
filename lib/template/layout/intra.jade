@@ -21,10 +21,10 @@ html(lang=$loc->get_lang())
 				$ren->slot();
 
 		footer
-			.page-block
-				span.system!=$ren->link_ext('http://pwf.scourge.cz/', \System\Status::introduce())
-
+			.layout
 				ul.plain.footer-menu
+					li!=$ren->link_ext('https://github.com/just-paja/fudjan/', \System\Status::introduce())
+					li!=$ren->link_ext('https://github.com/just-paja/pwf.js/', 'pwf.js')
 					li!=$ren->link('http://www.improliga.cz/', $loc->trans('intra_public'))
 					li!=$ren->link_for('terms', $loc->trans('intra_terms'))
 					li!=$ren->link_for('support', $loc->trans('intra_support'))

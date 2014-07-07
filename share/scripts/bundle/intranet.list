@@ -24,3 +24,13 @@ bower/pwf-adminer/lib/adminer/abstract/filters
 bower/pwf-adminer/lib/adminer/abstract/common
 bower/pwf-adminer/lib/adminer/abstract/object
 bower/pwf-adminer/lib/adminer/list
+
+scripts/ui/abstract/el
+scripts/ui/abstract/list
+scripts/ui/abstract/text
+scripts/ui/abstract/detail
+
+scripts/intra/map
+scripts/intra/site
+
+scripts/ui/public/loader

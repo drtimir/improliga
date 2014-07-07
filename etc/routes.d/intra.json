@@ -1,11 +1,6 @@
 [
 	["^/$", {
-		"layout":["intra/layout", "intra/dual"],
-		"title":"Intranet Improligy",
-		"modules":{
-			"news":["impro/news/list", {"slot":"left"}],
-			"cl":["impro/event/calendar", {"slot":"right", "day_link_integrate":true, "heading":"Kalendář"}, ["cc"]]
-		}
+		"title":"Intranet Improligy"
 	}, "home"],
 
 	["^/user/status/$", {
@@ -41,5 +36,12 @@
 		"modules":[
 			["impro/user/logout", {"redirect":"/"}]
 		]
-	}, "logout"]
+	}, "logout"],
+
+
+	["^/podpora$", {
+	}, "support"],
+
+	["^/podminky$", {
+	}, "terms"]
 ]

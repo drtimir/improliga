@@ -155,14 +155,18 @@ pwf.rc('ui.contact.form', {
 		'show_form':function(proto)
 		{
 			this.get_el('form').stop(true).fadeIn(proto('fade_in'));
-			this.get_el('menu').stop(true).fadeOut(proto('fade_out'));
+			this.get_el('menu').stop(true).fadeOut(proto('fade_out'), function() {
+				pwf.jquery(this).trigger('resize');
+			});
 		},
 
 
 		'show_menu':function(proto)
 		{
 			this.get_el('form').stop(true).fadeOut(proto('fade_out'));
-			this.get_el('menu').stop(true).fadeIn(proto('fade_in'));
+			this.get_el('menu').stop(true).fadeIn(proto('fade_in'), function() {
+				pwf.jquery(this).trigger('resize');
+			});
 		},
 
 

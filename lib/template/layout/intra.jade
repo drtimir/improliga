@@ -15,10 +15,11 @@ html(lang=$loc->get_lang())
 		link(rel="icon",type="image/png",href="/favicon.png")
 
 	body
-		#viewport
-		#meta
-			:php
-				$ren->slot();
+		.layout-content
+			#viewport
+			#meta
+				:php
+					$ren->slot();
 
 		footer
 			.layout

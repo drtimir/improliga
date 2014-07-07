@@ -19,28 +19,29 @@ html(lang=$loc->get_lang())
 		link(rel="icon",type="image/png",href="/favicon.png")
 
 	body.login-page
-		header
-			.logo
+		.layout-content
+			header
+				.logo
 
-		#layout
-			.layout-inner
-				.block.left
-					.context
-						!=$ren->link_for('home', $ren->heading_layout($loc->trans('intra_name')))
-						p!=$loc->trans('intra_desc')
+			#layout
+				.layout-inner
+					.block.left
+						.context
+							!=$ren->link_for('home', $ren->heading_layout($loc->trans('intra_name')))
+							p!=$loc->trans('intra_desc')
 
-					.context
-						!=$ren->heading($loc->trans('intra_register'))
-						p!=$loc->trans('intra_register_desc', 'http://www.improliga.cz/kontakty/')
+						.context
+							!=$ren->heading($loc->trans('intra_register'))
+							p!=$loc->trans('intra_register_desc', 'http://www.improliga.cz/kontakty/')
 
-				.block.right
+					.block.right
+						:php
+							$ren->slot();
+
+					span.cleaner
 					:php
-						$ren->slot();
+						$ren->yield();
 
 				span.cleaner
-				:php
-					$ren->yield();
-
-			span.cleaner
 
 		include ../../partial/ga.jade

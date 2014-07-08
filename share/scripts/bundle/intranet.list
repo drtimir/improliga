@@ -28,12 +28,12 @@ bower/pwf-adminer/lib/adminer/list
 scripts/ui/abstract/el
 scripts/ui/abstract/list
 scripts/ui/abstract/text
+scripts/ui/abstract/menu
 scripts/ui/abstract/detail
 
 scripts/ui/structure/section
 
 scripts/ui/intra/menu
-scripts/ui/intra/menu/abstract
 scripts/ui/intra/menu/main
 
 scripts/intra/map

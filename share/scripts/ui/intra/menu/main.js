@@ -1,5 +1,5 @@
 pwf.rc('ui.intra.menu.main', {
-	'parents':['ui.intra.menu.abstract'],
+	'parents':['ui.abstract.menu'],
 
 	'proto':{
 		'items':[
@@ -24,15 +24,16 @@ pwf.rc('ui.intra.menu.main', {
 				'url':'discussions'
 			},
 			{
-				'name':'menu-shares',
-				'url':'share'
+				'name':'menu-shared',
+				'url':'shared'
 			}
 		],
 
 
 		'construct':function(proto)
 		{
-			this.get_el('content').create_divs(['items', 'teams'], 'main-menu');
+			var el = this.get_el('content').create_divs(['items', 'teams', 'cleaner'], 'main-menu').addClass('typical-menu');
+			el.cleaner.addClass('cleaner');
 
 			proto('construct_items');
 		},
@@ -43,17 +44,12 @@ pwf.rc('ui.intra.menu.main', {
 			var items = proto('items');
 
 			for (var i = 0; i < items.length; i++) {
-				proto('construct_item', items[i]);
+				proto('construct_item', this.get_el('content').items, {
+					'icon':items[i].name,
+					'name':'intra-' + items[i].name,
+					'url':items[i].url
+				});
 			}
-		},
-
-
-		'construct_item':function(proto, item)
-		{
-			var el = pwf.jquery.div('main-menu-item').create_divs(['icon', 'name']);
-
-			el.name.html(pwf.locales.trans(item.name));
-			this.get_el('content').items.append(el);
 		},
 
 
@@ -67,10 +63,10 @@ pwf.rc('ui.intra.menu.main', {
 
 		'construct_team':function(proto, item)
 		{
-			var el = pwf.jquery.div('team').create_divs(['logo', 'name']);
-
-			el.name.html(item.get('name'));
-			this.get_el('content').teams.append(el);
+			proto('construct_item', this.get_el('content').teams, {
+				'icon':item.get('logo'),
+				'name':item.get('name')
+			});
 		}
 	},
 

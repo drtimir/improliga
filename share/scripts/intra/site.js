@@ -93,10 +93,11 @@ pwf.register('site', function() {
 		});
 
 		pwf.jquery(window)
-			.bind('resize',  this, callback_resize)
-			.bind('scroll',  this, callback_update_menu)
-			.bind('loading', this, callback_loader_show)
-			.bind('ready',   this, callback_loader_hide);
+			.bind('navigate', this, callback_navigate)
+			.bind('resize',   this, callback_resize)
+			.bind('scroll',   this, callback_update_menu)
+			.bind('loading',  this, callback_loader_show)
+			.bind('ready',    this, callback_loader_hide);
 
 		return this;
 	};
@@ -177,6 +178,12 @@ pwf.register('site', function() {
 
 		e.preventDefault();
 		pwf.site.navigate(el.attr('href'), title);
+	};
+
+
+	var callback_navigate = function(e, rq)
+	{
+		e.data.navigate(rq.url, rq.title);
 	};
 
 

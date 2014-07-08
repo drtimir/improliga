@@ -5,6 +5,14 @@
 	"intra_register":"Chcete se připojit?",
 	"intra_register_desc":"Pokud patříte k nějakému týmu, ozvěte se svému trenérovi nebo organizátorovi. Pokud váš tým zatím nemá přístupy, napište na <a href=\"%s\">technickou podporu</a>.",
 
+
+	"intra-menu-teams":"Týmy",
+	"intra-menu-contacts":"Kontakty",
+	"intra-menu-shows":"Představení",
+	"intra-menu-workshops":"Workshopy",
+	"intra-menu-discussions":"Diskuze",
+	"intra-menu-shared":"Sdílené",
+
 	"intra_user_not_member":"Nemáte oprávnění přistupovat do této sekce",
 	"intra_wall":"Zeď",
 	"intra_discussion":"Diskuze",

@@ -1,8 +1,11 @@
+styles/intra/layout
+styles/intra/login
+
+styles/intra/icons
+
 styles/intra/ui
 styles/intra/ui/menu
 
-styles/intra/layout
-styles/intra/login
 
 styles/intra/common
 styles/intra/header

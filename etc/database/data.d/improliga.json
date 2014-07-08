@@ -462,30 +462,6 @@
 			"updated_at": "2013-03-02 05:07:32"
 		}
 	],
-	"System\\User\\Perm": [
-		{
-			"id_system_user_perm": 2,
-			"id_system_user_group": 2,
-			"id_author": 1,
-			"type": "action",
-			"trigger": "publish_event",
-			"public": false,
-			"id_group": 0,
-			"created_at": "2013-03-02 05:07:31",
-			"updated_at": "2013-03-02 05:07:31"
-		},
-		{
-			"id_system_user_perm": 3,
-			"id_system_user_group": 3,
-			"id_author": 1,
-			"type": "action",
-			"trigger": "edit_events",
-			"public": false,
-			"id_group": 0,
-			"created_at": "2013-03-02 05:07:31",
-			"updated_at": "2013-03-02 05:07:31"
-		}
-	],
 	"System\\User\\Group": [
 		{
 			"id_system_user_group": 4,

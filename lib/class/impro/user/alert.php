@@ -53,6 +53,12 @@ namespace Impro\User
 		);
 
 
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true
+		);
+
+
 		public function gen_code()
 		{
 			$this->code = \System\User\Auth\Code::generate($user);
@@ -62,7 +68,7 @@ namespace Impro\User
 
 		public function get_template()
 		{
-			return self::get_model_attr_options($this, 'template')[$this->template]
+			return self::get_model_attr_options($this, 'template')[$this->template];
 		}
 
 

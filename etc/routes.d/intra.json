@@ -1,5 +1,5 @@
 [
-	["^/$", {
+	["^/(tymy|kontakty|predstaveni|workshopy|diskuze|sdilene)?$", {
 		"title":"Intranet Improligy"
 	}, "home"],
 

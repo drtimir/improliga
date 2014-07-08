@@ -33,6 +33,8 @@ pwf.rc('ui.intra.menu.profile', {
 
 			el.create_divs(['marginer', 'inner', 'profile', 'right', 'header', 'filter', 'pagi_top', 'content', 'pagi_bottom', 'cleaner']);
 			el.menu_content.append(el.marginer);
+			el.filter.addClass('typical-menu');
+
 			el.marginer
 				.append(el.inner)
 				.append(el.right)
@@ -49,6 +51,7 @@ pwf.rc('ui.intra.menu.profile', {
 				.append(el.pagi_bottom);
 
 			proto('create_profile');
+			proto('bind');
 		},
 
 
@@ -62,6 +65,16 @@ pwf.rc('ui.intra.menu.profile', {
 			el.data.name.html(pwf.site.get_user_name());
 
 			pwf.thumb.fit(pwf.site.get_user_avatar().path, el.avatar);
+		},
+
+
+		'bind':function(proto) {
+			var callback = function(e) {
+				e.stopPropagation();
+			};
+
+			this.get_el('inner').bind('click', callback);
+			this.get_el('right').bind('click', callback);
 		}
 	},
 

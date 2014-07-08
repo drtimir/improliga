@@ -36,6 +36,8 @@ pwf.rc('ui.intra.alert', {
 		'fill':function(proto) {
 			var el = this.get_el();
 
+			el.addClass(this.get('read') ? 'read':'not-read');
+
 			el.text.html(this.get('text'));
 			el.time.html(this.get('created_at').format('D.M. h:mm'));
 			el.author.html(pwf.site.get_user_name(this.get('author')));

@@ -4,7 +4,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 		'map':[
 			{
 				'name':'home',
-				'anchor':'/{section:string}?',
+				'anchor':'/',
 				'cname':'ui.structure.section',
 				'structure':[
 				]
@@ -12,9 +12,9 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 
 			{
 				'name':'teams',
-				'anchor':'/teams',
+				'anchor':'/tymy',
 				'cname':'ui.structure.section',
-				'structure':[]
+				'structure':['ui.intra.team.list']
 			},
 
 			{

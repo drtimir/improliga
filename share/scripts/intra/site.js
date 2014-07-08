@@ -6,7 +6,16 @@ pwf.register('site', function() {
 		menu,
 		user,
 
-		models = ['System::User', 'Impro::News', 'Impro::Event', 'Impro::Team', 'Impro::Article', 'Impro::Media::Article'],
+		models = [
+			'System::User',
+			'Impro::User::Alert',
+			'Impro::News',
+			'Impro::Event',
+			'Impro::Team',
+			'Impro::Article',
+			'Impro::Media::Article'
+		],
+
 		resources = {
 			'essential':[],
 			'editor':[]

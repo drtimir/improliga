@@ -1,5 +1,5 @@
 <?
-
+/*
 namespace Impro\User\Request
 {
 	class JoinTeam implements \Impro\User\Request\Callback
@@ -40,3 +40,4 @@ namespace Impro\User\Request
 		}
 	}
 }
+*/

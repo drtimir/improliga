@@ -1,5 +1,5 @@
 <?
-
+/*
 namespace Impro\User
 {
 	class Notice extends \System\Model\Database
@@ -56,3 +56,4 @@ namespace Impro\User
 		}
 	}
 }
+*/

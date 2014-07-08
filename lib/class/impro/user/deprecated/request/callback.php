@@ -1,5 +1,5 @@
 <?
-
+/*
 namespace Impro\User\Request
 {
 	interface Callback
@@ -9,3 +9,4 @@ namespace Impro\User\Request
 		public static function maybe(\Impro\User\Request $req);
 	}
 }
+*/

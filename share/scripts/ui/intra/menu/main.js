@@ -4,6 +4,10 @@ pwf.rc('ui.intra.menu.main', {
 	'proto':{
 		'items':[
 			{
+				'name':'menu-home',
+				'url':'home'
+			},
+			{
 				'name':'menu-teams',
 				'url':'teams'
 			},

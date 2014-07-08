@@ -11,15 +11,64 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			},
 
 			{
-				'name':'show_detail',
+				'name':'teams',
+				'anchor':'/teams',
+				'cname':'ui.structure.section',
+				'structure':[]
+			},
+
+			{
+				'name':'team',
+				'anchor':'/tymy/{item:seoname}',
+				'structure':['ui.team']
+			},
+
+
+			{
+				'name':'contacts',
+				'anchor':'/kontakty',
+				'cname':'ui.structure.section',
+				'structure':[]
+			},
+
+			{
+				'name':'shows',
+				'anchor':'/predstaveni',
+				'cname':'ui.structure.section',
+				'structure':[]
+			},
+
+			{
+				'name':'show',
 				'anchor':'/predstaveni/{item:seoname}',
 				'structure':['ui.event']
 			},
 
 			{
-				'name':'team_detail',
-				'anchor':'/tymy/{item:seoname}',
-				'structure':['ui.team']
+				'name':'workshops',
+				'anchor':'/workshopy',
+				'cname':'ui.structure.section',
+				'structure':[]
+			},
+
+			{
+				'name':'workshop',
+				'anchor':'/workshopy/{item:seoname}',
+				'structure':['ui.event']
+			},
+
+			{
+				'name':'discussions',
+				'anchor':'/diskuze',
+				'cname':'ui.structure.section',
+				'structure':[]
+			},
+
+			{
+				'name':'shared',
+				'anchor':'/sdilene',
+				'cname':'ui.structure.section',
+				'structure':[]
 			}
 		],
 

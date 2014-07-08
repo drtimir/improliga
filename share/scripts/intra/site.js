@@ -166,6 +166,45 @@ pwf.register('site', function() {
 	};
 
 
+	this.get_user_name = function(user)
+	{
+		var str = '';
+
+		if (typeof user == 'undefined') {
+			user = this.get_user();
+		}
+
+		if (user.get('nick')) {
+			str = user.get('nick');
+		} else {
+			str = [user.get('name_first'), user.get('name_last')].join(' ');
+		}
+
+		return str;
+	};
+
+
+	this.get_user_avatar = function()
+	{
+		var avatar;
+
+		if (typeof user == 'undefined') {
+			user = this.get_user();
+		}
+
+		avatar = user.get('avatar');
+
+		if (!avatar) {
+			avatar = {
+				'path':'pwf/anonymous_user.png',
+				'url':'<pixmap(pwf/anonymous_user.png)>'
+			};
+		}
+
+		return avatar;
+	};
+
+
 	var callback_resize = function(e)
 	{
 		e.data.resize();

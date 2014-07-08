@@ -31,6 +31,10 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
+		'create_container':function() {
+		},
+
+
 		'update_heading':function(proto)
 		{
 			this.get_el('header').html(this.get('heading'));

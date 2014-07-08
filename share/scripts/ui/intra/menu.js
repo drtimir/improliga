@@ -44,7 +44,7 @@ pwf.rc('ui.intra.menu', {
 
 		'construct':function(proto) {
 			var
-				el    = this.get_el().create_divs(['inner', 'items']),
+				el    = this.get_el().create_divs(['inner', 'items'], 'menu'),
 				items = proto('items');
 
 

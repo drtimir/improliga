@@ -17,7 +17,6 @@ namespace Impro\User
 		const RESPONSE_MAYBE = 3;
 
 		protected static $attrs = array(
-			"user"         => array('belongs_to', "model" => 'System\User'),
 			"text"         => array('text'),
 			"read"         => array('bool'),
 
@@ -41,13 +40,13 @@ namespace Impro\User
 
 			"generated_by"   => array('varchar'),
 
-			"code"           => array('belongs_to', "model" => 'System\User\Auth\Code'),
 			"user"           => array('belongs_to', "model" => 'System\User'),
-			"author"         => array('belongs_to', "model" => 'System\User'),
-			"event"          => array('belongs_to', "model" => 'Impro\Event', "is_null" => true),
-			"team"           => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
-			"member"         => array('belongs_to', "model" => 'Impro\Team\Member', "is_null" => true),
-			"training"       => array('belongs_to', "model" => 'Impro\Team\Training', "is_null" => true),
+			"code"           => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
+			"author"         => array('belongs_to', "is_null" => true, "model" => 'System\User'),
+			"event"          => array('belongs_to', "is_null" => true, "model" => 'Impro\Event'),
+			"team"           => array('belongs_to', "is_null" => true, "model" => 'Impro\Team'),
+			"member"         => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Member'),
+			"training"       => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Training'),
 
 			"allow_maybe"  => array('bool'),
 		);

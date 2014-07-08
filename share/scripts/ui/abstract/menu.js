@@ -10,7 +10,7 @@ pwf.rc('ui.abstract.menu', {
 
 
 		'construct_base':function(proto) {
-			var el = this.get_el().create_divs(['content', 'loader']);
+			var el = this.get_el().create_divs(['menu_content', 'loader']);
 
 			el
 				.bind('click', this, proto('callbacks-abstract').hide)
@@ -73,7 +73,7 @@ pwf.rc('ui.abstract.menu', {
 		'center':function(proto) {
 			var
 				body = this.get_el(),
-				cont = this.get_el('content');
+				cont = this.get_el('menu_content');
 
 			cont.css('top', Math.round((body.height() - cont.height())/2));
 			return this;

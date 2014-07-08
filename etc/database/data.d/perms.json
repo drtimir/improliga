@@ -28,7 +28,7 @@
 			"allow":true
 		},
 		{
-			"id_system_user_perm":3,
+			"id_system_user_perm":5,
 			"id_group":3,
 			"id_author":1,
 			"name":"System::User::Group::browse",
@@ -37,7 +37,7 @@
 			"allow":true
 		},
 		{
-			"id_system_user_perm":5,
+			"id_system_user_perm":6,
 			"id_group":3,
 			"id_author":1,
 			"name":"System::User::Contact::schema",
@@ -46,7 +46,7 @@
 			"allow":true
 		},
 		{
-			"id_system_user_perm":6,
+			"id_system_user_perm":7,
 			"id_group":3,
 			"id_author":1,
 			"name":"System::User::Contact::browse",

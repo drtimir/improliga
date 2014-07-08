@@ -24,7 +24,7 @@
 .ui-intra-menu-main {
 	color:#fff;
 
-	.content {
+	.menu_content {
 		width:520px;
 
 		.main-menu-items,
@@ -41,5 +41,57 @@
 
 	.icon, .name {
 		line-height:32px;
+	}
+}
+
+
+.ui-intra-menu-profile {
+	.menu_content {
+		width:701px;
+	}
+
+	.input-named-type {
+		& > label {
+			display:none;
+		}
+	}
+
+	.inner,
+	.right
+	{
+		float:left;
+		padding:0 30px;
+	}
+
+	.inner {
+		width:240px;
+	}
+
+	.right {
+		width:340px;
+		min-height:400px;
+		border-left:1px solid rgba(255,255,255,.15);
+	}
+
+	.heading {
+		border-bottom:1px solid rgba(255,255,255,.15);
+		padding-bottom:20px;
+	}
+
+	.profile {
+		margin-bottom:20px;
+
+		.profile-avatar {
+			width:70px;
+			height:70px;
+			float:left;
+			margin-right:20px;
+			background:#fff;
+		}
+
+		.profile-data {
+			width:150px;
+			float:left;
+		}
 	}
 }

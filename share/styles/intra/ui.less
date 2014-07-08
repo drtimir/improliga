@@ -65,7 +65,7 @@ button,
 
 .ui-intra-menu {
 
-	.inner {
+	.menu-inner {
 		position:fixed;
 		left:0;
 		top:0;
@@ -75,7 +75,7 @@ button,
 		z-index:100;
 	}
 
-	.items {
+	.menu-items {
 		position:absolute;
 		left:0;
 	}
@@ -133,8 +133,40 @@ button,
 	display:none;
 	background:rgba(0,0,0,.8);
 
-	.content {
+	.menu_content {
 		margin:0 auto;
 		position:relative;
+		color:#fff;
 	}
+}
+
+
+.ui-intra-alert {
+	padding:10px;
+	font-size:12px;
+	line-height:16px;
+	margin-bottom:10px;
+
+	&:hover {
+		background:rgba(255,255,255,.05);
+	}
+
+	.text {
+		margin-bottom:10px;
+	}
+
+	.avatar {
+		width:40px;
+		height:40px;
+		float:left;
+		margin-right:10px;
+		background:#fff;
+	}
+
+	.footer_data {
+		float:left;
+		width:270px;
+	}
+
+
 }

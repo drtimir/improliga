@@ -36,7 +36,7 @@ pwf.rc('ui.intra.menu.main', {
 
 		'construct':function(proto)
 		{
-			var el = this.get_el('content').create_divs(['items', 'teams', 'cleaner'], 'main-menu').addClass('typical-menu');
+			var el = this.get_el('menu_content').create_divs(['items', 'teams', 'cleaner'], 'main-menu').addClass('typical-menu');
 			el.cleaner.addClass('cleaner');
 
 			proto('construct_items');
@@ -48,7 +48,7 @@ pwf.rc('ui.intra.menu.main', {
 			var items = proto('items');
 
 			for (var i = 0; i < items.length; i++) {
-				proto('construct_item', this.get_el('content').items, {
+				proto('construct_item', this.get_el('menu_content').items, {
 					'icon':items[i].name,
 					'name':'intra-' + items[i].name,
 					'url':items[i].url
@@ -67,7 +67,7 @@ pwf.rc('ui.intra.menu.main', {
 
 		'construct_team':function(proto, item)
 		{
-			proto('construct_item', this.get_el('content').teams, {
+			proto('construct_item', this.get_el('menu_content').teams, {
 				'icon':item.get('logo'),
 				'name':item.get('name')
 			});

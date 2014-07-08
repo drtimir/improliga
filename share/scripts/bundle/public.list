@@ -21,37 +21,11 @@ bower/pwf-adminer/lib/adminer/list
 
 scripts/thumb
 
+scripts/ui/abstract
+scripts/ui/structure
+scripts/ui/list
+scripts/ui/public
+
 scripts/public/map
 scripts/public/site
 
-scripts/ui/abstract/el
-scripts/ui/abstract/list
-scripts/ui/abstract/text
-scripts/ui/abstract/detail
-
-scripts/ui/structure/section
-
-scripts/ui/list/event
-scripts/ui/list/team
-scripts/ui/list/article
-scripts/ui/list/media_article
-
-scripts/ui/public/structure/home
-scripts/ui/public/home/header
-scripts/ui/public/home/about
-scripts/ui/public/home/events
-
-scripts/ui/public/shows/events
-scripts/ui/public/teams/teams
-scripts/ui/public/workshops/events
-
-scripts/ui/public/about/list
-scripts/ui/public/about/text
-
-scripts/ui/public/media/list
-
-scripts/ui/public/contact/form
-scripts/ui/public/contact/faq
-
-scripts/ui/public/event/detail
-scripts/ui/public/team/detail

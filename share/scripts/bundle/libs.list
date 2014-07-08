@@ -3,7 +3,6 @@ bower/jquery/dist/jquery
 bower/jquery.scrollTo/jquery.scrollTo.min
 bower/async/lib/async
 bower/moment/moment
-bower/fancybox/source/jquery.fancybox
 bower/history.js/scripts/bundled-uncompressed/html4+html5/native.history
 
 bower/pwf.js

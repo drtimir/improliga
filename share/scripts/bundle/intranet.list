@@ -14,27 +14,18 @@ bower/pwf-form-models
 bower/pwf-models
 bower/pwf-models-schema
 bower/pwf-decorator
+bower/pwf-adminer
 
 bower/pwf-input-rte
 bower/pwf-input-file
 bower/pwf-input-autocompleter
 bower/pwf-input-collection
 
-bower/pwf-adminer/lib/adminer/abstract/filters
-bower/pwf-adminer/lib/adminer/abstract/common
-bower/pwf-adminer/lib/adminer/abstract/object
-bower/pwf-adminer/lib/adminer/list
-
-scripts/ui/abstract/el
-scripts/ui/abstract/list
-scripts/ui/abstract/text
-scripts/ui/abstract/menu
-scripts/ui/abstract/detail
-
-scripts/ui/structure/section
-
-scripts/ui/intra/menu
-scripts/ui/intra/menu/main
+scripts/thumb
+scripts/ui/abstract
+scripts/ui/structure
+scripts/ui/list
+scripts/ui/intra
 
 scripts/intra/map
 scripts/intra/site

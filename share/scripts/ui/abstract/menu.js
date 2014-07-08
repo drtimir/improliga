@@ -100,11 +100,6 @@ pwf.rc('ui.abstract.menu', {
 			}(this, next));
 
 			return this;
-		},
-
-
-		'load':function(proto, next) {
-			this.respond(next);
 		}
 	}
 });

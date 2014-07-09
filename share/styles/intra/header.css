@@ -16,49 +16,6 @@ header .page-block {
 	height:30px;
 }
 
-menu.user {
-	position:absolute;
-	right:25px;
-	top:2px;
-}
-
-menu.user li {
-	height:22px;
-	margin:0;
-	padding:0;
-}
-
-menu.user li a {
-	padding:3px 5px;
-	color:#fff;
-	margin:0;
-	font-size:13px;
-	font-weight:bold;
-	height:22px;
-	display:block;
-}
-
-menu.user li:last-child a {
-	padding-right:0;
-	border:none;
-	margin-right:0;
-}
-
-
-menu.user li a:hover {
-	background:#000;
-	color:#fff;
-	border-radius:3px;
-}
-
-menu.user .label {
-	height:24px;
-	line-height:24px;
-	display:inline-block;
-	vertical-align:top;
-	padding:0 5px 0 10px;
-}
-
 .logo a {
 	width:180px;
 	height:30px;

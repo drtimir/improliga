@@ -28,9 +28,11 @@ pwf.rc('ui.structure.section', {
 
 		'construct_ui':function(proto)
 		{
+			var name = this.get('bind') ? this.get('bind'):this.get('name');
+
 			this.get_el()
 				.create_divs(['inner'], 'section')
-				.addClass('section-' + this.get('bind'));
+				.addClass('section-' + name);
 		},
 
 

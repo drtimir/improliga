@@ -7,6 +7,18 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/',
 				'cname':'ui.structure.section',
 				'structure':[
+					'ui.intra.sections.home.news',
+					{
+						'cname':'ui.structure.section',
+						'pass':{
+							'name':'profile-info',
+							'structure':[
+								'ui.intra.sections.home.profile',
+								'ui.intra.sections.home.teams'
+							]
+						}
+					},
+					'ui.cleaner'
 				]
 			},
 
@@ -79,6 +91,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				opts  = pwf.merge({
 					'parent':el,
 					'structure':this.get('structure'),
+					'name':this.get('name'),
 					'vars':this.get('attrs')
 				}, this.get('attrs'));
 

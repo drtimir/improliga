@@ -10,8 +10,9 @@ a:hover {
 h1,
 .heading
 {
-	font-size:30px;
-	font-weight:bold;
+	font-size:40px;
+	line-height:52px;
+	text-transform:uppercase;
 }
 
 fieldset {
@@ -20,69 +21,11 @@ fieldset {
 	padding:0;
 }
 
-.gray { color:#ccc; }
-
-.controls {
-	position:absolute;
-	right:0;
-	top:10px;
-}
-
-.controls a {
-	display:inline-block;
-	border-radius:4px;
-	background:#f2f2f2;
-	border:1px solid #ccc;
-	padding:5px 6px;
-	color:#000;
-	box-shadow:0 0 3px rgba(0,0,0,0.05);
-	color:#333;
-	margin-left:10px;
-}
-
-.controls a:hover {
-	background:#b82429;
-	border-color:#B82429;
-	color:#fff;
-}
-
-.controls a .icon {
-	margin-right:7px;
-	vertical-align:top;
-}
-
-.controls a .label {
-	font-weight:bold;
-}
-
-.icon {
-	background-position:left top;
-}
-
-.icon:hover {
-	background-position:right top;
-}
-
 .plain, .plain li {
 	margin:0;
 	padding:0;
 	list-style:none;
 }
-
-menu.plain,
-menu.plain li
-{
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-
-menu.plain li {
-	display:inline-block;
-	padding:2px 5px;
-}
-
-
 
 .loader-tiny {
 	width:16px;

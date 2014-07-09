@@ -196,7 +196,7 @@ pwf.register('site', function() {
 
 		if (!avatar) {
 			avatar = {
-				'path':'pwf/anonymous_user.png',
+				'path':'share/pixmaps/pwf/anonymous_user.png',
 				'url':'<pixmap(pwf/anonymous_user.png)>'
 			};
 		}

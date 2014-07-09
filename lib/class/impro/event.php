@@ -25,7 +25,7 @@ namespace Impro
 			"team_home"     => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
 			"team_away"     => array('belongs_to', "model" => 'Impro\Team', "is_null" => true),
 			"location"      => array('belongs_to', "model" => 'System\Location', "is_null" => true),
-			"image"         => array('image', "default" => 'share/pixmaps/logo_original.png'),
+			"image"         => array('image', "default" => 'share/pixmaps/logo.png'),
 			"desc_short"    => array('html',  "default" => '', 'is_null' => true),
 			"desc_full"     => array('html',  "default" => ''),
 			"start"         => array('date'),

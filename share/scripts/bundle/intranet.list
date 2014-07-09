@@ -27,5 +27,4 @@ scripts/ui/structure
 scripts/ui/list
 scripts/ui/intra
 
-scripts/intra/map
-scripts/intra/site
+scripts/frontend/intra

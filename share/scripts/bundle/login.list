@@ -6,8 +6,4 @@ bower/pwf-comm
 bower/pwf-comm-form
 bower/pwf-form
 bower/pwf-decorator
-
-bower/pwf-adminer/lib/adminer/abstract/filters
-bower/pwf-adminer/lib/adminer/abstract/common
-bower/pwf-adminer/lib/adminer/abstract/object
-bower/pwf-adminer/lib/adminer/list
+scripts/frontend/login

@@ -26,6 +26,5 @@ scripts/ui/structure
 scripts/ui/list
 scripts/ui/public
 
-scripts/public/map
-scripts/public/site
+scripts/frontend/public
 

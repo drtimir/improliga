@@ -20,6 +20,11 @@ pwf.rc('ui.intra.menu', {
 				'fire':'ui.intra.menu.profile'
 			},
 			{
+				'ident':'create',
+				'title':'menu-create',
+				'fire':'ui.intra.menu.create'
+			},
+			{
 				'ident':'search',
 				'title':'menu-search',
 				'fire':'ui.intra.menu.search'

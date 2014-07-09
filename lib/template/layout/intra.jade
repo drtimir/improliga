@@ -16,13 +16,13 @@ html(lang=$loc->get_lang())
 
 	body
 		.layout-content
-			#viewport
-			#meta
-				:php
-					$ren->slot();
+			.layout-inner
+				#viewport
+				#meta
+					:php
+						$ren->slot();
 
-		footer
-			.layout
+			footer
 				ul.plain.footer-menu
 					li!=$ren->link_ext('https://github.com/just-paja/fudjan/', \System\Status::introduce())
 					li!=$ren->link_ext('https://github.com/just-paja/pwf.js/', 'pwf.js')

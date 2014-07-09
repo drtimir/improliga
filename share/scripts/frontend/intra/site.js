@@ -50,6 +50,11 @@ pwf.register('site', function() {
 			}(this),
 
 			function(next) {
+				user = pwf.model.create('System::User', pwf.config.get('user'));
+				next();
+			},
+
+			function(next) {
 				pwf.dispatcher.reload(next);
 			}
 		];
@@ -59,8 +64,6 @@ pwf.register('site', function() {
 				if (loader) {
 					loader.hide();
 				}
-
-				user = pwf.model.create('System::User', pwf.config.get('user'));
 
 				v('done', err);
 			}

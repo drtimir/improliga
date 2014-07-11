@@ -37,10 +37,23 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'structure':['ui.intra.team.list']
 			},
 
+
 			{
 				'name':'team',
 				'anchor':'/tymy/{item:seoname}',
 				'structure':['ui.team']
+			},
+
+			{
+				'name':'team_shows',
+				'anchor':'/tymy/{team:seoname}/predstaveni',
+				'structure':[]
+			},
+
+			{
+				'name':'team_workshops',
+				'anchor':'/tymy/{team:seoname}/workshopy',
+				'structure':[]
 			},
 
 			{
@@ -54,6 +67,8 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/tymy/{team:seoname}/diskuze',
 				'structure':[]
 			},
+
+
 
 			{
 				'name':'contacts',

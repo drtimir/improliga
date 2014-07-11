@@ -30,7 +30,11 @@ pwf.rc('ui.abstract.menu', {
 				}, proto('callbacks-abstract').navigate);
 
 			if (item.icon) {
-				el.icon.html(pwf.jquery.icon(item.icon, '32x32'));
+				if (typeof item.icon == 'object') {
+					pwf.thumb.create(item.icon.path, '32x32').appendTo(el.icon);
+				} else {
+					el.icon.html(pwf.jquery.icon(item.icon, '32x32'));
+				}
 			}
 
 			el.name.html(pwf.locales.trans(item.name));

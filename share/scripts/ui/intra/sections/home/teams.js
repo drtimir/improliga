@@ -5,7 +5,8 @@ pwf.rc('ui.intra.sections.home.teams', {
 		'opts':{
 			'heading':' ',
 			'model':'Impro::Team::Member',
-			'draw':'ui.intra.sections.home.teams.member',
+			'draw':'ui.intra.sections.home.team_list.member',
+			'join':['team'],
 			'filters':[],
 			'sort':[]
 		}

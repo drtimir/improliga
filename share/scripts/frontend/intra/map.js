@@ -35,6 +35,17 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'structure':['ui.team']
 			},
 
+			{
+				'name':'team_attendance',
+				'anchor':'/tymy/{team:seoname}/dochazka',
+				'structure':[]
+			},
+
+			{
+				'name':'team_discussion',
+				'anchor':'/tymy/{team:seoname}/diskuze',
+				'structure':[]
+			},
 
 			{
 				'name':'contacts',

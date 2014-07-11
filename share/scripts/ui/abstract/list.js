@@ -125,16 +125,16 @@ pwf.rc('ui.abstract.list', {
 		{
 			var
 				target = this.get_el('content'),
-				el = pwf.jquery.div('ui-list-item').css('opacity', 0).appendTo(target),
 				opts = pwf.merge({
-					'parent':el,
+					'parent':target,
 					'item':item
 				}, item.get_data()),
 				obj = pwf.create(proto('get_ui_comp', item), opts);
 
+			obj.get_el().addClass('ui-list-item').css('opacity', 0);
 			setTimeout(function(ctrl, next) {
 				return function() {
-					el.animate({'opacity':1}, 100, next);
+					obj.get_el().animate({'opacity':1}, 100, next);
 				};
 			}(this, next), index*25);
 		}

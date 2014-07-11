@@ -23,15 +23,15 @@ namespace Impro\Team\Member
 
 
 		private static $types_available = array(
-			self::ID_MEMBER        => 'impro_team_member',
-			self::ID_MANAGER       => 'impro_team_member_manager',
-			self::ID_TRAINER       => 'impro_team_member_trainer',
-			self::ID_MARKETING     => 'impro_team_member_marketing',
-			self::ID_FINANCIAL     => 'impro_team_member_financial',
-			self::ID_PLAYER        => 'impro_team_member_player',
-			self::ID_OCCASIONALIST => 'impro_team_member_player_occasional',
-			self::ID_MUSICIAN      => 'impro_team_member_musician',
-			self::ID_FAN           => 'impro_team_member_fan',
+			self::ID_MEMBER        => 'impro-team-member',
+			self::ID_MANAGER       => 'impro-team-member-manager',
+			self::ID_TRAINER       => 'impro-team-member-trainer',
+			self::ID_MARKETING     => 'impro-team-member-marketing',
+			self::ID_FINANCIAL     => 'impro-team-member-financial',
+			self::ID_PLAYER        => 'impro-team-member-player',
+			self::ID_OCCASIONALIST => 'impro-team-member-player_occasional',
+			self::ID_MUSICIAN      => 'impro-team_member-musician',
+			self::ID_FAN           => 'impro-team-member-fan',
 		);
 
 
@@ -51,10 +51,27 @@ namespace Impro\Team\Member
 
 		public static function get_all()
 		{
+			return self::$types_available;
+		}
+
+
+		public static function get_map()
+		{
 			$types = array();
 
 			foreach (self::$types_available as $key=>$val) {
-				$types[$key] = $val;
+				$perms = array();
+
+				foreach (self::$perms as $perm => $roles) {
+					if (in_array($key, $roles)) {
+						$perms[] = $perm;
+					}
+				}
+
+				$types[$key] = array(
+					"name"  => $val,
+					"perms" => $perms,
+				);
 			}
 
 			return $types;

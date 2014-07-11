@@ -44,6 +44,9 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 				el   = this.get_el('actions'),
 				team = this.get('team');
 
+			proto('link', 'team-shows', 'team_shows');
+			proto('link', 'team-workshops', 'team_workshops');
+
 			if (team.get('use_attendance')) {
 				proto('link', 'team-attendance', 'team_attendance');
 			}

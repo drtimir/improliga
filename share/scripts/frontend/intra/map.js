@@ -7,13 +7,21 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/',
 				'cname':'ui.structure.section',
 				'structure':[
-					'ui.intra.sections.home.news',
+					{
+						'cname':'ui.structure.section',
+						'pass':{
+							'name':'home-summary',
+							'structure':[
+								'ui.intra.sections.home.profile',
+								'ui.intra.sections.home.news'
+							]
+						}
+					},
 					{
 						'cname':'ui.structure.section',
 						'pass':{
 							'name':'profile-info',
 							'structure':[
-								'ui.intra.sections.home.profile',
 								'ui.intra.sections.home.teams'
 							]
 						}

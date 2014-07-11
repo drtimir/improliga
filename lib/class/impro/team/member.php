@@ -4,6 +4,8 @@ namespace Impro\Team
 {
 	class Member extends \System\Model\Perm
 	{
+		const ALLOW_RELATION_DELETE = true;
+
 		protected static $attrs = array(
 			"team"   => array('belongs_to', "model" => "Impro\Team", "is_natural" => true),
 			"user"   => array('belongs_to', "model" => "System\User", "is_natural" => true),

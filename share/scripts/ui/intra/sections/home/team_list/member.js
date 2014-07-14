@@ -67,7 +67,7 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 				});
 
 			item
-				.html(pwf.locales.trans(label))
+				.html(pwf.locales.trans('intra-' + label))
 				.attr('href', url);
 		}
 	}

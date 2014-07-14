@@ -33,12 +33,15 @@
 	"intra_user_events":"Události",
 
 	"intra_user_has_no_teams":"Uživatel není zařazen v žádném týmu.",
-	"intra_team_home":"Přehled",
-	"intra_team_info":"Informace",
-	"intra_team_events":"Události",
-	"intra_team_discussion":"Interní diskuze",
-	"intra_team_settings":"Nastavení",
-	"intra_team_attendance":"Tréninky",
+
+	"intra-team-home":"Přehled",
+	"intra-team-info":"Informace",
+	"intra-team-shows":"Představení",
+	"intra-team-workshops":"Workshopy",
+	"intra-team-discussion":"Diskuze",
+	"intra-team-settings":"Nastavení",
+	"intra-team-attendance":"Tréninky",
+
 	"internal_new_topic_notice":"Uživatel {link_user} vytvořil v interní diskuzi týmu {link_team} téma \"{topic}\".",
 	"internal_new_post_notice":"Uživatel {link_user} odpověděl v diskuzi na téma \"{topic}\" týmu {link_team}.",
 

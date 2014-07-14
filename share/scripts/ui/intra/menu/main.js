@@ -69,7 +69,11 @@ pwf.rc('ui.intra.menu.main', {
 		{
 			proto('construct_item', this.get_el('menu_content').teams, {
 				'icon':item.get('logo'),
-				'name':item.get('name')
+				'name':item.get('name'),
+				'url':'team',
+				'params':{
+					'team':item.get_seoname()
+				}
 			});
 		}
 	},

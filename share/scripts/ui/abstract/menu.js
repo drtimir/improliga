@@ -26,7 +26,7 @@ pwf.rc('ui.abstract.menu', {
 					'title':pwf.locales.trans_msg(item.name),
 					'url':item.url,
 					'ctrl':this,
-					'params':{}
+					'params':item.params
 				}, proto('callbacks-abstract').navigate);
 
 			if (item.icon) {

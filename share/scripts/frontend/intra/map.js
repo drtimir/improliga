@@ -40,7 +40,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 
 			{
 				'name':'team',
-				'anchor':'/tymy/{item:seoname}',
+				'anchor':'/tymy/{team:seoname}',
 				'structure':['ui.team']
 			},
 

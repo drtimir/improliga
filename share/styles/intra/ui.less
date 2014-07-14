@@ -111,3 +111,36 @@ button,
 
 
 }
+
+.ui-abstract-list {
+	.inner {
+		position:relative;
+	}
+
+	.filter {
+		position:absolute;
+		right:0;
+		top:0;
+
+		li {
+			display:inline-block;
+			margin-right:15px;
+
+			&:last-child {
+				margin:0;
+			}
+		}
+	}
+
+	.header,
+	.content
+	{
+		margin-bottom:20px;
+	}
+
+	.content {
+		.info {
+			font-size:13px;
+		}
+	}
+}

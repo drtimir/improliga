@@ -1,0 +1,64 @@
+.paginator {
+	margin:0 auto;
+	width:400px;
+	position:relative;
+
+	.pagi-pages {
+		position:relative;
+		background:#333;
+		margin:0 25px;
+		height:13px;
+		border-radius:7px;
+
+		.bar {
+			width:75px;
+			height:13px;
+			line-height:13px;
+			background:#D0AF04;
+			cursor:pointer;
+			border-radius:7px;
+
+			&:hover {
+				background:#efc800;
+			}
+
+			.value {
+				color:#000;
+				text-align:center;
+				font-size:11px;
+				font-weight:bold;
+			}
+		}
+	}
+
+	.pagi-prev,
+	.pagi-next {
+		position:absolute;
+		height:13px;
+		line-height:13px;
+		width:13px;
+		top:-3px;
+		font-size:11px;
+		cursor:pointer;
+		background:#333;
+		color:#fff;
+		padding:4px;
+		border-radius:17px;
+		font-family:Arial, sans;
+		text-align:center;
+
+		&:hover {
+			background:#efc800;
+			color:#000;
+		}
+	}
+
+	.pagi-prev {
+		left:0;
+	}
+
+	.pagi-next {
+		right:0;
+	}
+}
+

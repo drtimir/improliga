@@ -25,6 +25,39 @@ pwf.rc('ui.intra.team.list', {
 					}
 				},
 				{
+					'name':'published',
+					'type':'checkbox',
+					'label':'Pouze veřejné',
+					'value':true,
+					'get_filter':function() {
+						if (this.val()) {
+							return {
+								'attr':'published',
+								'type':'exact',
+								'exact':true
+							};
+						}
+
+						return null;
+					}
+				},
+				{
+					'name':'dissolved',
+					'type':'checkbox',
+					'label':'Rozpuštěné týmy',
+					'get_filter':function() {
+						if (this.val()) {
+							return {
+								'attr':'dissolved',
+								'type':'exact',
+								'exact':true
+							};
+						}
+
+						return null;
+					}
+				},
+				{
 					'name':'search',
 					'type':'text',
 					'placeholder':'Vyhledat',

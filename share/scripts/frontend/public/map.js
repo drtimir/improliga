@@ -105,7 +105,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 		},
 
 		'on_redraw':function(next) {
-			this.get('content').update(this.get('attrs')).redraw(next);
+			this.get('content').update({'vars':this.get('attrs')}).redraw(next);
 		},
 
 		'on_error':function() {

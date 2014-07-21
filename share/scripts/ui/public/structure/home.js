@@ -79,6 +79,14 @@ pwf.rc('ui.public.structure.home', {
 		'is_locked':function(proto)
 		{
 			return proto.storage.locked;
+		},
+
+
+		'redraw':function(proto, next)
+		{
+			proto('loaded');
+			this.respond(next);
+			return this;
 		}
 	}
 });

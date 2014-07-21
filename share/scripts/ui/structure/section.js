@@ -91,11 +91,18 @@ pwf.rc('ui.structure.section', {
 		},
 
 
+		'clear':function(proto)
+		{
+			this.get_el().html('');
+			return this;
+		},
+
+
 		'redraw':function(proto, next)
 		{
-			proto('loaded');
-			this.respond(next);
-			return this;
+			this.clear().set('item', null);
+			proto('construct');
+			return this.load(next);
 		}
 	}
 });

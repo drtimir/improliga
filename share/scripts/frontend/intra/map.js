@@ -41,7 +41,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'team',
 				'anchor':'/tymy/{team:seoname}',
-				'structure':['ui.team']
+				'structure':['ui.intra.sections.team.home']
 			},
 
 			{

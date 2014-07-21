@@ -3,7 +3,7 @@
 		"title":"Intranet Improligy"
 	}, "home"],
 
-	["^/(tymy|kontakty|predstaveni|workshopy|diskuze|sdilene)?$", {
+	["^/((tymy|kontakty|predstaveni|workshopy|diskuze|sdilene).*)?$", {
 		"title":"Intranet Improligy"
 	}, "frontend"],
 

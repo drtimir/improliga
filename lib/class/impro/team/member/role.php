@@ -29,8 +29,8 @@ namespace Impro\Team\Member
 			self::ID_MARKETING     => 'impro-team-member-marketing',
 			self::ID_FINANCIAL     => 'impro-team-member-financial',
 			self::ID_PLAYER        => 'impro-team-member-player',
-			self::ID_OCCASIONALIST => 'impro-team-member-player_occasional',
-			self::ID_MUSICIAN      => 'impro-team_member-musician',
+			self::ID_OCCASIONALIST => 'impro-team-member-player-occasional',
+			self::ID_MUSICIAN      => 'impro-team-member-musician',
 			self::ID_FAN           => 'impro-team-member-fan',
 		);
 

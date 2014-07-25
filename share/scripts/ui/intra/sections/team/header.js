@@ -62,7 +62,7 @@ pwf.rc('ui.intra.sections.team.header', {
 			proto('create_menu_item', {
 				'label':'discussion',
 				'url':'team_discussion',
-				'settings':'use_discussions',
+				'settings':'use_discussion',
 				'groups':[1,2,3,4,5,6,7,8,9]
 			});
 

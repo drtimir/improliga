@@ -36,8 +36,8 @@ pwf.rc('ui.intra.sections.team.header', {
 				item = this.get('item'),
 				el = this.get_el();
 
-			el.name.long.html(item.get('name'));
-			el.name.short.html(item.get('name_short'));
+			el.name.short.html(item.get('name'));
+			el.name.long.html(item.get('name_full'));
 			pwf.thumb.fit(item.get('logo').path, el.logo);
 		},
 

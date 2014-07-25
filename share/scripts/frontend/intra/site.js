@@ -55,6 +55,18 @@ pwf.register('site', function() {
 			},
 
 			function(next) {
+				pwf.create('model.list', {
+					'model':'Impro::Team::Member',
+					'filters':[
+						{'attr':'id_system_user', 'type':'exact', 'exact':user.get('id')}
+					]
+				}).load(function(err, list) {
+					next(err);
+					user.set('roles', list.data);
+				});
+			},
+
+			function(next) {
 				pwf.dispatcher.reload(next);
 			}
 		];
@@ -205,6 +217,43 @@ pwf.register('site', function() {
 		}
 
 		return avatar;
+	};
+
+
+	this.is_user_member = function(team, role)
+	{
+		var
+			roles = user.get('roles'),
+			team  = typeof team == 'number' ? team:team.get('id');
+
+		for (var i = 0, len = roles.length; i < len; i++) {
+			var
+				role_team = roles[i].get('team'),
+				in_team = role_team === team || (role_team instanceof Object && roles[i].get('team').get('id') == team),
+				in_role = roles[i].get('roles').indexOf(role) >= 0;
+
+			if (in_team && in_role) {
+				return true;
+			}
+
+			if (typeof role == 'undefined' && in_team) {
+				return true;
+			}
+		}
+
+		return false;
+	};
+
+
+	this.is_user_member_in = function(team, roles)
+	{
+		for (var i = 0, len = roles.length; i < len; i++) {
+			if (this.is_user_member(team, roles[i])) {
+				return true;
+			}
+		}
+
+		return false;
 	};
 
 

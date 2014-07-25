@@ -104,7 +104,7 @@ pwf.rc('ui.intra.sections.team.header', {
 						var el = pwf.jquery(this);
 
 						el.trigger('navigate', {
-							'title':el.html(),
+							'title':el.text(),
 							'url':el.attr('href')
 						});
 						e.stopPropagation();

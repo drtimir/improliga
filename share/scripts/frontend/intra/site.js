@@ -195,6 +195,14 @@ pwf.register('site', function() {
 			str = [user.get('name_first'), user.get('name_last')].join(' ');
 		}
 
+		if (!str || str == ' ') {
+			str = user.get('login');
+		}
+
+		if (!str) {
+			str = user.get('id');
+		}
+
 		return str;
 	};
 

@@ -50,25 +50,33 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'team_shows',
 				'anchor':'/tymy/{team:seoname}/predstaveni',
-				'structure':[]
+				'structure':[
+					'ui.intra.sections.team.header',
+				]
 			},
 
 			{
 				'name':'team_workshops',
 				'anchor':'/tymy/{team:seoname}/workshopy',
-				'structure':[]
+				'structure':[
+					'ui.intra.sections.team.header',
+				]
 			},
 
 			{
 				'name':'team_attendance',
 				'anchor':'/tymy/{team:seoname}/dochazka',
-				'structure':[]
+				'structure':[
+					'ui.intra.sections.team.header',
+				]
 			},
 
 			{
 				'name':'team_discussion',
 				'anchor':'/tymy/{team:seoname}/diskuze',
-				'structure':[]
+				'structure':[
+					'ui.intra.sections.team.header',
+				]
 			},
 
 

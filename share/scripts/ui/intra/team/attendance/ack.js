@@ -1,3 +1,6 @@
+/**
+ * Simple element tag that renders color squares for team attendance table.
+ */
 pwf.rc('ui.intra.team.attendance.ack', {
 	'parents':['ui.abstract.el'],
 
@@ -15,6 +18,11 @@ pwf.rc('ui.intra.team.attendance.ack', {
 		},
 
 
+		/**
+		 * Render basic element status
+		 *
+		 * @return void
+		 */
 		'draw':function(proto)
 		{
 			var
@@ -24,15 +32,25 @@ pwf.rc('ui.intra.team.attendance.ack', {
 			el.number.appendTo(el.inner);
 
 			if (ack === null) {
+				// No data, no need to worry
 				el.inner.addClass('status-unknown');
 				el.number.html('?');
 			} else {
+
+				// User acknowledged and will come
 				if (ack.get('status') == 3) {
+					// Fill in count
 					el.number.html(ack.get('count'));
+
+				// User has not acknowledged yet
 				} else if (ack.get('status') == 2) {
 					el.number.html('.');
+
+				// User refused to come
 				} else if (ack.get('status') == 4) {
 					el.number.html('-');
+
+				// Safeguard
 				} else {
 					el.number.html('?');
 				}

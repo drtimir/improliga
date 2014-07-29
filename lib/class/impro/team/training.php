@@ -23,6 +23,21 @@ namespace Impro\Team
 		);
 
 
+		public function can_be($method, \System\User $user)
+		{
+			$member = get_first('\Impro\Team\Member')->where(array(
+				'user' => $user,
+				'team' => $this->team
+			))->fetch();
+
+			if ($method == \System\Model\Perm::BROWSE) {
+				return true;
+			}
+
+			return $user->is_root() || in_array(ID_MANAGER, $member->roles) || in_array(ID_TRAINER, $member->roles);
+		}
+
+
 		public function send_invites(\System\Template\Renderer $ren)
 		{
 			$members = $this->team->members->fetch();

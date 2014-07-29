@@ -17,6 +17,12 @@ namespace Impro\Team
 		);
 
 
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true
+		);
+
+
 		public function send_invites(\System\Template\Renderer $ren)
 		{
 			$members = $this->team->members->fetch();

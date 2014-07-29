@@ -37,7 +37,6 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'structure':['ui.intra.team.list']
 			},
 
-
 			{
 				'name':'team',
 				'anchor':'/tymy/{team:seoname}',
@@ -65,9 +64,19 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				]
 			},
 
+
 			{
 				'name':'team_attendance',
 				'anchor':'/tymy/{team:seoname}/dochazka',
+				'structure':[
+					'ui.intra.sections.team.header',
+					'ui.intra.team.attendance.browser'
+				]
+			},
+
+			{
+				'name':'team_training',
+				'anchor':'/tymy/{team:seoname}/treninky/{tg:int}',
 				'structure':[
 					'ui.intra.sections.team.header',
 				]
@@ -81,6 +90,13 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				]
 			},
 
+
+
+			{
+				'name':'user',
+				'anchor':'/uzivatel/{user:int}',
+				'structure':[]
+			},
 
 
 			{

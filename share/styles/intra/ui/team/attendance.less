@@ -1,0 +1,71 @@
+.ui-intra-team-attendance-browser {
+	th, td {
+		padding:5px;
+		font-size:14px;
+	}
+
+	th {
+		font-weight:bold;
+	}
+
+	tbody {
+		tr:hover {
+			background:#f0f0f0;
+		}
+	}
+
+	.ui-intra-team-attendance-member {
+		text-align:left;
+		min-width:150px;
+	}
+
+	.ui-intra-team-attendance-ack {
+		.ack-inner {
+			border-radius:3px;
+			cursor:default;
+			height:24px;
+			line-height:24px;
+			opacity:.8;
+			text-align:center;
+			width:24px;
+
+			&:hover {
+				opacity:1;
+			}
+
+			&.status-unknown {
+				background-color:#ddd;
+			}
+
+			/*
+
+				const NOT_SENT       = 1;
+				const SENT           = 2;
+				const RESPONSE_YES   = 3;
+				const RESPONSE_NO    = 4;
+				const RESPONSE_MAYBE = 5;
+
+			*/
+
+			&.status-1 {
+				background-color:#ccc;
+			}
+
+			&.status-2 {
+				background-color:#008dd7;
+			}
+
+			&.status-3 {
+				background-color:#23ea23;
+			}
+
+			&.status-4 {
+				background-color:#ec0d15;
+			}
+
+			&.status-5 {
+				background-color:#ffda2d;
+			}
+		}
+	}
+}

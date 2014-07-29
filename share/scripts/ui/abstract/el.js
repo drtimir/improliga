@@ -1,4 +1,6 @@
 pwf.rc('ui.abstract.el', {
+	'parents':['domel', 'caller'],
+
 	'storage':{
 		'opts':{
 			'center':false,

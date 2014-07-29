@@ -27,6 +27,12 @@ namespace Impro\Team\Training
 		);
 
 
+		protected static $access = array(
+			'schema' => true,
+			'browse' => true
+		);
+
+
 		public static function get_responses(\System\Template\Renderer $ren)
 		{
 			return array(

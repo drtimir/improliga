@@ -29,17 +29,19 @@ pwf.rc('ui.intra.team.attendance.browser', {
 	'proto':{
 		'el_attached':function(proto)
 		{
+			// Reset month if not available
 			if (!this.get('month')) {
 				this.set('month', pwf.moment());
 			}
 
+			// Reset month range
 			proto.storage.opts.ui_filters[0].value = this.get('month').clone().add('months', -1).format('YYYY-MM');
 			proto.storage.opts.ui_filters[1].value = this.get('month').clone().add('months', 1).format('YYYY-MM');
 
+			// Render basic structure
 			proto('create_structure');
 			proto('create_filters');
 			proto('draw_heading');
-			proto('bind_filters');
 		},
 
 
@@ -61,6 +63,11 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		},
 
 
+		/**
+		 * Draw static heading
+		 *
+		 * @return void
+		 */
 		'draw_heading':function()
 		{
 			this.get_el('heading')
@@ -281,6 +288,11 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		},
 
 
+		/**
+		 * Draw table foot with sums of training acks
+		 *
+		 * @return void
+		 */
 		'draw_table_foot':function(proto)
 		{
 			var
@@ -416,6 +428,11 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		},
 
 
+		/**
+		 * Get list of all loaded acks for selected training
+		 *
+		 * @return Array
+		 */
 		'get_acks_for_tg':function(proto, tg)
 		{
 			var list = [];

@@ -1,5 +1,5 @@
 pwf.rc('ui.intra.team.attendance.browser', {
-	'parents':['ui.abstract.el', 'adminer.abstract.filters'],
+	'parents':['ui.abstract.el.async', 'adminer.abstract.filters'],
 
 
 	'storage':{
@@ -229,6 +229,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		 */
 		'loaded':function(proto)
 		{
+			this.loader_hide();
 			proto('draw_table');
 		},
 
@@ -414,7 +415,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				};
 			}(this, next));
 
-			return this;
+			return this.loader_show();
 		},
 
 

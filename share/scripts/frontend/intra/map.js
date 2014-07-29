@@ -74,6 +74,25 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				]
 			},
 
+
+			{
+				'name':'team_settings',
+				'anchor':'/tymy/{team:seoname}/nastaveni',
+				'structure':[
+					'ui.intra.sections.team.header',
+					'ui.intra.team.settings.main'
+				]
+			},
+
+			{
+				'name':'team_settings_section',
+				'anchor':'/tymy/{team:seoname}/nastaveni/{section:string}',
+				'structure':[
+					'ui.intra.sections.team.header',
+					'ui.intra.team.settings.main'
+				]
+			},
+
 			{
 				'name':'team_training',
 				'anchor':'/tymy/{team:seoname}/treninky/{tg:int}',

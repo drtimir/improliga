@@ -88,6 +88,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				var list = pwf.create('model.list', {
 					'model':'Impro::Team::Member',
 					'join':['user'],
+					'per_page':1024,
 					'filters':[
 						{
 							'attr':'id_impro_team',
@@ -123,6 +124,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				list = pwf.create('model.list', {
 					'model':'Impro::Team::Training',
 					'sort':[{'attr':'start'}],
+					'per_page':1024,
 					'filters':[
 						{
 							'attr':'id_team',
@@ -166,7 +168,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			if (list_tg.length && list_member.length) {
 				var list = pwf.create('model.list', {
 					'model':'Impro::Team::Training::Ack',
-					'per_page':1024,
+					'per_page':8152,
 					'filters':[
 						{
 							'attr':'id_training',

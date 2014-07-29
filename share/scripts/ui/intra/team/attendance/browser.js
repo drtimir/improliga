@@ -291,7 +291,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		{
 			var
 				el = this.get_el('table'),
-				members = proto.storage.members,
+				members = proto.storage.members.sort(proto('callbacks').sort_members),
 				trainings = proto.storage.trainings;
 
 			for (var m = 0, mlen = members.length; m < mlen; m++) {
@@ -364,6 +364,15 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			'move':function(e, opts)
 			{
 				e.data.move(opts.dir);
+			},
+
+			'sort_members':function(a, b)
+			{
+				var
+					name_a = pwf.site.get_user_name(a.get('user')),
+					name_b = pwf.site.get_user_name(b.get('user'));
+
+				return name_a.localeCompare(name_b);
 			}
 		}
 	},

@@ -217,6 +217,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			if (proto.storage.trainings.length) {
 				proto('draw_table_head');
 				proto('draw_table_body');
+				proto('draw_table_foot');
 			} else {
 				proto('draw_no_data');
 			}
@@ -276,6 +277,29 @@ pwf.rc('ui.intra.team.attendance.browser', {
 						'parent':row,
 					});
 				}
+			}
+		},
+
+
+		'draw_table_foot':function(proto)
+		{
+			var
+				el = this.get_el('table'),
+				trainings = proto.storage.trainings;
+
+			el.foot.html('');
+			el.foot.row = pwf.jquery('<tr/>').appendTo(el.foot);
+
+			pwf.jquery('<th/>')
+				.html(pwf.locales.trans('attd-sum'))
+				.appendTo(el.foot.row);
+
+			for (var i = 0, len = trainings.length; i < len; i++) {
+				pwf.create('ui.intra.team.attendance.sum', {
+					'acks':this.get_acks_for_tg(trainings[i]),
+					'item':trainings[i],
+					'parent':el.foot.row
+				});
 			}
 		},
 
@@ -389,6 +413,22 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			}
 
 			return null;
+		},
+
+
+		'get_acks_for_tg':function(proto, tg)
+		{
+			var list = [];
+
+			for (var i = 0, len = proto.storage.acks.length; i < len; i++) {
+				var ack = proto.storage.acks[i];
+
+				if (pwf.model.cmp(ack.get('training'), tg)) {
+					list.push(ack);
+				}
+			}
+
+			return list;
 		}
 	}
 });

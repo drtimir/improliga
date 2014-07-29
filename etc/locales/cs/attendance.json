@@ -2,5 +2,6 @@
 	"attd-heading":"Přehled docházky",
 	"attd-since":"Od",
 	"attd-until":"Do",
-	"attd-no-data":"Nejsou žádné záznamy z vybraného období"
+	"attd-no-data":"Nejsou žádné záznamy z vybraného období",
+	"attd-sum":"Celkem"
 }

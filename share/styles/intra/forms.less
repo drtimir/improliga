@@ -3,9 +3,138 @@
 	.input-container
 	{
 		display:inline-block;
+		height:32px;
+		line-height:32px;
+		vertical-align:top;
+	}
+
+	.input-label-left {
+		label {
+			margin-right:10px;
+		}
 	}
 }
 
 .input-hidden {
 	display:none;
+}
+
+.input-month {
+	.input {
+		border:1px solid #efefef;
+		display:inline-block;
+		border-radius:5px;
+		vertical-align:top;
+		position:relative;
+
+		.label {
+			.current,
+			.button {
+				display:inline-block;
+				vertical-align:top;
+			}
+
+			.current {
+				cursor:default;
+				height:30px;
+				line-height:30px;
+				padding:0 10px;
+			}
+
+			.button {
+				cursor:pointer;
+				height:20px;
+				border-radius:0 5px 5px 0;
+			}
+		}
+
+		.menu {
+			position:absolute;
+			background:rgba(41,39,44,.95);
+			color:#fff;
+			border-radius:3px;
+			padding:10px;
+			font-size:13px;
+			z-index:10;
+
+			.select {
+				display:block;
+				border:1px solid rgba(255,255,255,.2);
+				border-radius:3px;
+				margin:0 0 3px;
+				padding:0 10px;
+				line-height:23px;
+				cursor:pointer;
+
+				&:hover {
+					background:rgba(255,255,255,.1);
+				}
+			}
+
+			.cal-head {
+				text-align:center;
+				position:relative;
+
+				span {
+					display:inline-block;
+				}
+
+				.select-prev,
+				.select-next
+				{
+					position:absolute;
+					top:0;
+				}
+
+				.select-prev {
+					left:0;
+				}
+
+				.select-next {
+					right:0;
+				}
+			}
+
+			.cal-body {
+				width:303px;
+				margin-bottom:10px;
+			}
+
+			.cal-body-col {
+				display:block;
+				float:left;
+				margin-right:5px;
+
+				&:last-child {
+					margin-right:0;
+				}
+
+				.cal-mon {
+					width:50px;
+
+					&:last-child {
+						margin-bottom:0;
+					}
+				}
+			}
+
+			.cal-footer {
+				clear:both;
+				position:relative;
+
+				.select-now,
+				.select-clear
+				{
+					display:inline-block;
+					margin-bottom:0;
+				}
+
+				.select-clear {
+					position:absolute;
+					right:0;
+					top:0;
+				}
+			}
+		}
+	}
 }

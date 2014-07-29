@@ -1,4 +1,8 @@
 .ui-intra-team-attendance-browser {
+	table {
+		width:100%;
+	}
+
 	th, td {
 		padding:5px;
 		font-size:14px;
@@ -9,9 +13,36 @@
 	}
 
 	tbody {
-		tr:hover {
-			background:#f0f0f0;
+		tr {
+			&.even {
+				background:#f5f5f5;
+			}
+
+			&:hover {
+				background:#f0f0f0;
+			}
 		}
+	}
+
+	.attd-filter {
+		margin-bottom:14px;
+
+		.input {
+			display:inline-block;
+			margin-right:14px;
+
+			&:last-child {
+				margin-right:0;
+			}
+		}
+	}
+
+	.attd-empty {
+		height:250px;
+		line-height:250px;
+		text-align:center;
+		font-size:32px;
+		color:#ccc;
 	}
 
 	.ui-intra-team-attendance-member {
@@ -25,12 +56,14 @@
 			cursor:default;
 			height:24px;
 			line-height:24px;
-			opacity:.8;
 			text-align:center;
+			border:1px solid transparent;
 			width:24px;
+			margin:0 auto;
 
 			&:hover {
 				opacity:1;
+				border-color:rgba(0,0,0,.25);
 			}
 
 			&.status-unknown {

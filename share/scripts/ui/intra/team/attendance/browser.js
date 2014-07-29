@@ -1,5 +1,5 @@
 pwf.rc('ui.intra.team.attendance.browser', {
-	'parents':['ui.abstract.el'],
+	'parents':['ui.abstract.el', 'adminer.abstract.filters'],
 
 
 	'storage':{
@@ -9,20 +9,19 @@ pwf.rc('ui.intra.team.attendance.browser', {
 
 		'opts':{
 			'month':null,
-			'team':null
-		}
-	},
-
-
-	/**
-	 * Resets month to current date if not available
-	 *
-	 * @return void
-	 */
-	'init':function(proto)
-	{
-		if (!this.get('month')) {
-			this.set('month', pwf.moment());
+			'team':null,
+			'ui_filters':[
+				{
+					'type':'month',
+					'name':'start',
+					'label':'attd-since'
+				},
+				{
+					'type':'month',
+					'name':'end',
+					'label':'attd-until'
+				}
+			]
 		}
 	},
 
@@ -30,7 +29,17 @@ pwf.rc('ui.intra.team.attendance.browser', {
 	'proto':{
 		'el_attached':function(proto)
 		{
+			if (!this.get('month')) {
+				this.set('month', pwf.moment());
+			}
+
+			proto.storage.opts.ui_filters[0].value = this.get('month').clone().add('months', -1).format('YYYY-MM');
+			proto.storage.opts.ui_filters[1].value = this.get('month').clone().add('months', 1).format('YYYY-MM');
+
 			proto('create_structure');
+			proto('create_filters');
+			proto('draw_heading');
+			proto('bind_filters');
 		},
 
 
@@ -41,7 +50,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		 */
 		'create_structure':function(proto)
 		{
-			var el = this.get_el().create_divs(['inner', 'heading', 'filters', 'empty', 'content'], 'attd');
+			var el = this.get_el().create_divs(['inner', 'heading', 'filter', 'empty', 'content'], 'attd');
 
 			el.empty.hide();
 			el.table = pwf.jquery('<table cellspacing="0" cellpadding="0"/>').appendTo(el.content);
@@ -49,6 +58,14 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			el.table.head = pwf.jquery('<thead/>').appendTo(el.table);
 			el.table.body = pwf.jquery('<tbody/>').appendTo(el.table);
 			el.table.foot = pwf.jquery('<tfoot/>').appendTo(el.table);
+		},
+
+
+		'draw_heading':function()
+		{
+			this.get_el('heading')
+				.html(pwf.locales.trans('attd-heading'))
+				.addClass('heading');
 		},
 
 
@@ -93,27 +110,30 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		 */
 		'load_trainings':function(proto, next)
 		{
-			var list = pwf.create('model.list', {
-				'model':'Impro::Team::Training',
-				'sort':[{'attr':'start'}],
-				'filters':[
-					{
-						'attr':'id_team',
-						'type':'exact',
-						'exact':this.get('team')
-					},
-					{
-						'attr':'start',
-						'type':'gte',
-						'gte':this.get('month').startOf('month').format('YYYY-MM')
-					},
-					{
-						'attr':'start',
-						'type':'lte',
-						'lte':this.get('month').endOf('month').format('YYYY-MM')
-					}
-				]
-			});
+			var
+				start = proto.storage.filter.get_input('start').val(),
+				end   = proto.storage.filter.get_input('end').val(),
+				list = pwf.create('model.list', {
+					'model':'Impro::Team::Training',
+					'sort':[{'attr':'start'}],
+					'filters':[
+						{
+							'attr':'id_team',
+							'type':'exact',
+							'exact':this.get('team')
+						},
+						{
+							'attr':'start',
+							'type':'gte',
+							'gte':start.startOf('month').format('YYYY-MM-DD')
+						},
+						{
+							'attr':'start',
+							'type':'lte',
+							'lte':end.endOf('month').format('YYYY-MM-DD')
+						}
+					]
+				});
 
 			list.load(function(ctrl) {
 				return function(err, response) {
@@ -187,6 +207,9 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		{
 			var el = this.get_el('table');
 
+			el.stop(true).show();
+			this.get_el('empty').stop(true).hide();
+
 			el.head.html('');
 			el.body.html('');
 			el.foot.html('');
@@ -236,7 +259,9 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				trainings = proto.storage.trainings;
 
 			for (var m = 0, mlen = members.length; m < mlen; m++) {
-				var row = pwf.jquery('<tr/>').appendTo(el.body);
+				var row = pwf.jquery('<tr/>')
+					.appendTo(el.body)
+					.addClass(m%2 ? 'odd':'even');
 
 				pwf.create('ui.intra.team.attendance.member', {
 					'item':members[m],
@@ -264,7 +289,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		{
 			var el = this.get_el();
 
-			el.empty.html(pwf.locales.trans('no-data'));
+			el.empty.html(pwf.locales.trans('attd-no-data'));
 
 			el.table.stop(true).fadeOut();
 			el.empty.stop(true).fadeIn();

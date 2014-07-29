@@ -3,5 +3,7 @@
 	"attd-since":"Od",
 	"attd-until":"Do",
 	"attd-no-data":"Nejsou žádné záznamy z vybraného období",
-	"attd-sum":"Celkem"
+	"attd-sum":"Celkem",
+	"attd-prev":"Předchozí",
+	"attd-next":"Další"
 }

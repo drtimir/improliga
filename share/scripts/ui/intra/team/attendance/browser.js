@@ -40,6 +40,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 
 			// Render basic structure
 			proto('create_structure');
+			proto('create_controls');
 			proto('create_filters');
 			proto('draw_heading');
 		},
@@ -52,7 +53,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 		 */
 		'create_structure':function(proto)
 		{
-			var el = this.get_el().create_divs(['inner', 'heading', 'filter', 'empty', 'content'], 'attd');
+			var el = this.get_el().create_divs(['inner', 'heading', 'filter', 'controls', 'empty', 'content'], 'attd');
 
 			el.empty.hide();
 			el.table = pwf.jquery('<table cellspacing="0" cellpadding="0"/>').appendTo(el.content);
@@ -60,6 +61,31 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			el.table.head = pwf.jquery('<thead/>').appendTo(el.table);
 			el.table.body = pwf.jquery('<tbody/>').appendTo(el.table);
 			el.table.foot = pwf.jquery('<tfoot/>').appendTo(el.table);
+		},
+
+
+		/**
+		 * Draw arrows that move range of attendance table
+		 *
+		 * @return void
+		 */
+		'create_controls':function(proto)
+		{
+			var el = this.get_el();
+
+			el.bind('attd-move', this, proto('callbacks').move);
+
+			pwf.create('ui.intra.team.attendance.ctrl', {
+				'name':'prev',
+				'parent':el.controls,
+				'dir':-1
+			});
+
+			pwf.create('ui.intra.team.attendance.ctrl', {
+				'name':'next',
+				'parent':el.controls,
+				'dir':1
+			});
 		},
 
 
@@ -331,6 +357,14 @@ pwf.rc('ui.intra.team.attendance.browser', {
 
 			el.table.stop(true).fadeOut();
 			el.empty.stop(true).fadeIn();
+		},
+
+
+		'callbacks':{
+			'move':function(e, opts)
+			{
+				e.data.move(opts.dir);
+			}
 		}
 	},
 
@@ -448,6 +482,26 @@ pwf.rc('ui.intra.team.attendance.browser', {
 			}
 
 			return list;
+		},
+
+
+		/**
+		 * Move selected range of data by dir
+		 *
+		 * @param int dir
+		 * @return void
+		 */
+		'move':function(proto, dir)
+		{
+			var
+				start = proto.storage.filter.get_input('start'),
+				end   = proto.storage.filter.get_input('end'),
+				diff  = end.val().diff(start.val(), 'months');
+
+			start.val(start.val().clone().add(diff * dir, 'months'));
+			end.val(end.val().clone().add(diff * dir, 'months'));
+
+			return this.load();
 		}
 	}
 });

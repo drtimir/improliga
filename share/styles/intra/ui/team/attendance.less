@@ -1,4 +1,6 @@
 .ui-intra-team-attendance-browser {
+	position:relative;
+
 	table {
 		width:100%;
 	}
@@ -43,6 +45,12 @@
 		}
 	}
 
+	.attd-controls {
+		position:absolute;
+		right:0;
+		top:62px;
+	}
+
 	.attd-content {
 		overflow:auto;
 	}
@@ -53,6 +61,19 @@
 		text-align:center;
 		font-size:32px;
 		color:#ccc;
+	}
+
+	.ui-intra-team-attendance-ctrl {
+		display:inline-block;
+		width:24px;
+		height:24px;
+		background:#ccc;
+		margin-right:10px;
+		cursor:pointer;
+
+		&:last-child {
+			margin-right:0;
+		}
 	}
 
 	.ui-intra-team-attendance-member {

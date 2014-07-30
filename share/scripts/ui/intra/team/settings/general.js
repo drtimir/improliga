@@ -4,7 +4,8 @@ pwf.rc('ui.intra.team.settings.general', {
 	'storage':{
 		'opts':{
 			'model':'Impro::Team',
-			'attrs':['name', 'name_full', 'city', 'logo', 'photo', 'about', 'email', 'site', 'accepting']
+			'attrs':['name', 'name_full', 'city', 'logo', 'photo', 'about', 'email', 'site', 'accepting'],
+			'heading':''
 		}
 	}
 });

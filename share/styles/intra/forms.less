@@ -13,6 +13,10 @@
 			margin-right:10px;
 		}
 	}
+
+	.input {
+		margin-bottom:5px;
+	}
 }
 
 .input-hidden {
@@ -139,5 +143,68 @@
 				}
 			}
 		}
+	}
+}
+
+.input-file {
+	font-size:14px;
+
+	.fp-edit,
+	.fp-url,
+	.fp-info
+	{
+		background:#eee;
+	}
+
+	.fp-file-name,
+	.fp-file-type,
+	.fp-file-size
+	{
+		font-size:12px;
+		line-height:14px;
+	}
+
+	.fp-edit {
+		font-size:14px;
+		line-height:16px;
+	}
+
+	.fp-file-size {
+		margin-bottom:.5em;
+	}
+
+	.fp-inner-message {
+		line-height:16px;
+	}
+
+	.fp-actions {
+		padding:0;
+	}
+
+	.fp-info {
+		margin-bottom:0.25em;
+	}
+
+	.fp-button {
+		font-size:12px;
+		line-height:14px;
+		padding:4px 10px;
+		vertical-align:top;
+	}
+
+	.fp-upload .icon {
+		background-image:url(<pixmap(godmode/input-file/upload.png)>);
+	}
+
+	.fp-url-label .icon {
+		background-image:url(<pixmap(godmode/input-file/url.png)>);
+	}
+
+	.fp-cancel-label .icon {
+		background-image:url(<pixmap(godmode/input-file/back.png)>);
+	}
+
+	.fp-del-label .icon {
+		background-image:url(<pixmap(godmode/input-file/delete.png)>);
 	}
 }

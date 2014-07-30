@@ -73,7 +73,7 @@ pwf.rc('ui.intra.team.settings.main', {
 				items = this.meta.static.sections;
 
 			for (var i = 0, len = items.length; i < len; i++) {
-				pwf.create('ui.abstract.el.link', {
+				var link = pwf.create('ui.abstract.el.link', {
 					'parent':el,
 					'path':'team_settings_section',
 					'title':pwf.locales.trans('team-cfg-' + items[i].name),
@@ -81,6 +81,10 @@ pwf.rc('ui.intra.team.settings.main', {
 						'team':this.get('item').get_seoname()
 					})
 				});
+
+				if (items[i].params.section == this.get('section')) {
+					link.get_el().addClass('active');
+				}
 			}
 		},
 

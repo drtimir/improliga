@@ -272,7 +272,9 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				trainings = proto.storage.trainings;
 
 			el.head.html('');
-			el.head.row = pwf.jquery('<tr/>').appendTo(el.head).html('<th/>');
+			el.head.row = pwf.jquery('<tr/>').appendTo(el.head);
+
+			pwf.jquery('<th/>').appendTo(el.head.row);
 
 			for (var i = 0, len = trainings.length; i < len; i++) {
 				pwf.create('ui.intra.team.attendance.tg', {
@@ -333,6 +335,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 
 			pwf.jquery('<th/>')
 				.html(pwf.locales.trans('attd-sum'))
+				.addClass('first')
 				.appendTo(el.foot.row);
 
 			for (var i = 0, len = trainings.length; i < len; i++) {

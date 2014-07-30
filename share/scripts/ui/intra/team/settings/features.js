@@ -4,7 +4,7 @@ pwf.rc('ui.intra.team.settings.features', {
 	'storage':{
 		'opts':{
 			'model':'Impro::Team',
-			'attrs':['use_discussion', 'use_attendance'],
+			'attrs':['accepting', 'use_discussion', 'use_attendance'],
 			'heading':''
 		}
 	}

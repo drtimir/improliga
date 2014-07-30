@@ -89,10 +89,12 @@ pwf.rc('ui.intra.team.settings.main', {
 		{
 			var section = this.meta.static.get_section(this.get('section'));
 
-			pwf.create(section.ui, {
-				'parent':this.get_el('content'),
-				'item':this.get('item')
-			}).load();
+			if (section) {
+				pwf.create(section.ui, {
+					'parent':this.get_el('content'),
+					'item':this.get('item')
+				}).load();
+			}
 		},
 	}
 });

@@ -27,6 +27,7 @@ pwf.rc('ui.intra.team.attendance.ack', {
 		{
 			var
 				ack = this.get('ack'),
+				tg = this.get('tg'),
 				el = this.get_el().create_divs(['inner', 'number'], 'ack');
 
 			el.number.appendTo(el.inner);
@@ -56,6 +57,12 @@ pwf.rc('ui.intra.team.attendance.ack', {
 				}
 
 				el.inner.addClass('status-' + ack.get('status'));
+			}
+
+			if (tg !== null) {
+				if (tg.get('start').isBefore(pwf.moment(), 'day')) {
+					el.inner.addClass('history-tg');
+				}
 			}
 		}
 	}

@@ -18,6 +18,7 @@ pwf.rc('ui.intra.team.attendance.tg', {
 		'draw':function(proto)
 		{
 			var
+				el   = this.get_el(),
 				item = this.get('item'),
 				url  = pwf.dispatcher.url('team_training', {
 					'team':item.get('team').get_seoname(),
@@ -27,7 +28,12 @@ pwf.rc('ui.intra.team.attendance.tg', {
 					.attr('href', url)
 					.html(item.get('start').format('D.M.'));
 
-			this.get_el().html(link);
+
+			if (item.get('start').isBefore(pwf.moment(), 'day')) {
+				el.addClass('history-tg');
+			}
+
+			el.html(link);
 		}
 	}
 });

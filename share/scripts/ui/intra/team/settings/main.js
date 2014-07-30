@@ -1,9 +1,11 @@
 pwf.rc('ui.intra.team.settings.main', {
 	'parents':['ui.abstract.el.async', 'adminer.abstract.object'],
+	'attrs':[],
 
 	'static':{
 		'sections':[
 			{'name':'general',   'params':{'section':'obecne'},   'ui':'ui.intra.team.settings.general'},
+			{'name':'visual',    'params':{'section':'vizualni'}, 'ui':'ui.intra.team.settings.visual'},
 			{'name':'locations', 'params':{'section':'umisteni'}, 'ui':'ui.intra.team.settings.locations'},
 			{'name':'features',  'params':{'section':'funkce'},   'ui':'ui.intra.team.settings.features'},
 			{'name':'members',   'params':{'section':'clenove'},  'ui':'ui.intra.team.settings.members'}
@@ -40,14 +42,22 @@ pwf.rc('ui.intra.team.settings.main', {
 		'el_attached':function(proto)
 		{
 			proto('create_structure');
+			proto('create_heading');
 		},
 
 
 		'create_structure':function()
 		{
-			var el = this.get_el().create_divs(['menu', 'content', 'cleaner'], 'team-cfg');
+			var el = this.get_el().create_divs(['heading', 'menu', 'content', 'cleaner'], 'team-cfg');
 
+			el.heading.addClass('heading');
 			el.cleaner.addClass('cleaner');
+		},
+
+
+		'create_heading':function()
+		{
+			this.get_el('heading').html(pwf.locales.trans('team-cfg'));
 		},
 
 

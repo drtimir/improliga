@@ -139,8 +139,10 @@
 	"intra_team_discussion_post_delete":"Chystáte se smazat příspěvek z diskuze",
 	"intra_team_discussion_post_delete_desc":"Opravdu chcete smazat tento příspěvek z diskuze?",
 
+	"team-cfg":"Nastavení týmu",
 
 	"team-cfg-general":"Obecné",
+	"team-cfg-visual":"Vizuální",
 	"team-cfg-locations":"Umístění",
 	"team-cfg-features":"Funkce",
 	"team-cfg-members":"Členové",

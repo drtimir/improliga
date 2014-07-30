@@ -4,7 +4,8 @@ pwf.rc('ui.intra.team.settings.locations', {
 	'storage':{
 		'opts':{
 			'model':'Impro::Team',
-			'attrs':['hq', 'loc_trainings']
+			'attrs':['hq', 'loc_trainings'],
+			'heading':''
 		}
 	}
 });

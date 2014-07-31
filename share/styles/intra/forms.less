@@ -34,13 +34,27 @@ input[type=text],
 	}
 
 	.input-label-right {
+		label {
+			cursor:pointer;
+		}
+
 		.input-container {
 			margin-right:10px;
 		}
 	}
 
 	.input {
-		margin-bottom:5px;
+		padding:3px 9px;
+		margin-bottom:1px;
+		border-radius:4px;
+
+		&:hover {
+			background:#f0f0f0;
+		}
+
+		&.invalid {
+			background:#DC7A7D;
+		}
 	}
 }
 

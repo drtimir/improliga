@@ -5,13 +5,13 @@ namespace Impro\Team
 	class Training extends \System\Model\Perm
 	{
 		protected static $attrs = array(
-			"name"     => array('varchar'),
-			"desc"     => array('varchar'),
-			"open"     => array('bool'),
-			"start"    => array('datetime'),
-			"canceled" => array('bool', "default" => false),
-			"location" => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"team"     => array('belongs_to', "model" => 'Impro\Team'),
+			"name"     => array('varchar'),
+			"start"    => array('datetime'),
+			"open"     => array('bool'),
+			"canceled" => array('bool', "default" => false),
+			"desc"     => array('html'),
+			"location" => array('belongs_to', "model" => 'System\Location', "is_null" => true),
 			"author"   => array('belongs_to', "model" => 'System\User'),
 			"acks"     => array('has_many', "model" => 'Impro\Team\Training\Ack'),
 		);

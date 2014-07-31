@@ -59,7 +59,19 @@
 	"model-Impro::Team::Member-accusative":"člena týmu",
 	"model-Impro::Team::Member-attr-roles":"Role v týmu",
 	"model-Impro::Team::Discussion::Topic":"Téma",
+
 	"model-Impro::Team::Training":"Trénink",
+	"model-Impro::Team::Training-accusative":"trénink",
+	"model-Impro::Team::Training-attr-desc":"Popis",
+	"model-Impro::Team::Training-attr-start":"Začátek",
+	"model-Impro::Team::Training-attr-open":"Otevřený trénink",
+	"model-Impro::Team::Training-attr-canceled":"Zrušený trénink",
+	"model-Impro::Team::Training-attr-location":"Místo",
+	"model-Impro::Team::Training-attr-team":"Tým",
+	"model-Impro::Team::Training-attr-acks":"Potvrzení",
+
+	"model-Impro::Team::Training::Ack":"Potvrzení",
+
 	"model-Impro::Team::Comment":"Komentář",
 
 	"model-Impro::Partner":"Partner",

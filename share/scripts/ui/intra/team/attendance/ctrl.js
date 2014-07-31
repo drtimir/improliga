@@ -9,17 +9,17 @@ pwf.rc('ui.intra.team.attendance.ctrl', {
 	},
 
 
-	'init':function(proto)
-	{
-		var el = this.get_el();
-
-		el
-			.attr('title', pwf.locales.trans_msg('attd-' + this.get('name')))
-			.bind('click', this, proto('callbacks').move);
-	},
-
-
 	'proto':{
+		'el_attached':function(proto)
+		{
+			var el = this.get_el();
+
+			el
+				.attr('title', pwf.locales.trans_msg('attd-' + this.get('name')))
+				.bind('click', this, proto('callbacks').move);
+		},
+
+
 		'callbacks':{
 			'move':function(e)
 			{

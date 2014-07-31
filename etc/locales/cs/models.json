@@ -56,6 +56,8 @@
 	"model-Impro::Team-attr-use_attendance":"Používá docházku",
 
 	"model-Impro::Team::Member":"Člen",
+	"model-Impro::Team::Member-accusative":"člena týmu",
+	"model-Impro::Team::Member-attr-roles":"Role v týmu",
 	"model-Impro::Team::Discussion::Topic":"Téma",
 	"model-Impro::Team::Training":"Trénink",
 	"model-Impro::Team::Comment":"Komentář",

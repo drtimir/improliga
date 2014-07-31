@@ -156,3 +156,45 @@ button,
 	position:absolute;
 	background:url(<pixmap(animations/loader-intra.gif)>);
 }
+
+.ui-abstract-popup-editor {
+	.popup {
+		position:absolute;
+		background:rgba(0,0,0,0.8);
+		width:560px;
+		padding:40px;
+		color:#fff;
+		border-radius:4px;
+
+		.input {
+			padding:0;
+			display:inline-block;
+
+			&:hover {
+				background:transparent;
+			}
+
+			&.input-label-left {
+				& > label {
+					display:block;
+				}
+			}
+		}
+
+		.form-group-typed-inputs {
+			margin-bottom:10px;
+		}
+
+		.form-group-typed-buttons {
+			li {
+				display:inline-block;
+				vertical-align:top;
+				margin-right:10px;
+
+				&:last-child {
+					margin:0;
+				}
+			}
+		}
+	}
+}

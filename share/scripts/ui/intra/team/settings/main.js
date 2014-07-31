@@ -1,6 +1,5 @@
 pwf.rc('ui.intra.team.settings.main', {
-	'parents':['ui.abstract.el.async', 'adminer.abstract.object'],
-	'attrs':[],
+	'parents':['ui.abstract.el'],
 
 	'static':{
 		'sections':[
@@ -32,17 +31,13 @@ pwf.rc('ui.intra.team.settings.main', {
 	},
 
 
-	'init':function(proto)
-	{
-		this.set('item', this.get('team'));
-	},
-
-
 	'proto':{
 		'el_attached':function(proto)
 		{
 			proto('create_structure');
 			proto('create_heading');
+			proto('create_menu');
+			proto('create_editor');
 		},
 
 
@@ -61,21 +56,6 @@ pwf.rc('ui.intra.team.settings.main', {
 		},
 
 
-		'loaded':function(proto)
-		{
-			this.loader_hide();
-
-			proto('create_menu');
-			proto('create_editor');
-		},
-
-
-		'before_load':function(proto)
-		{
-			this.loader_show();
-		},
-
-
 		'create_menu':function()
 		{
 			var
@@ -88,7 +68,7 @@ pwf.rc('ui.intra.team.settings.main', {
 					'path':'team_settings_section',
 					'title':pwf.locales.trans('team-cfg-' + items[i].name),
 					'params':pwf.merge(items[i].params, {
-						'team':this.get('item').get_seoname()
+						'team':this.get('team-seoname')
 					})
 				});
 
@@ -106,7 +86,7 @@ pwf.rc('ui.intra.team.settings.main', {
 			if (section) {
 				pwf.create(section.ui, {
 					'parent':this.get_el('content'),
-					'item':this.get('item')
+					'item':this.get('team')
 				}).load();
 			}
 		},

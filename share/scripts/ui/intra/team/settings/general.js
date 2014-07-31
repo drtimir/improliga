@@ -1,5 +1,5 @@
 pwf.rc('ui.intra.team.settings.general', {
-	'parents':['adminer.editor'],
+	'parents':['ui.intra.team.settings.abstract.loader'],
 
 	'storage':{
 		'opts':{

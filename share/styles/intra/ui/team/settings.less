@@ -97,3 +97,53 @@
 		}
 	}
 }
+
+.ui-intra-team-settings-members {
+	.ui-list-team-member {
+		display:inline-block;
+		vertical-align:top;
+		width:75px;
+		height:180px;
+		margin:0 10px;
+		position:relative;
+
+		.member-ui {
+			position:absolute;
+			left:0;
+			top:0;
+			width:75px;
+			height:65px;
+			padding-top:10px;
+			background:rgba(255,255,255,.75);
+
+			.button {
+				font-size:12px;
+				display:block;
+				margin:0;
+				text-align:center;
+
+				&.member-edit {
+					margin:0 0 7px;
+				}
+			}
+		}
+
+		.member-avatar {
+			width:75px;
+			height:75px;
+			margin-bottom:5px;
+			background-color:#f0f0f0;
+		}
+
+		.member-data {
+			.member-name {
+				margin-bottom:5px;
+			}
+
+			.member-roles {
+				font-size:12px;
+				line-height:14px;
+			}
+		}
+	}
+}

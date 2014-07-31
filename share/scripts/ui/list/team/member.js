@@ -3,11 +3,11 @@ pwf.rc('ui.list.team.member', {
 
 	'proto':{
 		'el_attached':function(proto) {
-			proto('construct');
+			proto('create_structure');
 			proto('fill');
 		},
 
-		'construct':function(proto) {
+		'create_structure':function(proto) {
 			var el = this.get_el().create_divs(['avatar', 'data', 'name', 'roles', 'cleaner'], 'member');
 
 			el.data

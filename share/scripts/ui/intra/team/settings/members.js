@@ -6,8 +6,8 @@ pwf.rc('ui.intra.team.settings.members', {
 			'model':'Impro::Team::Member',
 			'draw':'ui.intra.team.settings.members.member',
 			'attrs':['name', 'name_full', 'city', 'mail', 'site', 'about'],
+			'heading':'team-cfg-member-list',
 			'join':['user', 'team'],
-			'heading':'',
 			'filters':[],
 		}
 	},

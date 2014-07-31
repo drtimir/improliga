@@ -147,6 +147,9 @@
 	"team-cfg-features":"Funkce",
 	"team-cfg-members":"Členové",
 
+	"team-member-edit":"Upravit",
+	"team-member-drop":"Vyhodit",
+
 	"maybe":"Nevím, ještě se ozvu",
 	"end":""
 }

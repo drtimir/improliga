@@ -22,11 +22,11 @@ pwf.rc('ui.intra.team.settings.members.member', {
 
 			el.edit
 				.addClass('button')
-				.html(pwf.locales.trans('gm-edit'));
+				.html(pwf.locales.trans('team-member-edit'));
 
 			el.drop
 				.addClass('button')
-				.html(pwf.locales.trans('gm-delete'));
+				.html(pwf.locales.trans('team-member-drop'));
 
 			el.bind('mouseenter', this, proto('callbacks').ui_show);
 			el.bind('mouseleave', this, proto('callbacks').ui_hide);

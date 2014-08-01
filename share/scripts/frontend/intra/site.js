@@ -59,7 +59,8 @@ pwf.register('site', function() {
 					'model':'Impro::Team::Member',
 					'filters':[
 						{'attr':'id_system_user', 'type':'exact', 'exact':user.get('id')}
-					]
+					],
+					'join':['team']
 				}).load(function(err, list) {
 					next(err);
 					user.set('roles', list.data);
@@ -225,6 +226,20 @@ pwf.register('site', function() {
 		}
 
 		return avatar;
+	};
+
+
+	this.get_user_teams = function()
+	{
+		var
+			roles = user.get('roles'),
+			teams = [];
+
+		for (var i = 0, len = roles.length; i < len; i++) {
+			teams.push(roles[i].get('team'));
+		}
+
+		return teams;
 	};
 
 

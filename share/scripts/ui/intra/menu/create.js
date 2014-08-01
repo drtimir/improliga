@@ -4,12 +4,8 @@ pwf.rc('ui.intra.menu.create', {
 	'proto':{
 		'items':[
 			{
-				'name':'menu-create-show',
-				'ui':'ui.intra.editor.show'
-			},
-			{
-				'name':'menu-create-workshop',
-				'ui':'ui.intra.editor.workshop'
+				'name':'menu-create-event',
+				'ui':'ui.intra.editor.event'
 			},
 			{
 				'name':'menu-create-training',
@@ -21,11 +17,20 @@ pwf.rc('ui.intra.menu.create', {
 		'construct':function(proto)
 		{
 			var el = this.get_el('menu_content')
-				.create_divs(['items'], 'create-menu')
+				.create_divs(['heading', 'items'], 'create-menu')
 				.addClass('typical-menu')
 				.bind('activate', this, proto('callbacks').activate);
 
+			proto('construct_heading');
 			proto('construct_items');
+		},
+
+
+		'construct_heading':function(proto)
+		{
+			var el = this.get_el('menu_content').heading
+				.addClass('heading')
+				.html(pwf.locales.trans('menu-create'));
 		},
 
 

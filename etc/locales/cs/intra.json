@@ -155,6 +155,16 @@
 	"team-member-edit":"Upravit",
 	"team-member-drop":"Vyhodit",
 
+	"menu-main":"Hlavní menu",
+	"menu-profile":"Oznámení",
+	"menu-create":"Vytvořit",
+	"menu-search":"Vyhledat",
+	"menu-settings":"Nastavení",
+	"menu-exit":"Odhlásit",
+
+	"menu-create-event":"Událost",
+	"menu-create-training":"Trénink",
+
 	"cancel":"Zrušit",
 
 	"maybe":"Nevím, ještě se ozvu",

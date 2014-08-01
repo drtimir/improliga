@@ -71,6 +71,9 @@
 	"model-Impro::Team::Training-attr-acks":"Potvrzení",
 
 	"model-Impro::Team::Training::Ack":"Potvrzení",
+	"model-Impro::Team::Training::Ack-attr-status":"Odpověď",
+	"model-Impro::Team::Training::Ack-attr-count":"Kolik lidí",
+	"model-Impro::Team::Training::Ack-attr-delay":"Očekávané zpoždění",
 
 	"model-Impro::Team::Comment":"Komentář",
 

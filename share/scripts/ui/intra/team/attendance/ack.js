@@ -15,6 +15,7 @@ pwf.rc('ui.intra.team.attendance.ack', {
 		'el_attached':function(proto)
 		{
 			proto('draw');
+			proto('bind');
 		},
 
 
@@ -64,6 +65,63 @@ pwf.rc('ui.intra.team.attendance.ack', {
 					el.inner.addClass('history-tg');
 				}
 			}
+		},
+
+
+		'redraw':function(proto)
+		{
+			this.get_el().html('');
+			proto('draw');
+		},
+
+
+		'bind':function(proto)
+		{
+			var
+				mem = this.get('member'),
+				el  = this.get_el();
+
+			if (pwf.model.cmp(mem.get('user'), pwf.site.get_user())) {
+				el.inner.addClass('writeable');
+				el.inner.bind('click', this, proto('callbacks').edit);
+			}
+		},
+
+
+		'callbacks':
+		{
+			'edit':function(e)
+			{
+				e.data.edit();
+			}
+		}
+	},
+
+
+	'public':{
+		'edit':function(proto)
+		{
+			var
+				ack = this.get('ack'),
+				data = {
+					'parent':pwf.jquery('body'),
+					'after_save':function() {
+						this.close();
+						proto('redraw');
+					}
+				};
+
+			if (ack) {
+				data.item = ack;
+			} else {
+				data.item = pwf.model.create('Impro::Team::Training::Ack', {
+					'training':this.get('tg'),
+					'member':this.get('member'),
+					'user':this.get('member').get('user')
+				});
+			}
+
+			pwf.create('ui.intra.editor.training.ack', data).show().load();
 		}
 	}
 });

@@ -14,12 +14,14 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				{
 					'type':'month',
 					'name':'start',
-					'label':'attd-since'
+					'label':'attd-since',
+					'required':true
 				},
 				{
 					'type':'month',
 					'name':'end',
-					'label':'attd-until'
+					'label':'attd-until',
+					'required':true
 				}
 			]
 		}

@@ -6,6 +6,7 @@ pwf.rc('ui.abstract.el.link', {
 			'tag':'a',
 			'cname':'',
 			'path':null,
+			'deep':false,
 			'title':null,
 			'params':null
 		}
@@ -40,7 +41,7 @@ pwf.rc('ui.abstract.el.link', {
 					});
 				});
 
-			if (url == pwf.dispatcher.get_path()) {
+			if (url == pwf.dispatcher.get_path() || (this.get('deep') && pwf.dispatcher.get_path().indexOf(url) === 0)) {
 				el.addClass('active');
 			}
 		}

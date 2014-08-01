@@ -26,7 +26,8 @@ pwf.rc('ui.intra.team.settings.main', {
 
 	'storage':{
 		'opts':{
-			'model':'Impro::Team'
+			'model':'Impro::Team',
+			'section':'obecne'
 		}
 	},
 

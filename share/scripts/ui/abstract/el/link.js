@@ -4,6 +4,7 @@ pwf.rc('ui.abstract.el.link', {
 	'storage':{
 		'opts':{
 			'tag':'a',
+			'cname':'',
 			'path':null,
 			'title':null,
 			'params':null
@@ -20,8 +21,13 @@ pwf.rc('ui.abstract.el.link', {
 
 		'construct':function(proto)
 		{
-			this.get_el()
-				.attr('href', pwf.dispatcher.url(this.get('path'), this.get('params')))
+			var
+				url = pwf.dispatcher.url(this.get('path'), this.get('params')),
+				el  = this.get_el();
+
+			el
+				.attr('href', url)
+				.addClass(this.get('cname'))
 				.html(this.get('title'))
 				.bind('click', this, function(e) {
 					e.preventDefault();
@@ -33,6 +39,10 @@ pwf.rc('ui.abstract.el.link', {
 						'url':e.data.get_el().attr('href')
 					});
 				});
+
+			if (url == pwf.dispatcher.get_path()) {
+				el.addClass('active');
+			}
 		}
 	}
 });

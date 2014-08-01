@@ -312,6 +312,7 @@ pwf.rc('ui.intra.team.attendance.browser', {
 				for (var t = 0, tlen = trainings.length; t < tlen; t++) {
 					pwf.create('ui.intra.team.attendance.ack', {
 						'ack':this.get_ack_for(members[m].get('id'), trainings[t].get('id')),
+						'team':this.get('team'),
 						'member':members[m],
 						'tg':trainings[t],
 						'parent':row,

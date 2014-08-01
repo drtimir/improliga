@@ -6,7 +6,11 @@ pwf.rc('ui.intra.team.attendance.ack', {
 
 	'storage':{
 		'opts':{
-			'tag':'td'
+			'tag':'td',
+			'ack':null,
+			'team':null,
+			'member':null,
+			'user':null
 		}
 	},
 
@@ -60,10 +64,8 @@ pwf.rc('ui.intra.team.attendance.ack', {
 				el.inner.addClass('status-' + ack.get('status'));
 			}
 
-			if (tg !== null) {
-				if (tg.get('start').isBefore(pwf.moment(), 'day')) {
-					el.inner.addClass('history-tg');
-				}
+			if (tg.get('start').isBefore(pwf.moment(), 'day')) {
+				el.inner.addClass('history-tg');
 			}
 		},
 
@@ -71,17 +73,24 @@ pwf.rc('ui.intra.team.attendance.ack', {
 		'redraw':function(proto)
 		{
 			this.get_el().html('');
+
 			proto('draw');
+			proto('bind');
 		},
 
 
 		'bind':function(proto)
 		{
 			var
-				mem = this.get('member'),
-				el  = this.get_el();
+				mem  = this.get('member'),
+				el   = this.get_el(),
+				tg   = this.get('tg'),
+				team = this.get('team'),
+				before  = tg.get('start').isAfter(pwf.moment(), 'day'),
+				own     = pwf.model.cmp(mem.get('user'), pwf.site.get_user()),
+				manager = pwf.site.is_user_member_in(team, [2,3]);
 
-			if (pwf.model.cmp(mem.get('user'), pwf.site.get_user())) {
+			if (manager || (own && before)) {
 				el.inner.addClass('writeable');
 				el.inner.bind('click', this, proto('callbacks').edit);
 			}
@@ -105,10 +114,14 @@ pwf.rc('ui.intra.team.attendance.ack', {
 				ack = this.get('ack'),
 				data = {
 					'parent':pwf.jquery('body'),
-					'after_save':function() {
-						this.close();
-						proto('redraw');
-					}
+					'after_save':function(ctrl, proto) {
+						return function() {
+							this.close();
+
+							ctrl.set('ack', this.get('item'));
+							proto('redraw');
+						};
+					}(this, proto)
 				};
 
 			if (ack) {

@@ -84,16 +84,6 @@
 	"intra_team_comment_response_owner":"Uživatel {user_name} okomentoval váš komentář na zdi týmu {team_name}.\n\n{text}",
 	"intra_team_no_members":"Žádní členové",
 
-	"intra_warning_working":"Na této části webu zatím pracujeme.",
-
-	"intra_visible":"Viditelné",
-	"intra_invisible":"Neviditelné",
-	"intra_published":"Veřejné",
-	"intra_unpublished":"Nezveřejněné",
-	"intra_archive":"Archivní",
-	"intra_planned":"Naplánované",
-	"intra_events_my":"Moje události",
-
 	"attr_impro_team_use_discussion":"Používat diskuze",
 	"attr_impro_team_use_discussion_desc":"Zapne interní diskuzi na stránce týmu",
 	"attr_impro_team_use_attendance":"Používat docházku",
@@ -164,6 +154,10 @@
 
 	"menu-create-event":"Událost",
 	"menu-create-training":"Trénink",
+
+	"team-member-invite":"Pozvat nového člena",
+	"invite":"Pozvat",
+	"enter-email":"Zadejte e-mail",
 
 	"cancel":"Zrušit",
 

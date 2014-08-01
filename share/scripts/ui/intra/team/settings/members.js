@@ -1,24 +1,13 @@
 pwf.rc('ui.intra.team.settings.members', {
-	'parents':['ui.abstract.list'],
+	'parents':['ui.structure.section'],
 
 	'storage':{
+		'objects':[],
 		'opts':{
-			'model':'Impro::Team::Member',
-			'draw':'ui.intra.team.settings.members.member',
-			'attrs':['name', 'name_full', 'city', 'mail', 'site', 'about'],
-			'heading':'team-cfg-member-list',
-			'join':['user', 'team'],
-			'filters':[],
+			'structure':[
+				'ui.intra.team.settings.members.list',
+				'ui.intra.team.settings.members.invite'
+			]
 		}
-	},
-
-
-	'init':function(proto)
-	{
-		proto.storage.opts.filters.push({
-			'attr':'id_impro_team',
-			'type':'exact',
-			'exact':this.get('item')
-		});
-	},
+	}
 });

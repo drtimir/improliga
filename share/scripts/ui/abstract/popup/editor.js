@@ -1,6 +1,28 @@
 pwf.rc('ui.abstract.popup.editor', {
 	'parents':['el.popup', 'adminer.editor'],
 
+	'storage':{
+		'opts':{
+			'buttons':[
+				{
+					'type':'submit',
+					'label':'adminer-save'
+				},
+				{
+					'type':'button',
+					'label':'cancel',
+					'on_click':function(e) {
+						this.close();
+					}
+				}
+			],
+
+			'after_save':function()
+			{
+				this.close();
+			}
+		}
+	},
 
 	'proto':{
 		'construct':function(proto)

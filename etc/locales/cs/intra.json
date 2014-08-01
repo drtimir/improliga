@@ -36,6 +36,7 @@
 
 	"intra-team-home":"Přehled",
 	"intra-team-info":"Informace",
+	"intra-team-events":"Události",
 	"intra-team-shows":"Představení",
 	"intra-team-workshops":"Workshopy",
 	"intra-team-discussion":"Diskuze",
@@ -102,6 +103,7 @@
 
 	"team-menu-overview":"Přehled",
 	"team-menu-shows":"Představení",
+	"team-menu-events":"Události",
 	"team-menu-workshops":"Workshopy",
 	"team-menu-settings":"Nastavení",
 	"team-menu-discussion":"Diskuze",

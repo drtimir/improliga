@@ -49,21 +49,13 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			},
 
 			{
-				'name':'team_shows',
-				'anchor':'/tymy/{team:seoname}/predstaveni',
+				'name':'team_events',
+				'anchor':'/tymy/{team:seoname}/udalosti',
 				'structure':[
 					'ui.intra.sections.team.header',
+					'ui.intra.team.events'
 				]
 			},
-
-			{
-				'name':'team_workshops',
-				'anchor':'/tymy/{team:seoname}/workshopy',
-				'structure':[
-					'ui.intra.sections.team.header',
-				]
-			},
-
 
 			{
 				'name':'team_attendance',

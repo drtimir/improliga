@@ -50,13 +50,8 @@ pwf.rc('ui.intra.sections.team.header', {
 			});
 
 			proto('create_menu_item', {
-				'label':'shows',
-				'url':'team_shows'
-			});
-
-			proto('create_menu_item', {
-				'label':'workshops',
-				'url':'team_workshops'
+				'label':'events',
+				'url':'team_events'
 			});
 
 			proto('create_menu_item', {

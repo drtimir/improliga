@@ -46,11 +46,13 @@ pwf.rc('ui.intra.sections.team.header', {
 		{
 			proto('create_menu_item', {
 				'label':'overview',
+				'deep':false,
 				'url':'team'
 			});
 
 			proto('create_menu_item', {
 				'label':'events',
+				'deep':true,
 				'url':'team_events'
 			});
 
@@ -58,12 +60,14 @@ pwf.rc('ui.intra.sections.team.header', {
 				'label':'discussion',
 				'url':'team_discussion',
 				'settings':'use_discussion',
+				'deep':true,
 				'groups':[1,2,3,4,5,6,7,8,9]
 			});
 
 			proto('create_menu_item', {
 				'label':'settings',
 				'url':'team_settings',
+				'deep':true,
 				'groups':[2]
 			});
 
@@ -71,6 +75,7 @@ pwf.rc('ui.intra.sections.team.header', {
 				'label':'attendance',
 				'url':'team_attendance',
 				'settings':'use_attendance',
+				'deep':true,
 				'groups':[2,3,4,7]
 			});
 		},
@@ -94,11 +99,12 @@ pwf.rc('ui.intra.sections.team.header', {
 				item = pwf.create('ui.abstract.el.link', {
 					'parent':this.get_el('menu'),
 					'path':opts.url,
+					'deep':opts.deep,
 					'title':pwf.locales.trans('team-menu-' + opts.label),
 					'cname':'team-menu-item',
-					'params':{
+					'params':pwf.merge({
 						'team':this.get('item').get_seoname()
-					}
+					}, opts.params)
 				});
 			}
 

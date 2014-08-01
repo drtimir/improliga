@@ -21,7 +21,6 @@ pwf.rc('ui.intra.menu.create.item', {
 
 		'callbacks':{
 			'use':function(e) {
-				e.stopPropagation();
 				e.data.get_el().trigger('activate', e.data);
 			}
 		}

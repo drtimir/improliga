@@ -253,6 +253,8 @@ input[type=text],
 
 
 .input-rte {
+	background:transparent;
+
 	.rte-menu {
 		background:#666;
 	}
@@ -271,5 +273,46 @@ input[type=text],
 .input-autocompleter {
 	.ac-object {
 		font-size:12px;
+	}
+}
+
+.input-datetime {
+	.input {
+		padding:0;
+		margin:0;
+		display:inline-block;
+
+		&.input-date {
+			margin-right:5px;
+
+			input {
+				width:100px;
+				min-width:0;
+			}
+		}
+
+		&.input-time {
+			input {
+				width:50px;
+				min-width:0;
+			}
+		}
+	}
+}
+
+
+.input-date {
+	.input {
+		padding:0;
+	}
+
+	.picker-date-cal {
+		z-index:100;
+		margin-top:39px;
+		background:rgba(0,0,0,.8);
+
+		.month_name {
+			line-height:25px;
+		}
 	}
 }

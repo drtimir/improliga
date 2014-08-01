@@ -25,10 +25,6 @@ pwf.rc('ui.intra.menu.create', {
 				.addClass('typical-menu')
 				.bind('activate', this, proto('callbacks').activate);
 
-			el.cleaner.addClass('cleaner');
-			el.editor.bind('click', function(e) {
-				e.stopPropagation();
-			});
 			proto('construct_items');
 		},
 
@@ -69,10 +65,6 @@ pwf.rc('ui.intra.menu.create', {
 
 		'activate':function(proto, item)
 		{
-			var el = this.get_el('menu_content')
-
-			el.editor.html('');
-
 			pwf.create(item.get('ui'), {
 				'parent':pwf.jquery('body')
 			}).load().show();

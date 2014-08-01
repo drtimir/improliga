@@ -65,18 +65,18 @@ pwf.rc('ui.intra.sections.team.header', {
 			});
 
 			proto('create_menu_item', {
+				'label':'trainings',
+				'url':'team_trainings',
+				'settings':'use_attendance',
+				'deep':true,
+				'groups':[2,3,4,7]
+			});
+
+			proto('create_menu_item', {
 				'label':'settings',
 				'url':'team_settings',
 				'deep':true,
 				'groups':[2]
-			});
-
-			proto('create_menu_item', {
-				'label':'attendance',
-				'url':'team_attendance',
-				'settings':'use_attendance',
-				'deep':true,
-				'groups':[2,3,4,7]
 			});
 		},
 

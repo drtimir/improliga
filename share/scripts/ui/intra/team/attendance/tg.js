@@ -20,20 +20,19 @@ pwf.rc('ui.intra.team.attendance.tg', {
 			var
 				el   = this.get_el(),
 				item = this.get('item'),
-				url  = pwf.dispatcher.url('team_training', {
-					'team':item.get('team').get_seoname(),
-					'tg':item.get('id')
-				}),
-				link = pwf.jquery('<a/>')
-					.attr('href', url)
-					.html(item.get('start').format('D.M.'));
-
+				link = pwf.create('ui.abstract.el.link', {
+					'parent':el,
+					'path':'team_training',
+					'title':item.get('start').format('D.M.'),
+					'params':{
+						'team':item.get('team').get_seoname(),
+						'tg':item.get('id')
+					}
+				});
 
 			if (item.get('start').isBefore(pwf.moment(), 'day')) {
 				el.addClass('history-tg');
 			}
-
-			el.html(link);
 		}
 	}
 });

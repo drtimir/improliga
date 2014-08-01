@@ -91,23 +91,15 @@ pwf.rc('ui.intra.sections.team.header', {
 			}
 
 			if (allowed) {
-				item = pwf.jquery('<a/>')
-					.html(pwf.locales.trans('team-menu-' + opts.label))
-					.addClass('team-menu-item')
-					.appendTo(this.get_el('menu'))
-					.bind('click', function(e) {
-						var el = pwf.jquery(this);
-
-						el.trigger('navigate', {
-							'title':el.text(),
-							'url':el.attr('href')
-						});
-						e.stopPropagation();
-						e.preventDefault();
-					})
-					.attr('href', pwf.dispatcher.url(opts.url, {
+				item = pwf.create('ui.abstract.el.link', {
+					'parent':this.get_el('menu'),
+					'path':opts.url,
+					'title':pwf.locales.trans('team-menu-' + opts.label),
+					'cname':'team-menu-item',
+					'params':{
 						'team':this.get('item').get_seoname()
-					}));
+					}
+				});
 			}
 
 			return item;

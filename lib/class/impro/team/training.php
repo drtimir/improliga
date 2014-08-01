@@ -10,8 +10,11 @@ namespace Impro\Team
 			"start"    => array('datetime'),
 			"open"     => array('bool'),
 			"canceled" => array('bool', "default" => false),
-			"desc"     => array('html'),
+
 			"location" => array('belongs_to', "model" => 'System\Location', "is_null" => true),
+			"lector"   => array('belongs_to', "model" => 'System\User', "is_null" => true),
+
+			"desc"     => array('html'),
 			"author"   => array('belongs_to', "model" => 'System\User'),
 			"acks"     => array('has_many', "model" => 'Impro\Team\Training\Ack'),
 		);

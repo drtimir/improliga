@@ -69,6 +69,7 @@
 	"model-Impro::Team::Training-attr-location":"Místo",
 	"model-Impro::Team::Training-attr-team":"Tým",
 	"model-Impro::Team::Training-attr-acks":"Potvrzení",
+	"model-Impro::Team::Training-attr-lector":"Lektor",
 
 	"model-Impro::Team::Training::Ack":"Potvrzení",
 	"model-Impro::Team::Training::Ack-attr-status":"Odpověď",

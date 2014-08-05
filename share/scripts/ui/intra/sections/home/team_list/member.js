@@ -44,11 +44,10 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 				el   = this.get_el('actions'),
 				team = this.get('team');
 
-			proto('link', 'team-shows', 'team_shows');
-			proto('link', 'team-workshops', 'team_workshops');
+			proto('link', 'team-workshops', 'team_events');
 
 			if (team.get('use_attendance')) {
-				proto('link', 'team-attendance', 'team_attendance');
+				proto('link', 'team-attendance', 'team_trainings');
 			}
 
 			if (team.get('use_discussion')) {
@@ -61,14 +60,14 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 		{
 			var
 				wrap = pwf.jquery.div('team-action').appendTo(this.get_el('actions')),
-				item = pwf.jquery('<a/>').appendTo(wrap),
-				url = pwf.dispatcher.url(route, {
-					'team':this.get('team').get_seoname()
+				item = pwf.create('ui.abstract.el.link', {
+					'parent':wrap,
+					'path':route,
+					'title':pwf.locales.trans('intra-' + label),
+					'params': {
+						'team':this.get('team').get_seoname()
+					}
 				});
-
-			item
-				.html(pwf.locales.trans('intra-' + label))
-				.attr('href', url);
 		}
 	}
 });

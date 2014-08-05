@@ -8,7 +8,17 @@
 	}, "frontend"],
 
 
-	["^/api/team/([^/]+)/member/invite", {
+	["^/service/invite/([^/]+)$", {
+		"layout":["layout/intra/service"],
+		"modules":[
+			["team/member/register", {
+				"auth_uid":"#{0}"
+			}]
+		]
+	}, "team_member_register"],
+
+
+	["^/api/team/([^/]+)/member/invite$", {
 		"modules":[["team/member/invite", {"id_team":"#{0}"}]],
 		"format":"json"
 	}, "team_member_invite"],

@@ -53,18 +53,17 @@ if ($team = find('Impro\Team', $id_team)) {
 			}
 		} else {
 			// User does not exist, send him invite to intranet
-			$user = create('\System\User', array(
-				'login'    => $name,
-				'groups'   => array(3)
+			Impro\User\Alert::generate(array(
+				'type'         => Impro\User\Alert::TYPE_REQUEST,
+				'template'     => Impro\User\Alert::TEMPLATE_INVITE_TEAM_NEW,
+				'generated_by' => 'organic-invite',
+				'author'       => $request->user,
+				'team'         => $team,
+				'rcpt'         => $name,
 			));
 
-			$contact = create('\System\User\Contact', array(
-				'user'  => $user,
-				'ident' => $name,
-				'name'  => 'výchozí',
-				'spam'  => true,
-				'type'  => \System\User\Contact::STD_EMAIL
-			));
+			$data['msg'] = 'success';
+			$data['status'] = 200;
 		}
 
 

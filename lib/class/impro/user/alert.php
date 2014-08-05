@@ -10,6 +10,7 @@ namespace Impro\User
 		const TEMPLATE_NOTICE          = 1;
 		const TEMPLATE_REQUEST         = 2;
 		const TEMPLATE_INVITE_TEAM     = 3;
+		const TEMPLATE_INVITE_TEAM_NEW = 5;
 		const TEMPLATE_INVITE_TRAINING = 4;
 
 		const RESPONSE_YES   = 1;
@@ -29,6 +30,7 @@ namespace Impro\User
 				self::TEMPLATE_NOTICE          => 'common-notice',
 				self::TEMPLATE_REQUEST         => 'common-request',
 				self::TEMPLATE_INVITE_TEAM     => 'invite-team',
+				self::TEMPLATE_INVITE_TEAM_NEW => 'invite-team-new',
 				self::TEMPLATE_INVITE_TRAINING => 'invite-training',
 			)),
 
@@ -38,18 +40,18 @@ namespace Impro\User
 				self::RESPONSE_MAYBE  => 'maybe',
 			)),
 
-			"generated_by"   => array('varchar'),
-			"rcpt"           => array('email', "is_null" => true),
+			"generated_by" => array('varchar'),
+			"rcpt"         => array('email', "is_null" => true),
 
-			"user"           => array('belongs_to', "is_null" => true, "model" => 'System\User'),
-			"code"           => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
-			"author"         => array('belongs_to', "is_null" => true, "model" => 'System\User'),
-			"event"          => array('belongs_to', "is_null" => true, "model" => 'Impro\Event'),
-			"team"           => array('belongs_to', "is_null" => true, "model" => 'Impro\Team'),
-			"member"         => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Member'),
-			"training"       => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Training'),
+			"user"         => array('belongs_to', "is_null" => true, "model" => 'System\User'),
+			"code"         => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
+			"author"       => array('belongs_to', "is_null" => true, "model" => 'System\User'),
+			"event"        => array('belongs_to', "is_null" => true, "model" => 'Impro\Event'),
+			"team"         => array('belongs_to', "is_null" => true, "model" => 'Impro\Team'),
+			"member"       => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Member'),
+			"training"     => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Training'),
 
-			"allow_maybe"  => array('bool'),
+			"allow_maybe"  => array('bool', "default" => false),
 		);
 
 
@@ -99,25 +101,33 @@ namespace Impro\User
 
 		public function mail()
 		{
-			$conds = array(
-				"type" => \System\User\Contact::STD_EMAIL,
-				"spam" => true,
-			);
+			$cs_rcpt = null;
 
-			$contacts = $this->user->contacts->where($conds)->fetch();
+			if ($this->user) {
+				$conds = array(
+					"type" => \System\User\Contact::STD_EMAIL,
+					"spam" => true,
+				);
+
+				$contacts = $this->user->contacts->where($conds)->fetch();
+				$cs_rcpt  = collect(array('attr', 'ident'), $contacts, true);
+			}
+
 			$mail = $this->get_mail_from_template();
-
 			$contacts_author = $this->author->contacts->where(array(
 				"type"   => \System\User\Contact::STD_EMAIL,
 				"public" => true,
 			))->fetch();
 
-			$cs_rcpt   = collect(array('attr', 'ident'), $contacts, true);
 			$cs_author = collect(array('attr', 'ident'), $contacts_author, true);
 
-			$cs_rcpt = array_diff($cs_rcpt, $cs_author);
+			if (empty($cs_rcpt)) {
+				$cs_rcpt = array($this->rcpt);
+			}
 
 			if (any($cs_rcpt)) {
+				$cs_rcpt = array_diff($cs_rcpt, $cs_author);
+
 				if (any($cs_author)) {
 					$mail->reply_to = implode(', ', $cs_author);
 				}
@@ -127,6 +137,20 @@ namespace Impro\User
 			}
 
 			return true;
+		}
+
+
+		public function invalidate()
+		{
+			if ($this->code) {
+				$code = $this->code;
+				$this->code = null;
+
+				$this->save();
+				$this->code->drop();
+			}
+
+			return $this;
 		}
 	}
 }

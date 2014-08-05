@@ -198,6 +198,10 @@ pwf.register('site', function() {
 
 		if (!str || str == ' ') {
 			str = user.get('login');
+
+			if (str.indexOf('@')) {
+				str = str.substr(0, str.indexOf('@'));
+			}
 		}
 
 		if (!str) {

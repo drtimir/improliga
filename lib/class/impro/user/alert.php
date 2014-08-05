@@ -41,7 +41,7 @@ namespace Impro\User
 			"generated_by"   => array('varchar'),
 			"rcpt"           => array('email', "is_null" => true),
 
-			"user"           => array('belongs_to', "model" => 'System\User'),
+			"user"           => array('belongs_to', "is_null" => true, "model" => 'System\User'),
 			"code"           => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
 			"author"         => array('belongs_to', "is_null" => true, "model" => 'System\User'),
 			"event"          => array('belongs_to', "is_null" => true, "model" => 'Impro\Event'),

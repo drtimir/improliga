@@ -6,6 +6,7 @@ pwf.rc('ui.intra.team.settings.members', {
 		'opts':{
 			'structure':[
 				'ui.intra.team.settings.members.invite',
+				'ui.intra.team.settings.members.invited',
 				'ui.intra.team.settings.members.list'
 			]
 		}

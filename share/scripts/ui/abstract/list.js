@@ -131,7 +131,10 @@ pwf.rc('ui.abstract.list', {
 				}, item.get_data()),
 				obj = pwf.create(proto('get_ui_comp', item), opts);
 
-			obj.get_el().addClass('ui-list-item').css('opacity', 0);
+			obj.get_el()
+				.addClass(index%2 ? 'odd':'even')
+				.addClass('ui-list-item')
+				.css('opacity', 0);
 			setTimeout(function(ctrl, next) {
 				return function() {
 					obj.get_el().animate({'opacity':1}, 100, next);

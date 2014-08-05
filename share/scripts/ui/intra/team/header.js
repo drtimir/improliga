@@ -1,4 +1,4 @@
-pwf.rc('ui.intra.sections.team.header', {
+pwf.rc('ui.intra.team.header', {
 	"parents":['ui.abstract.detail'],
 
 	"storage":{
@@ -37,7 +37,11 @@ pwf.rc('ui.intra.sections.team.header', {
 				el = this.get_el();
 
 			el.name.short.html(item.get('name'));
-			el.name.long.html(item.get('name_full'));
+
+			if (item.get('name') && item.get('name_full') != item.get('name')) {
+				el.name.long.html(item.get('name_full'));
+			}
+
 			pwf.thumb.fit(item.get('logo').path, el.logo);
 		},
 

@@ -1,0 +1,42 @@
+.ui-intra-team-header {
+	padding-bottom:30px;
+	margin-bottom:30px;
+	border-bottom:1px solid #eee;
+	position:relative;
+
+	.logo {
+		width:180px;
+		height:180px;
+		float:left;
+		margin-right:60px;
+	}
+
+	.name {
+		float:left;
+		padding-top:30px;
+
+		.long,
+		.short
+		{
+			line-height:36px;
+			font-size:32px;
+		}
+	}
+
+	.menu {
+		position:absolute;
+		left:240px;
+		bottom:10px;
+		line-height:31px;
+
+		.team-menu-item {
+			.button_ui();
+			margin-right:10px;
+
+			&:last-child {
+				margin-right:0;
+			}
+
+		}
+	}
+}

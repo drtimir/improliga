@@ -41,7 +41,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team',
 				'anchor':'/tymy/{team:seoname}',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 					'ui.intra.sections.team.home.info',
 					'ui.intra.sections.team.home.members',
 					'ui.cleaner'
@@ -52,7 +52,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_events',
 				'anchor':'/tymy/{team:seoname}/udalosti',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 					'ui.intra.team.events'
 				]
 			},
@@ -62,7 +62,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_trainings',
 				'anchor':'/tymy/{team:seoname}/treninky',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 					'ui.intra.team.attendance.browser'
 				]
 			},
@@ -71,7 +71,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_training',
 				'anchor':'/tymy/{team:seoname}/treninky/{tg:int}',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 				]
 			},
 
@@ -80,7 +80,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_settings',
 				'anchor':'/tymy/{team:seoname}/nastaveni',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 					'ui.intra.team.settings.main'
 				]
 			},
@@ -89,7 +89,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_settings_section',
 				'anchor':'/tymy/{team:seoname}/nastaveni/{section:string}',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 					'ui.intra.team.settings.main'
 				]
 			},
@@ -98,7 +98,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'name':'team_discussion',
 				'anchor':'/tymy/{team:seoname}/diskuze',
 				'structure':[
-					'ui.intra.sections.team.header',
+					'ui.intra.team.header',
 				]
 			},
 

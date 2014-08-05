@@ -11,6 +11,7 @@ html(lang=$loc->get_lang())
 
 			$ren->content_for('styles', 'styles/bundle/common');
 			$ren->content_for('styles', 'styles/bundle/intranet');
+			$ren->content_for('title', $loc->trans('intra-name'));
 
 			$ren->content_from('head');
 
@@ -26,12 +27,12 @@ html(lang=$loc->get_lang())
 				.layout-inner
 					.block.left
 						.context
-							!=$ren->link_for('home', $ren->heading_layout($loc->trans('intra_name')))
-							p!=$loc->trans('intra_desc')
+							!=$ren->link_for('home', $ren->heading_layout($loc->trans('intra-name')))
+							p!=$loc->trans('intra-desc')
 
 						.context
-							!=$ren->heading($loc->trans('intra_register'))
-							p!=$loc->trans('intra_register_desc', 'http://www.improliga.cz/kontakty/')
+							!=$ren->heading($loc->trans('intra-register'))
+							p!=$loc->trans('intra-register-desc', 'http://www.improliga.cz/kontakty/')
 
 					.block.right
 						:php

@@ -1,9 +1,9 @@
 {
-	"intra_name":"Intranet Improligy",
-	"intra_desc":"Připojte se k intranetu a komunikujte s týmy a lidmi Improligy a sdílejte svoje veřejné akce tak, aby se nekřížily s ostatními týmy.",
+	"intra-name":"Intranet Improligy",
+	"intra-desc":"Připojte se k intranetu a komunikujte s týmy a lidmi Improligy a sdílejte svoje veřejné akce tak, aby se nekřížily s ostatními týmy.",
 
-	"intra_register":"Chcete se připojit?",
-	"intra_register_desc":"Pokud patříte k nějakému týmu, ozvěte se svému trenérovi nebo organizátorovi. Pokud váš tým zatím nemá přístupy, napište na <a href=\"%s\">technickou podporu</a>.",
+	"intra-register":"Chcete se připojit?",
+	"intra-register-desc":"Pokud patříte k nějakému týmu, ozvěte se svému trenérovi nebo organizátorovi. Pokud váš tým zatím nemá přístupy, napište na <a href=\"%s\">technickou podporu</a>.",
 
 
 	"intra-menu-home":"Domů",

@@ -18,7 +18,9 @@ pwf.rc('ui.intra.team.settings.members.invite', {
 		{
 			proto.storage.form = pwf.create('form', {
 				'parent':this.get_el(),
-				'action':pwf.dispatcher.url('team_member_invite'),
+				'action':pwf.dispatcher.url('api_team_member_invite', {
+					'team':this.get('team-seoname')
+				}),
 				'heading':pwf.locales.trans('team-member-invite'),
 				'elements':[
 					{

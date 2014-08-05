@@ -85,6 +85,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				]
 			},
 
+
 			{
 				'name':'team_settings_section',
 				'anchor':'/tymy/{team:seoname}/nastaveni/{section:string}',
@@ -156,7 +157,13 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/sdilene',
 				'cname':'ui.structure.section',
 				'structure':[]
-			}
+			},
+
+
+			{
+				'name':'api_team_member_invite',
+				'anchor':'/api/team/{team:seoname}/member/invite'
+			},
 		],
 
 		'on_load':function(next) {

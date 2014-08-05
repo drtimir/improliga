@@ -1,6 +1,10 @@
 {
 	"System\\User\\Group":[
 		{
+			"id": 4,
+			"name": "Trenéři"
+		},
+		{
 			"id":5,
 			"name":"Hudebníci"
 		},

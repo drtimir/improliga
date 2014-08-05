@@ -7,6 +7,13 @@
 		"title":"Intranet Improligy"
 	}, "frontend"],
 
+
+	["^/api/team/([^/]+)/member/invite", {
+		"modules":[["team/member/invite", {"id_team":"#{0}"}]],
+		"format":"json"
+	}, "team_member_invite"],
+
+
 	["^/user/status/$", {
 			"modules":[
 				["impro/user/status"]

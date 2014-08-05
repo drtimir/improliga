@@ -39,6 +39,7 @@ namespace Impro\User
 			)),
 
 			"generated_by"   => array('varchar'),
+			"rcpt"           => array('email', "is_null" => true),
 
 			"user"           => array('belongs_to', "model" => 'System\User'),
 			"code"           => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
@@ -58,9 +59,17 @@ namespace Impro\User
 		);
 
 
+		public static function generate(array $opts)
+		{
+			$item = new self($opts);
+
+			return $item->gen_code()->save()->mail();
+		}
+
+
 		public function gen_code()
 		{
-			$this->code = \System\User\Auth\Code::generate($user);
+			$this->code = \System\User\Auth\Code::generate($this->user);
 			return $this;
 		}
 
@@ -79,8 +88,8 @@ namespace Impro\User
 			$locales  = new \System\Locales();
 			$locales->set_locale();
 
-			$subject = stprintf($locales()->trans($subject), $this->get_data());
-			$body    = stprintf($locales()->trans($bidy), $this->get_data());
+			$subject = stprintf($locales->trans($subject), $this->get_data());
+			$body    = stprintf($locales->trans($body), $this->get_data());
 
 			$mail = \System\Offcom\Mail::create($subject, $body);
 
@@ -99,8 +108,9 @@ namespace Impro\User
 			$mail = $this->get_mail_from_template();
 
 			$contacts_author = $this->author->contacts->where(array(
-				"type" => \System\User\Contact::STD_EMAIL, "public" => true,
-				))->fetch();
+				"type"   => \System\User\Contact::STD_EMAIL,
+				"public" => true,
+			))->fetch();
 
 			$cs_rcpt   = collect(array('attr', 'ident'), $contacts, true);
 			$cs_author = collect(array('attr', 'ident'), $contacts_author, true);

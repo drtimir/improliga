@@ -1,4 +1,4 @@
-pwf.rc('ui.intra.team.settings.members.invited', {
+pwf.rc('ui.intra.team.settings.members.invitations.invited', {
 	'parents':['ui.abstract.list'],
 
 	'storage':{

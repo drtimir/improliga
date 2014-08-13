@@ -25,6 +25,12 @@ pwf.rc('ui.abstract.popup.editor', {
 	},
 
 	'proto':{
+		'el_attached':function(proto)
+		{
+			proto('construct_popup');
+		},
+
+
 		'construct':function(proto)
 		{
 			proto('construct_ui');

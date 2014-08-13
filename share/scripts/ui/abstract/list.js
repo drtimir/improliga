@@ -7,6 +7,7 @@ pwf.rc('ui.abstract.list', {
 			'center':false,
 			'model':null,
 			'draw':null,
+			'draw_empty':'ui.abstract.list.empty',
 			'filters':[],
 			'ui_filters':[]
 		}
@@ -41,10 +42,11 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
-		'redraw':function(proto) {
+		'redraw':function(proto, next) {
 			var
 				el = this.get_el('content'),
 				children = el.children('.ui-list-item'),
+				list = this.get_data(),
 				jobs = [];
 
 			jobs.push(function(next) {
@@ -52,16 +54,22 @@ pwf.rc('ui.abstract.list', {
 			});
 
 			jobs.push(function(next) {
-				proto('draw_items', next);
+				if (list.data.length) {
+					proto('draw_items', next);
+				} else {
+					proto('draw_empty', next);
+				}
 			});
 
-			pwf.async.series(jobs, function(ctrl) {
-				return function() {
+			pwf.async.series(jobs, function(ctrl, next) {
+				return function(err) {
 					ctrl.get_el('content')
 						.append(pwf.jquery.span('cleaner'))
 						.trigger('resize');
+
+					ctrl.respond(next, err);
 				};
-			}(this));
+			}(this, next));
 		},
 
 
@@ -115,6 +123,24 @@ pwf.rc('ui.abstract.list', {
 		},
 
 
+		'draw_empty':function(proto, next)
+		{
+			var obj = pwf.create(this.get('draw_empty'), {
+				'parent':this.get_el('content'),
+				'ref':this
+			});
+
+			obj.get_el().css('opacity', 0);
+
+
+			setTimeout(function(ctrl, next) {
+				return function() {
+					obj.get_el().animate({'opacity':1}, 100, next);
+				};
+			}(this, next), 25);
+		},
+
+
 		'get_ui_comp':function()
 		{
 			return this.get('draw');
@@ -136,6 +162,7 @@ pwf.rc('ui.abstract.list', {
 				.addClass(index%2 ? 'odd':'even')
 				.addClass('ui-list-item')
 				.css('opacity', 0);
+
 			setTimeout(function(ctrl, next) {
 				return function() {
 					obj.get_el().animate({'opacity':1}, 100, next);

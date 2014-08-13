@@ -139,6 +139,7 @@
 	"team-cfg-features":"Funkce",
 	"team-cfg-members":"Členové",
 	"team-cfg-member-list":"Seznam členů",
+	"team-cfg-member-invited-list":"Seznam pozvaných",
 
 	"team-attd-respond":"Účast na tréninku",
 
@@ -156,6 +157,7 @@
 	"menu-create-training":"Trénink",
 
 	"team-member-invite":"Pozvat nového člena",
+	"team-member-invite-cancel":"Zrušit pozvánku",
 	"invite":"Pozvat",
 	"enter-email":"Zadejte e-mail",
 

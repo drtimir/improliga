@@ -27,7 +27,7 @@ pwf.rc('ui.intra.team.settings.members.invitations.invite', {
 						'name':'name',
 						'type':'email',
 						'required':true,
-						'label':pwf.locales.trans('enter-email'),
+						'placeholder':pwf.locales.trans('enter-email'),
 					},
 					{
 						'element':'button',

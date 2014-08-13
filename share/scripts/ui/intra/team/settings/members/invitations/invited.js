@@ -4,7 +4,7 @@ pwf.rc('ui.intra.team.settings.members.invitations.invited', {
 	'storage':{
 		'opts':{
 			'model':'Impro::User::Alert',
-			'draw':'ui.intra.team.settings.members.member',
+			'draw':'ui.intra.team.settings.members.member.invited',
 			'heading':'team-cfg-member-invited-list',
 			'filters':[
 				{

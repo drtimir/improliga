@@ -4,7 +4,7 @@ pwf.rc('ui.intra.editor.event', {
 	'storage':{
 		'opts':{
 			'model':'Impro::Event',
-			'exclude':['canceled', 'acks', 'author', 'desc_short', 'capacity', 'publish_at', 'publish_wait', 'published']
+			'exclude':['image', 'price', 'price_student', 'canceled', 'acks', 'author', 'desc_short', 'capacity', 'publish_at', 'publish_wait', 'published']
 		}
 	},
 
@@ -20,11 +20,19 @@ pwf.rc('ui.intra.editor.event', {
 			'options':opts
 		};
 
+		proto.storage.opts.inputs.type = {
+			'required':true
+		};
+
 		proto.storage.opts.inputs.start =
-		proto.storage.opts.inputs.end =
+		proto.storage.opts.inputs.end = {
+			'value':pwf.moment()
+		};
+
 		proto.storage.opts.inputs.start_time =
 		proto.storage.opts.inputs.end_time = {
-			'placeholder':true
+			'label':pwf.locales.trans('intra-input-time'),
+			'placeholder':true,
 		};
 
 		proto.storage.opts.inputs.type = {
@@ -36,11 +44,15 @@ pwf.rc('ui.intra.editor.event', {
 					away  = this.get('form').get_input('team_away');
 
 				if (val == 2) {
-					home.get_el('label').html(pwf.locales.trans_attr('Impro::Event', 'team_home'));
 					away.get_el().show();
+					home.get_el('label')
+						.html(pwf.locales.trans_attr('Impro::Event', 'team_home'))
+						.append('<span class="label-sep">:</span>');
 				} else {
-					home.get_el('label').html(pwf.locales.trans_attr('Impro::Event', 'team_master'));
 					away.get_el().hide().val(null);
+					home.get_el('label')
+						.html(pwf.locales.trans_attr('Impro::Event', 'team_master'))
+						.append('<span class="label-sep">:</span>');
 				}
 
 				this.get_el().trigger('resize');

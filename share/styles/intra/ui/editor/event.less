@@ -1,6 +1,12 @@
 .ui-intra-editor-event {
+	label {
+		width:100px;
+	}
+
 	.input {
 		clear:both;
+		padding:0;
+		margin-bottom:7px;
 
 		&.input-date,
 		&.input-time
@@ -15,6 +21,18 @@
 			}
 		}
 
+		&.input-rte {
+			.input-synth {
+				width:400px;
+			}
+		}
+
+		&.input-autocompleter {
+			.input-synth {
+				width:340px;
+			}
+		}
+
 		&.input-named-start,
 		&.input-named-end,
 		&.input-named-start_time,
@@ -26,6 +44,26 @@
 
 		&.input-named-end {
 			clear:left;
+		}
+
+		&.input-named-start,
+		&.input-named-end
+		{
+			margin-right:5px;
+
+			input {
+				width:100px;
+				min-width:0;
+			}
+		}
+
+		&.input-named-start_time,
+		&.input-named-end_time
+		{
+			input {
+				width:60px;
+				min-width:0;
+			}
 		}
 	}
 }

@@ -7,7 +7,7 @@
 	"model-Impro::Event-dative-plural":"událostí",
 
 	"model-Impro::Event-attr-type":"Typ události",
-	"model-Impro::Event-attr-team_master":"Domácí tým",
+	"model-Impro::Event-attr-team_master":"Tým",
 	"model-Impro::Event-attr-team_home":"Domácí tým",
 	"model-Impro::Event-attr-team_away":"Tým hostů",
 	"model-Impro::Event-attr-location":"Umístění",

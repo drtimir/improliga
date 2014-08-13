@@ -7,6 +7,7 @@
 	"model-Impro::Event-dative-plural":"událostí",
 
 	"model-Impro::Event-attr-type":"Typ události",
+	"model-Impro::Event-attr-team_master":"Domácí tým",
 	"model-Impro::Event-attr-team_home":"Domácí tým",
 	"model-Impro::Event-attr-team_away":"Tým hostů",
 	"model-Impro::Event-attr-location":"Umístění",
@@ -20,7 +21,7 @@
 	"model-Impro::Event-attr-publish_at":"Datum zveřejnění",
 	"model-Impro::Event-attr-capacity":"Kapacita",
 	"model-Impro::Event-attr-price":"Cena",
-	"model-Impro::Event-attr-price_student":"Cena (student)",
+	"model-Impro::Event-attr-price_student":"Cena (zvýhodněná)",
 	"model-Impro::Event-attr-publish_wait":"Čekající na schválení",
 	"model-Impro::Event-attr-participants":"Seznam účastníků",
 

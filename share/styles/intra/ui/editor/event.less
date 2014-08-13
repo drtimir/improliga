@@ -1,0 +1,31 @@
+.ui-intra-editor-event {
+	.input {
+		clear:both;
+
+		&.input-date,
+		&.input-time
+		{
+			.input {
+				padding:0;
+				margin-bottom:0;
+			}
+
+			.picker-date-cleaner {
+				display:none;
+			}
+		}
+
+		&.input-named-start,
+		&.input-named-end,
+		&.input-named-start_time,
+		&.input-named-end_time
+		{
+			clear:none;
+			float:left;
+		}
+
+		&.input-named-end {
+			clear:left;
+		}
+	}
+}

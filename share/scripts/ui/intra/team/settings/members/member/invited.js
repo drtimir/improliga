@@ -70,6 +70,10 @@ pwf.rc('ui.intra.team.settings.members.member.invited', {
 
 		'open_kicker':function(proto)
 		{
+			pwf.create('ui.intra.team.settings.members.invitations.kicker', {
+				'item':this.get('item'),
+				'parent':pwf.jquery('body')
+			}).load().show();
 		},
 	}
 });

@@ -16,6 +16,11 @@ pwf.rc('ui.intra.team.settings.members.invitations.invited', {
 					'attr':'template',
 					'type':'exact',
 					'exact':[3,5]
+				},
+				{
+					'attr':'canceled',
+					'type':'exact',
+					'exact':false
 				}
 			],
 		}

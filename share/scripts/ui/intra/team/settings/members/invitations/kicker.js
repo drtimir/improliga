@@ -3,6 +3,7 @@ pwf.rc('ui.intra.team.settings.members.invitations.kicker', {
 
 	'storage':{
 		'opts':{
+			'heading':'Zrušit pozvánku',
 			'model':'Impro::User::Alert',
 			'attrs':['canceled'],
 			'inputs':{

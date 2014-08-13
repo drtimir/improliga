@@ -34,7 +34,11 @@ pwf.rc('ui.intra.team.settings.members.invitations.invite', {
 						'type':'submit',
 						'label':pwf.locales.trans('invite')
 					}
-				]
+				],
+
+				'on_ready':function(response) {
+					this.get_input('name').val('');
+				}
 			});
 		}
 	},

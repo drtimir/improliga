@@ -51,6 +51,7 @@ namespace Impro\User
 			"member"       => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Member'),
 			"training"     => array('belongs_to', "is_null" => true, "model" => 'Impro\Team\Training'),
 
+			"canceled"     => array('bool', "default" => false),
 			"allow_maybe"  => array('bool', "default" => false),
 		);
 

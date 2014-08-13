@@ -83,7 +83,6 @@ pwf.rc('ui.intra.team.settings.main', {
 		'create_editor':function()
 		{
 			var section = this.meta.static.get_section(this.get('section'));
-			v(this.get('vars'));
 
 			if (section) {
 				pwf.create(section.ui, {

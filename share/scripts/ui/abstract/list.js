@@ -126,6 +126,7 @@ pwf.rc('ui.abstract.list', {
 			var
 				target = this.get_el('content'),
 				opts = pwf.merge({
+					'ref':this,
 					'parent':target,
 					'item':item
 				}, item.get_data()),

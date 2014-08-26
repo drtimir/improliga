@@ -247,6 +247,20 @@ pwf.register('site', function() {
 	};
 
 
+	this.link_user_name = function(user)
+	{
+		if (typeof user == 'undefined') {
+			user = this.get_user();
+		}
+
+		return pwf.create('ui.abstract.el.link', {
+			'title':this.get_user_name(user),
+			'params':{'user':user.get('id')},
+			'path':'user'
+		});
+	};
+
+
 	this.is_user_member = function(team, role)
 	{
 		var

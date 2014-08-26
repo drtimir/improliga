@@ -1,0 +1,16 @@
+{
+	"mail-subject-common-notice":"",
+	"mail-body-common-notice":"",
+
+	"mail-subject-common-request":"",
+	"mail-body-common-request":"",
+
+	"mail-subject-invite-team":"Pozvánka do týmu",
+	"mail-body-invite-team":"Uživatel {author_name} vás pozval do týmu {team_name}.",
+
+	"mail-subject-invite-team-new":"Pozvánka k založení účtu",
+	"mail-body-invite-team-new":"Dobrý den,\n\nuživatel {author_name} vás pozval k založení účtu na Intranetu Improligy a připojení do týmu {team_name}.\n\nPokud chcete pokračovat, otevřete následující odkaz: {link}",
+
+	"mail-subject-invite-training":"",
+	"mail-body-invite-training":""
+}

@@ -7,7 +7,7 @@ $code = \System\User\Auth\Code::validate($request->get('auth_code'), $auth_uid);
 if ($code) {
 	$alert = get_first('\Impro\User\Alert')->where(array('id_code' => $code->id))->fetch();
 
-	if ($alert) {
+	if ($alert && $alert->template == \Impro\User\Alert::TEMPLATE_INVITE_TEAM_NEW) {
 		$f = $response->form(array(
 			'id'       => 'register',
 			'use_comm' => true,

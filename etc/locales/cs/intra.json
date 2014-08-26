@@ -16,7 +16,8 @@
 
 	"intra-menu-config-personal":"Osobní údaje",
 	"intra-menu-config-contacts":"Kontakty",
-	"intra-menu-config-password":"Heslo",
+	"intra-menu-config-password":"Změnit heslo",
+	"intra-menu-config-password-change":"Změna hesla",
 
 	"notice":"Upozornění",
 	"request":"Pozvánka",

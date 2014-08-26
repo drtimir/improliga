@@ -23,6 +23,11 @@
 		"format":"json"
 	}, "team_member_invite"],
 
+	["^/api/user/password", {
+		"modules":[["user/password_change"]],
+		"format":"json"
+	}, "user_password_change"],
+
 
 	["^/user/status/$", {
 			"modules":[

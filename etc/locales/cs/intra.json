@@ -14,6 +14,10 @@
 	"intra-menu-discussions":"Diskuze",
 	"intra-menu-shared":"Sdílené",
 
+	"intra-menu-config-personal":"Osobní údaje",
+	"intra-menu-config-contacts":"Kontakty",
+	"intra-menu-config-password":"Heslo",
+
 	"notice":"Upozornění",
 	"request":"Pozvánka",
 
@@ -150,7 +154,7 @@
 	"menu-profile":"Oznámení",
 	"menu-create":"Vytvořit",
 	"menu-search":"Vyhledat",
-	"menu-settings":"Nastavení",
+	"menu-config":"Nastavení",
 	"menu-exit":"Odhlásit",
 
 	"menu-create-event":"Událost",

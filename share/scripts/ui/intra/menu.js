@@ -30,9 +30,9 @@ pwf.rc('ui.intra.menu', {
 				'fire':'ui.intra.menu.search'
 			},
 			{
-				'ident':'settings',
-				'title':'menu-settings',
-				'fire':'ui.intra.menu.settings'
+				'ident':'config',
+				'title':'menu-config',
+				'fire':'ui.intra.menu.config'
 			},
 			{
 				'ident':'exit',

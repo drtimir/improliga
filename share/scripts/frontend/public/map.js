@@ -10,9 +10,9 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 					{
 						'cname':'ui.structure.section',
 						'pass':{
-							'bind':'home',
+							'bind':'header',
 							'parallax':true,
-							'structure':['ui.public.home']
+							'structure':['ui.public.home.']
 						}
 					},
 					{
@@ -20,7 +20,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'about',
 							'link':'o-improlize',
-							'structure':['ui.public.about']
+							'structure':['ui.public.about.']
 						}
 					},
 					{
@@ -29,7 +29,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'shows',
 							'link':'predstaveni',
 							'parallax':true,
-							'structure':['ui.public.shows']
+							'structure':['ui.public.shows.']
 						}
 					},
 					{
@@ -37,7 +37,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'teams',
 							'link':'tymy',
-							'structure':['ui.public.teams']
+							'structure':['ui.public.teams.']
 						}
 					},
 					{
@@ -46,7 +46,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'workshops',
 							'link':'workshopy',
 							'parallax':true,
-							'structure':['ui.public.workshops']
+							'structure':['ui.public.workshops.']
 						}
 					},
 					{
@@ -54,7 +54,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 						'pass':{
 							'bind':'media',
 							'link':'media-o-improlize',
-							'structure':['ui.public.media']
+							'structure':['ui.public.media.']
 						}
 					},
 					{
@@ -63,7 +63,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 							'bind':'contact',
 							'link':'kontakty',
 							'parallax':true,
-							'structure':['ui.public.contact']
+							'structure':['ui.public.contact.']
 						}
 					}
 				]

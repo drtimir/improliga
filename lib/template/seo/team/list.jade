@@ -1,0 +1,12 @@
+:php
+	$ren->content_for('title', $loc->trans('teams'));
+
+ul.team-list
+	-foreach $teams as $team
+		li.team
+			h3=$team->get_name()
+
+			.city
+				span.label
+					Město:
+				strong.value=$team->city

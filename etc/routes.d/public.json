@@ -9,7 +9,7 @@
 	}, "home"],
 
 	["^/tymy$", {"modules":[
-		["team/list"]
+		["seo/team/list"]
 	]}, "teams"],
 
 	["^/predstaveni$", {"modules":[

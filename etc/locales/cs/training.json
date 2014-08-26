@@ -15,9 +15,14 @@
 	"training_closed":"Uzavřený trénink",
 	"training_no_desc":"<p>Trénink nemá žádný popis.</p>",
 
-	"training_date":"Datum",
-	"training_start":"Začátek",
-	"training_trainer":"Vede",
+	"training-next-planned":"Další trénink je již naplánován.",
+
+	"training-date":"Datum",
+	"training-start":"Začátek",
+	"training-lector":"Vede",
+	"training-is-open":"Otevřený",
+
+	"training-latest":"Nejbližší trénink",
 
 	"":""
 }

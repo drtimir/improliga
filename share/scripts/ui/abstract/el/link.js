@@ -8,7 +8,7 @@ pwf.rc('ui.abstract.el.link', {
 			'path':null,
 			'deep':false,
 			'title':null,
-			'params':null,
+			'params':{},
 			'event':'navigate'
 		}
 	},
@@ -30,7 +30,6 @@ pwf.rc('ui.abstract.el.link', {
 			el
 				.attr('href', url)
 				.addClass(this.get('cname'))
-				.html(this.get('title'))
 				.bind('click', this, function(e) {
 					e.preventDefault();
 
@@ -41,6 +40,10 @@ pwf.rc('ui.abstract.el.link', {
 						'url':e.data.get_el().attr('href')
 					});
 				});
+
+			if (this.get('title')) {
+				el.html(pwf.locales.trans(this.get('title')))
+			}
 
 			if (url == pwf.dispatcher.get_path() || (this.get('deep') && pwf.dispatcher.get_path().indexOf(url) === 0)) {
 				el.addClass('active');

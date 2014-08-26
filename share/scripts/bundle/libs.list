@@ -12,3 +12,4 @@ bower/pwf-moment-compat
 
 scripts/ui/cleaner
 scripts/ui/loader
+scripts/ui/link

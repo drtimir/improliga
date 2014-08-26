@@ -4,7 +4,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 		'map':[
 			{
 				'name':'home',
-				'anchor':'/{section:string}?',
+				'anchor':'/{section:string:no}',
 				'cname':'ui.public.structure.home',
 				'structure':[
 					{

@@ -78,7 +78,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'team_detail',
 				'anchor':'/tymy/{item:seoname}',
-				'structure':['ui.public.team']
+				'structure':['ui.public.team.']
 			}
 		]
 	});

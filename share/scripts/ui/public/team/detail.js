@@ -81,7 +81,7 @@ pwf.rc('ui.public.team.detail', {
 				pwf.thumb.fit(item.get('photo').path, el.image);
 			}
 
-			pwf.create('ui.shows.events', {
+			pwf.create('ui.public.shows.events', {
 				'parent':el.events,
 				'ui_filters':[],
 				'per_page':5,

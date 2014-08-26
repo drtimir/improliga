@@ -63,6 +63,7 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 				'anchor':'/tymy/{team:seoname}/treninky',
 				'structure':[
 					'ui.intra.team.header',
+					'ui.intra.team.training.latest',
 					'ui.intra.team.attendance.browser'
 				]
 			},

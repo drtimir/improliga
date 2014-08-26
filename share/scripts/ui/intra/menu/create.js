@@ -4,11 +4,11 @@ pwf.rc('ui.intra.menu.create', {
 	'proto':{
 		'items':[
 			{
-				'name':'menu-create-event',
+				'title':'menu-create-event',
 				'ui':'ui.intra.editor.event'
 			},
 			{
-				'name':'menu-create-training',
+				'title':'menu-create-training',
 				'ui':'ui.intra.editor.training'
 			}
 		],
@@ -46,9 +46,14 @@ pwf.rc('ui.intra.menu.create', {
 
 		'construct_item':function(proto, item)
 		{
-			pwf.create('ui.intra.menu.create.item', pwf.merge(item, {
-				'parent':this.get_el('menu_content').items
-			}));
+			pwf.create('ui.abstract.el.link', {
+				'title':pwf.locales.trans(item.title),
+				'parent':this.get_el('menu_content').items,
+				'cname':'typical-menu-item',
+				'event':'activate',
+				'ui':item.ui,
+				'tag':'div'
+			});
 		},
 
 
@@ -68,9 +73,9 @@ pwf.rc('ui.intra.menu.create', {
 		},
 
 
-		'activate':function(proto, item)
+		'activate':function(proto, data)
 		{
-			pwf.create(item.get('ui'), {
+			pwf.create(data.origin.get('ui'), {
 				'parent':pwf.jquery('body')
 			}).load().show();
 		}

@@ -140,5 +140,21 @@ namespace Impro
 
 			return $this;
 		}
+
+
+		public function get_name($pattern = null)
+		{
+			$name = $this->name;
+
+			if ($name) {
+				if ($this->name_full != $name) {
+					$name .= ' ('.$this->name_full.')';
+				}
+			} else {
+				$name = $this->name_full;
+			}
+
+			return $name;
+		}
 	}
 }

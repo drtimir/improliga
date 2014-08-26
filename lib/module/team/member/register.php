@@ -83,9 +83,10 @@ if ($code) {
 					));
 
 					$member = create('\Impro\Team\Member', array(
-						'team'  => $alert->team,
-						'user'  => $user,
-						'roles' => array(\Impro\Team\Member\Role::ID_MEMBER)
+						'active' => true,
+						'team'   => $alert->team,
+						'user'   => $user,
+						'roles'  => array(\Impro\Team\Member\Role::ID_MEMBER)
 					));
 
 					$status = 200;

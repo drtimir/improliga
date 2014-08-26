@@ -94,6 +94,8 @@ if ($code) {
 					$data = array(
 						'user' => $user->to_object()
 					);
+
+					$code->invalidate();
 				}
 			}
 

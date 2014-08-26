@@ -17,6 +17,16 @@ namespace Impro\User
 		const RESPONSE_NO    = 2;
 		const RESPONSE_MAYBE = 3;
 
+
+		protected static $links = array(
+			self::TEMPLATE_NOTICE          => 'user_notice',
+			self::TEMPLATE_REQUEST         => 'user_request',
+			self::TEMPLATE_INVITE_TEAM     => 'team_member_join',
+			self::TEMPLATE_INVITE_TEAM_NEW => 'team_member_register',
+			self::TEMPLATE_INVITE_TRAINING => 'team_member_join_training',
+		);
+
+
 		protected static $attrs = array(
 			"text"         => array('text'),
 			"read"         => array('bool'),
@@ -42,6 +52,7 @@ namespace Impro\User
 
 			"generated_by" => array('varchar'),
 			"rcpt"         => array('email', "is_null" => true),
+			"request"      => array('json'),
 
 			"user"         => array('belongs_to', "is_null" => true, "model" => 'System\User'),
 			"code"         => array('belongs_to', "is_null" => true, "model" => 'System\User\Auth\Code'),
@@ -83,16 +94,55 @@ namespace Impro\User
 		}
 
 
+		public function get_link_path()
+		{
+			return self::$links[$this->template];
+		}
+
+
+		public function get_link()
+		{
+			$path = \System\Router::get_first_url($this->get_link_path(), array($this->code->uid));
+
+			if (!$path) throw new \System\Error\Wtf('User alert path not found', $this->get_link_path());
+
+			return 'http://'.$this->request->host.$path.'?auth_code='.$this->code->key;
+		}
+
+
+		public function get_mail_data()
+		{
+			$data = array(
+				"author"      => $this->author,
+				"author_name" => $this->author->get_name(),
+				"link"        => $this->get_link(),
+			);
+
+			if ($this->team) {
+				$data['team'] = $this->team;
+				$data['team_name'] = $this->team->name_full;
+			}
+
+			return $data;
+		}
+
+
 		public function get_mail_from_template()
 		{
 			$template = $this->get_template();
 			$subject  = 'mail-subject-'.$template;
 			$body     = 'mail-body-'.$template;
 			$locales  = new \System\Locales();
+			$data     = $this->get_mail_data();
 			$locales->set_locale();
 
-			$subject = stprintf($locales->trans($subject), $this->get_data());
-			$body    = stprintf($locales->trans($body), $this->get_data());
+
+			$subject = stprintf($locales->trans($subject), $data);
+			$body    = stprintf($locales->trans($body), $data);
+
+			// Prepend tag to subject of all alerts
+			$subject = '[Impro] '.$subject;
+			$body   .= "\n\nTento e-mail byl automaticky vygenerován uživatelskou interakcí na Intranetu Improligy. Pokud tento e-mail neměl přijít vám, obraťte se na kontakty Improligy.\nhttp://www.improliga.cz | http://intra.improliga.cz";
 
 			$mail = \System\Offcom\Mail::create($subject, $body);
 

@@ -50,7 +50,7 @@ pwf.rc('ui.public.structure.home', {
 		'update_menu':function(proto)
 		{
 			var
-				items  = pwf.jquery('#main-menu').first().find('a'),
+				items  = pwf.jquery('.ui-public-home-header .site-menu').first().find('a'),
 				active = null,
 				scroll = pwf.jquery(window).scrollTop();
 
@@ -75,6 +75,7 @@ pwf.rc('ui.public.structure.home', {
 				}
 			}
 		},
+
 
 		'is_locked':function(proto)
 		{

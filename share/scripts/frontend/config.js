@@ -25,7 +25,7 @@ pwf.wi(['dispatcher'], function()
 			},
 
 			'on_redraw':function(next) {
-				this.get('content').update({'vars':this.get('attrs')}).redraw(next);
+				this.get('content').update(pwf.merge({'vars':this.get('attrs')}, this.get('attrs'))).redraw(next);
 			},
 
 			'on_error':function() {

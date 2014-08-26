@@ -21,7 +21,7 @@ if (preg_match("/^intra/", $_SERVER['HTTP_HOST'])) {
 		\Impro\User::load_members($request->user());
 
 	} else {
-		if (strpos($request->path, '/user/request/') !== 0) {
+		if (strpos($request->path, '/service/invite/') !== 0) {
 			$login_path = \System\Router::get_url($request->host, 'login');
 
 			if (strpos($request->path, $login_path) !== 0) {

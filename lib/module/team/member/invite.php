@@ -39,6 +39,7 @@ if ($team = find('Impro\Team', $id_team)) {
 				 * regular invite
 				 */
 				Impro\User\Alert::generate(array(
+					'request'      => $request,
 					'type'         => Impro\User\Alert::TYPE_REQUEST,
 					'template'     => Impro\User\Alert::TEMPLATE_INVITE_TEAM,
 					'generated_by' => 'organic-invite',
@@ -54,6 +55,7 @@ if ($team = find('Impro\Team', $id_team)) {
 		} else {
 			// User does not exist, send him invite to intranet
 			Impro\User\Alert::generate(array(
+				'request'      => $request,
 				'type'         => Impro\User\Alert::TYPE_REQUEST,
 				'template'     => Impro\User\Alert::TEMPLATE_INVITE_TEAM_NEW,
 				'generated_by' => 'organic-invite',

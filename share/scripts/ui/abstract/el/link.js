@@ -8,7 +8,8 @@ pwf.rc('ui.abstract.el.link', {
 			'path':null,
 			'deep':false,
 			'title':null,
-			'params':null
+			'params':null,
+			'event':'navigate'
 		}
 	},
 
@@ -33,9 +34,9 @@ pwf.rc('ui.abstract.el.link', {
 				.bind('click', this, function(e) {
 					e.preventDefault();
 
-					e.data.get_el().trigger('navigate', {
+					e.data.get_el().trigger(e.data.get('event'), {
 						'origin':e.data,
-						'name':'navigate',
+						'name':e.data.get('event'),
 						'title':e.data.get_el().text(),
 						'url':e.data.get_el().attr('href')
 					});

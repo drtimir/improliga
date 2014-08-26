@@ -69,6 +69,7 @@ if ($code) {
 					$message = 'user-already-exists';
 				} else {
 					$p['groups'] = array(3);
+					$p['password'] = hash_passwd($p['password']);
 
 					$user = create('\System\User', $p);
 

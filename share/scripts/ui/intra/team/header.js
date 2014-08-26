@@ -3,7 +3,8 @@ pwf.rc('ui.intra.team.header', {
 
 	"storage":{
 		"opts":{
-			'model':'Impro::Team'
+			'model':'Impro::Team',
+			'exclude':['members']
 		}
 	},
 
@@ -73,7 +74,7 @@ pwf.rc('ui.intra.team.header', {
 				'url':'team_trainings',
 				'settings':'use_attendance',
 				'deep':true,
-				'groups':[2,3,4,7]
+				'groups':[1,2,3,4,7]
 			});
 
 			proto('create_menu_item', {

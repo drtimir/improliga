@@ -1,5 +1,5 @@
 pwf.rc('ui.abstract.detail', {
-	'parents':['adminer.abstract.object', 'ui.abstract.el'],
+	'parents':['ui.abstract.el','adminer.abstract.object'],
 
 	'storage':{
 		'opts':{

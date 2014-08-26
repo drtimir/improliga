@@ -1,0 +1,57 @@
+.ui-structure-section {
+	min-height:600px;
+	position:relative;
+	background-position:center center;
+	background-repeat:no-repeat;
+
+
+	&.ui-public-structure-home .ui-structure-section {
+		.section-inner {
+			width:1000px;
+			min-height:700px;
+			position:relative;
+			margin:0 auto;
+		}
+	}
+
+
+	&.section-header,
+	&.section-workshops,
+	&.section-shows,
+	&.section-contact
+	{
+		max-height:1328px;
+	}
+
+	&.section-header {
+		background-image:url(<pixmap(public/bg/home.jpg)>);
+	}
+
+	&.section-about {
+		min-height:400px;
+		max-height:400px;
+	}
+
+	&.section-shows,
+	&.section-workshops
+	{
+		background-image:url(<pixmap(public/bg/workshops.jpg)>);
+	}
+
+	&.section-media {
+		min-height:400px;
+		max-height:400px;
+	}
+
+	&.section-contact {
+		background-image:url(<pixmap(public/bg/contacts.jpg)>);
+	}
+
+	&.section-teams {
+		min-height:800px;
+	}
+
+	&:last-child {
+		border-bottom:none;
+	}
+}

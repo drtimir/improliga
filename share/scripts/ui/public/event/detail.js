@@ -4,6 +4,7 @@ pwf.rc('ui.public.event.detail', {
 	'storage':{
 		'opts':{
 			'attrs':['location', 'team_home', 'team_away'],
+			'preload':['location'],
 			'model':'Impro::Event'
 		}
 	},

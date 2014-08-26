@@ -80,6 +80,8 @@ pwf.rc('ui.abstract.list', {
 				children = el.children('.ui-list-item'),
 				jobs = [];
 
+			el.find('.ui-abstract-list-empty').remove();
+
 			for (var i = 0; i < children.length; i++) {
 				jobs.push(function(item, time) {
 					return function(next) {

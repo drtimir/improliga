@@ -231,36 +231,24 @@ header {
 	z-index:100;
 }
 
-.ui-structure-section {
-	&.section-header,
-	&.section-workshops,
-	&.section-shows,
-	&.section-contact
-	{
-		max-height:1328px;
-	}
+#meta {
+	display:none;
+}
 
-	&.section-header {
-		background-image:url(<pixmap(public/bg/home.jpg)>);
+#ui {
+	.preloader {
+		display:none;
+		position:fixed;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		background:rgba(0,0,0,0.85);
 	}
+}
 
-	&.section-about {
-		min-height:400px;
-		max-height:400px;
-	}
-
-	&.section-shows,
-	&.section-workshops
-	{
-		background-image:url(<pixmap(public/bg/workshops.jpg)>);
-	}
-
-	&.section-media {
-		min-height:400px;
-		max-height:400px;
-	}
-
-	&.section-contact {
-		background-image:url(<pixmap(public/bg/contacts.jpg)>);
-	}
+#viewport {
+	position:relative;
+	margin:0 auto 110px;
+	overflow:hidden;
 }

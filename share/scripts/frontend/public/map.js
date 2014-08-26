@@ -72,7 +72,10 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			{
 				'name':'show_detail',
 				'anchor':'/predstaveni/{item:seoname}',
-				'structure':['ui.public.event']
+				'structure':[
+					'ui.public.home.header',
+					'ui.public.event.'
+				]
 			},
 
 			{

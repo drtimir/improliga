@@ -19,7 +19,8 @@ pwf.rc('ui.intra.editor.training', {
 		var
 			opts = pwf.site.get_user_teams(),
 			data = {
-				'name':'Uzavřený trénink'
+				'name':'Uzavřený trénink',
+				'lector':pwf.site.get_user(),
 			};
 
 		proto.storage.opts.inputs.team = {

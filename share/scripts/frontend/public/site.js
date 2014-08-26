@@ -84,12 +84,12 @@ pwf.register('site', function() {
 
 	this.bind = function()
 	{
-		pwf.jquery('#main-menu').first().find('a').bind('click', callback_history);
 		pwf.jquery(window)
-			.bind('resize',  this, callback_resize)
-			.bind('scroll',  this, callback_update_menu)
-			.bind('loading', this, callback_loader_show)
-			.bind('ready',   this, callback_loader_hide);
+			.bind('navigate', this, callback_navigate)
+			.bind('resize',   this, callback_resize)
+			.bind('scroll',   this, callback_update_menu)
+			.bind('loading',  this, callback_loader_show)
+			.bind('ready',    this, callback_loader_hide);
 
 		return this;
 	};
@@ -213,14 +213,9 @@ pwf.register('site', function() {
 	};
 
 
-	var callback_history = function(e)
+	var callback_navigate = function(e, rq)
 	{
-		var
-			el    = pwf.jquery(this),
-			title = el.attr('title');
-
-		e.preventDefault();
-		pwf.site.navigate(el.attr('href'), title);
+		e.data.navigate(rq.url, rq.title);
 	};
 
 

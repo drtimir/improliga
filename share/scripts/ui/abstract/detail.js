@@ -46,7 +46,7 @@ pwf.rc('ui.abstract.detail', {
 
 			item.label.html(pwf.locales.trans('detail-' + name));
 
-			if (val instanceof Object && typeof val.append == 'function') {
+			if (val instanceof Object && typeof val.meta != 'undefined' && val.meta.parents.indexOf('domel')) {
 				val.append(item.value);
 			} else {
 				item.value.html(val);

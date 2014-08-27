@@ -1,10 +1,12 @@
 {
 	"error-parse":"Neočekávaná chyba",
 
-	"detail-start":"Datum",
+	"detail-date":"Datum",
+	"detail-start":"Začátek",
 	"detail-end":"Konec",
 	"detail-price":"Vstupné",
 	"detail-location":"Místo",
+	"detail-location-show-on-map":"Zobrazit na mapě",
 	"detail-city":"Město",
 	"detail-site":"Web",
 

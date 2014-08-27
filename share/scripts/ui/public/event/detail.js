@@ -55,7 +55,8 @@ pwf.rc('ui.public.event.detail', {
 				el.image.html(pwf.thumb.create(item.get('image').path, el.image.width() + 'x' + el.image.height()));
 			}
 
-			proto('create_label', 'start', this.format_time(item.get('start'), item.get('start_time')));
+			proto('create_label', 'date', this.format_time(item.get('start')));
+			proto('create_label', 'start', this.format_time(null, item.get('start_time')));
 
 			if (item.get('end')) {
 				proto('create_label', 'end', this.format_time(item.get('end'), item.get('end_time')));
@@ -66,7 +67,7 @@ pwf.rc('ui.public.event.detail', {
 			}
 
 			if (item.get('location')) {
-				proto('create_label', 'location', this.format_location(item.get('location')));
+				proto('create_label', 'location', pwf.create('ui.location', item.get('location').get_data()));
 				el.map.html();
 			}
 		},

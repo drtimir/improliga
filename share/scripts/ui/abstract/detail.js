@@ -45,7 +45,12 @@ pwf.rc('ui.abstract.detail', {
 				item = pwf.jquery.div('detail-label').create_divs(['label', 'value']);
 
 			item.label.html(pwf.locales.trans('detail-' + name));
-			item.value.html(val);
+
+			if (val instanceof Object && typeof val.append == 'function') {
+				val.append(item.value);
+			} else {
+				item.value.html(val);
+			}
 
 			el.append(item);
 		},
@@ -65,21 +70,6 @@ pwf.rc('ui.abstract.detail', {
 			}
 
 			return str.join(' ');
-		},
-
-
-		'format_location':function(proto, loc)
-		{
-			var el = pwf.jquery.div('location').create_divs(['name', 'addr', 'site']);
-
-			el.name.html(loc.get('name'));
-			el.addr.html(loc.get('addr'));
-
-			if (loc.get('site')) {
-				el.site.html(pwf.jquery('<a/>').attr('href', loc.get('site')).html(loc.get('site')));
-			}
-
-			return el;
 		},
 
 

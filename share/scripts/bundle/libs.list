@@ -10,6 +10,7 @@ bower/pwf.js
 bower/pwf-async-compat
 bower/pwf-moment-compat
 
+scripts/ui/location
 scripts/ui/cleaner
 scripts/ui/loader
 scripts/ui/link

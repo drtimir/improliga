@@ -5,12 +5,20 @@
 	background-repeat:no-repeat;
 
 
-	&.ui-public-structure-home .ui-structure-section {
+	&.ui-public-structure-home .ui-structure-section,
+	&.section-show_detail,
+	&.section-workshop_detail
+	{
 		.section-inner {
 			width:1000px;
+			margin:0 auto;
+		}
+	}
+
+	&.ui-public-structure-home .ui-structure-section {
+		.section-inner {
 			min-height:700px;
 			position:relative;
-			margin:0 auto;
 		}
 	}
 

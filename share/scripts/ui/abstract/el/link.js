@@ -42,7 +42,7 @@ pwf.rc('ui.abstract.el.link', {
 				});
 
 			if (this.get('title')) {
-				el.html(pwf.locales.trans(this.get('title')))
+				el.html(pwf.locales.trans(this.get('title')));
 			}
 
 			if (url == pwf.dispatcher.get_path() || (this.get('deep') && pwf.dispatcher.get_path().indexOf(url) === 0)) {

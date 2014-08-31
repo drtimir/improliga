@@ -105,7 +105,7 @@ pwf.rc('ui.intra.team.header', {
 					'parent':this.get_el('menu'),
 					'path':opts.url,
 					'deep':opts.deep,
-					'title':pwf.locales.trans('team-menu-' + opts.label),
+					'title':'team-menu-' + opts.label,
 					'cname':'team-menu-item',
 					'params':pwf.merge({
 						'team':this.get('item').get_seoname()

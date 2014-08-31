@@ -67,7 +67,7 @@ pwf.rc('ui.intra.team.settings.main', {
 				var link = pwf.create('ui.abstract.el.link', {
 					'parent':el,
 					'path':'team_settings_section',
-					'title':pwf.locales.trans('team-cfg-' + items[i].name),
+					'title':'team-cfg-' + items[i].name,
 					'params':pwf.merge(items[i].params, {
 						'team':this.get('team-seoname')
 					})

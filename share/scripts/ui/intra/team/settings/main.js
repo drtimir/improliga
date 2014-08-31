@@ -64,7 +64,7 @@ pwf.rc('ui.intra.team.settings.main', {
 				items = this.meta.static.sections;
 
 			for (var i = 0, len = items.length; i < len; i++) {
-				var link = pwf.create('ui.abstract.el.link', {
+				var link = pwf.create('ui.link', {
 					'parent':el,
 					'path':'team_settings_section',
 					'title':'team-cfg-' + items[i].name,

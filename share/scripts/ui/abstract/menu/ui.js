@@ -40,7 +40,7 @@ pwf.rc('ui.abstract.menu.ui', {
 
 		'construct_item':function(proto, item)
 		{
-			pwf.create('ui.abstract.el.link', {
+			pwf.create('ui.link', {
 				'title':pwf.locales.trans(item.title),
 				'parent':this.get_el('menu_content').items,
 				'cname':'typical-menu-item',

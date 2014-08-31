@@ -101,7 +101,7 @@ pwf.rc('ui.intra.team.header', {
 			}
 
 			if (allowed) {
-				item = pwf.create('ui.abstract.el.link', {
+				item = pwf.create('ui.link', {
 					'parent':this.get_el('menu'),
 					'path':opts.url,
 					'deep':opts.deep,

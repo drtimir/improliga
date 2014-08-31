@@ -20,7 +20,7 @@ pwf.rc('ui.intra.team.attendance.tg', {
 			var
 				el   = this.get_el(),
 				item = this.get('item'),
-				link = pwf.create('ui.abstract.el.link', {
+				link = pwf.create('ui.link', {
 					'parent':el,
 					'path':'team_training',
 					'title':item.get('start').format('D.M.'),

@@ -253,7 +253,7 @@ pwf.register('site', function() {
 			user = this.get_user();
 		}
 
-		return pwf.create('ui.abstract.el.link', {
+		return pwf.create('ui.link', {
 			'title':this.get_user_name(user),
 			'params':{'user':user.get('id')},
 			'path':'user'

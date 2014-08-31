@@ -60,7 +60,7 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 		{
 			var
 				wrap = pwf.jquery.div('team-action').appendTo(this.get_el('actions')),
-				item = pwf.create('ui.abstract.el.link', {
+				item = pwf.create('ui.link', {
 					'parent':wrap,
 					'path':route,
 					'title':pwf.locales.trans('intra-' + label),

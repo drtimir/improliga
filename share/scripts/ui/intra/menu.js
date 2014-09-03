@@ -1,6 +1,6 @@
 pwf.rc('ui.intra.menu', {
 	'parents':['domel'],
-	'uses':'locales',
+	'uses':['locales'],
 
 	'proto':{
 		'items':[

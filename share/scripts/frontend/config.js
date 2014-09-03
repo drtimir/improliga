@@ -1,7 +1,7 @@
 pwf.wi(['dispatcher'], function()
 {
 	pwf.dispatcher.setup({
-				'on_load':function(next) {
+			'on_load':function(next) {
 				var
 					el    = pwf.site.get_el(),
 					cname = this.get('cname') || 'ui.structure.section',

@@ -4,6 +4,11 @@ namespace Impro\Team
 {
 	class Training extends \System\Model\Perm
 	{
+		protected static $callbacks = array(
+			self::AFTER_SAVE => array('send_invites'),
+		);
+
+
 		protected static $attrs = array(
 			"team"     => array('belongs_to', "model" => 'Impro\Team'),
 			"name"     => array('varchar'),
@@ -41,7 +46,7 @@ namespace Impro\Team
 		}
 
 
-		public function send_invites(\System\Template\Renderer $ren)
+		public function send_invites()
 		{
 			$members = $this->team->members->fetch();
 

@@ -51,7 +51,9 @@ namespace Impro\Team
 			$members = $this->team->members->fetch();
 
 			foreach ($members as $member) {
-				$ack = \Impro\Team\Training\Ack::send($ren, $this, $member);
+				if ($member->id != $this->author->id) {
+					$ack = \Impro\Team\Training\Ack::send($ren, $this, $member);
+				}
 			}
 		}
 

@@ -17,6 +17,11 @@ namespace Impro\User
 		const RESPONSE_NO    = 2;
 		const RESPONSE_MAYBE = 3;
 
+		const STATUS_READY   = 1;
+		const STATUS_SENT    = 2;
+		const STATUS_FAILED  = 3;
+		const STATUS_NO_RCPT = 4;
+
 
 		protected static $links = array(
 			self::TEMPLATE_NOTICE          => 'user_notice',
@@ -48,6 +53,12 @@ namespace Impro\User
 				self::RESPONSE_YES    => 'yes',
 				self::RESPONSE_NO     => 'no',
 				self::RESPONSE_MAYBE  => 'maybe',
+			)),
+
+			"status"       => array('int', "default" => self::STATUS_READY, "options" => array(
+				self::STATUS_READY  => 'alert-ready',
+				self::STATUS_SENT   => 'alert-sent',
+				self::STATUS_FAILED => 'alert-failed',
 			)),
 
 			"generated_by" => array('varchar'),
@@ -184,10 +195,20 @@ namespace Impro\User
 				}
 
 				$mail->rcpt = $cs_rcpt;
-				return $mail->send();
+				$status = $mail->send();
+
+				if ($status == \System\Offcom\Mail::STATUS_SENT) {
+					$this->status = self::STATUS_SENT;
+				} else {
+					$this->status = self::STATUS_FAILED;
+				}
+
+				$this->save();
+			} else {
+				$this->status = self::STATUS_NO_RCPT;
 			}
 
-			return true;
+			return $this->save();
 		}
 
 

@@ -53,24 +53,20 @@ namespace Impro\Team\Training
 					"user"     => $member->user,
 				));
 
-				$invite = \Impro\User\Request::for_user($member->user, array(
-					"author"         => $training->author,
-					"allow_maybe"    => true,
-					"callback"       => 'JoinTraining',
-					"redirect_yes"   => $ren->uri('team_attendance', array($training->team)),
-					"redirect_no"    => $ren->uri('team_attendance', array($training->team)),
-					"redirect_maybe" => $ren->uri('team_attendance', array($training->team)),
-					"training"       => $training,
-					"member"         => $member,
-					"team"           => $training->team,
-					"text"           => stprintf($ren->locales()->trans('training_invite'), array(
-						"link_team"    => $training->team->to_html_link($ren),
-						"link_user"    => \Impro\User::link($ren, $training->author),
-						"tg_date"      => $ren->format_date($training->start, 'human'),
-					)),
+				$invite = \Impro\User\Alert::generate(array(
+					'allow_maybe'  => true,
+					'author'       => $training->author,
+					'generated_by' => 'organic-invite',
+					'member'       => $member,
+					'request'      => $training->request,
+					'team'         => $training->team,
+					'template'     => \Impro\User\Alert::TEMPLATE_INVITE_TRAINING,
+					'training'     => $training,
+					'type'         => \Impro\User\Alert::TYPE_REQUEST,
+					'user'         => $member->user,
 				));
 
-				if ($invite->mail($ren) == \System\Offcom\Mail::STATUS_SENT) {
+				if ($invite->status == \Impro\User\Alert::STATUS_SENT) {
 					$ack->status = self::SENT;
 					$ack->save();
 				}

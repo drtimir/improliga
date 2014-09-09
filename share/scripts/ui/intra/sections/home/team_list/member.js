@@ -44,7 +44,7 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 				el   = this.get_el('actions'),
 				team = this.get('team');
 
-			proto('link', 'team-workshops', 'team_events');
+			proto('link', 'team-events', 'team_events');
 
 			if (team.get('use_attendance')) {
 				proto('link', 'team-attendance', 'team_trainings');
@@ -63,7 +63,7 @@ pwf.rc('ui.intra.sections.home.team_list.member', {
 				item = pwf.create('ui.link', {
 					'parent':wrap,
 					'path':route,
-					'title':pwf.locales.trans('intra-' + label),
+					'title':'intra-' + label,
 					'params': {
 						'team':this.get('team').get_seoname()
 					}

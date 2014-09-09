@@ -52,13 +52,13 @@ namespace Impro\Team
 
 			foreach ($members as $member) {
 				if ($member->id != $this->author->id) {
-					$ack = \Impro\Team\Training\Ack::send($ren, $this, $member);
+					$ack = \Impro\Team\Training\Ack::send($this, $member);
 				}
 			}
 		}
 
 
-		public function cancel(\System\Template\Renderer $ren, $drop)
+		public function cancel($drop = false)
 		{
 			if (!$this->canceled) {
 				$acks = $this->acks->where(array(

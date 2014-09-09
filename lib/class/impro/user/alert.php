@@ -30,6 +30,7 @@ namespace Impro\User
 			self::TEMPLATE_INVITE_TEAM     => 'team_member_join',
 			self::TEMPLATE_INVITE_TEAM_NEW => 'team_member_register',
 			self::TEMPLATE_INVITE_TRAINING => 'team_member_join_training',
+			self::TEMPLATE_NOTICE_JOINED   => 'team',
 		);
 
 

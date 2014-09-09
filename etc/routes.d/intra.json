@@ -17,6 +17,15 @@
 		]
 	}, "team_member_register"],
 
+	["^/service/join/([^/]+)$", {
+		"layout":["layout/intra/service"],
+		"modules":[
+			["team/member/join", {
+				"auth_uid":"#{0}"
+			}]
+		]
+	}, "team_member_join"],
+
 	["^/service/join-training/([^/]+)$", {
 		"layout":["layout/intra/service"],
 		"modules":[

@@ -1,5 +1,6 @@
 {
 	"attr-published":"Veřejné",
+	"attr-type":"Typ",
 
 	"model-Impro::Event":"Událost",
 	"model-Impro::Event-dative":"události",

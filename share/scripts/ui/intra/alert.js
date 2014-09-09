@@ -10,28 +10,51 @@ pwf.rc('ui.intra.alert', {
 	'proto':{
 		'el_attached':function(proto)
 		{
-			proto('construct');
+			proto('create_ui');
+			proto('fill');
+			proto('bind_events');
 		},
 
 
-		'construct':function(proto)
+		'create_ui':function(proto)
 		{
 			var
-				el = this.get_el().create_divs(['text', 'footer', 'footer_data', 'footer_cleaner', 'avatar', 'time', 'author']),
+				el = this.get_el().create_divs(['text', 'footer', 'footer_data', 'footer_cleaner', 'avatars', 'time', 'author']),
 				item = this.get('item');
+
+			if (this.get('team')) {
+				el.addClass('team-alert');
+				el.avatars.team = pwf.create('ui.link', {
+					'cname':'avatar',
+					'parent':el.avatars,
+					'path':'team',
+					'params':{
+						'team':this.get('team').get_seoname()
+					},
+					'propagate':false
+				});
+			}
+
+			el.avatars.author = pwf.create('ui.link', {
+				'cname':'avatar',
+				'parent':el.avatars,
+				'path':'user',
+				'params':{
+					'user':this.get('author').get('id')
+				},
+				'propagate':false
+			});
 
 			el.footer_cleaner.addClass('cleaner');
 
 			el.footer
-				.append(el.avatar)
+				.append(el.avatars)
 				.append(el.footer_data)
 				.append(el.footer_cleaner);
 
 			el.footer_data
 				.append(el.time)
 				.append(el.author);
-
-			proto('fill');
 		},
 
 
@@ -48,8 +71,26 @@ pwf.rc('ui.intra.alert', {
 			el.time.html(this.get('created_at').format('D.M. h:mm'));
 			el.author.html(pwf.site.get_user_name(this.get('author')));
 
-			pwf.thumb.fit(pwf.site.get_user_avatar(this.get('author')).path, el.avatar);
+			pwf.thumb.fit(pwf.site.get_user_avatar(this.get('author')).path, el.avatars.author.get_el());
+
+			if (this.get('team')) {
+				pwf.thumb.fit(this.get('team').get('logo').path, el.avatars.team.get_el());
+			}
 		},
+
+
+		'bind_events':function(p)
+		{
+			this.get_el().bind('click', this, p('callbacks').open);
+		},
+
+
+		'callbacks':
+		{
+			'open':function(e) {
+				e.data.open();
+			}
+		}
 	},
 
 
@@ -76,6 +117,26 @@ pwf.rc('ui.intra.alert', {
 			}
 
 			return data;
+		},
+
+
+		'open':function(p)
+		{
+			var template = pwf.model.get_attr_opt('Impro::User::Alert', 'template', this.get('template'));
+
+			if (template.name == 'invite-training') {
+				this.get_el()
+					.trigger('deactivate')
+					.trigger('navigate', {
+						'origin':this,
+						'name':'navigate',
+						'title':'Trenink',
+						'url':pwf.dispatcher.url('team_training', {
+							'team':this.get('team').get_seoname(),
+							'tg':this.get('training').get('id')
+						})
+					});
+			}
 		}
 	}
 });

@@ -21,8 +21,8 @@ if ($team = find('Impro\Team', $id_team)) {
 
 			if ($alert->response == \Impro\User\Alert::RESPONSE_YES) {
 				$member = get_first('Impro\Team\Member')->where(array(
-					'id_user' => $request->user->id,
-					'id_team' => $team->id
+					'id_system_user' => $request->user->id,
+					'id_impro_team' => $team->id
 				))->fetch();
 
 				if ($member) {
@@ -33,7 +33,7 @@ if ($team = find('Impro\Team', $id_team)) {
 					$members = $team->members->fetch();
 					$member = create('Impro\Team\Member', array(
 						'team'   => $team,
-						'user'   => $user,
+						'user'   => $request->user,
 						'roles'  => array(\Impro\Team\Member\Role::ID_PLAYER),
 						'active' => false,
 					));

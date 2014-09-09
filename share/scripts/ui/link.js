@@ -3,14 +3,15 @@ pwf.rc('ui.link', {
 
 	'storage':{
 		'opts':{
-			'tag':'a',
 			'cname':'',
-			'path':null,
 			'deep':false,
-			'title':null,
+			'event':'navigate',
+			'path':null,
 			'params':{},
 			'propagate':true,
-			'event':'navigate'
+			'tag':'a',
+			'send':null,
+			'title':null
 		}
 	},
 
@@ -46,6 +47,8 @@ pwf.rc('ui.link', {
 		'callbacks':
 		{
 			'open':function(e) {
+				var send = e.data.get('send');
+
 				e.preventDefault();
 
 				if (!e.data.get('propagate')) {
@@ -58,6 +61,12 @@ pwf.rc('ui.link', {
 					'title':e.data.get_el().text(),
 					'url':e.data.get_el().attr('href')
 				});
+
+				if (send instanceof Array) {
+					for (var i = 0, len = send.length; i < len; i++) {
+						e.data.get_el().trigger(send[i], {'origin':e.data});
+					}
+				}
 			}
 		}
 	}

@@ -1,0 +1,7 @@
+{
+	"alert-common-notice":"",
+	"alert-common-request":"",
+	"alert-invite-team":"Uživatel {author_name} vás pozval, abyste se připojil k týmu {team_name}.",
+	"alert-invite-team-next":"Uživatel {author_name} vás pozval, abyste se připojil k týmu {team_name}.",
+	"alert-invite-training":"Uživatel {author_name} vás pozval, abyste se zúčastnil tréninku týmu {team_name} naplánovaného na {training_start}."
+}

@@ -44,7 +44,9 @@ pwf.rc('ui.abstract.detail', {
 				el = this.get_el('labels'),
 				item = pwf.jquery.div('detail-label').create_divs(['label', 'value']);
 
-			item.label.html(pwf.locales.trans('detail-' + name));
+			item.label
+				.html(pwf.locales.trans('detail-' + name))
+				.append(pwf.jquery.span('sep').html(':'));
 
 			if (val instanceof Object && typeof val.meta != 'undefined' && val.meta.parents.indexOf('domel')) {
 				val.append(item.value);

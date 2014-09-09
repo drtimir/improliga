@@ -99,5 +99,7 @@
 	"model-Impro::Media::Article-attr-url":"URL",
 	"model-Impro::Media::Article-attr-visible":"Intranet",
 
+	"model-Impro::User::Alert-attr-read":"Přečtené",
+
 	"model-Impro::Post":"Zpráva"
 }

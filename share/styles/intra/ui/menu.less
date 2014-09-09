@@ -57,12 +57,6 @@
 		width:701px;
 	}
 
-	.input-named-type {
-		& > label {
-			display:none;
-		}
-	}
-
 	.inner,
 	.right
 	{
@@ -76,7 +70,7 @@
 
 	.right {
 		width:340px;
-		min-height:400px;
+		min-height:520px;
 		border-left:1px solid rgba(255,255,255,.15);
 	}
 
@@ -99,6 +93,28 @@
 		.profile-data {
 			width:150px;
 			float:left;
+		}
+	}
+
+	.filter {
+		position:static;
+
+		.input-named-id_team,
+		.input-named-type,
+		.input-named-read
+		{
+			margin:0;
+			padding:0;
+
+			& > label,
+			& > .input-container
+			{
+				display:block;
+			}
+
+			&:hover {
+				background:none;
+			}
 		}
 	}
 }

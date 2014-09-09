@@ -11,18 +11,44 @@ pwf.rc('ui.intra.menu.profile', {
 			'filters':[],
 
 			'ui_filters':[
-				'type'
+				'type',
+				{
+					'name':'read',
+					'label':'Stav',
+					'type':'checkbox',
+					'multiple':true,
+					'value':[0],
+					'options':[
+						{
+							'name':'Nepřečtené',
+							'value':0
+						},
+						{
+							'name':'Přečtené',
+							'value':1
+						}
+					]
+				}
 			]
 		}
 	},
 
 
-	'init':function(proto)
+	'init':function(p)
 	{
-		proto.storage.opts.filters.push({
+		p.storage.opts.filters.push({
 			'attr':'id_user',
 			'type':'exact',
 			'exact':pwf.site.get_user().get('id')
+		});
+
+		p.storage.opts.ui_filters.push({
+			'name':'id_team',
+			'label':'Tým',
+			'type':'checkbox',
+			'multiple':true,
+			'value':[],
+			'options':pwf.site.get_user_teams()
 		});
 	},
 

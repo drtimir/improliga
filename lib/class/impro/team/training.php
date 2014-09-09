@@ -34,8 +34,8 @@ namespace Impro\Team
 		public function can_be($method, \System\User $user)
 		{
 			$member = get_first('\Impro\Team\Member')->where(array(
-				'user' => $user,
-				'team' => $this->team
+				'id_system_user' => $user->id,
+				'id_impro_team' => $this->team->id,
 			))->fetch();
 
 			if ($method == \System\Model\Perm::BROWSE) {

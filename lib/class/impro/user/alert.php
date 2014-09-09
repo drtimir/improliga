@@ -12,6 +12,7 @@ namespace Impro\User
 		const TEMPLATE_INVITE_TEAM     = 3;
 		const TEMPLATE_INVITE_TEAM_NEW = 5;
 		const TEMPLATE_INVITE_TRAINING = 4;
+		const TEMPLATE_NOTICE_JOINED   = 6;
 
 		const RESPONSE_YES   = 1;
 		const RESPONSE_NO    = 2;
@@ -47,6 +48,7 @@ namespace Impro\User
 				self::TEMPLATE_INVITE_TEAM     => 'invite-team',
 				self::TEMPLATE_INVITE_TEAM_NEW => 'invite-team-new',
 				self::TEMPLATE_INVITE_TRAINING => 'invite-training',
+				self::TEMPLATE_NOTICE_JOINED   => 'notice-joined',
 			)),
 
 			"response"     => array('int', "is_null" => true, "options" => array(

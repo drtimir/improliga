@@ -118,6 +118,7 @@ pwf.register('site', function() {
 		});
 
 		pwf.jquery(window)
+			.bind('open',     this, callback_open)
 			.bind('navigate', this, callback_navigate)
 			.bind('resize',   this, callback_resize)
 			.bind('scroll',   this, callback_update_menu)
@@ -325,6 +326,12 @@ pwf.register('site', function() {
 	var callback_navigate = function(e, rq)
 	{
 		e.data.navigate(rq.url, rq.title);
+	};
+
+
+	var callback_open = function(e, rq)
+	{
+		document.location = rq.url;
 	};
 
 

@@ -124,21 +124,45 @@ pwf.rc('ui.intra.alert', {
 
 		'open':function(p)
 		{
-			var template = pwf.model.get_attr_opt('Impro::User::Alert', 'template', this.get('template'));
+			var
+				template = pwf.model.get_attr_opt('Impro::User::Alert', 'template', this.get('template')),
+				event = 'navigate',
+				url = null,
+				title = null;
 
 			if (template.name == 'invite-training') {
-				this.get_el()
-					.trigger('deactivate')
-					.trigger('navigate', {
-						'origin':this,
-						'name':'navigate',
-						'title':'Trenink',
-						'url':pwf.dispatcher.url('team_training', {
-							'team':this.get('team').get_seoname(),
-							'tg':this.get('training').get('id')
-						})
+
+				title = 'Trénink';
+				url = pwf.dispatcher.url('team_training', {
+					'team':this.get('team').get_seoname(),
+					'tg':this.get('training').get('id')
+				});
+
+			} else if (template.name == 'invite-team' || template.name == 'invite-team-new') {
+				if (this.get('response') !== null) {
+					title = 'Tým';
+					url   = pwf.dispatcher.url('team', {
+						'team':this.get('team').get_seoname()
 					});
+				}
 			}
+
+			if (url === null) {
+				title = 'Odpověď na žádost';
+				url   = pwf.dispatcher.url('request_answer', {
+					'rq':this.get('id')
+				});
+			}
+
+
+			this.get_el()
+				.trigger('deactivate')
+				.trigger(event, {
+					'origin':this,
+					'name':event,
+					'title':title,
+					'url':url
+				});
 		}
 	}
 });

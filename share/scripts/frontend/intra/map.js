@@ -115,6 +115,13 @@ pwf.wi(['queue', 'dispatcher', 'model', 'async'], function()
 			},
 
 
+			{
+				'name':'request_answer',
+				'anchor':'/pozvanka/{rq:int}/odpoved',
+				'structure':[
+					'ui.user.request.solver'
+				]
+			},
 
 			{
 				'name':'user',

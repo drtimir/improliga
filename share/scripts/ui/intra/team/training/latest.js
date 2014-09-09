@@ -6,6 +6,7 @@ pwf.rc('ui.intra.team.training.latest', {
 			'model':'Impro::Team::Training',
 			'draw':'ui.intra.team.training.latest.message',
 			'draw_empty':'ui.intra.team.training.latest.empty',
+			'pagi':null,
 			'per_page':1,
 			'sort':[{'attr':'start', 'type':'desc'}],
 			'heading':'training-latest',

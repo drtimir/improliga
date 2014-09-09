@@ -15,6 +15,7 @@
 	"training_closed":"Uzavřený trénink",
 	"training_no_desc":"<p>Trénink nemá žádný popis.</p>",
 
+	"training-not-planned":"Další trénink ještě není naplánován.",
 	"training-next-planned":"Další trénink je již naplánován.",
 
 	"training-date":"Datum",

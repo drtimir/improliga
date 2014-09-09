@@ -31,7 +31,8 @@ pwf.rc('ui.intra.alert', {
 					'params':{
 						'team':this.get('team').get_seoname()
 					},
-					'propagate':false
+					'propagate':false,
+					'send':['deactivate']
 				});
 			}
 
@@ -42,7 +43,8 @@ pwf.rc('ui.intra.alert', {
 				'params':{
 					'user':this.get('author').get('id')
 				},
-				'propagate':false
+				'propagate':false,
+				'send':['deactivate']
 			});
 
 			el.footer_cleaner.addClass('cleaner');

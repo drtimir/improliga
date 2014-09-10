@@ -54,7 +54,8 @@ pwf.rc('ui.intra.menu.profile', {
 
 
 	'proto':{
-		'create_base':function(proto) {
+		'create_base':function(p)
+		{
 			var el = this.get_el();
 
 			el.create_divs(['marginer', 'inner', 'profile', 'right', 'header', 'filter', 'pagi_top', 'content', 'pagi_bottom', 'cleaner']);
@@ -76,12 +77,13 @@ pwf.rc('ui.intra.menu.profile', {
 				.append(el.content)
 				.append(el.pagi_bottom);
 
-			proto('create_profile');
-			proto('bind');
+			p('create_profile');
+			p('bind');
 		},
 
 
-		'create_profile':function(proto) {
+		'create_profile':function(p)
+		{
 			var el = this.get_el('profile');
 
 			el.create_divs(['avatar', 'data', 'cleaner'], 'profile');
@@ -94,7 +96,8 @@ pwf.rc('ui.intra.menu.profile', {
 		},
 
 
-		'bind':function(proto) {
+		'bind':function(p)
+		{
 			var callback = function(e) {
 				e.stopPropagation();
 			};

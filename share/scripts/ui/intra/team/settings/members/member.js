@@ -73,7 +73,10 @@ pwf.rc('ui.intra.team.settings.members.member', {
 		{
 			pwf.create('ui.intra.team.settings.members.member.editor', {
 				'item':this.get('item'),
-				'parent':pwf.jquery('body')
+				'parent':pwf.jquery('body'),
+				'reload':{
+					'el':this.get_el()
+				}
 			}).load().show();
 		},
 

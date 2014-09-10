@@ -73,6 +73,9 @@ pwf.rc('ui.intra.team.settings.members.member.invited', {
 			pwf.create('ui.intra.team.settings.members.invitations.kicker', {
 				'item':this.get('item'),
 				'parent':pwf.jquery('body'),
+				'reload':{
+					'el':this.get_el()
+				},
 				'after_save':function(ctrl) {
 					return function() {
 						ctrl.get('ref').load();

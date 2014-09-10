@@ -19,6 +19,10 @@ pwf.rc('ui.abstract.popup.editor', {
 
 			'after_save':function()
 			{
+				if (this.get('reload.el')) {
+					this.get('reload.el').trigger('reload', this.get('reload.data'));
+				}
+
 				this.close();
 			}
 		}

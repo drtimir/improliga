@@ -21,12 +21,13 @@ pwf.rc('ui.structure.section', {
 		'construct':function(proto)
 		{
 			proto('update_classes');
-			proto('construct_ui');
-			proto('construct_all');
+			proto('create_ui');
+			proto('create_all');
+			proto('bind_events');
 		},
 
 
-		'construct_ui':function(proto)
+		'create_ui':function(proto)
 		{
 			var name = this.get('bind') ? this.get('bind'):this.get('name');
 
@@ -36,7 +37,7 @@ pwf.rc('ui.structure.section', {
 		},
 
 
-		'construct_all':function(proto)
+		'create_all':function(proto)
 		{
 			var items = this.get('structure');
 
@@ -57,6 +58,26 @@ pwf.rc('ui.structure.section', {
 						'parent':this.get_el('inner'),
 						'vars':this.get('vars')
 					})));
+				}
+			}
+		},
+
+
+		'bind_events':function(p)
+		{
+			this.get_el()
+				.bind('reload', this, p.get('callbacks.reload'));
+		},
+
+
+		'callbacks':
+		{
+			'reload':function(e, data) {
+				var reload = data instanceof Object && typeof data.target == 'string' && e.data.get('name') == data.target;
+
+				if (reload) {
+					e.stopPropagation();
+					e.data.reload();
 				}
 			}
 		}
@@ -103,6 +124,12 @@ pwf.rc('ui.structure.section', {
 			this.clear().set('item', null);
 			proto('construct');
 			return this.load(next);
+		},
+
+
+		'reload':function(p, next)
+		{
+			return this.redraw(next);
 		}
 	}
 });

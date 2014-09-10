@@ -76,7 +76,7 @@ pwf.rc('ui.abstract.list', {
 		'hide_items':function(p, next)
 		{
 			var
-				el = this.get_el('content'),
+				el = this.get_el('content.inner'),
 				children = el.children('.ui-list-item'),
 				jobs = [];
 
@@ -128,7 +128,7 @@ pwf.rc('ui.abstract.list', {
 		'draw_empty':function(p, next)
 		{
 			var obj = pwf.create(this.get('draw_empty'), {
-				'parent':this.get_el('content'),
+				'parent':this.get_el('content.inner'),
 				'ref':this
 			});
 

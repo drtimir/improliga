@@ -51,6 +51,11 @@
 		"format":"json"
 	}, "user_password_change"],
 
+	["^/api/user/alert/read", {
+		"modules":[["user/alert/mark_read"]],
+		"format":"json"
+	}, "user_alert_read"],
+
 
 	["^/user/status/$", {
 			"modules":[

@@ -115,13 +115,15 @@ pwf.rc('ui.intra.menu.profile', {
 			pwf.create('ui.link', {
 				'parent':el.list.all,
 				'title':'intra-menu-profile-all',
-				'event':'mark_read_all'
+				'event':'mark_read',
+				'type':'all'
 			});
 
 			pwf.create('ui.link', {
 				'parent':el.list.loaded,
 				'title':'intra-menu-profile-all-loaded',
-				'event':'mark_read_all_loaded'
+				'event':'mark_read',
+				'type':'loaded'
 			});
 		},
 
@@ -133,7 +135,36 @@ pwf.rc('ui.intra.menu.profile', {
 			};
 
 			this.get_el('inner').bind('click', callback);
-			this.get_el('right').bind('click', callback);
+			this.get_el('right')
+				.bind('click', callback)
+				.bind('mark_read', p, p.get('callbacks.mark_read'));
+		},
+
+
+		'mark_read':function(p, what, next)
+		{
+			v(what);
+			if (what == 'loaded') {
+				var
+					ids = [],
+					list = this.get_data();
+
+				for (var i = 0; i < list.data.length; i++) {
+					ids.push(list.data[i].get('id'));
+				}
+
+				pwf.comm.get('/api/user/alert/read', {'ids':ids}, function(e, res) {
+					v(e, res);
+				});
+			}
+		},
+
+
+		'callbacks':
+		{
+			'mark_read':function(e, data) {
+				e.data('mark_read', data.origin.get('type'));
+			}
 		}
 	},
 

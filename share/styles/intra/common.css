@@ -1,10 +1,10 @@
 a {
 	text-decoration:none;
-	color:#b82429
+	color:@col-light-fg-link;
 }
 
 a:hover {
-	color:#FF9825
+	color:@col-light-fg-link-hover;
 }
 
 h1,

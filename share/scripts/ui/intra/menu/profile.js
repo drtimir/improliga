@@ -58,7 +58,7 @@ pwf.rc('ui.intra.menu.profile', {
 		{
 			var el = this.get_el();
 
-			el.create_divs(['marginer', 'inner', 'profile', 'right', 'header', 'filter', 'pagi_top', 'content', 'pagi_bottom', 'cleaner']);
+			el.create_divs(['marginer', 'inner', 'profile', 'right', 'header', 'filter', 'pagi_top', 'content', 'pagi_bottom', 'footer', 'cleaner']);
 			el.menu_content.append(el.marginer);
 			el.filter.addClass('typical-menu');
 
@@ -75,9 +75,13 @@ pwf.rc('ui.intra.menu.profile', {
 				.append(el.header)
 				.append(el.pagi_top)
 				.append(el.content)
-				.append(el.pagi_bottom);
+				.append(el.pagi_bottom)
+				.append(el.footer);
+
+			el.content.create_divs(['inner'], 'content');
 
 			p('create_profile');
+			p('create_footer');
 			p('bind');
 		},
 
@@ -93,6 +97,32 @@ pwf.rc('ui.intra.menu.profile', {
 			el.data.name.html(pwf.site.get_user_name());
 
 			pwf.thumb.fit(pwf.site.get_user_avatar().path, el.avatar);
+		},
+
+
+		'create_footer':function(p)
+		{
+			var el = this.get_el('footer')
+
+			el.create_els(['label'], 'span');
+			el.create_els(['list'], 'ul');
+			el.label
+				.html(pwf.locales.trans('intra-menu-profile-mark-read'))
+				.append(':');
+
+			el.list.create_els(['all', 'loaded'], 'li');
+
+			pwf.create('ui.link', {
+				'parent':el.list.all,
+				'title':'intra-menu-profile-all',
+				'event':'mark_read_all'
+			});
+
+			pwf.create('ui.link', {
+				'parent':el.list.loaded,
+				'title':'intra-menu-profile-all-loaded',
+				'event':'mark_read_all_loaded'
+			});
 		},
 
 

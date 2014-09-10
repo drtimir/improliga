@@ -19,6 +19,10 @@
 	"intra-menu-config-password":"Změnit heslo",
 	"intra-menu-config-password-change":"Změna hesla",
 
+	"intra-menu-profile-mark-read":"Označit jako přečtené",
+	"intra-menu-profile-all":"Vše",
+	"intra-menu-profile-all-loaded":"Zobrazené",
+
 	"notice":"Upozornění",
 	"request":"Pozvánka",
 

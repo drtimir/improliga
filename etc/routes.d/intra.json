@@ -41,6 +41,14 @@
 		"format":"json"
 	}, "team_member_invite"],
 
+	["^/api/team/([^/]+)/member/([^/]+)/kick$", {
+		"modules":[["team/member/kick", {
+			"id_team":"#{0}",
+			"id_member":"#{1}"
+		}]],
+		"format":"json"
+	}, "team_member_invite"],
+
 	["^/api/team/([^/]+)/join$", {
 		"modules":[["team/join", {"id_team":"#{0}"}]],
 		"format":"json"
@@ -91,6 +99,10 @@
 			["impro/user/logout", {"redirect":"/"}]
 		]
 	}, "logout"],
+
+
+	["^/uzivatel/([^/]+)$", {
+	}, "user"],
 
 
 	["^/podpora$", {

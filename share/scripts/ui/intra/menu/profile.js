@@ -143,7 +143,6 @@ pwf.rc('ui.intra.menu.profile', {
 
 		'mark_read':function(p, what, next)
 		{
-			v(what);
 			if (what == 'loaded') {
 				var
 					ids = [],

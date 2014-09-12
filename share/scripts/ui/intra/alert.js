@@ -145,7 +145,7 @@ pwf.rc('ui.intra.alert', {
 						'team':this.get('team').get_seoname()
 					});
 				}
-			} else if (template.name == 'notice-joined') {
+			} else if (template.name == 'notice-joined' || template.name == 'notice-kicked') {
 				title = this.get('team').get('name');
 				url   = pwf.dispatcher.url('team', {'team':this.get('team').get_seoname()});
 			}

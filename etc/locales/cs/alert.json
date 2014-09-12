@@ -4,5 +4,7 @@
 	"alert-invite-team":"Uživatel {author_name} vás pozval, abyste se připojil k týmu {team_name}.",
 	"alert-invite-team-next":"Uživatel {author_name} vás pozval, abyste se připojil k týmu {team_name}.",
 	"alert-invite-training":"Uživatel {author_name} vás pozval, abyste se zúčastnil tréninku týmu {team_name} naplánovaného na {training_start}.",
-	"alert-notice-joined":"Uživatel {author_name} se připojil do týmu {team_name}."
+	"alert-notice-joined":"Uživatel {author_name} se připojil do týmu {team_name}.",
+	"alert-notice-kicked":"Uživatel {author_name} byl vyhozen z týmu {team_name}.",
+	"alert-notice-left":"Uživatel {author_name} odešel z týmu {team_name}."
 }

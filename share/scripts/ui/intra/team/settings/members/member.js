@@ -83,6 +83,19 @@ pwf.rc('ui.intra.team.settings.members.member', {
 
 		'open_dropman':function(proto)
 		{
+			var item = this.get('item');
+
+			pwf.create('ui.intra.team.settings.members.member.kicker', {
+				'item':this.get('item'),
+				'parent':pwf.jquery('body'),
+				'html':pwf.locales.trans('team-cfg-member-kick', {
+					'user_name':pwf.site.get_user_name(item.get('user')),
+					'team_name':item.get('team').get('name')
+				}),
+				'reload':{
+					'el':this.get_el()
+				}
+			}).show();
 		},
 	}
 });

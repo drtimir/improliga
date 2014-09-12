@@ -25,6 +25,7 @@ bower/pwf-input-collection
 scripts/thumb
 scripts/ui/abstract
 scripts/ui/structure
+scripts/ui/question
 scripts/ui/list
 scripts/ui/intra
 

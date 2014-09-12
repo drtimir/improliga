@@ -148,6 +148,7 @@
 	"team-cfg-features":"Funkce",
 	"team-cfg-members":"Členové",
 	"team-cfg-member-list":"Seznam členů",
+	"team-cfg-member-kick":"Opravdu chcete vyhodit uživatele {user_name} z týmu {team_name}?",
 	"team-cfg-member-invited-list":"Seznam pozvaných",
 
 	"team-attd-respond":"Účast na tréninku",
